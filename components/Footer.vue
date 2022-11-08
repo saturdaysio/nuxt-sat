@@ -11,13 +11,13 @@
             <div class="level-left is-mobile">
                 <div class="level-item">
                     <NuxtLink to="/tos" target="_blank" rel="noopener" class="navbar-item">
-                        <strong>TOS</strong>
+                        <strong>Terms</strong>
                     </NuxtLink>
 
                 </div>
                 <div class="level-item">
                     <NuxtLink to="/privacy" target="_blank" rel="noopener" class="navbar-item">
-                        <strong>Privacy Policy</strong>
+                        <strong>Privacy</strong>
                     </NuxtLink>
                 </div>
             </div>
@@ -36,7 +36,7 @@
 }
 
 .navbar-item {
-    color: $navy;
+    color: $blue;
 
     &:hover {
         background: none;
