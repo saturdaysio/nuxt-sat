@@ -1,0 +1,44 @@
+{
+  "service": [
+    {
+      "id": 0,
+      "title": "Research",
+      "list": [
+        {"li": "Competitive Analysis"},
+        {"li": "User Research"},
+        {"li": "User Journeys"},
+        {"li": "Usability Testing"}
+      ]
+    },
+    {
+      "id": 1,
+      "title": "Strategy",
+      "list": [
+        {"li": "Product Strategy"},
+        {"li": "Systems Design"},
+        {"li": "Product Roadmap"},
+        {"li": "Analytics & Measurement"}
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Design",
+      "list": [
+        {"li": "User-Centered Design"},
+        {"li": "Rapid Prototyping"},
+        {"li": "Web & Native App Design"},
+        {"li": "Design Systems"}
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Code",
+      "list": [
+        {"li": "Systems Architecture"},
+        {"li": "Fullstack Web Development"},
+        {"li": "Native Mobile Apps"},
+        {"li": "Domain Driven Microservices"}
+      ]
+    }
+  ]
+}
