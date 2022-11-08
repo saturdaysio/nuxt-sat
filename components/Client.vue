@@ -1,7 +1,7 @@
 <template>
-    <section id="clients" class="container py-6 px-4">
+    <section id="clients" class="container my-6 py-6 px-4">
         <div class="content has-text-centered mt-6">
-            <h1 class="title has-text-white">Past Clients</h1>
+            <h1 class="is-size-2 has-text-centered has-text-weight-bold has-text-white">Past Clients</h1>
         </div>
 
         <div id="grid" class="is-flex is-flex-wrap-wrap">
