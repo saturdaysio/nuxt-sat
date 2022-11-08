@@ -10,12 +10,21 @@
 
         <Hero />
 
-        <section id="grid" class="container has-background-black">
+        <section class="container my-6 py-6 px-4">
+            <div class="content is-medium">
+                <h1 class="is-size-2 has-text-centered has-text-weight-bold text-gradient-blue-red-dark">
+                    We're a Data-driven digital studio that focuses on the Design, Development, and Strategy of digital
+                    products.
+                </h1>
+            </div>
+        </section>
+
+        <section id="preview" class="container my-6 py-6 px-4 has-background-black">
             <div class="columns">
                 <div class="column">
                     <div class="box has-background-black">
                         <div class="pb-2">
-                            <h1 class="is-size-2 has-text-centered has-text-white">
+                            <h1 class="is-size-2 has-text-centered has-text-weight-bold has-text-white">
                                 What we're making
                             </h1>
                         </div>
@@ -31,6 +40,8 @@
                 </div>
             </div>
         </section>
+
+        <Contact />
 
         <Footer />
 
