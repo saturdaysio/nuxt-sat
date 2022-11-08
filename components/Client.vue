@@ -1,7 +1,8 @@
 <template>
     <section id="clients" class="container my-6 py-6 px-4">
         <div class="content has-text-centered mt-6">
-            <h1 class="is-size-2 has-text-centered has-text-weight-bold has-text-white">Past Clients</h1>
+            <h1 class="is-size-2 has-text-centered has-text-weight-bold text-gradient-blue-red-dark">We partner with brands brave
+                enough to do things differently.</h1>
         </div>
 
         <div id="grid" class="is-flex is-flex-wrap-wrap">
@@ -29,7 +30,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .customClass {
     display: flex;
     align-items: center;
