@@ -3,16 +3,16 @@
         <div class="columns">
             <div class="column">
                 <div class="box has-background-black">
-                    <div class="pb-2">
+                    <div class="pb-6">
                         <h1 class="is-size-2 has-text-centered has-text-weight-bold has-text-white">
                             Our Stats
                         </h1>
                     </div>
                     <div class="columns">
                         <div class="column" v-for="item in resultStore.resultJson.result" :key="item.id">
-                            <h1 class="is-size-3 has-text-weight-bold text-gradient-blue-red-dark">{{ item.title }}</h1>
+                            <h1 class="is-size-1 has-text-weight-bold text-gradient-blue-red-dark">{{ item.title }}</h1>
                             <p class="is-size-5 has-text-white">{{ item.desc }}</p>
-
+                            <!-- fix layout, should be 2 column only -->
                         </div>
                     </div>
                 </div>
