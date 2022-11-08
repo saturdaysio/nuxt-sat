@@ -14,40 +14,21 @@
             <div class="columns">
                 <div class="column">
                     <div class="box has-background-black">
-                        <div class="media">
-                            <picture>
-                                <source type="image/webp" srcset="~/assets/thumbs/engage.webp">
-                                <source type="image/png" srcset="~/assets/thumbs/engage.jpg">
-                                <img src="~/assets/thumbs/engage.webp" alt="RENAME." draggable="false" width="800"
-                                    height="600">
-                            </picture>
-                        </div>
                         <div class="pb-2">
-                            <h1 class="title has-text-white">
-                                Content Studio
+                            <h1 class="is-size-2 has-text-centered has-text-white">
+                                What we're making
                             </h1>
                         </div>
-
-                        <div class="tags">
-                            <span class="tag is-success">
-                                Enterprise SaaS
-                            </span>
-                            <span class="tag is-success">
-                                PWA
-                            </span>
-                            <span class="tag is-success">
-                                React Native
-                            </span>
+                        <div class="media">
+                            <picture>
+                                <source type="image/webp" srcset="~/assets/img/mobile.webp">
+                                <source type="image/png" srcset="~/assets/img/mobile.png">
+                                <img src="~/assets/img/mobile.webp" alt="RENAME." draggable="false" width="1600"
+                                    height="1000">
+                            </picture>
                         </div>
-
-                        <NuxtLink to="/engage">
-                            <button class="button is-link is-medium">
-                                <p><strong>View project</strong></p>
-                            </button>
-                        </NuxtLink>
                     </div>
                 </div>
-
             </div>
         </section>
 
@@ -63,6 +44,7 @@
 
 <style lang="scss" scoped>
 @import '~/assets/styles/_variables.scss';
+
 .tag:not(body).is-success {
     background-color: #1CD0A0;
     color: $black;
