@@ -1,8 +1,8 @@
 import { defineStore } from 'pinia'
 
-import clientJson from '@/json/skills.json'
+import skillJson from '@/json/skills.json'
 
-export const useClientStore = defineStore({
+export const useSkillStore = defineStore({
     id: 'skills',
     state: () => {
         return {
