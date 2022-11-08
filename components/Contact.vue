@@ -1,14 +1,14 @@
 <template>
     <section id="cta" class=" mb-0">
         <div class="container py-6">
-            <div class="has-text-centered pb-6">
-                <h1 class="title has-text-white">Have an interesting project?</h1>
+            <div class="pb-6">
+                <h1 class="is-size-2 has-text-centered has-text-weight-bold has-text-white">Have an interesting project?</h1>
             </div>
             <div class="level is-centered">
                 <div class="level-item mb-6">
                     <NuxtLink to="mailto:support@saturdyas.io">
-                        <button class="button is-link is-medium">
-                            <p><strong>Let's talk</strong></p>
+                        <button class="button is-link is-large">
+                            <p class="is-size-4"><strong>Let's talk</strong></p>
                         </button>
                     </NuxtLink>
                 </div>
@@ -24,14 +24,16 @@
 @import '~/assets/styles/_variables.scss';
 
 .button.is-link {
-    color: $navy;
+    color: $white;
     background: none;
-    border-color: $navy;
+    border-image: linear-gradient(120deg, rgba(248,12,128), rgba(60,120,244)) 1;
+    border-width: 0.20rem;
+    border-style: solid;
+    padding: 2.25rem;
 
     &:hover {
         color: $blue;
         background: none;
-        border-color: $blue;
     }
 }
 </style>
