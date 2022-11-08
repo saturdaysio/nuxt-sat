@@ -5,7 +5,7 @@ $red: #F80C80;
 $brown: #757763;
 $beige-light: #D0D1CD;
 $beige-lighter: #EFF0EB;
-$blue: #58A6FF;
+$blue: #3c78f4;
 $navy: #64B6C4;
 $teal: #18E4BE;
 $black-ter: #212121;
@@ -17,3 +17,24 @@ $grey-light: $beige-light;
 $primary: $blue;
 $link: $navy;
 $link-hover: $blue;
+
+
+/* Button Secondary */
+
+.button__secondary {
+    text-align: center;
+    color: #fff;
+    background: none;
+    border-width: 0.20rem;
+    border-style: solid;
+    border-image: linear-gradient(120deg, rgba(248,12,128), rgba(60,120,244)) 1;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    transition: all .4s ease;
+  }
+  
+  .button__secondary:hover, .button__secondary:focus {
+      color: #f80c80;
+    }
