@@ -19,6 +19,8 @@
             </div>
         </section>
 
+        <Skill />
+
         <section id="preview" class="container my-6 py-6 px-4 has-background-black">
             <div class="columns">
                 <div class="column">
@@ -40,6 +42,8 @@
                 </div>
             </div>
         </section>
+
+        <Result />
 
         <Contact />
 
