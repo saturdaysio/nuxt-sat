@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div>
 
     <Head>
       <Title>Saturdays.io - Terms of Service</Title>

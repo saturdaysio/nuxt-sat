@@ -1,5 +1,5 @@
 <template>
-    <div class="">
+    <div>
 
         <Head>
             <Title>Saturdays.io - Projects</Title>
