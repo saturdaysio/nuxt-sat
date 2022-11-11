@@ -10,13 +10,13 @@
             </div>
             <div class="level-left is-mobile">
                 <div class="level-item">
-                    <NuxtLink to="/tos" target="_blank" rel="noopener" class="navbar-item">
+                    <NuxtLink to="/tos" class="navbar-item">
                         <strong>Terms</strong>
                     </NuxtLink>
 
                 </div>
                 <div class="level-item">
-                    <NuxtLink to="/privacy" target="_blank" rel="noopener" class="navbar-item">
+                    <NuxtLink to="/privacy" class="navbar-item">
                         <strong>Privacy</strong>
                     </NuxtLink>
                 </div>
