@@ -3,7 +3,7 @@
         <div class="columns">
             <div class="column">
                 <div class="box has-background-black">
-                    <div class="pb-2">
+                    <div class="pb-6">
                         <h1 class="is-size-2 has-text-centered has-text-weight-bold has-text-white">
                             What We Do
                         </h1>
@@ -12,12 +12,8 @@
                         <div class="column" v-for="item in skillStore.skillJson.service" :key="item.id">
                             <h1 class="is-size-3 has-text-weight-bold text-gradient-blue-red-dark">{{ item.title }}</h1>
                             <ul>
-                                <li class="is-size-4 has-text-white">
-                                    {{ item.list }}
-                                    <!-- figure out parsing -->
-                                </li>
+                                <li class="is-size-6 has-text-white" v-for="item2 in item.list" :key="item2.id">{{ item2.li }}</li>
                             </ul>
-
                         </div>
                     </div>
                 </div>
