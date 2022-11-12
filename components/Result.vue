@@ -8,11 +8,10 @@
                             Our Stats
                         </h1>
                     </div>
-                    <div class="columns">
-                        <div class="column" v-for="item in resultStore.resultJson.result" :key="item.id">
+                    <div class="is-flex is-flex-wrap-wrap">
+                        <div class="resultCard pb-6" v-for="item in resultStore.resultJson.result" :key="item.id">
                             <h1 class="is-size-1 has-text-weight-bold text-gradient-blue-red-dark">{{ item.title }}</h1>
                             <p class="is-size-5 has-text-white">{{ item.desc }}</p>
-                            <!-- fix layout, should be 2 column only -->
                         </div>
                     </div>
                 </div>
@@ -34,5 +33,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.resultCard {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 50%;
+    flex-shrink: 0;
+    padding: 0 2rem;
+}
 
+@media only screen and (max-width: 800px) {
+    .resultCard {
+        width: 100%;
+        padding: 0 1rem;
+    }
+}
 </style>
