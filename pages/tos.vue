@@ -10,7 +10,7 @@
 
     <section id="legal" class="container mt-6 py-6 px-4">
       <div class="content is-medium">
-        <h1 class="title has-text-white">Terms of Service</h1>
+        <h1 class="title is-size-3-mobile has-text-white">Terms of Service</h1>
         <p class="subtitle has-text-grey-light">Last updated: Jan 25, 2022</p>
       </div>
       <div id="definition" class="content is-normal">
@@ -33,7 +33,7 @@
       </div>
 
       <div id="use-of-services" class="content is-normal py-6">
-        <h1 class="subtitle has-text-weight-bold has-text-white">
+        <h1 class="is-size-3 is-size-4-mobile has-text-weight-bold has-text-white">
           1. Use of Services
         </h1>
         <p class="is-size-5 has-text-grey-light pb-2">
@@ -117,7 +117,7 @@
       </div>
 
       <div id="service-disruption-terminate" class="content is-normal py-6">
-        <h1 class="subtitle has-text-weight-bold has-text-white">
+        <h1 class="is-size-3 is-size-4-mobile has-text-weight-bold has-text-white">
           2. Service Disruptions and Terminating Use of the Services
         </h1>
         <p class="is-size-5 has-text-grey-light pb1">
@@ -141,7 +141,7 @@
       </div>
 
       <div id="partners-third-party" class="content is-normal py-6">
-        <h1 class="subtitle has-text-weight-bold has-text-white">
+        <h1 class="is-size-3 is-size-4-mobile has-text-weight-bold has-text-white">
           3. Partners and third-parties
         </h1>
         <p class="is-size-5 has-text-grey-light">
@@ -152,7 +152,7 @@
       </div>
 
       <div id="ownership" class="content is-normal py-6">
-        <h1 class="subtitle has-text-weight-bold has-text-white">
+        <h1 class="is-size-3 is-size-4-mobile has-text-weight-bold has-text-white">
           4. Ownership and Rights
         </h1>
         <p class="is-size-5 has-text-grey-light pb-2">
@@ -184,7 +184,7 @@
       </div>
 
       <div id="misc" class="content is-normal py-6">
-        <h1 class="subtitle has-text-weight-bold has-text-white">
+        <h1 class="is-size-3 is-size-4-mobile has-text-weight-bold has-text-white">
           5. Miscellaneous
         </h1>
         <p class="is-size-5 has-text-grey-light pb-2">

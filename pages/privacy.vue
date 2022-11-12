@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="">
 
     <Head>
-      <Title>Saturdays.io - Privacy Policy</Title>
+      <Title>Phil Choi - Privacy Policy</Title>
       <Meta name="description" content="Saturdays.io Privacy policy" />
     </Head>
 
@@ -10,7 +10,7 @@
 
     <section id="legal" class="container mt-6 py-6 px-4">
       <div class="content is-medium">
-        <h1 class="title has-text-white">Privacy Policy</h1>
+        <h1 class="title is-size-3-mobile has-text-white">Privacy Policy</h1>
         <p class="subtitle has-text-grey-light">Last updated: Jan 25, 2022</p>
       </div>
       <div id="definition" class="content is-normal">
@@ -24,7 +24,7 @@
       </div>
 
       <div id="use-of-services" class="content is-normal py-6">
-        <h1 class="subtitle has-text-weight-bold has-text-white">
+        <h1 class="is-size-3 is-size-4-mobile has-text-weight-bold has-text-white">
           1. Policy Scope
         </h1>
         <p class="is-size-5 has-text-grey-light pb-2">
@@ -35,7 +35,7 @@
       </div>
 
       <div id="info-collected" class="content is-normal py-6">
-        <h1 class="subtitle has-text-weight-bold has-text-white">
+        <h1 class="is-size-3 is-size-4-mobile has-text-weight-bold has-text-white">
           2. Information We Collect
         </h1>
         <p class="is-size-5 has-text-grey-light ">
@@ -68,7 +68,7 @@
       </div>
 
       <div id="how-we-use-info" class="content is-normal py-6">
-        <h1 class="subtitle has-text-weight-bold has-text-white">
+        <h1 class="is-size-3 is-size-4-mobile has-text-weight-bold has-text-white">
           3. How We Use the Information We Collect
         </h1>
         <p class="is-size-5 has-text-grey-light">
@@ -122,7 +122,7 @@
       </div>
 
       <div id="share-info" class="content is-normal py-6">
-        <h1 class="subtitle has-text-weight-bold has-text-white">
+        <h1 class="is-size-3 is-size-4-mobile has-text-weight-bold has-text-white">
           4. Sharing Information
         </h1>
         <p class="is-size-5 has-text-grey-light">
@@ -176,7 +176,7 @@
       </div>
 
       <div id="control-info" class="content is-normal py-6">
-        <h1 class="subtitle has-text-weight-bold has-text-white">
+        <h1 class="is-size-3 is-size-4-mobile has-text-weight-bold has-text-white">
           5. Controlling Your Information
         </h1>
         <p class="is-size-5 has-text-grey-light pb-2">
@@ -199,7 +199,7 @@
       </div>
 
       <div id="do-not-track" class="content is-normal py-6">
-        <h1 class="subtitle has-text-weight-bold has-text-white">
+        <h1 class="is-size-3 is-size-4-mobile has-text-weight-bold has-text-white">
           6. Do Not Track
         </h1>
         <p class="is-size-5 has-text-grey-light">
@@ -209,7 +209,7 @@
       </div>
 
       <div id="gdpr" class="content is-normal py-6">
-        <h1 class="subtitle has-text-weight-bold has-text-white">
+        <h1 class="is-size-3 is-size-4-mobile has-text-weight-bold has-text-white">
           7. GDPR
         </h1>
         <p class="is-size-5 has-text-grey-light">
@@ -219,7 +219,7 @@
       </div>
 
       <div id="age-restrictions" class="content is-normal py-6">
-        <h1 class="subtitle has-text-weight-bold has-text-white">
+        <h1 class="is-size-3 is-size-4-mobile has-text-weight-bold has-text-white">
           8. Age Restrictions
         </h1>
         <p class="is-size-5 has-text-grey-light">
@@ -230,7 +230,7 @@
       </div>
 
       <div id="do-not-track" class="content is-normal py-6">
-        <h1 class="subtitle has-text-weight-bold has-text-white">
+        <h1 class="is-size-3 is-size-4-mobile has-text-weight-bold has-text-white">
           9. Changes to this Privacy Policy
         </h1>
         <p class="is-size-5 has-text-grey-light">
@@ -242,7 +242,7 @@
       </div>
 
       <div id="assignment" class="content is-normal py-6">
-        <h1 class="subtitle has-text-weight-bold has-text-white">
+        <h1 class="is-size-3 is-size-4-mobile has-text-weight-bold has-text-white">
           10. Assignment, Change of Control and Transfer
         </h1>
         <p class="is-size-5 has-text-grey-light">
@@ -254,7 +254,7 @@
       </div>
 
       <div id="contact-us" class="content is-normal py-6">
-        <h1 class="subtitle has-text-weight-bold has-text-white">
+        <h1 class="is-size-3 is-size-4-mobile has-text-weight-bold has-text-white">
           11. Contact Us
         </h1>
         <p class="is-size-5 has-text-grey-light">
