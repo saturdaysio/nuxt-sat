@@ -12,7 +12,7 @@
 
         <section class="container my-6 py-6 px-4">
             <div class="content is-medium">
-                <h1 class="is-size-2 has-text-centered has-text-weight-bold text-gradient-blue-red-dark">
+                <h1 class="is-size-2 is-size-3-mobile has-text-centered has-text-weight-bold text-gradient-blue-red-dark">
                     We're a Data-driven digital studio that focuses on the Design, Development, and Strategy of digital
                     products.
                 </h1>

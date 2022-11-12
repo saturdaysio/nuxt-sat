@@ -1,7 +1,7 @@
 <template>
     <section id="clients" class="container my-6 py-6 px-4">
         <div class="content has-text-centered mt-6">
-            <h1 class="is-size-2 has-text-centered has-text-weight-bold text-gradient-blue-red-dark">We partner with brands brave
+            <h1 class="is-size-2 is-size-3-mobile has-text-centered has-text-weight-bold text-gradient-blue-red-dark">We partner with brands brave
                 enough to do things differently.</h1>
         </div>
 

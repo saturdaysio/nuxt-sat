@@ -2,7 +2,7 @@
     <section id="cta" class=" mb-0">
         <div class="container py-6">
             <div class="pb-6">
-                <h1 class="is-size-2 has-text-centered has-text-weight-bold has-text-white">Have an interesting project?</h1>
+                <h1 class="is-size-2 is-size-3-mobile has-text-centered has-text-weight-bold has-text-white">Have an interesting project?</h1>
             </div>
             <div class="level is-centered">
                 <div class="level-item mb-6">
