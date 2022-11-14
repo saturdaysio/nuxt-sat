@@ -36,8 +36,8 @@ export default {
 .resultCard {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: start;
+    align-items: flex-start;
+    justify-content: flex-start;
     width: 50%;
     flex-shrink: 0;
     padding: 0 2rem;
