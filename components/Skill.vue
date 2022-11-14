@@ -5,7 +5,7 @@
                 <div class="box has-background-black">
                     <div class="pb-6">
                         <h1 class="is-size-2 has-text-centered has-text-weight-bold has-text-white">
-                            What We Do
+                            What we do
                         </h1>
                     </div>
                     <div class="columns">

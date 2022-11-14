@@ -17,7 +17,7 @@
         {"li": "Product Strategy"},
         {"li": "Systems Design"},
         {"li": "Product Roadmap"},
-        {"li": "Analytics & Measurement"}
+        {"li": "Analytics"}
       ]
     },
     {
@@ -26,7 +26,7 @@
       "list": [
         {"li": "User-Centered Design"},
         {"li": "Rapid Prototyping"},
-        {"li": "Web & Native App Design"},
+        {"li": "Motion Graphics"},
         {"li": "Design Systems"}
       ]
     },
@@ -35,7 +35,7 @@
       "title": "Code",
       "list": [
         {"li": "Systems Architecture"},
-        {"li": "Fullstack Web Development"},
+        {"li": "Web Development"},
         {"li": "Native Mobile Apps"},
         {"li": "Domain Driven Microservices"}
       ]

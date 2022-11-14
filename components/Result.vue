@@ -5,7 +5,7 @@
                 <div class="box has-background-black">
                     <div class="pb-6">
                         <h1 class="is-size-2 has-text-centered has-text-weight-bold has-text-white">
-                            Our Stats
+                            Our stats
                         </h1>
                     </div>
                     <div class="is-flex is-flex-wrap-wrap">
