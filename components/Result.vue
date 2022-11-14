@@ -37,7 +37,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: start;
-    justify-content: center;
+    justify-content: start;
     width: 50%;
     flex-shrink: 0;
     padding: 0 2rem;
