@@ -1,30 +1,18 @@
-import { defineNuxtConfig } from 'nuxt'
+import { defineNuxtConfig } from 'nuxt/config'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-    meta: {
-        meta: [
-            { charset: 'utf-8' },
-            { name: "viewport", content: "width=device-width, initial-scale=1" },
-        ],
-
-        htmlAttrs: {
-            lang: 'en',
-            class: 'has-navbar-fixed-top',
+    app: {
+        head: {
+            charset: 'utf-8',
+            viewport: "width=device-width, initial-scale=1",
+            title: 'Saturdays.io',
+            meta: [
+                // <meta name="description" content="site description">
+                { name: 'description', content: 'Saturdays.io Canadian digital studio' },
+                { name: 'keywords', content: 'Saturdays.io, Digital, Studio, Creative, Digital Studio, Creative Studio, UX, UI, Interaction, Product, Design, Development' }
+            ],
         },
-
-        script: [],
-        link: [
-            { 
-                href: "https://fonts.googleapis.com",
-                rel: "preconnect"
-            },
-            {
-                href: "https://fonts.gstatic.com",
-                rel: "preconnect",
-                crossorigin: "anonymous"
-            }
-        ]
     },
 
     css: ["assets/styles/main.scss"],
@@ -43,13 +31,10 @@ export default defineNuxtConfig({
         pinia: '/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs',
     },
     modules: [
-        // comment
         '@pinia/nuxt',
         'nuxt-purgecss',
 
     ],
-    // Enables Static site generation (SSG), use 'server' for Server-side rendering
-    target: 'static',
     // Serverside rendering toggle
     ssr: true,
 })
