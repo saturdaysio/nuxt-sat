@@ -9,14 +9,14 @@
                 </div>
             </div>
             <div class="level-left is-mobile">
-                <div class="level-item">
-                    <NuxtLink to="/tos" class="navbar-item">
+                <div class="navbar-item">
+                    <NuxtLink to="/tos" active-class="active">
                         <strong>Terms</strong>
                     </NuxtLink>
 
                 </div>
-                <div class="level-item">
-                    <NuxtLink to="/privacy" class="navbar-item">
+                <div class="navbar-item">
+                    <NuxtLink to="/privacy" active-class="active">
                         <strong>Privacy</strong>
                     </NuxtLink>
                 </div>
