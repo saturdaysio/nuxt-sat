@@ -25,6 +25,12 @@ $primary: $blue;
 $link: $blue;
 $link-hover: $blue;
 
+.active>* {
+  color: $white;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 
 // Update Bulma's global variables
 $family-sans-serif: 'Poppins', Helvetica, sans-serif;
