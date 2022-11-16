@@ -135,8 +135,4 @@ export default {
   z-index: 100;
 }
 
-.active>h2 {
-  color: $blue;
-}
-
 </style>
