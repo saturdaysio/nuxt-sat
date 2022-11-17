@@ -25,7 +25,7 @@ $primary: $blue;
 $link: $blue;
 $link-hover: $blue;
 
-.active>* {
+.active {
   color: $white;
   text-decoration: underline;
   text-underline-offset: 4px;
