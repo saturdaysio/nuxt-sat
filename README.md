@@ -14,19 +14,19 @@ To get a local copy up and running follow these steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+Make sure to install the dependencies:
 * npm
   ```sh
   npm install
   ```
 
-This is an example of how to list things you need to run the repo in a development environment.
+Start the development server on http://localhost:3000
 * npm
   ```sh
   npm run dev
   ```
 
-This is an example of how to list things you need to use the software and how to build the project.
+Build the application for production.
 * npm
   ```sh
   npm run build
