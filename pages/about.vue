@@ -16,7 +16,7 @@
             </div>
         </section>
 
-        <section id="ethics" class="container py-6 px-4">
+        <section id="ethics" class="container my-6 py-6 px-4">
             <div class="content">
                 <div class="content is-medium">
                     <h1 class="is-size-2 has-text-centered text-gradient-blue-red-dark">Keeping it 100</h1>
