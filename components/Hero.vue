@@ -1,5 +1,5 @@
 <template>
-  <section class="container mt-6 py-6 px-4">
+  <section class="container my-6 py-6 px-4">
     <div class="content my-6 is-medium">
       <h1 class="is-size-1 has-text-centered has-text-white">
         Saturdays is a Canadian digital studio based in Toronto
