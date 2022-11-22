@@ -1,5 +1,3 @@
-import { defineNuxtConfig } from 'nuxt/config'
-
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
     app: {
@@ -18,7 +16,24 @@ export default defineNuxtConfig({
         },
     },
 
+    // Static site rendering mode
+    ssr: true,
+
+    // CSS/SCSS
     css: ["assets/styles/main.scss"],
+
+    // Postcss config
+    // Figure out how to apply CSS in JSON to .vue files
+//    postcss: {
+//        plugins: {
+//            'postcss-modules': {
+//                localsConvention: "camelCase",
+//                generateScopedName: "[local]__[hash:base64:6]",
+//            }
+//        }
+//   },
+
+    // Vite config
     vite: {
         css: {
             preprocessorOptions: {
@@ -26,6 +41,20 @@ export default defineNuxtConfig({
                     additionalData: '@use "~/assets/styles/_variables.scss";',
                 },
             },
+            modules: {
+                generateScopedName: "[hash:base64:4]",
+            },
+        },
+    },
+
+    // Webpack config
+    webpack: {
+        loaders: {
+            cssModules: {
+                modules: {
+                    localIdentName: "[local]_[hash:base64:4]",
+                }
+            }
         }
     },
 
@@ -33,11 +62,14 @@ export default defineNuxtConfig({
     alias: {
         pinia: '/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs',
     },
+
+    // Modules
     modules: [
         '@pinia/nuxt',
         'nuxt-purgecss',
-
     ],
-    // Serverside rendering toggle
-    ssr: true,
+
+    // Build config
+    build: {
+    },
 })
