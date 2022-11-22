@@ -23,6 +23,7 @@ $grey-dark: $brown;
 $grey-light: $beige-light;
 $primary: $blue;
 $link: $blue;
+// Nov 19 - Need to update hover state colour
 $link-hover: $blue;
 
 .active {
@@ -46,7 +47,7 @@ $input-border-color: transparent;
 $input-shadow: none;
 
 
-// body class applied when mobile menu is activ
+// body class applied when mobile menu is active
 // document.body.classList.add("disableScroll")
 .disableScroll {
     overflow: hidden;
