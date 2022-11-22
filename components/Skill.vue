@@ -1,5 +1,5 @@
 <template>
-    <section id="skills" class="container my-6 py-6 px-4 has-background-black">
+    <section id="skills" class="container my-6 py-6 px-4">
         <div class="columns">
             <div class="column">
                 <div class="box has-background-black">
