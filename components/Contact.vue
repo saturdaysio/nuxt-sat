@@ -6,7 +6,7 @@
             </div>
             <div class="level is-centered">
                 <div class="level-item mb-6">
-                    <NuxtLink to="mailto:support@saturdyas.io">
+                    <NuxtLink to="mailto:info@saturdays.io">
                         <button class="button is-link is-large">
                             <p class="is-size-4"><strong>Let's talk</strong></p>
                         </button>
