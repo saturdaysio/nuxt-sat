@@ -37,7 +37,7 @@
     <nav class="navbar is-black">
       <div class="navbar-brand">
         <NuxtLink to="/" class="navbar-item">
-          <h2><strong>PC</strong></h2>
+          <h2><strong>Saturdays</strong></h2>
         </NuxtLink>
 
         <a role="button" class="navbar-burger is-active" aria-label="menu" aria-expanded="true"
