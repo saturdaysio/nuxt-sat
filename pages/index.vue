@@ -57,23 +57,5 @@
 </script>
 
 
-<style lang="scss" scoped>
-@import '~/assets/styles/_variables.scss';
-
-.tag:not(body).is-success {
-    background-color: #1CD0A0;
-    color: $black;
-}
-
-.button.is-link {
-    color: $navy;
-    background: none;
-    border-color: $navy;
-
-    &:hover {
-        color: $blue;
-        background: none;
-        border-color: $blue;
-    }
-}
+<style lang="scss">
 </style>

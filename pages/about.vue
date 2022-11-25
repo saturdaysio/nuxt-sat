@@ -50,18 +50,5 @@
 </script>
 
 
-<style lang="scss" scoped>
-@import '~/assets/styles/_variables.scss';
-
-.button.is-link.is-outlined {
-    color: $blue;
-    background: none;
-    border-color: $blue;
-
-    &:hover {
-        color: $red;
-        background: none;
-        border-color: $red;
-    }
-}
+<style lang="scss">
 </style>
