@@ -58,7 +58,7 @@ export default defineNuxtConfig({
         }
     },
 
-    // Fix for Nuxt RC 9-11, Commented out Nov 24 in 3.0
+    // Fix for Nuxt RC 9-11+
     alias: {
         pinia: '/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs',
     },
@@ -67,9 +67,15 @@ export default defineNuxtConfig({
     modules: [
         '@pinia/nuxt',
         'nuxt-purgecss',
+        '@nuxtjs/strapi',
     ],
 
-    // Build config
-    build: {
+    strapi: {
+        // Options
+        url: process.env.STRAPI_URL || 'http://localhost:1337',
+        prefix: '/api',
+        version: 'v4',
+        cookie: {},
+        cookieName: 'strapi_jwt'
     },
 })
