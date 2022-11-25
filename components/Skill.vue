@@ -12,7 +12,7 @@
                         <div class="column" v-for="item in skillStore.skillJson.service" :key="item.id">
                             <h1 class="is-size-3 has-text-weight-bold text-gradient-blue-red-dark">{{ item.title }}</h1>
                             <ul>
-                                <li class="is-size-6 has-text-white" v-for="item2 in item.list" :key="item2.id">{{ item2.li }}</li>
+                                <li class="is-size-6 has-text-white" v-for="skill in item.list" :key="skill.li">{{ skill.li }}</li>
                             </ul>
                         </div>
                     </div>
@@ -23,7 +23,7 @@
 </template>
 
 <script lang="ts">
-import { useSkillStore } from "~/store/skill";
+import { useSkillStore } from "~~/store/skill";
 
 export default {
     setup() {
