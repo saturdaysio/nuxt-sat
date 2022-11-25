@@ -11,12 +11,14 @@
         <section id="main" class="hero is-fullheight-with-navbar">
             <div class="hero-body">
                 <div class="container has-text-centered">
-                    <h1 class="title has-text-white">Page not found</h1>
-                    <p class="subtitle has-text-grey-light">The page you are looking for does not exist.</p>
-                    <div class="">
+                    <div class="pb-6">
+                        <h1 class="is-size-2 is-size-3-mobile has-text-centered has-text-weight-bold has-text-white">Page not found</h1>
+                        <p class="subtitle has-text-grey-light">The page you are looking for does not exist.</p>
+                    </div>
+                    <div>
                         <NuxtLink to="/">
                             <button class="button is-link">
-                                <p><strong>Go home</strong></p>
+                                <p class="is-size-4"><strong>Go home</strong></p>
                             </button>
                         </NuxtLink>
                     </div>
