@@ -5,7 +5,7 @@
                 <h1 class="is-size-2 is-size-3-mobile has-text-centered has-text-weight-bold has-text-white">Have an interesting project?</h1>
             </div>
             <div class="level is-centered">
-                <div class="level-item mb-6">
+                <div class="level-item">
                     <NuxtLink to="mailto:info@saturdays.io">
                         <button class="button is-link">
                             <p class="is-size-4"><strong>Let's talk</strong></p>
