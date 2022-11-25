@@ -21,7 +21,7 @@
 </template>
 
 <script lang="ts">
-import { useResultStore } from "~/store/result";
+import { useResultStore } from "~~/store/result";
 
 export default {
     setup() {

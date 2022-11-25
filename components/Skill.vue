@@ -23,7 +23,7 @@
 </template>
 
 <script lang="ts">
-import { useSkillStore } from "~/store/skill";
+import { useSkillStore } from "~~/store/skill";
 
 export default {
     setup() {
