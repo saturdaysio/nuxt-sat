@@ -15,7 +15,7 @@
                     <p class="subtitle has-text-grey-light">The page you are looking for does not exist.</p>
                     <div class="">
                         <NuxtLink to="/">
-                            <button class="button is-link is-medium is-outlined">
+                            <button class="button is-link">
                                 <p><strong>Go home</strong></p>
                             </button>
                         </NuxtLink>
@@ -37,15 +37,17 @@
 <style lang="scss" scoped>
 @import '~/assets/styles/_variables.scss';
 
-.button.is-link.is-outlined {
-    color: $navy;
+.button.is-link {
+    color: $white;
     background: none;
-    border-color: $navy;
+    border-image: linear-gradient(120deg, rgba(248,12,128), rgba(60,120,244)) 1;
+    border-width: 4px;
+    border-style: solid;
+    padding: 2rem;
 
     &:hover {
-        color: $blue;
+        color: $red;
         background: none;
-        border-color: $blue;
     }
 }
 </style>
