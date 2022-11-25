@@ -58,10 +58,10 @@ export default defineNuxtConfig({
         }
     },
 
-    // Fix for Nuxt RC 9-11
-    alias: {
-        pinia: '/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs',
-    },
+    // Fix for Nuxt RC 9-11, Commented out Nov 24 in 3.0
+    // alias: {
+    //    pinia: '/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs',
+    // },
 
     // Modules
     modules: [
