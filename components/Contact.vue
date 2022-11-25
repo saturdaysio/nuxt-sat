@@ -7,7 +7,7 @@
             <div class="level is-centered">
                 <div class="level-item mb-6">
                     <NuxtLink to="mailto:info@saturdays.io">
-                        <button class="button is-link is-large">
+                        <button class="button is-link">
                             <p class="is-size-4"><strong>Let's talk</strong></p>
                         </button>
                     </NuxtLink>
@@ -27,12 +27,12 @@
     color: $white;
     background: none;
     border-image: linear-gradient(120deg, rgba(248,12,128), rgba(60,120,244)) 1;
-    border-width: 0.20rem;
+    border-width: 4px;
     border-style: solid;
-    padding: 2.25rem;
+    padding: 2rem;
 
     &:hover {
-        color: $blue;
+        color: $red;
         background: none;
     }
 }
