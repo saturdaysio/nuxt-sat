@@ -2,7 +2,7 @@
   <div class="">
 
     <Head>
-      <Title>Phil Choi - Privacy Policy</Title>
+      <Title>Saturdays.io - Privacy Policy</Title>
       <Meta name="description" content="Saturdays.io Privacy policy" />
     </Head>
 
