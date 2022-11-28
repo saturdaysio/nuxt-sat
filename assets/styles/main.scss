@@ -1,9 +1,5 @@
 @charset "utf-8";
 
-// Import a Google Font
-// Fix for flash of invisible text issue (FOIT)
-// @import url('https://fonts.googleapis.com/css?family=Public+Sans:400,700&display=swap');
-
 
 // Set your brand colors
 $purple: #6028CC;
@@ -23,7 +19,6 @@ $grey-dark: $brown;
 $grey-light: $beige-light;
 $primary: $blue;
 $link: $blue;
-// Nov 19 - Need to update hover state colour
 $link-hover: $red;
 
 .active {
