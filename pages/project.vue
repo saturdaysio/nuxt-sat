@@ -1,6 +1,5 @@
 <template>
     <div>
-
         <Head>
             <Title>Saturdays.io - Projects</Title>
             <Meta name="description" content="Saturdays.io - Toronto based Digital studio." />
