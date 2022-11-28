@@ -1,6 +1,5 @@
 <template>
     <div>
-
         <Head>
             <Title>Saturdays.io - Page not found</Title>
             <Meta name="description" content="Saturdays.io - 404 error not found" />
@@ -18,7 +17,7 @@
                     <div>
                         <NuxtLink to="/">
                             <button class="button is-link">
-                                <p class="is-size-4"><strong>Go home</strong></p>
+                                <p class="is-size-5"><strong>Go home</strong></p>
                             </button>
                         </NuxtLink>
                     </div>
