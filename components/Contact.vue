@@ -18,7 +18,14 @@
 </template>
 
 <script lang="ts">
-import { useCssModule } from 'vue'
+    import { useCssModule } from 'vue'
+
+    export default {
+        setup() {
+            useCssModule()
+            const $style = useCssModule()
+        }
+    }
 
 </script>
 
