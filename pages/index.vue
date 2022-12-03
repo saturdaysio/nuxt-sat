@@ -65,7 +65,7 @@
 </script>
 
 
-<style lang="scss" module>
+<style lang="scss" module scoped>
 @import '~/assets/styles/main.module.scss';
 
 </style>
