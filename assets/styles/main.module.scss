@@ -44,9 +44,9 @@ $input-shadow: none;
 
 // body class applied when mobile menu is active
 // document.body.classList.add("disableScroll")
-.disableScroll {
+  .disableScroll {
     overflow: hidden;
-}
+  }
 
 
 
@@ -71,6 +71,26 @@ $input-shadow: none;
     background-clip: text;
   }
 
+
+  /* Button Secondary */
+
+  .button__secondary {
+    text-align: center;
+    color: #fff;
+    background: none;
+    border-width: 0.20rem;
+    border-style: solid;
+    border-image: linear-gradient(120deg, rgba(248,12,128), rgba(60,120,244)) 1;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    transition: all .4s ease;
+  }
+
+  .button__secondary:hover, .button__secondary:focus {
+    color: #f80c80;
+  }
 
 // Import only what you need from Bulma
 // @import "../node_modules/bulma/sass/utilities/_all.sass";
