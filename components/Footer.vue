@@ -1,22 +1,22 @@
 <template>
-    <footer class="footer has-background-black">
-        <div class="level is-mobile">
-            <div class="level-left">
-                <div class="copyright pl-2">
-                    <p class="">
-                        <strong class="has-text-white">&#169; 2016-2022 Saturdays.io Inc</strong>
+    <footer :class="$style.footer">
+        <div :class="[$style.level, $style.isMobile]">
+            <div :class="$style.levelLeft">
+                <div :class="$style.pl2">
+                    <p :class="$style.hasTextWhite">
+                        <strong :class="$style.hasTextWhite">&#169; 2016-2022 Saturdays.io Inc</strong>
                     </p>
                 </div>
             </div>
-            <div class="level-left is-mobile">
-                <div class="navbar-item">
-                    <NuxtLink to="/tos" active-class="active">
+            <div :class="[$style.levelLeft, $style.isMobile]">
+                <div :class="$style.navbarItem">
+                    <NuxtLink to="/tos" :active-class="$style.active">
                         <strong>Terms</strong>
                     </NuxtLink>
 
                 </div>
-                <div class="navbar-item">
-                    <NuxtLink to="/privacy" active-class="active">
+                <div :class="$style.navbarItem">
+                    <NuxtLink to="/privacy" :active-class="$style.active">
                         <strong>Privacy</strong>
                     </NuxtLink>
                 </div>
@@ -26,13 +26,23 @@
 </template>
 
 <script lang="ts">
+    import { useCssModule } from 'vue'
+
+
+    export default {
+        setup() {
+            useCssModule()
+            const $style = useCssModule()
+        }
+    }
 </script>
 
-<style lang="scss" scoped>
-@import '~/assets/styles/_variables.scss';
+<style lang="scss" module>
+@import '~/assets/styles/main.module.scss';
 
 .footer {
     padding: 3rem 0.75rem;
+    background-color: $black;
 }
 
 .navbar-item {

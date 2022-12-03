@@ -1,7 +1,7 @@
 <template>
-  <section class="container my-6 py-6 px-4">
-    <div class="content my-6 is-medium">
-      <h1 class="is-size-1 has-text-centered has-text-white">
+  <section :class="[$style.container, $style.my6, $style.py6, $style.px4]">
+    <div :class="[$style.content, $style.my6, $style.isMedium]">
+      <h1 :class="[$style.isSize1, $style.hasTextCentered, $style.hasTextWhite]">
         Saturdays is a Canadian digital studio based in Toronto
       </h1>
     </div>
@@ -9,7 +9,16 @@
 </template>
 
 <script lang="ts">
+  import { useCssModule } from 'vue'
+
+  export default {
+      setup() {
+          useCssModule()
+          const $style = useCssModule()
+      }
+  }
 </script>
 
-<style>
+<style lang="scss" module>
+@import '~/assets/styles/main.module.scss';
 </style>

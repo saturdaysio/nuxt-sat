@@ -20,44 +20,25 @@ export default defineNuxtConfig({
     ssr: true,
 
     // CSS/SCSS
-    css: ["assets/styles/main.scss"],
+    css: [
+        "assets/styles/main.module.scss"
+    ],
 
-    // Postcss config
-    // Figure out how to apply CSS in JSON to .vue files
-//    postcss: {
-//        plugins: {
-//            'postcss-modules': {
-//                localsConvention: "camelCase",
-//                generateScopedName: "[local]__[hash:base64:6]",
-//            }
-//        }
-//   },
 
     // Vite config
     vite: {
         css: {
             preprocessorOptions: {
                 sass: {
-                    additionalData: '@use "~/assets/styles/_variables.scss";',
+                    additionalData: '@use "~/assets/styles/_variables.module.scss";',
                 },
             },
             modules: {
-                generateScopedName: "[hash:base64:4]",
+                localsConvention: 'dashes',
+                generateScopedName: "[local]_[hash:base64:6]",
             },
         },
     },
-
-    // Webpack config
-    webpack: {
-        loaders: {
-            cssModules: {
-                modules: {
-                    localIdentName: "[local]_[hash:base64:4]",
-                }
-            }
-        }
-    },
-
 
 
     // Modules
@@ -67,8 +48,9 @@ export default defineNuxtConfig({
         '@nuxtjs/strapi',
     ],
 
+
+    // Strapi config
     strapi: {
-        // Options
         url: process.env.STRAPI_URL || 'http://localhost:1337',
         prefix: '/api',
         version: 'v4',

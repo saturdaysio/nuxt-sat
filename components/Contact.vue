@@ -1,14 +1,14 @@
 <template>
-    <section id="cta" class="container my-6 py-6 px-4">
+    <section id="cta" :class="[$style.container, $style.my6, $style.py6, $style.px4]">
         <div class="">
-            <div class="pb-6">
-                <h1 class="is-size-2 is-size-3-mobile has-text-centered has-text-weight-bold has-text-white">Have an interesting project?</h1>
+            <div :class="$style.pb6">
+                <h1 :class="[$style.isSize2, $style.isSize3Mobile, $style.hasTextCentered, $style.hasTextWeightBold, $style.hasTextWhite]">Have an interesting project?</h1>
             </div>
-            <div class="level is-centered">
-                <div class="level-item">
+            <div :class="[$style.level, $style.isCentered]">
+                <div :class="$style.levelItem">
                     <NuxtLink to="mailto:info@saturdays.io">
-                        <button class="button is-link">
-                            <p class="is-size-4"><strong>Let's talk</strong></p>
+                        <button :class="[$style.button, $style.isLink]">
+                            <p :class="$style.isSize4"><strong>Let's talk</strong></p>
                         </button>
                     </NuxtLink>
                 </div>
@@ -18,10 +18,12 @@
 </template>
 
 <script lang="ts">
+import { useCssModule } from 'vue'
+
 </script>
 
-<style lang="scss" scoped>
-@import '~/assets/styles/_variables.scss';
+<style lang="scss" module>
+@import '~/assets/styles/main.module.scss';
 
 .button.is-link {
     color: $white;

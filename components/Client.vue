@@ -1,13 +1,13 @@
 <template>
-    <section id="clients" class="container my-6 py-6 px-4">
-        <div class="content has-text-centered mt-6">
-            <h1 class="is-size-2 is-size-3-mobile has-text-centered has-text-weight-bold text-gradient-blue-red-dark">We partner with brands brave
+    <section id="clients" :class="[$style.container, $style.my6, $style.py6, $style.px4]">
+        <div :class="[$style.content, $style.hasTextCentered, $style.mt6]">
+            <h1 :class="[$style.isSize2, $style.isSize3Mobile, $style.hasTextCentered, $style.hasTextWeightBold, $style.textGradientBlueRedDark]">We partner with brands brave
                 enough to do things differently.</h1>
         </div>
 
-        <div id="grid" class="is-flex is-flex-wrap-wrap">
-            <div class="customClass" v-for="item in clientStore.clientJson.clients" :key="item.id">
-                <figure class="image is-128x128">
+        <div id="grid" :class="[$style.isFlex, $style.isFlexWrapWrap]">
+            <div ::class="$style.logo" v-for="item in clientStore.clientJson.clients" :key="item.id">
+                <figure :class="[$style.image, $style.is128x128]">
                     <img :src="item.imgSrc" :alt="item.imgAlt" :width="item.width" :height="item.height">
                 </figure>
             </div>
@@ -17,20 +17,27 @@
 </template>
 
 <script lang="ts">
-import { useClientStore } from "~~/store/client";
+    import { useCssModule } from 'vue'
+    import { useClientStore } from "~~/store/client";
 
-export default {
-    setup() {
-        const clientStore = useClientStore()
 
-        return { clientStore }
+    export default {
+        setup() {
+            useCssModule()
+            const $style = useCssModule()
+
+            const clientStore = useClientStore()
+
+            return { clientStore }
+        }
     }
-}
 
 </script>
 
-<style lang="scss" scoped>
-.customClass {
+<style lang="scss" module>
+@import '~/assets/styles/main.module.scss';
+
+.logo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,14 +52,14 @@ export default {
 
 
 @media only screen and (max-width: 800px) {
-    .customClass {
+    .logo {
         width: 33.33%;
     }
 
 }
 
 @media only screen and (max-width: 640px) {
-    .customClass {
+    .logo {
         width: 50%;
         padding: 0 1rem;
     }

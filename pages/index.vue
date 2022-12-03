@@ -9,9 +9,9 @@
 
         <Hero />
 
-        <section class="container my-6 py-6 px-4">
-            <div class="content is-medium">
-                <h1 class="is-size-2 is-size-3-mobile has-text-centered has-text-weight-bold text-gradient-blue-red-dark">
+        <section :class="[$style.container, $style.my6, $style.py6, $style.px4]">
+            <div :class="[$style.content, $style.isMedium]">
+                <h1 :class="[$style.isSize2, $style.isSize3Mobile, $style.hasTextCentered, $style.hasTextWeightBold, $style.textGradientBlueRedDark]">
                     We're a Data-driven digital studio that focuses on the Design, Development, and Strategy of digital
                     products.
                 </h1>
@@ -20,20 +20,20 @@
 
         <Skill />
 
-        <section id="preview" class="container my-6 py-6 px-4 has-background-black">
-            <div class="columns">
-                <div class="column">
-                    <div class="box has-background-black">
-                        <div class="pb-2">
-                            <h1 class="is-size-2 has-text-centered has-text-weight-bold has-text-white">
+        <section id="preview" :class="[$style.container, $style.my6, $style.py6, $style.px4, $style.hasBackgroundBlack]">
+            <div :class="$style.columns">
+                <div :class="$style.column">
+                    <div :class="[$style.box, $style.hasBackgroundBlack]">
+                        <div :class="$style.pb2">
+                            <h1 :class="[$style.isSize2, $style.hasTextCentered, $style.hasTextWeightBold, $style.hasTextWhite]">
                                 What we're making
                             </h1>
                         </div>
-                        <div class="media">
+                        <div :class="$style.media">
                             <picture>
                                 <source type="image/webp" srcset="~/assets/img/mobile.webp">
                                 <source type="image/png" srcset="~/assets/img/mobile.png">
-                                <img src="~/assets/img/mobile.webp" alt="RENAME." draggable="false" width="1600"
+                                <img src="~/assets/img/mobile.webp" alt="Mobile app interfaces." draggable="false" width="1600"
                                     height="1000">
                             </picture>
                         </div>
@@ -52,9 +52,20 @@
 </template>
 
 
-<script lang="ts" setup>
+<script lang="ts">
+    import { useCssModule } from 'vue'
+
+    export default {
+        setup() {
+            useCssModule()
+            const $style = useCssModule()
+        }
+    }
+
 </script>
 
 
-<style lang="scss">
+<style lang="scss" module>
+@import '~/assets/styles/main.module.scss';
+
 </style>
