@@ -34,8 +34,10 @@ export default defineNuxtConfig({
                 },
             },
             modules: {
+                scopeBehaviour: 'global',
                 localsConvention: 'dashes',
-                generateScopedName: "[local]_[hash:base64:6]",
+                generateScopedName: "[local]_[hash:base64:4]",
+                
             },
         },
     },
