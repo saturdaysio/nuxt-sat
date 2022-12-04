@@ -13,16 +13,31 @@ export default defineNuxtConfig({
                 { name: 'description', content: 'Saturdays.io Canadian digital studio' },
                 { name: 'keywords', content: 'Saturdays.io, Digital, Studio, Creative, Digital Studio, Creative Studio, UX, UI, Interaction, Product, Design, Development' }
             ],
+            link: [
+                { rel: 'icon', type: 'image/x-icon', href: '@/assets/icon/favicon.ico' }
+              ]
         },
     },
 
     // Static site rendering mode
-    ssr: true,
+    ssr: false,
 
     // CSS/SCSS
     css: [
-        "assets/styles/main.module.scss"
+        "@/assets/styles/main.module.scss"
     ],
+
+
+    // Modules
+    modules: [
+        '@pinia/nuxt',
+        'nuxt-purgecss',
+        '@nuxtjs/strapi',
+    ],
+
+
+    // Auto import components: https://go.nuxtjs.dev/config-components
+    components: true,
 
 
     // Vite config
@@ -37,18 +52,19 @@ export default defineNuxtConfig({
                 scopeBehaviour: 'local',
                 localsConvention: 'dashes',
                 generateScopedName: "[local]_[hash:base64:4]",
-                
             },
+        },
+        build: {
+            sourcemap: 'inline',
+            rollupOptions: {
+            }
         },
     },
 
 
-    // Modules
-    modules: [
-        '@pinia/nuxt',
-        'nuxt-purgecss',
-        '@nuxtjs/strapi',
-    ],
+    // Build
+    build: {
+    },
 
 
     // Strapi config
