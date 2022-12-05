@@ -1,12 +1,12 @@
 <template>
     <section id="clients" :class="[$style.container, $style.my6, $style.py6, $style.px4]">
-        <div :class="[$style.content, $style.hasTextCentered, $style.mt6]">
+        <div :class="[$style.content, $style.hasTextCentered]">
             <h1 :class="[$style.isSize2, $style.isSize3Mobile, $style.hasTextCentered, $style.hasTextWeightBold, $style.textGradientBlueRedDark]">We partner with brands brave
                 enough to do things differently.</h1>
         </div>
 
         <div id="grid" :class="[$style.isFlex, $style.isFlexWrapWrap]">
-            <div ::class="$style.logo" v-for="item in clientStore.clientJson.clients" :key="item.id">
+            <div :class="$style.logo" v-for="item in clientStore.clientJson.clients" :key="item.id">
                 <figure :class="[$style.image, $style.is128x128]">
                     <img :src="item.imgSrc" :alt="item.imgAlt" :width="item.width" :height="item.height">
                 </figure>
