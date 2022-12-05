@@ -14,13 +14,14 @@ export default defineNuxtConfig({
                 { name: 'keywords', content: 'Saturdays.io, Digital, Studio, Creative, Digital Studio, Creative Studio, UX, UI, Interaction, Product, Design, Development' }
             ],
             link: [
-                { rel: 'icon', type: 'image/x-icon', href: '@/assets/icon/favicon.ico' }
+                { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
               ]
         },
     },
 
     // Static site rendering mode
     ssr: false,
+
 
     // CSS/SCSS
     css: [
@@ -64,8 +65,12 @@ export default defineNuxtConfig({
 
     // Build
     build: {
+        postcss: {
+            postcssOptions: {
+              plugins: {},
+            },
+        },
     },
-
 
     // Strapi config
     strapi: {
