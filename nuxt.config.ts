@@ -47,7 +47,7 @@ export default defineNuxtConfig({
         css: {
             preprocessorOptions: {
                 scss: {
-                    additionalData: '@use "~/assets/styles/_variables.module.scss";',
+                    additionalData: '@import "~/assets/styles/_variables.module.scss";',
                 },
             },
             modules: {
@@ -57,7 +57,20 @@ export default defineNuxtConfig({
         },
         build: {
             cssCodeSplit: true,
+            // https://rollupjs.org/guide/en/#big-list-of-options
             rollupOptions: {
+                // external modules won't be bundled into your library
+                external: ['vue'],
+                output: {
+                    // disable warning on src/index.ts using both default and named export
+                    exports: 'named',
+                    // Provide global variables to use in the UMD build
+                    // for externalized deps (not useful if 'umd' is not in lib.formats)
+                    globals: {
+                        vue: 'vue',
+                    }
+                },
+
             },
             sourcemap: false,
         },
