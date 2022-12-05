@@ -52,7 +52,7 @@ export default defineNuxtConfig({
             modules: {
                 scopeBehaviour: 'local',
                 localsConvention: 'dashes',
-                generateScopedName: "[local]_[hash:base64:4]",
+                generateScopedName: "[hash:base64:6]",
             },
         },
         build: {
