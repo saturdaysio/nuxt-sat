@@ -15,6 +15,7 @@ export default defineNuxtConfig({
             ],
             link: [
                 { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+                // Add Google fonts resource
               ]
         },
     },
@@ -50,27 +51,24 @@ export default defineNuxtConfig({
                 },
             },
             modules: {
-                scopeBehaviour: 'local',
                 localsConvention: 'dashes',
-                generateScopedName: "[hash:base64:6]",
+                generateScopedName: "[local]_[hash:base64:4]",
             },
         },
         build: {
-            sourcemap: 'inline',
+            cssCodeSplit: true,
             rollupOptions: {
-            }
-        },
-    },
-
-
-    // Build
-    build: {
-        postcss: {
-            postcssOptions: {
-              plugins: {},
             },
+            sourcemap: false,
         },
     },
+
+    vue: {
+        compilerOptions: {
+            sourceMap: false,
+        }
+    },
+
 
     // Strapi config
     strapi: {
