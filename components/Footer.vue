@@ -4,7 +4,7 @@
             <div :class="$style.levelLeft">
                 <div :class="$style.pl2">
                     <p :class="$style.hasTextWhite">
-                        <strong :class="$style.hasTextWhite">&#169; 2016-2022 Saturdays.io Inc</strong>
+                        &#169; 2016-2022 Saturdays.io Inc
                     </p>
                 </div>
             </div>
