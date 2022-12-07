@@ -1,5 +1,5 @@
 <template>
-    <section id="skills" :class="[$style.container, $style.my6, $style.py6, $style.px4]">
+    <section id="stats" :class="[$style.container, $style.my6, $style.py6, $style.px4]">
         <div :class="$style.columns">
             <div :class="$style.column">
                 <div :class="[$style.box, $style.hasBackgroundBlack]">
