@@ -1,14 +1,14 @@
 <template>
-    <section id="cta" :class="[$style.container, $style.my6, $style.py6, $style.px4]">
+    <section id="cta" :class="[$style.container, $style.mxAuto, $style.py16]">
         <div class="">
-            <div :class="$style.pb6">
-                <h1 :class="[$style.isSize2, $style.isSize3Mobile, $style.hasTextCentered, $style.hasTextWeightBold, $style.hasTextWhite]">Have an interesting project?</h1>
+            <div :class="$style.mb4">
+                <p :class="[$style.text4xl, $style.textCenter, $style.textWhite]">Have an interesting project?</p>
             </div>
-            <div :class="[$style.level, $style.isCentered]">
+            <div :class="[$style.container, $style.alignMiddle]">
                 <div :class="$style.levelItem">
                     <NuxtLink to="mailto:info@saturdays.io">
                         <button :class="[$style.button, $style.isLink]">
-                            <p :class="$style.isSize4"><strong>Let's talk</strong></p>
+                            <p :class="[$style.textMd, $style.uppercase]"><strong>Let's talk</strong></p>
                         </button>
                     </NuxtLink>
                 </div>
@@ -30,10 +30,10 @@
 </script>
 
 <style lang="scss" module scoped>
-@import '~/assets/styles/main.module.scss';
+@import '~/assets/css/tailwind.css';
 
 .button.is-link {
-    color: $white;
+    color: #fff;
     background: none;
     border-image: linear-gradient(120deg, rgba(248,12,128), rgba(60,120,244)) 1;
     border-width: 4px;
@@ -41,7 +41,6 @@
     padding: 2rem;
 
     &:hover {
-        color: $red;
         background: none;
     }
 }

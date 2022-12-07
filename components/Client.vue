@@ -1,13 +1,13 @@
 <template>
-    <section id="clients" :class="[$style.container, $style.my6, $style.py6, $style.px4]">
-        <div :class="[$style.content, $style.hasTextCentered]">
-            <h1 :class="[$style.isSize2, $style.isSize3Mobile, $style.hasTextCentered, $style.hasTextWeightBold, $style.textGradientBlueRedDark]">We partner with brands brave
+    <section id="clients" :class="[$style.container, $style.mxAuto, $style.py16]">
+        <div :class="[$style.container, $style.textCenter]">
+            <h1 :class="[$style.text4xl, $style.textCenter, $style.textWhite]">We partner with brands brave
                 enough to do things differently.</h1>
         </div>
 
-        <div id="grid" :class="[$style.isFlex, $style.isFlexWrapWrap]">
-            <div :class="$style.logo" v-for="item in clientStore.clientJson.clients" :key="item.id">
-                <figure :class="[$style.image, $style.is128x128]">
+        <div id="grid" :class="[$style.flex, $style.flexRow]">
+            <div class="logo" v-for="item in clientStore.clientJson.clients" :key="item.id">
+                <figure :class="[$style.image]">
                     <img :src="item.imgSrc" :alt="item.imgAlt" :width="item.width" :height="item.height">
                 </figure>
             </div>
@@ -35,7 +35,7 @@
 </script>
 
 <style lang="scss" module scoped>
-@import '~/assets/styles/main.module.scss';
+@import '~/assets/css/tailwind.css';
 
 .logo {
     display: flex;
@@ -44,10 +44,6 @@
     width: 25%;
     flex-shrink: 0;
     padding: 0 2rem;
-
-    .image {
-        display: inherit;
-    }
 }
 
 
