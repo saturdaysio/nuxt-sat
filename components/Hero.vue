@@ -1,9 +1,9 @@
 <template>
-  <section :class="[$style.container, $style.mxAuto, $style.bgBlack]">
-    <div :class="[$style.h64, $style.alignMiddle]">
-      <p class="text-6xl text-center align-middle text-white">
+  <section :class="[$style.container, $style.my6, $style.py6, $style.px4]">
+    <div :class="[$style.content, $style.my6, $style.isMedium]">
+      <h1 :class="[$style.isSize1, $style.hasTextCentered, $style.hasTextWhite]">
         Saturdays is a Canadian digital studio based in Toronto
-      </p>
+      </h1>
     </div>
   </section>
 </template>
@@ -19,6 +19,6 @@
   }
 </script>
 
-<style module scoped>
-@import '~/assets/css/tailwind.css';
+<style lang="scss" module scoped>
+@import '~/assets/styles/main.module.scss';
 </style>

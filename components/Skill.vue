@@ -1,18 +1,18 @@
 <template>
-    <section id="skills" class="container mx-auto py-16">
-        <div class="">
-            <div class="">
-                <div class="container">
-                    <div class="text-center pb-8">
-                        <p class="text-3xl text-white">
+    <section id="skills" :class="[$style.container, $style.my6, $style.py6, $style.px4]">
+        <div :class="$style.columns">
+            <div :class="$style.column">
+                <div :class="[$style.box, $style.hasBackgroundBlack]">
+                    <div :class="$style.pb6">
+                        <h1 :class="[$style.isSize2, $style.hasTextCentered, $style.hasTextWeightBold, $style.hasTextWhite]">
                             What we do
-                        </p>
+                        </h1>
                     </div>
-                    <div class="flex flex-row items-stretch gap-8">
-                        <div class="content-center" v-for="item in skillStore.skillJson.service" :key="item.id">
-                            <p class="text-xl text-white">{{ item.title }}</p>
+                    <div :class="$style.columns">
+                        <div :class="$style.column" v-for="item in skillStore.skillJson.service" :key="item.id">
+                            <h1 :class="[$style.isSize3, $style.hasTextWeightBold, $style.textGradientBlueRedDark]">{{ item.title }}</h1>
                             <ul>
-                                <li class="text-white" v-for="skill in item.list" :key="skill.li">{{ skill.li }}</li>
+                                <li :class="[$style.isSize6, $style.hasTextWhite]" v-for="skill in item.list" :key="skill.li">{{ skill.li }}</li>
                             </ul>
                         </div>
                     </div>
@@ -22,12 +22,14 @@
     </section>
 </template>
 
-
 <script lang="ts">
+    import { useCssModule } from 'vue'
     import { useSkillStore } from "~~/store/skill";
 
     export default {
         setup() {
+            useCssModule()
+            const $style = useCssModule()
             const skillStore = useSkillStore()
 
             return { skillStore }
@@ -35,7 +37,7 @@
     }
 </script>
 
-<style scoped>
-@import '~/assets/css/tailwind.css';
+<style lang="scss" module >
+@import '~/assets/styles/main.module.scss';
 
 </style>

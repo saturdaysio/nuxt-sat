@@ -11,7 +11,7 @@
             <div :class="$style.heroBody">
                 <div :class="[$style.container, $style.hasTextCentered]">
                     <div :class="$style.pb6">
-                        <h1 :class="[$style.text5xl, $style.isSize3Mobile, $style.hasTextCentered, $style.hasTextWeightBold, $style.hasTextWhite]">Page not found</h1>
+                        <h1 :class="[$style.isSize2, $style.isSize3Mobile, $style.hasTextCentered, $style.hasTextWeightBold, $style.hasTextWhite]">Page not found</h1>
                         <p :class="[$style.subtitle, $style.hasTextGreyLight]">The page you are looking for does not exist.</p>
                     </div>
                     <div>
@@ -45,9 +45,10 @@
 
 
 <style lang="scss" module scoped>
+    @import '~/assets/styles/main.module.scss';
 
     .button.is-link {
-        color: #fff;
+        color: $white;
         background: none;
         border-image: linear-gradient(120deg, rgba(248,12,128), rgba(60,120,244)) 1;
         border-width: 4px;
@@ -55,7 +56,7 @@
         padding: 2rem;
 
         &:hover {
-            color: red;
+            color: $red;
             background: none;
         }
 }
