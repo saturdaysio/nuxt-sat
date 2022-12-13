@@ -4,7 +4,8 @@
 
 * Nuxt 3.0
 * Pinia
-* Bulma.io
+* Tailwind
+* PostCSS
 * SCSS
 
 
