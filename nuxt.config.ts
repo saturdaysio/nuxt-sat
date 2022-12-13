@@ -26,12 +26,13 @@ export default defineNuxtConfig({
 
     // Global CSS/SCSS
     css: [
-        "@/assets/styles/main.module.scss"
+        "@/assets/styles/tailwind.scss"
     ],
 
 
     // Modules
     modules: [
+        '@nuxtjs/tailwindcss',
         '@pinia/nuxt',
         'nuxt-purgecss',
         '@nuxtjs/strapi',
@@ -47,7 +48,7 @@ export default defineNuxtConfig({
         css: {
             preprocessorOptions: {
                 scss: {
-                    additionalData: '@import "~/assets/styles/_variables.module.scss";',
+                    additionalData: '',
                 },
             },
             modules: {
