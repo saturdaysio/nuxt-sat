@@ -11,7 +11,7 @@
 
         <section class="container my-16 py-8 px-4">
             <div class="content">
-                <h1 class="text-2xl uppercase text-center font-bold text-white">
+                <h1 class="text-3xl text-center font-bold text-white">
                     We're a Data-driven digital studio that focuses on the Design Development and Strategy of digital
                     products.
                 </h1>
@@ -25,7 +25,7 @@
                 <div class="column">
                     <div class="box">
                         <div class="pb2">
-                            <h1 class="text-2xl text-center font-bold text-white">
+                            <h1 class="text-3xl text-center font-bold text-white">
                                 What we're making
                             </h1>
                         </div>
