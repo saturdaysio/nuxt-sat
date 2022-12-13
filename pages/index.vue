@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="bg-black">
         <Head>
             <Title>Saturdays.io - 2022</Title>
             <Meta name="description" content="Saturdays.io - Toronto based digital studio" />
@@ -9,10 +9,10 @@
 
         <Hero />
 
-        <section :class="[$style.container, $style.my6, $style.py6, $style.px4]">
-            <div :class="[$style.content, $style.isMedium]">
-                <h1 :class="[$style.isSize2, $style.isSize3Mobile, $style.hasTextCentered, $style.hasTextWeightBold, $style.textGradientBlueRedDark]">
-                    We're a Data-driven digital studio that focuses on the Design, Development, and Strategy of digital
+        <section class="container my-16 py-8 px-4">
+            <div class="content">
+                <h1 class="text-2xl uppercase text-center font-bold text-white">
+                    We're a Data-driven digital studio that focuses on the Design Development and Strategy of digital
                     products.
                 </h1>
             </div>
@@ -20,16 +20,16 @@
 
         <Skill />
 
-        <section id="preview" :class="[$style.container, $style.my6, $style.py6, $style.px4, $style.hasBackgroundBlack]">
-            <div :class="$style.columns">
-                <div :class="$style.column">
-                    <div :class="[$style.box, $style.hasBackgroundBlack]">
-                        <div :class="$style.pb2">
-                            <h1 :class="[$style.isSize2, $style.hasTextCentered, $style.hasTextWeightBold, $style.hasTextWhite]">
+        <section id="preview" class="container my-16 py-8 px-4">
+            <div class="columns">
+                <div class="column">
+                    <div class="box">
+                        <div class="pb2">
+                            <h1 class="text-2xl text-center font-bold text-white">
                                 What we're making
                             </h1>
                         </div>
-                        <div :class="$style.media">
+                        <div class="media">
                             <picture>
                                 <source type="image/webp" srcset="~/assets/img/mobile.webp">
                                 <source type="image/png" srcset="~/assets/img/mobile.png">
@@ -53,19 +53,10 @@
 
 
 <script lang="ts">
-    import { useCssModule } from 'vue'
-
-    export default {
-        setup() {
-            useCssModule()
-            const $style = useCssModule()
-        }
-    }
-
 </script>
 
 
-<style lang="scss" module scoped>
-@import '~/assets/styles/main.module.scss';
+<style lang="scss" scoped>
+@import '~/assets/styles/tailwind.scss';
 
 </style>

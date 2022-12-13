@@ -7,17 +7,17 @@
 
         <Nav />
 
-        <section id="main" :class="[$style.hero, $style.isFullheightWithNavbar]">
-            <div :class="$style.heroBody">
-                <div :class="[$style.container, $style.hasTextCentered]">
-                    <div :class="$style.pb6">
-                        <h1 :class="[$style.isSize2, $style.isSize3Mobile, $style.hasTextCentered, $style.hasTextWeightBold, $style.hasTextWhite]">Page not found</h1>
-                        <p :class="[$style.subtitle, $style.hasTextGreyLight]">The page you are looking for does not exist.</p>
+        <section id="main" class="hero isFullheightWithNavbar">
+            <div class="heroBody">
+                <div class="container hasTextCentered">
+                    <div class="pb6">
+                        <h1 class="isSize2 isSize3Mobile hasTextCentered hasTextWeightBold hasTextWhite">Page not found</h1>
+                        <p class="subtitle hasTextGreyLight">The page you are looking for does not exist.</p>
                     </div>
                     <div>
                         <NuxtLink to="/">
-                            <button :class="[$style.button, $style.isLink]">
-                                <p :class="$style.isSize5"><strong>Go home</strong></p>
+                            <button class="button isLink">
+                                <p class="isSize5"><strong>Go home</strong></p>
                             </button>
                         </NuxtLink>
                     </div>
@@ -32,20 +32,11 @@
 
 
 <script lang="ts">
-    import { useCssModule } from 'vue'
-
-
-    export default {
-        setup() {
-            useCssModule()
-            const $style = useCssModule()
-        }
-    }
 </script>
 
 
-<style lang="scss" module scoped>
-    @import '~/assets/styles/main.module.scss';
+<style lang="scss" scoped>
+    @import '~/assets/styles/tailwind.scss';
 
     .button.is-link {
         color: $white;

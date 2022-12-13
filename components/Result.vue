@@ -1,17 +1,17 @@
 <template>
-    <section id="stats" :class="[$style.container, $style.my6, $style.py6, $style.px4]">
-        <div :class="$style.columns">
-            <div :class="$style.column">
-                <div :class="[$style.box, $style.hasBackgroundBlack]">
-                    <div :class="$style.pb6">
-                        <h1 :class="[$style.isSize2, $style.hasTextCentered, $style.hasTextWeightBold, $style.hasTextWhite]">
+    <section id="stats" class="container my-16 py-8 px-4">
+        <div class="columns">
+            <div class="column">
+                <div class="box">
+                    <div class="pb-4">
+                        <h1 class="text-2xl text-center font-bold text-white">
                             Our stats
                         </h1>
                     </div>
-                    <div :class="[$style.isFlex, $style.isFlexWrapWrap]">
-                        <div :class="[$style.resultCard, $style.pb6]" v-for="item in resultStore.resultJson.result" :key="item.id">
-                            <h1 :class="[$style.isSize1, $style.hasTextWeightBold, $style.textGradientBlueRedDark]">{{ item.title }}</h1>
-                            <p :class="[$style.isSize5, $style.hasTextWhite]">{{ item.desc }}</p>
+                    <div class="flex flex-wrap">
+                        <div class="resultCard pb-8" v-for="item in resultStore.resultJson.result" :key="item.id">
+                            <h1 class="text-4xl font-bold text-white">{{ item.title }}</h1>
+                            <p class="isSize5 text-white">{{ item.desc }}</p>
                         </div>
                     </div>
                 </div>
@@ -21,24 +21,19 @@
 </template>
 
 <script lang="ts">
-    import { useCssModule } from 'vue'
     import { useResultStore } from "~~/store/result";
 
 
     export default {
         setup() {
-            useCssModule()
-            const $style = useCssModule()
-
             const resultStore = useResultStore()
-
             return { resultStore }
         }
     }
 </script>
 
-<style lang="scss" module scoped>
-@import '~/assets/styles/main.module.scss';
+<style lang="scss" scoped>
+@import '~/assets/styles/tailwind.scss';
 
     .resultCard {
         display: flex;

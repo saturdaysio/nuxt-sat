@@ -1,12 +1,12 @@
 <template>
   <div>
-    <nav :class="[$style.navbar, $style.isBlack, $style.isFixedTop]" role="navigation" aria-label="main navigation">
-      <div :class="$style.navbarBrand">
-        <NuxtLink to="/" :class="$style.navbarItem">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbarBrand">
+        <NuxtLink to="/" class="navbar-item">
           <h2 class=""><strong>Saturdays</strong></h2>
         </NuxtLink>
 
-        <a role="button" :class="$style.navbarBurger" aria-label="menu" aria-expanded="false" data-target="navbarBasic"
+        <a role="button" class="navbarBurger" aria-label="menu" aria-expanded="false" data-target="navbarBasic"
           @click="toggleAction">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -14,16 +14,16 @@
         </a>
       </div>
 
-      <div id="navbarBasic" :class="$style.navbarEnd">
+      <div id="navbarBasic" class="navbarEnd">
 
-        <div :class="$style.navbarMenu">
-          <div :class="$style.navbarItem">
-            <NuxtLink to="/" :active-class="$style.active">
+        <div class="navbarMenu">
+          <div class="navbar-item">
+            <NuxtLink to="/" active-class="active">
               <strong>Work</strong>
             </NuxtLink>
           </div>
-          <div :class="$style.navbarItem">
-            <NuxtLink to="/about" :active-class="$style.active">
+          <div class="navbar-item">
+            <NuxtLink to="/about" active-class="active">
               <strong>About</strong>
             </NuxtLink>
           </div>
@@ -33,14 +33,14 @@
     </nav>
   </div>
 
-  <div v-show="toggle" id="menuOverlay" :class="$style.overlay">
-    <nav :class="[$style.navbar, $style.isBlack]">
-      <div :class="$style.navbarBrand">
-        <NuxtLink to="/" :class="$style.navbarItem">
+  <div v-show="toggle" id="menuOverlay" class="overlay">
+    <nav class="navbar">
+      <div class="navbarBrand">
+        <NuxtLink to="/" class="navbar-item">
           <h2><strong>Saturdays</strong></h2>
         </NuxtLink>
 
-        <a role="button" :class="[$style.navbarBurger, $style.isActive]" aria-label="menu" aria-expanded="true"
+        <a role="button" class="navbarBurger isActive" aria-label="menu" aria-expanded="true"
           data-target="navbarBasic" @click="toggleAction">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -49,31 +49,31 @@
       </div>
     </nav>
 
-    <section :class="[$style.hero, $style.isFullheight]">
-      <div :class="$style.heroBody">
-        <div :class="[$style.columns, $style.isVcentered]">
-          <div :class="$style.column">
-            <div :class="$style.navbarItem">
-              <NuxtLink to="/" :active-class="$style.active">
-                <h2 :class="[$style.isSize3Tablet, $style.isSize4Mobile, $style.hasTextWeightBold]">Work</h2>
+    <section class="hero isFullheight">
+      <div class="heroBody">
+        <div class="columns isVcentered">
+          <div class="column">
+            <div class="navbar-item">
+              <NuxtLink to="/" active-class="active">
+                <h2 class="isSize3Tablet isSize4Mobile font-bold">Work</h2>
               </NuxtLink>
             </div>
 
-            <div :class="$style.navbarItem">
-              <NuxtLink to="/about" :active-class="$style.active">
-                <h2 :class="[$style.isSize3Tablet, $style.isSize4Mobile, $style.hasTextWeightBold]">About</h2>
+            <div class="navbar-item">
+              <NuxtLink to="/about" active-class="active">
+                <h2 class="isSize3Tablet isSize4Mobile font-bold">About</h2>
               </NuxtLink>
             </div>
 
-            <div :class="$style.navbarItem">
-              <NuxtLink to="/tos" :active-class="$style.active">
-                <h2 :class="[$style.isSize3Tablet, $style.isSize4Mobile, $style.hasTextWeightBold]">Terms of Service</h2>
+            <div class="navbar-item">
+              <NuxtLink to="/tos" active-class="active">
+                <h2 class="isSize3Tablet isSize4Mobile font-bold">Terms of Service</h2>
               </NuxtLink>
             </div>
 
-            <div :class="$style.navbarItem">
-              <NuxtLink to="/privacy" :active-class="$style.active">
-                <h2 :class="[$style.isSize3Tablet, $style.isSize4Mobile, $style.hasTextWeightBold]">Privacy Policy</h2>
+            <div class="navbar-item">
+              <NuxtLink to="/privacy" active-class="active">
+                <h2 class="isSize3Tablet isSize4Mobile font-bold">Privacy Policy</h2>
               </NuxtLink>
             </div>
           </div>
@@ -85,18 +85,12 @@
 </template>
 
 <script lang="ts">
-  import { useCssModule } from 'vue'
 
   export default {
-
-    setup() {
-      useCssModule()
-        const $style = useCssModule()
-    },
     
     data: function () {
       return {
-        toggle: false,
+        toggle: false
       };
     },
 
@@ -108,14 +102,14 @@
         } else {
           document.body.classList.remove("disableScroll");
         }
-      },
+      }
       
-    },
+    }
   };
 </script>
 
-<style lang="scss" module scoped>
-@import '~/assets/styles/main.module.scss';
+<style lang="scss" scoped>
+@import '~/assets/styles/tailwind.scss';
 
   .navbar {
     padding: 0 .75rem;
@@ -126,7 +120,7 @@
 
     &:hover {
       background: none;
-      color: $red;
+      color: $blue;
     }
   }
 
@@ -136,7 +130,7 @@
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: $black;
+    background-color: #000;
     overflow-y: hidden;
     opacity: 0.96;
     z-index: 100;
