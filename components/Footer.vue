@@ -1,5 +1,5 @@
 <template>
-    <footer class="footer">
+    <footer class="footer container mx-auto">
         <div class="flex justify-between">
             <div class="">
                 <div class="copyright">
@@ -9,7 +9,7 @@
                 </div>
             </div>
             <div class="flex flex-end">
-                <div class="navbar-item pr-4">
+                <div class="navbar-item pr-8">
                     <NuxtLink to="/tos" active-class="active">
                         <strong>Terms</strong>
                     </NuxtLink>
@@ -33,7 +33,7 @@
 
 .footer {
     height: 4rem;
-    padding: 3rem 1rem;
+    padding: 4rem 0;
 }
 
 .navbar-item {

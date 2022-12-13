@@ -1,5 +1,5 @@
 <template>
-    <section id="skills" class="container my-16 py-6 px-4">
+    <section id="skills" class="container my-16 mx-auto py-6 px-4">
         <div class="flex flex-col">
             <div class="">
                 <div class="">

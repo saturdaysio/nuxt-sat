@@ -7,7 +7,7 @@
 
         <Nav />
 
-        <section class="container my-16 py-8 px-4">
+        <section class="container my-16 mx-auto py-8 px-4">
             <div class=" ">
                 <h1 class="text-4xl text-center font-bold text-white">
                     We bridge the gap between design and technology
@@ -15,7 +15,7 @@
             </div>
         </section>
 
-        <section id="ethics" class="container my-16 py-8 px-4">
+        <section id="ethics" class="container my-16 mx-auto py-8 px-4">
             <div class=" ">
                 <div class=" ">
                     <h1 class="text-3xl text-center font-bold text-white pb-8">Keeping it 100</h1>
