@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="bg-black">
         <Head>
             <Title>Saturdays.io - Page not found</Title>
             <Meta name="description" content="Saturdays.io - 404 error not found" />
@@ -7,17 +7,17 @@
 
         <Nav />
 
-        <section id="main" class="hero isFullheightWithNavbar">
-            <div class="heroBody">
-                <div class="container hasTextCentered">
-                    <div class="pb6">
-                        <h1 class="isSize2 isSize3Mobile hasTextCentered hasTextWeightBold hasTextWhite">Page not found</h1>
-                        <p class="subtitle hasTextGreyLight">The page you are looking for does not exist.</p>
+        <section id="main" class="container my-16 py-8 px-4">
+            <div class=" ">
+                <div class="flex flex-col ">
+                    <div class="pb-8">
+                        <h1 class="text-4xl text-center font-bold text-white">Page not found</h1>
+                        <p class=" text-white">The page you are looking for does not exist.</p>
                     </div>
                     <div>
                         <NuxtLink to="/">
-                            <button class="button isLink">
-                                <p class="isSize5"><strong>Go home</strong></p>
+                            <button class="button is-link">
+                                <p class="text-xl"><strong>Go home</strong></p>
                             </button>
                         </NuxtLink>
                     </div>

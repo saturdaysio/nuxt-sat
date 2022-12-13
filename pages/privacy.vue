@@ -12,7 +12,7 @@
         <h1 class="text-4xl font-bold text-white">Privacy Policy</h1>
         <p class=" text-white">Last updated: Jan 25 2022</p>
       </div>
-      <div id="definition" class="content isNormal">
+      <div id="definition" class=" ">
         <p class="text-white pb-2">
           Saturdays.io Inc. (“our” “we” or “us”) takes your (“you” “your” or the “User”) privacy seriously. We may
           collect use and share some of your personal information. This Privacy Policy is a guide to explain how we do
@@ -22,7 +22,7 @@
 
       </div>
 
-      <div id="use-of-services" class="content isNormal py-8">
+      <div id="use-of-services" class="  py-8">
         <h1 class="text-xl  font-bold text-white">
           1. Policy Scope
         </h1>
@@ -33,7 +33,7 @@
         </p>
       </div>
 
-      <div id="info-collected" class="content isNormal py-8">
+      <div id="info-collected" class="  py-8">
         <h1 class="text-xl  font-bold text-white">
           2. Information We Collect
         </h1>
@@ -66,7 +66,7 @@
         </ol>
       </div>
 
-      <div id="how-we-use-info" class="content isNormal py-8">
+      <div id="how-we-use-info" class="  py-8">
         <h1 class="text-xl  font-bold text-white">
           3. How We Use the Information We Collect
         </h1>
@@ -120,7 +120,7 @@
         </p>
       </div>
 
-      <div id="share-info" class="content isNormal py-8">
+      <div id="share-info" class="  py-8">
         <h1 class="text-xl  font-bold text-white">
           4. Sharing Information
         </h1>
@@ -174,7 +174,7 @@
         </ol>
       </div>
 
-      <div id="control-info" class="content isNormal py-8">
+      <div id="control-info" class="  py-8">
         <h1 class="text-xl  font-bold text-white">
           5. Controlling Your Information
         </h1>
@@ -197,7 +197,7 @@
         </p>
       </div>
 
-      <div id="do-not-track" class="content isNormal py-8">
+      <div id="do-not-track" class="  py-8">
         <h1 class="text-xl  font-bold text-white">
           6. Do Not Track
         </h1>
@@ -207,7 +207,7 @@
         </p>
       </div>
 
-      <div id="gdpr" class="content isNormal py-8">
+      <div id="gdpr" class="  py-8">
         <h1 class="text-xl  font-bold text-white">
           7. GDPR
         </h1>
@@ -217,7 +217,7 @@
         </p>
       </div>
 
-      <div id="age-restrictions" class="content isNormal py-8">
+      <div id="age-restrictions" class="  py-8">
         <h1 class="text-xl  font-bold text-white">
           8. Age Restrictions
         </h1>
@@ -228,7 +228,7 @@
         </p>
       </div>
 
-      <div id="do-not-track" class="content isNormal py-8">
+      <div id="do-not-track" class="  py-8">
         <h1 class="text-xl  font-bold text-white">
           9. Changes to this Privacy Policy
         </h1>
@@ -240,7 +240,7 @@
         </p>
       </div>
 
-      <div id="assignment" class="content isNormal py-8">
+      <div id="assignment" class="  py-8">
         <h1 class="text-xl  font-bold text-white">
           10. Assignment Change of Control and Transfer
         </h1>
@@ -252,7 +252,7 @@
         </p>
       </div>
 
-      <div id="contact-us" class="content isNormal py-8">
+      <div id="contact-us" class="  py-8">
         <h1 class="text-xl  font-bold text-white">
           11. Contact Us
         </h1>

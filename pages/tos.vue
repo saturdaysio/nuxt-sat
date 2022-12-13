@@ -12,7 +12,7 @@
         <h1 class="text-4xl font-bold text-white">Terms of Service</h1>
         <p class=" text-white">Last updated: Jan 25 2022</p>
       </div>
-      <div id="definition" class="content isNormal">
+      <div id="definition" class=" ">
         <p class="text-white pb-2">
           Saturdays.io Inc. (“our” “we” or “us”) offers you access to mobile applications websites and real-time
           API services. These Terms of Service (“Terms”) apply to you as a user (“you” or “User”) and create a legal
@@ -31,7 +31,7 @@
         </p>
       </div>
 
-      <div id="use-of-services" class="content isNormal py-8">
+      <div id="use-of-services" class="  py-8">
         <h1 class="text-xl  font-bold text-white">
           1. Use of Services
         </h1>
@@ -115,7 +115,7 @@
         </ol>
       </div>
 
-      <div id="service-disruption-terminate" class="content isNormal py-8">
+      <div id="service-disruption-terminate" class="  py-8">
         <h1 class="text-xl  font-bold text-white">
           2. Service Disruptions and Terminating Use of the Services
         </h1>
@@ -139,7 +139,7 @@
         </p>
       </div>
 
-      <div id="partners-third-party" class="content isNormal py-8">
+      <div id="partners-third-party" class="  py-8">
         <h1 class="text-xl  font-bold text-white">
           3. Partners and third-parties
         </h1>
@@ -150,7 +150,7 @@
         </p>
       </div>
 
-      <div id="ownership" class="content isNormal py-8">
+      <div id="ownership" class="  py-8">
         <h1 class="text-xl  font-bold text-white">
           4. Ownership and Rights
         </h1>
@@ -182,7 +182,7 @@
         </p>
       </div>
 
-      <div id="misc" class="content isNormal py-8">
+      <div id="misc" class="  py-8">
         <h1 class="text-xl  font-bold text-white">
           5. Miscellaneous
         </h1>
