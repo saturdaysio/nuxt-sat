@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbarBrand">
+  <div id="desktop-menu" class="bg-purple">
+    <nav class="navbar flex justify-between" role="navigation" aria-label="main navigation">
+      <div class="logo">
         <NuxtLink to="/" class="navbar-item">
           <h2 class=""><strong>Saturdays</strong></h2>
         </NuxtLink>
@@ -14,10 +14,10 @@
         </a>
       </div>
 
-      <div id="navbarBasic" class="navbarEnd">
+      <div id="navbarBasic" class="">
 
-        <div class="navbarMenu">
-          <div class="navbar-item">
+        <div class="flex flex-end">
+          <div class="navbar-item pr-4">
             <NuxtLink to="/" active-class="active">
               <strong>Work</strong>
             </NuxtLink>
@@ -112,7 +112,8 @@
 @import '~/assets/styles/tailwind.scss';
 
   .navbar {
-    padding: 0 .75rem;
+    height: 4rem;
+    padding: 1rem 1rem;
   }
 
   .navbar-item {

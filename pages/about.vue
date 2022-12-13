@@ -8,7 +8,7 @@
         <Nav />
 
         <section class="container my-16 py-8 px-4">
-            <div class="content">
+            <div class=" ">
                 <h1 class="text-3xl text-center font-bold text-white">
                     We bridge the gap between design and technology
                 </h1>
@@ -16,15 +16,15 @@
         </section>
 
         <section id="ethics" class="container my-16 py-8 px-4">
-            <div class="content">
-                <div class="content">
+            <div class=" ">
+                <div class=" ">
                     <h1 class="text-3xl text-center font-bold text-white pb-8">Keeping it 100</h1>
-                    <p class="isSize5 text-white pb-4">We believe that our work and ethics
+                    <p class=" text-white pb-4">We believe that our work and ethics
                     define who we are. We're Human-centered Designers and Developers behind some of North America's
                     biggest mobile apps and digital brands looking to make a net-positive impact in the world.</p>
                 </div>
-                <div class="content">
-                <p class="isSize5 text-white">Our approach to building software
+                <div class=" ">
+                <p class=" text-white">Our approach to building software
                     prioritizes accessibility user-centric design and inclusion. We research and generate ideas then
                     build test and iterate on them using real-world analytics and actionable KPIs. The emphasis on
                     data-driven design diversity user empathy and sustainability aren't buzzwords they're why we

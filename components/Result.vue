@@ -1,10 +1,10 @@
 <template>
     <section id="stats" class="container my-16 py-8 px-4">
-        <div class="columns">
-            <div class="column">
-                <div class="box">
-                    <div class="pb-4">
-                        <h1 class="text-2xl text-center font-bold text-white">
+        <div class=" ">
+            <div class=" ">
+                <div class=" ">
+                    <div class="pb-8">
+                        <h1 class="text-3xl text-center font-bold text-white">
                             Our stats
                         </h1>
                     </div>

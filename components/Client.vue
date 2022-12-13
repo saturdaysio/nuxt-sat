@@ -1,7 +1,7 @@
 <template>
     <section id="clients" class="container my-16 py-8 px-4">
-        <div class="content">
-            <h1 class="text-2xl text-center font-bold text-white">We partner with brands brave
+        <div class="pb-8">
+            <h1 class="text-3xl text-center font-bold text-white">We partner with brands brave
                 enough to do things differently.</h1>
         </div>
 

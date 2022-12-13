@@ -1,10 +1,10 @@
 <template>
     <section id="skills" class="container my-16 py-6 px-4">
-        <div class="columns">
-            <div class="column">
-                <div class="box">
+        <div class="flex flex-col">
+            <div class="">
+                <div class="">
                     <div class="pb-8">
-                        <h1 class="text-2xl text-center font-bold text-white">
+                        <h1 class="text-3xl text-center font-bold text-white">
                             What we do
                         </h1>
                     </div>

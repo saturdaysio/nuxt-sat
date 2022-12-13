@@ -1,8 +1,8 @@
 <template>
     <footer class="footer">
-        <div class="flex flex-between">
-            <div class="levelLeft">
-                <div class="pl2">
+        <div class="flex justify-between">
+            <div class="">
+                <div class="copyright">
                     <p class="text-white">
                         &#169; 2016-2022 Saturdays.io Inc
                     </p>
@@ -32,7 +32,8 @@
 @import '~/assets/styles/tailwind.scss';
 
 .footer {
-    padding: 3rem 0.75rem;
+    height: 4rem;
+    padding: 3rem 1rem;
 }
 
 .navbar-item {
