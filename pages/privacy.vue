@@ -7,10 +7,10 @@
 
     <Nav />
 
-    <section id="legal" class="container mt-16 py-8 px-4">
-      <div class="content isMedium">
-        <h1 class="title isSize3Mobile text-white">Privacy Policy</h1>
-        <p class="subtitle text-white">Last updated: Jan 25 2022</p>
+    <section id="legal" class="container my-16 py-8 px-4">
+      <div class="content">
+        <h1 class="text-4xl font-bold text-white">Privacy Policy</h1>
+        <p class=" text-white">Last updated: Jan 25 2022</p>
       </div>
       <div id="definition" class="content isNormal">
         <p class="text-white pb-2">
@@ -23,7 +23,7 @@
       </div>
 
       <div id="use-of-services" class="content isNormal py-8">
-        <h1 class="isSize3 isSize4Mobile font-bold text-white">
+        <h1 class="text-xl  font-bold text-white">
           1. Policy Scope
         </h1>
         <p class="text-white pb-2">
@@ -34,7 +34,7 @@
       </div>
 
       <div id="info-collected" class="content isNormal py-8">
-        <h1 class="isSize3 isSize4Mobile font-bold text-white">
+        <h1 class="text-xl  font-bold text-white">
           2. Information We Collect
         </h1>
         <p class="text-white">
@@ -67,7 +67,7 @@
       </div>
 
       <div id="how-we-use-info" class="content isNormal py-8">
-        <h1 class="isSize3 isSize4Mobile font-bold text-white">
+        <h1 class="text-xl  font-bold text-white">
           3. How We Use the Information We Collect
         </h1>
         <p class="text-white">
@@ -121,7 +121,7 @@
       </div>
 
       <div id="share-info" class="content isNormal py-8">
-        <h1 class="isSize3 isSize4Mobile font-bold text-white">
+        <h1 class="text-xl  font-bold text-white">
           4. Sharing Information
         </h1>
         <p class="text-white">
@@ -175,7 +175,7 @@
       </div>
 
       <div id="control-info" class="content isNormal py-8">
-        <h1 class="isSize3 isSize4Mobile font-bold text-white">
+        <h1 class="text-xl  font-bold text-white">
           5. Controlling Your Information
         </h1>
         <p class="text-white pb-2">
@@ -198,7 +198,7 @@
       </div>
 
       <div id="do-not-track" class="content isNormal py-8">
-        <h1 class="isSize3 isSize4Mobile font-bold text-white">
+        <h1 class="text-xl  font-bold text-white">
           6. Do Not Track
         </h1>
         <p class="text-white">
@@ -208,7 +208,7 @@
       </div>
 
       <div id="gdpr" class="content isNormal py-8">
-        <h1 class="isSize3 isSize4Mobile font-bold text-white">
+        <h1 class="text-xl  font-bold text-white">
           7. GDPR
         </h1>
         <p class="text-white">
@@ -218,7 +218,7 @@
       </div>
 
       <div id="age-restrictions" class="content isNormal py-8">
-        <h1 class="isSize3 isSize4Mobile font-bold text-white">
+        <h1 class="text-xl  font-bold text-white">
           8. Age Restrictions
         </h1>
         <p class="text-white">
@@ -229,7 +229,7 @@
       </div>
 
       <div id="do-not-track" class="content isNormal py-8">
-        <h1 class="isSize3 isSize4Mobile font-bold text-white">
+        <h1 class="text-xl  font-bold text-white">
           9. Changes to this Privacy Policy
         </h1>
         <p class="text-white">
@@ -241,7 +241,7 @@
       </div>
 
       <div id="assignment" class="content isNormal py-8">
-        <h1 class="isSize3 isSize4Mobile font-bold text-white">
+        <h1 class="text-xl  font-bold text-white">
           10. Assignment Change of Control and Transfer
         </h1>
         <p class="text-white">
@@ -253,7 +253,7 @@
       </div>
 
       <div id="contact-us" class="content isNormal py-8">
-        <h1 class="isSize3 isSize4Mobile font-bold text-white">
+        <h1 class="text-xl  font-bold text-white">
           11. Contact Us
         </h1>
         <p class="text-white">

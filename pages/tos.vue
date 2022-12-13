@@ -7,10 +7,10 @@
 
     <Nav />
 
-    <section id="legal" class="container mt6 py-8 px4">
-      <div class="content isMedium">
-        <h1 class="title isSize3Mobile text-white">Terms of Service</h1>
-        <p class="subtitle text-white">Last updated: Jan 25 2022</p>
+    <section id="legal" class="container my-16 py-8 px-4">
+      <div class="content">
+        <h1 class="text-4xl font-bold text-white">Terms of Service</h1>
+        <p class=" text-white">Last updated: Jan 25 2022</p>
       </div>
       <div id="definition" class="content isNormal">
         <p class="text-white pb-2">
@@ -32,7 +32,7 @@
       </div>
 
       <div id="use-of-services" class="content isNormal py-8">
-        <h1 class="isSize3 isSize4Mobile font-bold text-white">
+        <h1 class="text-xl  font-bold text-white">
           1. Use of Services
         </h1>
         <p class="text-white pb-2">
@@ -116,7 +116,7 @@
       </div>
 
       <div id="service-disruption-terminate" class="content isNormal py-8">
-        <h1 class="isSize3 isSize4Mobile font-bold text-white">
+        <h1 class="text-xl  font-bold text-white">
           2. Service Disruptions and Terminating Use of the Services
         </h1>
         <p class="text-white pb1">
@@ -140,7 +140,7 @@
       </div>
 
       <div id="partners-third-party" class="content isNormal py-8">
-        <h1 class="isSize3 isSize4Mobile font-bold text-white">
+        <h1 class="text-xl  font-bold text-white">
           3. Partners and third-parties
         </h1>
         <p class="text-white">
@@ -151,7 +151,7 @@
       </div>
 
       <div id="ownership" class="content isNormal py-8">
-        <h1 class="isSize3 isSize4Mobile font-bold text-white">
+        <h1 class="text-xl  font-bold text-white">
           4. Ownership and Rights
         </h1>
         <p class="text-white pb-2">
@@ -183,7 +183,7 @@
       </div>
 
       <div id="misc" class="content isNormal py-8">
-        <h1 class="isSize3 isSize4Mobile font-bold text-white">
+        <h1 class="text-xl  font-bold text-white">
           5. Miscellaneous
         </h1>
         <p class="text-white pb-2">
