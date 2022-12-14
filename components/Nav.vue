@@ -1,140 +1,84 @@
 <template>
-  <div id="desktop-menu" class="bg-purple">
-    <nav class="navbar flex justify-between" role="navigation" aria-label="main navigation">
-      <div class="logo">
-        <NuxtLink to="/" class="navbar-item">
-          <h2 class=""><strong>Saturdays</strong></h2>
-        </NuxtLink>
-
-        <a role="button" class="navbarBurger" aria-label="menu" aria-expanded="false" data-target="navbarBasic"
-          @click="toggleAction">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
+  <nav class="relative flex flex-wrap items-center justify-between px-2 py-3 mb-3">
+    <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+      <div class="w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start">
+        <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+          href="/">
+          Saturdays.io
         </a>
+        <button
+          class="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+          type="button" v-on:click="toggleNavbar()">
+        </button>
       </div>
-
-      <div id="navbarBasic" class="">
-
-        <div class="flex flex-end">
-          <div class="navbar-item pr-4">
-            <NuxtLink to="/" active-class="active">
-              <strong>Work</strong>
+      <div v-bind:class="{ 'hidden': !showMenu, 'flex': showMenu }" class="lg:flex lg:flex-grow items-center">
+        <ul class="flex flex-col lg:flex-row list-none ml-auto">
+          <li class="nav-item">
+            <NuxtLink to="/" active-class="active"
+              class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
+              <span class="ml-2">Work</span>
             </NuxtLink>
-          </div>
-          <div class="navbar-item">
-            <NuxtLink to="/about" active-class="active">
-              <strong>About</strong>
+          </li>
+          <li class="nav-item">
+            <NuxtLink to="/about" active-class="active"
+              class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
+              <span class="ml-2">About</span>
             </NuxtLink>
-          </div>
-        </div>
-
+          </li>
+          <li class="nav-item">
+            <NuxtLink to="/privacy" active-class="active"
+              class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
+              <span class="ml-2">Privacy</span>
+            </NuxtLink>
+          </li>
+        </ul>
       </div>
-    </nav>
-  </div>
-
-  <div v-show="toggle" id="menuOverlay" class="overlay">
-    <nav class="navbar">
-      <div class="navbarBrand">
-        <NuxtLink to="/" class="navbar-item">
-          <h2><strong>Saturdays</strong></h2>
-        </NuxtLink>
-
-        <a role="button" class="navbarBurger isActive" aria-label="menu" aria-expanded="true"
-          data-target="navbarBasic" @click="toggleAction">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-    </nav>
-
-    <section class="hero isFullheight">
-      <div class="heroBody">
-        <div class="columns isVcentered">
-          <div class="column">
-            <div class="navbar-item">
-              <NuxtLink to="/" active-class="active">
-                <h2 class="isSize3Tablet isSize4Mobile font-bold">Work</h2>
-              </NuxtLink>
-            </div>
-
-            <div class="navbar-item">
-              <NuxtLink to="/about" active-class="active">
-                <h2 class="isSize3Tablet isSize4Mobile font-bold">About</h2>
-              </NuxtLink>
-            </div>
-
-            <div class="navbar-item">
-              <NuxtLink to="/tos" active-class="active">
-                <h2 class="isSize3Tablet isSize4Mobile font-bold">Terms of Service</h2>
-              </NuxtLink>
-            </div>
-
-            <div class="navbar-item">
-              <NuxtLink to="/privacy" active-class="active">
-                <h2 class="isSize3Tablet isSize4Mobile font-bold">Privacy Policy</h2>
-              </NuxtLink>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </div>
+    </div>
+  </nav>
 </template>
 
-<script lang="ts">
-
-  export default {
-    
-    data: function () {
-      return {
-        toggle: false
-      };
-    },
-
-    methods: {
-      toggleAction: function () {
-        this.toggle = !this.toggle;
-        if (this.toggle) {
-          document.body.classList.add("disableScroll");
-        } else {
-          document.body.classList.remove("disableScroll");
-        }
-      }
-      
+<script>
+export default {
+  name: "pink-navbar",
+  data() {
+    return {
+      showMenu: false
     }
-  };
+  },
+  methods: {
+    toggleNavbar: function () {
+      this.showMenu = !this.showMenu;
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
 @import '~/assets/styles/tailwind.scss';
 
-  .navbar {
-    height: 4rem;
-    padding: 1rem 1rem;
-  }
+.navbar {
+  height: 4rem;
+  padding: 1rem 1rem;
+}
 
-  .navbar-item {
+.navbar-item {
+  color: $white;
+
+  &:hover {
+    background: none;
     color: $blue;
-
-    &:hover {
-      background: none;
-      color: $blue;
-    }
   }
+}
 
-  /* Overlay Menu */
-  .overlay {
-    position: fixed;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #000;
-    overflow-y: hidden;
-    opacity: 0.96;
-    z-index: 100;
-  }
-
+/* Overlay Menu */
+.overlay {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  overflow-y: hidden;
+  opacity: 0.96;
+  z-index: 100;
+}
 </style>
