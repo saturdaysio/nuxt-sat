@@ -1,5 +1,6 @@
 <template>
-    <footer class="footer container mx-auto">
+    <footer class="container mx-auto">
+        <div class="footer">
         <div class="flex justify-between">
             <div class="">
                 <div class="copyright">
@@ -22,6 +23,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </footer>
 </template>
 
@@ -31,9 +33,8 @@
 <style lang="scss" scoped>
 @import '~/assets/styles/tailwind.scss';
 
-.footer {
-    height: 4rem;
-    padding: 4rem 0;
+footer {
+    padding: 4rem 1rem;
 }
 
 .navbar-item {
