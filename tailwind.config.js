@@ -49,7 +49,7 @@ module.exports = {
     },
 
     fontFamily: {
-      'poppins': ['Poppins', 'Helvetica', 'sans-serif'],
+      sans: ['Poppins', 'Helvetica', 'sans-serif'],
     },
 
     extend: {
