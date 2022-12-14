@@ -24,6 +24,7 @@ module.exports = {
   ],
   darkMode: "class", // or 'media' or 'class'
   theme: {
+
     screens: {
       sm: "640px",
       md: "768px",
@@ -31,6 +32,7 @@ module.exports = {
       xl: "1280px",
       "2xl": "1536px",
     },
+
     colors: {
       blue: "#2830f0",
       purple: "#6028cc",
@@ -45,8 +47,9 @@ module.exports = {
       black: "#000",
       white: "#fff"
     },
+
     fontFamily: {
-      sans: ["Poppins", "helvetica", "sans-serif"],
+      'poppins': ['Poppins', 'Helvetica', 'sans-serif'],
     },
 
     extend: {
