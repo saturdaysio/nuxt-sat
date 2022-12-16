@@ -72,11 +72,11 @@
 
 
         <ul class="divide-y font-sans py-16">
-          <li><NuxtLink to="/" @click="isOpen = false" class="my-4 inline-block text-xl">Home</NuxtLink></li>
-          <li><NuxtLink to="/project" @click="isOpen = false" class="my-4 inline-block text-xl">Services</NuxtLink></li>
-          <li><NuxtLink to="/about" @click="isOpen = false" class="my-4 inline-block text-xl">About Us</NuxtLink></li>
-          <li><NuxtLink to="/tos" @click="isOpen = false" class="my-4 inline-block text-xl">Terms of Service</NuxtLink></li>
-          <li><NuxtLink to="/privacy" @click="isOpen = false" class="my-4 inline-block text-xl">Privacy Policy</NuxtLink></li>
+          <li class="nav-item"><NuxtLink to="/" @click="isOpen = false" active-class="active" class="my-4 inline-block text-xl">Home</NuxtLink></li>
+          <li class="nav-item"><NuxtLink to="/project" @click="isOpen = false" active-class="active" class="my-4 inline-block text-xl">Services</NuxtLink></li>
+          <li class="nav-item"><NuxtLink to="/about" @click="isOpen = false" active-class="active" class="my-4 inline-block text-xl">About Us</NuxtLink></li>
+          <li class="nav-item"><NuxtLink to="/tos" @click="isOpen = false" active-class="active" class="my-4 inline-block text-xl">Terms of Service</NuxtLink></li>
+          <li class="nav-item"><NuxtLink to="/privacy" @click="isOpen = false" active-class="active" class="my-4 inline-block text-xl">Privacy Policy</NuxtLink></li>
         </ul>
 
         <div class="follow">
