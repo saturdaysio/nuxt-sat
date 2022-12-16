@@ -41,7 +41,7 @@
     }
 
 
-    @media only screen and (max-width: 1080px) {
+    @media only screen and (max-width: 1023px) {
         .group {
             width: 50%;
         }
