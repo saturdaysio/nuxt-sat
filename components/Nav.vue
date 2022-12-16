@@ -7,7 +7,7 @@
         </a>
         <button
           class="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
-          type="button" v-on:click="toggleNavbar()">BT
+          type="button" v-on:click="toggleNavbar()">=
         </button>
       </div>
       <div v-bind:class="{ 'hidden': !showMenu, 'flex': showMenu }" class="lg:flex lg:flex-grow items-center">
@@ -22,12 +22,6 @@
             <NuxtLink to="/about" active-class="active"
               class="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
               <span class="">About</span>
-            </NuxtLink>
-          </li>
-          <li class="nav-item">
-            <NuxtLink to="/privacy" active-class="active"
-              class="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
-              <span class="">Privacy</span>
             </NuxtLink>
           </li>
         </ul>
