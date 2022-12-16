@@ -2,26 +2,32 @@
   <nav class="relative flex flex-wrap items-center justify-between px-2 py-3 mb-3 z-40">
     <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
       <div id="logo" class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-        <a class="text-md font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap"
-          href="/"><span class="text-white">Saturdays.io</span>
-        </a>
-        <button
-          class="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
-          type="button" v-on:click="toggleNavbar()">=
+        <NuxtLink to="/" active-class="active" class="text-md font-bold leading-relaxed inline-block whitespace-nowrap">
+          <span class="text-white">Saturdays.io</span>
+        </NuxtLink>
+        <button type="button" v-on:click="toggleNavbar()" class="text-xl text-white cursor-pointer px-3 py-1 border border-solid rounded bg-transparent block lg:hidden outline-none focus:outline-none">=
         </button>
       </div>
       <div v-bind:class="{ 'hidden': !showMenu, 'flex': showMenu }" class="lg:flex lg:flex-grow items-center">
         <ul class="flex flex-col lg:flex-row list-none ml-auto">
           <li class="nav-item">
-            <NuxtLink to="/" active-class="active"
-              class="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+            <NuxtLink to="/" active-class="active" class="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
               <span class="">Work</span>
             </NuxtLink>
           </li>
           <li class="nav-item">
-            <NuxtLink to="/about" active-class="active"
-              class="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+            <NuxtLink to="/about" active-class="active" class="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
               <span class="">About</span>
+            </NuxtLink>
+          </li>
+          <li class="nav-item lg:hidden">
+            <NuxtLink to="/tos" active-class="active" class="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+              <span class="">Terms of Service</span>
+            </NuxtLink>
+          </li>
+          <li class="nav-item lg:hidden">
+            <NuxtLink to="/privacy" active-class="active" class="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+              <span class="">Privacy Policy</span>
             </NuxtLink>
           </li>
         </ul>
