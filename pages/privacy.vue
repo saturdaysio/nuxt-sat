@@ -7,13 +7,13 @@
 
     <Nav />
 
-    <section id="legal" class="container my-16 mx-auto py-8 px-4">
+    <section id="legal" class="container lg:max-w-5xl my-16 mx-auto py-8 px-4">
       <div class="content pb-4">
-        <h1 class="text-4xl font-bold text-white">Privacy Policy</h1>
+        <h1 class="text-4xl font-bold text-grad-01">Privacy Policy</h1>
         <p class=" text-white">Last updated: Jan 25 2022</p>
       </div>
-      <div id="definition" class=" ">
-        <p class="text-white pb-2">
+      <div id="definition" class="my-8">
+        <p class="text-white">
           Saturdays.io Inc. (“our” “we” or “us”) takes your (“you” “your” or the “User”) privacy seriously. We may
           collect use and share some of your personal information. This Privacy Policy is a guide to explain how we do
           that and your rights as a User. This Privacy Policy forms part of our Terms of Service available at <NuxtLink
@@ -44,7 +44,7 @@
           our site. We collect the following types of information:
         </p>
 
-        <ol type="1">
+        <ol type="1" class="list-decimal">
           <li>
             <p class="text-white">
               Information You Provide Us: Name mailing address phone number email address contact preferences

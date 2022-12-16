@@ -7,12 +7,12 @@
 
     <Nav />
 
-    <section id="legal" class="container my-16 mx-auto py-8 px-4">
+    <section id="legal" class="container lg:max-w-5xl my-16 mx-auto py-8 px-4">
       <div class="content pb-4">
-        <h1 class="text-4xl font-bold text-white">Terms of Service</h1>
+        <h1 class="text-4xl font-bold text-grad-01">Terms of Service</h1>
         <p class=" text-white">Last updated: Jan 25 2022</p>
       </div>
-      <div id="definition" class=" ">
+      <div id="definition" class="py-8">
         <p class="text-white pb-2">
           Saturdays.io Inc. (“our” “we” or “us”) offers you access to mobile applications websites and real-time
           API services. These Terms of Service (“Terms”) apply to you as a user (“you” or “User”) and create a legal

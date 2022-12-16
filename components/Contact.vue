@@ -1,17 +1,15 @@
 <template>
     <section id="cta" class="container my-16 mx-auto py-6 px-4">
         <div class="flex flex-col">
-            <div class="pb-8">
+            <div class="mb-8">
                 <h1 class="text-3xl text-center font-bold text-white">Have an interesting project?</h1>
             </div>
-            <div class="">
-                <div class="">
-                    <NuxtLink to="mailto:info@saturdays.io">
-                        <button class="button is-link">
-                            <p class="text-xl text-white"><strong>Let's talk</strong></p>
-                        </button>
-                    </NuxtLink>
-                </div>
+            <div class="flex justify-center">
+                <NuxtLink to="mailto:info@saturdays.io">
+                    <button class="button is-link ">
+                        <p class="text-xl"><strong>Let's talk</strong></p>
+                    </button>
+                </NuxtLink>
             </div>
         </div>
     </section>
@@ -26,13 +24,14 @@
 .button.is-link {
     color: $white;
     background: none;
+    border-image: linear-gradient(120deg, rgba(248,12,128), rgba(60,120,244)) 1;
     border-width: 4px;
     border-style: solid;
-    padding: 2rem;
+    padding: 1.5rem 2rem;
 
     &:hover {
-        color: $red;
         background: none;
+        opacity: 0.75;
     }
 }
 </style>

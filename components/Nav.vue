@@ -1,34 +1,33 @@
 <template>
-  <nav class="relative flex flex-wrap items-center justify-between px-2 py-3 mb-3">
+  <nav class="relative flex flex-wrap items-center justify-between px-2 py-3 mb-3 z-40">
     <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
-      <div class="w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start">
-        <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
-          href="/">
-          Saturdays.io
+      <div id="logo" class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+        <a class="text-md font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap"
+          href="/"><span class="text-white">Saturdays.io</span>
         </a>
         <button
           class="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
-          type="button" v-on:click="toggleNavbar()">
+          type="button" v-on:click="toggleNavbar()">BT
         </button>
       </div>
       <div v-bind:class="{ 'hidden': !showMenu, 'flex': showMenu }" class="lg:flex lg:flex-grow items-center">
         <ul class="flex flex-col lg:flex-row list-none ml-auto">
           <li class="nav-item">
             <NuxtLink to="/" active-class="active"
-              class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
-              <span class="ml-2">Work</span>
+              class="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+              <span class="">Work</span>
             </NuxtLink>
           </li>
           <li class="nav-item">
             <NuxtLink to="/about" active-class="active"
-              class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
-              <span class="ml-2">About</span>
+              class="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+              <span class="">About</span>
             </NuxtLink>
           </li>
           <li class="nav-item">
             <NuxtLink to="/privacy" active-class="active"
-              class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
-              <span class="ml-2">Privacy</span>
+              class="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
+              <span class="">Privacy</span>
             </NuxtLink>
           </li>
         </ul>
@@ -39,7 +38,6 @@
 
 <script>
 export default {
-  name: "pink-navbar",
   data() {
     return {
       showMenu: false
@@ -57,22 +55,13 @@ export default {
 @import '~/assets/styles/tailwind.scss';
 
 .navbar {
-  height: 4rem;
-  padding: 1rem 1rem;
+  z-index: 100;
 }
 
-.navbar-item {
-  color: $white;
-
-  &:hover {
-    background: none;
-    color: $blue;
-  }
-}
 
 /* Overlay Menu */
 .overlay {
-  position: fixed;
+  position: relative;
   top: 0;
   height: 100%;
   width: 100%;

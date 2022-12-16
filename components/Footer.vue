@@ -10,14 +10,14 @@
                 </div>
             </div>
             <div class="flex flex-end">
-                <div class="navbar-item pr-8">
-                    <NuxtLink to="/tos" active-class="active">
+                <div class="nav-item pr-8">
+                    <NuxtLink to="/tos" active-class="active" class="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
                         <strong>Terms</strong>
                     </NuxtLink>
 
                 </div>
-                <div class="navbar-item">
-                    <NuxtLink to="/privacy" active-class="active">
+                <div class="nav-item">
+                    <NuxtLink to="/privacy" active-class="active" class="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
                         <strong>Privacy</strong>
                     </NuxtLink>
                 </div>
@@ -35,15 +35,6 @@
 
 footer {
     padding: 4rem 1rem;
-}
-
-.navbar-item {
-    color: $blue;
-
-    &:hover {
-        background: none;
-        color: $blue;
-    }
 }
 
 </style>

@@ -10,7 +10,7 @@
                     </div>
                     <div class="columns">
                         <div class="column" v-for="item in skillStore.skillJson.service" :key="item.id">
-                            <h1 class="text-2xl font-bold text-white">{{ item.title }}</h1>
+                            <h1 class="text-2xl font-bold text-grad-01">{{ item.title }}</h1>
                             <ul>
                                 <li class=" text-white" v-for="skill in item.list" :key="skill.li">{{ skill.li }}</li>
                             </ul>
