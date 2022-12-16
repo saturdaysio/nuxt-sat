@@ -29,7 +29,7 @@
           <li class="nav-item"><NuxtLink to="/project" active-class="active" class="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">Projects</NuxtLink></li>
           <li class="nav-item"><NuxtLink to="/about" active-class="active" class="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">About</NuxtLink></li>
           <li class="nav-item"><NuxtLink to="/tos" active-class="active" class="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">Contact</NuxtLink></li>
-          <li class="nav-item"><NuxtLink to="/privacy" active-class="active" class="cta px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">Shop</NuxtLink></li>
+          <li class="nav-item"><NuxtLink to="/privacy" active-class="active" class="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">Shop</NuxtLink></li>
         </ul>
       </div>
 
@@ -48,27 +48,28 @@
       </transition>
 
       <!-- Drawer Menu -->
-      <aside class="p-5 transform top-0 left-0 w-full h-full fixed overflow-auto bg-black ease-in-out transition-all duration-300 z-50" :class="isOpen ? 'translate-x-0' : '-translate-x-full'">
-        
-        <div class="close">
-          <button class="absolute top-0 right-0 mt-6 mr-6" @click=" isOpen = false">
-            <svg 
-              class="w-8 h-8"
-              fill="none" stroke-linecap="round" 
-              stroke-linejoin="round" stroke-width="2"
-              viewBox="0 0 24 24" stroke="#fff">
-              <path d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-          </button>
+      <aside class="p-6 transform top-0 left-0 w-full h-full fixed overflow-auto bg-black ease-in-out transition-all duration-300 z-50" :class="isOpen ? 'translate-x-0' : '-translate-x-full'">
+        <div class="flex items-center justify-between">
+          <div id="logo" @click="isOpen = false" class="">
+          <NuxtLink to="/" active-class="active" class="text-md font-bold leading-relaxed inline-block whitespace-nowrap">
+            <span class="text-white">Saturdays.io</span>
+          </NuxtLink>
         </div>
 
-        <span @click="isOpen = false" class="flex w-full items-center p-4 border-b">
-          <div id="logo" class="">
-            <NuxtLink to="/" active-class="active" class="text-md font-bold leading-relaxed inline-block whitespace-nowrap">
-              <span class="text-white">Saturdays.io</span>
-            </NuxtLink>
-      </div>
-        </span>
+          <div class="close">
+            <button class="" @click=" isOpen = false">
+              <svg 
+                class="w-8 h-8"
+                fill="none" stroke-linecap="round" 
+                stroke-linejoin="round" stroke-width="2"
+                viewBox="0 0 24 24" stroke="#fff">
+                <path d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        
+
 
         <ul class="divide-y font-sans pb-16">
           <li><NuxtLink to="/" @click="isOpen = false" class="my-4 inline-block">Home</NuxtLink></li>
