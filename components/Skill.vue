@@ -34,7 +34,7 @@
 
 .group {
         display: flex;
-        align-items: start;
+        align-items: flex-start;
         justify-content: center;
         width: 25%;
         flex-shrink: 0;
