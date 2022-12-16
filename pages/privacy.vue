@@ -7,8 +7,8 @@
 
     <Nav2 />
 
-    <section id="legal" class="container lg:max-w-5xl my-16 mx-auto py-8 px-4">
-      <div class="content pb-4">
+    <section id="legal" class="container lg:max-w-5xl my-20 mx-auto px-4">
+      <div class="pt-28 pb-8">
         <h1 class="text-4xl font-bold text-grad-01">Privacy Policy</h1>
         <p class=" text-white">Last updated: Jan 25 2022</p>
       </div>

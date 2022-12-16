@@ -7,15 +7,15 @@
 
         <Nav2 />
 
-        <section id="intro" class="container my-16 py-8 px-4">
-            <div class=" ">
+        <section id="intro" class="container my-20">
+            <div class="pt-28 pb-8 px-4">
                 <h1 class="text-4xl font-bold text-white">Project Template</h1>
                 <p class="text-xl text-white">Lorem ipsum dolor sit amet</p>
             </div>
         </section>
 
-        <section id="overview" class="container my-16 py-8 px-4">
-            <div class=" ">
+        <section id="overview" class="container my-16">
+            <div class="py-8 px-4">
                 <h1 class=" font-bold text-white">Overview</h1>
             </div>
             <div class=" ">
