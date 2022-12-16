@@ -10,7 +10,7 @@
                 </div>
             </div>
             <div class="flex flex-end">
-                <div class="nav-item pr-8">
+                <div class="nav-item">
                     <NuxtLink to="/tos" active-class="active" class="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
                         <strong>Terms</strong>
                     </NuxtLink>
