@@ -17,59 +17,68 @@ $white: #fff;
 
 $grey-dark: $brown;
 $grey-light: $beige-light;
-$primary: $blue;
-$link: $blue;
-$link-hover: $red;
 
-.active {
-  color: $white;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+
+
+/* Hyperlinks */
+
+
+a {
+  color: $teal;
 }
 
 
-// Update Bulma's global variables
-$family-sans-serif: 'Poppins', Helvetica, sans-serif;
-
-$widescreen-enabled: true;
-$fullhd-enabled: false;
-
-
-// Update some of Bulma's component variables
-$body-background-color: $black;
-$control-border-width: 2px;
-$input-border-color: transparent;
-$input-shadow: none;
-
-
-// body class applied when mobile menu is active
-// document.body.classList.add("disableScroll")
-  .disableScroll {
-    overflow: hidden;
+.nav-item {
+  a {
+    color: $white;
   }
 
-
-
-  /* Text Gradients */
-
-
-  /* Button Secondary */
-
-  .button__secondary {
-    text-align: center;
-    color: #fff;
+  a:hover {
     background: none;
-    border-width: 0.20rem;
-    border-style: solid;
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    -webkit-transition: all .4s ease;
-    -moz-transition: all .4s ease;
-    transition: all .4s ease;
+    opacity: 0.75;
   }
 
-  .button__secondary:hover, .button__secondary:focus {
-    color: #f80c80;
+  .active {
+    color: $red;
+    text-decoration: underline;
+    text-underline-offset: 4px;
   }
+}
 
-@import "../assets/styles/font.scss";
+
+
+
+/* Text Gradients */
+
+.text-grad-01 {
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background: -webkit-linear-gradient(120deg, rgba(248, 12, 128, 1), rgba(60, 120, 244, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+
+/* Button Styles */
+/* Button Secondary */
+
+.button__secondary {
+  text-align: center;
+  color: #fff;
+  background: none;
+  border-width: 0.20rem;
+  border-style: solid;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.button__secondary:hover,
+.button__secondary:focus {
+  color: #f80c80;
+}
+
+@import "~/assets/styles/font.scss";
