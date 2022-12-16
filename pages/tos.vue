@@ -5,7 +5,7 @@
       <Meta name="description" content="Saturdays.io Terms of Service" />
     </Head>
 
-    <Nav />
+    <Nav2 />
 
     <section id="legal" class="container lg:max-w-5xl my-16 mx-auto py-8 px-4">
       <div class="content pb-4">

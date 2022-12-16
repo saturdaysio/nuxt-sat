@@ -4,7 +4,8 @@
             <Title>Saturdays.io - Projects</Title>
             <Meta name="description" content="Saturdays.io - Toronto based Digital studio." />
         </Head>
-        <Nav />
+
+        <Nav2 />
 
         <section id="intro" class="container my-16 py-8 px-4">
             <div class=" ">

@@ -6,7 +6,7 @@
             <Meta name="description" content="Saturdays.io - Toronto based digital studio" />
         </Head>
 
-        <Nav />
+        <Nav2 />
 
         <Hero />
 
