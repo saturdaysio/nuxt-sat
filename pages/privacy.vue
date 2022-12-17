@@ -5,7 +5,7 @@
       <Meta name="description" content="Saturdays.io Privacy policy" />
     </Head>
 
-    <Nav2 />
+    <NavBar />
 
     <section id="legal" class="container lg:max-w-5xl my-20 mx-auto px-4">
       <div class="pt-28 pb-8">

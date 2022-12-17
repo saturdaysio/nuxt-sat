@@ -6,7 +6,7 @@
             <Meta name="description" content="Saturdays.io - Toronto based digital studio" />
         </Head>
 
-        <Nav2 />
+        <NavBar />
 
         <section class="container lg:max-w-7xl my-20 mx-auto">
             <div class="pt-28 pb-8 px-4">
