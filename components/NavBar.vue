@@ -27,8 +27,6 @@
         <ul class="flex text-sm font-sans">
           <li class="nav-item"><NuxtLink to="/" active-class="active" class="px-4 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">Home</NuxtLink></li>
           <li class="nav-item"><NuxtLink to="/about" active-class="active" class="px-4 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">About</NuxtLink></li>
-          <li class="nav-item"><NuxtLink to="/tos" active-class="active" class="px-4 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">Contact</NuxtLink></li>
-          <li class="nav-item"><NuxtLink to="/privacy" active-class="active" class="px-4 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">Shop</NuxtLink></li>
         </ul>
       </div>
 
@@ -72,7 +70,6 @@
 
         <ul class="divide-y font-sans py-16">
           <li class="nav-item"><NuxtLink to="/" @click="isOpen = false" active-class="active" class="my-4 inline-block text-xl">Home</NuxtLink></li>
-          <li class="nav-item"><NuxtLink to="/project" @click="isOpen = false" active-class="active" class="my-4 inline-block text-xl">Projects</NuxtLink></li>
           <li class="nav-item"><NuxtLink to="/about" @click="isOpen = false" active-class="active" class="my-4 inline-block text-xl">About Us</NuxtLink></li>
           <li class="nav-item"><NuxtLink to="/tos" @click="isOpen = false" active-class="active" class="my-4 inline-block text-xl">Terms of Service</NuxtLink></li>
           <li class="nav-item"><NuxtLink to="/privacy" @click="isOpen = false" active-class="active" class="my-4 inline-block text-xl">Privacy Policy</NuxtLink></li>
