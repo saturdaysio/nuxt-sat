@@ -54,7 +54,7 @@ module.exports = {
 
     extend: {
       textColor: {},
-      backgroundColor: {},
+      backgroundColor: "#000",
     },
   },
 
