@@ -46,6 +46,7 @@
 
       <!-- Drawer Menu -->
       <aside class="p-6 transform top-0 left-0 w-full h-full fixed overflow-auto bg-black ease-in-out transition-opacity duration-300 z-50" :class="isOpen ? 'translate-x-0' : '-translate-x-full'">
+        <div class="flex flex-col h-full justify-between">
         <div class="flex items-center justify-between">
           <div id="logo" @click="isOpen = false" class="">
           <NuxtLink to="/" active-class="active" class="text-md font-bold leading-relaxed inline-block whitespace-nowrap">
@@ -68,14 +69,15 @@
         
 
 
-        <ul class="divide-y font-sans py-16">
+        <ul class="divide-y flex flex-col justify-center font-sans">
           <li class="nav-item"><NuxtLink to="/" @click="isOpen = false" active-class="active" class="my-4 inline-block text-xl">Home</NuxtLink></li>
-          <li class="nav-item"><NuxtLink to="/about" @click="isOpen = false" active-class="active" class="my-4 inline-block text-xl">About Us</NuxtLink></li>
+          <li class="nav-item"><NuxtLink to="/about" @click="isOpen = false" active-class="active" class="my-4 inline-block text-xl">About</NuxtLink></li>
           <li class="nav-item"><NuxtLink to="/tos" @click="isOpen = false" active-class="active" class="my-4 inline-block text-xl">Terms of Service</NuxtLink></li>
           <li class="nav-item"><NuxtLink to="/privacy" @click="isOpen = false" active-class="active" class="my-4 inline-block text-xl">Privacy Policy</NuxtLink></li>
+          
         </ul>
 
-        <div class="follow">
+        <div id="social">
           <p class="text-md uppercase font-bold text-white">Social media</p>
           <div class="social flex space-x-10 mt-4">
             <NuxtLink to="https://twitter.com/" rel="noreferrer" target="_blank">
@@ -104,7 +106,7 @@
             </NuxtLink>
           </div>
         </div>
-
+      </div>
       </aside>
 
     </div>
