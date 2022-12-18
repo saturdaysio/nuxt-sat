@@ -1,5 +1,6 @@
 <template>
     <div class="bg-black">
+
         <Head>
             <Title>Saturdays.io - Page not found</Title>
             <Meta name="description" content="Saturdays.io - 404 error not found" />
@@ -8,24 +9,22 @@
         <NavBar />
 
         <section id="main" class="container mx-auto px-4">
-            <div class="h-auto">
-                <div class="flex flex-col h-screen justify-center">
-                    <div class="py-6">
-                        <div class="text-center pb-4">
-                            <h1 class="text-4xl font-bold text-grad-01">Page not found</h1>
-                        </div>
-                        <div class="text-center">
-                            <p class="text-xl text-white">The page you are looking for does not exist.</p>
-                        </div>
+            <div class="flex flex-col h-screen justify-center">
+                <div class="pb-8">
+                    <div class="text-center pb-4">
+                        <h1 class="text-4xl font-bold text-grad-01">Page not found</h1>
                     </div>
+                    <div class="text-center">
+                        <p class="text-xl text-white">The page you are looking for does not exist.</p>
+                    </div>
+                </div>
 
-                    <div class="flex justify-center">
-                        <NuxtLink to="/">
-                            <button class="button is-link">
-                                <p class="text-xl"><strong>Go home</strong></p>
-                            </button>
-                        </NuxtLink>
-                    </div>
+                <div class="flex justify-center">
+                    <NuxtLink to="/">
+                        <button class="button is-link">
+                            <p class="text-xl"><strong>Go home</strong></p>
+                        </button>
+                    </NuxtLink>
                 </div>
             </div>
         </section>
@@ -41,19 +40,19 @@
 
 
 <style lang="scss" scoped>
-    @import '~/assets/styles/tailwind.scss';
+@import '~/assets/styles/tailwind.scss';
 
-    .button.is-link {
-        color: $white;
+.button.is-link {
+    color: $white;
+    background: none;
+    border-image: linear-gradient(120deg, rgba(248, 12, 128), rgba(60, 120, 244)) 1;
+    border-width: 4px;
+    border-style: solid;
+    padding: 2rem;
+
+    &:hover {
+        color: $red;
         background: none;
-        border-image: linear-gradient(120deg, rgba(248,12,128), rgba(60,120,244)) 1;
-        border-width: 4px;
-        border-style: solid;
-        padding: 2rem;
-
-        &:hover {
-            color: $red;
-            background: none;
-        }
+    }
 }
 </style>
