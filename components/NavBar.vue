@@ -11,11 +11,11 @@
 
       <!-- Mobile toggle -->
       <div class="lg:hidden">
-        <button @click="drawer">
+        <button @click="drawer" aria-label="Menu button" role="button">
           <svg 
             class="h-8 w-8 fill-current text-black"
             fill="none" stroke-linecap="round" 
-            stroke-linejoin="round" stroke-width="2" 
+            stroke-linejoin="round" stroke-width="1" 
             viewBox="0 0 24 24" stroke="#fff">
               <path d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
@@ -56,11 +56,11 @@
         </div>
 
           <div class="close">
-            <button class="" @click=" isOpen = false">
+            <button class="" @click=" isOpen = false" aria-label="Close Menu button" role="button">
               <svg 
                 class="w-8 h-8"
                 fill="none" stroke-linecap="round" 
-                stroke-linejoin="round" stroke-width="2"
+                stroke-linejoin="round" stroke-width="1"
                 viewBox="0 0 24 24" stroke="#fff">
                 <path d="M6 18L18 6M6 6l12 12"></path>
               </svg>
