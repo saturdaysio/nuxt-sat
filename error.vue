@@ -8,7 +8,7 @@
 
         <NavBar />
 
-        <div class="container h-max mx-auto px-4">
+        <section class="container lg:max-w-5xl mx-auto px-4">
             <div class="flex flex-col h-screen justify-center">
                 <div class="pb-8">
                     <div class="text-center pb-4">
@@ -27,7 +27,7 @@
                     </NuxtLink>
                 </div>
             </div>
-        </div>
+        </section>
 
     </div>
 </template>
