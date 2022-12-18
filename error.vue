@@ -5,16 +5,21 @@
             <Meta name="description" content="Saturdays.io - 404 error not found" />
         </Head>
 
-        <Nav />
+        <NavBar />
 
-        <section id="main" class="container my-16 py-8 px-4">
-            <div class=" ">
-                <div class="flex flex-col ">
-                    <div class="pb-8">
-                        <h1 class="text-4xl text-center font-bold text-white">Page not found</h1>
-                        <p class=" text-white">The page you are looking for does not exist.</p>
+        <section id="main" class="container mx-auto px-4">
+            <div class="h-auto">
+                <div class="flex flex-col h-screen justify-center">
+                    <div class="py-6">
+                        <div class="text-center pb-4">
+                            <h1 class="text-4xl font-bold text-grad-01">Page not found</h1>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-xl text-white">The page you are looking for does not exist.</p>
+                        </div>
                     </div>
-                    <div>
+
+                    <div class="flex justify-center">
                         <NuxtLink to="/">
                             <button class="button is-link">
                                 <p class="text-xl"><strong>Go home</strong></p>
