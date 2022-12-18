@@ -30,7 +30,6 @@
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/styles/tailwind.scss';
 
 .group {
         display: flex;

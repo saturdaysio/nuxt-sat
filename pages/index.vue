@@ -54,5 +54,4 @@
 
 
 <style lang="scss" scoped>
-@import '~/assets/styles/tailwind.scss';
 </style>

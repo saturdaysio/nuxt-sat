@@ -143,7 +143,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/styles/tailwind.scss';
 
 nav {
   top: 0;

@@ -29,8 +29,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/styles/tailwind.scss';
-
 .resultCard {
     display: flex;
     flex-direction: column;

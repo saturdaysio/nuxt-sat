@@ -34,8 +34,6 @@
 
 
 <style lang="scss" scoped>
-@import '~/assets/styles/tailwind.scss';
-
 footer {
     padding: 4rem 1rem;
 }
