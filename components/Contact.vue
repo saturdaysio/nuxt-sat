@@ -5,9 +5,9 @@
                 <h1 class="text-3xl text-center font-bold text-white">Have an interesting project?</h1>
             </div>
             <div class="flex justify-center">
-                <NuxtLink to="mailto:info@saturdays.io">
+                <NuxtLink to="mailto:hello@saturdays.io">
                     <button class="button is-link ">
-                        <p class="text-xl"><strong>Let's talk</strong></p>
+                        <p class="text-xl"><strong>Say Hello</strong></p>
                     </button>
                 </NuxtLink>
             </div>
@@ -15,8 +15,10 @@
     </section>
 </template>
 
+
 <script lang="ts">
 </script>
+
 
 <style lang="scss" scoped>
 @import '~/assets/styles/tailwind.scss';
