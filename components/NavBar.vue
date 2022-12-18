@@ -10,8 +10,8 @@
       </div>
 
       <!-- Mobile toggle -->
-      <div class="lg:hidden">
-        <button @click="drawer" aria-label="Menu button" role="button">
+      <div class="relative flex justify-between lg:hidden">
+        <button @click="drawer" role="button" aria-label="Menu button">
           <svg 
             class="h-8 w-8 fill-current text-black"
             fill="none" stroke-linecap="round" 
@@ -55,8 +55,8 @@
           </NuxtLink>
         </div>
 
-          <div class="close">
-            <button class="" @click="isOpen = false" aria-label="Close Menu button" role="button">
+          <div class="close relative flex justify-between">
+            <button @click="isOpen = false" role="button" aria-label="Close Menu button">
               <svg 
                 class="w-8 h-8"
                 fill="none" stroke-linecap="round" 
