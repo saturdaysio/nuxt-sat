@@ -21,7 +21,7 @@ export default defineNuxtConfig({
     },
 
     // Static site rendering mode
-    ssr: false,
+    ssr: true,
 
 
     // Global CSS/SCSS
