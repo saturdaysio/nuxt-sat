@@ -33,7 +33,7 @@
 </script>
 
 
-<style lang="scss" scoped>
+<style lang="scss">
 footer {
     padding: 4rem 1rem;
 }

@@ -53,5 +53,5 @@
 </script>
 
 
-<style lang="scss" scoped>
+<style lang="scss">
 </style>
