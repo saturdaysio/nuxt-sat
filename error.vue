@@ -11,7 +11,7 @@
         <div class="container lg:max-w-5xl mx-auto px-4 py-16">
             <div class="flex flex-col justify-center">
                 <div class="pb-8">
-                    <div class="text-center pb-4">
+                    <div class="text-center pb-2">
                         <h1 class="text-4xl font-bold text-grad-01">Page not found</h1>
                     </div>
                     <div class="text-center">
