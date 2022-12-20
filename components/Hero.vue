@@ -1,6 +1,6 @@
 <template>
-  <section class="container my-20 mx-auto">
-    <div class="pt-28 pb-8 px-4">
+  <section class="container flex flex-col items-center mx-auto px-4 py-16">
+    <div class="">
       <h1 class="text-4xl text-center font-bold text-white">
         Saturdays is a Canadian digital studio based in Toronto
       </h1>

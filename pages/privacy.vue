@@ -7,12 +7,12 @@
 
     <NavBar />
 
-    <section id="legal" class="container lg:max-w-5xl my-20 mx-auto px-4">
-      <div class="pt-28 pb-8">
+    <section id="legal" class="container lg:max-w-5xl mx-auto px-4 py-16">
+      <div class="pb-8">
         <h1 class="text-4xl font-bold text-grad-01">Privacy Policy</h1>
         <p class=" text-white">Last updated: Jan 25 2022</p>
       </div>
-      <div id="definition" class="my-8">
+      <div id="definition" class="py-8">
         <p class="text-white">
           Saturdays.io Inc. (“our” “we” or “us”) takes your (“you” “your” or the “User”) privacy seriously. We may
           collect use and share some of your personal information. This Privacy Policy is a guide to explain how we do
@@ -22,7 +22,7 @@
 
       </div>
 
-      <div id="use-of-services" class="  py-8">
+      <div id="use-of-services" class="py-8">
         <h1 class="text-xl  font-bold text-white pb-2">
           1. Policy Scope
         </h1>
@@ -33,7 +33,7 @@
         </p>
       </div>
 
-      <div id="info-collected" class="  py-8">
+      <div id="info-collected" class="py-8">
         <h1 class="text-xl  font-bold text-white pb-2">
           2. Information We Collect
         </h1>
@@ -66,7 +66,7 @@
         </ol>
       </div>
 
-      <div id="how-we-use-info" class="  py-8">
+      <div id="how-we-use-info" class="py-8">
         <h1 class="text-xl  font-bold text-white pb-2">
           3. How We Use the Information We Collect
         </h1>
@@ -120,7 +120,7 @@
         </p>
       </div>
 
-      <div id="share-info" class="  py-8">
+      <div id="share-info" class="py-8">
         <h1 class="text-xl  font-bold text-white pb-2">
           4. Sharing Information
         </h1>
@@ -174,7 +174,7 @@
         </ol>
       </div>
 
-      <div id="control-info" class="  py-8">
+      <div id="control-info" class="py-8">
         <h1 class="text-xl  font-bold text-white pb-2">
           5. Controlling Your Information
         </h1>
@@ -197,7 +197,7 @@
         </p>
       </div>
 
-      <div id="do-not-track" class="  py-8">
+      <div id="do-not-track" class="py-8">
         <h1 class="text-xl  font-bold text-white pb-2">
           6. Do Not Track
         </h1>
@@ -207,7 +207,7 @@
         </p>
       </div>
 
-      <div id="gdpr" class="  py-8">
+      <div id="gdpr" class="py-8">
         <h1 class="text-xl  font-bold text-white pb-2">
           7. GDPR
         </h1>
@@ -217,7 +217,7 @@
         </p>
       </div>
 
-      <div id="age-restrictions" class="  py-8">
+      <div id="age-restrictions" class="py-8">
         <h1 class="text-xl  font-bold text-white pb-2">
           8. Age Restrictions
         </h1>
@@ -228,7 +228,7 @@
         </p>
       </div>
 
-      <div id="do-not-track" class="  py-8">
+      <div id="do-not-track" class="py-8">
         <h1 class="text-xl  font-bold text-white pb-2">
           9. Changes to this Privacy Policy
         </h1>
@@ -240,7 +240,7 @@
         </p>
       </div>
 
-      <div id="assignment" class="  py-8">
+      <div id="assignment" class="py-8">
         <h1 class="text-xl  font-bold text-white pb-2">
           10. Assignment Change of Control and Transfer
         </h1>
@@ -252,7 +252,7 @@
         </p>
       </div>
 
-      <div id="contact-us" class="  py-8">
+      <div id="contact-us" class="py-8">
         <h1 class="text-xl  font-bold text-white pb-2">
           11. Contact Us
         </h1>

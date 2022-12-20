@@ -10,8 +10,8 @@
 
         <Hero />
 
-        <section class="container lg:max-w-5xl my-16 mx-auto">
-            <div class="py-8 px-4">
+        <section class="container lg:max-w-5xl mx-auto px-4 py-16">
+            <div class="">
                 <h1 class="text-3xl text-center font-bold text-grad-01">
                     We're a Data-driven digital studio that focuses on the Design Development and Strategy of digital
                     products.
@@ -21,8 +21,8 @@
 
         <Skill />
 
-        <section id="preview" class="container my-16 mx-auto">
-            <div class="container py-8 px-4">
+        <section id="preview" class="container mx-auto px-4 py-16">
+            <div class="">
                 <div class="pb-8">
                     <h1 class="text-3xl text-center font-bold text-grad-01">
                         What we're making

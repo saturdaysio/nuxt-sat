@@ -8,17 +8,17 @@
 
         <NavBar />
 
-        <section class="container lg:max-w-7xl my-20 mx-auto">
-            <div class="pt-28 pb-8 px-4">
+        <section class="container lg:max-w-7xl mx-auto px-4 py-16">
+            <div class="">
                 <h1 class="text-4xl text-center font-bold text-white">
                     We bridge the gap between design and technology
                 </h1>
             </div>
         </section>
 
-        <section id="ethics" class="container lg:max-w-5xl my-16 mx-auto">
-            <div class="py-8 px-4">
-                <div>
+        <section id="ethics" class="container lg:max-w-5xl mx-auto px-4 py-16">
+            <div class="">
+                <div class="pb-4">
                     <h1 class="text-3xl text-center font-bold text-grad-01 pb-8">Keeping it 100</h1>
                     <p class="text-xl text-white pb-4">We believe that our work and ethics
                     define who we are. We're Human-centered Designers and Developers behind some of North America's

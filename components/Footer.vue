@@ -1,5 +1,5 @@
 <template>
-    <footer class=" w-full mx-auto">
+    <footer class=" w-full mx-auto px-4 py-8">
         <div class="footer">
             <div class="flex justify-between">
                 <div class="copyright flex items-center">
@@ -34,7 +34,4 @@
 
 
 <style lang="scss">
-footer {
-    padding: 4rem 1rem;
-}
 </style>

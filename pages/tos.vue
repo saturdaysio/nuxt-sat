@@ -7,8 +7,8 @@
 
     <NavBar />
 
-    <section id="legal" class="container lg:max-w-5xl my-20 mx-auto px-4">
-      <div class="pt-28 pb-8">
+    <section id="legal" class="container lg:max-w-5xl mx-auto px-4 py-16">
+      <div class="pb-8">
         <h1 class="text-4xl font-bold text-grad-01">Terms of Service</h1>
         <p class=" text-white">Last updated: Jan 25 2022</p>
       </div>
@@ -31,7 +31,7 @@
         </p>
       </div>
 
-      <div id="use-of-services" class="  py-8">
+      <div id="use-of-services" class="py-8">
         <h1 class="text-xl  font-bold text-white pb-2">
           1. Use of Services
         </h1>
@@ -115,7 +115,7 @@
         </ol>
       </div>
 
-      <div id="service-disruption-terminate" class=" py-8">
+      <div id="service-disruption-terminate" class="py-8">
         <h1 class="text-xl  font-bold text-white pb-2">
           2. Service Disruptions and Terminating Use of the Services
         </h1>
@@ -139,7 +139,7 @@
         </p>
       </div>
 
-      <div id="partners-third-party" class=" py-8">
+      <div id="partners-third-party" class="py-8">
         <h1 class="text-xl  font-bold text-white pb-2">
           3. Partners and third-parties
         </h1>
@@ -150,7 +150,7 @@
         </p>
       </div>
 
-      <div id="ownership" class="  py-8">
+      <div id="ownership" class="py-8">
         <h1 class="text-xl  font-bold text-white pb-2">
           4. Ownership and Rights
         </h1>
@@ -182,7 +182,7 @@
         </p>
       </div>
 
-      <div id="misc" class=" py-8">
+      <div id="misc" class="py-8">
         <h1 class="text-xl font-bold text-white pb-2">
           5. Miscellaneous
         </h1>
