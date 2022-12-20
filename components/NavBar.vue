@@ -1,9 +1,9 @@
 <template>
-  <nav class="fixed w-full p-6 bg-black">
+  <nav class=" w-full p-6">
     <div class="flex items-center justify-between">
 
       <!-- Header logo -->
-      <div id="logo" class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+      <div id="logo" class=" relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
         <NuxtLink to="/" active-class="active" class="text-md font-bold leading-relaxed inline-block whitespace-nowrap">
           <span class="text-white">Saturdays.io</span>
         </NuxtLink>
@@ -33,10 +33,10 @@
       <!-- Dark Background Transition -->
       <transition
         enter-class="opacity-0"
-        enter-active-class="ease-out transition-medium"
+        enter-active-class="ease-in-out duration-500"
         enter-to-class="opacity-100"
         leave-class="opacity-100"
-        leave-active-class="ease-out transition-medium"
+        leave-active-class="ease-in-out duration-500"
         leave-to-class="opacity-0"
       >
         <div @keydown.esc="isOpen = false" v-show="isOpen" class="z-10 fixed inset-0 transition-opacity">
@@ -45,7 +45,7 @@
       </transition>
 
       <!-- Drawer Menu -->
-      <aside class="p-6 transform top-0 left-0 w-full h-full fixed overflow-auto bg-black ease-in-out transition-opacity duration-300 z-50" :class="isOpen ? 'translate-x-0' : '-translate-x-full'">
+      <aside class="p-6 transform top-0 left-0 w-full h-full fixed overflow-auto bg-black z-50" :class="isOpen ? 'translate-x-0' : '-translate-x-full'">
         <div class="flex flex-col h-full justify-between">
         <div class="flex items-center justify-between">
           <div id="logo" @click="isOpen = false" class="">
@@ -144,7 +144,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 nav {
   top: 0;
