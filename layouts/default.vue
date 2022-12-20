@@ -7,7 +7,7 @@
 </template>
 
 
-<script lang="ts">
+<script>
 </script>
 
 
