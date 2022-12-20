@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-black">
+    <div class="flex flex-col h-screen justify-between bg-black">
 
         <Head>
             <Title>Saturdays.io - Page not found</Title>
@@ -8,7 +8,7 @@
 
         <NavBar />
 
-        <div class="container lg:max-w-5xl mx-auto px-4 py-16">
+        <div class="container lg:max-w-5xl mx-auto px-4">
             <div class="flex flex-col justify-center">
                 <div class="pb-8">
                     <div class="text-center pb-2">
@@ -26,10 +26,10 @@
                         </button>
                     </NuxtLink>
                 </div>
-
             </div>
-
         </div>
+
+        <Footer />
     </div>
 </template>
 
