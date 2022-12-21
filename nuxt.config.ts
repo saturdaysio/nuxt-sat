@@ -80,9 +80,4 @@ export default defineNuxtConfig({
         cookieName: 'strapi_jwt'
     },
 
-    nitro: {
-        prerender: {
-          routes: ['/404.html']
-        }
-     }
 })
