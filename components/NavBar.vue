@@ -148,5 +148,6 @@ export default {
 
 nav {
   top: 0;
+  height: 5.25rem;
 }
 </style>
