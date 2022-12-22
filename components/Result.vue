@@ -8,7 +8,7 @@
             </div>
             <div class="flex flex-wrap">
                 <div class="resultCard my-8 md:my-4" v-for="item in resultStore.resultJson.result" :key="item.id">
-                    <h1 class="text-5xl font-light text-grad-01">{{ item.title }}</h1>
+                    <h1 class="text-7xl font-light text-grad-01">{{ item.title }}</h1>
                     <p class="text-white">{{ item.desc }}</p>
                 </div>
             </div>
