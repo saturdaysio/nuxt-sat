@@ -1,10 +1,10 @@
 <template>
-  <nav class=" w-full p-6">
+  <nav class="w-full p-4 bg-black">
     <div class="flex items-center justify-between">
 
       <!-- Header logo -->
       <div id="logo" class=" relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-        <NuxtLink to="/" active-class="active" class="text-md font-bold leading-relaxed inline-block whitespace-nowrap">
+        <NuxtLink to="/" active-class="active" class="px-4 text-md font-bold leading-relaxed inline-block whitespace-nowrap">
           <span class="text-white">Saturdays.io</span>
         </NuxtLink>
       </div>
@@ -144,10 +144,9 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+  nav {
+    height: 4rem;
+  }
 
-nav {
-  top: 0;
-  height: 5.25rem;
-}
 </style>
