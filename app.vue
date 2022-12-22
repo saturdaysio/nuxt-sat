@@ -2,6 +2,7 @@
   <NuxtPage />
 </template>
 
+
 <script setup>
   const route = useRoute();
   const firstVisit = ref(true);
@@ -20,6 +21,7 @@
     { deep: true, immediate: true }
   );
 </script>
+
 
 <style>
   .page-enter-active,

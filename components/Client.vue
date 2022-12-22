@@ -31,31 +31,31 @@ export default {
 
 <style lang="scss" scoped>
 
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 25%;
-    flex-shrink: 0;
-    padding: 0 2rem;
-
-    .image {
-        display: inherit;
-    }
-}
-
-
-@media only screen and (max-width: 800px) {
     .logo {
-        width: 33.33%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+        flex-shrink: 0;
+        padding: 0 2rem;
+
+        .image {
+            display: inherit;
+        }
     }
 
-}
 
-@media only screen and (max-width: 640px) {
-    .logo {
-        width: 50%;
-        padding: 0 1rem;
+    @media only screen and (max-width: 800px) {
+        .logo {
+            width: 33.33%;
+        }
+
     }
-}
+
+    @media only screen and (max-width: 640px) {
+        .logo {
+            width: 50%;
+            padding: 0 1rem;
+        }
+    }
 </style>

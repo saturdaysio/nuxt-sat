@@ -29,20 +29,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.resultCard {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    width: 50%;
-    flex-shrink: 0;
-    padding: 0 2rem;
-}
-
-@media only screen and (max-width: 800px) {
     .resultCard {
-        width: 100%;
-        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 50%;
+        flex-shrink: 0;
+        padding: 0 2rem;
     }
-}
+
+    @media only screen and (max-width: 800px) {
+        .resultCard {
+            width: 100%;
+            padding: 0 1rem;
+        }
+    }
 </style>

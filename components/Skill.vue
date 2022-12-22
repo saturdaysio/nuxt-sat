@@ -31,7 +31,7 @@
 
 <style lang="scss" scoped>
 
-.group {
+    .group {
         display: flex;
         align-items: flex-start;
         justify-content: center;

@@ -145,6 +145,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
   nav {
     height: 4rem;
   }
