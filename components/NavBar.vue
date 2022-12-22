@@ -45,7 +45,7 @@
       </transition>
 
       <!-- Drawer Menu -->
-      <aside class="p-6 transform top-0 left-0 w-full h-full fixed overflow-auto bg-black z-50" :class="isOpen ? 'translate-x-0' : '-translate-x-full'">
+      <aside class="p-4 transform top-0 left-0 w-full h-full fixed overflow-auto bg-black z-50" :class="isOpen ? 'translate-x-0' : '-translate-x-full'">
         <div class="flex flex-col h-full justify-between">
         <div class="flex items-center justify-between">
           <div id="logo" @click="isOpen = false" class="">
