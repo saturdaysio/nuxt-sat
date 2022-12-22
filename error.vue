@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col h-screen justify-between">
+    <div class="">
 
         <Head>
             <Title>Saturdays.io - Page not found</Title>
@@ -8,9 +8,9 @@
 
         <NavBar />
 
-        <section class="container lg:max-w-5xl mx-auto px-4">
-            <div class="flex flex-col justify-center">
-                <div class="pb-8">
+        <section class="container lg:max-w-5xl mx-auto px-4 py-20">
+            <div class="flex flex-col justify-center py-20">
+                <div class="mb-8">
                     <div class="text-center pb-2">
                         <h1 class="text-4xl font-bold text-grad-01">Page not found</h1>
                     </div>
@@ -24,8 +24,6 @@
                 </div>
             </div>
         </section>
-
-        <Footer />
 
     </div>
 </template>
