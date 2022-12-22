@@ -2,7 +2,7 @@
     <footer class=" w-full mx-auto px-4 py-8">
         <div class="footer">
             <div class="flex justify-between">
-                <div class="copyright flex items-center">
+                <div class="copyright flex items-center px-4">
                     <p class="text-white">
                         &#169; 2016-2022 Saturdays.io
                     </p>
