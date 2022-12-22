@@ -49,7 +49,7 @@
         <div class="flex flex-col h-full justify-between">
         <div class="flex items-center justify-between">
           <div id="logo" @click="isOpen = false" class="">
-          <NuxtLink to="/" active-class="active" class="text-md font-bold leading-relaxed inline-block whitespace-nowrap">
+          <NuxtLink to="/" active-class="active" class="px-4 text-md font-bold leading-relaxed inline-block whitespace-nowrap">
             <span class="text-white">Saturdays.io</span>
           </NuxtLink>
         </div>
