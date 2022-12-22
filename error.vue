@@ -8,8 +8,8 @@
 
         <NavBar />
 
-        <div class="container lg:max-w-5xl mx-auto px-4">
-            <div class="py-20">
+        <div class="container lg:max-w-5xl mx-auto px-4 py-20">
+            <div class="">
                 <div class="flex flex-col justify-center">
                     <div class="pb-8">
                         <div class="text-center pb-2">
@@ -21,11 +21,7 @@
                     </div>
 
                     <div class="flex justify-center">
-                        <NuxtLink to="/">
-                            <button class="button is-link">
-                                <p class="text-xl"><strong>Go home</strong></p>
-                            </button>
-                        </NuxtLink>
+                        <Button :cta="'Go Home'" to="/" />
                     </div>
                 </div>
             </div>
@@ -36,26 +32,8 @@
 
 
 <script lang="ts">
-export default {
-    layout: 'error',
-}
 </script>
 
 
 <style lang="scss" scoped>
-@import '~/assets/styles/tailwind.scss';
-
-.button.is-link {
-    color: $white;
-    background: none;
-    border-image: linear-gradient(120deg, rgba(248, 12, 128), rgba(60, 120, 244)) 1;
-    border-width: 4px;
-    border-style: solid;
-    padding: 2rem;
-
-    &:hover {
-        color: $red;
-        background: none;
-    }
-}
 </style>
