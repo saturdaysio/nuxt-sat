@@ -42,8 +42,14 @@ export default defineNuxtConfig({
     // Auto import components: https://go.nuxtjs.dev/config-components
     components: true,
 
+    nitro: {
+        prerender: {
+          routes: ['/404.html']
+        }
+     },
 
-    // Vite config
+
+     // Vite config
     vite: {
         css: {
             preprocessorOptions: {
