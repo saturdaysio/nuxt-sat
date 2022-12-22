@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-black">
+    <div class="flex flex-col h-screen justify-between">
 
         <Head>
             <Title>Saturdays.io - Page not found</Title>
@@ -8,24 +8,24 @@
 
         <NavBar />
 
-        <div class="container lg:max-w-5xl mx-auto px-4 py-20">
-            <div class="">
-                <div class="flex flex-col justify-center">
-                    <div class="pb-8">
-                        <div class="text-center pb-2">
-                            <h1 class="text-4xl font-bold text-grad-01">Page not found</h1>
-                        </div>
-                        <div class="text-center">
-                            <p class="text-xl text-white">The page you are looking for does not exist.</p>
-                        </div>
+        <section class="container lg:max-w-5xl mx-auto px-4">
+            <div class="flex flex-col justify-center">
+                <div class="pb-8">
+                    <div class="text-center pb-2">
+                        <h1 class="text-4xl font-bold text-grad-01">Page not found</h1>
                     </div>
-
-                    <div class="flex justify-center">
-                        <Button :cta="'Go Home'" to="/" />
+                    <div class="text-center">
+                        <p class="text-xl text-white">The page you are looking for does not exist.</p>
                     </div>
                 </div>
+
+                <div class="flex justify-center">
+                    <Button :cta="'Go Home'" to="/" />
+                </div>
             </div>
-        </div>
+        </section>
+
+        <Footer />
 
     </div>
 </template>
@@ -36,4 +36,5 @@
 
 
 <style lang="scss" scoped>
+@import '~/assets/styles/tailwind.scss';
 </style>
