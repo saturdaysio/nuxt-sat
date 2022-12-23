@@ -49,9 +49,22 @@ module.exports = {
       sans: ['Poppins', 'Helvetica', 'sans-serif'],
     },
 
+    fontSize: {
+      sm: '0.8rem',
+      base: '1rem',
+      xl: '1.25rem',
+      '2xl': '1.5rem',
+      '3xl': '2rem',
+      '4xl': '2.5rem',
+      '5xl': '3rem',
+      '6xl': '3.75rem',
+      '7xl': '4.5rem',
+      '8xl': '6rem',
+    },
+
     extend: {
+      colors: {},
       textColor: {},
-      backgroundColor: "#000",
     },
   },
 
