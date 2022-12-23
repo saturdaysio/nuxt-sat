@@ -1,6 +1,6 @@
 <template>
-    <section id="stats" class="container mx-auto px-4 py-16">
-        <div class="container lg:max-w-5xl mx-auto">
+    <section id="stats" class=" md:max-w-screen lg:max-w-6xl mx-auto px-4 py-16">
+        <div class="">
             <div class="pb-8">
                 <h1 class="text-4xl lg:text-6xl text-center font-bold text-white">
                     Our stats

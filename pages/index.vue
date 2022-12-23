@@ -28,7 +28,7 @@
                         What we're making
                     </h1>
                 </div>
-                <div class="container lg:max-w-7xl mx-auto">
+                <div class="lg:max-w-7xl mx-auto">
                     <picture>
                         <source type="image/webp" srcset="~/assets/img/mobile.webp">
                         <source type="image/png" srcset="~/assets/img/mobile.png">

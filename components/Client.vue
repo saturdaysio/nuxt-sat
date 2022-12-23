@@ -1,6 +1,6 @@
 <template>
     <section id="clients" class="container lg:max-w-7xl mx-auto px-4 py-16">
-        <div class="container lg:max-w-5xl mx-auto pb-8">
+        <div class="lg:max-w-5xl mx-auto pb-8">
             <h1 class="text-3xl lg:text-5xl text-center font-bold text-grad-01">We partner with brands brave
                 enough to do things differently.</h1>
         </div>
