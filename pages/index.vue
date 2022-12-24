@@ -24,7 +24,7 @@
         <section id="preview" class="container mx-auto px-4 py-16">
             <div class="">
                 <div class="pb-8">
-                    <h1 class="text-4xl lg:text-6xl text-center font-bold text-grad-01">
+                    <h1 class="text-3xl lg:text-5xl text-center font-bold text-grad-01">
                         What we're making
                     </h1>
                 </div>

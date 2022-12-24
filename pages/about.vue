@@ -10,7 +10,7 @@
 
         <section class="container lg:max-w-7xl mx-auto px-4 py-16">
             <div class="">
-                <h1 class="text-5xl lg:text-7xl text-center font-bold text-white">
+                <h1 class="text-4xl lg:text-6xl text-center font-bold text-white">
                     We bridge the gap between design and technology
                 </h1>
             </div>
@@ -19,7 +19,7 @@
         <section id="ethics" class="container lg:max-w-5xl mx-auto px-4 py-16">
             <div class="">
                 <div class="pb-4">
-                    <h1 class="text-4xl lg:text-6xl text-center font-bold text-grad-01 pb-8">Keeping it 100</h1>
+                    <h1 class="text-3xl lg:text-5xl text-center font-bold text-grad-01 pb-8">Keeping it 100</h1>
                     <p class="text-xl text-white pb-4">We believe that our work and ethics
                     define who we are. We're Human-centered Designers and Developers behind some of North America's
                     biggest mobile apps and digital brands looking to make a net-positive impact in the world.</p>
