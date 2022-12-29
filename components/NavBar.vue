@@ -1,6 +1,6 @@
 <template>
   <nav class="relative">
-    <div class="fixed w-full p-4 bg-black">
+    <div class="fixed w-full p-4 bg-blue">
       <div class="flex items-center justify-between">
 
         <!-- Header logo -->
@@ -79,11 +79,11 @@
                   About</NuxtLink>
               </li>
               <li class="nav-item">
-                <NuxtLink to="/tos" @click="isOpen = false" active-class="active" class="my-4 inline-block text-xl">
+                <NuxtLink to="/terms-of-service" @click="isOpen = false" active-class="active" class="my-4 inline-block text-xl">
                   Terms of Service</NuxtLink>
               </li>
               <li class="nav-item">
-                <NuxtLink to="/privacy" @click="isOpen = false" active-class="active" class="my-4 inline-block text-xl">
+                <NuxtLink to="/privacy-policy" @click="isOpen = false" active-class="active" class="my-4 inline-block text-xl">
                   Privacy Policy</NuxtLink>
               </li>
 
