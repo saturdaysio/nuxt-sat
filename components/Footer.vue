@@ -10,13 +10,13 @@
                 <div class="flex flex-end pb-4 lg:pb-0">
                     <div class="nav-item">
                         <NuxtLink to="/terms-of-service" active-class="active"
-                            class="px-4 py-2 flex items-center text-sm font-bold leading-snug hover:opacity-75">
+                            class="px-4 py-2 flex items-center text-sm font-bold hover:opacity-75">
                             <strong>Terms of Use</strong>
                         </NuxtLink>
                     </div>
                     <div class="nav-item">
                         <NuxtLink to="/privacy-policy" active-class="active"
-                            class="px-4 py-2 flex items-center text-sm font-bold leading-snug hover:opacity-75">
+                            class="px-4 py-2 flex items-center text-sm font-bold hover:opacity-75">
                             <strong>Privacy Policy</strong>
                         </NuxtLink>
                     </div>
