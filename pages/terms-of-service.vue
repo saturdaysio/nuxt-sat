@@ -1,5 +1,6 @@
 <template>
   <div>
+
     <Head>
       <Title>Saturdays.io - Terms of Service</Title>
       <Meta name="description" content="Saturdays.io Terms of Service" />
@@ -7,7 +8,7 @@
 
     <NavBar />
 
-    <section id="legal" class="container lg:max-w-5xl mx-auto px-4 py-16">
+    <section id="legal" class="container lg:max-w-4xl mx-auto px-4 py-16">
       <div class="pb-8">
         <h1 class="text-4xl lg:text-6xl font-bold text-grad-01">Terms of Service</h1>
         <p class="text-xl text-white">Last updated: Jan 25 2022</p>
@@ -25,8 +26,8 @@
         </p>
         <p class="text-white">
           Your privacy is important to us. Our Privacy Policy describes the types of information we collect from you
-          what we do with it and how we might share it. You can read it here <NuxtLink to="https://saturdays.io/privacy"
-            rel="noreferrer" target="_blank">https://saturdays.io/privacy</NuxtLink>. Your access and use of the
+          what we do with it and how we might share it. You can read it here <NuxtLink to="/privacy-policy">
+            https://saturdays.io/privacy-policy</NuxtLink>. Your access and use of the
           Services constitute your agreement not only to these Terms but the Privacy Policy as well.
         </p>
       </div>
@@ -126,8 +127,7 @@
         </p>
         <p class="text-white pb1">
           You can stop using the Services at any time. If you’d like to know how we handle the information you provide
-          please refer to the Privacy Policy <NuxtLink to="https://saturdays.io/privacy" rel="noreferrer"
-            target="_blank">https://saturdays.io/privacy</NuxtLink>.
+          please refer to the Privacy Policy <NuxtLink to="/privacy-policy">https://saturdays.io/privacy-policy</NuxtLink>.
         </p>
         <p class="text-white pb1">
           We reserve the right to suspend or terminate any User without notice for any reason in our sole discretion
@@ -178,7 +178,7 @@
           We reserve the right to address claims of intellectual property infringement by you or a third-party when
           using our Services by such reasonable means to protect the rights of the intellectual property owner. If you
           would like to report intellectual property infringement please contact us at <NuxtLink
-            to="mailto:support@saturdays.io">support at saturdays.io</NuxtLink>.
+            to="mailto:support@saturdays.io">support [at] saturdays.io</NuxtLink>.
         </p>
       </div>
 
@@ -265,4 +265,5 @@
 
 
 <style lang="scss">
+
 </style>
