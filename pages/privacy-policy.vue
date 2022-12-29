@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-black">
+  <div>
     <Head>
       <Title>Saturdays.io - Privacy Policy</Title>
       <Meta name="description" content="Saturdays.io Privacy policy" />

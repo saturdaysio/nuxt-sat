@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-black">
+  <div>
     <Head>
       <Title>Saturdays.io - Terms of Service</Title>
       <Meta name="description" content="Saturdays.io Terms of Service" />
