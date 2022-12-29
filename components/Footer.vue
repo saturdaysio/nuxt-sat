@@ -1,24 +1,29 @@
 <template>
-    <footer class=" w-full mx-auto px-4 py-8">
+    <footer class="container mx-auto px-4 py-8">
         <div class="footer">
-            <div class="flex justify-between">
+            <div class="flex flex-col-reverse items-center lg:flex-row justify-between">
                 <div class="copyright flex items-center px-4">
                     <p class="text-white">
-                        &#169; 2016-2022 Saturdays.io
+                        &#169; Saturdays.io Inc. 2023
                     </p>
                 </div>
-                <div class="flex flex-end">
+                <div class="flex flex-end sm:pb-8 lg:pb-0">
                     <div class="nav-item">
                         <NuxtLink to="/tos" active-class="active"
-                            class="px-4 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
-                            <strong>Terms</strong>
+                            class="px-4 py-2 flex items-center text-sm font-bold leading-snug hover:opacity-75">
+                            <strong>Terms of Use</strong>
                         </NuxtLink>
-
                     </div>
                     <div class="nav-item">
                         <NuxtLink to="/privacy" active-class="active"
-                            class="px-4 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">
-                            <strong>Privacy</strong>
+                            class="px-4 py-2 flex items-center text-sm font-bold leading-snug hover:opacity-75">
+                            <strong>Privacy Policy</strong>
+                        </NuxtLink>
+                    </div>
+                    <div class="nav-item">
+                        <NuxtLink to="/privacy" active-class="active"
+                            class="px-4 py-2 flex items-center text-sm font-bold leading-snug hover:opacity-75">
+                            <strong>Cookie Preferences</strong>
                         </NuxtLink>
                     </div>
                 </div>
