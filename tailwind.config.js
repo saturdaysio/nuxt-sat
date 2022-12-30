@@ -27,10 +27,10 @@ module.exports = {
 
     screens: {
       sm: "640px",
-      md: "768px",
+      md: "768px", // round down to 720px
       lg: "1024px",
       xl: "1280px",
-      "2xl": "1536px",
+      '2xl': "1536px", // round up to 1600px
     },
 
     colors: {
@@ -39,7 +39,7 @@ module.exports = {
       red: "#f80c80",
       green: "#13ce66",
       gray_dark: "#273444",
-      gray: "#8492a6",
+      gray: "#8492a6", // create an array of shades 100 ... 900
       gray_light: "#d3dce6",
       black: "#000",
       white: "#fff"
@@ -47,30 +47,42 @@ module.exports = {
 
     fontFamily: {
       sans: ['Poppins', 'Helvetica', 'sans-serif'],
+      serif: ['Merriweather', 'Georgia', 'serif'],
     },
 
     fontSize: {
-      sm: '0.8rem',
-      base: '1rem',
-      xl: '1.25rem',
-      '2xl': '1.5rem',
-      '3xl': '2rem',
-      '4xl': '2.5rem',
-      '5xl': '3rem',
-      '6xl': '3.75rem',
-      '7xl': '4.5rem',
-      '8xl': '6rem',
+      sm: ['0.875rem', '1.25rem'], // font-size: 14px, line-height: 20px
+      base: ['1rem', '1.5rem'], // font-size: 16px, line-height: 24px
+      xl: ['1.25rem', '2rem'], // font-size: 20px, line-height: 32px
+      '2xl': ['1.5rem', '1.5'], // font-size: 24px, line-height: 36px
+      '3xl': ['2rem', '1.5'], // font-size: 32px, line-height: 48px
+      '4xl': ['2.5rem', '1.5'], // font-size: 40px, line-height: 60px
+      '5xl': ['3rem', '1.5'], // font-size: 48px, line-height: 72px
+      '6xl': ['4rem', '1.25'], // font-size: 64px, line-height: 80px
+      '7xl': ['4.5rem', '1.5'], // font-size: 72px, line-height: 108px
+      '8xl': ['6rem', '1.25'], // font-size: 96px, line-height: 120px
     },
+
 
     extend: {
       colors: {},
+
       textColor: {},
+
+      listStyleType: {
+        none: 'none',
+        disc: 'disc',
+        decimal: 'decimal',
+        square: 'square',
+        roman: 'upper-roman',
+      },
     },
   },
 
   variants: {
     extend: {},
   },
+
   plugins: [
     require("@tailwindcss/container-queries"),
     require("@tailwindcss/aspect-ratio"),
