@@ -63,11 +63,13 @@ a {
 
 
 /* Button Styles */
+
+
 /* Button Secondary */
 
 .button__secondary {
   text-align: center;
-  color: #fff;
+  color: $white;
   background: none;
   border-width: 0.20rem;
   border-style: solid;
@@ -80,7 +82,7 @@ a {
 
 .button__secondary:hover,
 .button__secondary:focus {
-  color: #f80c80;
+  color: $red;
 }
 
 @import "~/assets/styles/font.scss";
