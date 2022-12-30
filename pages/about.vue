@@ -8,7 +8,7 @@
 
         <NavBar />
 
-        <section class="container lg:max-w-7xl mx-auto px-4 py-16">
+        <section class="container lg:max-w-6xl mx-auto px-4 py-16">
             <div class="">
                 <h1 class="text-4xl lg:text-6xl text-center font-bold text-white">
                     We bridge the gap between design and technology

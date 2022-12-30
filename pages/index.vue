@@ -10,7 +10,7 @@
 
         <Hero />
 
-        <section class="container lg:max-w-5xl mx-auto px-4 py-16">
+        <section class="container lg:max-w-6xl mx-auto px-4 py-16">
             <div class="">
                 <h1 class="text-3xl lg:text-5xl text-center font-bold text-grad-01">
                     We're a Data-driven digital studio that focuses on the Design Development and Strategy of digital
