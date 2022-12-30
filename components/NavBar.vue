@@ -1,6 +1,6 @@
 <template>
   <nav class="relative">
-    <div class="fixed w-full p-4 bg-blue">
+    <div class="fixed w-full p-4 bg-purple">
       <div class="flex items-center justify-between">
 
         <!-- Header logo -->
@@ -26,12 +26,12 @@
           <ul class="flex text-sm font-sans">
             <li class="nav-item">
               <NuxtLink to="/" active-class="active"
-                class="px-4 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">Home
+                class="px-4 py-2 flex items-center text-sm uppercase font-bold hover:opacity-75">Home
               </NuxtLink>
             </li>
             <li class="nav-item">
               <NuxtLink to="/about" active-class="active"
-                class="px-4 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:opacity-75">About
+                class="px-4 py-2 flex items-center text-sm uppercase font-bold hover:opacity-75">About
               </NuxtLink>
             </li>
           </ul>
@@ -129,39 +129,41 @@
   </nav>
 </template>
 
+
 <script>
-export default {
-  data() {
-    return {
-      isOpen: false
-    };
-  },
-  methods: {
-    drawer() {
-      this.isOpen = !this.isOpen;
-    }
-  },
-  watch: {
-    isOpen: {
-      immediate: true,
-      handler(isOpen) {
-        if (process.client) {
-          if (isOpen) document.body.style.setProperty("overflow", "hidden");
-          else document.body.style.removeProperty("overflow");
+  export default {
+    data() {
+      return {
+        isOpen: false
+      };
+    },
+    methods: {
+      drawer() {
+        this.isOpen = !this.isOpen;
+      }
+    },
+    watch: {
+      isOpen: {
+        immediate: true,
+        handler(isOpen) {
+          if (process.client) {
+            if (isOpen) document.body.style.setProperty("overflow", "hidden");
+            else document.body.style.removeProperty("overflow");
+          }
         }
       }
+    },
+    mounted() {
+      document.addEventListener("keydown", e => {
+        if (e.keyCode == 27 && this.isOpen) this.isOpen = false;
+      });
     }
-  },
-  mounted() {
-    document.addEventListener("keydown", e => {
-      if (e.keyCode == 27 && this.isOpen) this.isOpen = false;
-    });
-  }
-};
+  };
 </script>
 
+
 <style lang="scss" scoped>
-nav {
-  height: 4rem;
-}
+  nav {
+    height: 4rem;
+  }
 </style>
