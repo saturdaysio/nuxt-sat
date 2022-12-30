@@ -14,13 +14,13 @@
         <p class="text-xl text-white">Last updated: Jan 25 2022</p>
       </div>
       <div id="definition" class="py-8">
-        <p class="text-white pb-2">
+        <p class="text-white pb-4">
           Saturdays.io Inc. (“our” “we” or “us”) offers you access to mobile applications websites and real-time
           API services. These Terms of Service (“Terms”) apply to you as a user (“you” or “User”) and create a legal
           binding contract between you and us regarding your access to or use of our applications websites content
           features products or other services (collectively “Services”).
         </p>
-        <p class="text-white pb-2">
+        <p class="text-white pb-4">
           Please read these Terms carefully. Your access to and use of the Services are impacted by these Terms and if
           you do not agree to any of these Terms you may not access or use the Services.
         </p>
@@ -33,10 +33,10 @@
       </div>
 
       <div id="use-of-services" class="py-8">
-        <h1 class="text-xl  font-bold text-white pb-2">
+        <h1 class="text-xl  font-bold text-white pb-4">
           1. Use of Services
         </h1>
-        <p class="text-white pb-2">
+        <p class="text-white pb-4">
           You may access and/or use the Services only if you have reached the age of majority or legal age in your
           jurisdiction (generally 18 or older) and can form legally binding contracts under applicable law. If you are
           under 18 or the legal age of majority in your jurisdiction your parent or guardian must agree to these Terms
@@ -46,101 +46,84 @@
           inability to access or use the Services. You agree that all activity engaged in by any account associated with
           you as part of the Services will be your responsibility.
         </p>
-        <p class="text-white pb-2">
+        <p class="text-white pb-4">
           The Services are controlled and offered by us from Ontario Canada. We do not make any representations that
           the Services are appropriate in your location. If you use the Services from any country other than Canada it
           is your responsibility to comply with your local law.
         </p>
-        <p class="text-white pb-2">
+        <p class="text-white pb-4">
           Your use of the Services requires that you follow certain standards of conduct. We reserve the right in our
           sole discretion to disallow or remove any user from accessing or using the Services in the event we deem such
           standards of conduct are not being followed. By accessing or using the Services you agree to not engage in
           the following via your access or use of the Services:
         </p>
-        <ol type="1">
+        <ul class="prose list-decimal text-white">
           <li>
-            <p class="text-white">
               Violate any law regulation or other right that may be subject to any criminal or civil penalty.
-            </p>
           </li>
           <li>
-            <p class="text-white">
               Violate infringe or otherwise use the intellectual property rights of a third party without permission.
-            </p>
           </li>
           <li>
-            <p class="text-white">
               Violate or infringe on the publicity rights privacy rights or other rights of third parties.
-            </p>
           </li>
           <li>
-            <p class="text-white">
               Engage in the use of spyware or other software designed to collect and harvest data from us or the
               Services.
-            </p>
           </li>
           <li>
-            <p class="text-white">
               Communicate with users of the Services for purposes of distributing malicious files software or other
               programs meant to disrupt the use of computer systems or related technology or for the purposes of
               “phishing” and other fraudulent activity.
-            </p>
           </li>
           <li>
-            <p class="text-white">
+            <p>
               Harass stalk threaten or otherwise harm another individual.
             </p>
           </li>
           <li>
-            <p class="text-white">
               Reverse engineer any of the software or underlying code used by us or in the Services.
-            </p>
           </li>
           <li>
-            <p class="text-white">
               Impersonate any person or company including but not limited to our employees contractors or other
               personnel or misrepresent your affiliation with a person or company.
-            </p>
           </li>
           <li>
-            <p class="text-white">
               Create and register more than one profile associated with the Services including registering a profile on
               behalf of an individual other than yourself.
-            </p>
           </li>
           <li>
-            <p class="text-white">
               Encourage or otherwise assist any other party to do any of the acts previously described in this section.
-            </p>
+
           </li>
-        </ol>
+        </ul>
       </div>
 
       <div id="service-disruption-terminate" class="py-8">
-        <h1 class="text-xl  font-bold text-white pb-2">
+        <h1 class="text-xl font-bold text-white pb-4">
           2. Service Disruptions and Terminating Use of the Services
         </h1>
-        <p class="text-white pb1">
+        <p class="text-white pb-2">
           Our Services may be interrupted at any time for repairs maintenance upgrades or similar. At any time we may
           discontinue or change any of the Services that may affect certain devices and platforms used for accessing and
           using the Services.
         </p>
-        <p class="text-white pb1">
+        <p class="text-white pb-2">
           You can stop using the Services at any time. If you’d like to know how we handle the information you provide
           please refer to the Privacy Policy <NuxtLink to="/privacy-policy">https://saturdays.io/privacy-policy</NuxtLink>.
         </p>
-        <p class="text-white pb1">
+        <p class="text-white pb-2">
           We reserve the right to suspend or terminate any User without notice for any reason in our sole discretion
           including breach of these Terms.
         </p>
-        <p class="text-white pb1">
+        <p class="text-white">
           If we disable your account for a violation of these Terms or the Privacy Policy you shall not create another
           account without our permission.
         </p>
       </div>
 
       <div id="partners-third-party" class="py-8">
-        <h1 class="text-xl  font-bold text-white pb-2">
+        <h1 class="text-xl font-bold text-white pb-4">
           3. Partners and third-parties
         </h1>
         <p class="text-white">
@@ -151,7 +134,7 @@
       </div>
 
       <div id="ownership" class="py-8">
-        <h1 class="text-xl  font-bold text-white pb-2">
+        <h1 class="text-xl font-bold text-white pb-4">
           4. Ownership and Rights
         </h1>
         <p class="text-white pb-2">
@@ -183,10 +166,10 @@
       </div>
 
       <div id="misc" class="py-8">
-        <h1 class="text-xl font-bold text-white pb-2">
+        <h1 class="text-xl font-bold text-white pb-4">
           5. Miscellaneous
         </h1>
-        <p class="text-white pb-2">
+        <p class="text-white pb-4">
           Disclaimer and Limitation of Liability: YOU USE OUR SERVICES AT YOUR OWN RISK AND SUBJECT TO THE FOLLOWING
           DISCLAIMERS. THE SERVICES ARE PROVIDED ON AN “AS IS” BASIS WITH NO EXPRESS OR IMPLIED WARRANTIES INCLUDING
           BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY FITNESS FOR A PARTICULAR PURPOSE TITLE NON-INFRINGEMENT
@@ -204,7 +187,7 @@
           DOES NOT KNOW OR SUSPECT TO EXIST IN HIS OR HER FAVOR AT THE TIME OF EXECUTING THE RELEASE WHICH IF KNOWN BY
           HIM OR HER MUST HAVE MATERIALLY AFFECTED HIS OR HER SETTLEMENT WITH THE DEBTOR.
         </p>
-        <p class="text-white pb-2">
+        <p class="text-white pb-4">
           THE SATURDAYS PARTIES ARE NOT LIABLE TO YOU FOR ANY LOST PROFITS OR CONSEQUENTIAL SPECIAL PUNITIVE
           INDIRECT OR INCIDENTAL DAMAGES RELATING TO ARISING OUT OF OR IN ANY WAY IN CONNECTION WITH OUR TERMS US
           OR OUR SERVICES EVEN IF THE SATURDAYS PARTIES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. OUR
@@ -216,19 +199,19 @@
           NOTWITHSTANDING ANYTHING TO THE CONTRARY IN OUR TERMS IN SUCH CASES THE LIABILITY OF THE SATURDAYS PARTIES
           WILL BE LIMITED TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW.
         </p>
-        <p class="text-white pb-2">
+        <p class="text-white pb-4">
           Indemnification: You agree to indemnify and hold us harmless including our employees directors officers
           agents third party providers including service providers advertising partners and any other partners that
           may implement our Services in its organization against all damages expenses claims losses liabilities
           legal fees attorney fees and any other costs incurred by such parties associated with your violation of these
           Terms.
         </p>
-        <p class="text-white pb-2">
+        <p class="text-white pb-4">
           No assignment: These Terms and all rights and obligations ascribed to you hereunder and/or your accounts
           associated with the Services are personal to you and may not be transferred or assigned by you at any time
           in any way without consent. We may assign our rights under these Terms at any time without your consent.
         </p>
-        <p class="text-white pb-2">
+        <p class="text-white pb-4">
           Choice of Law and Arbitration: These Terms except to the extent not otherwise governed by the laws of Canada
           shall be governed by the laws of the province of Ontario without giving effect to principles of conflicts of
           law. Any dispute arising from these Terms shall be subject to and settled within Ontario in accordance with
@@ -265,5 +248,4 @@
 
 
 <style lang="scss">
-
 </style>

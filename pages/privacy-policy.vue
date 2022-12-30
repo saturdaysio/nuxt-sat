@@ -1,5 +1,6 @@
 <template>
   <div>
+
     <Head>
       <Title>Saturdays.io - Privacy Policy</Title>
       <Meta name="description" content="Saturdays.io Privacy policy" />
@@ -26,7 +27,7 @@
         <h1 class="text-xl font-bold text-white pb-2">
           1. Policy Scope
         </h1>
-        <p class="text-white pb-2">
+        <p class="text-white pb-4">
           This Privacy Policy covers our treatment of your personally identifiable information and any other information
           you may provide us when using our applications websites content features products or other services
           (referred to herein as the “Services”).
@@ -37,82 +38,68 @@
         <h1 class="text-xl font-bold text-white pb-2">
           2. Information We Collect
         </h1>
-        <p class="text-white">
+        <p class="text-white pb-4">
           We focus on using your personal information to provide and improve our Services respond to your requests
           service user accounts connected to our Services provide you with services or information you may request
           communicate with you and inform you about new products and services that may be of interest and to improve
           our site. We collect the following types of information:
         </p>
 
-        <ol type="1" class="list-decimal">
+        <ul class="prose list-disc text-white">
           <li>
-            <p class="text-white">
-              Information You Provide Us: Name mailing address phone number email address contact preferences
-              device identifiers IP address location information credit card information and profile information
-              where the contact is via social media.
-            </p>
+            Information You Provide Us: Name mailing address phone number email address contact preferences
+            device identifiers IP address location information credit card information and profile information
+            where the contact is via social media.
           </li>
           <li>
-            <p class="text-white">
-              Information We Collect from Users of our Services: Name mailing address Phone number Email address
-              Contact preferences Device identifiers IP address and location information.
-            </p>
+            Information We Collect from Users of our Services: Name mailing address Phone number Email address
+            Contact preferences Device identifiers IP address and location information.
           </li>
           <li>
-            <p class="text-white">
-              Information We Collect from Third Parties: We don't collect information from third parties.
-            </p>
+            Information We Collect from Third Parties: We don't collect information from third parties.
           </li>
-        </ol>
+        </ul>
       </div>
 
       <div id="how-we-use-info" class="py-8">
         <h1 class="text-xl font-bold text-white pb-2">
           3. How We Use the Information We Collect
         </h1>
-        <p class="text-white">
+        <p class="text-white pb-4">
           We may use the information that we collect for any of the following purposes:
         </p>
 
-        <ol type="1">
+        <ul class="prose list-disc text-white pb-4">
           <li>
-            <p class="text-white">
-              Improve Service functionality and efficiency
-            </p>
+            Improve Service functionality and efficiency
           </li>
+
           <li>
-            <p class="text-white">
-              Provide maintain and improve our Services
-            </p>
+            Provide maintain and improve our Services
           </li>
+
           <li>
-            <p class="text-white">
-              Provide assistance to users
-            </p>
+            Provide assistance to users
           </li>
+
           <li>
-            <p class="text-white">
-              Personalize our Services
-            </p>
+            Personalize our Services
           </li>
+
           <li>
-            <p class="text-white">
-              Measure and better understand the performance of our Services
-            </p>
+            Measure and better understand the performance of our Services
           </li>
+
           <li>
-            <p class="text-white">
-              Communicate with Users
-            </p>
+            Communicate with Users
           </li>
+
           <li>
-            <p class="text-white">
-              Protect Users the community us and other legal reasons such as complying with applicable laws assisting
-              with law enforcement agencies if legally mandated to find instances of abuse or misuse of our services or
-              illegal activity maintain security and safety when using our Services
-            </p>
+            Protect Users the community us and other legal reasons such as complying with applicable laws assisting
+            with law enforcement agencies if legally mandated to find instances of abuse or misuse of our services or
+            illegal activity maintain security and safety when using our Services
           </li>
-        </ol>
+        </ul>
 
         <p class="text-white">
           In the event that we determine we need to use your personal information for a reason not included in this
@@ -132,7 +119,7 @@
           We may share your information with third parties in other cases such as:
         </p>
 
-        <ol type="1">
+        <ul class="prose list-disc">
           <li>
             <p class="text-white">
               If a government body requests information and we deemed it to be necessary to disclose such information in
@@ -171,17 +158,17 @@
               At any time that you consent to such sharing.
             </p>
           </li>
-        </ol>
+        </ul>
       </div>
 
       <div id="control-info" class="py-8">
         <h1 class="text-xl font-bold text-white pb-2">
           5. Controlling Your Information
         </h1>
-        <p class="text-white pb-2">
+        <p class="text-white pb-4">
           You have control over the information that you share with us subject to certain limitations.
         </p>
-        <p class="text-white pb-2">
+        <p class="text-white pb-4">
           Our Services have been built in a way to minimize the amount of personal information that is stored within
           them. Nonetheless if you want to review update change or delete the information that you have shared with
           us including deletion of your account you may send a request to do so to <NuxtLink
@@ -198,7 +185,7 @@
       </div>
 
       <div id="do-not-track" class="py-8">
-        <h1 class="text-xl font-bold text-white pb-2">
+        <h1 class="text-xl font-bold text-white pb-4">
           6. Do Not Track
         </h1>
         <p class="text-white">
@@ -274,4 +261,5 @@
 
 
 <style lang="scss">
+
 </style>
