@@ -7,9 +7,8 @@
 
         <div id="grid" class="flex flex-wrap">
             <div class="logo" v-for="item in clientStore.clientJson.clients" :key="item.id">
-                <figure class="">
-                    <img class="w-36 h-36" :src="item.imgSrc" :alt="item.imgAlt" :width="item.width"
-                        :height="item.height">
+                <figure>
+                    <img class="w-36 h-36" :src="item.imgSrc" :alt="item.imgAlt" loading="lazy" :width="item.width" :height="item.height">
                 </figure>
             </div>
         </div>
