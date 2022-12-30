@@ -11,7 +11,7 @@
                     <div class="nav-item">
                         <NuxtLink to="/terms-of-service" active-class="active"
                             class="px-4 py-2 flex items-center text-sm font-bold hover:opacity-75">
-                            <strong>Terms of Use</strong>
+                            <strong>Terms of Service</strong>
                         </NuxtLink>
                     </div>
                     <div class="nav-item">
