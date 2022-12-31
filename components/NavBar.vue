@@ -1,6 +1,6 @@
 <template>
   <nav class="relative">
-    <div class="fixed w-full p-4 bg-purple">
+    <div class="fixed w-full p-4 bg-black">
       <div class="flex items-center justify-between">
 
         <!-- Header logo -->
