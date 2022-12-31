@@ -16,7 +16,7 @@
     "@tailwindcss/typography": "^0.5.8",
     "nuxt": "3.0.0",
     "nuxt-purgecss": "2.0.0",
-    "sass": "1.56.1"
+    "sass": "1.57.1"
   },
   "dependencies": {
     "@nuxt/postcss8": "^1.1.3",
