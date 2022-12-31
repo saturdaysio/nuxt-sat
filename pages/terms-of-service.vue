@@ -9,7 +9,7 @@
     <NavBar />
 
     <section id="legal" class="container lg:max-w-4xl mx-auto px-4 py-16">
-      <div class="pb-8">
+      <div class="mt-24 pb-8">
         <h1 class="text-4xl lg:text-6xl font-bold text-grad-01">Terms of Service</h1>
         <p class="text-xl text-white">Last updated: Jan 25 2022</p>
       </div>
