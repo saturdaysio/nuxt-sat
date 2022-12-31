@@ -18,7 +18,7 @@
           Saturdays.io Inc. (“our” “we” or “us”) takes your (“you” “your” or the “User”) privacy seriously. We may
           collect use and share some of your personal information. This Privacy Policy is a guide to explain how we do
           that and your rights as a User. This Privacy Policy forms part of our Terms of Service available at <NuxtLink
-            to="/terms-of-service">https://saturdays.io/terms-of-service</NuxtLink>.
+            to="/terms-of-service">https://saturdays.io/terms-of-service</NuxtLink>
         </p>
 
       </div>
@@ -172,7 +172,7 @@
           Our Services have been built in a way to minimize the amount of personal information that is stored within
           them. Nonetheless if you want to review update change or delete the information that you have shared with
           us including deletion of your account you may send a request to do so to <NuxtLink
-            to="mailto:support@saturdays.io">support [at] saturdays.io</NuxtLink>.
+            to="mailto:support@saturdays.io">support [at] saturdays.io</NuxtLink>
         </p>
         <p class="text-white">
           Even in the event that we delete your personal information we still may retain some information for
@@ -245,7 +245,7 @@
         </h1>
         <p class="text-white">
           For any questions or concerns that you may have regarding this Privacy Policy please contact us at <NuxtLink
-            to="mailto:support@saturdays.io">support [at] saturdays.io</NuxtLink>.
+            to="mailto:support@saturdays.io">support [at] saturdays.io</NuxtLink>
         </p>
       </div>
     </section>

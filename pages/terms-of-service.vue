@@ -110,7 +110,7 @@
         </p>
         <p class="text-white pb-2">
           You can stop using the Services at any time. If you’d like to know how we handle the information you provide
-          please refer to the Privacy Policy <NuxtLink to="/privacy-policy">https://saturdays.io/privacy-policy</NuxtLink>.
+          please refer to the Privacy Policy <NuxtLink to="/privacy-policy">https://saturdays.io/privacy-policy</NuxtLink>
         </p>
         <p class="text-white pb-2">
           We reserve the right to suspend or terminate any User without notice for any reason in our sole discretion
@@ -161,7 +161,7 @@
           We reserve the right to address claims of intellectual property infringement by you or a third-party when
           using our Services by such reasonable means to protect the rights of the intellectual property owner. If you
           would like to report intellectual property infringement please contact us at <NuxtLink
-            to="mailto:support@saturdays.io">support [at] saturdays.io</NuxtLink>.
+            to="mailto:support@saturdays.io">support [at] saturdays.io</NuxtLink>
         </p>
       </div>
 
