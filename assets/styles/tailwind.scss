@@ -14,6 +14,8 @@ $white: #fff;
 
 
 
+// HTML, body
+
 
 body {
   background-color: $black;
@@ -23,6 +25,7 @@ body {
 
 
 /* Hyperlinks */
+/* Break off into its own file - 01/01/2023 */
 
 
 a {
@@ -63,27 +66,5 @@ a {
 }
 
 
-/* Button Styles */
-
-
-/* Button Secondary */
-
-.button__secondary {
-  text-align: center;
-  color: $white;
-  background: none;
-  border-width: 0.20rem;
-  border-style: solid;
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  -webkit-transition: all .4s ease;
-  -moz-transition: all .4s ease;
-  transition: all .4s ease;
-}
-
-.button__secondary:hover,
-.button__secondary:focus {
-  color: $red;
-}
-
 @import "~/assets/styles/font.scss";
+@import "~/assets/styles/button.scss";
