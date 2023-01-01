@@ -16,7 +16,7 @@ $white: #fff;
 
 
 body {
-  background-color: #000;
+  background-color: $black;
 }
 
 
@@ -32,11 +32,12 @@ a {
 
 .nav-item {
   a {
-    color: $white;
+    color: $blue;
   }
 
   a:hover {
     background: none;
+    color: $red;
     opacity: 0.75;
   }
 
