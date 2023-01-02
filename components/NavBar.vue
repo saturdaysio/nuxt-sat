@@ -1,7 +1,7 @@
 <template>
   <nav class="relative">
     <div class="fixed w-full p-4 bg-black">
-      <div class="flex items-center justify-between">
+      <div class="lg:container flex items-center justify-between mx-auto">
 
         <!-- Header logo -->
         <div id="logo" class=" relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
@@ -26,12 +26,12 @@
           <ul class="flex text-sm font-sans">
             <li class="nav-item">
               <NuxtLink to="/" active-class="active"
-                class="px-4 py-2 flex items-center text-sm uppercase font-bold hover:opacity-75">Home
+                class="px-4 py-2 flex items-center text-sm font-bold uppercase hover:opacity-75">Work
               </NuxtLink>
             </li>
             <li class="nav-item">
               <NuxtLink to="/about" active-class="active"
-                class="px-4 py-2 flex items-center text-sm uppercase font-bold hover:opacity-75">About
+                class="px-4 py-2 flex items-center text-sm font-bold uppercase hover:opacity-75">About
               </NuxtLink>
             </li>
           </ul>
@@ -49,8 +49,9 @@
         <aside class="p-4 transform top-0 left-0 w-full h-full fixed overflow-auto bg-black z-50"
           :class="isOpen ? 'translate-x-0' : '-translate-x-full'">
           <div class="flex flex-col h-full justify-between">
+
             <div class="flex items-center justify-between">
-              <div id="logo" @click="isOpen = false" class="">
+              <div id="logo" @click="isOpen = false">
                 <NuxtLink to="/" active-class="active"
                   class="px-4 text-md font-bold leading-relaxed inline-block whitespace-nowrap">
                   <span class="text-white">Saturdays.io</span>
@@ -71,25 +72,28 @@
 
             <ul class="divide-y flex flex-col justify-center font-sans">
               <li class="nav-item">
-                <NuxtLink to="/" @click="isOpen = false" active-class="active" class="my-4 inline-block text-xl">Home
+                <NuxtLink to="/" @click="isOpen = false" active-class="active" class="my-4 inline-block text-2xl text-bold uppercase">
+                  <strong>Work</strong>
                 </NuxtLink>
               </li>
               <li class="nav-item">
-                <NuxtLink to="/about" @click="isOpen = false" active-class="active" class="my-4 inline-block text-xl">
-                  About</NuxtLink>
+                <NuxtLink to="/about" @click="isOpen = false" active-class="active" class="my-4 inline-block text-2xl text-bold uppercase">
+                  <strong>About</strong>
+                </NuxtLink>
               </li>
               <li class="nav-item">
-                <NuxtLink to="/terms-of-service" @click="isOpen = false" active-class="active" class="my-4 inline-block text-xl">
-                  Terms of Service</NuxtLink>
+                <NuxtLink to="/terms-of-service" @click="isOpen = false" active-class="active" class="my-4 inline-block text-2xl text-bold uppercase">
+                  Terms of Service
+                </NuxtLink>
               </li>
               <li class="nav-item">
-                <NuxtLink to="/privacy-policy" @click="isOpen = false" active-class="active" class="my-4 inline-block text-xl">
-                  Privacy Policy</NuxtLink>
+                <NuxtLink to="/privacy-policy" @click="isOpen = false" active-class="active" class="my-4 inline-block text-2xl text-bold uppercase">
+                  Privacy Policy
+                </NuxtLink>
               </li>
-
             </ul>
 
-            <div id="social">
+            <div id="social" class="pb-4">
               <p class="text-md uppercase font-bold text-white">Social media</p>
               <div class="social flex space-x-10 mt-4">
                 <NuxtLink to="https://twitter.com/" rel="noreferrer" target="_blank">
