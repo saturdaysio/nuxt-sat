@@ -22,7 +22,7 @@
 
         <Skill />
 
-        <section id="preview" class="w-full mx-auto px-4 pt-16 bg-black-800">
+        <section id="preview" class="w-full mx-auto px-4 pt-16 bg-black-900">
             <div class="container mx-auto mt-8">
                 <div class="pb-8">
                     <h1 class="text-3xl lg:text-5xl text-center font-bold text-grad-01">
