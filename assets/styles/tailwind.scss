@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-
 @import "~/assets/styles/font.scss";
 @import "~/assets/styles/button.scss";
 @import "~/assets/styles/colour.scss";
@@ -11,27 +10,34 @@
 
 
 
+// Tailwind Typography
+
+  .prose {
+    max-width: 100%;
+  }
+
+
 
 
 /* Hyperlinks */
 /* Break off into its own file - 01/01/2023 */
 
-a {
-  color: $blue;
-}
-
-.nav-item {
-  border: 0;
-
-  a:hover {
-    background: none;
-    color: $red;
-    opacity: 0.75;
+  a {
+    color: $blue;
   }
-  
-  .active {
-    color: $red;
-    text-decoration: underline;
-    text-underline-offset: 4px;
+
+  .nav-item {
+    border: 0;
+
+    a:hover {
+      background: none;
+      color: $red;
+      opacity: 0.75;
+    }
+    
+    .active {
+      color: $red;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
   }
-}
