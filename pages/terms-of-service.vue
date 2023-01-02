@@ -34,7 +34,7 @@
         </div>
 
         <div id="use-of-services" class="py-8">
-          <h1 class="text-xl  font-bold text-white pb-4">
+          <h1 class="text-xl font-bold text-white pb-4">
             1. Use of Services
           </h1>
           <p class="text-gray-100 pb-4">
@@ -62,13 +62,11 @@
           </p>
 
           <div class="prose">
-            <ul class=" list-decimal text-gray-100">
+            <ul class="list-decimal text-gray-100">
               <li>Violate any law regulation or other right that may be subject to any criminal or civil penalty.</li>
-              <li>Violate infringe or otherwise use the intellectual property rights of a third party without permission.
-              </li>
+              <li>Violate infringe or otherwise use the intellectual property rights of a third party without permission.</li>
               <li>Violate or infringe on the publicity rights privacy rights or other rights of third parties.</li>
-              <li>Engage in the use of spyware or other software designed to collect and harvest data from us or the
-                Services.</li>
+              <li>Engage in the use of spyware or other software designed to collect and harvest data from us or the Services.</li>
               <li>Communicate with users of the Services for purposes of distributing malicious files software or other
                 programs meant to disrupt the use of computer systems or related technology or for the purposes of
                 “phishing” and other fraudulent activity.</li>
@@ -76,10 +74,8 @@
               <li>Reverse engineer any of the software or underlying code used by us or in the Services.</li>
               <li>Impersonate any person or company including but not limited to our employees contractors or other
                 personnel or misrepresent your affiliation with a person or company.</li>
-              <li>Create and register more than one profile associated with the Services including registering a profile
-                on behalf of an individual other than yourself.</li>
-              <li>Encourage or otherwise assist any other party to do any of the acts previously described in this
-                section.</li>
+              <li>Create and register more than one profile associated with the Services including registering a profile on behalf of an individual other than yourself.</li>
+              <li>Encourage or otherwise assist any other party to do any of the acts previously described in this section.</li>
             </ul>
           </div>
 
