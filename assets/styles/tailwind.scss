@@ -1,7 +1,13 @@
 @charset "utf-8";
 
 
+@import "~/assets/styles/font.scss";
+@import "~/assets/styles/button.scss";
+@import "~/assets/styles/colour.scss";
+
+
 // Brand colours
+
 $purple: #6028CC;
 $red: #F80C80;
 $blue: #3c78f4;
@@ -11,7 +17,6 @@ $white: #fff;
 
 
 // HTML, body, global elements
-
 
 body {
   background-color: $black;
@@ -23,44 +28,18 @@ body {
 /* Hyperlinks */
 /* Break off into its own file - 01/01/2023 */
 
-
 a {
   color: $blue;
 }
 
-
-.nav-item {
-  a {
-    color: $blue;
-  }
-
-  a:hover {
-    background: none;
-    color: $red;
-    opacity: 0.75;
-  }
-
-  .active {
-    color: $red;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
+a:hover {
+  background: none;
+  color: $red;
+  opacity: 0.75;
 }
 
-
-
-
-/* Text Gradients */
-
-.text-grad-01 {
-  -webkit-text-fill-color: transparent;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-  background: -webkit-linear-gradient(120deg, rgba(248, 12, 128, 1), rgba(60, 120, 244, 1));
-  -webkit-background-clip: text;
-  background-clip: text;
+.active {
+  color: $red;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
-
-
-@import "~/assets/styles/font.scss";
-@import "~/assets/styles/button.scss";
