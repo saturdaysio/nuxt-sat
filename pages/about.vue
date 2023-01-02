@@ -8,16 +8,11 @@
 
         <NavBar />
 
-        <section class="container lg:max-w-6xl mx-auto px-4 py-16">
-            <div class="mt-24">
-                <h1 class="text-4xl lg:text-6xl text-center font-bold text-white">
-                    We bridge the gap between design and technology
-                </h1>
-            </div>
-        </section>
+        
+        <Hero text="We bridge the gap between design and technology" />
 
-        <section id="ethics" class="container lg:max-w-5xl mx-auto px-4 py-16">
-            <div class="">
+        <section id="ethics" class="w-full mx:auto px-4 py-16 bg-black-800">
+            <div class="container lg:max-w-5xl mx-auto my-8">
                 <div class="pb-4">
                     <h1 class="text-3xl lg:text-5xl text-center font-bold text-grad-01 pb-8">Keeping it 100</h1>
                     <p class="text-xl text-white pb-4">We believe that our work and ethics
