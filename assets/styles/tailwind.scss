@@ -21,6 +21,8 @@ a {
 }
 
 .nav-item {
+  border: 0;
+
   a:hover {
     background: none;
     color: $red;
