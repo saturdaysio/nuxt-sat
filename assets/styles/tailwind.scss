@@ -32,14 +32,16 @@ a {
   color: $blue;
 }
 
-a:hover {
-  background: none;
-  color: $red;
-  opacity: 0.75;
-}
-
-.active {
-  color: $red;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+.nav-item {
+  a:hover {
+    background: none;
+    color: $red;
+    opacity: 0.75;
+  }
+  
+  .active {
+    color: $red;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
 }
