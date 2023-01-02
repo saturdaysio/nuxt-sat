@@ -47,14 +47,17 @@
             our site. We collect the following types of information:
           </p>
 
-          <ul class="prose list-disc text-gray-100">
-            <li>Information You Provide Us: Name mailing address phone number email address contact preferences device
-              identifiers IP address location information credit card information and profile information where the
-              contact is via social media.</li>
-            <li>Information We Collect from Users of our Services: Name mailing address Phone number Email address
-              Contact preferences Device identifiers IP address and location information.</li>
-            <li>Information We Collect from Third Parties: We don't collect information from third parties.</li>
-          </ul>
+          <div class="prose">
+            <ul class="prose list-disc text-gray-100">
+              <li>Information You Provide Us: Name mailing address phone number email address contact preferences device
+                identifiers IP address location information credit card information and profile information where the
+                contact is via social media.</li>
+              <li>Information We Collect from Users of our Services: Name mailing address Phone number Email address
+                Contact preferences Device identifiers IP address and location information.</li>
+              <li>Information We Collect from Third Parties: We don't collect information from third parties.</li>
+            </ul>
+          </div>
+
         </div>
 
         <div id="how-we-use-info" class="py-8">
@@ -65,17 +68,20 @@
             We may use the information that we collect for any of the following purposes:
           </p>
 
-          <ul class="prose list-disc text-gray-100 pb-4">
-            <li>Improve Service functionality and efficiency</li>
-            <li>Provide maintain and improve our Services</li>
-            <li>Provide assistance to users</li>
-            <li>Personalize our Services</li>
-            <li>Measure and better understand the performance of our Services</li>
-            <li>Communicate with Users</li>
-            <li>Protect Users the community us and other legal reasons such as complying with applicable laws assisting
-              with law enforcement agencies if legally mandated to find instances of abuse or misuse of our services or
-              illegal activity maintain security and safety when using our Services</li>
-          </ul>
+          <div class="prose">
+            <ul class=" list-disc text-gray-100 pb-4">
+              <li>Improve Service functionality and efficiency</li>
+              <li>Provide maintain and improve our Services</li>
+              <li>Provide assistance to users</li>
+              <li>Personalize our Services</li>
+              <li>Measure and better understand the performance of our Services</li>
+              <li>Communicate with Users</li>
+              <li>Protect Users the community us and other legal reasons such as complying with applicable laws assisting
+                with law enforcement agencies if legally mandated to find instances of abuse or misuse of our services or
+                illegal activity maintain security and safety when using our Services</li>
+            </ul>
+          </div>
+
 
           <p class="text-gray-100">
             In the event that we determine we need to use your personal information for a reason not included in this
@@ -87,15 +93,16 @@
           <h1 class="text-xl font-bold text-white pb-2">
             4. Sharing Information
           </h1>
-          <p class="text-gray-100">
+          <p class="text-gray-100 pb-4">
             We do not sell your personal information. To better provide Services we may share your personal information
             with third parties (like social networks) and our service providers.
           </p>
-          <p class="text-gray-100">
+          <p class="text-gray-100 pb-4">
             We may share your information with third parties in other cases such as:
           </p>
 
-          <ul class="prose list-disc text-gray-100">
+          <div class="prose">
+            <ul class="list-disc text-gray-100">
             <li>If a government body requests information and we deemed it to be necessary to disclose such information
               in order to comply with applicable laws and legal processes;</li>
             <li>To cooperate with law enforcement or other government authorities as it relates to any investigations or
@@ -107,6 +114,7 @@
               Services.</li>
             <li>At any time that you consent to such sharing.</li>
           </ul>
+          </div>>
         </div>
 
         <div id="control-info" class="py-8">
