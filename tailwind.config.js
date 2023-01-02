@@ -13,7 +13,7 @@ const error = colors.red;
 
 module.exports = {
   content: [
-    "./components/**/*.{js,vue,ts}",
+    "./components/**/*.{html,js,ts,jsx,tsx,vue}",
     "./layouts/**/*.vue",
     "./pages/**/*.vue",
     "./plugins/**/*.{js,ts}",
@@ -68,15 +68,15 @@ module.exports = {
         '900': "#B71C1C",
         },
       black: {
-      '100': "#c4c4c4",
-      '200': "#2C2C2C",
-      '300': "#222222",
-      '400': "#202020",
-      '500': "#181818",
-      '600': "#101010",
-      '700': "#0C0C0C",
-      '800': "#080808",
-      '900': "#000000",
+        '100': "#c4c4c4",
+        '200': "#2C2C2C",
+        '300': "#222222",
+        '400': "#202020",
+        '500': "#181818",
+        '600': "#101010",
+        '700': "#0C0C0C",
+        '800': "#080808",
+        '900': "#000000",
       },
       gray: {
         '100': "#F5F5F5",
@@ -110,18 +110,15 @@ module.exports = {
       '8xl': ['6rem', '1.25'], // font-size: 96px, line-height: 120px
     },
 
-
-    extend: {
-      textColor: {},
-
-      listStyleType: {
-        none: 'none',
-        disc: 'disc',
-        decimal: 'decimal',
-        square: 'square',
-        roman: 'upper-roman',
-      },
+    listStyleType: {
+      none: 'none',
+      disc: 'disc',
+      decimal: 'decimal',
+      square: 'square',
+      roman: 'upper-roman',
     },
+
+    extend: {},
   },
 
   variants: {
