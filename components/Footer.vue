@@ -1,13 +1,13 @@
 <template>
-    <footer class="container mx-auto px-4 py-8">
-        <div class="footer">
-            <div class="flex flex-col-reverse items-center lg:flex-row justify-between">
+    <footer class="w-full mx-auto px-4 py-8 bg-black-900">
+        <div class="lg:container mx-auto">
+            <div class="flex flex-col-reverse items-center md:flex-row justify-between">
                 <div class="copyright flex items-center px-4">
                     <p class="text-white">
-                        &#169; Saturdays.io Inc. 2023
+                        &#169; Saturdays.io Inc. 2016 - 2023
                     </p>
                 </div>
-                <div class="flex flex-end pb-4 lg:pb-0">
+                <div class="flex flex-end pb-4 md:pb-0">
                     <div class="nav-item">
                         <NuxtLink to="/terms-of-service" active-class="active"
                             class="px-4 py-2 flex items-center text-sm font-bold hover:opacity-75">

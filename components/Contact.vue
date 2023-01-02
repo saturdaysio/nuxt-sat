@@ -1,6 +1,6 @@
 <template>
-    <section id="cta" class="container mx-auto px-4 py-16">
-        <div class="flex flex-col">
+    <section id="cta" class="w-full mx-auto px-4 py-16 bg-black-800">
+        <div class="container mx-auto flex flex-col my-16">
             <div class="mb-8">
                 <h1 class="text-3xl lg:text-5xl text-center font-bold text-white">Have an interesting project?</h1>
             </div>
