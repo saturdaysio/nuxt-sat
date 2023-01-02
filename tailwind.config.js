@@ -36,12 +36,24 @@ module.exports = {
     colors: {
       blue: "#3c78f4",
       purple: "#6028cc",
+      purple_500: "#424242",
+      purple_600: "#424242",
+      purple_700: "#202020",
+      purple_800: "#424242",
+      purple_900: "#202020",
       red: "#f80c80",
       green: "#13ce66",
+      navy: "#64b6c4",
+      teal: "#18e4be",
       gray_dark: "#273444",
       gray: "#c4c4c4", // create an array of shades 100 ... 900
       gray_light: "#d3dce6",
       black: "#000",
+      'black-500': "#424242",
+      'black-600': "#424242",
+      'black-700': "#202020",
+      'black-800': "#424242",
+      'black-900': "#202020",
       white: "#fff"
     },
 
