@@ -48,7 +48,7 @@
           </p>
 
           <div class="prose">
-            <ul class="prose list-disc text-gray-100">
+            <ul class="list-disc text-gray-100">
               <li>Information You Provide Us: Name mailing address phone number email address contact preferences device
                 identifiers IP address location information credit card information and profile information where the
                 contact is via social media.</li>
@@ -69,7 +69,7 @@
           </p>
 
           <div class="prose">
-            <ul class=" list-disc text-gray-100 pb-4">
+            <ul class="list-disc text-gray-100 pb-4">
               <li>Improve Service functionality and efficiency</li>
               <li>Provide maintain and improve our Services</li>
               <li>Provide assistance to users</li>
