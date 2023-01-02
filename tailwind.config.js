@@ -39,7 +39,7 @@ module.exports = {
       red: "#f80c80",
       green: "#13ce66",
       gray_dark: "#273444",
-      gray: "#8492a6", // create an array of shades 100 ... 900
+      gray: "#c4c4c4", // create an array of shades 100 ... 900
       gray_light: "#d3dce6",
       black: "#000",
       white: "#fff"
@@ -65,8 +65,6 @@ module.exports = {
 
 
     extend: {
-      colors: {},
-
       textColor: {},
 
       listStyleType: {
