@@ -14,12 +14,8 @@
 
 // Tailwind Typography Overrides
 
-  .prose {
-    max-width: 100%;
-  }
-
   p, li {
-    color: #c4c4c4;
+    color: $gray;
   }
 
 
