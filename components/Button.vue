@@ -15,6 +15,4 @@
 
 
 <style lang="scss" scoped>
-@import '~/assets/styles/button.scss';
-
 </style>
