@@ -1,9 +1,9 @@
 <template>
-    <div class="bg-black">
+    <div class="">
 
         <Head>
             <Title>Saturdays.io - Projects</Title>
-            <Meta name="description" content="Saturdays.io - Toronto based Digital studio." />
+            <Meta name="description" content="Saturdays.io - Lorem ipsum dolor sit amet" />
         </Head>
 
         <NavBar />
@@ -38,7 +38,6 @@
                 <p class="">Praesent est turpis, pharetra eu laoreet eget, dignissim non elit. Maecenas tempor libero eu lacus ultricies, in semper dui molestie. Praesent tempus, metus sit amet vestibulum lobortis, felis metus pulvinar felis, ac vulputate lectus lorem vitae lectus. Nullam gravida volutpat risus molestie dapibus. Mauris sollicitudin id ligula in elementum. Nullam et tempus tortor. Praesent fringilla tempor gravida. Integer porta fringilla accumsan. Quisque nisi risus, sollicitudin ac commodo et, volutpat sed augue.</p>
             </div>
         </section>
-
 
         <Footer />
 
