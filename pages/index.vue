@@ -1,20 +1,19 @@
 <template>
-    <div class="bg-black">
+    <div>
 
         <Head>
-            <Title>Saturdays.io - 2022</Title>
+            <Title>Saturdays.io - 2023</Title>
             <Meta name="description" content="Saturdays.io - Toronto based digital studio" />
         </Head>
 
         <NavBar />
-
 
         <Hero text="Saturdays is a Canadian digital studio based in Toronto" />
 
         <section class="w-full mx-auto px-4 py-16 bg-black-700">
             <div class="container lg:max-w-6xl mx-auto my-8">
                 <h1 class="text-3xl lg:text-5xl text-center font-bold text-grad-01">
-                    We're a Data-driven digital studio that focuses on the Design Development and Strategy of digital
+                    We're a Data-driven digital studio that focuses on the Design, Development and Strategy of digital
                     products.
                 </h1>
             </div>
@@ -33,7 +32,7 @@
                     <picture>
                         <source type="image/webp" srcset="~/assets/img/mobile.webp">
                         <source type="image/png" srcset="~/assets/img/mobile.png">
-                        <img src="~/assets/img/mobile.webp" alt="Mobile app interfaces." draggable="false" loading="lazy" width="1600" height="1000">
+                        <img src="~/assets/img/mobile.webp" alt="Mobile app interfaces" draggable="false" loading="lazy" width="1600" height="1000">
                     </picture>
                 </div>
             </div>
