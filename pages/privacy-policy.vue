@@ -8,7 +8,7 @@
 
     <NavBar />
 
-    <section id="legal" class=" mx-auto px-4 py-16 bg-black-800">
+    <section id="legal" class="mx-auto px-4 py-16 bg-black-800">
       <div class="container lg:max-w-4xl mx-auto">
         <div class="mt-24 pb-8">
           <h1 class="text-4xl lg:text-6xl font-bold text-grad-01">Privacy Policy</h1>
@@ -25,7 +25,7 @@
         </div>
 
         <div id="use-of-services" class="py-8">
-          <h1 class="text-xl font-bold text-white pb-2">
+          <h1 class="text-category">
             1. Policy Scope
           </h1>
           <p>
@@ -37,7 +37,7 @@
         </div>
 
         <div id="info-collected" class="py-8">
-          <h1 class="text-xl font-bold text-white pb-2">
+          <h1 class="text-category">
             2. Information We Collect
           </h1>
           <p class="pb-4">
@@ -61,7 +61,7 @@
         </div>
 
         <div id="how-we-use-info" class="py-8">
-          <h1 class="text-xl font-bold text-white pb-2">
+          <h1 class="text-category">
             3. How We Use the Information We Collect
           </h1>
           <p class="pb-4">
@@ -90,7 +90,7 @@
         </div>
 
         <div id="share-info" class="py-8">
-          <h1 class="text-xl font-bold text-white pb-2">
+          <h1 class="text-category">
             4. Sharing Information
           </h1>
           <p class="pb-4">
@@ -118,7 +118,7 @@
         </div>
 
         <div id="control-info" class="py-8">
-          <h1 class="text-xl font-bold text-white pb-2">
+          <h1 class="text-category">
             5. Controlling Your Information
           </h1>
           <p class="pb-4">
@@ -142,7 +142,7 @@
         </div>
 
         <div id="do-not-track" class="py-8">
-          <h1 class="text-xl font-bold text-white pb-2">
+          <h1 class="text-category">
             6. Do Not Track
           </h1>
           <p>
@@ -153,7 +153,7 @@
         </div>
 
         <div id="gdpr" class="py-8">
-          <h1 class="text-xl font-bold text-white pb-2">
+          <h1 class="text-category">
             7. GDPR
           </h1>
           <p>
@@ -163,7 +163,7 @@
         </div>
 
         <div id="age-restrictions" class="py-8">
-          <h1 class="text-xl font-bold text-white pb-2">
+          <h1 class="text-category">
             8. Age Restrictions
           </h1>
           <p>
@@ -174,7 +174,7 @@
         </div>
 
         <div id="do-not-track" class="py-8">
-          <h1 class="text-xl font-bold text-white pb-2">
+          <h1 class="text-category">
             9. Changes to this Privacy Policy
           </h1>
           <p>
@@ -187,7 +187,7 @@
         </div>
 
         <div id="assignment" class="py-8">
-          <h1 class="text-xl font-bold text-white pb-2">
+          <h1 class="text-category">
             10. Assignment Change of Control and Transfer
           </h1>
           <p>
@@ -199,7 +199,7 @@
         </div>
 
         <div id="contact-us" class="py-8">
-          <h1 class="text-xl font-bold text-white pb-2">
+          <h1 class="text-category">
             11. Contact Us
           </h1>
           <p>

@@ -8,7 +8,7 @@
 
     <NavBar />
 
-    <section id="legal" class="px-4 py-16 bg-black-800">
+    <section id="legal" class="mx-auto px-4 py-16 bg-black-800">
       <div class="container lg:max-w-4xl mx-auto">
         <div class="mt-24 pb-8">
           <h1 class="text-4xl lg:text-6xl font-bold text-grad-01">Terms of Service</h1>
@@ -34,7 +34,7 @@
         </div>
 
         <div id="use-of-services" class="py-8">
-          <h1 class="text-xl font-bold text-white pb-2">
+          <h1 class="text-category">
             1. Use of Services
           </h1>
           <p class="pb-4">
@@ -82,7 +82,7 @@
         </div>
 
         <div id="service-disruption-terminate" class="py-8">
-          <h1 class="text-xl font-bold text-white pb-2">
+          <h1 class="text-category">
             2. Service Disruptions and Terminating Use of the Services
           </h1>
           <p class="pb-4">
@@ -107,7 +107,7 @@
         </div>
 
         <div id="partners-third-party" class="py-8">
-          <h1 class="text-xl font-bold text-white pb-2">
+          <h1 class="text-category">
             3. Partners and third-parties
           </h1>
           <p>
@@ -118,7 +118,7 @@
         </div>
 
         <div id="ownership" class="py-8">
-          <h1 class="text-xl font-bold text-white pb-2">
+          <h1 class="text-category">
             4. Ownership and Rights
           </h1>
           <p class=" pb-4">
@@ -151,7 +151,7 @@
         </div>
 
         <div id="misc" class="py-8">
-          <h1 class="text-xl font-bold text-white pb-2">
+          <h1 class="text-category">
             5. Miscellaneous
           </h1>
           <p class="pb-4">
