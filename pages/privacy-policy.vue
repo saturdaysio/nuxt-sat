@@ -128,7 +128,7 @@
             Our Services have been built in a way to minimize the amount of personal information that is stored within
             them. Nonetheless if you want to review update change or delete the information that you have shared with
             us including deletion of your account you may send a request to do so to <NuxtLink
-              to="mailto:support@saturdays.io">support [at] saturdays.io</NuxtLink>
+              to="mailto:support@saturdays.io" rel="noreferrer" target="_blank">support [at] saturdays.io</NuxtLink>
           </p>
           <p class="text-gray-100">
             Even in the event that we delete your personal information we still may retain some information for
@@ -204,7 +204,7 @@
           </h1>
           <p class="text-gray-100">
             For any questions or concerns that you may have regarding this Privacy Policy please contact us at <NuxtLink
-              to="mailto:support@saturdays.io">support [at] saturdays.io</NuxtLink>
+              to="mailto:support@saturdays.io" rel="noreferrer" target="_blank">support [at] saturdays.io</NuxtLink>
           </p>
         </div>
       </div>

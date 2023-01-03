@@ -146,7 +146,7 @@
             We reserve the right to address claims of intellectual property infringement by you or a third-party when
             using our Services by such reasonable means to protect the rights of the intellectual property owner. If you
             would like to report intellectual property infringement please contact us at <NuxtLink
-              to="mailto:support@saturdays.io">support [at] saturdays.io</NuxtLink>
+              to="mailto:support@saturdays.io" rel="noreferrer" target="_blank">support [at] saturdays.io</NuxtLink>
           </p>
         </div>
 
