@@ -47,7 +47,7 @@
             our site. We collect the following types of information:
           </p>
 
-          <div class="prose">
+          <div class="prose max-w-none">
             <ul class="list-disc">
               <li>Information You Provide Us: Name mailing address phone number email address contact preferences device
                 identifiers IP address location information credit card information and profile information where the
@@ -68,7 +68,7 @@
             We may use the information that we collect for any of the following purposes:
           </p>
 
-          <div class="prose">
+          <div class="prose max-w-none">
             <ul class="list-disc pb-4">
               <li>Improve Service functionality and efficiency</li>
               <li>Provide maintain and improve our Services</li>
@@ -101,7 +101,7 @@
             We may share your information with third parties in other cases such as:
           </p>
 
-          <div class="prose">
+          <div class="prose max-w-none">
             <ul class="list-disc">
             <li>If a government body requests information and we deemed it to be necessary to disclose such information
               in order to comply with applicable laws and legal processes;</li>
