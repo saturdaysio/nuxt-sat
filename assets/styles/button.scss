@@ -19,12 +19,14 @@
     -webkit-transition: all .4s ease;
     -moz-transition: all .4s ease;
     transition: all .4s ease;
+
+    &:hover,&:focus {
+      color: $red;
+    }
   }
 
-  .button.primary:hover,
-  .button.primary:focus {
-    color: $red;
-  }
+
+
 
 /* Secondary */
 
@@ -39,11 +41,10 @@
     -webkit-transition: all .4s ease;
     -moz-transition: all .4s ease;
     transition: all .4s ease;
-  }
 
-  .button.secondary:hover,
-  .button.secondary:focus {
-    color: $red;
+    &:hover,&:focus {
+      color: $red;
+    }
   }
 
 
@@ -53,6 +54,7 @@
 
 
 /* CTA */
+
   .button.cta {
     color: $white;
     background: none;
