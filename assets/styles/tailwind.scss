@@ -8,7 +8,7 @@
 // HTML, body, global elements
 
 
-  html {
+  body {
     background: #000;
   }
 
@@ -18,6 +18,9 @@
     max-width: 100%;
   }
 
+  p, li {
+    color: #c4c4c4;
+  }
 
 
 
