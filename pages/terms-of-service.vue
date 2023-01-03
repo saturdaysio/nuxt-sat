@@ -15,17 +15,17 @@
           <p class="text-xl text-white">Last updated: Jan 25 2022</p>
         </div>
         <div id="definition" class="py-8">
-          <p class="text-gray-100 pb-4">
+          <p class="pb-4">
             Saturdays.io Inc. (“our” “we” or “us”) offers you access to mobile applications websites and real-time
             API services. These Terms of Service (“Terms”) apply to you as a user (“you” or “User”) and create a legal
             binding contract between you and us regarding your access to or use of our applications websites content
             features products or other services (collectively “Services”).
           </p>
-          <p class="text-gray-100 pb-4">
+          <p class="pb-4">
             Please read these Terms carefully. Your access to and use of the Services are impacted by these Terms and if
             you do not agree to any of these Terms you may not access or use the Services.
           </p>
-          <p class="text-gray-100">
+          <p class="">
             Your privacy is important to us. Our Privacy Policy describes the types of information we collect from you
             what we do with it and how we might share it. You can read it here <NuxtLink to="/privacy-policy">
               https://saturdays.io/privacy-policy</NuxtLink>. Your access and use of the
@@ -37,7 +37,7 @@
           <h1 class="text-xl font-bold text-white pb-4">
             1. Use of Services
           </h1>
-          <p class="text-gray-100 pb-4">
+          <p class="pb-4">
             You may access and/or use the Services only if you have reached the age of majority or legal age in your
             jurisdiction (generally 18 or older) and can form legally binding contracts under applicable law. If you are
             under 18 or the legal age of majority in your jurisdiction your parent or guardian must agree to these Terms
@@ -48,12 +48,12 @@
             with
             you as part of the Services will be your responsibility.
           </p>
-          <p class="text-gray-100 pb-4">
+          <p class="pb-4">
             The Services are controlled and offered by us from Ontario Canada. We do not make any representations that
             the Services are appropriate in your location. If you use the Services from any country other than Canada it
             is your responsibility to comply with your local law.
           </p>
-          <p class="text-gray-100 pb-4">
+          <p class="pb-4">
             Your use of the Services requires that you follow certain standards of conduct. We reserve the right in our
             sole discretion to disallow or remove any user from accessing or using the Services in the event we deem
             such
@@ -62,7 +62,7 @@
           </p>
 
           <div class="prose">
-            <ul class="list-decimal text-gray-100">
+            <ul class="list-decimal ">
               <li>Violate any law regulation or other right that may be subject to any criminal or civil penalty.</li>
               <li>Violate infringe or otherwise use the intellectual property rights of a third party without permission.</li>
               <li>Violate or infringe on the publicity rights privacy rights or other rights of third parties.</li>
@@ -85,22 +85,22 @@
           <h1 class="text-xl font-bold text-white pb-4">
             2. Service Disruptions and Terminating Use of the Services
           </h1>
-          <p class="text-gray-100 pb-2">
+          <p class=" pb-2">
             Our Services may be interrupted at any time for repairs maintenance upgrades or similar. At any time we may
             discontinue or change any of the Services that may affect certain devices and platforms used for accessing
             and
             using the Services.
           </p>
-          <p class="text-gray-100 pb-2">
+          <p class=" pb-2">
             You can stop using the Services at any time. If you’d like to know how we handle the information you provide
             please refer to the Privacy Policy <NuxtLink to="/privacy-policy">https://saturdays.io/privacy-policy
             </NuxtLink>
           </p>
-          <p class="text-gray-100 pb-2">
+          <p class=" pb-2">
             We reserve the right to suspend or terminate any User without notice for any reason in our sole discretion
             including breach of these Terms.
           </p>
-          <p class="text-gray-100">
+          <p class="">
             If we disable your account for a violation of these Terms or the Privacy Policy you shall not create another
             account without our permission.
           </p>
@@ -110,7 +110,7 @@
           <h1 class="text-xl font-bold text-white pb-4">
             3. Partners and third-parties
           </h1>
-          <p class="text-gray-100">
+          <p class="">
             While using the Services you may use access or otherwise interact with our partners and other third-parties
             including their websites apps products services content and other properties. In such cases the terms
             governing such relationship will be between you and such partner and/or third-party.
@@ -121,28 +121,28 @@
           <h1 class="text-xl font-bold text-white pb-4">
             4. Ownership and Rights
           </h1>
-          <p class="text-gray-100 pb-2">
+          <p class=" pb-2">
             We own all rights trademarks trade secrets patents and any other intellectual property that may be
             associated with or created by us as part of our Services that were not developed by a third-party. You may
             not
             use such intellectual property for any reason without our explicit consent.
           </p>
-          <p class="text-gray-100 pb-2">
+          <p class=" pb-2">
             We do not own any of the information that you disseminate while using the Services. You are responsible for
             any possible infringements of intellectual property that may be caused by dissemination of such information.
           </p>
-          <p class="text-gray-100 pb-2">
+          <p class=" pb-2">
             You agree to grant us a worldwide non-exclusive royalty-free sublicensable and transferable license to
             use reproduce distribute create derivative works of display and perform the information that you upload
             submit store send or receive on or through our Services. This license to us is limited only to our enabling
             you to use our Services according to these Terms and you grant us no other license.
           </p>
-          <p class="text-gray-100 pb-2">
+          <p class=" pb-2">
             We grant you a limited revocable non-exclusive non-sublicensable and non-transferable license to use our
             Services as long as you are in compliance with these Terms. This license is limited only to enabling you to
             use our Services according to these Terms and you are granted no other license by us.
           </p>
-          <p class="text-gray-100">
+          <p class="">
             We reserve the right to address claims of intellectual property infringement by you or a third-party when
             using our Services by such reasonable means to protect the rights of the intellectual property owner. If you
             would like to report intellectual property infringement please contact us at <NuxtLink
@@ -154,7 +154,7 @@
           <h1 class="text-xl font-bold text-white pb-4">
             5. Miscellaneous
           </h1>
-          <p class="text-gray-100 pb-4">
+          <p class="pb-4">
             Disclaimer and Limitation of Liability: YOU USE OUR SERVICES AT YOUR OWN RISK AND SUBJECT TO THE FOLLOWING
             DISCLAIMERS. THE SERVICES ARE PROVIDED ON AN “AS IS” BASIS WITH NO EXPRESS OR IMPLIED WARRANTIES INCLUDING
             BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY FITNESS FOR A PARTICULAR PURPOSE TITLE NON-INFRINGEMENT
@@ -174,7 +174,7 @@
             DOES NOT KNOW OR SUSPECT TO EXIST IN HIS OR HER FAVOR AT THE TIME OF EXECUTING THE RELEASE WHICH IF KNOWN BY
             HIM OR HER MUST HAVE MATERIALLY AFFECTED HIS OR HER SETTLEMENT WITH THE DEBTOR.
           </p>
-          <p class="text-gray-100 pb-4">
+          <p class="pb-4">
             THE SATURDAYS PARTIES ARE NOT LIABLE TO YOU FOR ANY LOST PROFITS OR CONSEQUENTIAL SPECIAL PUNITIVE
             INDIRECT OR INCIDENTAL DAMAGES RELATING TO ARISING OUT OF OR IN ANY WAY IN CONNECTION WITH OUR TERMS US
             OR OUR SERVICES EVEN IF THE SATURDAYS PARTIES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. OUR
@@ -186,7 +186,7 @@
             NOTWITHSTANDING ANYTHING TO THE CONTRARY IN OUR TERMS IN SUCH CASES THE LIABILITY OF THE SATURDAYS PARTIES
             WILL BE LIMITED TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW.
           </p>
-          <p class="text-gray-100 pb-4">
+          <p class="pb-4">
             Indemnification: You agree to indemnify and hold us harmless including our employees directors officers
             agents third party providers including service providers advertising partners and any other partners that
             may implement our Services in its organization against all damages expenses claims losses liabilities
@@ -194,12 +194,12 @@
             these
             Terms.
           </p>
-          <p class="text-gray-100 pb-4">
+          <p class="pb-4">
             No assignment: These Terms and all rights and obligations ascribed to you hereunder and/or your accounts
             associated with the Services are personal to you and may not be transferred or assigned by you at any time
             in any way without consent. We may assign our rights under these Terms at any time without your consent.
           </p>
-          <p class="text-gray-100 pb-4">
+          <p class="pb-4">
             Choice of Law and Arbitration: These Terms except to the extent not otherwise governed by the laws of Canada
             shall be governed by the laws of the province of Ontario without giving effect to principles of conflicts of
             law. Any dispute arising from these Terms shall be subject to and settled within Ontario in accordance with
@@ -213,7 +213,7 @@
             BY AGREEING TO THESE TERMS BOTH YOU AND SATURDAYS.IO INC. WAIVE THE RIGHT TO TRIAL BY JURY OR TO PARTICIPATE
             IN A CLASS ACTION.
           </p>
-          <p class="text-gray-100">
+          <p class="">
             Entire Agreement Severability Waiver: These Terms contain the entire understanding of the parties with
             respect to the subject matter hereof and supersede all prior agreements and understandings oral or written
             with respect to such matters which the parties acknowledge if applicable have been merged into these Terms.
