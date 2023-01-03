@@ -25,7 +25,7 @@
             Please read these Terms carefully. Your access to and use of the Services are impacted by these Terms and if
             you do not agree to any of these Terms you may not access or use the Services.
           </p>
-          <p class="">
+          <p>
             Your privacy is important to us. Our Privacy Policy describes the types of information we collect from you
             what we do with it and how we might share it. You can read it here <NuxtLink to="/privacy-policy">
               https://saturdays.io/privacy-policy</NuxtLink>. Your access and use of the
@@ -34,7 +34,7 @@
         </div>
 
         <div id="use-of-services" class="py-8">
-          <h1 class="text-xl font-bold text-white pb-4">
+          <h1 class="text-xl font-bold text-white pb-2">
             1. Use of Services
           </h1>
           <p class="pb-4">
@@ -62,7 +62,7 @@
           </p>
 
           <div class="prose">
-            <ul class="list-decimal ">
+            <ul class="list-decimal">
               <li>Violate any law regulation or other right that may be subject to any criminal or civil penalty.</li>
               <li>Violate infringe or otherwise use the intellectual property rights of a third party without permission.</li>
               <li>Violate or infringe on the publicity rights privacy rights or other rights of third parties.</li>
@@ -82,35 +82,35 @@
         </div>
 
         <div id="service-disruption-terminate" class="py-8">
-          <h1 class="text-xl font-bold text-white pb-4">
+          <h1 class="text-xl font-bold text-white pb-2">
             2. Service Disruptions and Terminating Use of the Services
           </h1>
-          <p class=" pb-2">
+          <p class="pb-4">
             Our Services may be interrupted at any time for repairs maintenance upgrades or similar. At any time we may
             discontinue or change any of the Services that may affect certain devices and platforms used for accessing
             and
             using the Services.
           </p>
-          <p class=" pb-2">
+          <p class="pb-4">
             You can stop using the Services at any time. If you’d like to know how we handle the information you provide
             please refer to the Privacy Policy <NuxtLink to="/privacy-policy">https://saturdays.io/privacy-policy
             </NuxtLink>
           </p>
-          <p class=" pb-2">
+          <p class="pb-4">
             We reserve the right to suspend or terminate any User without notice for any reason in our sole discretion
             including breach of these Terms.
           </p>
-          <p class="">
+          <p>
             If we disable your account for a violation of these Terms or the Privacy Policy you shall not create another
             account without our permission.
           </p>
         </div>
 
         <div id="partners-third-party" class="py-8">
-          <h1 class="text-xl font-bold text-white pb-4">
+          <h1 class="text-xl font-bold text-white pb-2">
             3. Partners and third-parties
           </h1>
-          <p class="">
+          <p>
             While using the Services you may use access or otherwise interact with our partners and other third-parties
             including their websites apps products services content and other properties. In such cases the terms
             governing such relationship will be between you and such partner and/or third-party.
@@ -118,31 +118,31 @@
         </div>
 
         <div id="ownership" class="py-8">
-          <h1 class="text-xl font-bold text-white pb-4">
+          <h1 class="text-xl font-bold text-white pb-2">
             4. Ownership and Rights
           </h1>
-          <p class=" pb-2">
+          <p class=" pb-4">
             We own all rights trademarks trade secrets patents and any other intellectual property that may be
             associated with or created by us as part of our Services that were not developed by a third-party. You may
             not
             use such intellectual property for any reason without our explicit consent.
           </p>
-          <p class=" pb-2">
+          <p class=" pb-4">
             We do not own any of the information that you disseminate while using the Services. You are responsible for
             any possible infringements of intellectual property that may be caused by dissemination of such information.
           </p>
-          <p class=" pb-2">
+          <p class=" pb-4">
             You agree to grant us a worldwide non-exclusive royalty-free sublicensable and transferable license to
             use reproduce distribute create derivative works of display and perform the information that you upload
             submit store send or receive on or through our Services. This license to us is limited only to our enabling
             you to use our Services according to these Terms and you grant us no other license.
           </p>
-          <p class=" pb-2">
+          <p class=" pb-4">
             We grant you a limited revocable non-exclusive non-sublicensable and non-transferable license to use our
             Services as long as you are in compliance with these Terms. This license is limited only to enabling you to
             use our Services according to these Terms and you are granted no other license by us.
           </p>
-          <p class="">
+          <p>
             We reserve the right to address claims of intellectual property infringement by you or a third-party when
             using our Services by such reasonable means to protect the rights of the intellectual property owner. If you
             would like to report intellectual property infringement please contact us at <NuxtLink
@@ -151,7 +151,7 @@
         </div>
 
         <div id="misc" class="py-8">
-          <h1 class="text-xl font-bold text-white pb-4">
+          <h1 class="text-xl font-bold text-white pb-2">
             5. Miscellaneous
           </h1>
           <p class="pb-4">
@@ -213,7 +213,7 @@
             BY AGREEING TO THESE TERMS BOTH YOU AND SATURDAYS.IO INC. WAIVE THE RIGHT TO TRIAL BY JURY OR TO PARTICIPATE
             IN A CLASS ACTION.
           </p>
-          <p class="">
+          <p>
             Entire Agreement Severability Waiver: These Terms contain the entire understanding of the parties with
             respect to the subject matter hereof and supersede all prior agreements and understandings oral or written
             with respect to such matters which the parties acknowledge if applicable have been merged into these Terms.
