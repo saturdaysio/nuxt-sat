@@ -8,10 +8,7 @@
 
 /* Primary */
 
-
-/* Secondary */
-
-  .button__secondary {
+  .button.primary {
     text-align: center;
     color: $white;
     background: none;
@@ -24,8 +21,28 @@
     transition: all .4s ease;
   }
 
-  .button__secondary:hover,
-  .button__secondary:focus {
+  .button.primary:hover,
+  .button.primary:focus {
+    color: $red;
+  }
+
+/* Secondary */
+
+  .button.secondary {
+    text-align: center;
+    color: $white;
+    background: none;
+    border-width: 0.20rem;
+    border-style: solid;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    transition: all .4s ease;
+  }
+
+  .button.secondary:hover,
+  .button.secondary:focus {
     color: $red;
   }
 
