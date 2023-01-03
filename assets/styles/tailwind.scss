@@ -18,7 +18,13 @@
     color: $gray;
   }
 
+  .text-category {
+    @apply text-xl font-bold text-white pb-2;
+  }
 
+  .text-purple-pink {
+    @apply text-3xl lg:text-5xl text-center font-bold text-grad-01;
+  }
 
 /* Hyperlinks */
 /* Break off into its own file - 01/01/2023 */
