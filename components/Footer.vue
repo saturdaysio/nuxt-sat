@@ -2,7 +2,7 @@
     <footer class="w-full mx-auto px-4 py-8 bg-black-900">
         <div class="lg:container mx-auto">
             <div class="flex flex-col-reverse items-center md:flex-row justify-between">
-                <div class="copyright flex items-center px-4">
+                <div id="copyright" class="flex items-center px-4">
                     <p class="text-white">
                         &#169; Saturdays.io Inc. 2016 - 2023
                     </p>

@@ -7,7 +7,7 @@
                 </h1>
             </div>
             <div class="flex flex-wrap">
-                <div class="group flex flex-col py-8 px-6" v-for="item in skillStore.skillJson.service" :key="item.id">
+                <div class="group py-8 px-6" v-for="item in skillStore.skillJson.service" :key="item.id">
                     <h1 class="text-2xl lg:text-3xl font-bold text-grad-01">{{ item.title }}</h1>
                     <ul>
                         <li class="text-xl text-white" v-for="skill in item.list" :key="skill.li">{{ skill.li }}</li>
@@ -32,6 +32,7 @@ export default {
 <style lang="scss" scoped>
 .group {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     width: 25%;
     flex-shrink: 0;
