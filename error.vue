@@ -32,7 +32,7 @@
     const handleClearError = () => clearError({ redirect: '/' })
 
     useHead({
-        title: 'Saturdays.io - ERROR',
+        title: 'Saturdays.io - Error',
         meta: [
             { name: 'description', content: 'Error page' }
         ]
