@@ -62,7 +62,7 @@
           </p>
 
           <div class="prose max-w-none">
-            <ul class="list-decimal">
+            <ol class="list-decimal">
               <li>Violate any law regulation or other right that may be subject to any criminal or civil penalty.</li>
               <li>Violate infringe or otherwise use the intellectual property rights of a third party without permission.</li>
               <li>Violate or infringe on the publicity rights privacy rights or other rights of third parties.</li>
@@ -76,7 +76,7 @@
                 personnel or misrepresent your affiliation with a person or company.</li>
               <li>Create and register more than one profile associated with the Services including registering a profile on behalf of an individual other than yourself.</li>
               <li>Encourage or otherwise assist any other party to do any of the acts previously described in this section.</li>
-            </ul>
+            </ol>
           </div>
 
         </div>
