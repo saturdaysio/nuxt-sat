@@ -2,7 +2,7 @@
     <div class="">
 
         <Head>
-            <Title>Saturdays.io - Page not found</Title>
+            <Title>Saturdays.io - Error</Title>
             <Meta name="description" content="Saturdays.io - 404 page not found" />
         </Head>
 

@@ -2,7 +2,7 @@
     <div class="flex flex-col h-screen justify-between">
 
         <Head>
-            <Title>Saturdays.io - Page not found</Title>
+            <Title>Saturdays.io - 404</Title>
             <Meta name="description" content="Saturdays.io - 404 page not found" />
         </Head>
 
