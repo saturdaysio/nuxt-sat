@@ -5,8 +5,7 @@
 
         <!-- Header logo -->
         <div id="logo" class=" relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-          <NuxtLink to="/" active-class="active"
-            class="px-4 text-md font-black inline-block whitespace-nowrap">
+          <NuxtLink to="/" active-class="active" class="px-4 text-md font-black inline-block whitespace-nowrap">
             <span class="text-white">Saturdays</span>
           </NuxtLink>
         </div>
@@ -52,8 +51,7 @@
 
             <div class="flex items-center justify-between">
               <div id="logo" @click="isOpen = false">
-                <NuxtLink to="/" active-class="active"
-                  class="px-4 text-md font-black inline-block whitespace-nowrap">
+                <NuxtLink to="/" active-class="active" class="px-4 text-md font-black inline-block whitespace-nowrap">
                   <span class="text-white">Saturdays</span>
                 </NuxtLink>
               </div>
@@ -72,22 +70,26 @@
 
             <ul class="divide-y flex flex-col justify-center font-sans ml-4">
               <li class="nav-item">
-                <NuxtLink to="/" @click="isOpen = false" active-class="active" class="my-4 inline-block text-2xl text-bold uppercase">
+                <NuxtLink to="/" @click="isOpen = false" active-class="active"
+                  class="my-4 inline-block text-2xl text-bold uppercase">
                   <strong>Work</strong>
                 </NuxtLink>
               </li>
               <li class="nav-item">
-                <NuxtLink to="/about" @click="isOpen = false" active-class="active" class="my-4 inline-block text-2xl text-bold uppercase">
+                <NuxtLink to="/about" @click="isOpen = false" active-class="active"
+                  class="my-4 inline-block text-2xl text-bold uppercase">
                   <strong>About</strong>
                 </NuxtLink>
               </li>
               <li class="nav-item">
-                <NuxtLink to="/terms-of-service" @click="isOpen = false" active-class="active" class="my-4 inline-block text-2xl text-bold">
+                <NuxtLink to="/terms-of-service" @click="isOpen = false" active-class="active"
+                  class="my-4 inline-block text-2xl text-bold">
                   Terms of Service
                 </NuxtLink>
               </li>
               <li class="nav-item">
-                <NuxtLink to="/privacy-policy" @click="isOpen = false" active-class="active" class="my-4 inline-block text-2xl text-bold">
+                <NuxtLink to="/privacy-policy" @click="isOpen = false" active-class="active"
+                  class="my-4 inline-block text-2xl text-bold">
                   Privacy Policy
                 </NuxtLink>
               </li>
@@ -96,22 +98,27 @@
             <div id="social" class="ml-4 pb-4">
               <p class="text-md font-bold text-white">Connect</p>
               <div class="social flex space-x-10 mt-4">
-                <NuxtLink to="https://linkedin.com/" rel="noreferrer" target="_blank">
+                <NuxtLink to="https://www.linkedin.com/company/saturdaysdotio/" rel="noreferrer" target="_blank">
                   <svg focusable="false" aria-label="LinkedIn url" data-prefix="fab" data-icon="linkedin"
                     class="h-12 w-12 fill-current text-blue-900" role="img" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512">
-                    <path fill="currentColor"
-                      d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
-                    </path>
+                    viewBox="0 0 24 24">
+                    <g clip-path="url(#clip0)">
+                      <path
+                        d="M21.7777 0.00109863H2.2223C0.99462 0.00109863 0 0.995628 0 2.2232V21.7779C0 23.0044 0.995714 24 2.2223 24H21.7777C23.0043 24 24 23.0044 24 21.7779V2.2232C24.0011 0.995628 23.0054 0.00109863 21.7777 0.00109863ZM8.31148 17.7079H5.60117V9.30635H8.31148V17.7079ZM8.13313 7.52079C7.83113 7.80635 7.43175 7.95077 6.94046 7.95077H6.92842C6.45464 7.95077 6.07167 7.80744 5.77514 7.52079C5.47862 7.23523 5.32871 6.88184 5.32871 6.45952C5.32871 6.02626 5.48081 5.67287 5.78061 5.3895C6.0848 5.10941 6.4809 4.96937 6.9711 4.96937C7.45363 4.96937 7.83879 5.10941 8.13313 5.3895C8.42309 5.67287 8.57299 6.02736 8.58175 6.45952C8.58175 6.88184 8.43184 7.23523 8.13313 7.52079ZM18.3397 17.7079H15.6294V13.1018C15.6294 12.4595 15.4959 11.9814 15.2246 11.6707C14.9521 11.3589 14.5976 11.2035 14.1534 11.2035C13.7212 11.2035 13.3623 11.3446 13.0789 11.6247C12.79 11.907 12.6467 12.3074 12.6467 12.8304V17.709H9.93635V11.2035L9.89478 9.30635H12.5569L12.6478 10.4661C13.2824 9.51204 14.0965 9.03501 15.0878 9.03501C16.0605 9.03501 16.8473 9.3709 17.4425 10.0383C18.041 10.7057 18.3387 11.6368 18.3387 12.8304V17.7079H18.3397Z"
+                        fill="currentColor" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0">
+                        <rect width="24" height="24" fill="white" />
+                      </clipPath>
+                    </defs>
                   </svg>
                 </NuxtLink>
                 <NuxtLink to="mailto:hello@saturdays.io" rel="noreferrer" target="_blank">
-                  <svg focusable="false" aria-label="email" data-prefix="fab" data-icon="email"
-                    class="h-12 w-12 fill-current text-blue-900" role="img" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512">
+                  <svg focusable="false" aria-label="email" data-prefix="fab" data-icon="email" viewBox="0 0 22 20"
+                    class="h-12 w-12 fill-current text-blue-900" role="img" xmlns="http://www.w3.org/2000/svg">
                     <path fill="currentColor"
-                      d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
-                    </path>
+                      d="M10.519,0L0,8.416v12.449h21.038V8.416L10.519,0z M10.518,15.92l-7.711-5.438H18.23L10.518,15.92z" />
                   </svg>
                 </NuxtLink>
 
@@ -127,39 +134,39 @@
 
 
 <script>
-  export default {
-    data() {
-      return {
-        isOpen: false
-      };
-    },
-    methods: {
-      drawer() {
-        this.isOpen = !this.isOpen;
-      }
-    },
-    watch: {
-      isOpen: {
-        immediate: true,
-        handler(isOpen) {
-          if (process.client) {
-            if (isOpen) document.body.style.setProperty("overflow", "hidden");
-            else document.body.style.removeProperty("overflow");
-          }
+export default {
+  data() {
+    return {
+      isOpen: false
+    };
+  },
+  methods: {
+    drawer() {
+      this.isOpen = !this.isOpen;
+    }
+  },
+  watch: {
+    isOpen: {
+      immediate: true,
+      handler(isOpen) {
+        if (process.client) {
+          if (isOpen) document.body.style.setProperty("overflow", "hidden");
+          else document.body.style.removeProperty("overflow");
         }
       }
-    },
-    mounted() {
-      document.addEventListener("keydown", e => {
-        if (e.keyCode == 27 && this.isOpen) this.isOpen = false;
-      });
     }
-  };
+  },
+  mounted() {
+    document.addEventListener("keydown", e => {
+      if (e.keyCode == 27 && this.isOpen) this.isOpen = false;
+    });
+  }
+};
 </script>
 
 
 <style lang="scss" scoped>
-  nav {
-    height: 4rem;
-  }
+nav {
+  height: 4rem;
+}
 </style>
