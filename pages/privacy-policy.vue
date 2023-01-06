@@ -114,7 +114,7 @@
               Services.</li>
             <li>At any time that you consent to such sharing.</li>
           </ul>
-          </div>>
+          </div>
         </div>
 
         <div id="control-info" class="py-8">
