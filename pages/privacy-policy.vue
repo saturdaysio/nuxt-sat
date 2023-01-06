@@ -8,7 +8,7 @@
 
     <NavBar />
 
-    <section id="legal" class="mx-auto px-4 py-16 bg-black-800">
+    <section id="legal" class="mx-auto px-4 py-16 bg-black-900">
       <div class="container lg:max-w-4xl mx-auto">
         <div class="mt-24 pb-8">
           <h1 class="text-4xl lg:text-6xl font-bold text-grad-01">Privacy Policy</h1>
