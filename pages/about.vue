@@ -40,7 +40,8 @@
     useHead({
         title: 'Saturdays.io - About',
         meta: [
-            { name: 'description', content: 'About Saturdays.io' }
+            { name: 'description', content: 'About Saturdays.io' },
+            { name: 'keywords', content: 'About, Company, Clients, Saturdays.io, Digital, Studio, Creative, Digital Studio, Creative Studio,' },
         ]
     })
 
