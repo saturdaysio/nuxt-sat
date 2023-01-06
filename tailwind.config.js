@@ -33,10 +33,6 @@ module.exports = {
       '2xl': "1536px", // round up to 1600px
     },
 
-    backgroundColor: {
-      DEFAULT: '#3c78f4',
-    },
-
     colors: {
       blue: {
         '100': "#18e4be",
