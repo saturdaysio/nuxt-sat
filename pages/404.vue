@@ -1,5 +1,5 @@
 <template>
-    <div class="">
+    <div class="flex flex-col h-screen justify-between">
 
         <Head>
             <Title>Saturdays.io - Page not found</Title>
