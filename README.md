@@ -1,4 +1,6 @@
-### Nuxt3 boilerplate
+Copyright (c) 2016 - 2023 Saturdays.io Inc. All rights reserved.
+
+### 2023 microsite
 
 ### Built with
 
@@ -32,7 +34,3 @@ Build the application for production.
   ```sh
   npm run build
   ```
-
-
-
-### License
