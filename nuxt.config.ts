@@ -11,11 +11,14 @@ export default defineNuxtConfig({
             meta: [
                 // <meta name="description" content="site description">
                 { name: 'description', content: 'Saturdays.io Canadian digital studio' },
-                { name: 'keywords', content: 'Saturdays.io, Digital, Studio, Creative, Digital Studio, Creative Studio, UX, UI, Interaction, Product, Design, Development' }
+                { name: 'keywords', content: 'Saturdays.io, Digital, Studio, Creative, Digital Studio, Creative Studio, UX, UI, Interaction, Product, Design, Development' },
             ],
             link: [
-                { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+                { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
                 // Add Google fonts resource
+                { rel: 'preconnect', href: 'https://fonts.googleapis.com'},
+                { rel: 'preconnect', href: 'https://fonts.gstatic.com'},
+                { href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;900&display=swap'}
               ]
         },
     },
@@ -41,13 +44,6 @@ export default defineNuxtConfig({
 
     // Auto import components: https://go.nuxtjs.dev/config-components
     components: true,
-
-    nitro: {
-        prerender: {
-          routes: ['/404.html']
-        }
-     },
-
 
      // Vite config
     vite: {
