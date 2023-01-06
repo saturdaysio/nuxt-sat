@@ -13,7 +13,7 @@
         <section class="w-full mx-auto px-4 py-16 bg-black-900">
             <div class="container lg:max-w-6xl mx-auto my-8">
                 <h1 class="text-purple-pink">
-                        We're a Data-driven digital studio that focuses on the Design, Development and Strategy of digital products.
+                    We're a Data-driven digital studio that focuses on the Design, Development and Strategy of digital products.
                 </h1>
             </div>
         </section>
