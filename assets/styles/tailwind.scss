@@ -6,10 +6,12 @@
 
 // HTML, body, global elements
 
-
   body {
     background: #000;
   }
+
+
+
 
 // Tailwind Typography Overrides
 
@@ -24,6 +26,9 @@
   .text-purple-pink {
     @apply text-3xl lg:text-5xl text-center font-bold text-grad-01;
   }
+
+
+
 
 /* Hyperlinks */
 /* Break off into its own file - 01/01/2023 */
