@@ -6,8 +6,8 @@
         <!-- Header logo -->
         <div id="logo" class=" relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
           <NuxtLink to="/" active-class="active"
-            class="px-4 text-md font-bold inline-block whitespace-nowrap">
-            <span class="text-white">Saturdays.io</span>
+            class="px-4 text-md font-black inline-block whitespace-nowrap">
+            <span class="text-white">Saturdays</span>
           </NuxtLink>
         </div>
 
@@ -53,8 +53,8 @@
             <div class="flex items-center justify-between">
               <div id="logo" @click="isOpen = false">
                 <NuxtLink to="/" active-class="active"
-                  class="px-4 text-md font-bold inline-block whitespace-nowrap">
-                  <span class="text-white">Saturdays.io</span>
+                  class="px-4 text-md font-black inline-block whitespace-nowrap">
+                  <span class="text-white">Saturdays</span>
                 </NuxtLink>
               </div>
 
