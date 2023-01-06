@@ -1,6 +1,6 @@
 <template>
   <nav class="relative">
-    <div class="fixed w-full p-4 bg-black-900">
+    <div class="fixed w-full z-20 p-4 bg-black-900">
       <div class="lg:container flex items-center justify-between mx-auto">
 
         <!-- Header logo -->
@@ -46,7 +46,7 @@
         </transition>
 
         <!-- Drawer Menu -->
-        <aside class="p-4 transform top-0 left-0 w-full h-full fixed overflow-auto bg-black-500 z-50"
+        <aside class="p-4 transform top-0 left-0 w-full h-full fixed overflow-auto bg-black-900 z-50"
           :class="isOpen ? 'translate-x-0' : '-translate-x-full'">
           <div class="flex flex-col h-full justify-between">
 
@@ -82,22 +82,22 @@
                 </NuxtLink>
               </li>
               <li class="nav-item">
-                <NuxtLink to="/terms-of-service" @click="isOpen = false" active-class="active" class="my-4 inline-block text-2xl text-bold uppercase">
+                <NuxtLink to="/terms-of-service" @click="isOpen = false" active-class="active" class="my-4 inline-block text-2xl text-bold">
                   Terms of Service
                 </NuxtLink>
               </li>
               <li class="nav-item">
-                <NuxtLink to="/privacy-policy" @click="isOpen = false" active-class="active" class="my-4 inline-block text-2xl text-bold uppercase">
+                <NuxtLink to="/privacy-policy" @click="isOpen = false" active-class="active" class="my-4 inline-block text-2xl text-bold">
                   Privacy Policy
                 </NuxtLink>
               </li>
             </ul>
 
             <div id="social" class="ml-4 pb-4">
-              <p class="text-md uppercase font-bold text-white">Social media</p>
+              <p class="text-md font-bold text-white">Connect</p>
               <div class="social flex space-x-10 mt-4">
-                <NuxtLink to="https://twitter.com/" rel="noreferrer" target="_blank">
-                  <svg focusable="false" aria-label="Twitter link" data-prefix="fab" data-icon="twitter"
+                <NuxtLink to="https://linkedin.com/" rel="noreferrer" target="_blank">
+                  <svg focusable="false" aria-label="LinkedIn url" data-prefix="fab" data-icon="linkedin"
                     class="h-12 w-12 fill-current text-blue-900" role="img" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512">
                     <path fill="currentColor"
@@ -105,8 +105,8 @@
                     </path>
                   </svg>
                 </NuxtLink>
-                <NuxtLink to="https://instagram.com/" rel="noreferrer" target="_blank">
-                  <svg focusable="false" aria-label="Instagram link" data-prefix="fab" data-icon="instagram"
+                <NuxtLink to="mailto:hello@saturdays.io" rel="noreferrer" target="_blank">
+                  <svg focusable="false" aria-label="email" data-prefix="fab" data-icon="email"
                     class="h-12 w-12 fill-current text-blue-900" role="img" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512">
                     <path fill="currentColor"
@@ -114,15 +114,7 @@
                     </path>
                   </svg>
                 </NuxtLink>
-                <NuxtLink to="https://youtube.com/" rel="noreferrer" target="_blank">
-                  <svg focusable="false" aria-label="Youtube link" data-prefix="fab" data-icon="youtube"
-                    class="h-12 w-12 fill-current text-blue-900" role="img" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 576 512">
-                    <path fill="currentColor"
-                      d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
-                    </path>
-                  </svg>
-                </NuxtLink>
+
               </div>
             </div>
           </div>
