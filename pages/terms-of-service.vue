@@ -1,11 +1,6 @@
 <template>
   <div>
 
-    <Head>
-      <Title>Saturdays.io - Terms of Service</Title>
-      <Meta name="description" content="Saturdays.io Terms of Service" />
-    </Head>
-
     <NavBar />
 
     <section id="legal" class="mx-auto px-4 py-16 bg-black-900">
@@ -233,7 +228,14 @@
 </template>
 
 
-<script lang="ts">
+<script lang="ts" setup>
+
+  useHead({
+        title: 'Saturdays.io - Terms of Service',
+        meta: [
+            { name: 'description', content: 'Saturdays.io Terms of Service' }
+        ]
+  })
 </script>
 
 

@@ -1,11 +1,6 @@
 <template>
     <div>
 
-        <Head>
-            <Title>About Saturdays.io</Title>
-            <Meta name="description" content="Saturdays.io - Toronto based digital studio" />
-        </Head>
-
         <NavBar />
 
         <Hero text="We bridge the gap between design and technology" />
@@ -40,7 +35,15 @@
 </template>
 
 
-<script lang="ts">
+<script lang="ts" setup>
+
+    useHead({
+        title: 'Saturdays.io - About',
+        meta: [
+            { name: 'description', content: 'About Saturdays.io' }
+        ]
+    })
+
 </script>
 
 

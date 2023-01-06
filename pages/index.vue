@@ -1,11 +1,6 @@
 <template>
     <div>
 
-        <Head>
-            <Title>Saturdays.io - 2023</Title>
-            <Meta name="description" content="Saturdays.io - Toronto based digital studio" />
-        </Head>
-
         <NavBar />
 
         <Hero text="Saturdays is a Canadian digital studio based in Toronto" />
@@ -47,7 +42,15 @@
 </template>
 
 
-<script lang="ts">
+<script lang="ts" setup>
+
+    useHead({
+        title: 'Saturdays.io - Digital studio',
+        meta: [
+            { name: 'description', content: 'Saturdays.io, Toronto based digital studio' }
+        ]
+    })
+
 </script>
 
 

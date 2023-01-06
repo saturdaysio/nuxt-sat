@@ -1,11 +1,6 @@
 <template>
   <div>
 
-    <Head>
-      <Title>Saturdays.io - Privacy Policy</Title>
-      <Meta name="description" content="Saturdays.io Privacy policy" />
-    </Head>
-
     <NavBar />
 
     <section id="legal" class="mx-auto px-4 py-16 bg-black-900">
@@ -216,7 +211,15 @@
 </template>
 
 
-<script lang="ts">
+<script lang="ts" setup>
+
+  useHead({
+        title: 'Saturdays.io - Privacy Policy',
+        meta: [
+            { name: 'description', content: 'Saturdays.io Privacy Policy' }
+        ]
+  })
+
 </script>
 
 
