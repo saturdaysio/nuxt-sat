@@ -38,6 +38,7 @@ export default defineNuxtConfig({
         '@nuxtjs/tailwindcss',
         '@pinia/nuxt',
         'nuxt-purgecss',
+        '@nuxtjs/supabase',
         '@nuxtjs/strapi',
     ],
 
