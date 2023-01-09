@@ -20,17 +20,20 @@
   .button.primary {
     text-align: center;
     color: $white;
-    background: none;
-    border-width: 0.20rem;
+    background-color: $purple;
+    border: 0;
+    border-width: 0;
     border-style: solid;
     background-origin: border-box;
     background-clip: content-box, border-box;
+    height: 3rem;
     -webkit-transition: all .4s ease;
     -moz-transition: all .4s ease;
     transition: all .4s ease;
 
     &:hover,&:focus {
       color: $red;
+      opacity: 0.75;
     }
   }
 
