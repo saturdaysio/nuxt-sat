@@ -3,8 +3,8 @@
 
         <NavBar />
 
-        <section id="default" class="mx-auto px-4">
-            <div class=" sm:w-96">
+        <section id="default" class="container w-full sm:w-96 mx-auto px-4">
+            <div class="">
                 <form class="rounded px-6 py-8 bg-black-500">
                     <h1 class="text-3xl lg:text-4xl text-center font-bold text-grad-01 pb-8">
                         Sign up
