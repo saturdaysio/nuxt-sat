@@ -69,32 +69,19 @@
 
 
     const signUp = async () => {
-        const { user, error } = await client.auth.signUp({
-            email: email.value,
-            password: password.value,
-        })
 
         console.log('user', user)
-        console.log('error', error)
     }
 
     const signIn = async () => {
-        const { user, error } = await client.auth.signIn({
-            email: email.value,
-            password: password.value,
-        })
 
         console.log('user', user)
-        console.log('error', error)
     }
 
     const user = useSupabaseUser()
 
     onMounted(() => {
         watchEffect(() => {
-            if (user.value) {
-                navigateTo('/')
-            }
         })
     })
 </script>
