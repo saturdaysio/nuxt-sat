@@ -6,7 +6,10 @@
         <section id="default" class="container max-w-md mx-auto px-4">
 
             <div class="">
-                <form class="rounded px-6 py-8 bg-black-500">
+                <form
+                    @submit.prevent="() => (isSignUp ? signUp() : signIn ())"
+                    class="rounded px-6 py-8 bg-black-500">
+
                     <h1 class="text-3xl lg:text-4xl text-center font-bold text-grad-01 pb-8">
                         Sign in
                     </h1>
@@ -15,7 +18,7 @@
                         <label class="block text-white text-sm font-bold mb-2" for="username">
                             Username
                         </label>
-                        <input id="username" type="text" placeholder="Username" 
+                        <input id="username" type="text" placeholder="Username" v-model="email"
                             class=" appearance-none border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none">
                     </div>
 
@@ -23,7 +26,8 @@
                         <label class="block text-white text-sm font-bold mb-2" for="password">
                             Password
                         </label>
-                        <input id="password" type="current-password" placeholder="********" class=" appearance-none border rounded w-full py-2 px-4 text-gray-700 mb-2 leading-tight focus:outline-none">
+                        <input id="password" type="current-password" placeholder="********" v-model="password" 
+                            class=" appearance-none border rounded w-full py-2 px-4 text-gray-700 mb-2 leading-tight focus:outline-none">
                     </div>
 
                     <div class="flex flex-col items-center justify-between">
@@ -35,6 +39,7 @@
                             Forgot Password?
                         </a>
                     </div>
+
                 </form>
             </div>
 
@@ -48,14 +53,50 @@
 
 <script lang="ts" setup>
 
-useHead({
-    title: 'Saturdays.io - Sign in',
-    meta: [
-        { name: 'description', content: 'Saturdays.io sign in page' },
-        { name: 'keywords', content: 'Saturdays.io, Digital, Studio, Creative, Digital Studio, Creative Studio,' },
-    ]
-})
+    const client = useSupabaseClient()
+    const email = ref('')
+    const password = ref('')
+    const isSignUp = ref(false)
 
+
+    useHead({
+        title: 'Saturdays.io - Sign in',
+        meta: [
+            { name: 'description', content: 'Saturdays.io sign in page' },
+            { name: 'keywords', content: 'Saturdays.io, Digital, Studio, Creative, Digital Studio, Creative Studio,' },
+        ]
+    })
+
+
+    const signUp = async () => {
+        const { user, error } = await client.auth.signUp({
+            email: email.value,
+            password: password.value,
+        })
+
+        console.log('user', user)
+        console.log('error', error)
+    }
+
+    const signIn = async () => {
+        const { user, error } = await client.auth.signIn({
+            email: email.value,
+            password: password.value,
+        })
+
+        console.log('user', user)
+        console.log('error', error)
+    }
+
+    const user = useSupabaseUser()
+
+    onMounted(() => {
+        watchEffect(() => {
+            if (user.value) {
+                navigateTo('/')
+            }
+        })
+    })
 </script>
 
 
