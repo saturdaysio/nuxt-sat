@@ -4,6 +4,7 @@
         <NavBar />
 
         <section id="default" class="container w-full sm:w-96 mx-auto px-4">
+
             <div class="">
                 <form class="rounded px-6 py-8 bg-black-500">
                     <h1 class="text-3xl lg:text-4xl text-center font-bold text-grad-01 pb-8">
@@ -22,11 +23,7 @@
                         <label class="block text-white text-sm font-bold mb-2" for="password">
                             Password
                         </label>
-                        <input id="password" type="current-password" placeholder="********" 
-                            class=" appearance-none border rounded w-full py-2 px-4 text-gray-700 mb-2 leading-tight focus:outline-none">
-                        <div id="error">
-                            <p class="text-red-500 text-xs italic">Password is required.</p>
-                        </div>
+                        <input id="password" type="current-password" placeholder="********" class=" appearance-none border rounded w-full py-2 px-4 text-gray-700 mb-2 leading-tight focus:outline-none">
                     </div>
 
                     <div class="flex flex-col items-center justify-between">
@@ -39,8 +36,8 @@
                         </a>
                     </div>
                 </form>
-
             </div>
+
         </section>
 
         <Footer />
