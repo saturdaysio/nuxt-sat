@@ -3,7 +3,7 @@
 
         <NavBar />
 
-        <section id="default" class="container w-full sm:w-96 mx-auto px-4">
+        <section id="default" class="container max-w-md mx-auto px-4">
 
             <div class="">
                 <form class="rounded px-6 py-8 bg-black-500">
