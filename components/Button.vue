@@ -1,7 +1,7 @@
 <template>
     <NuxtLink>
         <button>
-            <p class="text-xl"><strong>{{ cta }}</strong></p>
+            <p class="text-xl leading-8"><strong>{{ cta }}</strong></p>
         </button>
     </NuxtLink>
 </template>
