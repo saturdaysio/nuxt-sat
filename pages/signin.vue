@@ -63,8 +63,8 @@
 
 
     const client = useSupabaseClient()
-    const email = ref('hello@saturdays.io')
-    const password = ref('123')
+    const email = ref('')
+    const password = ref('')
     const isSignUp = ref(false)
 
 
