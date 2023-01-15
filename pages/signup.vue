@@ -31,7 +31,7 @@
                     </div>
 
                     <div class="flex flex-col items-center justify-between">
-                        <button type="submit" class="button primary w-full rounded font-bold mb-4">
+                        <button type="submit" @click="signUp" class="button primary w-full rounded font-bold mb-4">
                             Submit
                         </button>
 
@@ -102,5 +102,4 @@
 
 
 <style lang="scss">
-
 </style>

@@ -31,7 +31,7 @@
                     </div>
 
                     <div class="flex flex-col items-center justify-between">
-                        <button type="submit" class="button primary w-full rounded font-bold mb-4">
+                        <button type="submit" @click="signIn" class="button primary w-full rounded font-bold mb-4">
                             Submit
                         </button>
 
@@ -54,7 +54,7 @@
 <script setup lang="ts">
 
     useHead({
-        title: 'Saturdays.io - Signin',
+        title: 'Saturdays.io - Sign In',
         meta: [
             { name: 'description', content: 'Saturdays.io sign in page' },
             { name: 'keywords', content: 'Saturdays.io, Digital, Studio, Creative, Digital Studio, Creative Studio,' },
@@ -102,5 +102,4 @@
 
 
 <style lang="scss">
-
 </style>
