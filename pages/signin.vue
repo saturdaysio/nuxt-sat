@@ -14,30 +14,35 @@
                         Sign in
                     </h1>
 
-                    <div id="username" class="mb-8">
-                        <label class="block text-white text-sm font-bold mb-2" for="username">
-                            Username
+                    <div id="email" class="mb-8">
+                        <label class="block text-white text-sm font-bold mb-2" for="email">
+                            Email
                         </label>
-                        <input id="username" type="text" placeholder="Username" v-model="email"
-                            class=" appearance-none border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none">
+                        <input id="email" type="email" placeholder="Email address" v-model="email"
+                            class="appearance-none border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none">
                     </div>
 
-                    <div id="password" class="mb-8">
+                    <div id="password" class="">
                         <label class="block text-white text-sm font-bold mb-2" for="password">
                             Password
                         </label>
                         <input id="password" type="current-password" placeholder="********" v-model="password" 
                             class=" appearance-none border rounded w-full py-2 px-4 text-gray-700 mb-2 leading-tight focus:outline-none">
                     </div>
+                    <div id="forgot" class="mb-8">
+                        <NuxtLink class="inline-block align-baseline text-sm text-blue hover:text-purple-800" href="/">
+                            Forgot Password?
+                        </NuxtLink>
+                    </div>
 
                     <div class="flex flex-col items-center justify-between">
-                        <button class="button primary w-full rounded font-bold mb-4" type="button">
-                            Sign In
+                        <button type="submit" class="button primary w-full rounded font-bold mb-4">
+                            Submit
                         </button>
 
-                        <a class="inline-block align-baseline text-sm text-blue hover:text-purple-800" href="/">
-                            Forgot Password?
-                        </a>
+                        <NuxtLink class="inline-block align-baseline text-sm text-blue hover:text-purple-800" href="/signup">
+                            Don't have an account? Sign up
+                        </NuxtLink>
                     </div>
 
                 </form>
@@ -51,16 +56,10 @@
 </template>
 
 
-<script lang="ts" setup>
-
-    const client = useSupabaseClient()
-    const email = ref('')
-    const password = ref('')
-    const isSignUp = ref(false)
-
+<script setup lang="ts">
 
     useHead({
-        title: 'Saturdays.io - Sign in',
+        title: 'Saturdays.io - Signin',
         meta: [
             { name: 'description', content: 'Saturdays.io sign in page' },
             { name: 'keywords', content: 'Saturdays.io, Digital, Studio, Creative, Digital Studio, Creative Studio,' },
@@ -68,20 +67,40 @@
     })
 
 
+    const client = useSupabaseClient()
+    const email = ref('hello@saturdays.io')
+    const password = ref('123')
+    const isSignUp = ref(false)
+
+
+    // Sign up function
     const signUp = async () => {
+        const {data, error} = await client.auth.signUp({
+            email: email.value,
+            password: password.value,
+        })
 
         console.log('user', user)
+        console.log('error', error)
     }
 
+    // Sign in function
     const signIn = async () => {
-
-        console.log('user', user)
+        const {data, error} = await client.auth.signInWithPassword({
+            email: email.value,
+            password: password.value,
+        })
     }
 
     const user = useSupabaseUser()
 
+    // Watch user state
     onMounted(() => {
         watchEffect(() => {
+            if (user.value) {
+                navigateTo('/secret')
+            }
+
         })
     })
 </script>
