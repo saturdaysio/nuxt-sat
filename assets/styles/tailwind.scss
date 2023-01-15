@@ -7,7 +7,7 @@
 // HTML, body, global elements
 
   body {
-    background: #000;
+    background: $black;
   }
 
 
@@ -45,6 +45,9 @@
       color: $red;
       text-decoration: underline;
       opacity: 0.75;
+      -webkit-transition: all .4s ease;
+      -moz-transition: all .4s ease;
+      transition: all .4s ease;
     }
     
     .active {
