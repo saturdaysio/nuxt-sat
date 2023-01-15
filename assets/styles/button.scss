@@ -8,55 +8,60 @@
 
 /* Default */
 
-  button {
-    p {
-      color: inherit;
-    }
+button {
+  p {
+    color: inherit;
   }
+}
 
 
 /* Primary */
 
-  .button.primary {
-    text-align: center;
-    color: $white;
-    background-color: $purple;
-    border: 0;
-    border-width: 0;
-    border-style: solid;
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    height: 3rem;
-    -webkit-transition: all .4s ease;
-    -moz-transition: all .4s ease;
-    transition: all .4s ease;
+.button.primary {
+  text-align: center;
+  color: $white;
+  background-color: $blue;
+  border: 0;
+  border-radius: 4px;
+  border-width: 0;
+  border-style: solid;
+  padding: 0.8rem 2rem;
+  height: 4rem;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  transition: all .4s ease;
 
-    &:hover,&:focus {
-      opacity: 0.75;
-    }
+  &:hover,&:focus {
+    background: $red;
+    opacity: 0.75;
   }
+}
 
 
 
 
 /* Secondary */
 
-  .button.secondary {
-    text-align: center;
-    color: $white;
-    background: none;
-    border-width: 0.20rem;
-    border-style: solid;
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    -webkit-transition: all .4s ease;
-    -moz-transition: all .4s ease;
-    transition: all .4s ease;
+.button.secondary {
+  text-align: center;
+  color: $blue;
+  background: none;
+  border: 0;
+  border-color: $blue;
+  border-radius: 4px;
+  border-width: 4px;
+  border-style: solid;
+  padding: 0.8rem 2rem;
+  height: 4rem;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  transition: all .4s ease;
 
-    &:hover,&:focus {
-      color: $red;
-    }
+  &:hover,&:focus {
+    color: $red;
+    border-color: $red;
   }
+}
 
 
 
@@ -66,17 +71,18 @@
 
 /* CTA */
 
-  .button.cta {
-    color: $white;
-    background: none;
-    border-image: linear-gradient(120deg, rgba(248, 12, 128), rgba(60, 120, 244)) 1;
-    border-width: 4px;
-    border-style: solid;
-    padding: 0.8rem 2rem;
-    height: 4rem;
+.button.cta {
+  color: $white;
+  background: none;
+  border-image: linear-gradient(120deg, rgba(248, 12, 128), rgba(60, 120, 244)) 1;
+  border-width: 4px;
+  border-style: solid;
+  padding: 0.8rem 2rem;
+  height: 4rem;
 
-    &:hover {
-        background: none;
-        opacity: 0.75;
-    }
+  &:hover {
+      color: $red;
+      background: none;
+      opacity: 0.75;
   }
+}
