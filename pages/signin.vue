@@ -19,7 +19,7 @@
                             Email
                         </label>
                         <input id="email" type="email" placeholder="Email address" v-model="email"
-                            class="appearance-none border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none">
+                            class="appearance-none border rounded w-full py-2 px-4 text-gray-700 focus:outline-none">
                     </div>
 
                     <div id="password" class="mb-8">
@@ -27,7 +27,7 @@
                             Password
                         </label>
                         <input id="password" type="current-password" placeholder="********" v-model="password" 
-                            class=" appearance-none border rounded w-full py-2 px-4 text-gray-700 mb-2 leading-tight focus:outline-none">
+                            class=" appearance-none border rounded w-full py-2 px-4 text-gray-700 mb-2 focus:outline-none">
                     </div>
 
                     <div class="flex flex-col items-center justify-between">
