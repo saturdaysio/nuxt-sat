@@ -4,7 +4,8 @@
 
 
 <script setup>
-  const route = useRoute();
+
+const route = useRoute();
   const firstVisit = ref(true);
 
   watch(

@@ -26,8 +26,9 @@
 </template>
 
 
-<script lang="ts" setup>
-    defineProps(['error'])
+<script setup lang="ts">
+
+defineProps(['error'])
 
     const handleClearError = () => clearError({ redirect: '/' })
 

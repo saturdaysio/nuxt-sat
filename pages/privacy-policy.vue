@@ -211,7 +211,7 @@
 </template>
 
 
-<script lang="ts" setup>
+<script setup lang="ts">
 
   useHead({
         title: 'Saturdays.io - Privacy Policy',
