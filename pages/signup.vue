@@ -54,7 +54,7 @@
 <script setup lang="ts">
 
     useHead({
-        title: 'Saturdays.io - Sign Up',
+        title: 'Saturdays.io - Sign up',
         meta: [
             { name: 'description', content: 'Saturdays.io sign up page' },
             { name: 'keywords', content: 'Saturdays.io, Digital, Studio, Creative, Digital Studio, Creative Studio,' },
