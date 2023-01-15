@@ -8,8 +8,7 @@
         <span class="text-white">Logged in</span>
     </div>
     <div class="">
-        <Button :cta="'Signout'" :to="'/signin'" />
-        <Button class="button primary" @click="signOut" :cta="'Sign Out'" />
+        <Button class=" " @click="signOut" :cta="'Sign out'" />
     </div>
 </section>
 
@@ -35,9 +34,7 @@
         const { error } = await supabase.auth.signOut()
     }
 
-    definePageMeta({
-        middleware: ['auth']
-    })
+    
 
 </script>
 
