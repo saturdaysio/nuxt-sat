@@ -15,7 +15,7 @@
                 </div>
 
                 <div class="flex justify-center">
-                    <Button :cta="'Go Home'" @click="handleClearError" />
+                    <Button :cta="'Go Home'" class="button cta" @click="handleClearError" />
                 </div>
             </div>
         </section>
