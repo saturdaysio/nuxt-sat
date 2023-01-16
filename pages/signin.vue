@@ -35,7 +35,7 @@
                             Submit
                         </button>
 
-                        <NuxtLink class="inline-block align-baseline text-sm text-blue hover:text-purple-800" href="/signup">
+                        <NuxtLink class="inline-block align-baseline text-sm text-blue hover:text-red-600" href="/signup">
                             Don't have an account? Sign up
                         </NuxtLink>
                     </div>
