@@ -3,9 +3,8 @@
 </template>
 
 
-<script setup>
-
-const route = useRoute();
+<script setup lang="ts">
+  const route = useRoute();
   const firstVisit = ref(true);
 
   watch(
