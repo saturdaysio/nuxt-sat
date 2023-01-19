@@ -8,7 +8,7 @@
         <span class="text-white">Logged in</span>
     </div>
     <div class="">
-        <Button class=" " @click="signOut" :cta="'Sign out'" />
+        <Button class="" @click="signOut" :cta="'Sign out'" />
     </div>
 </section>
 
@@ -19,6 +19,7 @@
 
 <script setup lang="ts">
 
+    // Page meta info
     useHead({
         title: 'Saturdays.io - Digital studio',
         meta: [
@@ -26,15 +27,25 @@
         ]
     })
 
+
+    // Supabase code
     const supabase = useSupabaseClient()
-    const loading = ref(true)
     const user = useSupabaseUser()
-    
-    async function signOut() {
-        const { error } = await supabase.auth.signOut()
+    const router = useRouter()
+
+
+    definePageMeta({
+        middleware: ['auth']
+    })
+
+    const signOut = async () => {
+        supabase.auth.signOut()
+        router.push('/signin')
     }
 
-    
+
+    // Signout function
+
 
 </script>
 
