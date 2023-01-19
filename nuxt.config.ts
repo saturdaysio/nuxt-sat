@@ -6,7 +6,7 @@ export default defineNuxtConfig({
                 lang: 'en'
             },
             charset: 'utf-8',
-            viewport: "width=device-width, initial-scale=1",
+            viewport: 'width=device-width, initial-scale=1',
             title: 'Saturdays.io',
             meta: [
                 { charset: "utf-8" },
@@ -41,7 +41,6 @@ export default defineNuxtConfig({
         '@pinia/nuxt',
         'nuxt-purgecss',
         '@nuxtjs/supabase',
-        '@nuxtjs/strapi',
     ],
 
 
@@ -73,16 +72,6 @@ export default defineNuxtConfig({
         compilerOptions: {
             sourceMap: false,
         }
-    },
-
-
-    // Strapi config
-    strapi: {
-        url: process.env.STRAPI_URL || 'http://localhost:1337',
-        prefix: '/api',
-        version: 'v4',
-        cookie: {},
-        cookieName: 'strapi_jwt'
     },
 
 })
