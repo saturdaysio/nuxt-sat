@@ -18,7 +18,7 @@
         <section id="preview" class="w-full mx-auto px-4 pt-16 bg-black-900">
             <div class="container mx-auto mt-8">
                 <div class="pb-8">
-                    <h1 class="text-purple-pink">
+                    <h1 class="text-4xl lg:text-5xl text-purple-pink">
                         What we're making
                     </h1>
                 </div>
