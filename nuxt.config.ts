@@ -26,7 +26,8 @@ export default defineNuxtConfig({
     },
 
     // Static site rendering mode
-    ssr: true,
+    // Disabled to fix Supabase auth
+    ssr: false,
 
 
     // Global CSS/SCSS
