@@ -1,14 +1,6 @@
 Copyright (c) 2016 - 2023 Saturdays.io Inc. All rights reserved.
 
-### 2023 microsite
-
-### Built with
-
-* Nuxt 3.0
-* Pinia
-* Tailwind
-* PostCSS
-* SCSS
+# Saturdays 2023 microsite
 
 
 ## Getting Started
