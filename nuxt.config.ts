@@ -48,7 +48,8 @@ export default defineNuxtConfig({
     // Auto import components: https://go.nuxtjs.dev/config-components
     components: true,
 
-     // Vite config
+
+    // Vite build config
     vite: {
         css: {
             preprocessorOptions: {
