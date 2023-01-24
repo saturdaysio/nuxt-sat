@@ -34,10 +34,6 @@
                         <button type="submit" @click="signIn" class="button primary w-full rounded font-bold mb-4">
                             Submit
                         </button>
-
-                        <NuxtLink class="inline-block align-baseline text-sm text-blue hover:text-red-600" href="/signup">
-                            Don't have an account? Sign up
-                        </NuxtLink>
                     </div>
 
                 </form>
@@ -62,7 +58,9 @@
     })
 
 
+    // Supabase code
     const client = useSupabaseClient()
+    const user = useSupabaseUser()
     const email = ref('')
     const password = ref('')
     const isSignUp = ref(false)
@@ -70,13 +68,6 @@
 
     // Sign up function
     const signUp = async () => {
-        const {data, error} = await client.auth.signUp({
-            email: email.value,
-            password: password.value,
-        })
-
-        console.log('user', user)
-        console.log('error', error)
     }
 
     // Sign in function
@@ -87,7 +78,6 @@
         })
     }
 
-    const user = useSupabaseUser()
 
     // Watch user state
     onMounted(() => {
