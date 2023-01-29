@@ -1,9 +1,9 @@
 <template>
   <nav class="relative">
-    <div class="fixed w-full z-20">
+    <div class="fixed w-full h-full z-20">
       <div class="lg:container flex flex-row items-center justify-between mx-auto">
 
-        <div class="w-full flex items-center justify-between mx-auto p-4 backdrop-blur bg-black-900/80 border-b border-white/10">
+        <div class="nav w-full flex items-center justify-between mx-auto p-4 backdrop-blur bg-black-900/80 border-b border-white/10">
           <!-- Header logo -->
           <div id="logo" class="">
             <NuxtLink to="/" active-class="active" class="px-4 text-md font-black inline-block">
@@ -26,12 +26,12 @@
             <ul class="flex text-sm font-sans">
               <li class="nav-item">
                 <NuxtLink to="/" active-class="active"
-                  class="px-4 py-2 flex items-center text-sm font-bold uppercase hover:opacity-75">Work
+                  class="px-4  flex items-center text-sm font-bold uppercase hover:opacity-75">Work
                 </NuxtLink>
               </li>
               <li class="nav-item">
                 <NuxtLink to="/about" active-class="active"
-                  class="px-4 py-2 flex items-center text-sm font-bold uppercase hover:opacity-75">About
+                  class="px-4  flex items-center text-sm font-bold uppercase hover:opacity-75">About
                 </NuxtLink>
               </li>
             </ul>
@@ -48,10 +48,10 @@
         </transition>
 
         <!-- Drawer Menu -->
-        <aside class="transform top-0 left-0 w-full h-full fixed overflow-auto backdrop-blur bg-black-900/80 z-20" :class="isOpen ? 'translate-x-0' : '-translate-x-full'">
+        <aside class="transform top-0 left-0 w-full h-full fixed overflow-auto backdrop-blur bg-black-900/70 z-20" :class="isOpen ? 'translate-x-0' : '-translate-x-full'">
           <div class="flex flex-col h-full justify-between">
 
-              <div class="flex items-center justify-between p-4 z-50">
+              <div class="nav flex items-center justify-between p-4 z-50">
                 <div id="logo" @click="isOpen = false">
                   <NuxtLink to="/" active-class="active" class="px-4 text-md font-black inline-block">
                     <span class="text-white">Saturdays</span>
@@ -176,7 +176,7 @@
 
 <style lang="scss" scoped>
 
-  nav {
+  .nav {
       height: 4rem;
     }
 
