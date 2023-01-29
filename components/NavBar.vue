@@ -1,6 +1,6 @@
 <template>
   <nav class="relative">
-    <div class="fixed w-full h-full z-20">
+    <div class="fixed w-full z-20">
       <div class="lg:container flex flex-row items-center justify-between mx-auto">
 
         <div class="nav w-full flex items-center justify-between mx-auto p-4 backdrop-blur bg-black-900/80 border-b border-white/10">
@@ -130,7 +130,7 @@
 
             </div>
 
-
+            <MenuBG />
 
           </div>
         </aside>
