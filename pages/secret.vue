@@ -3,15 +3,16 @@
 
         <NavBar />
 
-<section class="container mx-auto px-4">
-    <div class="pb-8">
-        <span class="text-white">Logged in</span>
-    </div>
-    <div class="">
-        <Button class="" @click="signOut" :cta="'Sign out'" />
-    </div>
-</section>
+        <section class="container mx-auto px-4">
+            <div class="pb-8">
+                <span class="text-white">Logged in..</span>
+            </div>
+            <div class="">
+                <Button class="" @click="signOut" :cta="'Sign out'" />
+            </div>
+        </section>
 
+        <Footer />
 
     </div>
 </template>
@@ -28,7 +29,7 @@
     })
 
 
-    // Supabase code
+    // Supabase setup
     const supabase = useSupabaseClient()
     const user = useSupabaseUser()
     const router = useRouter()
@@ -38,14 +39,12 @@
         middleware: ['auth']
     })
 
-    const signOut = async () => {
-        supabase.auth.signOut()
-        router.push('/signin')
-    }
-
-
     // Signout function
-
+    const signOut = async () => {
+        await supabase.auth.signOut()
+        // Need proper watch user state
+        router.push('/')
+    }
 
 </script>
 
