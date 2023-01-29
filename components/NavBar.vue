@@ -1,74 +1,77 @@
 <template>
   <nav class="relative">
-    <div class="fixed w-full z-20 p-4 bg-black-900">
-      <div class="lg:container flex items-center justify-between mx-auto">
+    <div class="fixed w-full z-20 bg-black-900">
+      <div class="lg:container flex flex-row items-center justify-between mx-auto">
 
-        <!-- Header logo -->
-        <div id="logo" class=" relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-          <NuxtLink to="/" active-class="active" class="px-4 text-md font-black inline-block whitespace-nowrap">
-            <span class="text-white">Saturdays</span>
-          </NuxtLink>
-        </div>
+        <div class="w-full flex items-center justify-between mx-auto p-4">
+          <!-- Header logo -->
+          <div id="logo" class="">
+            <NuxtLink to="/" active-class="active" class="px-4 text-md font-black inline-block">
+              <span class="text-white">Saturdays</span>
+            </NuxtLink>
+          </div>
 
-        <!-- Mobile toggle -->
-        <div class="relative flex justify-between lg:hidden">
-          <button @click="drawer" role="button" aria-label="Menu button">
-            <svg class="h-8 w-8 fill-current text-black" fill="none" stroke-linecap="round" stroke-linejoin="round"
-              stroke-width="1" viewBox="0 0 24 24" stroke="#fff">
-              <path d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </div>
+          <!-- Mobile toggle -->
+          <div class="relative flex lg:hidden">
+            <button @click="drawer" role="button" aria-label="Menu button">
+              <svg class="h-8 w-8 fill-current text-black" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="1" viewBox="0 0 24 24" stroke="#fff">
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
 
-        <!-- Navbar -->
-        <div class="hidden lg:block">
-          <ul class="flex text-sm font-sans">
-            <li class="nav-item">
-              <NuxtLink to="/" active-class="active"
-                class="px-4 py-2 flex items-center text-sm font-bold uppercase hover:opacity-75">Work
-              </NuxtLink>
-            </li>
-            <li class="nav-item">
-              <NuxtLink to="/about" active-class="active"
-                class="px-4 py-2 flex items-center text-sm font-bold uppercase hover:opacity-75">About
-              </NuxtLink>
-            </li>
-          </ul>
-        </div>
+          <!-- Navbar -->
+          <div class="hidden lg:block">
+            <ul class="flex text-sm font-sans">
+              <li class="nav-item">
+                <NuxtLink to="/" active-class="active"
+                  class="px-4 py-2 flex items-center text-sm font-bold uppercase hover:opacity-75">Work
+                </NuxtLink>
+              </li>
+              <li class="nav-item">
+                <NuxtLink to="/about" active-class="active"
+                  class="px-4 py-2 flex items-center text-sm font-bold uppercase hover:opacity-75">About
+                </NuxtLink>
+              </li>
+            </ul>
+          </div>
+          </div>
+
 
         <!-- Dark Background Transition -->
         <transition enter-class="opacity-0" enter-active-class="ease-in-out duration-500" enter-to-class="opacity-100"
           leave-class="opacity-100" leave-active-class="ease-in-out duration-500" leave-to-class="opacity-0">
-          <div @keydown.esc="isOpen = false" v-show="isOpen" class="z-10 fixed inset-0 transition-opacity">
+          <div @keydown.esc="isOpen = false" v-show="isOpen" class="fixed inset-0 transition-opacity">
             <div @click="isOpen = false" class="absolute inset-0 bg-black opacity-50" tabindex="0"></div>
           </div>
         </transition>
 
         <!-- Drawer Menu -->
-        <aside class="p-4 transform top-0 left-0 w-full h-full fixed overflow-auto bg-black-900 z-50"
-          :class="isOpen ? 'translate-x-0' : '-translate-x-full'">
+        <aside class="transform top-0 left-0 w-full h-full fixed overflow-auto bg-black-900 z-20" :class="isOpen ? 'translate-x-0' : '-translate-x-full'">
           <div class="flex flex-col h-full justify-between">
 
-            <div class="flex items-center justify-between">
-              <div id="logo" @click="isOpen = false">
-                <NuxtLink to="/" active-class="active" class="px-4 text-md font-black inline-block whitespace-nowrap">
-                  <span class="text-white">Saturdays</span>
-                </NuxtLink>
+              <div class="flex items-center justify-between p-4 z-50">
+                <div id="logo" @click="isOpen = false">
+                  <NuxtLink to="/" active-class="active" class="px-4 text-md font-black inline-block">
+                    <span class="text-white">Saturdays</span>
+                  </NuxtLink>
+                </div>
+
+                <!-- Close icon -->
+                <div class="close relative flex justify-between">
+                  <button @click="isOpen = false" role="button" aria-label="Close Menu button">
+                    <svg class="w-8 h-8" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                      viewBox="0 0 24 24" stroke="#fff">
+                      <path d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                  </button>
+                </div>
               </div>
 
-              <div class="close relative flex justify-between">
-                <button @click="isOpen = false" role="button" aria-label="Close Menu button">
-                  <svg class="w-8 h-8" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
-                    viewBox="0 0 24 24" stroke="#fff">
-                    <path d="M6 18L18 6M6 6l12 12"></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
 
-
-
-            <ul class="divide-y flex flex-col justify-center font-sans ml-4">
+            <!-- Nav links -->
+            <ul class="divide-y flex flex-col justify-center font-sans ml-4 z-50">
               <li class="nav-item">
                 <NuxtLink to="/" @click="isOpen = false" active-class="active"
                   class="my-4 inline-block text-2xl text-bold uppercase hover:text-underline">
@@ -95,10 +98,11 @@
               </li>
             </ul>
 
-            <div id="social" class="ml-4 pb-4">
+            <!-- Menu footer -->
+            <div id="social" class="ml-4 pb-4 z-50">
               <p class="text-md font-bold text-white">Connect</p>
-              <div class="social flex space-x-10 mt-4">
 
+              <div class="social flex space-x-10 mt-4">
                 <NuxtLink to="https://www.linkedin.com/company/saturdaysdotio/" rel="noreferrer" target="_blank">
                   <svg focusable="false" aria-label="LinkedIn" data-prefix="fab" data-icon="linkedin" viewBox="0 0 24 24"
                     class="h-12 w-12 fill-current text-blue-900 hover:text-red-600" role="img" xmlns="http://www.w3.org/2000/svg">
@@ -122,9 +126,12 @@
 
                 <NuxtLink to="/signin">                  
                 </NuxtLink>
-
               </div>
+
             </div>
+
+
+
           </div>
         </aside>
 
@@ -135,41 +142,42 @@
 
 
 <script lang="ts">
-export default {
-  data() {
-    return {
-      isOpen: false
-    };
-  },
-  methods: {
-    drawer() {
-      this.isOpen = !this.isOpen;
-    }
-  },
-  watch: {
-    isOpen: {
-      immediate: true,
-      handler(isOpen) {
-        if (process.client) {
-          if (isOpen) document.body.style.setProperty("overflow", "hidden");
-          else document.body.style.removeProperty("overflow");
+  export default {
+    data() {
+      return {
+        isOpen: false
+      };
+    },
+    methods: {
+      drawer() {
+        this.isOpen = !this.isOpen;
+      }
+    },
+    watch: {
+      isOpen: {
+        immediate: true,
+        handler(isOpen) {
+          if (process.client) {
+            if (isOpen) document.body.style.setProperty("overflow", "hidden");
+            else document.body.style.removeProperty("overflow");
+          }
         }
       }
+    },
+
+    mounted() {
+      document.addEventListener("keydown", e => {
+        if (e.keyCode == 27 && this.isOpen) this.isOpen = false;
+      });
     }
-  },
-  mounted() {
-    document.addEventListener("keydown", e => {
-      if (e.keyCode == 27 && this.isOpen) this.isOpen = false;
-    });
-  }
-};
+  };
 </script>
 
 
 <style lang="scss" scoped>
 
-nav {
-    height: 4rem;
-  }
+  nav {
+      height: 4rem;
+    }
 
 </style>
