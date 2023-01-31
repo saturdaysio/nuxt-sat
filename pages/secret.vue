@@ -3,12 +3,15 @@
 
         <NavBar />
 
-        <section class="container mx-auto px-4">
-            <div class="pb-8">
-                <span class="text-white">Logged in..</span>
-            </div>
-            <div class="">
-                <Button class="" @click="signOut" :cta="'Sign out'" />
+        <section class="w-full mx-auto px-4 py-16 bg-black-900">
+            <div class="lg:container mx-auto my-8">
+                <div class="pb-8">
+                    <span class="text-white">STATE: Logged in</span>
+                </div>
+   
+                <div id="logout">
+                    <Button class="button primary" @click="signOut" :cta="'Sign out'" />
+                </div>
             </div>
         </section>
 
