@@ -1,12 +1,12 @@
 <template>
   <nav class="relative">
-    <div class="fixed w-full z-20">
+    <div class="fixed w-full px-4 z-20">
       <div class="lg:container flex flex-row items-center justify-between mx-auto">
 
-        <div class="nav w-full flex items-center justify-between mx-auto p-4 backdrop-blur bg-black-900/80 border-b border-white/10">
+        <div class="nav w-full flex items-center justify-between mx-auto  backdrop-blur bg-black-900/80 border-b border-white/10">
           <!-- Header logo -->
           <div id="logo" class="">
-            <NuxtLink to="/" active-class="active" class="px-4 text-md font-black inline-block">
+            <NuxtLink to="/" active-class="active" class=" text-md font-black inline-block">
               <span class="text-white">Saturdays</span>
             </NuxtLink>
           </div>
@@ -24,14 +24,14 @@
           <!-- Navbar -->
           <div class="hidden lg:block">
             <ul class="flex text-sm font-sans">
-              <li class="nav-item">
+              <li class="nav-item pr-4">
                 <NuxtLink to="/" active-class="active"
-                  class="px-4  flex items-center text-sm font-bold uppercase hover:opacity-75">Work
+                  class=" flex items-center text-sm font-bold uppercase hover:opacity-75">Work
                 </NuxtLink>
               </li>
-              <li class="nav-item">
+              <li class="nav-item pl-4">
                 <NuxtLink to="/about" active-class="active"
-                  class="px-4  flex items-center text-sm font-bold uppercase hover:opacity-75">About
+                  class=" flex items-center text-sm font-bold uppercase hover:opacity-75">About
                 </NuxtLink>
               </li>
             </ul>
@@ -53,7 +53,7 @@
 
               <div class="nav flex items-center justify-between p-4 z-50">
                 <div id="logo" @click="isOpen = false">
-                  <NuxtLink to="/" active-class="active" class="px-4 text-md font-black inline-block">
+                  <NuxtLink to="/" active-class="active" class="text-md font-black inline-block">
                     <span class="text-white">Saturdays</span>
                   </NuxtLink>
                 </div>
