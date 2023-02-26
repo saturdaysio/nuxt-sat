@@ -45,7 +45,7 @@
 </template>
 
 
-<script setup>
+<script setup lang="ts">
 
     // Page meta info
     useHead({
