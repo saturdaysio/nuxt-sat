@@ -10,7 +10,7 @@
                 </div>
    
                 <div id="logout">
-                    <Button class="button primary" @click="signOut" :cta="'Sign out'" />
+                    <Button class="button primary" @click="" :cta="'Sign out'" />
                 </div>
             </div>
         </section>
@@ -21,7 +21,7 @@
 </template>
 
 
-<script setup>
+<script setup lang="ts">
 
     // Page meta info
     useHead({
@@ -36,12 +36,6 @@
         middleware: ['auth']
     })
 
-    // Signout function
-    const signOut = async () => {
-        await supabase.auth.signOut()
-        // Need proper watch user state
-        router.push('/')
-    }
 
 </script>
 
