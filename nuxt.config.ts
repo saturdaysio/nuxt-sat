@@ -75,9 +75,4 @@ export default defineNuxtConfig({
         }
     },
 
-    // https://stackoverflow.com/questions/74003458/cannot-find-module-pinia-dist-pinia-mjs-when-using-run-dev
-    alias: {
-        'pinia': '/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs',
-    },
-
 })
