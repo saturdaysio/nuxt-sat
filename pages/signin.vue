@@ -18,18 +18,18 @@
                         <label class="block text-white text-sm font-bold mb-2" for="email">
                             Email
                         </label>
-                        <input id="email" type="email" placeholder="Email address" v-model="email" class="appearance-none border rounded w-full py-2 px-4 text-gray-700 focus:outline-none">
+                        <input id="email" type="email" placeholder="Email address" class="appearance-none border rounded w-full py-2 px-4 text-gray-700 focus:outline-none">
                     </div>
 
                     <div id="password" class="mb-8">
                         <label class="block text-white text-sm font-bold mb-2" for="password">
                             Password
                         </label>
-                        <input id="password" type="current-password" placeholder="********" v-model="password" class=" appearance-none border rounded w-full py-2 px-4 text-gray-700 mb-2 focus:outline-none">
+                        <input id="password" type="current-password" placeholder="********" class=" appearance-none border rounded w-full py-2 px-4 text-gray-700 mb-2 focus:outline-none">
                     </div>
 
                     <div class="flex flex-col items-center justify-between">
-                        <button type="submit" @click="signIn" class="button primary w-full rounded font-bold mb-4">
+                        <button type="submit" @click="" class="button primary w-full rounded font-bold mb-4">
                             Submit
                         </button>
                     </div>
@@ -45,7 +45,7 @@
 </template>
 
 
-<script setup lang="ts">
+<script setup>
 
     // Page meta info
     useHead({
@@ -57,35 +57,6 @@
     })
 
 
-    // Supabase code
-    const client = useSupabaseClient()
-
-    // useSupabaseUser doesn't redirect to path without page reload
-    const user = useSupabaseAuthClient()
-    const email = ref('')
-    const password = ref('')
-    const isSignUp = ref(false)
-
-
-    // Sign in function
-    const signIn = async () => {
-        const {data, error} = await client.auth.signInWithPassword({
-            email: email.value,
-            password: password.value,
-        })
-    }
-
-
-    // Watch user state
-    onMounted(() => {
-        watchEffect(() => {
-            // Don't use user for this
-            if (user.value) {
-                navigateTo('/secret')
-            }
-
-        })
-    })
 </script>
 
 

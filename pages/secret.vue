@@ -21,7 +21,7 @@
 </template>
 
 
-<script setup lang="ts">
+<script setup>
 
     // Page meta info
     useHead({
@@ -30,12 +30,6 @@
             { name: 'description', content: 'Saturdays.io, Toronto based digital studio' }
         ]
     })
-
-
-    // Supabase setup
-    const supabase = useSupabaseClient()
-    const user = useSupabaseUser()
-    const router = useRouter()
 
 
     definePageMeta({
