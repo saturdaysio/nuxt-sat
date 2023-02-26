@@ -1,12 +1,12 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+
+    // Head & HTML
     app: {
         head: {
             htmlAttrs: {
                 lang: 'en'
             },
-            charset: 'utf-8',
-            viewport: 'width=device-width, initial-scale=1',
             title: 'Saturdays.io',
             meta: [
                 { charset: "utf-8" },
@@ -25,8 +25,8 @@ export default defineNuxtConfig({
         },
     },
 
-    // Static site rendering mode
-    // Disabled to fix Supabase auth
+    // Server-side rendering mode
+    // https://nuxt.com/docs/api/configuration/nuxt-config/#ssr
     ssr: false,
 
 
@@ -69,10 +69,17 @@ export default defineNuxtConfig({
         },
     },
 
+
     vue: {
         compilerOptions: {
             sourceMap: false,
         }
     },
+
+    // https://stackoverflow.com/questions/74003458/cannot-find-module-pinia-dist-pinia-mjs-when-using-run-dev
+    alias: {
+        'pinia': '/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs',
+    },
+
 
 })
