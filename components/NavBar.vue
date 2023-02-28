@@ -124,8 +124,6 @@
 									</svg>
 								</NuxtLink>
 
-								<NuxtLink to="/signin">                  
-								</NuxtLink>
 							</div>
 
 						</div>
