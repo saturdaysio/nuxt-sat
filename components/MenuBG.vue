@@ -4,7 +4,7 @@
 		<!-- Comment -->
 		<div id="container" class="flex flex-col justify-between h-full">
 			<div id="top-right" class="gird flex-row w-full">
-				<img src="@/assets/img/block-corner-tr.svg" draggable="false" height="100%" width="100%">
+				<img src="@/assets/img/block-corner-tr.svg" draggable="false" height="100%" width="100%" alt="top right corner">
 			</div>
 
 			<div id="bot-left" class="flex-end">
