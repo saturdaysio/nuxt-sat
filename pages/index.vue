@@ -26,7 +26,7 @@
 					<picture>
 						<source type="image/webp" srcset="~/assets/img/mobile.webp">
 						<source type="image/png" srcset="~/assets/img/mobile.png">
-						<nuxt-img src="~/assets/img/mobile.webp" alt="Mobile app interfaces" draggable="false" loading="lazy" width="1600" height="1000" />
+						<img src="~/assets/img/mobile.webp" alt="Mobile app interfaces" draggable="false" loading="lazy" width="1600" height="1000">
 					</picture>
 				</div>
 			</div>
