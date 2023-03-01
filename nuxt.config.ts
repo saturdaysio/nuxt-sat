@@ -38,6 +38,7 @@ export default defineNuxtConfig({
 
     // Modules
     modules: [
+        '@nuxtjs/robots',
         '@nuxtjs/tailwindcss',
         '@pinia/nuxt',
         'nuxt-purgecss',
