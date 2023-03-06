@@ -38,6 +38,7 @@ export default defineNuxtConfig({
 
     // Modules
     modules: [
+        '@nuxt/image-edge',
         '@nuxtjs/robots',
         '@nuxtjs/tailwindcss',
         '@pinia/nuxt',
