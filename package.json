@@ -16,7 +16,7 @@
     "@tailwindcss/typography": "^0.5.8",
     "nuxt": "3.2.3",
     "nuxt-purgecss": "2.0.0",
-    "sass": "1.58.3"
+    "sass": "1.59.2"
   },
   "dependencies": {
     "@nuxt/image-edge": "^1.0.0-27968280.9739e4d",
