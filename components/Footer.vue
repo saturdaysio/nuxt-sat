@@ -1,35 +1,28 @@
 <template>
-	<footer class="w-full mx-auto bg-black-900">
-		<div class="lg:container mx-auto px-4 py-8 ">
-			<hr class="w-full h-px mx-auto my-4 border-0 rounded md:my-10 bg-gray-900">
-			<div class="flex flex-col-reverse items-center md:flex-row justify-between">
-				<div id="copyright" class="flex items-center">
-					<p class="text-white">
-						&#169; 2016 - 2023 Saturdays.io All rights reserved.
-					</p>
+	<footer class="bg-black">
+		<div class="mx-auto max-w-7xl overflow-hidden py-20 px-6 sm:py-24 lg:px-8">
+			<nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
+				<div v-for="item in navigation.main" :key="item.name" class="pb-6">
+					<a :href="item.href" class="text-base leading-6 text-blue-800 hover:text-red-500">{{ item.name }}</a>
 				</div>
-				<div class="flex flex-end pb-4 md:pb-0">
-					<div class="nav-item pr-4">
-						<NuxtLink to="/terms-of-service" active-class="active"
-							class="flex items-center text-sm font-bold hover:opacity-75">
-							<strong>Terms of Service</strong>
-						</NuxtLink>
-					</div>
-					<div class="nav-item pl-4">
-						<NuxtLink to="/privacy-policy" active-class="active"
-							class="flex items-center text-sm font-bold hover:opacity-75">
-							<strong>Privacy Policy</strong>
-						</NuxtLink>
-					</div>
-				</div>
-			</div>
+			</nav>
+			<p class="mt-10 text-center text-md leading-5 text-gray-500">&copy; 2016 - 2023 Saturdays.io All rights
+				reserved.</p>
 		</div>
 	</footer>
-
 </template>
-
-
+  
 <script setup lang="ts">
+	import { defineComponent, h } from 'vue'
+
+	const navigation = {
+		main: [
+			{ name: 'Work', href: '/' },
+			{ name: 'About', href: '/about' },
+			{ name: 'Terms of Service', href: '/terms-of-service' },
+			{ name: 'Privacy Policy', href: '/privacy-policy' },
+		],
+	}
 </script>
 
 
