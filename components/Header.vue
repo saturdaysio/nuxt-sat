@@ -5,7 +5,7 @@
 				<div class="flex lg:flex-1">
 					<NuxtLink to="/" class="-m-1.5 p-1.5">
 						<span class="sr-only">Saturdays.io</span>
-						<img class="h-8 w-auto" src="@/assets/img/logo.svg" alt="Saturdays.io logo" />
+						<img class="h-8 w-8" src="@/assets/img/logo.svg" alt="Saturdays.io logo" width="32px" height="32px" />
 					</NuxtLink>
 				</div>
 				<div class="flex lg:hidden">
@@ -26,7 +26,7 @@
 					<div class="flex items-center justify-between">
 						<NuxtLink to="/" class="-m-1.5 p-1.5">
 							<span class="sr-only">Saturdays.io</span>
-							<img class="h-8 w-auto" src="@/assets/img/logo.svg" alt="Saturdays.io logo" />
+							<img class="h-8 w-8" src="@/assets/img/logo.svg" alt="Saturdays.io logo" width="32px" height="32px" />
 						</NuxtLink>
 						<button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-400" @click="mobileMenuOpen = false">
 							<span class="sr-only">Close menu</span>
