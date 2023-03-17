@@ -1,48 +1,33 @@
 <template>
-	<section id="stats" class="mx-auto px-4 py-16 bg-black-900">
-		<div class="md:max-w-screen lg:max-w-6xl mx-auto my-8">
-			<div class="pb-8">
-				<h1 class="text-4xl lg:text-5xl text-center font-bold text-white">
-					Our stats
-				</h1>
-			</div>
-			<div class="flex flex-wrap">
-				<div class="card my-8 md:my-4" v-for="item in resultStore.resultJson.result" :key="item.id">
-					<h1 class="text-5xl lg:text-7xl font-thin text-grad-01">{{ item.title }}</h1>
-					<p class="text-xl text-white">{{ item.desc }}</p>
+	<div class="bg-black-900 py-24 sm:py-32">
+		<div class="mx-auto max-w-8xl px-6 lg:px-8">
+			<div class="mx-auto max-w-2xl lg:max-w-none">
+				<div class="text-center">
+					<h2 class="text-3xl font-bold tracking-tight text-white sm:text-6xl">Our stats</h2>
 				</div>
+				<dl class="mt-16 grid grid-cols-1 gap-2 overflow-hidden text-center sm:grid-cols-2 lg:grid-cols-2">
+					<div v-for="item in resultStore.resultJson.result" :key="item.id" class="flex flex-col p-8">
+						<dd class="order-first text-8xl font-bold tracking-tight text-white">{{ item.title }}</dd>
+						<dt class="text-sm font-normal leading-6 text-gray-300">{{ item.desc }}</dt>
+					</div>
+				</dl>
 			</div>
 		</div>
-	</section>
+	</div>
 </template>
 
+
 <script lang="ts">
-import { useResultStore } from "~~/store/result";
+	import { useResultStore } from "~~/store/result";
 
 
-export default {
-	setup() {
-		const resultStore = useResultStore()
-		return { resultStore }
+	export default {
+		setup() {
+			const resultStore = useResultStore()
+			return { resultStore }
+		}
 	}
-}
 </script>
 
 <style lang="scss" scoped>
-	.card {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		justify-content: flex-start;
-		width: 50%;
-		flex-shrink: 0;
-		padding: 0 2rem;
-	}
-
-	@media only screen and (max-width: 800px) {
-		.card {
-			width: 100%;
-			padding: 0 1rem;
-		}
-	}
 </style>
