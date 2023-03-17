@@ -26,7 +26,7 @@
 					<div class="flex items-center justify-between">
 						<a href="/" class="-m-1.5 p-1.5">
 							<span class="sr-only">Saturdays.io</span>
-							<img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Saturdays.io logo" />
+							<img class="h-8 w-auto" src="@/assets/img/logo.svg" alt="Saturdays.io logo" />
 						</a>
 						<button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-400" @click="mobileMenuOpen = false">
 							<span class="sr-only">Close menu</span>
