@@ -1,7 +1,6 @@
 <template>
 	<div>
 
-
 		<Header />
 
 		<section class="w-full mx-auto px-4 py-16 bg-black-900">
