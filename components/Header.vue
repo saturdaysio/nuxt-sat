@@ -5,7 +5,7 @@
 				<div class="flex lg:flex-1">
 					<a href="#" class="-m-1.5 p-1.5">
 						<span class="sr-only">Saturdays.io</span>
-						<img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="" />
+						<img class="h-8 w-auto" src="@/assets/img/logo.svg" alt="Saturdays.io logo" />
 					</a>
 				</div>
 				<div class="flex lg:hidden">
