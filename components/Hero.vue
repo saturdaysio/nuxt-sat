@@ -17,4 +17,5 @@ const props = defineProps({
 </script>
 
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>
