@@ -15,7 +15,7 @@
 					</button>
 				</div>
 				<div class="hidden lg:flex lg:flex-1 lg:gap-x-12 lg:justify-end nav-item">
-					<NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="text-md font-semibold">{{ item.name }}</NuxtLink>
+					<NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="text-md uppercase font-semibold" active-class="active">{{ item.name }}</NuxtLink>
 				</div>
 			</nav>
 
@@ -37,7 +37,7 @@
 					<div class="mt-6 flow-root ">
 						<div class="my-6 divide-y divide-gray-500/10">
 							<div class="nav-item space-y-2 py-6">
-								<NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="-mx-3 block rounded-lg py-4 px-4 text-2xl font-bold" active-class="active">{{ item.name }}</NuxtLink>
+								<NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="-mx-3 block rounded-lg py-4 px-4 text-2xl uppercase font-semibold" active-class="active">{{ item.name }}</NuxtLink>
 							</div>
 							<div class="">
 								<NuxtLink to="/signin" class="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-7 text-black hover:text-purple-900">.</NuxtLink>
@@ -66,8 +66,7 @@
 			<!-- headline -->
 			<div class="mx-auto max-w-6xl py-32 sm:py-48 lg:py-56">
 				<div class="text-center">
-					<h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Saturdays is a Canadian digital
-						studio based in Toronto</h1>
+					<h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">{{ intro }}</h1>
 				</div>
 			</div>
 			<!-- highlight bottom right -->
@@ -88,16 +87,21 @@
 </template>
   
 <script setup lang="ts">
-import { ref } from 'vue'
-import { Dialog, DialogPanel } from '@headlessui/vue'
-import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
+	import { ref } from 'vue'
+	import { Dialog, DialogPanel } from '@headlessui/vue'
+	import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 
-const navigation = [
-	{ name: 'Work', to: '/' },
-	{ name: 'About', to: '/about' },
-]
+	const navigation = [
+		{ name: 'Work', to: '/' },
+		{ name: 'About', to: '/about' },
+	]
 
-const mobileMenuOpen = ref(false)
+	const props = defineProps({
+		intro: String,
+	})
+
+	const mobileMenuOpen = ref(false)
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>
