@@ -1,9 +1,8 @@
 <template>
 	<div>
 
-		<NavBar />
 
-		<Hero text="Saturdays is a Canadian digital studio based in Toronto" />
+		<Header />
 
 		<section class="w-full mx-auto px-4 py-16 bg-black-900">
 			<div class="container lg:max-w-6xl mx-auto my-8">
@@ -26,7 +25,7 @@
 					<picture>
 						<source type="image/webp" srcset="~/assets/img/mobile.webp">
 						<source type="image/png" srcset="~/assets/img/mobile.png">
-						<img src="~/assets/img/mobile.webp" alt="Mobile app interfaces" draggable="false" loading="lazy" width="1600" height="1000">
+						<img src="~/assets/img/mobile.png" alt="Mobile app interfaces" draggable="false" loading="lazy" width="1600" height="1000">
 					</picture>
 				</div>
 			</div>
