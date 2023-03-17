@@ -1,7 +1,7 @@
 <template>
 	<div>
 
-		<Header />
+		<Header intro="Saturdays is a Canadian digital studio based in Toronto" />
 
 		<section class="w-full mx-auto px-4 py-16 bg-black-900">
 			<div class="container lg:max-w-6xl mx-auto my-8">
