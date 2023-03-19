@@ -1,7 +1,7 @@
 <template>
 	<div class="bg-black-900">
 		<header class="absolute inset-x-0 top-0 z-50">
-			<nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+			<nav class="flex items-center justify-between p-4 lg:p-8" aria-label="Global">
 				<div class="flex lg:flex-1">
 					<NuxtLink to="/" class="-m-1.5 p-1.5">
 						<span class="sr-only">Saturdays.io</span>
@@ -19,10 +19,11 @@
 				</div>
 			</nav>
 
+			<!-- Mobile menu -->
 			<Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
 				<div class="fixed inset-0 z-50" />
 				<DialogPanel
-					class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6  backdrop-blur bg-black-900/80">
+					class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-4 py-4  backdrop-blur bg-black-900/80">
 					<div class="flex items-center justify-between">
 						<NuxtLink to="/" class="-m-1.5 p-1.5">
 							<span class="sr-only">Saturdays.io</span>
