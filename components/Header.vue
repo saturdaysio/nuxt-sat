@@ -1,7 +1,7 @@
 <template>
 	<div class="bg-black-900">
 		<header class="absolute inset-x-0 top-0 z-50">
-			<nav class="flex items-center justify-between p-4 lg:px-8" aria-label="Global">
+			<nav class="flex items-center justify-between max-w-7xl mx-auto p-4 " aria-label="Global">
 				<div class="flex lg:flex-1">
 					<NuxtLink to="/" class="-m-1.5 p-1.5">
 						<span class="sr-only">Saturdays.io</span>
@@ -14,7 +14,7 @@
 						<Bars3Icon class="h-6 w-6" aria-hidden="true" />
 					</button>
 				</div>
-				<div class="hidden lg:flex lg:flex-1 lg:gap-x-12 lg:justify-end nav-item">
+				<div class="hidden lg:flex lg:flex-1 lg:gap-x-8 lg:justify-end nav-item">
 					<NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="text-md font-semibold" active-class="active">{{ item.name }}</NuxtLink>
 				</div>
 			</nav>
@@ -35,15 +35,10 @@
 						</button>
 					</div>
 					<!-- nav links -->
-					<div class="mt-6 flow-root ">
-						<div class="my-6 divide-y divide-gray-500/10">
-							<div class="nav-item space-y-2 py-6">
-								<NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="-mx-3 block rounded-lg py-4 px-4 text-2xl uppercase font-semibold" active-class="active">{{ item.name }}</NuxtLink>
+					<div class="my-6 divide-y h-full divide-gray-500/10">
+							<div class="flex flex-col h-full justify-center nav-item space-y-2 py-6">
+								<NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="-mx-3 block rounded-lg py-4 px-4 text-4xl font-semibold" active-class="active">{{ item.name }}</NuxtLink>
 							</div>
-							<div class="">
-								<NuxtLink to="/signin" class="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-7 text-black hover:text-purple-900">.</NuxtLink>
-							</div>
-						</div>
 					</div>
 				</DialogPanel>
 			</Dialog>
