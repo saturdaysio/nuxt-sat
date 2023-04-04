@@ -15,7 +15,7 @@
 					</button>
 				</div>
 				<div class="hidden lg:flex lg:flex-1 lg:gap-x-12 lg:justify-end nav-item">
-					<NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="text-md uppercase font-semibold" active-class="active">{{ item.name }}</NuxtLink>
+					<NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="text-md font-semibold" active-class="active">{{ item.name }}</NuxtLink>
 				</div>
 			</nav>
 
