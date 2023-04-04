@@ -34,7 +34,7 @@
 /* Break off into its own file - 01/01/2023 */
 
   a {
-    color: $blue;
+    color: $white;
   }
 
   .nav-item {
@@ -42,16 +42,15 @@
 
     a:hover {
       background: none;
-      color: $red;
       text-decoration: underline;
-      opacity: 0.75;
+      text-underline-offset: 4px;
+      opacity: 0.60;
       -webkit-transition: all .4s ease;
       -moz-transition: all .4s ease;
       transition: all .4s ease;
     }
     
     .active {
-      color: $red;
       text-decoration: underline;
       text-underline-offset: 4px;
     }
