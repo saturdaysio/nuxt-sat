@@ -1,7 +1,7 @@
 <template>
 	<div class="bg-black-900">
 		<header class="absolute inset-x-0 top-0 z-50">
-			<nav class="flex items-center justify-between max-w-7xl mx-auto p-4 " aria-label="Global">
+			<nav class="flex items-center justify-between max-w-7xl mx-auto p-6" aria-label="Global">
 				<div class="flex lg:flex-1">
 					<NuxtLink to="/" class="-m-1.5 p-1.5">
 						<span class="sr-only">Saturdays.io</span>
@@ -15,7 +15,7 @@
 					</button>
 				</div>
 				<div class="hidden lg:flex lg:flex-1 lg:gap-x-8 lg:justify-end nav-item">
-					<NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="text-md font-semibold" active-class="active">{{ item.name }}</NuxtLink>
+					<NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="text-md font-normal" active-class="active">{{ item.name }}</NuxtLink>
 				</div>
 			</nav>
 
@@ -23,7 +23,7 @@
 			<Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
 				<div class="fixed inset-0 z-50" />
 				<DialogPanel
-					class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-4 py-4 backdrop-blur bg-black-900/80">
+					class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 backdrop-blur bg-black-900/80">
 					<div class="flex items-center justify-between">
 						<NuxtLink to="/" class="-m-1.5 p-1.5">
 							<span class="sr-only">Saturdays.io</span>
