@@ -15,15 +15,14 @@
 					</button>
 				</div>
 				<div class="hidden lg:flex lg:flex-1 lg:gap-x-8 lg:justify-end nav-item">
-					<NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="text-md font-normal" active-class="active">{{ item.name }}</NuxtLink>
+					<NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="text-md font-semibold" active-class="active">{{ item.name }}</NuxtLink>
 				</div>
 			</nav>
 
 			<!-- Mobile menu -->
 			<Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
 				<div class="fixed inset-0 z-50" />
-				<DialogPanel
-					class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 backdrop-blur bg-black-900/80">
+				<DialogPanel class="fixed inset-y-0 right-0 z-50 w-full h-full overflow-y-auto px-6 py-6 backdrop-blur bg-black-900/80">
 					<div class="flex items-center justify-between">
 						<NuxtLink to="/" class="-m-1.5 p-1.5">
 							<span class="sr-only">Saturdays.io</span>
@@ -34,11 +33,11 @@
 							<XMarkIcon class="h-6 w-6" aria-hidden="true" />
 						</button>
 					</div>
-					<!-- nav links -->
-					<div class="my-6 divide-y h-full divide-gray-500/10">
-							<div class="flex flex-col h-full justify-center nav-item space-y-2 py-6">
-								<NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="-mx-3 block rounded-lg py-4 px-4 text-4xl font-semibold" active-class="active">{{ item.name }}</NuxtLink>
-							</div>
+					<!-- Navigation links -->
+					<div class="my-6 flex h-4/6">
+						<div class="flex flex-col justify-center nav-item space-y-2 py-6">
+							<NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="-mx-3 block rounded-lg py-4 px-4 text-4xl font-semibold" active-class="active">{{ item.name }}</NuxtLink>
+						</div>
 					</div>
 				</DialogPanel>
 			</Dialog>
