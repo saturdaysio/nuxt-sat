@@ -317,13 +317,15 @@
 
 <script setup  lang="ts">
 
-useHead({
-	title: 'Saturdays.io - Terms of Service',
-	meta: [
-		{ name: 'description', content: 'Saturdays.io Terms of Service' }
-	]
-})
+	useHead({
+		title: 'Saturdays.io - Terms of Service',
+		meta: [
+			{ name: 'description', content: 'Saturdays.io Terms of Service' }
+		]
+	})
+
 </script>
 
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>

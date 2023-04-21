@@ -47,7 +47,6 @@
 
 <script setup lang="ts">
 
-    // Page meta info
     useHead({
         title: 'Saturdays.io - Sign in',
         meta: [
@@ -55,7 +54,6 @@
             { name: 'keywords', content: 'Saturdays.io, Digital, Studio, Creative, Digital Studio, Creative Studio,' },
         ]
     })
-
 
 </script>
 

@@ -27,18 +27,20 @@
 
 
 <script setup lang="ts">
-defineProps(['error'])
 
-const handleClearError = () => clearError({ redirect: '/' })
+	defineProps(['error'])
 
-useHead({
-	title: 'Saturdays.io - Error',
-	meta: [
-		{ name: 'description', content: 'Error page' }
-	]
-})
+	const handleClearError = () => clearError({ redirect: '/' })
+
+	useHead({
+		title: 'Saturdays.io - Error',
+		meta: [
+			{ name: 'description', content: 'Error page' }
+		]
+	})
 
 </script>
 
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>

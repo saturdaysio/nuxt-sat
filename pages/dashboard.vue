@@ -23,7 +23,6 @@
 
 <script setup lang="ts">
 
-	// Page meta info
 	useHead({
 		title: 'Saturdays.io - Dashboard',
 		meta: [
@@ -31,11 +30,9 @@
 		]
 	})
 
-
 	definePageMeta({
 		middleware: ['auth']
 	})
-
 
 </script>
 

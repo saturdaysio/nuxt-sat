@@ -245,14 +245,15 @@
 
 <script setup lang="ts">
 
-useHead({
-	title: 'Saturdays.io - Privacy Policy',
-	meta: [
-		{ name: 'description', content: 'Saturdays.io Privacy Policy' }
-	]
-})
+	useHead({
+		title: 'Saturdays.io - Privacy Policy',
+		meta: [
+			{ name: 'description', content: 'Saturdays.io Privacy Policy' }
+		]
+	})
 
 </script>
 
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>
