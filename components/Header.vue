@@ -60,7 +60,7 @@
 			<!-- headline -->
 			<div class="mx-auto max-w-6xl py-32 sm:py-48 lg:py-56">
 				<div class="px-4 text-center">
-					<h1 class="text-4xl font-serif font-black tracking-tight text-white sm:text-6xl">{{ intro }}</h1>
+					<h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">{{ intro }}</h1>
 				</div>
 			</div>
 			<!-- highlight bottom right -->

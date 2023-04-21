@@ -1,4 +1,4 @@
-/* @type {import('tailwindcss/types').Config} */
+/** @type {import('tailwindcss/types').Config} */
 
 
 const defaultTheme = require("tailwindcss/defaultTheme");
@@ -22,9 +22,7 @@ module.exports = {
     "./assets/**/*.css",
     "./nuxt.config.{js,ts}",
   ],
-
   darkMode: "class", // or 'media' or 'class'
-
   theme: {
 
     screens: {
