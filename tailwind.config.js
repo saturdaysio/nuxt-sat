@@ -119,7 +119,6 @@ module.exports = {
     require("@tailwindcss/container-queries"),
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/forms"),
-    require("@tailwindcss/line-clamp"),
     require("@tailwindcss/typography"),
   ],
 };
