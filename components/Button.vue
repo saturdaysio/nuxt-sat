@@ -8,9 +8,11 @@
 
 
 <script setup lang="ts">
+
 	const props = defineProps({
 		cta: String
 	})
+
 </script>
 
 

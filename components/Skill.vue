@@ -19,36 +19,39 @@
 </template>
 
 <script lang="ts">
-import { useSkillStore } from "~~/store/skill";
 
-export default {
-	setup() {
-		const skillStore = useSkillStore()
-		return { skillStore }
+	import { useSkillStore } from "~~/store/skill";
+
+	export default {
+		setup() {
+			const skillStore = useSkillStore()
+			return { skillStore }
+		}
 	}
-}
+
 </script>
 
 <style lang="scss" scoped>
-.group {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	width: 25%;
-	flex-shrink: 0;
-}
-
-
-@media only screen and (max-width: 1023px) {
 	.group {
-		width: 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 25%;
+		flex-shrink: 0;
 	}
 
-}
 
-@media only screen and (max-width: 640px) {
-	.group {
-		width: 100%;
+	@media only screen and (max-width: 1023px) {
+		.group {
+			width: 50%;
+		}
+
 	}
-}
+
+	@media only screen and (max-width: 640px) {
+		.group {
+			width: 100%;
+		}
+	}
+
 </style>

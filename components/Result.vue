@@ -18,6 +18,7 @@
 
 
 <script lang="ts">
+
 	import { useResultStore } from "~~/store/result";
 
 
@@ -27,6 +28,7 @@
 			return { resultStore }
 		}
 	}
+
 </script>
 
 <style lang="scss" scoped>
