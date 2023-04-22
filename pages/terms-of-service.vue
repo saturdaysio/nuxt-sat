@@ -55,7 +55,7 @@
 					</p>
 
 					<div class="prose max-w-none">
-						<ol class="list-decimal">
+						<ol class="decimal">
 							<li>Violate any law regulation or other right that may be subject to any criminal or civil penalty.</li>
 							<li>Violate infringe or otherwise use the intellectual property rights of a third party without permission.</li>
 							<li>Violate or infringe on the publicity rights privacy rights or other rights of third parties.</li>
