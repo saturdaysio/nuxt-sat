@@ -4,10 +4,10 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
 const primary = colors.blue;
-const secondary = colors.pink;
+const secondary = colors.pink; // need to add
 const info = colors.purple;
-const warning = colors.orange;
-const success = colors.green;
+const warning = colors.orange; // need to add
+const success = colors.green; // need to add
 const error = colors.red;
 
 
@@ -22,7 +22,9 @@ module.exports = {
     "./assets/**/*.css",
     "./nuxt.config.{js,ts}",
   ],
-  darkMode: "class", // or 'media' or 'class'
+
+  darkMode: "class", // 'media' or 'class'
+
   theme: {
 
     screens: {
@@ -83,12 +85,12 @@ module.exports = {
     },
 
     fontFamily: {
-      sans: ['Poppins', 'Helvetica', 'sans-serif'],
+      sans: ['Poppins', 'Helvetica', 'Arial', 'sans-serif'],
       serif: ['Merriweather', 'Georgia', 'serif'],
     },
 
     fontSize: {
-      sm: ['0.875rem', '1.25rem'], // font-size: 14px, line-height: 20px | Can reformat in a different way
+      sm: ['0.875rem', '1.25rem'], // font-size: 14px, line-height: 20px
       base: ['1rem', '1.5rem'], // font-size: 16px, line-height: 24px
       xl: ['1.25rem', '2rem'], // font-size: 20px, line-height: 32px
       '2xl': ['1.5rem', '1.5'], // font-size: 24px, line-height: 36px
