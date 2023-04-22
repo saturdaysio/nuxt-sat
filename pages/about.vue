@@ -14,10 +14,8 @@
 					biggest mobile apps and digital brands looking to make a net-positive impact in the world.</p>
 				</div>
 				<div>
-				<p class="text-xl text-white">Our approach to building software
-					prioritizes accessibility user-centric design and inclusion. We research and generate ideas then
-					build test and iterate on them using real-world analytics and actionable KPIs. The emphasis on
-					data-driven design diversity user empathy and sustainability aren't buzzwords they're why we
+				<p class="text-xl text-white">Our approach to building software prioritizes accessibility, user-centric design, and inclusion. We research and generate ideas, then
+					build, test, and iterate on them using real-world analytics and actionable KPIs. The emphasis on data-driven design, diversity, user empathy, and sustainability aren't buzzwords they're why we
 					win.</p>
 				</div>
 			</div>
