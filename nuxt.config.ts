@@ -12,7 +12,7 @@ export default defineNuxtConfig({
                 { charset: "utf-8" },
                 { name: "viewport", content: "width=device-width, initial-scale=1" },
                 // <meta name="description" content="site description">
-                { name: 'description', content: 'Saturdays.io Canadian digital studio' },
+                { name: 'description', content: 'Saturdays.io - a Canadian digital studio' },
                 { name: 'keywords', content: 'Saturdays.io, Digital, Studio, Creative, Digital Studio, Creative Studio, UX, UI, Interaction, Product, Design, Development' },
             ],
             link: [
