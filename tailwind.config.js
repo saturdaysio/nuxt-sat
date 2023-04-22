@@ -85,7 +85,7 @@ module.exports = {
     },
 
     fontFamily: {
-      sans: ['Poppins', 'Helvetica', 'Arial', 'sans-serif'],
+      sans: ['Poppins', 'Helvetica', 'Arial', 'Verdana', 'sans-serif'],
       serif: ['Merriweather', 'Georgia', 'serif'],
     },
 
