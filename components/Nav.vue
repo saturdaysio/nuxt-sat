@@ -2,7 +2,7 @@
 	<nav class="relative">
 		<div class="fixed w-full px-4 z-50">
 			<header class="absolute inset-x-0 top-0 backdrop-blur bg-black-900/80 border-b border-white/10">
-			<nav class="flex items-center justify-between max-w-7xl mx-auto p-6" aria-label="Global">
+			<nav class="flex items-center justify-between max-w-7xl mx-auto px-6 py-4" aria-label="Global">
 				<div class="flex lg:flex-1">
 					<NuxtLink to="/" class="">
 						<span class="sr-only">Saturdays.io</span>
@@ -23,7 +23,7 @@
 			<!-- Mobile menu -->
 			<Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
 				<div class="fixed inset-0 z-50" />
-				<DialogPanel class="fixed inset-y-0 right-0 z-50 w-full h-full overflow-y-auto px-6 py-6 backdrop-blur bg-black-900/80">
+				<DialogPanel class="fixed inset-y-0 right-0 z-50 w-full h-full overflow-y-auto px-6 py-4 backdrop-blur bg-black-900/80">
 					<div class="flex items-center justify-between">
 						<NuxtLink to="/" class="">
 							<span class="sr-only">Saturdays.io</span>
