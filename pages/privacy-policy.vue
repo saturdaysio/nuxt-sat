@@ -1,7 +1,7 @@
 <template>
 	<div>
 
-		<NavBar />
+		<Nav />
 
 		<section id="legal" class="mx-auto px-4 py-16 bg-black-900">
 			<div class="container lg:max-w-4xl mx-auto">

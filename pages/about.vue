@@ -1,6 +1,8 @@
 <template>
 	<div>
 
+		<Nav />
+
 		<Header intro="We bridge the gap between design and technology" />
 
 		<section id="ethics" class="w-full mx:auto px-4 py-16 bg-black-900">
