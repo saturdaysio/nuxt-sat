@@ -3,7 +3,7 @@
 
 		<Nav />
 
-		<section class="container lg:max-w-5xl mx-auto px-8">
+		<main class="container lg:max-w-5xl mx-auto px-8">
 			<div class="flex flex-col justify-center">
 				<div class="mb-8">
 					<div class="text-center pb-2">
@@ -18,7 +18,7 @@
 					<Button :cta="'Go Home'" class="button cta" @click="handleClearError" />
 				</div>
 			</div>
-		</section>
+		</main>
 
 		<Footer />
 
