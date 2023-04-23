@@ -3,7 +3,7 @@
 
 		<Nav />
 
-		<main id="legal" class="mx-auto px-4 py-16 bg-black">
+		<main id="content" class="mx-auto px-4 py-16 bg-black">
 			<article class="container lg:max-w-4xl mx-auto">
 				<div class="mt-24 pb-8">
 					<h1 class="text-4xl lg:text-6xl font-bold text-grad-01">Privacy Policy</h1>
