@@ -1,5 +1,5 @@
 <template>
-	<div class="bg-black-900">
+	<div class="bg-black">
 
 		<div class="relative isolate overflow-hidden pt-14">
 

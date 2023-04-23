@@ -3,7 +3,7 @@
 		<div class="fixed w-full px-4 z-20">
 			<div class="lg:container flex flex-row items-center justify-between mx-auto">
 
-				<div class="nav w-full flex items-center justify-between mx-auto backdrop-blur bg-black-900/80 border-b border-white/10">
+				<div class="nav w-full flex items-center justify-between mx-auto backdrop-blur bg-black/80 border-b border-white/10">
 					<!-- Header logo -->
 					<div id="logo" class="">
 						<NuxtLink to="/" class="text-md font-black inline-block">
@@ -48,7 +48,7 @@
 				</transition>
 
 				<!-- Drawer Menu -->
-				<aside class="transform top-0 left-0 w-full h-full fixed overflow-auto backdrop-blur bg-black-900/70 z-20" :class="isOpen ? 'translate-x-0' : '-translate-x-full'">
+				<aside class="transform top-0 left-0 w-full h-full fixed overflow-auto backdrop-blur bg-black/80 z-20" :class="isOpen ? 'translate-x-0' : '-translate-x-full'">
 					<div class="flex flex-col h-full justify-between">
 
 							<div class="nav flex items-center justify-between p-4 z-50">
