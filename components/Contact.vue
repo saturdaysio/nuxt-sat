@@ -1,39 +1,20 @@
 <template>
-    <section id="cta" class=" mb-0">
-        <div class="container py-6">
-            <div class="pb-6">
-                <h1 class="is-size-2 is-size-3-mobile has-text-centered has-text-weight-bold has-text-white">Have an interesting project?</h1>
-            </div>
-            <div class="level is-centered">
-                <div class="level-item mb-6">
-                    <NuxtLink to="mailto:support@saturdyas.io">
-                        <button class="button is-link is-large">
-                            <p class="is-size-4"><strong>Let's talk</strong></p>
-                        </button>
-                    </NuxtLink>
-                </div>
-            </div>
-        </div>
-    </section>
+	<div class="bg-black">
+		<div class="py-24 px-6 sm:px-6 sm:py-32 lg:px-8">
+			<div class="mx-auto max-w-2xl text-center">
+				<h2 class="text-3xl font-bold tracking-tight text-white sm:text-5xl">Have an interesting project?</h2>
+				<div class="mt-8 flex items-center justify-center gap-x-6">
+					<Button :cta="'Say Hello'" class="button primary" :to="'mailto:hello@saturdays.io'" rel="noreferrer" target="_blank" />
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
 
-<script lang="ts">
+
+<script setup lang="ts">
 </script>
 
+
 <style lang="scss" scoped>
-@import '~/assets/styles/_variables.scss';
-
-.button.is-link {
-    color: $white;
-    background: none;
-    border-image: linear-gradient(120deg, rgba(248,12,128), rgba(60,120,244)) 1;
-    border-width: 0.20rem;
-    border-style: solid;
-    padding: 2.25rem;
-
-    &:hover {
-        color: $blue;
-        background: none;
-    }
-}
 </style>

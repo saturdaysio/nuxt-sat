@@ -1,15 +1,23 @@
 <template>
-  <section class="container mt-6 py-6 px-4">
-    <div class="content my-6 is-medium">
-      <h1 class="is-size-1 has-text-centered has-text-white">
-        Saturdays is a Canadian digital studio based in Toronto
-      </h1>
-    </div>
-  </section>
+	<section class="w-full mx-auto px-4 py-16 bg-black">
+		<div class="container lg:max-w-6xl my-24 mx-auto">
+			<h1 class="text-4xl lg:text-6xl text-center font-bold text-white">
+				{{ text }}
+			</h1>
+			<!-- Add z-index and bg svg component -->
+		</div>
+	</section>
 </template>
 
-<script lang="ts">
+
+<script setup lang="ts">
+
+	const props = defineProps({
+		text: String,
+	})
+
 </script>
 
-<style>
+
+<style lang="scss">
 </style>

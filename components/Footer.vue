@@ -1,47 +1,38 @@
 <template>
-    <footer class="footer has-background-black">
-        <div class="level is-mobile">
-            <div class="level-left">
-                <div class="copyright pl-2">
-                    <p class="">
-                        <strong class="has-text-white">&#169; 2016-2022 Saturdays.io Inc</strong>
-                    </p>
-                </div>
-            </div>
-            <div class="level-left is-mobile">
-                <div class="navbar-item">
-                    <NuxtLink to="/tos" active-class="active">
-                        <strong>Terms</strong>
-                    </NuxtLink>
-
-                </div>
-                <div class="navbar-item">
-                    <NuxtLink to="/privacy" active-class="active">
-                        <strong>Privacy</strong>
-                    </NuxtLink>
-                </div>
-            </div>
-        </div>
-    </footer>
+	<footer class="bg-black">
+		<div class="mx-auto max-w-7xl overflow-hidden py-20 px-6 sm:py-24 lg:px-8">
+			<nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
+				<div v-for="item in navigation.main" :key="item.name" class="nav-item pb-6">
+					<NuxtLink :to="item.to" class="text-base leading-6 text-white">{{ item.name }}</NuxtLink>
+				</div>
+			</nav>
+			<p class="mt-10 text-center text-md leading-5 text-gray-500">&copy; 2016 - 2023 Saturdays.io All rights reserved.</p>
+		</div>
+	</footer>
 </template>
+  
+<script setup lang="ts">
 
-<script lang="ts">
+	import { defineComponent, h } from 'vue'
+
+	const navigation = {
+		main: [
+			{ name: 'Work', to: '/' },
+			{ name: 'About', to: '/about' },
+			{ name: 'Terms of Service', to: '/terms-of-service' },
+			{ name: 'Privacy Policy', to: '/privacy-policy' },
+		],
+	}
+
 </script>
 
+
 <style lang="scss" scoped>
-@import '~/assets/styles/_variables.scss';
 
-.footer {
-    padding: 3rem 0.75rem;
-}
-
-.navbar-item {
-    color: $blue;
-
-    &:hover {
-        background: none;
-        color: $blue;
-    }
-}
+	a {
+		&:hover, &:focus {
+			text-decoration: none;
+  		}
+	}
 
 </style>

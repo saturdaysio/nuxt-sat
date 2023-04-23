@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+@import "~/assets/styles/button.scss";
+@import "~/assets/styles/colour.scss";
+@import "~/assets/styles/font.scss";
+
+
+// HTML, body, global elements
+
+  body {
+    background: $black;
+  }
+
+
+
+
+// Tailwind Typography Overrides
+
+  p, li {
+    color: $gray;
+  }
+
+  .text-category {
+    @apply text-xl font-bold text-white pb-2;
+  }
+
+  .text-purple-pink {
+    @apply text-3xl lg:text-5xl text-center font-bold text-grad-01;
+  }
+
+
+
+
+/* Hyperlinks */
+/* Break off into its own file - 01/01/2023 */
+
+  a {
+    color: $blue;
+  }
+
+  .nav-item {
+    border: 0;
+
+    a:hover {
+      background: none;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      opacity: 0.60;
+      -webkit-transition: all .4s ease;
+      -moz-transition: all .4s ease;
+      transition: all .4s ease;
+    }
+    
+    .active {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+  }

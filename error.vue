@@ -7,10 +7,10 @@
 			<div class="flex flex-col justify-center">
 				<div class="mb-8">
 					<div class="text-center pb-2">
-						<h1 class="text-4xl font-bold text-grad-01">Page not found</h1>
+						<h1 class="text-4xl font-bold text-grad-01">ERROR {{ error.statusCode }}</h1>
 					</div>
 					<div class="text-center">
-						<p class="text-xl text-white">The page you are looking for does not exist.</p>
+						<p class="text-xl text-white">{{ error.message }}</p>
 					</div>
 				</div>
 
@@ -33,9 +33,9 @@
 	const handleClearError = () => clearError({ redirect: '/' })
 
 	useHead({
-		title: 'Saturdays.io - 404 Page not found',
+		title: 'Saturdays.io - Error',
 		meta: [
-			{ name: 'description', content: '404 page not found' }
+			{ name: 'description', content: 'Error page' }
 		]
 	})
 

@@ -1,60 +1,53 @@
 <template>
-    <section id="clients" class="container my-6 py-6 px-4">
-        <div class="content has-text-centered mt-6">
-            <h1 class="is-size-2 is-size-3-mobile has-text-centered has-text-weight-bold text-gradient-blue-red-dark">We partner with brands brave
-                enough to do things differently.</h1>
-        </div>
+	<div class="bg-black py-24 sm:py-32">
+	  <div class="mx-auto max-w-6xl px-4">
+		<div class="pb-8">
+			<h1 class="text-3xl lg:text-5xl text-center font-bold text-grad-01">We partner with brands brave enough to do things differently.</h1>
+		</div>
 
-        <div id="grid" class="is-flex is-flex-wrap-wrap">
-            <div class="customClass" v-for="item in clientStore.clientJson.clients" :key="item.id">
-                <figure class="image is-128x128">
-                    <img :src="item.imgSrc" :alt="item.imgAlt" :width="item.width" :height="item.height">
-                </figure>
-            </div>
-        </div>
+		<div id="grid" class=" grid grid-cols-2 gap-4 overflow-hidden sm:mx-0 md:grid-cols-3 lg:grid-cols-4">
+		  <div class="logo" v-for="item in clientStore.clientJson.clients" :key="item.id">
+			<figure>
+				<img class="w-36 h-36" :src="item.imgSrc" :alt="item.imgAlt" loading="lazy" :width="item.width" :height="item.height">
+			</figure>
+		  </div>
 
-    </section>
-</template>
+		</div>
+	  </div>
+	</div>
+  </template>
+
 
 <script lang="ts">
-import { useClientStore } from "~/store/client";
 
-export default {
-    setup() {
-        const clientStore = useClientStore()
+	import { useClientStore } from "~~/store/client";
 
-        return { clientStore }
-    }
-}
+	export default {
+		setup() {
+			const clientStore = useClientStore()
+			return { clientStore }
+		}
+	}
 
 </script>
 
 <style lang="scss" scoped>
-.customClass {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 25%;
-    flex-shrink: 0;
-    padding: 0 2rem;
-
-    .image {
-        display: inherit;
-    }
-}
+	.logo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		padding: 0 2rem;
+	}
 
 
-@media only screen and (max-width: 800px) {
-    .customClass {
-        width: 33.33%;
-    }
+	@media only screen and (max-width: 800px) {
 
-}
+	}
 
-@media only screen and (max-width: 640px) {
-    .customClass {
-        width: 50%;
-        padding: 0 1rem;
-    }
-}
+	@media only screen and (max-width: 640px) {
+		.logo {
+			padding: 0 1rem;
+		}
+	}
 </style>

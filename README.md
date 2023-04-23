@@ -1,41 +1,28 @@
-### nuxt3 portfolio boilerplate
+Copyright (c) 2016 - 2023 Saturdays.io Inc. All rights reserved.
 
-#### nuxt v3, bulma css, pinia
-
-### Built With
-
-* Nuxt 3
-* Pinia
-* Bulma.io
-* SCSS
+## Saturdays 2023 microsite
 
 
-
-<!-- GETTING STARTED -->
 ## Getting Started
 
 To get a local copy up and running follow these steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+Make sure to install the dependencies:
 * npm
   ```sh
   npm install
   ```
 
-This is an example of how to list things you need to run the repo in a development environment.
+Start the development server on http://localhost:3000
 * npm
   ```sh
-  nuxt dev
+  npm run dev
   ```
 
-This is an example of how to list things you need to use the software and how to build the project.
+Build the application for production.
 * npm
   ```sh
-  nuxt build
+  npm run build
   ```
-
-
-
-### License

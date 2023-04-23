@@ -1,13 +1,13 @@
 <template>
-    <div>
-        <Nav />
-        <Hero />
-        <Footer />
-    </div>
+	<div>
+		<NavBar />
+		<Nuxt />
+		<Footer />
+	</div>
 </template>
 
 
-<script lang="ts">
+<script>
 </script>
 
 

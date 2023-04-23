@@ -1,79 +1,58 @@
 <template>
-    <div>
+	<div>
 
-        <Head>
-            <Title>Saturdays.io - 2022</Title>
-            <Meta name="description" content="Saturdays.io - Toronto based digital studio" />
-        </Head>
+		<Nav />
 
-        <Nav />
+		<Header intro="Saturdays is a Canadian digital studio based in Toronto" />
 
-        <Hero />
+		<section class="w-full mx-auto px-4 py-16 bg-black">
+			<div class="container lg:max-w-6xl mx-auto my-8">
+				<h1 class="text-purple-pink">
+					We're a Data-driven digital studio that focuses on the Design, Development and Strategy of digital products.
+				</h1>
+			</div>
+		</section>
 
-        <section class="container my-6 py-6 px-4">
-            <div class="content is-medium">
-                <h1 class="is-size-2 is-size-3-mobile has-text-centered has-text-weight-bold text-gradient-blue-red-dark">
-                    We're a Data-driven digital studio that focuses on the Design, Development, and Strategy of digital
-                    products.
-                </h1>
-            </div>
-        </section>
+		<Skill />
 
-        <Skill />
+		<section id="preview" class="w-full mx-auto px-4 pt-16 bg-black">
+			<div class="container mx-auto mt-8">
+				<div class="pb-8">
+					<h1 class="text-purple-pink">
+						What we're making
+					</h1>
+				</div>
+				<div class="lg:max-w-7xl mx-auto">
+					<picture>
+						<source type="image/webp" srcset="~/assets/img/mobile.webp">
+						<source type="image/png" srcset="~/assets/img/mobile.png">
+						<img src="~/assets/img/mobile.png" alt="Mobile app interfaces" draggable="false" loading="lazy" width="1600" height="1000">
+					</picture>
+				</div>
+			</div>
+		</section>
 
-        <section id="preview" class="container my-6 py-6 px-4 has-background-black">
-            <div class="columns">
-                <div class="column">
-                    <div class="box has-background-black">
-                        <div class="pb-2">
-                            <h1 class="is-size-2 has-text-centered has-text-weight-bold has-text-white">
-                                What we're making
-                            </h1>
-                        </div>
-                        <div class="media">
-                            <picture>
-                                <source type="image/webp" srcset="~/assets/img/mobile.webp">
-                                <source type="image/png" srcset="~/assets/img/mobile.png">
-                                <img src="~/assets/img/mobile.webp" alt="RENAME." draggable="false" width="1600"
-                                    height="1000">
-                            </picture>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+		<Result />
 
-        <Result />
+		<Contact />
 
-        <Contact />
+		<Footer />
 
-        <Footer />
-
-    </div>
+	</div>
 </template>
 
 
-<script lang="ts" setup>
+<script setup lang="ts">
+
+	useHead({
+		title: 'Saturdays.io - Digital studio',
+		meta: [
+			{ name: 'description', content: 'Saturdays.io, Toronto based digital studio' }
+		]
+	})
+
 </script>
 
 
-<style lang="scss" scoped>
-@import '~/assets/styles/_variables.scss';
-
-.tag:not(body).is-success {
-    background-color: #1CD0A0;
-    color: $black;
-}
-
-.button.is-link {
-    color: $navy;
-    background: none;
-    border-color: $navy;
-
-    &:hover {
-        color: $blue;
-        background: none;
-        border-color: $blue;
-    }
-}
+<style lang="scss">
 </style>
