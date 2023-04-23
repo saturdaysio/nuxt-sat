@@ -3,34 +3,34 @@
 
 		<Nav />
 
-		<section id="legal" class="mx-auto px-4 py-16 bg-black">
-			<div class="container lg:max-w-4xl mx-auto">
+		<main id="legal" class="mx-auto px-4 py-16 bg-black">
+			<article class="container lg:max-w-4xl mx-auto">
 				<div class="mt-24 pb-8">
 					<h1 class="text-4xl lg:text-6xl font-bold text-grad-01">Privacy Policy</h1>
 					<p class="text-xl text-white">Last updated: Jan 25 2022</p>
 				</div>
-				<div id="definition" class="py-8">
-					<p>
+
+				<section id="definition" class="py-8">
+					<p class="">
 						Saturdays.io Inc. (“our” “we” or “us”) takes your (“you” “your” or the “User”) privacy seriously. We
 						may collect use and share some of your personal information. This Privacy Policy is a guide to explain
 						how we do that and your rights as a User. This Privacy Policy forms part of our Terms of Service available at
 						<NuxtLink to="/terms-of-service">https://saturdays.io/terms-of-service</NuxtLink>
 					</p>
+				</section>
 
-				</div>
-
-				<div id="use-of-services" class="py-8">
+				<section id="use-of-services" class="py-8">
 					<h1 class="text-category">
 						1. Policy Scope
 					</h1>
-					<p>
+					<p class="">
 						This Privacy Policy covers our treatment of your personally identifiable information and any other
 						information you may provide us when using our applications websites content features products or other services
 						(referred to herein as the “Services”).
 					</p>
-				</div>
+				</section>
 
-				<div id="info-collected" class="py-8">
+				<section id="info-collected" class="py-8">
 					<h1 class="text-category">
 						2. Information We Collect
 					</h1>
@@ -42,7 +42,7 @@
 					</p>
 
 					<div class="prose max-w-none">
-						<ul class="list-disc">
+						<ul class="list-outside list-disc">
 							<li>Information You Provide Us: Name mailing address phone number email address contact
 								preferences device identifiers IP address location information credit card information and profile information
 								where the contact is via social media.</li>
@@ -53,9 +53,9 @@
 						</ul>
 					</div>
 
-				</div>
+				</section>
 
-				<div id="how-we-use-info" class="py-8">
+				<section id="how-we-use-info" class="py-8">
 					<h1 class="text-category">
 						3. How We Use the Information We Collect
 					</h1>
@@ -64,7 +64,7 @@
 					</p>
 
 					<div class="prose max-w-none">
-						<ul class="list-disc pb-4">
+						<ul class="list-outside list-disc pb-4">
 							<li>Improve Service functionality and efficiency</li>
 							<li>Provide maintain and improve our Services</li>
 							<li>Provide assistance to users</li>
@@ -77,14 +77,13 @@
 						</ul>
 					</div>
 
-
-					<p>
+					<p class="">
 						In the event that we determine we need to use your personal information for a reason not included in
 						this Privacy Policy we will ask for your consent first.
 					</p>
-				</div>
+				</section>
 
-				<div id="share-info" class="py-8">
+				<section id="share-info" class="py-8">
 					<h1 class="text-category">
 						4. Sharing Information
 					</h1>
@@ -97,7 +96,7 @@
 					</p>
 
 					<div class="prose max-w-none">
-						<ul class="list-disc">
+						<ul class="list-outside list-disc">
 							<li>If a government body requests information and we deemed it to be necessary to disclose such
 								information in order to comply with applicable laws and legal processes;</li>
 							<li>To cooperate with law enforcement or other government authorities as it relates to any
@@ -109,9 +108,9 @@
 							<li>At any time that you consent to such sharing.</li>
 						</ul>
 					</div>
-				</div>
+				</section>
 
-				<div id="control-info" class="py-8">
+				<section id="control-info" class="py-8">
 					<h1 class="text-category">
 						5. Controlling Your Information
 					</h1>
@@ -125,7 +124,7 @@
 							to="mailto:support@saturdays.io" rel="noreferrer" target="_blank">support [at] saturdays.io
 						</NuxtLink>
 					</p>
-					<p>
+					<p class="">
 						Even in the event that we delete your personal information we still may retain some information for
 						legitimate business purposes such as maintenance of security of the Services or to comply with
 						applicable laws or regulations depending on the circumstances of such deletion. You understand and agree that we may
@@ -133,77 +132,77 @@
 						information if there is the possibility of any unsafe or illegal behavior to ensure the Services are
 						not exploited in the future.
 					</p>
-				</div>
+				</section>
 
-				<div id="do-not-track" class="py-8">
+				<section id="do-not-track" class="py-8">
 					<h1 class="text-category">
 						6. Do Not Track
 					</h1>
-					<p>
+					<p class="">
 						We do not track our Users over time and across third party websites and therefore our Services do
 						not respond to Do Not Track signals.
 					</p>
-				</div>
+				</section>
 
-				<div id="gdpr" class="py-8">
+				<section id="gdpr" class="py-8">
 					<h1 class="text-category">
 						7. GDPR
 					</h1>
-					<p>
+					<p class="">
 						We do not collect “personal data” about or monitor behavior of “data subjects” as those terms are
 						defined in GDPR Art. 4(1). We do not “target” individuals in the EEU.
 					</p>
-				</div>
+				</section>
 
-				<div id="age-restrictions" class="py-8">
+				<section id="age-restrictions" class="py-8">
 					<h1 class="text-category">
 						8. Age Restrictions
 					</h1>
-					<p>
+					<p class="">
 						We do not knowingly collect or solicit the personal information of anyone under the age of 13 even
 						with a parent or guardian's consent. Our services are not intended for children and in the event that we
 						determine that a person under 13 has provided personal information we will delete that information immediately.
 					</p>
-				</div>
+				</section>
 
-				<div id="do-not-track" class="py-8">
+				<section id="do-not-track" class="py-8">
 					<h1 class="text-category">
 						9. Changes to this Privacy Policy
 					</h1>
-					<p>
+					<p class="">
 						We may update this Privacy Policy from time to time as necessary based on changes to our company our
 						Services or to applicable laws. In the event that we do update this Privacy Policy such changes will
 						be made online. You will be notified of any material changes through the Services or e-mail. Your use of the
 						Services means that you are agreeing to the most recently updated Privacy Policy and Terms of Service.
 					</p>
-				</div>
+				</section>
 
-				<div id="assignment" class="py-8">
+				<section id="assignment" class="py-8">
 					<h1 class="text-category">
 						10. Assignment Change of Control and Transfer
 					</h1>
-					<p>
+					<p class="">
 						All of our rights and obligations pursuant to this Privacy Policy are freely assignable by us to any
 						of our affiliates in connection with a merger acquisition restructuring or sale of assets or by operation
 						of law or otherwise and we may transfer your information to any of our affiliates successor entities or a
 						new owner.
 					</p>
-				</div>
+				</section>
 
-				<div id="contact-us" class="py-8">
-				<h1 class="text-category">
-					11. Contact Us
-				</h1>
-				<p>
-					For any questions or concerns that you may have regarding this Privacy Policy please contact us at
-					<NuxtLink to="mailto:support@saturdays.io" rel="noreferrer" target="_blank">support [at]
-						saturdays.io</NuxtLink>
-				</p>
-			</div>
-		</div>
-	</section>
+				<section id="contact-us" class="py-8">
+					<h1 class="text-category">
+						11. Contact Us
+					</h1>
+					<p class="">
+						For any questions or concerns that you may have regarding this Privacy Policy please contact us at
+						<NuxtLink to="mailto:support@saturdays.io" rel="noreferrer" target="_blank">support [at]
+							saturdays.io</NuxtLink>
+					</p>
+				</section>
+			</article>
+		</main>
 
-	<Footer />
+		<Footer />
 
 	</div>
 </template>
