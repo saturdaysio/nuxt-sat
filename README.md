@@ -5,7 +5,12 @@ Copyright (c) 2016 - 2023 Saturdays.io Inc. All rights reserved.
 
 ### Getting Started
 
-To get a local copy up and running follow these steps.
+Nuxt 3
+Pinia
+Tailwindcss
+Postcss
+Purgecss
+
 
 #### Prerequisites
 
