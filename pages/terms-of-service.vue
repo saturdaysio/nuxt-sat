@@ -11,12 +11,14 @@
 				</div>
 
 				<section id="definition" class="py-8">
-					<p class="text-gray-200 pb-4">
-						Saturdays.io Inc. (“our” “we” or “us”) offers you access to mobile applications websites and
-						real-time API services. These Terms of Service (“Terms”) apply to you as a user (“you” or “User”) and create a
-						legal binding contract between you and us regarding your access to or use of our applications websites
-						content features products or other services (collectively “Services”).
-					</p>
+					<div>
+						<p class="text-gray-200 pb-4">
+							Saturdays.io Inc. (“our” “we” or “us”) offers you access to mobile applications websites and
+							real-time API services. These Terms of Service (“Terms”) apply to you as a user (“you” or “User”) and create a
+							legal binding contract between you and us regarding your access to or use of our applications websites
+							content features products or other services (collectively “Services”).
+						</p>
+					</div>
 					<p class="text-gray-200 pb-4">
 						Please read these Terms carefully. Your access to and use of the Services are impacted by these
 						Terms and if you do not agree to any of these Terms you may not access or use the Services.
