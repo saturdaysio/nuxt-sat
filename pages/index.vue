@@ -5,7 +5,7 @@
 
 		<Header intro="Saturdays is a Canadian digital studio based in Toronto" />
 
-		<section class="w-full mx-auto px-4 py-16 bg-black-900">
+		<section class="w-full mx-auto px-4 py-16 bg-black">
 			<div class="container lg:max-w-6xl mx-auto my-8">
 				<h1 class="text-purple-pink">
 					We're a Data-driven digital studio that focuses on the Design, Development and Strategy of digital products.
@@ -15,7 +15,7 @@
 
 		<Skill />
 
-		<section id="preview" class="w-full mx-auto px-4 pt-16 bg-black-900">
+		<section id="preview" class="w-full mx-auto px-4 pt-16 bg-black">
 			<div class="container mx-auto mt-8">
 				<div class="pb-8">
 					<h1 class="text-purple-pink">

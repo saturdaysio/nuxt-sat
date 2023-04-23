@@ -8,7 +8,7 @@
             <div class="">
                 <form
                     @submit.prevent=""
-                    class="rounded px-6 py-8 bg-black-500">
+                    class="rounded px-6 py-8 bg-black">
 
                     <h1 class="text-3xl lg:text-4xl text-center font-bold text-grad-01 pb-8">
                         Sign in
