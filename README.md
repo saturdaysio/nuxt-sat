@@ -3,11 +3,11 @@ Copyright (c) 2016 - 2023 Saturdays.io Inc. All rights reserved.
 ## Saturdays 2023 microsite
 
 
-## Getting Started
+### Getting Started
 
 To get a local copy up and running follow these steps.
 
-### Prerequisites
+#### Prerequisites
 
 Make sure to install the dependencies:
 * npm
