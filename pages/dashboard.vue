@@ -3,7 +3,7 @@
 
 		<Nav />
 
-		<section class="w-full mx-auto px-4 py-16 bg-black-900">
+		<section class="w-full mx-auto px-4 py-16 bg-black">
 			<div class="lg:container mx-auto my-8">
 				<div class="pb-8">
 					<span class="text-white">Logged in</span>
