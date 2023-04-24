@@ -37,7 +37,7 @@
 					<!-- Navigation links -->
 					<div class="my-6 flex h-4/6">
 						<div class="flex flex-col justify-center nav-item space-y-2 py-6">
-							<NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="-mx-3 block rounded-lg py-4 px-4 text-5xl font-black uppercase text-white" active-class="active">{{ item.name }}</NuxtLink>
+							<NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="-mx-3 block rounded-lg py-4 px-4 text-4xl font-black uppercase text-white" active-class="active">{{ item.name }}</NuxtLink>
 						</div>
 					</div>
 				</DialogPanel>
