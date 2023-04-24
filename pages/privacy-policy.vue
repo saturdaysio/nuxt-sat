@@ -52,14 +52,13 @@
 					</div>
 
 					<div class="prose max-w-none">
-						<ul class="list-outside list-disc">
+						<ul class="list-disc list-outside">
 							<li>Information You Provide Us: Name mailing address phone number email address contact
 								preferences device identifiers IP address location information credit card information and profile information
 								where the contact is via social media.</li>
 							<li>Information We Collect from Users of our Services: Name mailing address Phone number Email
 								address Contact preferences Device identifiers IP address and location information.</li>
-							<li>Information We Collect from Third Parties: We don't collect information from third parties.
-							</li>
+							<li>Information We Collect from Third Parties: We don't collect information from third parties.</li>
 						</ul>
 					</div>
 				</section>
@@ -78,7 +77,7 @@
 					</div>
 
 					<div class="prose max-w-none">
-						<ul class="list-outside list-disc pb-4">
+						<ul class="list-disc list-outside pb-4">
 							<li>Improve Service functionality and efficiency</li>
 							<li>Provide maintain and improve our Services</li>
 							<li>Provide assistance to users</li>
@@ -112,7 +111,7 @@
 					</p>
 
 					<div class="prose max-w-none">
-						<ul class="list-outside list-disc">
+						<ul class="list-disc list-outside">
 							<li>If a government body requests information and we deemed it to be necessary to disclose such
 								information in order to comply with applicable laws and legal processes;</li>
 							<li>To cooperate with law enforcement or other government authorities as it relates to any
