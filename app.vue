@@ -4,24 +4,6 @@
 
 
 <script setup lang="ts">
-
-	const route = useRoute();
-	const firstVisit = ref(true);
-
-	watch(
-		route,
-		(n) => {
-			if (process.client) {
-				if (firstVisit.value) {
-					firstVisit.value = false;
-					return;
-				}
-				window.scrollTo({ top: 0, behavior: "smooth" });
-			}
-		},
-		{ deep: true, immediate: true }
-	);
-
 </script>
 
 
@@ -29,13 +11,29 @@
 
 	.page-enter-active,
 	.page-leave-active {
-		transition: all 0.4s;
+		transition: all 0.3s;
 	}
 
 	.page-enter-from,
 	.page-leave-to {
 		opacity: 0;
-		transition: all 0.4s;
+		transition: all 0.3s;
 	}
+
+	.fade-leave-to,
+	.fade-enter-from {
+		opacity: 0;
+	}
+
+	.fade-leave-from,
+	.fade-enter-to {
+		opacity: 1;
+	}
+
+	.fade-leave-active,
+	.fade-enter-active {
+		transition: opacity 0.3s;
+	}
+
 
 </style>
