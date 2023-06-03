@@ -30,7 +30,10 @@
 			</div>
 		</section>
 
+		
 		<Result />
+
+		<Client />
 
 		<Contact />
 
