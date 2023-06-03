@@ -35,7 +35,7 @@
 					<ul role="list" class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4">
 						<li v-for="person in team" :key="person.name">
 							<img class="aspect-[1/1] w-full rounded-md object-cover" :src="person.imageUrl" alt="pfp" draggable="false" loading="lazy" />
-							<h3 class="mt-2 text-xl md:text-2xl font-bold leading-8 text-white">{{ person.name }}</h3>
+							<h2 class="mt-2 text-xl md:text-2xl font-bold leading-8 text-white">{{ person.name }}</h2>
 							<p class="text-base md:text-lg text-gray-300">{{ person.role }}</p>
 							<p class="text-sm md:text-base text-gray-500">{{ person.location }}</p>
 						</li>
