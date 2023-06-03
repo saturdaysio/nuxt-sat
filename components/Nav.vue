@@ -4,7 +4,7 @@
 			<header class="absolute inset-x-0 top-0 backdrop-blur bg-black/80 border-b border-white/10">
 			<nav class="flex items-center justify-between max-w-7xl mx-auto px-6 py-4" aria-label="Global">
 				<div class="flex lg:flex-1">
-					<NuxtLink to="/" class="">
+					<NuxtLink to="/" class="focus:ring-0 focus:ring-transparent">
 						<span class="sr-only">Saturdays.io</span>
 						<img class="h-8 w-8" src="@/assets/img/logo.svg" alt="Saturdays.io logo" width="32px" height="32px" />
 					</NuxtLink>
@@ -25,7 +25,7 @@
 				<div class="fixed inset-0 z-50" />
 				<DialogPanel class="fixed inset-y-0 right-0 z-50 w-full h-full overflow-y-auto px-6 py-4 backdrop-blur bg-black/60">
 					<div class="flex items-center justify-between">
-						<NuxtLink to="/" class="border-none focus:ring-0">
+						<NuxtLink to="/" class="focus:ring-0 focus:ring-transparent">
 							<span class="sr-only">Saturdays.io</span>
 							<img class="h-8 w-8" src="@/assets/img/logo.svg" alt="Saturdays.io logo" width="32px" height="32px" />
 						</NuxtLink>
