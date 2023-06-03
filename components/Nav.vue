@@ -21,11 +21,21 @@
 			</nav>
 
 			<!-- Mobile menu -->
+			<TransitionRoot
+				:show="mobileMenuOpen"
+				as="template"
+				enter="duration-300 ease-out"
+				enter-from="opacity-0"
+				enter-to="opacity-100"
+				leave="duration-200 ease-in"
+				leave-from="opacity-100"
+				leave-to="opacity-0"
+			>
 			<Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
 				<div class="fixed inset-0 z-50" />
 				<DialogPanel class="fixed inset-y-0 right-0 z-50 w-full h-full overflow-y-auto px-6 py-4 backdrop-blur bg-black/60">
 					<div class="flex items-center justify-between">
-						<NuxtLink to="/" class="focus:ring-0 focus:ring-transparent">
+						<NuxtLink to="/" class="focus:outline-none">
 							<span class="sr-only">Saturdays.io</span>
 							<img class="h-8 w-8" src="@/assets/img/logo.svg" alt="Saturdays.io logo" width="32px" height="32px" />
 						</NuxtLink>
@@ -42,6 +52,7 @@
 					</div>
 				</DialogPanel>
 			</Dialog>
+			</TransitionRoot>
 		</header>
 		</div>
 	</nav>
@@ -51,7 +62,7 @@
 <script setup lang="ts">
 
 	import { ref } from 'vue'
-	import { Dialog, DialogPanel } from '@headlessui/vue'
+	import { TransitionRoot, Dialog, DialogPanel } from '@headlessui/vue'
 	import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 
 	const navigation = [
