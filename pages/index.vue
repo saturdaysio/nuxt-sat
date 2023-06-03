@@ -16,7 +16,7 @@
 		<section id="preview" class="w-full mx-auto px-4 py-16 bg-black">
 			<div class="container mx-auto mt-8">
 				<div class="pb-8">
-					<h1 class="text-3xl md:text-4xl lg:text-5xl text-purple-pink">
+					<h1 class="text-4xl md:text-5xl lg:text-6xl text-purple-pink">
 						What we're making
 					</h1>
 				</div>

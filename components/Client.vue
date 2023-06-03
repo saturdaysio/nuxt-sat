@@ -2,7 +2,7 @@
 	<div class="bg-black py-24 sm:py-32">
 	  <div class="mx-auto max-w-6xl px-4">
 		<div class="pb-8">
-			<h1 class="text-3xl lg:text-5xl text-center font-bold text-grad-01">We partner with brands brave enough to do things differently.</h1>
+			<h1 class="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-grad-01">We partner with brands brave enough to do things differently.</h1>
 		</div>
 
 		<div id="grid" class=" grid grid-cols-2 gap-4 overflow-hidden sm:mx-0 md:grid-cols-3 lg:grid-cols-4">
