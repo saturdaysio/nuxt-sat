@@ -29,10 +29,10 @@
 							<span class="sr-only">Saturdays.io</span>
 							<img class="h-8 w-8" src="@/assets/img/logo.svg" alt="Saturdays.io logo" width="32px" height="32px" />
 						</NuxtLink>
-							<button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-400" @click="mobileMenuOpen = false">
-								<span class="sr-only">Close menu</span>
-								<XMarkIcon class="h-6 w-6" aria-hidden="true" />
-							</button>
+						<button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-400" @click="mobileMenuOpen = false">
+							<span class="sr-only">Close menu</span>
+							<XMarkIcon class="h-6 w-6" aria-hidden="true" />
+						</button>
 					</div>
 					<!-- Navigation links -->
 					<div class="my-6 flex h-4/6">
