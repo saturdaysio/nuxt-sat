@@ -63,9 +63,10 @@
 			</dl>
 		</div>
 
-			<Client />
 
 		<Result />
+
+		<Client />
 
 		<Contact />
 
