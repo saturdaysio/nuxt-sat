@@ -8,7 +8,7 @@
 		<section id="ethics" class="w-full mx:auto px-4 py-16 bg-black">
 			<div class="container lg:max-w-5xl mx-auto my-8">
 				<div class="pb-4">
-					<h1 class="text-purple-pink pb-8">Keeping it 100</h1>
+					<h1 class="text-3xl md:text-4xl lg:text-5xl text-purple-pink pb-8">Keeping it 100</h1>
 					<p class="text-xl text-white">We believe that our work and ethics
 					define who we are. We're Human-centered Designers and Developers behind some of North America's
 					biggest mobile apps and digital brands looking to make a net-positive impact in the world.</p>

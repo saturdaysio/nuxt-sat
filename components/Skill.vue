@@ -2,7 +2,7 @@
 	<section id="skills" class="mx-auto px-4 py-16 bg-black">
 		<div class="container lg:max-w-7xl flex flex-col mx-auto my-8">
 			<div class="pb-8">
-				<h1 class="text-3xl lg:text-5xl text-center font-bold text-white">
+				<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white">
 					What we do
 				</h1>
 			</div>
