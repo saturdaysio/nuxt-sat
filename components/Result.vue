@@ -1,7 +1,7 @@
 <template>
 	<div class="bg-black py-24 sm:py-32">
 		<div class="mx-auto max-w-8xl px-4 lg:px-8">
-			<div class="mx-auto max-w-7xl">
+			<div class="mx-auto max-w-6xl">
 				<div class="">
 					<h2 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-center text-white">Our stats</h2>
 				</div>
