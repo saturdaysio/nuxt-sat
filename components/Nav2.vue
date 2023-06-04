@@ -5,7 +5,7 @@
                 <div class="flex items-center justify-between max-w-7xl mx-auto px-6 py-4" aria-label="global">
                     <div class="flex lg:flex-1">
                         <!-- Logo -->
-                        <NuxtLink to="/" class="focus:none">
+                        <NuxtLink to="/" class="focus:outline-none">
                             <span class="sr-only">Saturdays.io</span>
                             <img class="h-8 w-8" src="@/assets/img/logo.svg" alt="Saturdays.io logo" width="32px" height="32px" />
                         </NuxtLink>
@@ -30,7 +30,7 @@
                         <DialogPanel class="w-full h-full overflow-y-auto px-6 py-4 backdrop-blur bg-black/60">
                             <div class="flex items-center justify-between">
                                 <!-- Logo -->
-                                <NuxtLink to="/" class="focus:none">
+                                <NuxtLink to="/" class="focus:outline-none">
                                     <span class="sr-only">Saturdays.io</span>
                                     <img class="h-8 w-8" src="@/assets/img/logo.svg" alt="Saturdays.io logo" width="32px" height="32px" />
                                 </NuxtLink>
