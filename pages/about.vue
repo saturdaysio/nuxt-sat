@@ -1,7 +1,7 @@
 <template>
 	<div>
 
-		<Nav />
+		<Nav2 />
 
 		<Header intro="We bridge the gap between design and technology" />
 
@@ -27,7 +27,7 @@
 			<div class="container lg:max-w-7xl mx-auto my-8">
 				<div class="mx-auto max-w-5xl pb-4">
 					<h1 class="text-4xl md:text-5xl lg:text-6xl text-center text-purple-pink pb-8">Who we are</h1>
-					<p class="text-xl md:text-2xl text-white">We're a design-led team of technologists aligned with a common interest in improving life for all people. We operate like a sports roster with a scaling team of digital specialists.</p>
+					<p class="text-xl md:text-2xl text-white">We're a globally distributed design-led team of technologists aligned with a common interest in improving life for all people. We operate like a sports team by continuously evolving our roster with specialists to meet the unique needs of each project.</p>
 				</div>
 
 				<div class="mx-auto max-w-7xl mt-8 px-6">
@@ -98,25 +98,31 @@ useHead({
 
 	const team = [
 		{
-			name: 'PC',
+			name: '@PC',
 			role: 'Design',
-			imageUrl: 'https://www.cyberpunk.net/build/images/edgerunners/glossary/ICE@1x-10b9e5fb.jpg',
-			location: 'Toronto, Hawaii, Seoul',
+			imageUrl: 'https://w0.peakpx.com/wallpaper/433/617/HD-wallpaper-cyberpunk-edgerunners-gets-an-amazing-new-trailer-ahead-of-its-september-debut.jpg',
+			location: 'Toronto, Hawaii',
 		},
 		{
-			name: 'MC',
+			name: '@Maxx',
 			role: 'Engineering',
 			imageUrl: 'https://www.cyberpunk.net/build/images/edgerunners/glossary/Scavengers@1x-e4341cfc.jpg',
 			location: 'Toronto, Miami',
 		},
 		{
-			name: 'FA',
+			name: '@Sashi',
+			role: 'Design',
+			imageUrl: 'https://www.cyberpunk.net/build/images/edgerunners/glossary/ICE@1x-10b9e5fb.jpg',
+			location: 'Toronto, Los Angeles',
+		},
+		{
+			name: '@Kara',
 			role: 'Engineering',
 			imageUrl: 'https://www.cyberpunk.net/build/images/edgerunners/glossary/Netrunner@1x-2e8553f1.jpg',
 			location: 'New York',
 		},
 		{
-			name: 'JC',
+			name: '@Jayce',
 			role: 'Engineering',
 			imageUrl: 'https://www.cyberpunk.net/build/images/edgerunners/glossary/Fixer@1x-060bd441.jpg',
 			location: 'Seoul',
@@ -126,32 +132,32 @@ useHead({
 	const values = [
 		{
 			name: 'Be world-class.',
-			description: 'We work hard to be great at what we do, and treat everyone with respect.',
+			description: 'Work hard to be great at what you do and treat everyone with respect.',
 			icon: GlobeAmericasIcon,
 		},
 		{
 			name: 'Take responsibility.',
-			description: 'Own your Dubs and hold your Ls.',
+			description: 'Own your wins and losses.',
 			icon: HandRaisedIcon,
 		},
 		{
 			name: 'Be supportive.',
-			description: 'We operate like a sports team and take the time to help each other get better.',
+			description: 'We take the time to help each other improve and learn from our mistakes.',
 			icon: UserGroupIcon,
 		},
 		{
 			name: 'Always learning.',
-			description: 'Technology rapidly changes and we love to learn so that we can be on the cutting edge.',
+			description: 'Our passion for education allows us to thrive on the cutting edge of technology.',
 			icon: AcademicCapIcon,
 		},
 		{
 			name: 'No Rockstars.',
-			description: 'There is no room for egos. Check yourself before you wreck yourself.',
+			description: 'Nobody has time for egos so check yourself before you wreck yourself.',
 			icon: PaintBrushIcon,
 		},
 		{
 			name: 'Enjoy downtime.',
-			description: 'Go touch grass once in a while.',
+			description: 'We like to touch grass once in a while.',
 			icon: SunIcon,
 		},
 	]
