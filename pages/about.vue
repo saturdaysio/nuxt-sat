@@ -27,8 +27,7 @@
 			<div class="container lg:max-w-7xl mx-auto my-8">
 				<div class="mx-auto max-w-5xl pb-4">
 					<h1 class="text-4xl md:text-5xl lg:text-6xl text-center text-purple-pink pb-8">Who we are</h1>
-					<p class="text-xl md:text-2xl text-white">We're Human-centered Designers and Developers behind some of North America's
-					biggest mobile apps and digital brands looking to make a net-positive impact in the world.</p>
+					<p class="text-xl md:text-2xl text-white">We're a design-led team of technologists aligned with a common interest in improving life for all people. We operate like a sports roster with a scaling team of digital specialists.</p>
 				</div>
 
 				<div class="mx-auto max-w-7xl mt-8 px-6">
