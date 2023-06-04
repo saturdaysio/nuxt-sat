@@ -33,7 +33,7 @@
 				<div class="mx-auto max-w-7xl mt-8 px-6">
 					<ul role="list" class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4">
 						<li v-for="person in team" :key="person.name">
-							<img class="aspect-[1/1] w-full rounded-md object-cover" :src="person.imageUrl" alt="pfp" draggable="false" loading="lazy" />
+							<img class="aspect-[4/3] w-full rounded-md object-cover" :src="person.imageUrl" alt="pfp" draggable="false" loading="lazy" />
 							<h2 class="mt-2 text-xl md:text-2xl font-bold leading-8 text-white">{{ person.name }}</h2>
 							<p class="text-base md:text-lg text-gray-300">{{ person.role }}</p>
 							<p class="text-sm md:text-base text-gray-500">{{ person.location }}</p>
@@ -98,31 +98,31 @@ useHead({
 
 	const team = [
 		{
-			name: '@PC',
+			name: 'PC',
 			role: 'Design',
 			imageUrl: 'https://w0.peakpx.com/wallpaper/433/617/HD-wallpaper-cyberpunk-edgerunners-gets-an-amazing-new-trailer-ahead-of-its-september-debut.jpg',
 			location: 'Toronto, Hawaii',
 		},
 		{
-			name: '@Maxx',
+			name: 'Maxx',
 			role: 'Engineering',
 			imageUrl: 'https://www.cyberpunk.net/build/images/edgerunners/glossary/Scavengers@1x-e4341cfc.jpg',
 			location: 'Toronto, Miami',
 		},
 		{
-			name: '@Sashi',
+			name: 'Sashi',
 			role: 'Design',
 			imageUrl: 'https://www.cyberpunk.net/build/images/edgerunners/glossary/ICE@1x-10b9e5fb.jpg',
 			location: 'Toronto, Los Angeles',
 		},
 		{
-			name: '@Kara',
+			name: 'Kara',
 			role: 'Engineering',
 			imageUrl: 'https://www.cyberpunk.net/build/images/edgerunners/glossary/Netrunner@1x-2e8553f1.jpg',
 			location: 'New York',
 		},
 		{
-			name: '@Jayce',
+			name: 'Jayce',
 			role: 'Engineering',
 			imageUrl: 'https://www.cyberpunk.net/build/images/edgerunners/glossary/Fixer@1x-060bd441.jpg',
 			location: 'Seoul',
