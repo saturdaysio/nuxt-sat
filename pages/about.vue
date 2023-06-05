@@ -110,7 +110,7 @@ useHead({
 			location: 'Toronto, Miami',
 		},
 		{
-			name: 'Sashi',
+			name: 'Sasha',
 			role: 'Design',
 			imageUrl: 'https://www.cyberpunk.net/build/images/edgerunners/glossary/ICE@1x-10b9e5fb.jpg',
 			location: 'Toronto, Los Angeles',
