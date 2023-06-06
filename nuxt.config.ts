@@ -49,7 +49,6 @@ export default defineNuxtConfig({
 
     // @nuxt/image config options
     image: {
-        dir: 'assets/img',
         inject: true,
         screens: {
             xs: 320,
