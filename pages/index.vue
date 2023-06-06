@@ -21,7 +21,7 @@
 					</h1>
 				</div>
 				<div class="lg:max-w-7xl mx-auto">
-					<img src="@/mobile.webp" width="1600" height="1000" preload loading="lazy" />
+					<img src="@/assets/img/mobile.webp" width="1600" height="1000" preload loading="lazy" />
 				</div>
 			</div>
 		</section>
