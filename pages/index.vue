@@ -21,7 +21,7 @@
 					</h1>
 				</div>
 				<div class="lg:max-w-7xl mx-auto">
-					<nuxt-picture src="/mobile.webp" width="1600" height="1000" sizes="sm:100vw md:80vw lg:1280px" loading="lazy" />
+					<img src="@/mobile.webp" width="1600" height="1000" preload loading="lazy" />
 				</div>
 			</div>
 		</section>
