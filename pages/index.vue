@@ -21,11 +21,7 @@
 					</h1>
 				</div>
 				<div class="lg:max-w-7xl mx-auto">
-					<picture>
-						<source type="image/webp" srcset="~/assets/img/mobile.webp">
-						<source type="image/png" srcset="~/assets/img/mobile.png">
-						<img src="~/assets/img/mobile.png" alt="Mobile app interfaces" draggable="false" loading="lazy" width="1600" height="1000">
-					</picture>
+					<nuxt-img src="/mobile.webp" preload width="1600" height="1000" sizes="sm:100vw md:80vw lg:1280px" />
 				</div>
 			</div>
 		</section>
