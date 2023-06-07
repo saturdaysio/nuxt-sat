@@ -100,7 +100,7 @@ useHead({
 		{
 			name: 'PC',
 			role: 'Design',
-			imageUrl: '/pfp.webp',
+			imageUrl: '/pc.webp',
 			width: '420',
 			height: '420',
 			alt: 'profile photo',
@@ -109,7 +109,7 @@ useHead({
 		{
 			name: 'Maxx',
 			role: 'Engineering',
-			imageUrl: '/fixer.webp',
+			imageUrl: '/maxx.webp',
 			width: '420',
 			height: '420',
 			alt: 'profile photo',
@@ -117,8 +117,8 @@ useHead({
 		},
 		{
 			name: 'Sasha',
-			role: 'Design',
-			imageUrl: '/hack.webp',
+			role: 'Engineering',
+			imageUrl: '/sasha.webp',
 			width: '420',
 			height: '420',
 			alt: 'profile photo',
@@ -127,20 +127,11 @@ useHead({
 		{
 			name: 'Kara',
 			role: 'Engineering',
-			imageUrl: '/pfp.webp',
+			imageUrl: '/kara.webp',
 			width: '420',
 			height: '420',
 			alt: 'profile photo',
 			location: 'New York',
-		},
-		{
-			name: 'Huang',
-			role: 'Engineering',
-			imageUrl: '/fixer.webp',
-			width: '420',
-			height: '420',
-			alt: 'profile photo',
-			location: 'London',
 		},
 	]
 
