@@ -24,7 +24,7 @@
 							Please read these Terms carefully. Your access to and use of the Services are impacted by these
 							Terms and if you do not agree to any of these Terms you may not access or use the Services.
 						</p>
-					</div>>
+					</div>
 					<div>
 						<p class="">
 							Your privacy is important to us. Our Privacy Policy describes the types of information we collect
