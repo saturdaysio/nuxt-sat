@@ -23,17 +23,10 @@
                         <NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="text-md text-white" active-class="active">{{ item.name }}</NuxtLink>
                     </div>
                 </div>
-                <TransitionRoot :show="mobileMenuOpen">
+
                 <!-- Mobile menu -->
                     <Dialog as="div" class="lg:hidden" :open="mobileMenuOpen" @close="mobileMenuOpen = true">
-                        <TransitionChild
-                            enter="transition-opacity ease-in-out duration-200"
-                            enter-from="opacity-0"
-                            enter-to="opacity-100"
-                            leave="transition-opacity ease-in-out duration-200"
-                            leave-from="opacity-0"
-                            leave-to="opacity-100"
-                        >
+
                             <div class="fixed inset-0 z-50">
                                 <DialogPanel class="w-full h-full overflow-y-auto px-6 py-4 backdrop-blur bg-black/80">
                                     <div class="flex items-center justify-between">
@@ -58,9 +51,9 @@
                                     </div>
                                 </DialogPanel>
                             </div>
-                        </TransitionChild>
+
                     </Dialog>
-                </TransitionRoot>
+
             </header>
 		</div>
 	</nav>
