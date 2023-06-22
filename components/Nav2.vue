@@ -12,7 +12,7 @@
                     </div>
                     <div class="flex lg:hidden">
                         <!-- Toggle -->
-                        <button type="button" class="-m-2.5 inline-flex items-center justify-center p-2.5 text-gray-400" @click="mobileMenuOpen = !mobileMenuOpen">
+                        <button type="button" class="-m-2.5 inline-flex items-center justify-center p-2.5 text-gray-400" @click="mobileMenuOpen = true">
                             <span class="sr-only">Open menu</span>
                             <Bars3Icon class="h-8 w-8" aria-hidden="true" />
                         </button>
@@ -25,8 +25,7 @@
                 </div>
 
                 <!-- Mobile menu -->
-                    <Dialog as="div" class="lg:hidden" :open="mobileMenuOpen" @close="mobileMenuOpen = true">
-
+                    <Dialog as="div" class="lg:hidden" :open="mobileMenuOpen" @close="mobileMenuOpen = false"><!-- should this be :show or v-if? -->
                         <div class="fixed inset-0 z-50">
                             <DialogPanel class="w-full h-full overflow-y-auto px-6 py-4 backdrop-blur bg-black/80">
                                 <div class="flex items-center justify-between">
@@ -37,7 +36,7 @@
                                     </NuxtLink>
 
                                     <!-- Toggle -->
-                                    <button type="button" class="-m-2.5 inline-flex items-center justify-center p-2.5 text-gray-400" @click="mobileMenuOpen = !mobileMenuOpen">
+                                    <button type="button" class="-m-2.5 inline-flex items-center justify-center p-2.5 text-gray-400" @click="mobileMenuOpen = false">
                                         <span class="sr-only">Close menu</span>
                                         <XMarkIcon class="h-8 w-8" aria-hidden="true" />
                                     </button>
@@ -51,9 +50,7 @@
                                 </div>
                             </DialogPanel>
                         </div>
-
                     </Dialog>
-
             </header>
 		</div>
 	</nav>
@@ -63,7 +60,7 @@
 <script setup lang="ts">
 
 	import { ref } from 'vue'
-	import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from '@headlessui/vue'
+	import { Dialog, DialogPanel, TransitionRoot, TransitionChild } from '@headlessui/vue'
 	import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 
 	const navigation = [
@@ -80,12 +77,12 @@
 
     .v-enter-active,
     .v-leave-active {
-    transition: opacity 0.2s ease;
+        transition: opacity 0.2s ease;
     }
 
     .v-enter-from,
     .v-leave-to {
-    opacity: 0;
+        opacity: 0;
     }
 
 </style>
