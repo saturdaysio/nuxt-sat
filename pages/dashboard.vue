@@ -1,7 +1,7 @@
 <template>
 	<div>
 
-		<Nav />
+		<Nav2 />
 
 		<section class="w-full mx-auto px-4 py-16 bg-black">
 			<div class="lg:container mx-auto my-8">
