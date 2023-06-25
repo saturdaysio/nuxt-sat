@@ -22,8 +22,7 @@
 		</section>
 
 
-		<!-- Values -->
-		<div class="mx-auto max-w-7xl px-4 py-16">
+		<section class="mx-auto max-w-7xl px-4 py-16">
 			<div class="container mx-auto max-w-5xl">
 				<h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-purple-pink">Our values</h2>
 			</div>
@@ -38,7 +37,7 @@
 					<dd class="inline">{{ value.description }}</dd>
 				</div>
 			</dl>
-		</div>
+		</section>
 
 
 		<Result />
