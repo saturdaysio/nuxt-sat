@@ -10,6 +10,7 @@
 					<p class="text-lg text-white">Last updated: Jan 25 2022</p>
 				</div>
 
+
 				<section id="definition" class="py-8">
 					<div>
 						<p class="pb-4">
@@ -34,6 +35,7 @@
 						</p>
 					</div>
 				</section>
+
 
 				<section id="use-of-services" class="py-8">
 					<div>
@@ -89,6 +91,7 @@
 					</div>
 				</section>
 
+
 				<section id="service-disruption-terminate" class="py-8">
 					<h1 class="text-category">
 						2. Service Disruptions and Terminating Use of the Services
@@ -117,6 +120,7 @@
 					</div>
 				</section>
 
+
 				<section id="partners-third-party" class="py-8">
 					<h1 class="text-category">
 						3. Partners and third-parties
@@ -129,6 +133,7 @@
 						</p>
 					</div>
 				</section>
+
 
 				<section id="ownership" class="py-8">
 					<h1 class="text-category">
@@ -165,6 +170,7 @@
 						</p>
 					</div>
 				</section>
+
 
 				<section id="misc" class="py-8">
 					<h1 class="text-category">
@@ -238,6 +244,7 @@
 						</p>
 					</div>
 				</section>
+				
 			</article>
 		</main>
 

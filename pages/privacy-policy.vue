@@ -21,6 +21,7 @@
 					</div>
 				</section>
 
+
 				<section id="use-of-services" class="py-8">
 					<div>
 						<h1 class="text-category">
@@ -35,6 +36,7 @@
 						</p>
 					</div>
 				</section>
+
 
 				<section id="info-collected" class="py-8">
 					<div>
@@ -62,6 +64,7 @@
 						</ul>
 					</div>
 				</section>
+
 
 				<section id="how-we-use-info" class="py-8">
 					<div>
@@ -98,6 +101,7 @@
 					</div>
 				</section>
 
+
 				<section id="share-info" class="py-8">
 					<h1 class="text-category">
 						4. Sharing Information
@@ -124,6 +128,7 @@
 						</ul>
 					</div>
 				</section>
+
 
 				<section id="control-info" class="py-8">
 					<div>
@@ -157,6 +162,7 @@
 					</div>
 				</section>
 
+
 				<section id="do-not-track" class="py-8">
 					<h1 class="text-category">
 						6. Do Not Track
@@ -166,6 +172,7 @@
 						not respond to Do Not Track signals.
 					</p>
 				</section>
+
 
 				<section id="gdpr" class="py-8">
 					<div>
@@ -180,6 +187,7 @@
 						</p>
 					</div>
 				</section>
+
 
 				<section id="age-restrictions" class="py-8">
 					<div>
@@ -196,6 +204,7 @@
 					</div>
 				</section>
 
+
 				<section id="do-not-track" class="py-8">
 					<div>
 						<h1 class="text-category">
@@ -211,6 +220,7 @@
 						</p>
 					</div>
 				</section>
+
 
 				<section id="assignment" class="py-8">
 					<div>
@@ -229,6 +239,7 @@
 					</div>
 				</section>
 
+
 				<section id="contact-us" class="py-8">
 					<div>
 						<h1 class="text-category">
@@ -243,6 +254,7 @@
 						</p>
 					</div>
 				</section>
+
 			</article>
 		</main>
 
