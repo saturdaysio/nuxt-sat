@@ -20,20 +20,10 @@
 		transition: all 0.25s ease;
 	}
 
-	.fade-leave-to,
-	.fade-enter-from {
-		opacity: 0;
-	}
 
-	.fade-leave-from,
-	.fade-enter-to {
+	.page-leave-from,
+	.page-enter-to {
 		opacity: 1;
 	}
-
-	.fade-leave-active,
-	.fade-enter-active {
-		transition: opacity 0.25s ease;
-	}
-
 
 </style>
