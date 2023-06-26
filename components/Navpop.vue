@@ -3,7 +3,7 @@
         <nav class="relative">
             <div class="fixed w-full px-4">
                 <header class="inset-x-0 backdrop-blur bg-black/80 border-b border-white/10">
-                    <div class="flex items-center justify-between max-w-7xl mx-auto px-6 py-4" aria-label="global">
+                    <div class="flex items-center justify-between max-w-7xl mx-auto px-2 py-4" aria-label="global">
 
                         <div class="flex lg:flex-1">
                             <!-- Logo -->
