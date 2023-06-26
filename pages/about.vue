@@ -22,15 +22,16 @@
 		</section>
 
 
+
 		<section class="mx-auto max-w-7xl px-4 py-16">
 			<div class="container mx-auto max-w-5xl">
 				<h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-purple-pink">Our values</h2>
 			</div>
 
 			<dl class="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-8 text-lg md:text-xl leading-7 text-gray-400 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-16">
-				<div v-for="value in values" :key="value.name" class="relative pl-10">
+				<div v-for="value in values" :key="value.name" class="">
 					<dt class="inline font-bold text-white">
-						<component :is="value.icon" class="absolute top-1 left-1 h-6 w-6 text-blue-500" aria-hidden="true" />
+						<component :is="value.icon" class="top-0 left-0 h-8 w-8 text-blue-500" aria-hidden="true" />
 						{{ value.name }}
 					</dt>
 					{{ '' }}
