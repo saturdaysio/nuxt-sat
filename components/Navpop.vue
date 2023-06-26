@@ -1,30 +1,30 @@
 <template>
     <Popover v-slot="{ open }">
-	<nav class="relative">
-		<div class="fixed w-full px-4">
-			<header class="inset-x-0 backdrop-blur bg-black/80 border-b border-white/10">
+        <nav class="relative">
+            <div class="fixed w-full px-4">
+                <header class="inset-x-0 backdrop-blur bg-black/80 border-b border-white/10">
+                    <div class="flex items-center justify-between max-w-7xl mx-auto px-6 py-4" aria-label="global">
 
-                <div class="flex items-center justify-between max-w-7xl mx-auto px-6 py-4" aria-label="global">
-                    <div class="flex lg:flex-1">
-                        <!-- Logo -->
-                        <NuxtLink to="/" class="focus:outline-none">
-                            <span class="sr-only">Saturdays.io</span>
-                            <img class="h-8 w-8" src="@/assets/img/logo.svg" alt="Saturdays.io logo" width="32px" height="32px" />
-                        </NuxtLink>
-                    </div>
-                    <div class="flex lg:hidden">
-                        <!-- Toggle -->
-                        <PopoverButton class="-m-2.5 inline-flex items-center justify-center p-2.5 text-white focus:outline-none">
-                            <span class="sr-only">Mobile menu</span>
-                            <Bars3Icon v-if="!open" class="block h-8 w-8" aria-hidden="true" />
-							<XMarkIcon v-else class="block h-8 w-8" aria-hidden="true" />
-                        </PopoverButton>
-                    </div>
+                        <div class="flex lg:flex-1">
+                            <!-- Logo -->
+                            <NuxtLink to="/" class="focus:outline-none">
+                                <span class="sr-only">Saturdays.io</span>
+                                <img class="h-8 w-8" src="@/assets/img/logo.svg" alt="Saturdays.io logo" width="32px" height="32px" />
+                            </NuxtLink>
+                        </div>
+                        <div class="flex lg:hidden">
+                            <!-- Toggle -->
+                            <PopoverButton class="-m-2.5 inline-flex items-center justify-center p-2.5 text-white focus:outline-none">
+                                <span class="sr-only">Mobile menu</span>
+                                <Bars3Icon v-if="!open" class="block h-8 w-8" aria-hidden="true" />
+                                <XMarkIcon v-else class="block h-8 w-8" aria-hidden="true" />
+                            </PopoverButton>
+                        </div>
 
-                    <!-- Navigation links -->
-                    <div class="hidden lg:flex lg:flex-1 lg:gap-x-8 lg:justify-end nav-item">
-                        <NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="text-md text-white" active-class="active">{{ item.name }}</NuxtLink>
-                    </div>
+                        <!-- Navigation links -->
+                        <div class="hidden lg:flex lg:flex-1 lg:gap-x-8 lg:justify-end nav-item">
+                            <NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="text-md text-white" active-class="active">{{ item.name }}</NuxtLink>
+                        </div>
 
                     </div>
                 </header>
@@ -40,6 +40,7 @@
                         </div>
                     </div>
                 </PopoverPanel>
+
             </div>
 	    </nav>
     </Popover>
