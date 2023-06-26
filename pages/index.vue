@@ -1,7 +1,7 @@
 <template>
 	<div>
 
-		<Nav2 />
+		<Navpop />
 
 		<Header intro="Saturdays is a Canadian digital studio based in Toronto" />
 

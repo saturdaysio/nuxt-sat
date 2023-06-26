@@ -1,7 +1,7 @@
 <template>
 	<div>
 
-		<Nav2 />
+		<Navpop />
 
 		<main id="content" class="mx-auto px-4 py-16 bg-black">
 			<article class="container lg:max-w-4xl mx-auto">

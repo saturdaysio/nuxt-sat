@@ -1,7 +1,7 @@
 <template>
 	<div>
 
-		<Nav2 />
+		<Navpop />
 
 		<Header intro="We bridge the gap between design and technology" />
 
