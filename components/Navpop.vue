@@ -30,18 +30,26 @@
                 </header>
 
                 <!-- Mobile menu -->
-                <PopoverPanel class="inset-y-0 z-50 w-full h-screen">
-                    <div class="w-full h-full overflow-y-auto px-4 py-4 backdrop-blur bg-black/80">
-                        <!-- Navigation links -->
-                        <div class="flex flex-col justify-center h-4/5">
-                            <div class="flex flex-col space-y-2">
-                                <NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="mx-2 block py-4 text-2xl sm:text-3xl md:text-4xl font-black text-white hover:opacity-60" active-class="active underline underline-offset-8">{{ item.name }}</NuxtLink>
+                <transition
+                    enter-active-class="transition duration-250 ease-out"
+                    enter-from-class=" opacity-0"
+                    enter-to-class="opacity-100"
+                    leave-active-class="transition duration-250 ease-in"
+                    leave-from-class="opacity-100"
+                    leave-to-class=" opacity-0"
+                >
+                    <PopoverPanel class="inset-y-0 z-50 w-full h-screen">
+                        <div class="w-full h-full overflow-y-auto px-4 py-4 backdrop-blur bg-black/80">
+                            <!-- Navigation links -->
+                            <div class="flex flex-col justify-center h-4/5">
+                                <div class="flex flex-col space-y-2">
+                                    <NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="mx-2 block py-4 text-2xl sm:text-3xl md:text-4xl font-black text-white hover:opacity-60" active-class="active">{{ item.name }}</NuxtLink>
+                                </div>
+
                             </div>
-
                         </div>
-                    </div>
-                </PopoverPanel>
-
+                    </PopoverPanel>
+                </transition>
             </div>
 	    </nav>
     </Popover>
