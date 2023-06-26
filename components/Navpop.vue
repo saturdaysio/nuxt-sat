@@ -30,13 +30,14 @@
                 </header>
 
                 <!-- Mobile menu -->
-                <PopoverPanel class="inset-y-0 z-50 w-screen h-screen">
-                    <div class="w-full h-full overflow-y-auto px-6 py-4 backdrop-blur bg-black/80">
+                <PopoverPanel class="inset-y-0 z-50 w-full h-screen">
+                    <div class="w-full h-full overflow-y-auto px-4 py-4 backdrop-blur bg-black/80">
                         <!-- Navigation links -->
-                        <div class="flex h-4/5">
-                            <div class="flex flex-col justify-center nav-item space-y-2">
-                                <NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="mx-4 block py-4 px-4 text-3xl sm:text-4xl md:text-5xl font-black text-white" active-class="active">{{ item.name }}</NuxtLink>
+                        <div class="flex flex-col justify-center h-4/5">
+                            <div class="flex flex-col space-y-2">
+                                <NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="mx-2 block py-4 text-2xl sm:text-3xl md:text-4xl font-black text-white hover:opacity-60" active-class="active underline underline-offset-8">{{ item.name }}</NuxtLink>
                             </div>
+
                         </div>
                     </div>
                 </PopoverPanel>
@@ -59,8 +60,6 @@
 	]
 
     const legal = [
-		{ name: 'Approach', to: '/approach' },
-		{ name: 'Team', to: '/team' },
         { name: 'Terms of Service', to: '/terms-of-service' },
         { name: 'Privacy Policy', to: '/privacy-policy' },
 	]
