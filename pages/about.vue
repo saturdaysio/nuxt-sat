@@ -30,8 +30,10 @@
 
 			<dl class="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-8 text-lg md:text-xl leading-7 text-gray-400 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-16">
 				<div v-for="value in values" :key="value.name" class="">
+					<div class="pb-2">
+						<component :is="value.icon" class="top-0 left-0 h-12 w-12 text-purple-400" aria-hidden="true" />
+					</div>
 					<dt class="inline font-bold text-white">
-						<component :is="value.icon" class="top-0 left-0 h-8 w-8 text-blue-500" aria-hidden="true" />
 						{{ value.name }}
 					</dt>
 					{{ '' }}
@@ -61,7 +63,6 @@
 		GlobeAmericasIcon,
 		HandRaisedIcon,
 		PaintBrushIcon,
-		SparklesIcon,
 		SunIcon,
 		UserGroupIcon,
 	} from '@heroicons/vue/20/solid'
