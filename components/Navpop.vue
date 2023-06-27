@@ -1,9 +1,9 @@
 <template>
     <Popover v-slot="{ open }">
         <nav class="relative">
-            <div class="fixed w-full px-4">
+            <div class="fixed w-full">
                 <header class="inset-x-0 backdrop-blur bg-black/80 border-b border-white/10">
-                    <div class="flex items-center justify-between max-w-7xl mx-auto px-2 py-4" aria-label="global">
+                    <div class="flex items-center justify-between max-w-7xl mx-auto px-4 py-4" aria-label="global">
 
                         <div class="flex lg:flex-1">
                             <!-- Logo -->
@@ -29,23 +29,22 @@
                     </div>
                 </header>
 
-                <!-- Mobile menu -->
                 <transition
-                    enter-active-class="transition duration-250 ease-out"
-                    enter-from-class=" opacity-0"
+                    enter-active-class="transition duration-150 ease-out"
+                    enter-from-class="opacity-0"
                     enter-to-class="opacity-100"
-                    leave-active-class="transition duration-250 ease-in"
+                    leave-active-class="transition duration-150 ease-in"
                     leave-from-class="opacity-100"
                     leave-to-class=" opacity-0"
                 >
+                    <!-- Mobile menu -->
                     <PopoverPanel class="inset-y-0 z-50 w-full h-screen">
                         <div class="w-full h-full overflow-y-auto px-4 py-4 backdrop-blur bg-black/80">
                             <!-- Navigation links -->
                             <div class="flex flex-col justify-center h-4/5">
                                 <div class="flex flex-col space-y-2">
-                                    <NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="mx-2 block py-4 text-2xl sm:text-3xl md:text-4xl font-black text-white hover:opacity-60" active-class="active">{{ item.name }}</NuxtLink>
+                                    <NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="mx-2 block py-4 text-2xl sm:text-3xl md:text-4xl font-bold text-white hover:opacity-60" active-class="active text-blue-300 line-through">{{ item.name }}</NuxtLink>
                                 </div>
-
                             </div>
                         </div>
                     </PopoverPanel>
