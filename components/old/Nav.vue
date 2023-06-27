@@ -25,15 +25,15 @@
 							<!-- Mobile menu button -->
 							<DisclosureButton class="inline-flex items-center justify-center p-2 text-white focus:none">
 								<span class="sr-only">Open main menu</span>
-								<Bars3Icon v-if="!open" class="block h-6 w-6" aria-hidden="true" />
+								<Bars3Icon v-if="open" class="block h-6 w-6" aria-hidden="true" />
 								<XMarkIcon v-else class="block h-6 w-6" aria-hidden="true" />
 							</DisclosureButton>
 						</div>
 					</div>
 				</div>
 
-				<DisclosurePanel class="sm:hidden">
-					<div class=" right-0 z-50 w-full h-full overflow-y-auto space-y-1 px-6 py-4 backdrop-blur bg-black/60">
+				<DisclosurePanel class="sm:hidden h-full">
+					<div class=" right-0 z-50 w-full overflow-y-auto space-y-1 px-6 py-4 backdrop-blur bg-black/60">
 						<NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="block px-3 py-2 text-2xl font-bold text-white">{{ item.name }}</NuxtLink>
 					</div>
 				</DisclosurePanel>
@@ -47,6 +47,7 @@
 
 <script setup lang="ts">
 
+import { ref } from 'vue'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 
@@ -54,6 +55,8 @@ const navigation = [
 	{ name: 'Work', to: '/' },
 	{ name: 'About', to: '/about' },
 ]
+
+const open = ref(true)
 
 </script>
 
