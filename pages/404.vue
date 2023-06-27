@@ -1,7 +1,7 @@
 <template>
 	<div class="flex flex-col h-screen justify-between">
 
-		<Nav2 />
+		<Nav />
 
 		<section class="container lg:max-w-5xl mx-auto px-8">
 			<div class="flex flex-col justify-center">
