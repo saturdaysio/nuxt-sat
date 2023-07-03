@@ -19,6 +19,7 @@ export default defineNuxtConfig({
                 { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
               ]
         },
+        pageTransition: { name: 'page', mode: 'out-in' },
     },
 
     // Server-side rendering mode
@@ -34,6 +35,7 @@ export default defineNuxtConfig({
 
     // Modules
     modules: [
+        '@nuxt/image',
         '@nuxtjs/robots',
         '@nuxtjs/tailwindcss',
         '@pinia/nuxt',
@@ -43,6 +45,21 @@ export default defineNuxtConfig({
 
     // Auto import components: https://go.nuxtjs.dev/config-components
     components: true,
+
+
+    // @nuxt/image config options
+    image: {
+        inject: true,
+        screens: {
+            xs: 320,
+            sm: 640,
+            md: 768,
+            lg: 1024,
+            xl: 1280,
+            xxl: 1536,
+            '2xl': 1600,
+          },
+    },
 
 
     // Vite build config

@@ -6,13 +6,14 @@
 		<main id="content" class="mx-auto px-4 py-16 bg-black">
 			<article class="container lg:max-w-4xl mx-auto">
 				<div class="mt-24 pb-8">
-					<h1 class="text-4xl lg:text-6xl font-bold text-grad-01">Terms of Service</h1>
+					<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-grad-01">Terms of Service</h1>
 					<p class="text-lg text-white">Last updated: Jan 25 2022</p>
 				</div>
 
+
 				<section id="definition" class="py-8">
 					<div>
-						<p class=" pb-4">
+						<p class="pb-4">
 							Saturdays.io Inc. (“our” “we” or “us”) offers you access to mobile applications websites and
 							real-time API services. These Terms of Service (“Terms”) apply to you as a user (“you” or “User”) and create a
 							legal binding contract between you and us regarding your access to or use of our applications websites
@@ -20,11 +21,11 @@
 						</p>
 					</div>
 					<div>
-						<p class=" pb-4">
+						<p class="pb-4">
 							Please read these Terms carefully. Your access to and use of the Services are impacted by these
 							Terms and if you do not agree to any of these Terms you may not access or use the Services.
 						</p>
-					</div>>
+					</div>
 					<div>
 						<p class="">
 							Your privacy is important to us. Our Privacy Policy describes the types of information we collect
@@ -34,6 +35,7 @@
 						</p>
 					</div>
 				</section>
+
 
 				<section id="use-of-services" class="py-8">
 					<div>
@@ -89,6 +91,7 @@
 					</div>
 				</section>
 
+
 				<section id="service-disruption-terminate" class="py-8">
 					<h1 class="text-category">
 						2. Service Disruptions and Terminating Use of the Services
@@ -117,6 +120,7 @@
 					</div>
 				</section>
 
+
 				<section id="partners-third-party" class="py-8">
 					<h1 class="text-category">
 						3. Partners and third-parties
@@ -129,6 +133,7 @@
 						</p>
 					</div>
 				</section>
+
 
 				<section id="ownership" class="py-8">
 					<h1 class="text-category">
@@ -165,6 +170,7 @@
 						</p>
 					</div>
 				</section>
+
 
 				<section id="misc" class="py-8">
 					<h1 class="text-category">
@@ -238,6 +244,7 @@
 						</p>
 					</div>
 				</section>
+				
 			</article>
 		</main>
 
