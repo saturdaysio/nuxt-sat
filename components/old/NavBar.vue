@@ -38,15 +38,6 @@
 					</div>
 				</div>
 
-
-				<!-- Dark Background Transition -->
-				<transition enter-class="opacity-0" enter-active-class="ease-in-out duration-500" enter-to-class="opacity-100"
-					leave-class="opacity-100" leave-active-class="ease-in-out duration-500" leave-to-class="opacity-0">
-					<div @keydown.esc="isOpen = false" v-show="isOpen" class="fixed inset-0 transition-opacity">
-						<div @click="isOpen = false" class="absolute inset-0 bg-black opacity-50" tabindex="0"></div>
-					</div>
-				</transition>
-
 				<!-- Drawer Menu -->
 				<aside class="transform top-0 left-0 w-full h-full fixed overflow-auto backdrop-blur bg-black/80 z-20" :class="isOpen ? 'translate-x-0' : '-translate-x-full'">
 					<div class="flex flex-col h-full justify-between">
