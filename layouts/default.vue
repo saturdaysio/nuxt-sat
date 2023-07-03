@@ -1,15 +1,5 @@
 <template>
 	<div>
-		<NavBar />
-		<Nuxt />
-		<Footer />
+		<slot />
 	</div>
 </template>
-
-
-<script>
-</script>
-
-
-<style>
-</style>
