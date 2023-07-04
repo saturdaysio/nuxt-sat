@@ -57,17 +57,9 @@
 
 <script setup lang="ts">
 
-	import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
-	import {
-		AcademicCapIcon,
-		GlobeAmericasIcon,
-		HandRaisedIcon,
-		PaintBrushIcon,
-		SunIcon,
-		UserGroupIcon,
-	} from '@heroicons/vue/20/solid'
+	import { AcademicCapIcon, GlobeAmericasIcon, HandRaisedIcon, PaintBrushIcon, SunIcon, UserGroupIcon, } from '@heroicons/vue/24/outline'
 
-useHead({
+	useHead({
 		title: 'Saturdays.io - About',
 		meta: [
 			{ name: 'description', content: 'About Saturdays.io' },
@@ -107,6 +99,7 @@ useHead({
 			icon: SunIcon,
 		},
 	]
+
 </script>
 
 
