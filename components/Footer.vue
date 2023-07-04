@@ -6,7 +6,7 @@
 					<NuxtLink :to="item.to" class="text-base leading-6 text-white">{{ item.name }}</NuxtLink>
 				</div>
 			</nav>
-			<p class="mt-10 text-center text-md leading-5 text-gray-500">&copy; 2016 - 2023 Saturdays.io All rights reserved.</p>
+			<p class="mt-10 sm:text-center text-sm md:text-base leading-5 text-light text-gray-500">&copy; 2016-2023 Saturdays.io All rights reserved.</p>
 		</div>
 	</footer>
 </template>
