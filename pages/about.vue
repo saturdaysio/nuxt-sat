@@ -28,10 +28,10 @@
 				<h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-purple-pink">Our values</h2>
 			</div>
 
-			<dl class="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-8 text-lg md:text-xl leading-7 text-gray-400 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-16">
+			<dl class="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-12 text-lg md:text-xl leading-7 text-gray-400 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-16">
 				<div v-for="value in values" :key="value.name" class="">
 					<dt class="pb-2">
-						<component :is="value.icon" class="top-0 left-0 h-12 w-12 text-purple-400" aria-hidden="true" />
+						<component :is="value.icon" class="top-0 left-0 h-12 w-12 stroke-1 text-purple-400" aria-hidden="true" />
 					</dt>
 					<dt class="inline font-bold text-white">
 						{{ value.name }}
@@ -57,7 +57,7 @@
 
 <script setup lang="ts">
 
-	import { AcademicCapIcon, GlobeAmericasIcon, HandRaisedIcon, PaintBrushIcon, SunIcon, UserGroupIcon, } from '@heroicons/vue/24/outline'
+	import { AcademicCapIcon, GlobeAmericasIcon, HandRaisedIcon, PaintBrushIcon, SparklesIcon, SunIcon, TrophyIcon, UserGroupIcon, } from '@heroicons/vue/24/outline'
 
 	useHead({
 		title: 'Saturdays.io - About',
@@ -71,11 +71,11 @@
 		{
 			name: 'Be world-class.',
 			description: 'Work hard to be great at what you do and treat everyone with respect.',
-			icon: GlobeAmericasIcon,
+			icon: TrophyIcon,
 		},
 		{
 			name: 'Take responsibility.',
-			description: 'Own your wins and losses.',
+			description: 'No excuses, no bullshit. We get it done.',
 			icon: HandRaisedIcon,
 		},
 		{
@@ -91,7 +91,7 @@
 		{
 			name: 'No Rockstars.',
 			description: 'Nobody has time for egos so check yourself before you wreck yourself.',
-			icon: PaintBrushIcon,
+			icon: SparklesIcon,
 		},
 		{
 			name: 'Enjoy downtime.',
