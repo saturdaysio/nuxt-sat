@@ -38,7 +38,7 @@
                     leave-to-class=" opacity-0"
                 >
                     <!-- Mobile menu -->
-                    <PopoverPanel class="inset-y-0 z-50 w-full h-screen">
+                    <PopoverPanel class="inset-y-0 z-50 w-full h-screen lg:hidden">
                         <div class="w-full h-full overflow-y-auto px-4 py-4 backdrop-blur bg-black/80">
                             <!-- Navigation links -->
                             <div class="flex flex-col justify-center h-4/5">
@@ -82,9 +82,7 @@
 
     // Menu overlay state watcher + overflow-y lock
     watchEffect(() => {
-        if (mobileMenuOpen.value = true) {
-            console.log('mobileMenuOpen state is true')
-        } else {console.log('mobileMenuOpen state is false')}
+       
     })
 
 </script>
