@@ -21,8 +21,7 @@
 			</div>
 		</section>
 
-
-
+		
 		<section class="mx-auto max-w-7xl px-4 py-16">
 			<div class="container mx-auto max-w-5xl">
 				<h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-purple-pink">Our values</h2>
@@ -70,7 +69,7 @@
 	const values = [
 		{
 			name: 'Be world-class.',
-			description: 'Work hard to be great at what you do and treat everyone with respect.',
+			description: 'Being happy is the goal, but greatness is our mission.',
 			icon: TrophyIcon,
 		},
 		{
