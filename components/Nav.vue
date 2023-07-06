@@ -43,7 +43,7 @@
                             <!-- Navigation links -->
                             <div class="flex flex-col justify-center h-4/5">
                                 <div class="flex flex-col space-y-2">
-                                    <NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="mx-2 block py-4 text-2xl sm:text-3xl md:text-4xl font-bold text-white hover:opacity-60" active-class="active text-blue-300 line-through">{{ item.name }}</NuxtLink>
+                                    <NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="mx-2 block py-4 text-2xl sm:text-3xl md:text-4xl font-bold text-white hover:opacity-60" active-class="active text-blue-300 underline underline-offset-8">{{ item.name }}</NuxtLink>
                                 </div>
                             </div>
                         </div>
@@ -57,13 +57,20 @@
 
 <script setup lang="ts">
 
-	import { ref } from 'vue'
-	import { Popover, PopoverButton, PopoverPanel, TransitionRoot, TransitionChild } from '@headlessui/vue'
+	import { ref, reactive, watch, watchEffect } from 'vue'
+	import { Popover, PopoverButton, PopoverPanel, } from '@headlessui/vue'
 	import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 
 	const navigation = [
 		{ name: 'Work', to: '/' },
 		{ name: 'About', to: '/about' },
+	]
+
+    const mobileNav = [
+        { name: 'Work', to: '/' },
+		{ name: 'About', to: '/about' },
+        { name: 'Approach', to: '/approach' },
+        { name: 'Jobs', to: '/jobs' },
 	]
 
     const legal = [
@@ -72,6 +79,13 @@
 	]
 
 	const mobileMenuOpen = ref(false)
+
+    // Menu overlay state watcher + overflow-y lock
+    watchEffect(() => {
+        if (mobileMenuOpen.value = true) {
+            console.log('mobileMenuOpen state is true')
+        } else {console.log('mobileMenuOpen state is false')}
+    })
 
 </script>
 
