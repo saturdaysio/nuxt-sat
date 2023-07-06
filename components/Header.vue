@@ -1,8 +1,6 @@
 <template>
-	<div>
-
+	<section>
 		<div class="relative isolate overflow-hidden pt-14 -z-10">
-			
 			<!-- headline -->
 			<div class="mx-auto max-w-6xl py-32 sm:py-48 lg:py-56">
 				<div class="px-4 text-center">
@@ -28,7 +26,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 </template>
 
   
