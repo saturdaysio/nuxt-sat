@@ -1,5 +1,5 @@
 <template>
-	<div class="bg-black py-24 sm:py-32">
+	<section id="stats" class="py-24 sm:py-32">
 		<div class="mx-auto max-w-8xl px-4 lg:px-8">
 			<div class="mx-auto max-w-6xl">
 				<div class="">
@@ -13,7 +13,7 @@
 				</dl>
 			</div>
 		</div>
-	</div>
+	</section>
 </template>
 
 
