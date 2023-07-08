@@ -1,8 +1,8 @@
 <template>
 	<section class="relative isolate overflow-hidden pt-16 -z-10">
-		<div class="mx-auto max-w-6xl py-32 sm:py-48 lg:py-56">
-			<div class="px-4 text-center">
-				<h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">{{ intro }}</h1>
+		<div class="max-w-6xl mx-auto px-4 py-32 sm:py-48 lg:py-56">
+			<div class="text-center">
+				<h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-center text-white">{{ intro }}</h1>
 			</div>
 			<!-- svg -->
 			<div class="">
