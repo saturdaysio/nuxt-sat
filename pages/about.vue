@@ -5,8 +5,8 @@
 
 		<Header intro="We bridge the gap between design and technology" />
 
-		<section id="ethics" class="w-full mx:auto px-4 py-16">
-			<div class="container lg:max-w-5xl mx-auto my-8">
+		<section id="ethics" class="px-4 py-16">
+			<div class="max-w-5xl mx-auto my-8">
 				<div class="pb-4">
 					<h1 class="text-4xl md:text-5xl lg:text-6xl text-center text-purple-pink pb-8">Keeping it 100</h1>
 					<p class="text-xl md:text-2xl text-white pb-4">We believe that our work and ethics
@@ -21,12 +21,12 @@
 		</section>
 
 		
-		<section class="max-w-7xl mx-auto px-4 py-16">
-			<div class="">
+		<section id="value" class="px-4 py-16">
+			<div>
 				<h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-purple-pink">Our values</h2>
 			</div>
 
-			<dl class="max-w-4xl lg:max-w-none mx-auto lg:mx-0 mt-16 grid grid-cols-1 sm:grid-cols-2 gap-12 lg:gap-x-16">
+			<dl class="max-w-7xl mx-auto mt-16 grid grid-cols-1 sm:grid-cols-2 gap-12 lg:gap-x-16">
 				<div v-for="value in values" :key="value.name" class="">
 					<dt class="pb-2">
 						<component :is="value.icon" class="top-0 left-0 h-12 w-12 stroke-1 text-purple-400" aria-hidden="true" />
