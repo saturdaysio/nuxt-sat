@@ -1,5 +1,5 @@
 <template>
-	<div class="bg-black py-24 sm:py-32">
+	<section id="client_logos" class="py-24 sm:py-32">
 	  <div class="mx-auto max-w-6xl px-4">
 		<div class="pb-8">
 			<h1 class="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-grad-01">We partner with brands that aim to innovate their digital experiences</h1>
@@ -14,7 +14,7 @@
 
 		</div>
 	  </div>
-	</div>
+	</section>
   </template>
 
 
