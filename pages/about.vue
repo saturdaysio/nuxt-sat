@@ -83,7 +83,7 @@
 		},
 		{
 			name: "Always learning.",
-			description: "Our passion for education allows us to thrive on the cutting edge of technology.",
+			description: "Our love for learning and experimentation allows us to thrive on the cutting edge of technology.",
 			icon: AcademicCapIcon,
 		},
 		{
