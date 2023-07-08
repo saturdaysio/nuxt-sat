@@ -3,7 +3,7 @@
 
 		<Nav />
 
-		<main id="content" class="mx-auto px-4 py-16 bg-black">
+		<main class="px-4 py-16">
 			<article class="container lg:max-w-4xl mx-auto">
 				<div class="mt-24 pb-8">
 					<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-grad-01">Privacy Policy</h1>
@@ -12,7 +12,7 @@
 
 				<section id="definition" class="py-8">
 					<div>
-						<p class="">
+						<p class="text-base">
 							Saturdays.io Inc. (“our” “we” or “us”) takes your (“you” “your” or the “User”) privacy seriously. We
 							may collect use and share some of your personal information. This Privacy Policy is a guide to explain
 							how we do that and your rights as a User. This Privacy Policy forms part of our Terms of Service available at
@@ -29,7 +29,7 @@
 						</h1>
 					</div>
 					<div>
-						<p class="">
+						<p class="text-base">
 							This Privacy Policy covers our treatment of your personally identifiable information and any other
 							information you may provide us when using our applications websites content features products or other services
 							(referred to herein as the “Services”).
@@ -45,7 +45,7 @@
 						</h1>
 					</div>					
 					<div>
-						<p class="pb-4">
+						<p class="text-base b-4">
 							We focus on using your personal information to provide and improve our Services respond to your
 							requests service user accounts connected to our Services provide you with services or information you may
 							request communicate with you and inform you about new products and services that may be of interest and to
@@ -54,7 +54,7 @@
 					</div>
 
 					<div class="prose max-w-none">
-						<ul class="list-disc list-outside">
+						<ul class="list-disc list-outside text-base">
 							<li>Information You Provide Us: Name mailing address phone number email address contact
 								preferences device identifiers IP address location information credit card information and profile information
 								where the contact is via social media.</li>
@@ -74,13 +74,13 @@
 					</div>
 
 					<div>
-						<p class="pb-4">
+						<p class="text-base pb-4">
 							We may use the information that we collect for any of the following purposes:
 						</p>
 					</div>
 
 					<div class="prose max-w-none">
-						<ul class="list-disc list-outside pb-4">
+						<ul class="list-disc list-outside text-base pb-4">
 							<li>Improve Service functionality and efficiency</li>
 							<li>Provide maintain and improve our Services</li>
 							<li>Provide assistance to users</li>
@@ -94,7 +94,7 @@
 					</div>
 
 					<div>
-						<p class="">
+						<p class="text-base">
 							In the event that we determine we need to use your personal information for a reason not included in
 							this Privacy Policy we will ask for your consent first.
 						</p>
@@ -106,16 +106,16 @@
 					<h1 class="text-category">
 						4. Sharing Information
 					</h1>
-					<p class="pb-4">
+					<p class="text-base pb-4">
 						We do not sell your personal information. To better provide Services we may share your personal
 						information with third parties (like social networks) and our service providers.
 					</p>
-					<p class="pb-4">
+					<p class="text-base pb-4">
 						We may share your information with third parties in other cases such as:
 					</p>
 
-					<div class="prose max-w-none">
-						<ul class="list-disc list-outside">
+					<div class="prose max-w-none ">
+						<ul class="list-disc list-outside text-base">
 							<li>If a government body requests information and we deemed it to be necessary to disclose such
 								information in order to comply with applicable laws and legal processes;</li>
 							<li>To cooperate with law enforcement or other government authorities as it relates to any
@@ -137,12 +137,12 @@
 						</h1>
 					</div>
 					<div>
-						<p class="pb-4">
+						<p class="text-base pb-4">
 							You have control over the information that you share with us subject to certain limitations.
 						</p>
 					</div>
 					<div>
-						<p class="pb-4">
+						<p class="text-base pb-4">
 							Our Services have been built in a way to minimize the amount of personal information that is stored
 							within them. Nonetheless if you want to review update change or delete the information that you have shared
 							with us including deletion of your account you may send a request to do so to <NuxtLink
@@ -151,7 +151,7 @@
 						</p>
 					</div>
 					<div>
-						<p class="">
+						<p class="text-base">
 							Even in the event that we delete your personal information we still may retain some information for
 							legitimate business purposes such as maintenance of security of the Services or to comply with
 							applicable laws or regulations depending on the circumstances of such deletion. You understand and agree that we may
@@ -167,7 +167,7 @@
 					<h1 class="text-category">
 						6. Do Not Track
 					</h1>
-					<p class="">
+					<p class="text-base">
 						We do not track our Users over time and across third party websites and therefore our Services do
 						not respond to Do Not Track signals.
 					</p>
@@ -181,7 +181,7 @@
 						</h1>
 					</div>
 					<div>
-						<p class="">
+						<p class="text-base">
 							We do not collect “personal data” about or monitor behavior of “data subjects” as those terms are
 							defined in GDPR Art. 4(1). We do not “target” individuals in the EEU.
 						</p>
@@ -196,7 +196,7 @@
 						</h1>
 					</div>
 					<div>
-						<p class="">
+						<p class="text-base">
 							We do not knowingly collect or solicit the personal information of anyone under the age of 13 even
 							with a parent or guardian's consent. Our services are not intended for children and in the event that we
 							determine that a person under 13 has provided personal information we will delete that information immediately.
@@ -212,7 +212,7 @@
 						</h1>
 					</div>
 					<div>
-						<p class="">
+						<p class="text-base">
 							We may update this Privacy Policy from time to time as necessary based on changes to our company our
 							Services or to applicable laws. In the event that we do update this Privacy Policy such changes will
 							be made online. You will be notified of any material changes through the Services or e-mail. Your use of the
@@ -230,7 +230,7 @@
 					</div>
 
 					<div>
-						<p class="">
+						<p class="text-base">
 							All of our rights and obligations pursuant to this Privacy Policy are freely assignable by us to any
 							of our affiliates in connection with a merger acquisition restructuring or sale of assets or by operation
 							of law or otherwise and we may transfer your information to any of our affiliates successor entities or a
@@ -248,7 +248,7 @@
 					</div>
 
 					<div>
-						<p class="">
+						<p class="text-base">
 							For any questions or concerns that you may have regarding this Privacy Policy please contact us at
 							<NuxtLink to="mailto:support@saturdays.io" rel="noreferrer" target="_blank">support [at] saturdays.io</NuxtLink>
 						</p>
