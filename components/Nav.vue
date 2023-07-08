@@ -57,7 +57,6 @@
 
 <script setup lang="ts">
 
-	import { ref, watch, watchEffect } from 'vue'
 	import { Popover, PopoverButton, PopoverPanel, } from '@headlessui/vue'
 	import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 
@@ -78,12 +77,9 @@
         { name: 'Privacy Policy', to: '/privacy-policy' },
 	]
 
-	const mobileMenuOpen = () => useState('false')
 
     // Menu overlay state watcher + overflow-y lock
-    watch(mobileMenuOpen, async () => {
-       console.log('mobileMenu state is ${mobileMenuOpen.value}')
-    })
+    // Need to watch v-slot open state and work off that
 
 </script>
 
