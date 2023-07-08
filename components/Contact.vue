@@ -1,5 +1,5 @@
 <template>
-	<section id="cta" class="py-24 px-6 sm:px-6 sm:py-32 lg:px-8">
+	<section id="cta" class="px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
 		<div class="mx-auto max-w-4xl">
 			<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-center text-white">Have an interesting project?</h2>
 			<div class="mt-8 flex items-center justify-center gap-x-6">

@@ -1,7 +1,7 @@
 <template>
-	<section class="py-24 sm:py-32">
-	  <div class="mx-auto max-w-6xl px-4">
-		<div class="pb-8">
+	<section class="px-4 py-24 sm:py-32">
+	  <div class="mx-auto max-w-6xl">
+		<div class="px-4 pb-8">
 			<h1 class="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-grad-01">We partner with brands that care about meaningful digital experiences</h1>
 		</div>
 
