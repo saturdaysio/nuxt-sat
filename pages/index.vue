@@ -14,7 +14,7 @@
 		</section>
 
 		
-		<section id="preview" class="w-full mx-auto px-4 py-16 bg-black">
+		<section id="peek" class="w-full mx-auto px-4 py-16">
 			<div class="container mx-auto mt-8">
 				<div class="pb-8">
 					<h1 class="text-4xl md:text-5xl lg:text-6xl text-center text-purple-pink">
