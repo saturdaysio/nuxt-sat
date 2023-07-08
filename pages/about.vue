@@ -11,12 +11,11 @@
 					<h1 class="text-4xl md:text-5xl lg:text-6xl text-center text-purple-pink pb-8">Keeping it 100</h1>
 					<p class="text-xl md:text-2xl text-white pb-4">We believe that our work and ethics
 					define who we are. We're Human-centered Designers and Developers behind some of North America's
-					biggest mobile apps and digital brands looking to make a net-positive impact in the world.</p>
+					biggest mobile apps and digital brands looking to make a net-positive impact.</p>
 				</div>
 				<div>
 				<p class="text-xl md:text-2xl text-white">Our approach to building software prioritizes accessibility, user-centric design, and inclusion. We research and generate ideas, then
-					build, test, and iterate on them using real-world analytics and actionable KPIs. The emphasis on data-driven design, diversity, user empathy, and sustainability aren't buzzwords, they're why we
-					win.</p>
+					build, test, and iterate on them using real-world analytics and actionable KPIs. Our emphasis on data-driven design, diversity, user empathy, and sustainability aren't buzzwords. They're reflected in every stage of our work, and we win because of it.</p>
 				</div>
 			</div>
 		</section>
@@ -68,33 +67,33 @@
 
 	const values = [
 		{
-			name: 'Be world-class.',
-			description: 'Being happy is the goal, but greatness is our mission.',
+			name: "Be world-class.",
+			description: "Being happy is the goal, but greatness is our mission. However, we don't step on people to get there.",
 			icon: TrophyIcon,
 		},
 		{
-			name: 'Take responsibility.',
-			description: 'No excuses, no bullshit. We get it done.',
+			name: "Take responsibility.",
+			description: "We don't make excuses, and we're allergic to bullshit. Celebrating wins and learning from losses is core to our culture.",
 			icon: HandRaisedIcon,
 		},
 		{
-			name: 'Be supportive.',
-			description: 'We take the time to help each other improve and learn from our mistakes.',
+			name: "Be supportive.",
+			description: "We take the time to help each other improve.",
 			icon: UserGroupIcon,
 		},
 		{
-			name: 'Always learning.',
-			description: 'Our passion for education allows us to thrive on the cutting edge of technology.',
+			name: "Always learning.",
+			description: "Our passion for education allows us to thrive on the cutting edge of technology.",
 			icon: AcademicCapIcon,
 		},
 		{
-			name: 'No Rockstars.',
-			description: 'Nobody has time for egos so check yourself before you wreck yourself.',
+			name: "No Rockstars.",
+			description: "You won't find any 10Xers here. Nobody has time for egos, so check yourself before you wreck yourself.",
 			icon: SparklesIcon,
 		},
 		{
-			name: 'Enjoy downtime.',
-			description: 'We like to touch grass once in a while.',
+			name: "Enjoy downtime.",
+			description: "We like to touch grass once in a while.",
 			icon: SunIcon,
 		},
 	]
