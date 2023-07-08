@@ -1,5 +1,5 @@
 <template>
-	<section id="skills" class="mx-auto px-4 py-16">
+	<section id="skills" class="px-4 py-16">
 		<div class="container lg:max-w-7xl flex flex-col mx-auto my-8">
 			<div class="pb-8">
 				<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white">
