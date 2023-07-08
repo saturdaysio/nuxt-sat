@@ -88,7 +88,7 @@
 		},
 		{
 			name: "No Rockstars.",
-			description: "You won't find any 10Xers here. Nobody has time for egos, so check yourself before you wreck yourself.",
+			description: "You won't find any 10Xers here and nobody has time for egos, so check yourself before you wreck yourself.",
 			icon: SparklesIcon,
 		},
 		{
