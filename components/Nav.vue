@@ -1,5 +1,6 @@
 <template>
     <Popover v-slot="{ open }">
+        <Snitcher :open="open"  @change="({ open }) => isPopoverOpen = open" />
         <nav class="relative">
             <div class="fixed w-full">
                 <header class="inset-x-0 backdrop-blur bg-black/80 border-b border-white/10">
@@ -28,7 +29,6 @@
 
                     </div>
                 </header>
-
                 <transition
                     enter-active-class="transition duration-150 ease-out"
                     enter-from-class="opacity-0"
@@ -57,6 +57,7 @@
 
 <script setup lang="ts">
 
+	import { defineComponent, ref, watchEffect } from 'vue'
 	import { Popover, PopoverButton, PopoverPanel, } from '@headlessui/vue'
 	import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 
@@ -78,8 +79,31 @@
 	]
 
 
-    // Menu overlay state watcher + overflow-y lock
-    // Need to watch v-slot open state and work off that
+    // Hack to echo Popover v-slot state change
+    // https://github.com/tailwindlabs/headlessui/issues/2436
+    // https://stackoverflow.com/questions/67807076/get-v-slots-value
+    let isPopoverOpen = ref(false)
+    const emit = defineEmits(["opened", "closed"])
+
+    // Invisible component to emit Popover 'open' state
+    const Snitcher = defineComponent({
+        setup: (_, { attrs, emit }) => {
+            watchEffect(() => emit('change', attrs))
+
+            return () => null
+        }
+    })
+
+    // Watch isPopoverOpen state to apply overflow class
+    watch(isPopoverOpen, () => {
+        // if isPopoverOpen = true, apply body class="overflow-hidden" to lock background scrolling
+        if (isPopoverOpen.value) {
+            document.body.classList.add("overflow-hidden");
+        } else {
+            document.body.classList.remove("overflow-hidden");
+        }},
+        { immediate: true } // Forces watcher callback to be executed immediately https://vuejs.org/guide/essentials/watchers.html#eager-watchers
+    )
 
 </script>
 
