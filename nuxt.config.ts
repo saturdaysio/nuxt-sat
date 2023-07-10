@@ -22,6 +22,7 @@ export default defineNuxtConfig({
         pageTransition: { name: 'page', mode: 'out-in' },
     },
 
+    
     // Server-side rendering mode
     // https://nuxt.com/docs/api/configuration/nuxt-config/#ssr
     ssr: false,
