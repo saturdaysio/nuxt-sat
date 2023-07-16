@@ -90,7 +90,8 @@ module.exports = {
     },
 
     fontSize: {
-      sm: ['0.875rem', '1.25rem'], // font-size: 14px, line-height: 20px
+      sm: ['0.75rem', '1rem'], // font-size: 12px, line-height: 16px
+			md: ['0.875rem', '1.25rem'], // font-size: 14px, line-height: 20px
       base: ['1rem', '1.5rem'], // font-size: 16px, line-height: 24px
       xl: ['1.25rem', '2rem'], // font-size: 20px, line-height: 32px
       '2xl': ['1.5rem', '1.5'], // font-size: 24px, line-height: 36px
