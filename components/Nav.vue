@@ -3,7 +3,7 @@
         <Snitcher :open="open"  @change="({ open }) => isPopoverOpen = open" />
         <nav class="relative">
             <div class="fixed w-full">
-                <header class="inset-x-0 backdrop-blur bg-black/80 border-b border-white/10">
+                <header class="inset-x-0 backdrop-blur bg-black border-b border-white/10">
                     <div class="flex items-center justify-between max-w-7xl mx-auto px-4 py-4" aria-label="global">
 
                         <div class="flex lg:flex-1">
@@ -39,11 +39,11 @@
                 >
                     <!-- Mobile menu -->
                     <PopoverPanel class="inset-y-0 z-50 w-full h-screen lg:hidden">
-                        <div class="w-full h-full overflow-y-auto px-4 py-4 backdrop-blur bg-black/80">
+                        <div class="w-full h-full overflow-y-auto px-4 py-4 bg-black">
                             <!-- Navigation links -->
                             <div class="flex flex-col justify-center h-4/5">
                                 <div class="flex flex-col space-y-2">
-                                    <NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="mx-2 block py-4 text-2xl sm:text-3xl md:text-4xl font-bold text-white hover:opacity-60" active-class="active text-blue-300 underline underline-offset-8">{{ item.name }}</NuxtLink>
+                                    <NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="mx-2 block py-4 text-2xl sm:text-3xl md:text-4xl font-base text-white hover:opacity-60 hover:underline hover:underline-offset-4 hover:decoration-2" active-class="active text-blue-300 underline underline-offset-4 decoration-2">{{ item.name }}</NuxtLink>
                                 </div>
                             </div>
                         </div>
@@ -69,7 +69,6 @@
     const mobileNav = [
         { name: 'Work', to: '/' },
 		{ name: 'About', to: '/about' },
-        { name: 'Approach', to: '/approach' },
         { name: 'Jobs', to: '/jobs' },
 	]
 
