@@ -17,7 +17,19 @@
 // Tailwind Typography Overrides
 
   p, li {
-    color: $gray;
+    @apply text-gray-200;
+
+      a {
+        @apply underline underline-offset-4;
+      }
+
+      a:hover {
+        background: none;
+        opacity: 0.60;
+        -webkit-transition: all .4s ease;
+        -moz-transition: all .4s ease;
+        transition: all .4s ease;
+      }
   }
 
   .text-category {
@@ -25,7 +37,7 @@
   }
 
   .text-purple-pink {
-    @apply font-bold text-grad-01;
+    @apply red-to-blue;
   }
 
 
@@ -35,7 +47,7 @@
 /* Break off into its own file - 01/01/2023 */
 
   a {
-    color: $blue;
+    @apply font-bold text-blue-300;
   }
 
   .nav-item {
@@ -51,6 +63,6 @@
     
     .active {
       text-decoration: underline;
-      text-underline-offset: 8px;
+      text-underline-offset: 4px;
     }
   }
