@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-@import "~/assets/styles/button.scss";
 @import "~/assets/styles/colour.scss";
 @import "~/assets/styles/font.scss";
 
@@ -47,7 +46,7 @@
 /* Break off into its own file - 01/01/2023 */
 
   a {
-    @apply font-bold text-blue-300;
+    @apply font-bold text-blue-400;
   }
 
   .nav-item {
@@ -65,4 +64,31 @@
       text-decoration: underline;
       text-underline-offset: 4px;
     }
+  }
+
+
+  /* Button Styles */
+
+
+/* Default */
+
+  button {
+    p {
+      color: inherit;
+    }
+  }
+
+
+/* Primary */
+
+  .primary {
+    @apply text-center font-bold text-white bg-blue-400 py-4 px-8 rounded-md hover:bg-blue-800 transition duration-500
+  }
+
+  .secondary {
+    @apply text-center font-bold text-white bg-blue-400 py-4 px-8 rounded-md hover:bg-blue-800 transition duration-500
+  }
+
+  .cta {
+    @apply text-center font-bold text-white bg-black py-4 px-8 rounded-md border-4 border-solid border-blue-600 hover:bg-red-400 hover:border-red-400 transition duration-500
   }
