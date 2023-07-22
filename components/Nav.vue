@@ -3,7 +3,7 @@
         <Snitcher :open="open"  @change="({ open }) => isPopoverOpen = open" />
         <nav class="relative">
             <div class="fixed w-full">
-                <header class="inset-x-0 backdrop-blur bg-black border-b border-white/10">
+                <header class="inset-x-0 backdrop-blur bg-black/80 border-b border-white/20">
                     <div class="flex items-center justify-between max-w-7xl mx-auto px-4 py-4" aria-label="global">
 
                         <div class="flex lg:flex-1">
@@ -30,15 +30,15 @@
                     </div>
                 </header>
                 <transition
-                    enter-active-class="transition duration-150 ease-out"
+                    enter-active-class="transition-all duration-500 ease-in-out"
                     enter-from-class="opacity-0"
                     enter-to-class="opacity-100"
-                    leave-active-class="transition duration-150 ease-in"
+                    leave-active-class="transition duration-500 ease-in-out"
                     leave-from-class="opacity-100"
                     leave-to-class=" opacity-0"
                 >
                     <!-- Mobile menu -->
-                    <PopoverPanel class="inset-y-0 z-50 w-full h-screen lg:hidden">
+                    <PopoverPanel class="inset-y-0 z-10 w-full h-screen lg:hidden">
                         <div class="w-full h-full overflow-y-auto px-4 py-4 bg-black">
                             <!-- Navigation links -->
                             <div class="flex flex-col justify-center h-4/5">
@@ -108,14 +108,6 @@
 
 
 <style lang="scss" scoped>
-
-    .v-enter-active, .v-leave-active {
-        transition: opacity 0.2s ease;
-    }
-
-    .v-enter-from, .v-leave-to {
-        opacity: 0;
-    }
 
     a {
 		&:hover, &:focus {
