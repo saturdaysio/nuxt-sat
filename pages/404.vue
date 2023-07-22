@@ -7,7 +7,7 @@
 			<div class="flex flex-col justify-center">
 				<div class="mb-8">
 					<div class="text-center pb-2">
-						<h1 class="text-4xl font-bold text-grad-01">Page not found</h1>
+						<h1 class="text-4xl sm:text-5xl md:text-6xl font-bold lime-to-aqua">Page not found</h1>
 					</div>
 					<div class="text-center">
 						<p class="text-xl text-white">The page you are looking for does not exist.</p>
@@ -15,7 +15,7 @@
 				</div>
 
 				<div class="flex justify-center">
-					<Button :cta="'Go Home'" class="button cta" @click="handleClearError" />
+					<Button :text="'Go Home'" class="button primary" @click="handleClearError" />
 				</div>
 			</div>
 		</section>
