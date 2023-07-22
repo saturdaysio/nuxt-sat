@@ -2,7 +2,7 @@
 	<section class="px-4 py-24 sm:py-32">
 	  <div class="max-w-6xl mx-auto">
 		<div class="px-4 pb-8">
-			<h1 class="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-grad-01">We partner with brands that care about meaningful digital experiences</h1>
+			<h1 class="text-3xl md:text-4xl lg:text-5xl text-center font-bold lime-to-aqua">We partner with brands that care about meaningful digital experiences</h1>
 		</div>
 
 		<div id="grid" class=" grid grid-cols-2 gap-4 overflow-hidden sm:mx-0 md:grid-cols-3 lg:grid-cols-4">

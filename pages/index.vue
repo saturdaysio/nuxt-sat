@@ -7,7 +7,7 @@
 
 		<section class="px-4 py-16">
 			<div class=" max-w-6xl mx-auto">
-				<h1 class="text-3xl md:text-4xl lg:text-5xl text-center text-purple-pink">
+				<h1 class="text-3xl md:text-4xl lg:text-5xl text-center font-bold lime-to-aqua">
 					We're a Data-driven digital studio that focuses on the Design, Development, and Strategy of digital products.
 				</h1>
 			</div>
@@ -17,7 +17,7 @@
 		<section id="peek" class="px-4 py-16">
 			<div class="">
 				<div class="mt-8 pb-8">
-					<h1 class="text-4xl md:text-5xl lg:text-6xl text-center text-purple-pink">
+					<h1 class="text-4xl md:text-5xl lg:text-6xl text-center font-bold lime-to-aqua">
 						What we're making
 					</h1>
 				</div>
