@@ -21,7 +21,7 @@
 		</section>
 
 		
-		<section id="value" class="px-4 py-16">
+		<section id="value" class="px-4 sm:px-8 md:px-12 py-16">
 			<div class="text-center">
 				<h2 class="text-4xl md:text-5xl lg:text-6xl font-bold lime-to-aqua">Our values</h2>
 				<span class="text-xl font-base text-white">What we care about.</span>
