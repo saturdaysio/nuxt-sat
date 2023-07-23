@@ -29,9 +29,9 @@
 			<dl class="max-w-7xl mx-auto mt-16 grid grid-cols-1 sm:grid-cols-2 gap-12 lg:gap-x-16">
 				<div v-for="value in values" :key="value.name" class="">
 					<dt class="pb-2">
-						<component :is="value.icon" class="top-0 left-0 h-12 w-12 stroke-1 text-white" aria-hidden="true" />
+						<component :is="value.icon" class="top-0 left-0 h-12 w-12 stroke-1 text-green-400" aria-hidden="true" />
 					</dt>
-					<dt class="inline text-lg md:text-xl font-bold text-white">
+					<dt class="inline text-lg md:text-xl font-bold text-green-400">
 						{{ value.name }}
 					</dt>
 					{{ '' }}
