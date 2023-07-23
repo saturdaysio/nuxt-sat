@@ -1,6 +1,6 @@
 <template>
-	<section class="relative isolate overflow-hidden pt-16 -z-10">
-		<div class="">
+	<section class="relative isolate pt-16 -z-10">
+		<div class="overflow-hidden">
 			<svg class="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
 				<defs>
 					<pattern id="983e3e4c-de6d-4c3f-8d64-b9761d1534cc" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
@@ -18,11 +18,10 @@
 			</div>
 		</div>
 
-			<div class="max-w-6xl mx-auto px-8 py-32 sm:py-48 lg:py-56">
+		<div class="max-w-6xl mx-auto px-8 py-32 sm:py-48 lg:py-56">
 			<div class="text-center z-30">
 				<h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-center text-white">{{ intro }}</h1>
 			</div>
-
 		</div>
 	</section>
 </template>
