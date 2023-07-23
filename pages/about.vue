@@ -56,7 +56,7 @@
 
 <script setup lang="ts">
 
-	import { AcademicCapIcon, GlobeAmericasIcon, HandRaisedIcon, PaintBrushIcon, SparklesIcon, SunIcon, TrophyIcon, UserGroupIcon, } from '@heroicons/vue/24/outline'
+	import { AcademicCapIcon, HandRaisedIcon, SparklesIcon, SunIcon, TrophyIcon, UserGroupIcon, } from '@heroicons/vue/24/outline'
 
 	useHead({
 		title: 'Saturdays.io - About',
