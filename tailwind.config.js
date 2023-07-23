@@ -7,7 +7,7 @@ const primary = colors.blue;
 const secondary = colors.pink; // need to add
 const info = colors.purple;
 const warning = colors.orange; // need to add
-const success = colors.green; // need to add
+const success = colors.green; // need to refine
 const error = colors.red;
 
 
@@ -47,6 +47,17 @@ module.exports = {
         '800': "#1565C0",
         '900': "#0D47A1",
         },
+      green: {
+        '100': "#84F4A0",
+        '200': "#6ECAEC",
+        '300': "#84F4A0",
+        '400': "#84F4A0",
+        '500': "#84F4A0",
+        '600': "#84F4A0",
+        '700': "#84F4A0",
+        '800': "#84F4A0",
+        '900': "#84F4A0",
+      },
       purple: {
         '100': "#D1C4E9",
         '200': "#B39DDB",
