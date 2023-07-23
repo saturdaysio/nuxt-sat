@@ -28,7 +28,7 @@
 		{
 			name: 'PC',
 			role: 'Design',
-			imageUrl: '/pc.webp',
+			imageUrl: '/sasha.webp',
 			width: '420',
 			height: '420',
 			alt: 'profile photo',
