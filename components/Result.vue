@@ -1,5 +1,5 @@
 <template>
-	<section id="stats" class="px-4 lg:px-8 py-24 sm:py-32">
+	<section id="stats" class="px-4 lg:px-8 py-16 md:py-20 lg:py-24">
 		<div class="max-w-6xl mx-auto">
 			<div>
 				<h2 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-center text-white">Our stats</h2>
