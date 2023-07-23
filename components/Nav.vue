@@ -1,7 +1,7 @@
 <template>
     <Popover v-slot="{ open }">
         <Snitcher :open="open"  @change="({ open }) => isPopoverOpen = open" />
-        <nav class="relative">
+        <nav class="relative z-50">
             <div class="fixed w-full">
                 <header class="inset-x-0 backdrop-blur bg-black/90 border-b border-white/10">
                     <div class="flex items-center justify-between max-w-7xl mx-auto px-4 py-4" aria-label="global">
@@ -38,7 +38,7 @@
                     leave-to-class=" opacity-0"
                 >
                     <!-- Mobile menu -->
-                    <PopoverPanel class="inset-y-0 z-10 w-full h-screen lg:hidden">
+                    <PopoverPanel class="inset-y-0 w-full h-screen lg:hidden">
                         <div class="w-full h-full overflow-y-auto px-4 py-4 bg-black">
                             <!-- Navigation links -->
                             <div class="flex flex-col justify-center h-4/5">
