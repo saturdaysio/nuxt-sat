@@ -50,7 +50,7 @@ export default defineNuxtConfig({
 
     // nuxt-image module
     image: {
-        format: ['webp'],
+        provider: 'netlify',
         // The screen sizes predefined by `@nuxt/image`:
         screens: {
             xs: 320,
