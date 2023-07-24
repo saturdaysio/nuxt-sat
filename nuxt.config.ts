@@ -25,7 +25,7 @@ export default defineNuxtConfig({
     
     // Server-side rendering mode
     // https://nuxt.com/docs/api/configuration/nuxt-config/#ssr
-    ssr: true,
+    ssr: false,
 
 
     // Global CSS/SCSS
