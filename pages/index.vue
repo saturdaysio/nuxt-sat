@@ -22,7 +22,7 @@
 					</h1>
 				</div>
 				<div class="max-w-7xl mx-auto">
-					<nuxt-picture src="/mobile.webp" width="1600" height="1000"  sizes="sm:100vw md:80vw lg:1280px" alt="mobile app interface examples" preload loading="lazy" draggable="false" />
+					<nuxt-img src="/mobile.webp" width="1600" height="1000"  sizes="sm:480px md:800px lg:1280px" alt="mobile app designs" loading="lazy" draggable="false" />
 				</div>
 			</div>
 		</section>
