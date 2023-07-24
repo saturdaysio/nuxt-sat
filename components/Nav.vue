@@ -93,6 +93,7 @@
         }
     })
 
+    // wrap this in if (process.client) to use SSR: true in nuxt.config.ts
     // Watch isPopoverOpen state to apply overflow class
     watch(isPopoverOpen, () => {
         // if isPopoverOpen = true, apply body class="overflow-hidden" to lock background scrolling
