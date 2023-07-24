@@ -28,7 +28,7 @@
 		{
 			name: 'PC',
 			role: 'Design',
-			imageUrl: '/sasha.webp',
+			imageUrl: 'team/sasha.webp',
 			width: '420',
 			height: '420',
 			alt: 'profile photo',
@@ -37,7 +37,7 @@
 		{
 			name: 'Maxx',
 			role: 'Engineering',
-			imageUrl: '/maxx.webp',
+			imageUrl: 'team/maxx.webp',
 			width: '420',
 			height: '420',
 			alt: 'profile photo',
@@ -46,7 +46,7 @@
 		{
 			name: 'Sasha',
 			role: 'Engineering',
-			imageUrl: '/sasha.webp',
+			imageUrl: 'team/sasha.webp',
 			width: '420',
 			height: '420',
 			alt: 'profile photo',
@@ -55,7 +55,7 @@
 		{
 			name: 'Kara',
 			role: 'Engineering',
-			imageUrl: '/kara.webp',
+			imageUrl: 'team/kara.webp',
 			width: '420',
 			height: '420',
 			alt: 'profile photo',
