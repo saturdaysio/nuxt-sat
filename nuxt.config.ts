@@ -83,6 +83,15 @@ export default defineNuxtConfig({
     spaLoadingTemplate: false,
 
 
+    // Temporary fix for the node-glob bug that fails the Netlify build
+    postcss: {
+        plugins: {
+            tailwindcss: {},
+            autoprefixer: {},
+        },
+    },
+
+
     // Vite build config
     vite: {
         css: {
