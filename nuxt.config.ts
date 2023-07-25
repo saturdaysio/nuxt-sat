@@ -79,17 +79,8 @@ export default defineNuxtConfig({
     },
 
 
-    // Disables SPA loading animation
-    spaLoadingTemplate: false,
-
-
-    // Temporary fix for the node-glob bug that fails the Netlify build
-    postcss: {
-        plugins: {
-            tailwindcss: {},
-            autoprefixer: {},
-        },
-    },
+    // Disables SPA loading animation, nuxt v3.6+ feature only
+    // spaLoadingTemplate: false,
 
 
     // Vite build config
