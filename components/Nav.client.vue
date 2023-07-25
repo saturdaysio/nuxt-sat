@@ -96,7 +96,7 @@
     // Watch isPopoverOpen state to apply overflow class
     watch(isPopoverOpen, () => {
         // if isPopoverOpen = true, apply body class="overflow-hidden" to lock background scrolling
-        if (isPopoverOpen.value) {
+        if (process.client && isPopoverOpen.value) {
             document.body.classList.add("overflow-hidden");
         } else {
             document.body.classList.remove("overflow-hidden");
