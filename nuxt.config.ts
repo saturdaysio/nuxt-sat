@@ -22,11 +22,6 @@ export default defineNuxtConfig({
         pageTransition: { name: 'page', mode: 'out-in' },
     },
 
-    
-    // Server-side rendering mode
-    // https://nuxt.com/docs/api/configuration/nuxt-config/#ssr
-    ssr: false,
-
 
     // Global CSS/SCSS
     css: [
@@ -63,6 +58,30 @@ export default defineNuxtConfig({
             '2xl': 1600,
         },
     },
+
+
+    // Hybrid Rendering setup
+    // https://nuxt.com/docs/guide/concepts/rendering
+    routeRules: {
+        // Homepage pre-rendered at build time
+        '/': { prerender: true },
+        // Page generated on-demand, revalidates in background
+        '/about/**': { swr: true },
+        // Blog post generated on-demand once until next deploy
+        '/terms-of-service': { isr: true },
+        '/privacy-policy': { isr: true },
+        // Admin dashboard renders only on client-side
+        '/admin/**': { ssr: false },
+        // Add CORS headers on API routes
+        '/api/**': { cors: true },
+        // Redirects legacy urls
+        '/old-page': { redirect: '/' },
+    },
+
+    // Server-side rendering mode
+    // https://nuxt.com/docs/api/configuration/nuxt-config/#ssr
+    ssr: false,
+    
 
     // Disables SPA loading animation
     spaLoadingTemplate: false,
