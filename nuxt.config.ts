@@ -78,10 +78,6 @@ export default defineNuxtConfig({
         '/old-page': { redirect: '/' },
     },
 
-    // Server-side rendering mode
-    // https://nuxt.com/docs/api/configuration/nuxt-config/#ssr
-    ssr: false,
-    
 
     // Disables SPA loading animation
     spaLoadingTemplate: false,
