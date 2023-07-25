@@ -60,6 +60,12 @@ export default defineNuxtConfig({
     },
 
 
+    nitro: {
+        prerender: {
+            concurrency: 1
+        }
+    },
+
     // Hybrid Rendering setup
     // https://nuxt.com/docs/guide/concepts/rendering
     routeRules: {
