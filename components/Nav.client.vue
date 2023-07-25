@@ -94,6 +94,15 @@
     })
 
     // Watch isPopoverOpen state to apply overflow class
+    watch(isPopoverOpen, () => {
+        // if isPopoverOpen = true, apply body class="overflow-hidden" to lock background scrolling
+        if (isPopoverOpen.value) {
+            document.body.classList.add("overflow-hidden");
+        } else {
+            document.body.classList.remove("overflow-hidden");
+        }},
+        { immediate: true } // Forces watcher callback to be executed immediately https://vuejs.org/guide/essentials/watchers.html#eager-watchers
+    )
 
 </script>
 
