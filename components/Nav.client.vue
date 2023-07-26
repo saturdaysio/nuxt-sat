@@ -93,7 +93,9 @@
         }
     })
 
+
     // Watch isPopoverOpen state to apply overflow class
+    // Need to add additional functionality to check browser width, if wider than 1024px, close menu
     watch(isPopoverOpen, () => {
         // if isPopoverOpen = true, apply body class="overflow-hidden" to lock background scrolling
         if (isPopoverOpen.value) {
