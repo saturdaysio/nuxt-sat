@@ -49,23 +49,10 @@
     @apply font-bold text-green-400;
   }
 
-  .nav-item {
-    border: 0;
-
-    a:hover {
-      background: none;
-      opacity: 0.60;
-      -webkit-transition: all .4s ease;
-      -moz-transition: all .4s ease;
-      transition: all .4s ease;
-    }
-    
-    .active {
-      text-decoration: underline;
-      text-underline-offset: 4px;
-    }
+  .active {
+    text-decoration: underline;
+    text-underline-offset: 4px;
   }
-
 
 
 

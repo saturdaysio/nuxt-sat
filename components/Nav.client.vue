@@ -4,7 +4,7 @@
         <nav class="relative z-50">
             <div class="fixed w-full">
                 <header class="inset-x-0 backdrop-blur bg-black/90 border-b border-white/10">
-                    <div class="flex items-center justify-between max-w-7xl mx-auto px-4 py-4" aria-label="global">
+                    <div class="flex justify-between max-w-7xl mx-auto px-4 py-4" aria-label="global">
 
                         <div class="flex lg:flex-1">
                             <!-- Logo -->
@@ -23,8 +23,8 @@
                         </div>
 
                         <!-- Navigation links -->
-                        <div class="hidden lg:flex lg:flex-1 lg:gap-x-8 lg:justify-end nav-item">
-                            <NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="text-md text-white" active-class="active">{{ item.name }}</NuxtLink>
+                        <div class="hidden lg:flex lg:flex-1 lg:gap-x-8 lg:justify-end items-center">
+                            <NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="nav-item text-md text-white" active-class="active">{{ item.name }}</NuxtLink>
                         </div>
 
                     </div>
@@ -111,10 +111,12 @@
 
 <style lang="scss" scoped>
 
-    a {
-		&:hover, &:focus {
-			@apply underline underline-offset-4
-  		}
-	}
+    .nav-item {
+        border: 0;
+
+        &:hover, &:focus {
+            @apply underline underline-offset-4 opacity-60 duration-500
+        }
+    }
 
 </style>
