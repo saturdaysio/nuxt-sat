@@ -5,9 +5,9 @@
 
 		<div class="flex min-h-full flex-1 flex-col justify-center pt-16">
 
-			<div id="block" class="w-full max-w-xl mx-auto mt-32 px-6 py-6 md:px-8 md:py-8 rounded-md bg-gray-900">
+			<div id="block" class="w-full max-w-xl mx-auto mt-32 px-6 py-6 md:px-8 md:py-8 rounded-md bg-gray-900/10">
 				<div class="mx-auto w-full mb-12">
-					<h1 class="text-2xl sm:text-3xl md:text-4xl font-bold leading-9 tracking-tight text-center text-white">Sign in to your account</h1>
+					<h1 class="text-2xl sm:text-3xl md:text-4xl font-bold leading-9 tracking-tight text-center lime-to-aqua">Sign in to your account</h1>
 				</div>
 
 				<div class="mx-auto w-full">
@@ -17,7 +17,7 @@
 							<div class="mt-2">
 								<!-- use @apply to create default, selected, error states and toggle -->
 								<input v-model="email" type="text"
-									class="block w-full rounded-md px-4 py-4 border-0 bg-black text-white shadow-sm focus:ring-4 focus:ring-inset focus:ring-green-500 sm:text-xl sm:leading-6" />
+									class="block w-full rounded-md px-4 py-4 border-0 bg-gray-800/70 text-white shadow-sm focus:ring-4 focus:ring-inset focus:ring-green-500 sm:text-xl sm:leading-6" />
 							</div>
 						</div>
 
@@ -28,7 +28,7 @@
 							<div class="mt-2">
 								<!-- make a proper component for password inputs -->
 								<input id="password" name="password" type="password" autocomplete="current-password"
-									class="block w-full rounded-md px-4 py-4 border-0 bg-black text-white shadow-sm focus:ring-4 focus:ring-inset focus:ring-green-500 sm:text-xl sm:leading-6" />
+									class="block w-full rounded-md px-4 py-4 border-0 bg-gray-800/70 text-white shadow-sm focus:ring-4 focus:ring-inset focus:ring-green-500 sm:text-xl sm:leading-6" />
 							</div>
 						</div>
 
