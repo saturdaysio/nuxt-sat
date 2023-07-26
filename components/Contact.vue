@@ -10,16 +10,6 @@
 				<div class="mt-10 flex items-center justify-center gap-x-6">
 					<Button :buttonLabel="'Say hello'" class="primary" :to="'mailto:hello@saturdays.io'" rel="noreferrer" target="_blank" />
 				</div>
-
-				<svg viewBox="0 0 1024 1024" class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]" aria-hidden="true">
-					<circle cx="512" cy="512" r="512" fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)" fill-opacity="0.7" />
-					<defs>
-						<radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217">
-							<stop stop-color="#78C0E8" />
-							<stop offset="1" stop-color="#5820A8" />
-						</radialGradient>
-					</defs>
-				</svg>
 			</div>
 		</div>
 
