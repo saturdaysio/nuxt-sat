@@ -65,12 +65,20 @@ export default defineNuxtConfig({
     routeRules: {
         // Homepage pre-rendered at build time
         '/': { prerender: true },
+        '/work': { prerender: true },
+        '/about': { prerender: true },
+        '/terms-of-service': { prerender: true },
+        '/privacy-policy': { prerender: true },
+        // Renders only on client-side
+        '/signin/**': { ssr: false },
+        // Generated on-demand, revalidates in background
+        '/profile/**': { swr: true },
+
         // Page generated on-demand, revalidates in background
-        '/about/**': { swr: true },
-        // Blog post generated on-demand once until next deploy
-        '/terms-of-service': { isr: true },
-        '/privacy-policy': { isr: true },
-        // Admin dashboard renders only on client-side
+        '/temp/**': { swr: true },
+        // Generated on-demand once until next deploy
+        '/blog/**': { isr: true },
+        // Renders only on client-side
         '/admin/**': { ssr: false },
         // Add CORS headers on API routes
         '/api/**': { cors: true },
@@ -113,7 +121,7 @@ export default defineNuxtConfig({
 
     // https://stackoverflow.com/questions/74003458/cannot-find-module-pinia-dist-pinia-mjs-when-using-run-dev
     alias: {
-        'pinia': '/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs',
+        pinia: "/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs",
     },
 
 
