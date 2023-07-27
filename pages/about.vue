@@ -20,26 +20,8 @@
 			</div>
 		</section>
 
-		
-		<section id="value" class="px-4 sm:px-8 md:px-12 py-16 md:py-20 lg:py-24">
-			<div class="text-center">
-				<h2 class="text-4xl md:text-5xl lg:text-6xl font-bold lime-to-aqua">Our values</h2>
-			</div>
 
-			<dl class="max-w-7xl mx-auto mt-16 grid grid-cols-1 sm:grid-cols-2 gap-12 lg:gap-x-16">
-				<div v-for="value in values" :key="value.name" class="">
-					<dt class="pb-2">
-						<component :is="value.icon" class="top-0 left-0 h-12 w-12 stroke-1 text-green-400" aria-hidden="true" />
-					</dt>
-					<dt class="inline text-lg md:text-xl font-bold text-green-400">
-						{{ value.name }}
-					</dt>
-					{{ '' }}
-					<dd class="inline text-lg md:text-xl text-gray-400">{{ value.description }}</dd>
-				</div>
-			</dl>
-		</section>
-
+		<Ideals />
 
 		<Result />
 
@@ -55,8 +37,6 @@
 
 <script setup lang="ts">
 
-	import { AcademicCapIcon, HandRaisedIcon, SparklesIcon, SunIcon, TrophyIcon, UserGroupIcon, } from '@heroicons/vue/24/outline'
-
 	useHead({
 		title: 'Saturdays.io - About',
 		meta: [
@@ -64,39 +44,6 @@
 			{ name: 'keywords', content: 'About, Company, Clients, Saturdays.io, Digital, Studio, Creative, Digital Studio, Creative Studio,' },
 		]
 	})
-
-	const values = [
-		{
-			name: "Be world-class.",
-			description: "Being happy is the goal, but greatness is our mission. However, we don't step on people to get there.",
-			icon: TrophyIcon,
-		},
-		{
-			name: "Take responsibility.",
-			description: "We don't make excuses, and we're allergic to bullshit. Celebrating wins and learning from losses is core to our culture.",
-			icon: HandRaisedIcon,
-		},
-		{
-			name: "Be supportive.",
-			description: "We take the time to help each other improve.",
-			icon: UserGroupIcon,
-		},
-		{
-			name: "Always learning.",
-			description: "Our love for learning and experimentation allows us to thrive on the cutting edge of technology.",
-			icon: AcademicCapIcon,
-		},
-		{
-			name: "No Rockstars.",
-			description: "You won't find any 10Xers here, and nobody has time for egos. So check yourself before you wreck yourself.",
-			icon: SparklesIcon,
-		},
-		{
-			name: "Enjoy downtime.",
-			description: "We like to touch grass once in a while.",
-			icon: SunIcon,
-		},
-	]
 
 </script>
 
