@@ -12,7 +12,7 @@
 					<div role="list" class="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-1 gap-x-2 md:gap-x-4 lg:gap-x-6 gap-y-16 md:gap-y-24 lg:gap-y-32">
 						<div v-for="item in ideal" :key="item.title" class="p-2 gap-x-8 md:flex items-center even:flex-row-reverse md:even:text-right">
 							<div id="video" class="md:w-6/12 mb-2">
-								<video class="w-full rounded object-fill" :src="item.video" autoplay loop />
+								<video class="w-full rounded object-fill" :src="item.video" autoplay playsinline loop />
 							</div>
 							<div id="meta" class="md:w-6/12 justify-center items-center">
 								<h2 class="mt-2 text-2xl sm:text-3xl lg:text-4xl font-bold leading-8 lime-to-aqua">{{ item.title }}</h2>
@@ -44,7 +44,7 @@
 		{
 			video: "/meme/beyonce-dance.mp4",
 			title: "Be supportive",
-			desc: "We take the time to help each other improve."
+			desc: "We operate like a sports roster and always take the time to help each other improve."
 		},
 		{
 			video: "/meme/golf.mp4",
