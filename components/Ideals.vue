@@ -47,14 +47,14 @@
 			desc: "We operate like a sports roster and always take the time to help each other improve."
 		},
 		{
-			video: "/meme/golf.mp4",
+			video: "/meme/awkwafina.mp4",
 			title: "Always learning",
-			desc: "Our love for learning and experimentation allows us to thrive on the cutting edge of technology."
+			desc: "This is a special time for startups and in history. We have unlimited creativity, ingenuity, and resources. We're making these years the most rewarding of our lives."
 		},
 		{
 			video: "/meme/vince-carter.mp4",
 			title: "No rockstars",
-			desc: "You won't find any 10Xers here, and nobody has time for egos. So check yourself before you wreck yourself."
+			desc: "You won't find any 10Xers here, and nobody has time for egos. Check yourself before you wreck yourself."
 		},
 		{
 			video: "/meme/hawaii.mp4",
