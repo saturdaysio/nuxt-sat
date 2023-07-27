@@ -7,7 +7,7 @@
 			<dl class="mt-16 grid grid-cols-1 gap-6 overflow-hidden sm:grid-cols-2 xl:grid-cols-4">
 				<div v-for="item in resultStore.resultJson.result" :key="item.id" class="flex flex-col p-4 lg:p-8 rounded-lg bg-gray-800/20">
 					<dd class="order-first text-2xl md:text-3xl lg:text-3xl font-semibold tracking-tight lime-to-aqua mb-8 md:mb-12 lg:mb-16">{{ item.title }}</dd>
-					<dt class="text-base mb:text-lg lg:text-xl font-normal text-white">{{ item.desc }}</dt>
+					<dt class="text-base lg:text-lg font-normal text-white">{{ item.desc }}</dt>
 				</div>
 			</dl>
 		</div>
