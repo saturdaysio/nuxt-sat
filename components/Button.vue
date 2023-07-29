@@ -1,7 +1,7 @@
 <template>
 	<NuxtLink>
 		<button>
-			<p class="text-xl md:text-2xl font-bold">{{ buttonLabel }}</p>
+			<p class="text-base sm:text-lg md:text-xl font-semibold">{{ buttonLabel }}</p>
 		</button>
 	</NuxtLink>
 </template>
