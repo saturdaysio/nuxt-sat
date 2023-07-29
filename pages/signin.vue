@@ -13,10 +13,10 @@
 				<div class="mx-auto w-full">
 					<form class="space-y-6" action="#" method="POST">
 						<div id="email" class="">
-							<label for="email" class="block text-md font-bold leading-5 text-white">Email address</label>
+							<label for="email" class="block text-md font-bold leading-5 text-white">Email</label>
 							<div class="mt-2">
 								<!-- use @apply to create default, selected, error states and toggle -->
-								<input v-model="email" type="text" aria-labelledby="email field" placeholder="aria@saturdays.io"
+								<input v-model="email" type="text" aria-labelledby="email field" placeholder="Enter your email address"
 									class="block w-full rounded-md px-4 py-4 border-0 bg-gray-800/70 font-light text-white shadow-sm focus:ring-4 focus:ring-inset focus:ring-green-500 sm:text-xl sm:leading-6" />
 							</div>
 						</div>
@@ -27,14 +27,17 @@
 							</div>
 							<div class="mt-2">
 								<!-- make a proper component for password inputs -->
-								<input id="password" name="password" type="password" autocomplete="current-password" aria-labelledby="password field" placeholder=""
+								<input id="password" name="password" type="password" autocomplete="current-password" aria-labelledby="password field" placeholder="Enter your password"
 									class="block w-full rounded-md px-4 py-4 border-0 bg-gray-800/70 font-light text-white shadow-sm focus:ring-4 focus:ring-inset focus:ring-green-500 sm:text-xl sm:leading-6" />
 							</div>
 						</div>
 
 						<div id="submit" class="">
 							<!-- make a proper component for button and states -->
-							<Button type="submit" :buttonLabel="'Sign in'" class=" primary block w-full" />
+							<Button type="submit" :buttonLabel="'Sign in'" class="primary block w-full" />
+						</div>
+						<div id="bth" class="text-center">
+							<NuxtLink :to="'/'" class="text-base leading-6 text-green-400 focus:underline focus:underline-offset-4">Back to home</NuxtLink>
 						</div>
 					</form>
 
