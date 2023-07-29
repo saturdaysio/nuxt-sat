@@ -33,6 +33,7 @@ export default defineNuxtConfig({
     modules: [
         '@nuxt/image',
         '@nuxtjs/robots',
+        '@nuxtjs/supabase',
         '@nuxtjs/tailwindcss',
         '@pinia/nuxt',
         'nuxt-purgecss',
