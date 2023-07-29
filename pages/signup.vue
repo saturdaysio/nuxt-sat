@@ -7,7 +7,7 @@
 
 			<div id="block" class="w-full max-w-xl mx-auto mt-32 px-6 py-6 md:px-8 md:py-8 rounded-md bg-gray-900/10">
 				<div class="mx-auto w-full mb-12">
-					<h1 class="text-3xl md:text-4xl font-bold leading-9 tracking-tight text-center lime-to-aqua">Sign in to your account</h1>
+					<h1 class="text-3xl md:text-4xl font-bold leading-9 tracking-tight text-center lime-to-aqua">Sign up for an account</h1>
 				</div>
 
 				<div class="mx-auto w-full">
@@ -32,13 +32,10 @@
 
 						<div id="submit" class="">
 							<!-- make a proper component for button and states -->
-							<button type="submit" @click="signIn" class="primary block w-full">
-								<span v-if="isSignUp"> Sign up </span>
-    						    <span v-else> Sign in</span>
-							</button>
+							<Button type="submit" @click="signUp" :buttonLabel="'Sign up'" class="primary block w-full" />
 						</div>
 						<div id="home-route" class="text-center">
-							<NuxtLink :to="'/'" class="text-base leading-6 text-green-400 focus:underline focus:underline-offset-4">Back to home</NuxtLink>
+							<p class="text-base text-white">Already have an account? <NuxtLink :to="'/signin'" class="text-base leading-6 text-green-400 focus:underline focus:underline-offset-4">Go back to sign in</NuxtLink></p>
 						</div>
 					</form>
 				</div>
@@ -64,16 +61,16 @@
 
 	const client = useSupabaseClient()
 
-	const isSignUp = ref(false)
+	const isSignUp = ref(true)
 	const email = ref('');
 	const password = ref(null);
 	const errorMsg = ref(null);
 	const successMsg = ref(null);
 
 
-	async function signIn() {
+	async function signUp() {
 		try {
-			const { user, error } = await client.auth.signInWithPassword({
+			const { user, error } = await client.auth.signUp({
 				email: email.value,
 				password: password.value,
 			});
@@ -92,16 +89,6 @@
 			}
 		})
 	})
-
-	async function signOut() {
-		try {
-			const { error } = await client.auth.SignOut()
-			if (error) throw error;
-			successMsg.value = 'Successfully signed out.'
-		} catch (error) {
-			errorMsg.value = error.message;
-		}
-	}
 
 </script>
 
