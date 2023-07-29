@@ -18,7 +18,7 @@
 		main: [
 			{ name: 'Work', to: '/' },
 			{ name: 'About', to: '/about' },
-			{ name: 'Client Login', to: '/signin' },
+			{ name: 'Client Sign in', to: '/signin' },
 			{ name: 'Terms of Service', to: '/terms-of-service' },
 			{ name: 'Privacy Policy', to: '/privacy-policy' },
 		],
