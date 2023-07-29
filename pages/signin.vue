@@ -11,7 +11,9 @@
 				</div>
 
 				<div class="mx-auto w-full">
-					<form class="space-y-6" action="#" method="POST">
+					<form
+						@submit.prevent="() => (isSignUp ? signUp() : signIn())"
+						class="space-y-6" action="#" method="POST">
 						<div id="email" class="">
 							<label for="input-email" class="block text-md font-bold leading-5 text-white">Email</label>
 							<!-- use @apply to create default, selected, error states and toggle -->
@@ -22,13 +24,13 @@
 						<div id="password" class="">
 							<label for="input-pass" class="block text-md font-bold leading-5 text-white">Password</label>
 							<!-- make a proper component for password inputs -->
-							<input id="input-pass" name="password" type="password" autocomplete="current-password" aria-labelledby="password" placeholder="Enter your password"
+							<input id="input-pass" v-model="password" name="password" type="password" autocomplete="current-password" aria-labelledby="password" placeholder="Enter your password"
 								class="block w-full rounded-md mt-2 px-4 py-4 border-0 bg-gray-800/70 font-light text-white shadow-sm focus:ring-4 focus:ring-inset focus:ring-green-500 sm:text-xl sm:leading-6" />
 						</div>
 
 						<div id="submit" class="">
 							<!-- make a proper component for button and states -->
-							<Button type="submit" :buttonLabel="'Sign in'" class="primary block w-full" />
+							<Button type="submit" @click="signIn" :buttonLabel="'Sign in'" class="primary block w-full" />
 						</div>
 						<div id="home-route" class="text-center">
 							<NuxtLink :to="'/'" class="text-base leading-6 text-green-400 focus:underline focus:underline-offset-4">Back to home</NuxtLink>
@@ -45,7 +47,7 @@
 </template>
 
 
-<script setup lang="ts">
+<script setup>
 
 	useHead({
 		title: 'Saturdays.io - Sign in',
@@ -54,8 +56,46 @@
 		]
 	})
 
+
+	const client = useSupabaseClient()
+	const user = useSupabaseUser()
+
+	const isSignUp = ref(false)
 	const email = ref('');
 	const password = ref(null);
+	const errorMsg = ref(null);
+	const successMsg = ref(null);
+
+
+	async function signIn() {
+		try {
+			const { user, error } = await client.auth.signInWithPassword({
+				email: email.value,
+				password: password.value,
+			});
+			if (error) throw error;
+			successMsg.value = 'Succesfully signed in.'
+		} catch (error) {
+			errorMsg.value = error.message;
+		}
+	}
+
+	async function signOut() {
+		try {
+			const { error } = await client.auth.SignOut()
+			if (error) throw error;
+			successMsg.value = 'Successfully signed out.'
+		} catch (error) {
+			errorMsg.value = error.message;
+		}
+	}
+
+
+	watchEffect(() => {
+		if (user.value) {
+			return navigateTo('/')
+		}
+	})
 
 </script>
 
