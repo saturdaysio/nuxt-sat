@@ -13,7 +13,7 @@
 						<div v-for="item in ideal" :key="item.title" class="p-2 gap-x-8 md:flex items-center even:flex-row-reverse md:even:text-right">
 							<div id="clip" class="md:w-6/12 mb-2">
 								<video class="w-full rounded object-fill" autoplay muted playsinline loop>
-									<source :src="item.video"  type="video/mp4">
+									<source :src="item.video"  :type="item.type">
 								</video>
 							</div>
 							<div id="meta" class="md:w-6/12 justify-center items-center">
@@ -33,30 +33,35 @@
 
 	const ideal = [
 		{
-			video: "/meme/leon-belt.mp4",
+			video: "/meme/leon-belt.webm",
 			title: "Be world-class",
-			desc: "Being happy is the goal, but greatness is our mission. Clear eyes, full hearts, can't lose."
+			desc: "Being happy is the goal, but greatness is our mission. Clear eyes, full hearts, can't lose.",
+			type: "video/webm"
 		},
 		{
-			video: "/meme/uncle-ben.mp4",
+			video: "/meme/uncle-ben.webm",
 			title: "Take responsibility",
 			titleClass: "lime-to-aqua",
-			desc: "We don't make excuses, and we're allergic to bullshit. Celebrating wins and learning from losses is core to our culture."
+			desc: "We don't make excuses, and we're allergic to bullshitters.",
+			type: "video/webm"
 		},
 		{
-			video: "/meme/beyonce-dance.mp4",
+			video: "/meme/beyonce-dance.webm",
 			title: "Be supportive",
-			desc: "We operate like a sports roster and always take the time to help each other improve."
+			desc: "We operate like a sports roster and always take the time to help each other improve.",
+			type: "video/webm"
 		},
 		{
-			video: "/meme/awkwafina.mp4",
+			video: "/meme/awkwafina.webm",
 			title: "No rockstars",
-			desc: "You won't find any 10Xers here, and nobody has time for egos. Check yourself before you wreck yourself."
+			desc: "You won't find any 10Xers here, and nobody has time for egos. Check yourself before you wreck yourself.",
+			type: "video/webm"
 		},
 		{
-			video: "/meme/hawaii.mp4",
+			video: "/meme/hawaii.webm",
 			title: "Enjoy downtime",
-			desc: "We like to travel and touch grass once in a while."
+			desc: "We like to travel and touch grass once in a while.",
+			type: "video/webm"
 		},
 	]
 
