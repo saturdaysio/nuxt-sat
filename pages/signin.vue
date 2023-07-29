@@ -16,7 +16,7 @@
 							<label for="email" class="block text-md font-bold leading-5 text-white">Email</label>
 							<div class="mt-2">
 								<!-- use @apply to create default, selected, error states and toggle -->
-								<input v-model="email" name="email" type="email" autocomplete="email" aria-labelledby="email field" placeholder="Enter your email address"
+								<input v-model="email" name="email" type="email" autocomplete="email" aria-labelledby="email" placeholder="Enter your email address"
 									class="block w-full rounded-md px-4 py-4 border-0 bg-gray-800/70 font-light text-white shadow-sm focus:ring-4 focus:ring-inset focus:ring-green-500 sm:text-xl sm:leading-6" />
 							</div>
 						</div>
@@ -27,7 +27,7 @@
 							</div>
 							<div class="mt-2">
 								<!-- make a proper component for password inputs -->
-								<input id="password" name="password" type="password" autocomplete="current-password" aria-labelledby="password field" placeholder="Enter your password"
+								<input id="password" name="password" type="password" autocomplete="current-password" aria-labelledby="password" placeholder="Enter your password"
 									class="block w-full rounded-md px-4 py-4 border-0 bg-gray-800/70 font-light text-white shadow-sm focus:ring-4 focus:ring-inset focus:ring-green-500 sm:text-xl sm:leading-6" />
 							</div>
 						</div>
