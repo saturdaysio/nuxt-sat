@@ -33,12 +33,12 @@
 						<div id="submit" class="">
 							<!-- make a proper component for button and states -->
 							<button type="submit" @click="signIn" class="primary block w-full">
-								<span v-if="isSignUp"> Sign up </span>
+								<span v-if="isSignUp"> Sign up</span>
     						    <span v-else> Sign in</span>
 							</button>
 						</div>
 						<div id="home-route" class="text-center">
-							<NuxtLink :to="'/'" class="text-base leading-6 text-green-400 focus:underline focus:underline-offset-4">Back to home</NuxtLink>
+							<p class="text-base text-white">Don't have an account? <NuxtLink :to="'/signup'" class="text-base leading-6 text-green-400 focus:underline focus:underline-offset-4">Sign up</NuxtLink></p>
 						</div>
 					</form>
 				</div>

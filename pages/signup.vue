@@ -7,7 +7,8 @@
 
 			<div id="block" class="w-full max-w-xl mx-auto mt-32 px-6 py-6 md:px-8 md:py-8 rounded-md bg-gray-900/10">
 				<div class="mx-auto w-full mb-12">
-					<h1 class="text-3xl md:text-4xl font-bold leading-9 tracking-tight text-center lime-to-aqua">Sign up for an account</h1>
+					<h1 class="text-3xl md:text-4xl font-bold leading-9 tracking-tight text-center lime-to-aqua" v-if="isSignUp">Sign up for an account</h1>
+					<h1 v-else>Sign in to your account</h1>
 				</div>
 
 				<div class="mx-auto w-full">
@@ -32,10 +33,13 @@
 
 						<div id="submit" class="">
 							<!-- make a proper component for button and states -->
-							<Button type="submit" @click="signUp" :buttonLabel="'Sign up'" class="primary block w-full" />
+							<button type="submit" @click="signUp" class="primary block w-full">
+								<span v-if="isSignUp"> Sign up</span>
+    						    <span v-else> Sign in</span>
+							</button>
 						</div>
 						<div id="home-route" class="text-center">
-							<p class="text-base text-white">Already have an account? <NuxtLink :to="'/signin'" class="text-base leading-6 text-green-400 focus:underline focus:underline-offset-4">Go back to sign in</NuxtLink></p>
+							<p class="text-base text-white">Already have an account? <NuxtLink :to="'/signin'" class="text-base leading-6 text-green-400 focus:underline focus:underline-offset-4">Sign in</NuxtLink></p>
 						</div>
 					</form>
 				</div>
