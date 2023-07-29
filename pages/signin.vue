@@ -40,7 +40,10 @@
 							<NuxtLink :to="'/'" class="text-base leading-6 text-green-400 focus:underline focus:underline-offset-4">Back to home</NuxtLink>
 						</div>
 					</form>
+				</div>
 
+				<div id="disclaimer" class="mt-16">
+					<p class="text-md leading-6 text-center font-gray-300">By continuing, you agree to Saturdays.io's <NuxtLink to="/terms-of-service">Terms of Service</NuxtLink> and <NuxtLink to="/privacy-policy">Privacy Policy</NuxtLink>.</p>
 				</div>
 			</div>
 		</div>
