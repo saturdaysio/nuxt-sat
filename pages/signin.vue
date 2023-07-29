@@ -13,30 +13,24 @@
 				<div class="mx-auto w-full">
 					<form class="space-y-6" action="#" method="POST">
 						<div id="email" class="">
-							<label for="email" class="block text-md font-bold leading-5 text-white">Email</label>
-							<div class="mt-2">
-								<!-- use @apply to create default, selected, error states and toggle -->
-								<input v-model="email" name="email" type="email" autocomplete="email" aria-labelledby="email" placeholder="Enter your email address"
-									class="block w-full rounded-md px-4 py-4 border-0 bg-gray-800/70 font-light text-white shadow-sm focus:ring-4 focus:ring-inset focus:ring-green-500 sm:text-xl sm:leading-6" />
-							</div>
+							<label for="input-email" class="block text-md font-bold leading-5 text-white">Email</label>
+							<!-- use @apply to create default, selected, error states and toggle -->
+							<input id="input-email" v-model="email" name="email" type="email" autocomplete="email" aria-labelledby="email" placeholder="Enter your email address"
+								class="block w-full rounded-md mt-2 px-4 py-4 border-0 bg-gray-800/70 font-light text-white shadow-sm focus:ring-4 focus:ring-inset focus:ring-green-500 sm:text-xl sm:leading-6" />
 						</div>
 
-						<div id="pass" class="">
-							<div class="flex items-center justify-between">
-								<label for="password" class="block text-md font-bold leading-5 text-white">Password</label>
-							</div>
-							<div class="mt-2">
-								<!-- make a proper component for password inputs -->
-								<input id="password" name="password" type="password" autocomplete="current-password" aria-labelledby="password" placeholder="Enter your password"
-									class="block w-full rounded-md px-4 py-4 border-0 bg-gray-800/70 font-light text-white shadow-sm focus:ring-4 focus:ring-inset focus:ring-green-500 sm:text-xl sm:leading-6" />
-							</div>
+						<div id="password" class="">
+							<label for="input-pass" class="block text-md font-bold leading-5 text-white">Password</label>
+							<!-- make a proper component for password inputs -->
+							<input id="input-pass" name="password" type="password" autocomplete="current-password" aria-labelledby="password" placeholder="Enter your password"
+								class="block w-full rounded-md mt-2 px-4 py-4 border-0 bg-gray-800/70 font-light text-white shadow-sm focus:ring-4 focus:ring-inset focus:ring-green-500 sm:text-xl sm:leading-6" />
 						</div>
 
 						<div id="submit" class="">
 							<!-- make a proper component for button and states -->
 							<Button type="submit" :buttonLabel="'Sign in'" class="primary block w-full" />
 						</div>
-						<div id="bth" class="text-center">
+						<div id="home-route" class="text-center">
 							<NuxtLink :to="'/'" class="text-base leading-6 text-green-400 focus:underline focus:underline-offset-4">Back to home</NuxtLink>
 						</div>
 					</form>
