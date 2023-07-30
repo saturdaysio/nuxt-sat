@@ -60,7 +60,7 @@
 		{
 			video: "/meme/hawaii.mp4",
 			title: "Enjoy downtime",
-			desc: "We like to travel and touch grass once in a while.",
+			desc: "We like to travel and touch grass once in a while because work-life balance is important to us.",
 			type: "video/mp4"
 		},
 	]
