@@ -33,35 +33,35 @@
 
 	const ideal = [
 		{
-			video: "/meme/leon-belt.webm",
+			video: "/meme/leon-belt.mp4",
 			title: "Be world-class",
 			desc: "Being happy is the goal, but greatness is our mission. Clear eyes, full hearts, can't lose.",
-			type: "video/webm"
+			type: "video/mp4"
 		},
 		{
-			video: "/meme/uncle-ben.webm",
+			video: "/meme/uncle-ben.mp4",
 			title: "Take responsibility",
 			titleClass: "lime-to-aqua",
 			desc: "We don't make excuses, and we're allergic to bullshitters.",
-			type: "video/webm"
+			type: "video/mp4"
 		},
 		{
-			video: "/meme/beyonce-dance.webm",
+			video: "/meme/beyonce-dance.mp4",
 			title: "Be supportive",
 			desc: "We operate like a sports roster and always take the time to help each other improve.",
-			type: "video/webm"
+			type: "video/mp4"
 		},
 		{
-			video: "/meme/awkwafina.webm",
+			video: "/meme/awkwafina.mp4",
 			title: "No rockstars",
 			desc: "You won't find any 10Xers here, and nobody has time for egos. Check yourself before you wreck yourself.",
-			type: "video/webm"
+			type: "video/mp4"
 		},
 		{
-			video: "/meme/hawaii.webm",
+			video: "/meme/hawaii.mp4",
 			title: "Enjoy downtime",
 			desc: "We like to travel and touch grass once in a while.",
-			type: "video/webm"
+			type: "video/mp4"
 		},
 	]
 
