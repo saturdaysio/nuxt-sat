@@ -13,7 +13,7 @@
               </div>
               <div class="hidden lg:ml-10 lg:block">
                 <div class="flex space-x-4">
-                  <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'bg-gray-700 text-white' : 'text-white hover:bg-gray-500 hover:bg-opacity-75', 'rounded-md py-2 px-3 text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
+                  <NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" :class="[item.current ? 'bg-gray-700 text-white' : 'text-white hover:bg-gray-500 hover:bg-opacity-75', 'rounded-md py-2 px-3 text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</NuxtLink>
                 </div>
               </div>
             </div>
@@ -51,7 +51,7 @@
                   <transition enter-active-class="transition ease-out duration-100" enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
                     <MenuItems class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <MenuItem v-for="item in userNavigation" :key="item.name" v-slot="{ active }">
-                        <a :href="item.href" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">{{ item.name }}</a>
+                        <NuxtLink :to="item.to" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">{{ item.name }}</NuxtLink>
                       </MenuItem>
                     </MenuItems>
                   </transition>
@@ -63,7 +63,7 @@
 
         <DisclosurePanel class="lg:hidden">
           <div class="space-y-1 px-2 pb-3 pt-2">
-            <DisclosureButton v-for="item in navigation" :key="item.name" as="a" :href="item.href" :class="[item.current ? 'bg-gray-700 text-white' : 'text-white hover:bg-gray-500 hover:bg-opacity-75', 'block rounded-md py-2 px-3 text-base font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</DisclosureButton>
+            <DisclosureButton v-for="item in navigation" :key="item.name" as="a" :to="item.to" :class="[item.current ? 'bg-gray-700 text-white' : 'text-white hover:bg-gray-500 hover:bg-opacity-75', 'block rounded-md py-2 px-3 text-base font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</DisclosureButton>
           </div>
           <div class="border-t border-gray-700 pb-3 pt-4">
             <div class="flex items-center px-5">
@@ -81,7 +81,7 @@
               </button>
             </div>
             <div class="mt-3 space-y-1 px-2">
-              <DisclosureButton v-for="item in userNavigation" :key="item.name" as="a" :href="item.href" class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-500 hover:bg-opacity-75">{{ item.name }}</DisclosureButton>
+              <DisclosureButton v-for="item in userNavigation" :key="item.name" as="a" :to="item.to" class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-500 hover:bg-opacity-75">{{ item.name }}</DisclosureButton>
             </div>
           </div>
         </DisclosurePanel>
@@ -116,17 +116,17 @@
 	}
 
 	const navigation = [
-		{ name: 'Dashboard', href: '/dashboard', current: false },
-		{ name: 'Profile', href: '/profile', current: false },
-		{ name: 'Projects', href: '/', current: false },
-		{ name: 'Reports', href: '/', current: false },
-		{ name: 'Settings', href: '/settings', current: true },
+		{ name: 'Dashboard', to: '/dashboard', current: false },
+		{ name: 'Profile', to: '/profile', current: false },
+		{ name: 'Projects', to: '/', current: false },
+		{ name: 'Reports', to: '/', current: false },
+		{ name: 'Settings', to: '/settings', current: true },
 	]
 
 	const userNavigation = [
-		{ name: 'Your Profile', href: '/profile' },
-		{ name: 'Settings', href: '/settings' },
-		{ name: 'Sign out', href: '/signin' },
+		{ name: 'Your Profile', to: '/profile' },
+		{ name: 'Settings', to: '/settings' },
+		{ name: 'Sign out', to: '/signin' },
 	]
 
 
