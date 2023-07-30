@@ -6,7 +6,10 @@
           <div class="relative flex h-16 items-center justify-between lg:border-b lg:border-white/20 ">
             <div class="flex items-center px-2 lg:px-0">
               <div class="flex-shrink-0">
-                <img class="block h-8 w-8" src="@/assets/img/logo.svg" alt="Saturdays.io" width="32px" height="32px" />
+                <NuxtLink to="/" class="focus:outline-none">
+                    <span class="sr-only">Saturdays.io</span>
+                    <img class="block h-8 w-8" src="@/assets/img/logo.svg" alt="Saturdays.io logo" width="32px" height="32px" />
+                </NuxtLink>
               </div>
               <div class="hidden lg:ml-10 lg:block">
                 <div class="flex space-x-4">
