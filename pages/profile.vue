@@ -3,7 +3,7 @@
 		<Nav />
 
 		<div id="main">
-			<section class="mx-auto max-w-7xl px-4 pt-16 rounded-lg">
+			<section class="mx-auto max-w-7xl px-4 py-16 rounded-lg">
 				<form class="mt-4 px-4 py-4 bg-gray-900">
 					<div class="space-y-12">
 						<div class="max-w-5xl mx-auto mt-16 border-b border-white/10 pb-12">
@@ -88,9 +88,8 @@
 									<label for="email" class="block text-sm font-medium leading-6 text-white">Email
 										address</label>
 									<div class="mt-2">
-										<input id="email" name="email" type="email" autocomplete="email"
+										<input id="email" name="email" type="email" autocomplete="email" placeholder="{{ user.identities[0].identity_data.email }}"
 											class="block w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
-										{{ user.identities[0].identity_data.email }}
 									</div>
 								</div>
 
