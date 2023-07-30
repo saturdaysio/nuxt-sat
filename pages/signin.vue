@@ -32,9 +32,6 @@
     						    <span> Sign in</span>
 							</button>
 						</div>
-						<div id="home-route" class="text-center">
-							<p class="text-base text-white">Don't have an account? <NuxtLink :to="'/signup'" class="text-base leading-6 text-green-400 focus:underline focus:underline-offset-4">Sign up</NuxtLink></p>
-						</div>
 					</form>
 				</div>
 
