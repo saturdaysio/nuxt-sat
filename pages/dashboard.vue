@@ -284,8 +284,6 @@
 		// More items...
 	]
 
-	const sidebarOpen = ref(false)
-
 
 	definePageMeta({
 		middleware: ['auth']
