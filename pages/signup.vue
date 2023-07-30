@@ -7,13 +7,12 @@
 
 			<div id="block" class="w-full max-w-xl mx-auto mt-32 px-6 py-6 md:px-8 md:py-8 rounded-md bg-gray-900/10">
 				<div class="mx-auto w-full mb-12">
-					<h1 class="text-3xl md:text-4xl font-bold leading-9 tracking-tight text-center lime-to-aqua" v-if="isSignUp">Sign up for an account</h1>
-					<h1 v-else>Sign in to your account</h1>
+					<h1 class="text-3xl md:text-4xl font-bold leading-9 tracking-tight text-center lime-to-aqua">Sign up for an account</h1>
 				</div>
 
 				<div class="mx-auto w-full">
 					<form
-						@submit.prevent="() => (isSignUp ? signUp() : signIn())"
+						@submit.prevent="signUp"
 						class="space-y-6"
 						method="post"
 					>
@@ -34,8 +33,7 @@
 						<div id="submit" class="">
 							<!-- make a proper component for button and states -->
 							<button type="submit" @click="signUp" class="primary block w-full">
-								<span v-if="isSignUp"> Sign up</span>
-    						    <span v-else> Sign in</span>
+								<span> Sign up</span>
 							</button>
 						</div>
 						<div id="home-route" class="text-center">
@@ -63,35 +61,38 @@
 	})
 
 
+	const user = useSupabaseUser()
 	const client = useSupabaseClient()
+	const supabase = useSupabaseAuthClient()
 
-	const isSignUp = ref(true)
-	const email = ref('');
-	const password = ref(null);
-	const errorMsg = ref(null);
-	const successMsg = ref(null);
+	const loading = ref(false)
+	const email = ref('')
+	const password = ref('')
+	const confirmPassword = ref('')
+	const signUpOk = ref(false)
 
 
-	async function signUp() {
+	const signUp = async () => {
 		try {
-			const { user, error } = await client.auth.signUp({
-				email: email.value,
-				password: password.value,
-			});
-			if (error) throw error;
-			successMsg.value = 'Succesfully signed in.'
+			loading.value = true
+			const { data, error } = await supabase.auth.signUp({ email: email.value, password: password.value })
+			if (error) {
+				throw error
+			}
+			else {
+				signUpOk.value = true
+			}
 		} catch (error) {
-			errorMsg.value = error.message;
+
+		} finally {
+			loading.value = false
 		}
 	}
 
-	const user = useSupabaseUser()
-	onMounted(() => {
-		watchEffect(() => {
-			if (user.value) {
-				return navigateTo('/')
-			}
-		})
+	watchEffect(() => {
+		if (user.value) {
+			navigateTo('/profile', { replace: true })
+		}
 	})
 
 </script>

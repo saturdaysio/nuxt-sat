@@ -12,7 +12,7 @@
 
 				<div class="mx-auto w-full">
 					<form
-						@submit.prevent="() => (isSignUp ? signUp() : signIn())"
+						@submit.prevent="signIn"
 						class="space-y-6"
 						method="post"
 					>
@@ -33,8 +33,7 @@
 						<div id="submit" class="">
 							<!-- make a proper component for button and states -->
 							<button type="submit" @click="signIn" class="primary block w-full">
-								<span v-if="isSignUp"> Sign up</span>
-    						    <span v-else> Sign in</span>
+    						    <span> Sign in</span>
 							</button>
 						</div>
 						<div id="home-route" class="text-center">
@@ -52,7 +51,7 @@
 </template>
 
 
-<script setup>
+<script setup lang="ts">
 
 	useHead({
 		title: 'Saturdays.io - Sign in',
@@ -61,47 +60,34 @@
 		]
 	})
 
-
+	const user = useSupabaseUser()
 	const client = useSupabaseClient()
+	const supabase = useSupabaseAuthClient()
 
-	const isSignUp = ref(false)
-	const email = ref('');
-	const password = ref(null);
-	const errorMsg = ref(null);
-	const successMsg = ref(null);
+	const loading = ref(false)
+	const email = ref('')
+	const password = ref('')
 
 
-	async function signIn() {
+	const signIn = async () => {
+		console.log('signIn email.value:$(email.value), password.value:$(password.value)');
 		try {
-			const { user, error } = await client.auth.signInWithPassword({
-				email: email.value,
-				password: password.value,
-			});
-			if (error) throw error;
-			successMsg.value = 'Succesfully signed in.'
+			loading.value = true
+			const { error } = await supabase.auth.signInWithPassword({ email: email.value, password: password.value })
+			if (error) throw error
 		} catch (error) {
-			errorMsg.value = error.message;
+
+		} finally {
+			loading.value = false
 		}
 	}
 
-	const user = useSupabaseUser()
-	onMounted(() => {
-		watchEffect(() => {
+
+	watchEffect(async () => {
 			if (user.value) {
-				return navigateTo('/')
+				return navigateTo('/profile', { replace: true })
 			}
 		})
-	})
-
-	async function signOut() {
-		try {
-			const { error } = await client.auth.SignOut()
-			if (error) throw error;
-			successMsg.value = 'Successfully signed out.'
-		} catch (error) {
-			errorMsg.value = error.message;
-		}
-	}
 
 </script>
 
