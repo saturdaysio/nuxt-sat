@@ -20,7 +20,7 @@
 
             <div class="flex lg:hidden">
               <!-- Mobile menu button -->
-              <DisclosureButton class="relative inline-flex items-center justify-center rounded-md bg-gray-600 p-2 text-gray-200 hover:bg-gray-500 hover:bg-opacity-75 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-600">
+              <DisclosureButton class="relative inline-flex items-center justify-center rounded-full bg-gray-900 p-2 text-white hover:bg-gray-800 hover:bg-opacity-25 hover:text-white focus:outline-none focus:ring-0 focus:ring-offset-2 focus:ring-offset-gray-900/10">
                 <span class="absolute -inset-0.5" />
                 <span class="sr-only">Open main menu</span>
                 <Bars3Icon v-if="!open" class="block h-6 w-6" aria-hidden="true" />
@@ -59,25 +59,25 @@
 
         <DisclosurePanel class="lg:hidden">
           <div class="space-y-1 px-2 pb-3 pt-2">
-            <DisclosureButton v-for="item in navigation" :key="item.name" as="a" :to="item.to" :class="[item.current ? 'bg-gray-700 text-white' : 'text-white hover:bg-gray-500 hover:bg-opacity-75', 'block rounded-md py-2 px-3 text-base font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</DisclosureButton>
+            <DisclosureButton v-for="item in navigation" :key="item.name" as="NuxtLink" :to="item.to" :class="[item.current ? 'bg-gray-800 text-white' : 'text-white hover:bg-green-500 hover:bg-opacity-10', 'block rounded-sm py-2 px-4 text-base font-semibold']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</DisclosureButton>
           </div>
-          <div class="border-t border-gray-700 pb-3 pt-4">
+          <div class="border-t border-white/25 pb-3 pt-4">
             <div class="flex items-center px-5">
               <div class="flex-shrink-0">
-                <img class="h-10 w-10 rounded-full" :src="userProfile.imageUrl" alt="" />
+                <img class="h-10 w-10 rounded-full" :src="userProfile.imageUrl" alt="user profile picture" />
               </div>
               <div class="ml-3">
-                <div class="text-base font-medium text-white">{{ userProfile.name }}</div>
-                <div class="text-sm font-medium text-gray-300">{{ userProfile.email }}</div>
+                <div class="text-base font-bold text-white">{{ userProfile.name }}</div>
+                <div class="text-sm font-base text-gray-400">{{ userProfile.email }}</div>
               </div>
-              <button type="button" class="relative ml-auto flex-shrink-0 rounded-full bg-gray-600 p-1 text-gray-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-600">
+              <button type="button" class="relative ml-auto flex-shrink-0 rounded-full bg-gray-800/10 p-1 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                 <span class="absolute -inset-1.5" />
                 <span class="sr-only">View notifications</span>
                 <BellIcon class="h-6 w-6" aria-hidden="true" />
               </button>
             </div>
             <div class="mt-3 space-y-1 px-2">
-              <DisclosureButton v-for="item in userNavigation" :key="item.name" as="a" :to="item.to" class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-500 hover:bg-opacity-75">{{ item.name }}</DisclosureButton>
+              <DisclosureButton v-for="item in userNavigation" :key="item.name" as="a" :to="item.to" class="block rounded-md px-4 py-2 text-base font-medium text-white hover:bg-blue-100 hover:bg-opacity-25">{{ item.name }}</DisclosureButton>
             </div>
           </div>
         </DisclosurePanel>
@@ -111,8 +111,6 @@
                   <div class="h-2 w-2 rounded-full bg-current" />
                 </div>
                 <h1 class="flex gap-x-3 text-base leading-7">
-                  <span class="font-bold text-white">WAKANDA</span>
-                  <span class="text-gray-600">/</span>
                   <span class="font-bold text-white">supabase</span>
                   <span class="text-gray-600">/</span>
                   <span class="font-sbold text-white">saturdays-microsite</span>
