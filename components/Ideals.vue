@@ -46,7 +46,7 @@
 			type: "video/mp4"
 		},
 		{
-			video: "/meme/beyonce-dance2.mp4",
+			video: "/meme/beyonce-dance1.mp4",
 			title: "Be supportive",
 			desc: "We operate like a sports roster and always take the time to help each other improve.",
 			type: "video/mp4"
