@@ -5,16 +5,17 @@
 
 		<section id="profile" class="px-4 sm:px-8 md:px-12 py-16 md:py-20 lg:py-24">
 			<div class="max-w-5xl mx-auto">
-				<div class="pb-4">
+				<p class="text-white">{{  user }}</p>
+				<div v-if="user" class="pb-4">
 					<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold lime-to-aqua pb-8">User profile</h1>
-					<p class="text-xl md:text-2xl text-white pb-4">uid</p>
-					<p class="text-xl md:text-2xl text-white pb-4">email</p>
-					<p class="text-xl md:text-2xl text-white pb-4">firstname</p>
-					<p class="text-xl md:text-2xl text-white pb-4">lastname</p>
-					<p class="text-xl md:text-2xl text-white pb-4">createdAt:</p>
-					<p class="text-xl md:text-2xl text-white pb-4">lastUpdatedAt:</p>
+					<p class="text-base md:text-xl text-white pb-4">uid: </p>
+					<p class="text-base md:text-xl text-white pb-4">email: {{ user.identities[0].identity_data.email }}</p>
+					<p class="text-base md:text-xl text-white pb-4">firstname</p>
+					<p class="text-base md:text-xl text-white pb-4">lastname</p>
+					<p class="text-base md:text-xl text-white pb-4">createdAt:</p>
+					<p class="text-base md:text-xl text-white pb-4">lastUpdatedAt:</p>
 				</div>
-				<button @click="signOut" class="primary">Sign out</button>
+				<button @click="logout" class="primary">Sign out</button>
 			</div>
 		</section>
 
@@ -45,8 +46,8 @@
 	const loading = ref(false)
 
 	
-	const signOut = async () => {
-		await supabase.auth.signOut();
+	const logout = async () => {
+		let { error } = await supabase.auth.signOut();
 		navigateTo('/signin');
 	}
 
