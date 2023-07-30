@@ -35,7 +35,7 @@
 		{
 			video: "/meme/leon-belt.mp4",
 			title: "Be world-class",
-			desc: "Being happy is the goal, but greatness is our mission. Clear eyes, full hearts, can't lose.",
+			desc: "Being happy is the goal, but greatness is our mission. We aren't just talking about our skills and achievements, it's how we conduct ourselves too. Clear eyes, full hearts, can't lose.",
 			type: "video/mp4"
 		},
 		{
