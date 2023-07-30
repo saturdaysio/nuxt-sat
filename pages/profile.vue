@@ -3,8 +3,8 @@
 		<Nav />
 
 		<div id="main">
-			<section class="mx-auto max-w-7xl pt-16">
-				<form class="mt-12 py-8">
+			<section class="mx-auto max-w-7xl px-4 pt-16 rounded-lg">
+				<form class="mt-12 px-4 py-8 bg-gray-900">
 					<div class="space-y-12">
 						<div class="max-w-5xl mx-auto border-b border-white/10 pb-12">
 							<h2 class="text-4xl font-semibold leading-10 text-white">Profile</h2>
@@ -193,7 +193,7 @@
 						</div>
 					</div>
 
-					<div class="mt-6 flex items-center justify-end gap-x-6">
+					<div class="max-w-5xl mx-auto mt-6 flex items-center justify-end gap-x-6">
 						<button @click="logout" class="secondary">Sign out</button>
 						<button type="button" class="rounded-md border-2 border-green-500 px-6 py-4 text-base font-bold leading-6 text-white">Cancel</button>
 						<button type="submit" class="rounded-md bg-green-500 px-6 py-4 text-base font-bold text-black shadow-sm hover:bg-green-200">Save</button>
