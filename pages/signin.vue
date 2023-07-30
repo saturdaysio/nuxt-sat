@@ -43,6 +43,7 @@
 				</div>
 			</div>
 		</div>
+
 	</div>
 </template>
 
@@ -80,7 +81,7 @@
 
 	watchEffect(async () => {
 			if (user.value) {
-				return navigateTo('/profile', { replace: true })
+				return navigateTo('/profile', { replace: false })
 			}
 		})
 
