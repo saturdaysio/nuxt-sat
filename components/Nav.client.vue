@@ -43,7 +43,7 @@
                             <!-- Navigation links -->
                             <div class="flex flex-col justify-center h-4/5">
                                 <div class="flex flex-col space-y-2">
-                                    <NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="mx-2 block py-4 text-2xl sm:text-3xl md:text-4xl font-base text-white hover:opacity-60 hover:underline hover:underline-offset-4 hover:decoration-2" active-class="active text-blue-300 underline underline-offset-4 decoration-2">{{ item.name }}</NuxtLink>
+                                    <NuxtLink v-for="item in mobileNav" :key="item.name" :to="item.to" class="mx-2 block py-4 text-2xl sm:text-3xl md:text-4xl font-base text-white hover:opacity-60 hover:underline hover:underline-offset-4 hover:decoration-2" active-class="active text-blue-300 underline underline-offset-4 decoration-2">{{ item.name }}</NuxtLink>
                                 </div>
                             </div>
                         </div>
@@ -69,7 +69,7 @@
     const mobileNav = [
         { name: 'Work', to: '/' },
 		{ name: 'About', to: '/about' },
-        { name: 'Jobs', to: '/jobs' },
+        { name: 'Client login', to: '/signin' },
 	]
 
     const legal = [
@@ -96,7 +96,7 @@
 
     // Watch isPopoverOpen state to apply overflow class
     // Need to add additional functionality to check browser width, if wider than 1024px, close menu
-    watch(isPopoverOpen, () => {
+    watch(isPopoverOpen, async () => {
         // if isPopoverOpen = true, apply body class="overflow-hidden" to lock background scrolling
         if (isPopoverOpen.value) {
             document.body.classList.add("overflow-hidden");
