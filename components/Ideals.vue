@@ -39,10 +39,10 @@
 			type: "video/mp4"
 		},
 		{
-			video: "/meme/uncle-ben.mp4",
-			title: "Take responsibility",
+			video: "/meme/gordon-responsible.mp4",
+			title: "Be accountable",
 			titleClass: "lime-to-aqua",
-			desc: "We don't make excuses, and we're allergic to bullshitters.",
+			desc: "We don't make excuses, and we're allergic to bullshitters. Talk is cheap and actions speak louder than words. We have the results because we've done the work.",
 			type: "video/mp4"
 		},
 		{
