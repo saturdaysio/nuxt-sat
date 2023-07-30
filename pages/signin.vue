@@ -78,7 +78,7 @@
 
 	watchEffect(async () => {
 			if (user.value) {
-				return navigateTo('/profile', { replace: false })
+				return navigateTo('/dashboard', { replace: false })
 			}
 		})
 

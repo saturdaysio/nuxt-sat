@@ -88,7 +88,7 @@
 
 	watchEffect(() => {
 		if (user.value) {
-			navigateTo('/profile', { replace: true })
+			navigateTo('/dashboard', { replace: true })
 		}
 	})
 
