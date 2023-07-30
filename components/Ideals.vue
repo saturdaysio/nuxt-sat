@@ -54,7 +54,7 @@
 		{
 			video: "/meme/awkwafina.mp4",
 			title: "No rockstars",
-			desc: "You won't find any 10Xers here, and nobody has time for egos. Check yourself before you wreck yourself.",
+			desc: "You won't find any 10Xers or narcissistics here. We don't tolerate toxicity or big egos and expect the same from our brand partners.",
 			type: "video/mp4"
 		},
 		{
