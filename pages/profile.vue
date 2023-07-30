@@ -4,9 +4,9 @@
 
 		<div id="main">
 			<section class="mx-auto max-w-7xl px-4 pt-16 rounded-lg">
-				<form class="mt-12 px-4 py-8 bg-gray-900">
+				<form class="mt-4 px-4 py-4 bg-gray-900">
 					<div class="space-y-12">
-						<div class="max-w-5xl mx-auto border-b border-white/10 pb-12">
+						<div class="max-w-5xl mx-auto mt-16 border-b border-white/10 pb-12">
 							<h2 class="text-4xl font-semibold leading-10 text-white">Profile</h2>
 							<p class="mt-1 text-base leading-6 text-gray-400">This information will be displayed publicly so be careful what you share.</p>
 
