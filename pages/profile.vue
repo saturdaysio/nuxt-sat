@@ -21,14 +21,6 @@
 		</section>
 
 
-		<Ideals />
-
-		<Result />
-
-		<Client />
-
-		<Contact />
-
 		<Footer />
 
 	</div>
@@ -44,8 +36,7 @@
 	useHead({
 		title: 'Saturdays.io - Profile',
 		meta: [
-			{ name: 'description', content: 'About Saturdays.io' },
-			{ name: 'keywords', content: 'About, Company, Clients, Saturdays.io, Digital, Studio, Creative, Digital Studio, Creative Studio,' },
+			{ name: 'description', content: 'Saturdays.io profile page' },
 		]
 	})
 
