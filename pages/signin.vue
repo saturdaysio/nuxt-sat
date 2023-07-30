@@ -11,7 +11,7 @@
 				</div>
 
 				<div class="mx-auto w-full">
-					<form @submit.prevent="signIn" class="space-y-6">
+					<form @submit.prevent="login" class="space-y-6">
 						<div id="email" class="">
 							<label for="input-email" class="block text-md font-bold leading-5 text-white">Email</label>
 							<!-- use @apply to create default, selected, error states and toggle -->
@@ -66,7 +66,7 @@
 	const password = ref('')
 
 
-	const signIn = async () => {
+	const login = async () => {
 		try {
 			loading.value = true
 			const { error } = await supabase.auth.signInWithPassword({ email: email.value, password: password.value })
