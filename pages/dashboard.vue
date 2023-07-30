@@ -111,7 +111,7 @@
                   <div class="h-2 w-2 rounded-full bg-current" />
                 </div>
                 <h1 class="flex gap-x-3 text-base leading-7">
-                  <span class="font-bold text-white">Wakanda</span>
+                  <span class="font-bold text-white">WAKANDA</span>
                   <span class="text-gray-600">/</span>
                   <span class="font-bold text-white">supabase</span>
                   <span class="text-gray-600">/</span>
@@ -208,7 +208,7 @@
 	const navigation = [
 		{ name: 'Dashboard', to: '/dashboard', current: true },
 		{ name: 'Profile', to: '/profile', current: false },
-		{ name: 'Projects', to: '/', current: false },
+		{ name: 'Store', to: '/store', current: false },
 		{ name: 'Reports', to: '/', current: false },
 		{ name: 'Settings', to: '/settings', current: false },
 	]
