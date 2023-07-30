@@ -10,7 +10,7 @@
               </div>
               <div class="hidden lg:ml-10 lg:block">
                 <div class="flex space-x-4">
-                  <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'bg-indigo-700 text-white' : 'text-white hover:bg-indigo-500 hover:bg-opacity-75', 'rounded-md py-2 px-3 text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
+                  <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'bg-gray-700 text-white' : 'text-white hover:bg-gray-500 hover:bg-opacity-75', 'rounded-md py-2 px-3 text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
                 </div>
               </div>
             </div>
@@ -21,7 +21,7 @@
             </div>
             <div class="flex lg:hidden">
               <!-- Mobile menu button -->
-              <DisclosureButton class="relative inline-flex items-center justify-center rounded-md bg-indigo-600 p-2 text-indigo-200 hover:bg-indigo-500 hover:bg-opacity-75 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600">
+              <DisclosureButton class="relative inline-flex items-center justify-center rounded-md bg-gray-600 p-2 text-gray-200 hover:bg-gray-500 hover:bg-opacity-75 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-600">
                 <span class="absolute -inset-0.5" />
                 <span class="sr-only">Open main menu</span>
                 <Bars3Icon v-if="!open" class="block h-6 w-6" aria-hidden="true" />
@@ -30,7 +30,7 @@
             </div>
             <div class="hidden lg:ml-4 lg:block">
               <div class="flex items-center">
-                <button type="button" class="relative flex-shrink-0 rounded-full bg-gray-900/20 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600">
+                <button type="button" class="relative flex-shrink-0 rounded-full bg-gray-900/20 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-600">
                   <span class="absolute -inset-1.5" />
                   <span class="sr-only">View notifications</span>
                   <BellIcon class="h-6 w-6" aria-hidden="true" />
@@ -39,7 +39,7 @@
                 <!-- Profile dropdown -->
                 <Menu as="div" class="relative ml-3 flex-shrink-0">
                   <div>
-                    <MenuButton class="relative flex rounded-full bg-indigo-600 text-sm text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600">
+                    <MenuButton class="relative flex rounded-full bg-gray-600 text-sm text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-600">
                       <span class="absolute -inset-1.5" />
                       <span class="sr-only">Open user menu</span>
                       <img class="h-8 w-8 rounded-full" :src="userProfile.imageUrl" alt="" />
@@ -60,25 +60,25 @@
 
         <DisclosurePanel class="lg:hidden">
           <div class="space-y-1 px-2 pb-3 pt-2">
-            <DisclosureButton v-for="item in navigation" :key="item.name" as="a" :href="item.href" :class="[item.current ? 'bg-indigo-700 text-white' : 'text-white hover:bg-indigo-500 hover:bg-opacity-75', 'block rounded-md py-2 px-3 text-base font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</DisclosureButton>
+            <DisclosureButton v-for="item in navigation" :key="item.name" as="a" :href="item.href" :class="[item.current ? 'bg-gray-700 text-white' : 'text-white hover:bg-gray-500 hover:bg-opacity-75', 'block rounded-md py-2 px-3 text-base font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</DisclosureButton>
           </div>
-          <div class="border-t border-indigo-700 pb-3 pt-4">
+          <div class="border-t border-gray-700 pb-3 pt-4">
             <div class="flex items-center px-5">
               <div class="flex-shrink-0">
                 <img class="h-10 w-10 rounded-full" :src="userProfile.imageUrl" alt="" />
               </div>
               <div class="ml-3">
                 <div class="text-base font-medium text-white">{{ userProfile.name }}</div>
-                <div class="text-sm font-medium text-indigo-300">{{ userProfile.email }}</div>
+                <div class="text-sm font-medium text-gray-300">{{ userProfile.email }}</div>
               </div>
-              <button type="button" class="relative ml-auto flex-shrink-0 rounded-full bg-indigo-600 p-1 text-indigo-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600">
+              <button type="button" class="relative ml-auto flex-shrink-0 rounded-full bg-gray-600 p-1 text-gray-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-600">
                 <span class="absolute -inset-1.5" />
                 <span class="sr-only">View notifications</span>
                 <BellIcon class="h-6 w-6" aria-hidden="true" />
               </button>
             </div>
             <div class="mt-3 space-y-1 px-2">
-              <DisclosureButton v-for="item in userNavigation" :key="item.name" as="a" :href="item.href" class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-indigo-500 hover:bg-opacity-75">{{ item.name }}</DisclosureButton>
+              <DisclosureButton v-for="item in userNavigation" :key="item.name" as="a" :href="item.href" class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-500 hover:bg-opacity-75">{{ item.name }}</DisclosureButton>
             </div>
           </div>
         </DisclosurePanel>
@@ -99,7 +99,7 @@
           <nav class="flex overflow-x-auto border-b border-white/10 py-4">
             <ul role="list" class="flex min-w-full flex-none gap-x-6 px-4 text-sm font-semibold leading-6 text-gray-400 sm:px-6 lg:px-8">
               <li v-for="item in secondaryNavigation" :key="item.name">
-                <a :href="item.href" :class="item.current ? 'text-indigo-400' : ''">{{ item.name }}</a>
+                <a :href="item.href" :class="item.current ? 'text-gray-400' : ''">{{ item.name }}</a>
               </li>
             </ul>
           </nav>
@@ -115,13 +115,13 @@
                   <span class="font-bold text-white">Wakanda</span>
                   <span class="text-gray-600">/</span>
                   <span class="font-bold text-white">supabase</span>
-				  <span class="text-gray-600">/</span>
-				  <span class="font-sbold text-white">saturdays-microsite</span>
+                  <span class="text-gray-600">/</span>
+                  <span class="font-sbold text-white">saturdays-microsite</span>
                 </h1>
               </div>
               <p class="mt-2 text-xs leading-6 text-gray-400">Deploys from GitHub via main branch</p>
             </div>
-            <div class="order-first flex-none rounded-full bg-indigo-400/10 px-4 py-2 text-sm font-medium text-green-400 ring-1 ring-inset ring-indigo-400/30 sm:order-none">Production</div>
+            <div class="order-first flex-none rounded-full bg-gray-400/10 px-4 py-2 text-sm font-medium text-green-400 ring-1 ring-inset ring-gray-400/30 sm:order-none">Production</div>
           </div>
 
           <!-- Stats -->
@@ -197,7 +197,6 @@
 <script setup lang="ts">
 
 	import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
-	import { MagnifyingGlassIcon } from '@heroicons/vue/20/solid'
 	import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline'
 
 	const userProfile = {
@@ -212,20 +211,15 @@
 		{ name: 'Profile', href: '/profile', current: false },
 		{ name: 'Projects', href: '/', current: false },
 		{ name: 'Reports', href: '/', current: false },
-		{ name: 'Settings', href: '/', current: false },
+		{ name: 'Settings', href: '/settings', current: false },
 	]
 
 	const userNavigation = [
 		{ name: 'Your Profile', href: '/profile' },
-		{ name: 'Settings', href: '/' },
+		{ name: 'Settings', href: '/settings' },
 		{ name: 'Sign out', href: '/signin' },
 	]
 
-	const teams = [
-		{ id: 1, name: 'Planetaria', href: '#', initial: 'P', current: false },
-		{ id: 2, name: 'Protocol', href: '#', initial: 'P', current: false },
-		{ id: 3, name: 'Tailwind Labs', href: '#', initial: 'T', current: false },
-	]
 
 	const secondaryNavigation = [
 		{ name: 'Overview', href: '#', current: true },
@@ -247,7 +241,33 @@
 	const activityItems = [
 		{
 			user: {
-			name: 'Michael Foster',
+			name: 'Hello Saturdays',
+			imageUrl:
+				'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+			},
+			commit: '2d89f0c8',
+			branch: 'main',
+			status: 'Completed',
+			duration: '25s',
+			date: '45 minutes ago',
+			dateTime: '2023-01-23T11:00',
+		},
+    {
+			user: {
+			name: 'Hello Saturdays',
+			imageUrl:
+				'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+			},
+			commit: '2d89f0c8',
+			branch: 'main',
+			status: 'Completed',
+			duration: '25s',
+			date: '45 minutes ago',
+			dateTime: '2023-01-23T11:00',
+		},
+    {
+			user: {
+			name: 'Hello Saturdays',
 			imageUrl:
 				'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 			},
