@@ -11,11 +11,7 @@
 				</div>
 
 				<div class="mx-auto w-full">
-					<form
-						@submit.prevent="signUp"
-						class="space-y-6"
-						method="post"
-					>
+					<form @submit.prevent="signUp" class="space-y-6">
 						<div id="email" class="">
 							<label for="input-email" class="block text-md font-bold leading-5 text-white">Email</label>
 							<!-- use @apply to create default, selected, error states and toggle -->
@@ -32,7 +28,7 @@
 
 						<div id="submit" class="">
 							<!-- make a proper component for button and states -->
-							<button type="submit" @click="signUp" class="primary block w-full">
+							<button type="submit" class="primary block w-full">
 								<span> Sign up</span>
 							</button>
 						</div>

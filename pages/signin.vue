@@ -11,28 +11,24 @@
 				</div>
 
 				<div class="mx-auto w-full">
-					<form
-						@submit.prevent="signIn"
-						class="space-y-6"
-						method="post"
-					>
+					<form @submit.prevent="signIn" class="space-y-6">
 						<div id="email" class="">
 							<label for="input-email" class="block text-md font-bold leading-5 text-white">Email</label>
 							<!-- use @apply to create default, selected, error states and toggle -->
-							<input id="input-email" v-model="email" name="email" type="email" autocomplete="email" aria-labelledby="email" placeholder="Enter your email address"
+							<input id="input-email" v-model="email" name="email" type="email" autocomplete="email" aria-labelledby="email" placeholder="Enter your email address" required
 								class="block w-full rounded-md mt-2 px-4 py-4 border-0 bg-gray-800/70 font-light text-white shadow-sm focus:ring-4 focus:ring-inset focus:ring-green-500 sm:text-xl sm:leading-6" />
 						</div>
 
 						<div id="password" class="">
 							<label for="input-pass" class="block text-md font-bold leading-5 text-white">Password</label>
 							<!-- make a proper component for password inputs -->
-							<input id="input-pass" v-model="password" name="password" type="password" autocomplete="current-password" aria-labelledby="password" placeholder="Enter your password"
+							<input id="input-pass" v-model="password" name="password" type="password" autocomplete="current-password" aria-labelledby="password" placeholder="Enter your password" required
 								class="block w-full rounded-md mt-2 px-4 py-4 border-0 bg-gray-800/70 font-light text-white shadow-sm focus:ring-4 focus:ring-inset focus:ring-green-500 sm:text-xl sm:leading-6" />
 						</div>
 
 						<div id="submit" class="">
 							<!-- make a proper component for button and states -->
-							<button type="submit" @click="signIn" class="primary block w-full">
+							<button type="submit" class="primary block w-full">
     						    <span> Sign in</span>
 							</button>
 						</div>
@@ -70,7 +66,6 @@
 
 
 	const signIn = async () => {
-		console.log('signIn email.value:$(email.value), password.value:$(password.value)');
 		try {
 			loading.value = true
 			const { error } = await supabase.auth.signInWithPassword({ email: email.value, password: password.value })
