@@ -29,7 +29,7 @@
             </div>
             <div class="hidden lg:ml-4 lg:block">
               <div class="flex items-center">
-                <button type="button" class="relative flex-shrink-0 rounded-full bg-gray-900/20 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-600">
+                <button type="button" class="relative flex-shrink-0 rounded-full bg-gray-900/20 p-1 text-gray-400 focus:outline-none focus:ring-0 focus:ring-offset-2">
                   <span class="absolute -inset-1.5" />
                   <span class="sr-only">View notifications</span>
                   <BellIcon class="h-6 w-6" aria-hidden="true" />
@@ -70,7 +70,7 @@
                 <div class="text-base font-bold text-white">{{ userProfile.name }}</div>
                 <div class="text-sm font-base text-gray-400">{{ userProfile.email }}</div>
               </div>
-              <button type="button" class="relative ml-auto flex-shrink-0 rounded-full bg-gray-800/10 p-1 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+              <button type="button" class="relative ml-auto flex-shrink-0 rounded-full bg-gray-800/10 p-1 text-white  focus:outline-none focus:ring-0">
                 <span class="absolute -inset-1.5" />
                 <span class="sr-only">View notifications</span>
                 <BellIcon class="h-6 w-6" aria-hidden="true" />
