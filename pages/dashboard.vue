@@ -206,7 +206,7 @@
 	const navigation = [
 		{ name: 'Dashboard', to: '/dashboard', current: true },
 		{ name: 'Profile', to: '/profile', current: false },
-		{ name: 'Store', to: '/store', current: false },
+		{ name: 'Store', to: '/product', current: false },
 		{ name: 'Reports', to: '/', current: false },
 		{ name: 'Settings', to: '/settings', current: false },
 	]
