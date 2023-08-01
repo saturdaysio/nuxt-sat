@@ -119,7 +119,9 @@
                   <div class="col-span-full">
                     <label for="photo" class="block text-md font-bold leading-6 uppercase text-white">Photo</label>
                     <div class="mt-2 flex items-center gap-x-3">
-                      <UserCircleIcon class="block h-16 w-16 text-white" aria-hidden="true" />
+                      <div id="avatar" class="block h-16 w-16" aria-hidden="true">
+                        <img src="/avatars/monica_hall.png" />
+                      </div>
                       <button type="button" class="rounded-md bg-white/10 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-white/20">Change</button>
                     </div>
                   </div>
@@ -292,8 +294,7 @@
 	const userProfile = {
 		name: 'Hello Saturday',
 		email: 'hello@saturdays.io',
-		imageUrl:
-			'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+		imageUrl: '/avatars/monica_hall.png',
 	}
 
 	const navigation = [
