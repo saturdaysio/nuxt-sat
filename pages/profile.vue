@@ -104,12 +104,12 @@
                     <label for="username"
                       class="block text-sm font-medium leading-6 text-white">Username</label>
                     <div class="mt-2">
-                      <div class="flex rounded-sm bg-white/5 ring-1 ring-inset ring-white/10 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                      <div class="flex rounded-sm bg-gray-800/70 ring-1 ring-inset ring-white/10 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
                         <input type="text"
                           name="username"
                           id="username"
                           autocomplete="username"
-                          class="flex-1 border-0 bg-white/5 py-2 pl-4 text-white focus:ring-0 sm:text-md sm:leading-6"
+                          class="flex-1 border-0 bg-gray-800/70 py-2 pl-4 text-white focus:ring-0 sm:text-md sm:leading-6"
                           placeholder="janesmith" />
                       </div>
                     </div>
@@ -153,7 +153,7 @@
                     <label for="first-name" class="block text-md font-bold leading-6 ppercase text-white">First name</label>
                     <div class="mt-2">
                       <input type="text" name="first-name" id="first-name" autocomplete="given-name"
-                        class="block w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
+                        class="block w-full rounded-md border-0 bg-gray-800/70 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
                     </div>
                   </div>
 
@@ -161,7 +161,7 @@
                     <label for="last-name" class="block text-md font-medboldium leading-6 uppercase text-white">Last name</label>
                     <div class="mt-2">
                       <input type="text" name="last-name" id="last-name" autocomplete="family-name"
-                        class="block w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
+                        class="block w-full rounded-md border-0 bg-gray-800/70 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
                     </div>
                   </div>
 
@@ -169,7 +169,7 @@
                     <label for="email" class="block text-md font-bold leading-6 uppercase text-white">Email address</label>
                     <div class="mt-2">
                       <input id="email" name="email" type="email" autocomplete="email" placeholder="{{ user.identities[0].identity_data.email }}"
-                        class="block w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
+                        class="block w-full rounded-md border-0 bg-gray-800/70 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
                     </div>
                   </div>
 
@@ -178,7 +178,7 @@
                       class="block text-md font-bold leading-6 uppercase text-white">Country</label>
                     <div class="mt-2">
                       <select id="country" name="country" autocomplete="country-name"
-                        class="block w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6 [&_*]:text-black">
+                        class="block w-full rounded-md border-0 bg-gray-800/70 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6 [&_*]:text-black">
                         <option>Canada</option>
                         <option>United States</option>
                         <option>Mexico</option>
@@ -192,7 +192,7 @@
                     <div class="mt-2">
                       <input type="text" name="street-address" id="street-address"
                         autocomplete="street-address"
-                        class="block w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
+                        class="block w-full rounded-md border-0 bg-gray-800/70 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
                     </div>
                   </div>
 
@@ -200,7 +200,7 @@
                     <label for="city" class="block text-md font-bold leading-6 uppercase text-white">City</label>
                     <div class="mt-2">
                       <input type="text" name="city" id="city" autocomplete="address-level2"
-                        class="block w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
+                        class="block w-full rounded-md border-0 bg-gray-800/70 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
                     </div>
                   </div>
 
@@ -208,7 +208,7 @@
                     <label for="region" class="block text-md font-bold leading-6 uppercase text-white">Province</label>
                     <div class="mt-2">
                       <input type="text" name="region" id="region" autocomplete="address-level1"
-                        class="block w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
+                        class="block w-full rounded-md border-0 bg-gray-800/70 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
                     </div>
                   </div>
 
@@ -216,7 +216,7 @@
                     <label for="postal-code" class="block text-md font-bold leading-6 uppercase text-white">Postal code</label>
                     <div class="mt-2">
                       <input type="text" name="postal-code" id="postal-code" autocomplete="postal-code"
-                        class="block w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
+                        class="block w-full rounded-md border-0 bg-gray-800/70 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
                     </div>
                   </div>
                 </div>
@@ -233,7 +233,7 @@
                       <div class="relative flex gap-x-3">
                         <div class="flex h-6 items-center">
                           <input id="comments" name="comments" type="checkbox"
-                            class="h-4 w-4 rounded border-white/10 bg-white/5 text-indigo-600 focus:ring-indigo-600 focus:ring-offset-gray-900" />
+                            class="h-4 w-4 rounded border-white/10 bg-gray-800/70 text-indigo-600 focus:ring-indigo-600 focus:ring-offset-gray-900" />
                         </div>
                         <div class="text-sm leading-6">
                           <label for="comments" class="text-md font-bold text-white">Comments</label>
@@ -244,7 +244,7 @@
                       <div class="relative flex gap-x-3">
                         <div class="flex h-6 items-center">
                           <input id="candidates" name="candidates" type="checkbox"
-                            class="h-4 w-4 rounded border-white/10 bg-white/5 text-indigo-600 focus:ring-indigo-600 focus:ring-offset-gray-900" />
+                            class="h-4 w-4 rounded border-white/10 bg-gray-800/70 text-indigo-600 focus:ring-indigo-600 focus:ring-offset-gray-900" />
                         </div>
                         <div class="text-sm leading-6">
                           <label for="candidates" class="text-md font-bold text-white">Candidates</label>
@@ -255,7 +255,7 @@
                       <div class="relative flex gap-x-3">
                         <div class="flex h-6 items-center">
                           <input id="offers" name="offers" type="checkbox"
-                            class="h-4 w-4 rounded border-white/10 bg-white/5 text-indigo-600 focus:ring-indigo-600 focus:ring-offset-gray-900" />
+                            class="h-4 w-4 rounded border-white/10 bg-gray-800/70 text-indigo-600 focus:ring-indigo-600 focus:ring-offset-gray-900" />
                         </div>
                         <div class="text-sm leading-6">
                           <label for="offers" class="text-md font-bold text-white">Offers</label>
