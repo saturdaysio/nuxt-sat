@@ -351,36 +351,15 @@
 
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import {
-  Dialog,
-  DialogPanel,
-  Popover,
-  PopoverButton,
-  PopoverGroup,
-  PopoverPanel,
-  RadioGroup,
-  RadioGroupLabel,
-  RadioGroupOption,
-  Tab,
-  TabGroup,
-  TabList,
-  TabPanel,
-  TabPanels,
-  TransitionChild,
-  TransitionRoot,
-} from '@headlessui/vue'
-import {
-  Bars3Icon,
-  CurrencyDollarIcon,
-  GlobeAmericasIcon,
-  MagnifyingGlassIcon,
-  ShoppingBagIcon,
-  UserIcon,
-  XMarkIcon,
-} from '@heroicons/vue/24/outline'
-import { StarIcon } from '@heroicons/vue/20/solid'
 
+import { ref } from 'vue'
+  import { Dialog, DialogPanel, Popover, PopoverButton, PopoverGroup, PopoverPanel, RadioGroup, RadioGroupLabel, RadioGroupOption, Tab, TabGroup, TabList, TabPanel, TabPanels, TransitionChild, TransitionRoot, } from '@headlessui/vue'
+
+  import { Bars3Icon, CurrencyDollarIcon, GlobeAmericasIcon, ShoppingBagIcon, UserIcon, XMarkIcon, } from '@heroicons/vue/24/outline'
+
+  import { StarIcon } from '@heroicons/vue/20/solid'
+
+  
 const navigation = {
   categories: [
     {
@@ -561,11 +540,13 @@ const navigation = {
       ],
     },
   ],
+
   pages: [
     { name: 'Dashboard', href: '/dashboard' },
     { name: 'Setting', href: '/settings' },
   ],
 }
+
 const product = {
   name: 'Basic Tee',
   price: '$35',
@@ -574,6 +555,7 @@ const product = {
     { id: 1, name: 'Women', href: '#' },
     { id: 2, name: 'Clothing', href: '#' },
   ],
+
   images: [
     {
       id: 1,
@@ -594,10 +576,12 @@ const product = {
       primary: false,
     },
   ],
+
   colors: [
     { name: 'Black', bgColor: 'bg-gray-900', selectedColor: 'ring-gray-900' },
     { name: 'Heather Grey', bgColor: 'bg-gray-400', selectedColor: 'ring-gray-400' },
   ],
+
   sizes: [
     { name: 'XXS', inStock: true },
     { name: 'XS', inStock: true },
@@ -606,10 +590,12 @@ const product = {
     { name: 'L', inStock: true },
     { name: 'XL', inStock: false },
   ],
+
   description: `
   <p>The Basic tee is an honest new take on a classic. The tee uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewn locally, with a special dye technique that gives each tee it's own look.</p>
   <p>Looking to stock your closet? The Basic tee also comes in a 3-pack or 5-pack at a bundle discount.</p>
 `,
+
   details: [
     'Only the best materials',
     'Ethically and locally made',
@@ -617,10 +603,12 @@ const product = {
     'Machine wash cold with similar colors',
   ],
 }
+
 const policies = [
   { name: 'International delivery', icon: GlobeAmericasIcon, description: 'Get your order in 2 years' },
   { name: 'Loyalty rewards', icon: CurrencyDollarIcon, description: "Don't look at other tees" },
 ]
+
 const reviews = {
   average: 3.9,
   totalCount: 512,
