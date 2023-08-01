@@ -48,7 +48,7 @@
 		{
 			video: "/meme/beyonce-dance1.mp4",
 			title: "Be supportive",
-			desc: "We operate like a sports roster and always take the time to help each other improve.",
+			desc: "It isn't brilliant individual performances that make great teams, it's the energy unleashed when individuals put their egos aside and work toward a common goal. Good teams become great ones when they trust each other enough to surrender the 'me' for 'we.'",
 			type: "video/mp4"
 		},
 		{
