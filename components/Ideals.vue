@@ -17,7 +17,7 @@
 								</video>
 							</div>
 							<div id="meta" class="md:w-6/12 justify-center items-center">
-								<h2 class="mt-2 text-2xl sm:text-3xl lg:text-4xl font-bold leading-8 lime-to-aqua">{{ item.title }}</h2>
+								<h2 class="mt-2 text-2xl md:text-3xl lg:text-4xl font-bold leading-8 lime-to-aqua">{{ item.title }}</h2>
 								<p class="text-md sm:text-base md:text-lg lg:text-xl text-gray-200">{{ item.desc }}</p>
 							</div>
 						</div>
