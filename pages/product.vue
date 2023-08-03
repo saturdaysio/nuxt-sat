@@ -146,7 +146,7 @@
           <!-- Logo -->
           <a href="#" class="flex">
             <span class="sr-only">Saturdays.io</span>
-            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+            <img class="h-8 w-auto" src="@/assets/img/logo.svg" alt="" />
           </a>
 
           <div class="flex flex-1 items-center justify-end">
@@ -359,7 +359,7 @@ import { ref } from 'vue'
 
   import { StarIcon } from '@heroicons/vue/20/solid'
 
-  
+
 const navigation = {
   categories: [
     {

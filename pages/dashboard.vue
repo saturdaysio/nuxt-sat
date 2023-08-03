@@ -2,9 +2,9 @@
 	<div class="min-h-full">
     <div class="bg-gray-900">
       <Disclosure as="nav" class="border-b border-white/10 border-opacity-25 lg:border-none" v-slot="{ open }">
-        <div class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
-          <div class="relative flex h-16 items-center justify-between lg:border-b lg:border-white/20 ">
-            <div class="flex items-center px-2 lg:px-0">
+        <div class="mx-auto max-w-full">
+          <div class="relative flex h-20 items-center justify-between px-4 lg:border-b lg:border-white/20 ">
+            <div class="flex items-center">
               <div class="flex-shrink-0">
                 <NuxtLink to="/" class="focus:outline-none">
                     <span class="sr-only">Saturdays.io</span>
@@ -13,14 +13,14 @@
               </div>
               <div class="hidden lg:ml-10 lg:block">
                 <div class="flex space-x-4">
-                  <NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" :class="[item.current ? 'bg-gray-700 text-white' : 'text-white hover:bg-gray-500 hover:bg-opacity-75', 'rounded-md py-2 px-3 text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</NuxtLink>
+                  <NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" :class="[item.current ? 'bg-gray-700/20 text-white' : 'text-white hover:bg-gray-800/20 hover:bg-opacity-75', 'rounded-md py-2 px-3 text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</NuxtLink>
                 </div>
               </div>
             </div>
 
             <div class="flex lg:hidden">
               <!-- Mobile menu button -->
-              <DisclosureButton class="relative inline-flex items-center justify-center rounded-full bg-gray-900 p-2 text-white hover:bg-gray-800 hover:bg-opacity-25 hover:text-white focus:outline-none focus:ring-0 focus:ring-offset-2 focus:ring-offset-gray-900/10">
+              <DisclosureButton class="relative inline-flex items-center justify-center rounded-md bg-gray-900 p-2 text-gray-200 hover:bg-gray-800/20 hover:bg-opacity-75 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 focus:ring-offset-gray-900">
                 <span class="absolute -inset-0.5" />
                 <span class="sr-only">Open main menu</span>
                 <Bars3Icon v-if="!open" class="block h-6 w-6" aria-hidden="true" />
@@ -29,7 +29,7 @@
             </div>
             <div class="hidden lg:ml-4 lg:block">
               <div class="flex items-center">
-                <button type="button" class="relative flex-shrink-0 rounded-full bg-gray-900/20 p-1 text-gray-400 focus:outline-none focus:ring-0 focus:ring-offset-2">
+                <button type="button" class="relative flex-shrink-0 rounded-full bg-gray-900/20 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-0 focus:ring-gray-800 focus:ring-offset-2 focus:ring-offset-gray-900">
                   <span class="absolute -inset-1.5" />
                   <span class="sr-only">View notifications</span>
                   <BellIcon class="h-6 w-6" aria-hidden="true" />
@@ -38,7 +38,7 @@
                 <!-- Profile dropdown -->
                 <Menu as="div" class="relative ml-3 flex-shrink-0">
                   <div>
-                    <MenuButton class="relative flex rounded-full bg-gray-600 text-sm text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-600">
+                    <MenuButton class="relative flex rounded-full bg-black text-sm text-white focus:outline-1 focus:ring-2 focus:ring-green-400 focus:ring-offset-0 focus:ring-offset-green-900">
                       <span class="absolute -inset-1.5" />
                       <span class="sr-only">Open user menu</span>
                       <img class="h-8 w-8 rounded-full" :src="userProfile.imageUrl" alt="" />
@@ -59,33 +59,32 @@
 
         <DisclosurePanel class="lg:hidden">
           <div class="space-y-1 px-2 pb-3 pt-2">
-            <DisclosureButton v-for="item in navigation" :key="item.name" as="NuxtLink" :to="item.to" :class="[item.current ? 'bg-gray-800 text-white' : 'text-white hover:bg-green-500 hover:bg-opacity-10', 'block rounded-sm py-2 px-4 text-base font-semibold']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</DisclosureButton>
+            <DisclosureButton class="w-full mx-auto">
+              <NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" :class="[item.current ? 'bg-gray-900 text-white' : 'text-white hover:bg-gray-800 hover:bg-opacity-75', 'block rounded-md py-2 px-3 text-base font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</NuxtLink>
+            </DisclosureButton>
           </div>
-          <div class="border-t border-white/25 pb-3 pt-4">
+          <div class="border-t border-gray-700 pb-3 pt-4">
             <div class="flex items-center px-5">
               <div class="flex-shrink-0">
-                <img class="h-10 w-10 rounded-full" :src="userProfile.imageUrl" alt="user profile picture" />
+                <img class="h-10 w-10 rounded-full" :src="userProfile.imageUrl" alt="" />
               </div>
               <div class="ml-3">
-                <div class="text-base font-bold text-white">{{ userProfile.name }}</div>
-                <div class="text-sm font-base text-gray-400">{{ userProfile.email }}</div>
+                <div class="text-base font-medium text-white">{{ userProfile.name }}</div>
+                <div class="text-sm font-medium text-gray-300">{{ userProfile.email }}</div>
               </div>
-              <button type="button" class="relative ml-auto flex-shrink-0 rounded-full bg-gray-800/10 p-1 text-white  focus:outline-none focus:ring-0">
+              <button type="button" class="relative ml-auto flex-shrink-0 rounded-full bg-gray-600 p-1 text-gray-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-600">
                 <span class="absolute -inset-1.5" />
                 <span class="sr-only">View notifications</span>
                 <BellIcon class="h-6 w-6" aria-hidden="true" />
               </button>
             </div>
             <div class="mt-3 space-y-1 px-2">
-              <DisclosureButton v-for="item in userNavigation" :key="item.name" as="a" :to="item.to" class="block rounded-md px-4 py-2 text-base font-medium text-white hover:bg-blue-100 hover:bg-opacity-25">{{ item.name }}</DisclosureButton>
+              <DisclosureButton v-for="item in userNavigation" :key="item.name" as="a" :to="item.to" class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-500 hover:bg-opacity-75">{{ item.name }}</DisclosureButton>
             </div>
           </div>
         </DisclosurePanel>
       </Disclosure>
       <header class="py-12">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 class="text-3xl font-bold tracking-tight text-white">Dashboard</h1>
-        </div>
       </header>
     </div>
 
@@ -205,8 +204,8 @@
 	const navigation = [
 		{ name: 'Dashboard', to: '/dashboard', current: true },
 		{ name: 'Profile', to: '/profile', current: false },
-		{ name: 'Store', to: '/product', current: false },
-		{ name: 'Reports', to: '/', current: false },
+		{ name: 'Product', to: '/product', current: false },
+		{ name: 'Reports', to: '/reports', current: false },
 		{ name: 'Settings', to: '/settings', current: false },
 	]
 
@@ -237,9 +236,20 @@
 	const activityItems = [
 		{
 			user: {
-			name: 'Hello Saturdays',
-			imageUrl:
-				'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+			name: 'Richard Hendricks',
+			imageUrl: '/avatars/richard_hendricks.png',
+			},
+			commit: '2d89f0c8',
+			branch: 'main',
+			status: 'Completed',
+			duration: '25s',
+			date: '45 minutes ago',
+			dateTime: '2023-01-23T11:00',
+		},
+    {
+			user: {
+			name: 'Monica Hall',
+			imageUrl: '/avatars/monica_hall.png',
 			},
 			commit: '2d89f0c8',
 			branch: 'main',
@@ -251,21 +261,7 @@
     {
 			user: {
 			name: 'Hello Saturdays',
-			imageUrl:
-				'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-			},
-			commit: '2d89f0c8',
-			branch: 'main',
-			status: 'Completed',
-			duration: '25s',
-			date: '45 minutes ago',
-			dateTime: '2023-01-23T11:00',
-		},
-    {
-			user: {
-			name: 'Hello Saturdays',
-			imageUrl:
-				'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+			imageUrl: '/avatars/monica_hall.png',
 			},
 			commit: '2d89f0c8',
 			branch: 'main',
