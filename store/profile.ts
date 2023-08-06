@@ -51,7 +51,7 @@ export const useProfileStore = defineStore({
       const profile = await client.from('users').select('*').eq('id', user.value?.id).single()
 
 
-      this.setProfile({...this.profile, user: user.value, ...profile.data, profile_permissions: profile.data.profile_permissions})
+      this.setProfile({...this.profile, user: user.value, ...profile.data, profile_permissions: profile.data?.profile_permissions || []})
 
       return
     }
