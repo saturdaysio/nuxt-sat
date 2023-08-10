@@ -127,22 +127,17 @@
 
                 <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                   <div class="sm:col-span-4">
-                    <label for="username" class="block text-sm font-medium leading-6 text-white">Username</label>
-                    <div class="mt-2">
-                      <div
-                          class="flex rounded-sm bg-gray-800/70 ring-1 ring-inset ring-white/10 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
-                        <input type="text"
-                               name="username"
-                               id="username"
-                               autocomplete="username"
-                               class="flex-1 border-0 bg-gray-800/70 py-2 pl-4 text-white focus:ring-0 sm:text-md sm:leading-6"
-                               placeholder="janesmith"
-
-                               :value="user.username"/>
-                      </div>
-                    </div>
+                    <Input
+                        inputType="text"
+                        inputName="username"
+                        label="Username"
+                        id="username"
+                        span="3"
+                        autocomplete="username"
+                        placeholder="janesmith"
+                        :value="user.username"
+                    />
                   </div>
-
 
                   <div class="col-span-full">
                     <label for="photo" class="block text-md font-bold leading-6 uppercase text-white">Profile
@@ -186,119 +181,127 @@
 
                 <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                   <div class="sm:col-span-3">
-                    <label for="first-name" class="block text-md font-bold leading-6 ppercase text-white">First
-                      name</label>
-                    <div class="mt-2">
-                      <input type="text" name="first_name" id="first-name" autocomplete="given-name"
-                             class="block w-full rounded-md border-0 bg-gray-800/70 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
-
-                             :value="user.first_name"
-                      />
-                    </div>
+                    <Input
+                        inputType="text"
+                        inputName="first_name"
+                        label="First name"
+                        id="first-name"
+                        autocomplete="given-name"
+                        placeholder="Jane"
+                        :value="user.first_name"
+                    />
                   </div>
-
                   <div class="sm:col-span-3">
-                    <label for="last-name" class="block text-md font-medboldium leading-6 uppercase text-white">Last
-                      name</label>
-                    <div class="mt-2">
-                      <input type="text" name="last_name" id="last-name" autocomplete="family-name"
-                             class="block w-full rounded-md border-0 bg-gray-800/70 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
-
-                             :value="user.last_name"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="sm:col-span-3">
-                    <label for="email" class="block text-md font-bold leading-6 uppercase text-white">Email
-                      address</label>
-                    <div class="mt-2">
-                      <input id="email" name="email" type="email" autocomplete="email" placeholder="email@host.com"
-                             class="block w-full rounded-md border-0 bg-gray-800/70 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
-
-                             :value="user.email || ''"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="sm:col-span-3">
-                    <label for="phone" class="block text-md font-bold leading-6 uppercase text-white">Phone</label>
-                    <div class="mt-2">
-                      <input id="phone" name="phone" type="tel" autocomplete="phone" placeholder="xxx-xxx-xxxx"
-                             class="block w-full rounded-md border-0 bg-gray-800/70 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
-
-                             :value="user.phone"
-                      />
-                    </div>
+                    <Input
+                        inputType="text"
+                        inputName="last_name"
+                        label="Last name"
+                        id="last-name"
+                        autocomplete="family-name"
+                        placeholder="Smith"
+                        :value="user.last_name"
+                    />
                   </div>
 
 
                   <div class="sm:col-span-3">
-                    <label for="country" class="block text-md font-bold leading-6 uppercase text-white">Country</label>
-                    <div class="mt-2">
-                      <select id="country" name="country" autocomplete="country-name"
+                    <Input
+                        inputType="text"
+                        inputName="email"
+                        label="Email Address"
+                        id="email"
+                        autocomplete="email"
+                        placeholder="eamil@host.com"
+                        :value="user.email"
+                    />
 
-                              v-model="user.country"
-                              class="block w-full rounded-md border-0 bg-gray-800/70 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6 [&_*]:text-black">
-                        <option value="Canada">Canada</option>
-                        <option value="United States">United States</option>
-                        <option value="Mexico">Mexico</option>
-                      </select>
-                    </div>
+                  </div>
+
+                  <div class="sm:col-span-3">
+                    <Input
+                        inputType="text"
+                        inputName="phone"
+                        label="Phone"
+                        id="phone"
+                        autocomplete="phone"
+                        placeholder="xxx-xxx-xxxx"
+                        :value="user.phone"
+                    />
+                  </div>
+
+                  <div class="sm:col-span-3">
+                    <Input
+                        inputType="select"
+                        inputName="country"
+                        label="Country"
+                        id="country"
+                        autocomplete="country-name"
+                        :options="countries"
+                        :value="user.country"
+                    />
                   </div>
 
                   <div class="col-span-full">
-                    <label for="street-address" class="block text-md font-bold leading-6 uppercase text-white">Street
-                      address</label>
-                    <div class="mt-2">
-                      <input type="text" name="address_1" id="street-address"
-                             autocomplete="street-address"
-                             class="block w-full rounded-md border-0 bg-gray-800/70 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
-                             :value="user.address_1"
-                      />
-                    </div>
+                    <Input
+                        inputType="text"
+                        inputName="address_1"
+                        label="Street Address"
+                        id="street-address"
+                        autocomplete="street-address"
+                        placeholder="123 Main St"
+                        :value="user.address_1"
+
+                    />
                   </div>
 
                   <div class="col-span-full">
-                    <label for="street-address" class="block text-md font-bold leading-6 uppercase text-white">Street
-                      address 2 (Optional)</label>
-                    <div class="mt-2">
-                      <input type="text" name="address_2" id="street-address" autocomplete="street-address"
-                             class="block w-full rounded-md border-0 bg-gray-800/70 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
-                             :value="user.address_2"
-                      />
-                    </div>
+                    <Input
+                        inputType="text"
+                        inputName="address_2"
+                        label="Street Address 2 (Optional)"
+                        id="street-address"
+                        autocomplete="street-address"
+                        placeholder="Apartment, suite, unit, etc. (optional)"
+                        :value="user.address_2"
+                    />
                   </div>
 
                   <div class="sm:col-span-2 sm:col-start-1">
-                    <label for="city" class="block text-md font-bold leading-6 uppercase text-white">City</label>
-                    <div class="mt-2">
-                      <input type="text" name="city" id="city" autocomplete="address-level2"
-                             class="block w-full rounded-md border-0 bg-gray-800/70 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
-                             :value="user.city"
-                      />
-                    </div>
+                    <Input
+                        inputType="text"
+                        inputName="city"
+                        label="City"
+                        id="city"
+                        autocomplete="address-level2"
+                        placeholder="City"
+                        :value="user.city"
+                    />
+
                   </div>
 
                   <div class="sm:col-span-2">
-                    <label for="region" class="block text-md font-bold leading-6 uppercase text-white">Province</label>
-                    <div class="mt-2">
-                      <input type="text" name="province" id="region" autocomplete="address-level1"
-                             class="block w-full rounded-md border-0 bg-gray-800/70 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
-                             :value="user.province"
-                      />
-                    </div>
+                    <Input
+                        inputType="text"
+                        inputName="province"
+                        label="Province"
+                        id="province"
+                        autocomplete="address-level1"
+                        placeholder="Province"
+                        :value="user.province"
+                    />
+
                   </div>
 
                   <div class="sm:col-span-2">
-                    <label for="postal-code" class="block text-md font-bold leading-6 uppercase text-white">Postal
-                      code</label>
-                    <div class="mt-2">
-                      <input type="text" name="postal_code" id="postal-code" autocomplete="postal-code"
-                             class="block w-full rounded-md border-0 bg-gray-800/70 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
-                             :value="user.postal_code"
-                      />
-                    </div>
+                    <Input
+                        inputType="text"
+                        inputName="postal_code"
+                        label="Postal Code"
+                        id="postal-code"
+                        autocomplete="postal-code"
+                        placeholder="Postal Code"
+                        :value="user.postal_code"
+                    />
                   </div>
                 </div>
               </div>
@@ -312,43 +315,30 @@
                   <fieldset>
                     <legend class="text-base font-bold leading-6 text-white">By Email</legend>
                     <div class="mt-6 space-y-6">
-                      <div class="relative flex gap-x-3">
-                        <div class="flex h-6 items-center">
-                          <input id="comments" name="comments" type="checkbox"
-                                 class="h-4 w-4 rounded border-white/10 bg-gray-800/70 text-indigo-600 focus:ring-indigo-600 focus:ring-offset-gray-900"
-
-                          />
-                        </div>
-                        <div class="text-sm leading-6">
-                          <label for="comments" class="text-md font-bold text-white">Comments</label>
-                          <p class="text-gray-400">Get notified when someones posts a comment on a posting.</p>
-                        </div>
-                      </div>
-                      <div class="relative flex gap-x-3">
-                        <div class="flex h-6 items-center">
-                          <input id="candidates" name="candidates" type="checkbox"
-                                 class="h-4 w-4 rounded border-white/10 bg-gray-800/70 text-indigo-600 focus:ring-indigo-600 focus:ring-offset-gray-900"
-
-                          />
-                        </div>
-                        <div class="text-sm leading-6">
-                          <label for="candidates" class="text-md font-bold text-white">Candidates</label>
-                          <p class="text-gray-400">Get notified when a candidate applies for a job.
-                          </p>
-                        </div>
-                      </div>
-                      <div class="relative flex gap-x-3">
-                        <div class="flex h-6 items-center">
-                          <input id="offers" name="offers" type="checkbox"
-                                 class="h-4 w-4 rounded border-white/10 bg-gray-800/70 text-indigo-600 focus:ring-indigo-600 focus:ring-offset-gray-900"
-
-                          />
-                        </div>
-                        <div class="text-sm leading-6">
-                          <label for="offers" class="text-md font-bold text-white">Offers</label>
-                          <p class="text-gray-400">Get notified when a candidate accepts or rejects an offer.</p>
-                        </div>
-                      </div>
+                      <Input
+                          inputType="checkbox"
+                          inputName="comments"
+                          label="Comments"
+                          id="comments"
+                          checkboxLabelSub="Get notified when someones posts a comment on a posting."
+                          :value="user.profile_permissions?.includes('comments')"
+                      />
+                      <Input
+                          inputType="checkbox"
+                          inputName="candidates"
+                          label="Candidates"
+                          id="candidates"
+                          checkboxLabelSub="Get notified when a candidate applies for a job."
+                          :value="user.profile_permissions?.includes('candidates')"
+                      />
+                      <Input
+                          inputType="checkbox"
+                          inputName="offers"
+                          label="Offers"
+                          id="offers"
+                          checkboxLabelSub="Get notified when a candidate accepts or rejects an offer."
+                          :value="user.profile_permissions?.includes('offers')"
+                      />
                     </div>
                   </fieldset>
 
@@ -422,6 +412,21 @@ useHead({
   ]
 })
 
+const countries = [
+  {
+    name: 'United States',
+    value: 'United States',
+  },
+  {
+    name: 'Canada',
+    value: 'Canada',
+  },
+  {
+    name: 'Mexico',
+    value: 'Mexico',
+  }
+]
+
 const profileStore = useProfileStore()
 const client = useSupabaseClient()
 await profileStore.fetchProfile(client)
@@ -437,7 +442,6 @@ const updateProfile = async (event: Event) => {
   const form = event.target as HTMLFormElement
   const formData = new FormData(form)
   const data = Object.fromEntries(formData.entries())
-  console.log(data)
 
   loading.value = true
   if (!user || !user.user) return

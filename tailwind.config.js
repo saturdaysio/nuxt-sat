@@ -91,6 +91,17 @@ module.exports = {
         '800': "#424242",
         '900': "#212121",
         },
+      indigo: {
+        '100': "#C5CAE9",
+        '200': "#9FA8DA",
+        '300': "#7986CB",
+        '400': "#5C6BC0",
+        '500': "#3F51B5",
+        '600': "#3949AB",
+        '700': "#303F9F",
+        '800': "#283593",
+        '900': "#1A237E",
+      },
       black: "#000",
       white: "#fff"
     },
@@ -134,5 +145,6 @@ module.exports = {
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/forms"),
     require("@tailwindcss/typography"),
+    require('@headlessui/tailwindcss')({ prefix: 'ui' })
   ],
 };

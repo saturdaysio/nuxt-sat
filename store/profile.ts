@@ -30,7 +30,7 @@ export interface State {
 
 export const useProfileStore = defineStore({
   id: 'profile',
-  state: (): { profile: Profile } => {
+  state: (): State => {
     return {
       profile: {
         user: undefined as User | undefined
@@ -49,7 +49,6 @@ export const useProfileStore = defineStore({
       const user = await useSupabaseUser()
 
       const profile = await client.from('users').select('*').eq('id', user.value?.id).single()
-
 
       this.setProfile({...this.profile, user: user.value, ...profile.data, profile_permissions: profile.data?.profile_permissions || []})
 
