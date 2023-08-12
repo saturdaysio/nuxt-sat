@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-@import "~/assets/styles/button.scss";
 @import "~/assets/styles/colour.scss";
 @import "~/assets/styles/font.scss";
 
@@ -17,7 +16,19 @@
 // Tailwind Typography Overrides
 
   p, li {
-    color: $gray;
+    @apply text-gray-200;
+
+      a {
+        @apply underline underline-offset-4;
+      }
+
+      a:hover {
+        background: none;
+        opacity: 0.60;
+        -webkit-transition: all .4s ease;
+        -moz-transition: all .4s ease;
+        transition: all .4s ease;
+      }
   }
 
   .text-category {
@@ -25,7 +36,7 @@
   }
 
   .text-purple-pink {
-    @apply font-bold text-grad-01;
+    @apply red-to-blue;
   }
 
 
@@ -35,24 +46,35 @@
 /* Break off into its own file - 01/01/2023 */
 
   a {
-    color: $blue;
+    @apply font-bold text-green-400;
   }
 
-  .nav-item {
-    border: 0;
+  .active {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
 
-    a:hover {
-      background: none;
-      text-decoration: underline;
-      text-underline-offset: 4px;
-      opacity: 0.60;
-      -webkit-transition: all .4s ease;
-      -moz-transition: all .4s ease;
-      transition: all .4s ease;
+
+
+/* Button Styles */
+
+  button {
+    p {
+      color: inherit;
     }
-    
-    .active {
-      text-decoration: underline;
-      text-underline-offset: 8px;
-    }
+  }
+
+
+/* Primary */
+
+  .primary {
+    @apply text-center font-bold text-black bg-green-400 py-4 px-8 rounded-md hover:bg-blue-200 transition duration-500
+  }
+
+  .secondary {
+    @apply text-center font-bold text-white bg-blue-400 py-4 px-8 rounded-md hover:bg-blue-800 transition duration-500
+  }
+
+  .cta {
+    @apply text-center font-bold  bg-black py-4 px-8 rounded-md border-4 border-solid border-green-400 hover:bg-green-200 hover:border-green-200 hover:text-black transition duration-500
   }

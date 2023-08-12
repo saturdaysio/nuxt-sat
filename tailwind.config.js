@@ -7,7 +7,7 @@ const primary = colors.blue;
 const secondary = colors.pink; // need to add
 const info = colors.purple;
 const warning = colors.orange; // need to add
-const success = colors.green; // need to add
+const success = colors.green; // need to refine
 const error = colors.red;
 
 
@@ -32,7 +32,7 @@ module.exports = {
       md: "768px", // round down to 720px
       lg: "1024px",
       xl: "1280px",
-      '2xl': "1536px", // round up to 1600px
+      '2xl': "1600px", // round up to 1600px
     },
 
     colors: {
@@ -47,6 +47,17 @@ module.exports = {
         '800': "#1565C0",
         '900': "#0D47A1",
         },
+      green: {
+        '100': "#84F4A0",
+        '200': "#6ECAEC",
+        '300': "#84F4A0",
+        '400': "#84F4A0",
+        '500': "#84F4A0",
+        '600': "#84F4A0",
+        '700': "#84F4A0",
+        '800': "#84F4A0",
+        '900': "#84F4A0",
+      },
       purple: {
         '100': "#D1C4E9",
         '200': "#B39DDB",
@@ -80,6 +91,17 @@ module.exports = {
         '800': "#424242",
         '900': "#212121",
         },
+      indigo: {
+        '100': "#C5CAE9",
+        '200': "#9FA8DA",
+        '300': "#7986CB",
+        '400': "#5C6BC0",
+        '500': "#3F51B5",
+        '600': "#3949AB",
+        '700': "#303F9F",
+        '800': "#283593",
+        '900': "#1A237E",
+      },
       black: "#000",
       white: "#fff"
     },
@@ -90,7 +112,8 @@ module.exports = {
     },
 
     fontSize: {
-      sm: ['0.875rem', '1.25rem'], // font-size: 14px, line-height: 20px
+      sm: ['0.75rem', '1rem'], // font-size: 12px, line-height: 16px
+			md: ['0.875rem', '1.25rem'], // font-size: 14px, line-height: 20px
       base: ['1rem', '1.5rem'], // font-size: 16px, line-height: 24px
       xl: ['1.25rem', '2rem'], // font-size: 20px, line-height: 32px
       '2xl': ['1.5rem', '1.5'], // font-size: 24px, line-height: 36px
@@ -122,5 +145,6 @@ module.exports = {
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/forms"),
     require("@tailwindcss/typography"),
+    require('@headlessui/tailwindcss')({ prefix: 'ui' })
   ],
 };

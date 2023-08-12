@@ -1,7 +1,7 @@
 <template>
 	<NuxtLink>
 		<button>
-			<p class="text-xl leading-8"><strong>{{ cta }}</strong></p>
+			<p class="text-base sm:text-lg md:text-xl font-semibold">{{ buttonLabel }}</p>
 		</button>
 	</NuxtLink>
 </template>
@@ -10,7 +10,7 @@
 <script setup lang="ts">
 
 	const props = defineProps({
-		cta: String
+		buttonLabel: String
 	})
 
 </script>
