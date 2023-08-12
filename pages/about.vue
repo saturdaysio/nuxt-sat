@@ -23,7 +23,7 @@
 
 		<Ideals />
 
-		<Result />
+		<Stats />
 
 		<Client />
 
