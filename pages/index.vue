@@ -28,7 +28,7 @@
 		</section>
 
 		
-		<Result />
+		<Stats />
 
 		<Client />
 
