@@ -22,10 +22,6 @@ export default defineNuxtConfig({
         pageTransition: { name: 'page', mode: 'out-in' },
     },
 
-    // Server-side rendering mode
-    // https://nuxt.com/docs/api/configuration/nuxt-config/#ssr
-    ssr: false,
-
 
     // Global CSS/SCSS
     css: [
@@ -37,6 +33,7 @@ export default defineNuxtConfig({
     modules: [
         '@nuxt/image',
         '@nuxtjs/robots',
+        '@nuxtjs/supabase',
         '@nuxtjs/tailwindcss',
         '@pinia/nuxt',
         'nuxt-purgecss',
@@ -47,9 +44,11 @@ export default defineNuxtConfig({
     components: true,
 
 
-    // @nuxt/image config options
+    // nuxt-image module
     image: {
-        inject: true,
+        format: ['webp'],
+        provider: 'ipx',
+        quality: 85,
         screens: {
             xs: 320,
             sm: 640,
@@ -58,8 +57,39 @@ export default defineNuxtConfig({
             xl: 1280,
             xxl: 1536,
             '2xl': 1600,
-          },
+        },
     },
+
+
+    // Hybrid Rendering setup
+    // https://nuxt.com/docs/guide/concepts/rendering
+    routeRules: {
+        // Homepage pre-rendered at build time
+        '/': { prerender: true },
+        '/work': { prerender: true },
+        '/about': { prerender: true },
+        '/terms-of-service': { prerender: true },
+        '/privacy-policy': { prerender: true },
+        // Renders only on client-side
+        '/signin/**': { ssr: false },
+        // Generated on-demand, revalidates in background
+        '/profile/**': { swr: true },
+
+        // Page generated on-demand, revalidates in background
+        '/temp/**': { swr: true },
+        // Generated on-demand once until next deploy
+        '/blog/**': { isr: true },
+        // Renders only on client-side
+        '/admin/**': { ssr: false },
+        // Add CORS headers on API routes
+        '/api/**': { cors: true },
+        // Redirects legacy urls
+        '/old-page': { redirect: '/' },
+    },
+
+
+    // Disables SPA loading animation, nuxt v3.6+ feature only
+    // spaLoadingTemplate: false,
 
 
     // Vite build config
@@ -92,7 +122,7 @@ export default defineNuxtConfig({
 
     // https://stackoverflow.com/questions/74003458/cannot-find-module-pinia-dist-pinia-mjs-when-using-run-dev
     alias: {
-        'pinia': '/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs',
+        pinia: "/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs",
     },
 
 

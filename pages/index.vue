@@ -5,30 +5,30 @@
 
 		<Header intro="Saturdays is a Canadian digital studio based in Toronto" />
 
-		<section class="w-full mx-auto px-4 py-16 bg-black">
-			<div class="container lg:max-w-6xl mx-auto my-8">
-				<h1 class="text-3xl md:text-4xl lg:text-5xl text-center text-purple-pink">
-					We're a Data-driven digital studio that focuses on the Design, Development and Strategy of digital products.
+		<section class="px-4 sm:px-8 md:px-12 py-16 md:py-20 lg:py-24">
+			<div class=" max-w-6xl mx-auto">
+				<h1 class="text-3xl md:text-4xl lg:text-5xl text-center font-bold lime-to-aqua">
+					We're a Data-driven digital studio that focuses on the Design, Development, and Strategy of digital products.
 				</h1>
 			</div>
 		</section>
 
 		
-		<section id="preview" class="w-full mx-auto px-4 py-16 bg-black">
-			<div class="container mx-auto mt-8">
-				<div class="pb-8">
-					<h1 class="text-4xl md:text-5xl lg:text-6xl text-center text-purple-pink">
+		<section id="peek" class="px-4 md:px-8 py-16 md:py-20 lg:py-24">
+			<div class="">
+				<div class="mt-8 pb-8">
+					<h1 class="text-4xl md:text-5xl lg:text-6xl text-center font-bold lime-to-aqua">
 						What we're making
 					</h1>
 				</div>
-				<div class="lg:max-w-7xl mx-auto">
-					<img src="@/assets/img/mobile.webp" width="1600" height="1000" alt="mobile app interface examples" preload loading="lazy" draggable="false" />
+				<div class="max-w-7xl mx-auto">
+					<nuxt-img src="/mobile.webp" width="1600" height="1000"  sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw" alt="mobile app designs" loading="lazy" />
 				</div>
 			</div>
 		</section>
 
 		
-		<Result />
+		<Stats />
 
 		<Client />
 
