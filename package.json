@@ -16,7 +16,7 @@
     "@tailwindcss/typography": "^0.5.8",
     "nuxt": "3.5.3",
     "nuxt-purgecss": "2.0.0",
-    "sass": "1.62.1"
+    "sass": "1.63.4"
   },
   "dependencies": {
     "@headlessui/tailwindcss": "^0.2.0",
