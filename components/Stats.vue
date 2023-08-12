@@ -21,7 +21,7 @@
 	const stats = [
 		{
 			id: '0',
-			category: 'Projects',
+			category: 'Revenue',
 			title: '$21',
 			desc: 'Million in average annual recurring revenue (ARR) for clients using our digital products and services'
 		},
@@ -33,15 +33,15 @@
 		},
 		{
 			id: '2',
-			category: 'Origin',
+			category: 'Roots',
 			title: '2016',
 			desc: 'founded in downtown Toronto, Canada and working with brands worldwide'
 		},
 		{
 			id: '3',
-			category: 'Years',
+			category: 'Experience',
 			title: '23',
-			desc: 'collective years of professional work experience'
+			desc: 'collective years of professional experience designing and building software'
 		},
 	]
 
