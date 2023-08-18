@@ -11,18 +11,18 @@
         <TransitionChild as="template" enter="transition ease-in-out duration-300 transform" enter-from="-translate-x-full" enter-to="translate-x-0" leave="transition ease-in-out duration-300 transform" leave-from="translate-x-0" leave-to="-translate-x-full">
           <DialogPanel class="relative flex w-full max-w-xs flex-col overflow-y-auto bg-white pb-12 shadow-xl">
             <div class="flex px-4 pb-2 pt-5">
-              <button type="button" class="-m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400" @click="open = false">
+              <Button butttonType="button" button-label="Sign in" button-class="-m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400" @click="open = false">
                 <span class="sr-only">Close menu</span>
                 <XMarkIcon class="h-6 w-6" aria-hidden="true" />
-              </button>
+              </Button>
             </div>
 
             <!-- Links -->
-<TabGroup as="div" class="mt-2">
+            <TabGroup as="div" class="mt-2">
               <div class="border-b border-gray-200">
                 <TabList class="-mb-px flex space-x-8 px-4">
                   <Tab as="template" v-for="category in navigation.categories" :key="category.name" v-slot="{ selected }">
-                    <button :class="[selected ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-gray-300', 'flex-1 whitespace-nowrap border-b-2 px-1 py-4 text-base font-medium']">{{ category.name }}</button>
+                    <Button butttonType="button" :button-label="category.name" :button-class="`${selected ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-gray-300'} flex-1 whitespace-nowrap border-b-2 px-1 py-4 text-base font-medium`" />
                   </Tab>
                 </TabList>
               </div>
@@ -80,10 +80,10 @@
       <div class="border-b border-white/25">
         <div class="flex h-16 items-center justify-between">
           <div class="flex flex-1 items-center lg:hidden">
-            <button type="button" class="-ml-2 rounded-md bg-white p-2 text-gray-400" @click="open = true">
+            <Button butttonType="button" button-label="Open menu" button-class="-ml-2 rounded-md bg-white p-2 text-gray-400" @click="open = true">
               <span class="sr-only">Open menu</span>
               <Bars3Icon class="h-6 w-6" aria-hidden="true" />
-            </button>
+            </Button>
 
           </div>
 
@@ -251,8 +251,8 @@
               </div>
             </RadioGroup>
           </div>
-
-          <button type="submit" class="mt-8 flex w-full items-center justify-center rounded-md border border-transparent bg-green-600 px-8 py-3 text-base font-bold text-black hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Add to cart</button>
+          <Button butttonType="submit" button-label="Add to cart" button-class="mt-8 flex w-full items-center justify-center rounded-md border border-transparent bg-green-600 px-8 py-3 text-base font-bold text-black hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"/>
+          
         </form>
 
         <!-- Product details -->
