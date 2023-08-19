@@ -7,7 +7,7 @@
 					<h2 class="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white">Want to get in touch?</h2>
 				</div>
 				<div class="mt-10 flex items-center justify-center gap-x-6">
-					<Button :buttonLabel="'Say hello'" class="primary" :to="'mailto:hello@saturdays.io'" rel="noreferrer" target="_blank" />
+					<Button butttonType="button" button-label="Say hello" button-class="primary" :to="'mailto:hello@saturdays.io'" rel="noreferrer" target="_blank" />
 				</div>
 			</div>
 		</div>
