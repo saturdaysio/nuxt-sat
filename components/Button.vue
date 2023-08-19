@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<NuxtLink v-if="to" :to="to">
-			<button :class="{ errorClasses: error, successClasses: success }">
+			<button :class="classObject">
 				{{ !hasSlots ? buttonLabel : '' }}
 				<slot />
 			</button>
