@@ -65,7 +65,7 @@
   }
 
 
-/* Primary */
+/* Button styles */
 
   .primary {
     @apply text-center font-bold text-black bg-green-400 py-4 px-8 rounded-md hover:bg-blue-200 transition duration-500
@@ -76,5 +76,5 @@
   }
 
   .cta {
-    @apply text-center font-bold  bg-black py-4 px-8 rounded-md border-4 border-solid border-green-400 hover:bg-green-200 hover:border-green-200 hover:text-black transition duration-500
+    @apply text-center font-bold text-white bg-none py-3 px-7 rounded-md border-4 border-solid border-white hover:border-green-400 hover:text-green-400 transition duration-200
   }
