@@ -259,29 +259,6 @@ const userProfile = {
   imageUrl: '/avatars/monica_hall.png',
 }
 
-const navigation = [
-  {name: 'Dashboard', to: '/dashboard', current: false},
-  {name: 'Profile', to: '/profile', current: true},
-  {name: 'Product', to: '/product', current: false},
-  {name: 'Reports', to: '/reports', current: false},
-  {name: 'Settings', to: '/settings', current: false},
-]
-
-const userNavigation = [
-  {name: 'Your Profile', to: '/profile'},
-  {name: 'Settings', to: '/settings'},
-  {name: 'Sign out', to: '/signin'},
-]
-
-
-const secondaryNavigation = [
-  {name: 'Overview', to: '/', current: true},
-  {name: 'Activity', to: '/', current: false},
-  {name: 'Settings', to: '/', current: false},
-  {name: 'Collaborators', to: '/', current: false},
-  {name: 'Notifications', to: '/', current: false},
-]
-
 
 definePageMeta({
   middleware: ['auth']
