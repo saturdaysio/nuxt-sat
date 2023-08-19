@@ -235,8 +235,9 @@
             </div>
 
             <div class="max-w-4xl mx-auto mt-6 px-4 md:px-0 pb-10 flex items-center justify-end gap-x-6">
-              <Button butttonType="button" button-label="Cancel" button-class="rounded-md border-2 border-green-500 px-6 py-4 text-base font-bold leading-6 text-white"/>
-              <Button butttonType="submit" button-label="Save" button-class="rounded-md bg-green-500 px-6 py-4 text-base font-bold text-black shadow-sm hover:bg-green-200"/>
+              <Button butttonType="submit" button-label="Sign out" button-class="secondary" @click="logout" />
+              <Button butttonType="button" button-label="Cancel" button-class="cta" />
+              <Button butttonType="submit" button-label="Save" button-class="primary" />
             </div>
           </form>
         </section>
