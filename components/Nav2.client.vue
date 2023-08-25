@@ -3,7 +3,7 @@
         <Snitcher :open="open"  @change="({ open }) => isPopoverOpen = open" />
         <nav class="relative z-50">
             <div class="fixed w-full">
-                <header class="inset-x-0 backdrop-blur bg-black/90 border-b border-white/10">
+                <header class="inset-x-0 backdrop-blur bg-black/90 border-b border-white/20">
                     <div class="flex justify-between max-w-full mx-auto pl-4 pr-6 py-4" aria-label="global">
 
                         <div class="flex lg:flex-1">
