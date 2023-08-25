@@ -2,18 +2,15 @@
   <div class="min-h-full">
     <Nav2 />
 
-    <main class="pt-24">
-      <div class="mx-auto max-w-screen-2xl">
+    <main class="py-24">
+      <div class="mx-auto max-w-screen-2xl px-2 sm:px-4">
         <!-- Your content -->
-        <section class="mx-auto rounded-lg">
-          <form class=" bg-gray-800/50"
-                @submit.prevent="updateProfile"
-
-          >
+        <section class="mx-auto rounded-sm border border-white/20">
+          <form class=" bg-gray-800/20" @submit.prevent="updateProfile">
             <div class="space-y-12">
-              <div class="max-w-4xl mx-auto pt-16 px-4 border-b border-white/10 pb-12">
-                <h2 class="text-4xl font-medium leading-10 text-white">Profile information</h2>
-                <p class="mt-1 text-base leading-6 text-gray-400">This information will be displayed publicly so be
+              <div class="max-w-4xl mx-auto pt-16 px-4 border-b border-green-400/40 pb-12">
+                <h2 class="text-4xl font-bold leading-10 text-white">User Account</h2>
+                <p class="mt-1 text-base leading-6 text-gray-400">Flavor text about user info that will be displayed publicly so be
                   careful what you share.</p>
 
                 <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
@@ -63,9 +60,8 @@
               </div>
 
               <div v-if="user" class="max-w-4xl mx-auto px-4 border-b border-white/10 pb-12">
-                <h2 class="text-2xl font-bold leading-8 text-white">Personal Information</h2>
-                <p class="mt-1 text-base leading-6 text-gray-400">Lorem ipsum description text a permanent address where
-                  you can receive mail.</p>
+                <h2 class="text-2xl font-bold leading-8 text-white">Profile Info</h2>
+                <p class="mt-1 text-base leading-6 text-gray-400">Flavour text description lorem ipsum for personal info.</p>
 
                 <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                   <div class="sm:col-span-3">
@@ -117,11 +113,12 @@
                     />
                   </div>
 
+
                   <div class="sm:col-span-3">
                     <Input
                         inputType="select"
                         inputName="country"
-                        label="Country"
+                        label="Country/region"
                         id="country"
                         autocomplete="country-name"
                         :options="countries"
@@ -194,6 +191,8 @@
                 </div>
               </div>
 
+              <hr class="" />
+              
               <div class="max-w-4xl mx-auto px-4 border-b border-white/10 pb-12">
                 <h2 class="text-2xl font-bold leading-8 text-white">Permissions</h2>
                 <p class="mt-1 text-base leading-6 text-gray-400">We'll always let you know about important changes, but
@@ -251,89 +250,92 @@
 <script setup lang="ts">
 
 
-import { PhotoIcon } from '@heroicons/vue/24/outline'
-import { ProfilePermissions, useProfileStore } from "~/store/profile";
-
-const userProfile = {
-  name: 'Hello Saturday',
-  email: 'hello@saturdays.io',
-  imageUrl: '/avatars/monica_hall.png',
-}
+  import { PhotoIcon } from '@heroicons/vue/24/outline'
+  import { ProfilePermissions, useProfileStore } from "~/store/profile";
 
 
-definePageMeta({
-  middleware: ['auth']
-})
+  definePageMeta({
+    middleware: ['auth']
+  })
 
-useHead({
-  title: 'Saturdays.io - Profile',
-  meta: [
-    {name: 'description', content: 'Saturdays.io admin dashboard'},
-  ]
-})
+  useHead({
+    title: 'Saturdays.io - Profile',
+    meta: [
+      {name: 'description', content: 'Saturdays.io admin dashboard'},
+    ]
+  })
 
-const countries = [
-  {
-    name: 'United States',
-    value: 'United States',
-  },
-  {
-    name: 'Canada',
-    value: 'Canada',
-  },
-  {
-    name: 'Mexico',
-    value: 'Mexico',
+  const userProfile = {
+    name: 'Hello Saturday',
+    email: 'hello@saturdays.io',
+    imageUrl: '/avatars/monica_hall.png',
   }
-]
 
-const profileStore = useProfileStore()
-const client = useSupabaseClient()
-await profileStore.fetchProfile(client)
-const user = profileStore.getProfile
 
-const loading = ref(false)
+  const countries = [
+    {
+      name: 'United States',
+      value: 'United States',
+    },
+    {
+      name: 'Canada',
+      value: 'Canada',
+    },
+    {
+      name: 'Mexico',
+      value: 'Mexico',
+    }
+  ]
 
-const supabase = useSupabaseAuthClient()
 
-const updateProfile = async (event: Event) => {
-  event.preventDefault()
+  const profileStore = useProfileStore()
+  const client = useSupabaseClient()
+  await profileStore.fetchProfile(client)
+  const user = profileStore.getProfile
 
-  const form = event.target as HTMLFormElement
-  const formData = new FormData(form)
-  const data = Object.fromEntries(formData.entries())
+  const loading = ref(false)
 
-  loading.value = true
-  if (!user || !user.user) return
+  const supabase = useSupabaseAuthClient()
 
-  // remove fields not in interface
-  delete data["file-upload"]
+  const updateProfile = async (event: Event) => {
+    event.preventDefault()
 
-  // convert to array of permissions
-  const permissions = Object.keys({
-    comments: data.comments === 'on',
-    candidates: data.candidates === 'on',
-    offers: data.offers === 'on',
-  }).filter(key => data[key])
+    const form = event.target as HTMLFormElement
+    const formData = new FormData(form)
+    const data = Object.fromEntries(formData.entries())
 
-  delete data.comments
-  delete data.candidates
-  delete data.offers
+    loading.value = true
+    if (!user || !user.user) return
 
-  const {error} = await supabase.from('users').upsert({
-    // @ts-ignore
-    id: user.user.id,
-    ...data,
-    // @ts-ignore
-    profile_permissions: permissions
-  }).select()
-  loading.value = false
-}
+    // remove fields not in interface
+    delete data["file-upload"]
 
-const logout = async () => {
-  let {error} = await supabase.auth.signOut();
-  navigateTo('/signin');
-}
+    // convert to array of permissions
+    const permissions = Object.keys({
+      comments: data.comments === 'on',
+      candidates: data.candidates === 'on',
+      offers: data.offers === 'on',
+    }).filter(key => data[key])
+
+    delete data.comments
+    delete data.candidates
+    delete data.offers
+
+    const {error} = await supabase.from('users').upsert({
+      // @ts-ignore
+      id: user.user.id,
+      ...data,
+      // @ts-ignore
+      profile_permissions: permissions
+    }).select()
+    loading.value = false
+  }
+
+  // Signout function
+  const logout = async () => {
+    let {error} = await supabase.auth.signOut();
+    navigateTo('/signin');
+  }
 
 </script>
 
