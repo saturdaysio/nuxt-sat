@@ -143,7 +143,7 @@
                     <Input
                         inputType="text"
                         inputName="address_2"
-                        label="Apartment, suite etc."
+                        label="Apartment, suite etc. (optional)"
                         id="street-address"
                         autocomplete="street-address"
                         placeholder="Suite # 1201"
