@@ -11,16 +11,16 @@
           <!-- Secondary navigation -->
 
           <!-- Heading -->
-          <div class="flex flex-col items-start justify-between gap-x-8 gap-y-4 bg-gray-800/40 border border-white/20 px-4 py-4 sm:flex-row sm:items-center sm:px-6 lg:px-8 ">
+          <div class="flex flex-col items-start justify-between gap-x-8 gap-y-4 bg-gray-800/10 border border-white/20 px-4 py-8 sm:flex-row sm:items-center sm:px-6 lg:px-8 ">
             <div>
               <div class="flex items-center gap-x-2">
                 <div class="flex-none rounded-full bg-green-400 p-1 text-green-400">
                   <div class="h-2 w-2 rounded-full bg-current" />
                 </div>
                 <h1 class="flex gap-x-2 text-base leading-4">
-                  <span class="text-base font-bold text-white">supabase</span>
-                  <span class="text-base text-gray-600">/</span>
-                  <span class="text-base font-sbold text-white">saturdays-microsite</span>
+                  <span class="font-bold text-white">supabase</span>
+                  <span class="text-gray-600">/</span>
+                  <span class="font-bold text-white">saturdays-microsite</span>
                 </h1>
               </div>
               <p class="mt-2 text-xs leading-6 text-gray-400">Deploys from GitHub via main branch</p>
