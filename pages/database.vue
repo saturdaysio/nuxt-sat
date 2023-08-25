@@ -63,7 +63,7 @@
               <tr v-for="item in activityItems" :key="item.commit">
                 <td class="py-4 pl-4 pr-8 sm:pl-6 lg:pl-8">
                   <div class="flex items-center gap-x-4">
-                    <img :src="item.user.imageUrl" alt="" class="h-8 w-8 rounded-full bg-gray-800" />
+                    <img :src="item.user.imageUrl" alt="" class="h-12 w-12 rounded-full bg-gray-800" />
                     <div class="truncate text-base font-bold leading-6 text-white">{{ item.user.name }}</div>
                   </div>
                 </td>
@@ -124,18 +124,18 @@
 		{
 			user: {
 			name: 'Alexander Volkanovski',
-			imageUrl: '/avatars/richard_hendricks.png',
+			imageUrl: '/avatars/crop-3949584.png',
 			},
 			commit: '25-2-0',
 			branch: 'main',
-			status: 'Featherweight',
+			status: 'Featherweight, Lightweight',
 			date: '45 minutes ago',
 			dateTime: '2023-01-23T11:00',
 		},
     {
 			user: {
 			name: 'Alexandre Pantoja',
-			imageUrl: '/avatars/monica_hall.png',
+			imageUrl: '/avatars/crop-2560746.png',
 			},
 			commit: '25-2-0',
 			branch: 'main',
@@ -145,12 +145,12 @@
 		},
     {
 			user: {
-			name: 'Hello Saturdays',
-			imageUrl: '/avatars/monica_hall.png',
+			name: 'Alex Pereira',
+			imageUrl: '/avatars/crop-4705658.png',
 			},
-			commit: '99-99-0',
+			commit: '8-2-0',
 			branch: 'main',
-			status: 'Moneyweight',
+			status: 'Middleweight, Light Heavyweight',
 			date: '45 minutes ago',
 			dateTime: '2023-01-23T11:00',
 		},
