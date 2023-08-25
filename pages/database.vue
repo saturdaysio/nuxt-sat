@@ -51,7 +51,7 @@
               <col class="lg:w-1/12" />
               <col class="lg:w-1/12" />
             </colgroup>
-            <thead class="border border-white/10 bg-gray-900/40 text-sm leading-6 text-white">
+            <thead class="border border-white/20 bg-gray-900/40 text-sm leading-6 text-white">
               <tr>
                 <th scope="col" class="py-2 pl-4 pr-8 font-bold sm:pl-6 lg:pl-20">Name</th>
                 <th scope="col" class="hidden py-2 pl-0 pr-8 font-bold sm:table-cell">Record</th>
@@ -59,7 +59,7 @@
                 <th scope="col" class="hidden py-2 pl-0 pr-4 text-right font-bold sm:table-cell sm:pr-6 lg:pr-8">Last updated on</th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-white/5">
+            <tbody class="divide-y divide-white/10">
               <tr v-for="item in activityItems" :key="item.commit">
                 <td class="py-4 pl-4 pr-8 sm:pl-4 lg:pl-4">
                   <div class="flex items-center gap-x-4">
