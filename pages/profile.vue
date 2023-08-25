@@ -95,7 +95,7 @@
                         label="Email Address"
                         id="email"
                         autocomplete="email"
-                        placeholder="eamil@host.com"
+                        placeholder="email@address.com"
                         :value="user.email"
                     />
 
@@ -143,10 +143,10 @@
                     <Input
                         inputType="text"
                         inputName="address_2"
-                        label="Street Address 2 (Optional)"
+                        label="Apartment, suite etc."
                         id="street-address"
                         autocomplete="street-address"
-                        placeholder="Apartment, suite, unit, etc. (optional)"
+                        placeholder="Suite # 1201"
                         :value="user.address_2"
                     />
                   </div>
