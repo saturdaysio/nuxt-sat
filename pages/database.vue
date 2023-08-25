@@ -23,7 +23,7 @@
                   <span class="font-bold text-white">mma-api</span>
                 </h1>
               </div>
-              <p class="mt-2 text-xs leading-6 text-gray-400">Hosted on Railway.app via GitHub main rank</p>
+              <p class="mt-2 text-xs leading-6 text-gray-400">Hosted on Railway.app via GitHub main branch</p>
             </div>
             <div class="order-first flex-none rounded-full bg-green-400/10 px-4 py-2 text-sm font-medium text-green-400 ring-1 ring-inset ring-gray-400/30 sm:order-none">Production</div>
           </div>
