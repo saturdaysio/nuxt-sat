@@ -79,7 +79,7 @@
                     <div :class="[[item.status], 'flex-none rounded-full p-1']">
                       <div class="h-1.5 w-1.5 rounded-full bg-current" />
                     </div>
-                    <div class="hidden text-md text-white sm:block">{{ item.status }}</div>
+                    <div class="hidden text-md text-gray-400 sm:block">{{ item.status }}</div>
                   </div>
                 </td>
                 <td class="hidden py-4 pl-0 pr-8 text-md leading-6 text-gray-400 md:table-cell lg:pr-20">{{ item.duration }}</td>
