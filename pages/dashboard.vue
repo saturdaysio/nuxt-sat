@@ -68,10 +68,10 @@
 
 
 	const stats = [
-		{ name: 'Number of deploys', value: '405' },
-		{ name: 'Average deploy time', value: '3.65', unit: 'mins' },
-		{ name: 'Number of servers', value: '3' },
-		{ name: 'Success rate', value: '98.5%' },
+		{ name: 'Number of deploys', value: '401' },
+		{ name: 'Average deploy time', value: '1.25', unit: 'mins' },
+		{ name: 'Number of servers', value: '32' },
+		{ name: 'Status', value: 'Online' },
 	]
 
 

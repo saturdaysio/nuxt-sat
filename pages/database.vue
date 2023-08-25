@@ -84,7 +84,7 @@
                 </td>
                 <td class="hidden py-4 pl-0 pr-8 text-md leading-6 text-gray-400 md:table-cell lg:pr-20">{{ item.duration }}</td>
                 <td class="hidden py-4 pl-0 pr-4 text-right text-md leading-6 text-gray-400 sm:table-cell sm:pr-6 lg:pr-8">
-                  <time :datetime="item.dateTime">{{ item.date }}</time>
+                  <time :datetime="item.dateTime">{{ item.dateTime }}</time>
                 </td>
               </tr>
             </tbody>
@@ -108,9 +108,9 @@
 
 	const stats = [
 		{ name: 'Number of fighters', value: '40512' },
-		{ name: 'Average search time', value: '3.65', unit: 'mins' },
+		{ name: 'Average search time', value: '0.015', unit: 'sec' },
 		{ name: 'Server Uptime', value: '96', unit: 'hours' },
-		{ name: 'Success rate', value: '98.5%' },
+		{ name: 'Current Users', value: '1028' },
 	]
 
 
@@ -150,7 +150,7 @@
 			},
 			commit: '99-99-0',
 			branch: 'main',
-			status: '',
+			status: 'Moneyweight',
 			date: '45 minutes ago',
 			dateTime: '2023-01-23T11:00',
 		},
