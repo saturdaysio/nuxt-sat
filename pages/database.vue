@@ -41,7 +41,7 @@
         </header>
 
         <!-- Activity list -->
-        <div class="border-t border-white/10 pt-11">
+        <div class="border-t border-white/10 pt-16">
           <h2 class="px-4 text-base font-semibold leading-7 text-white sm:px-6 lg:px-8">Last updated:</h2>
           <table class="mt-6 w-full whitespace-nowrap text-left">
             <colgroup>
@@ -51,7 +51,7 @@
               <col class="lg:w-1/12" />
               <col class="lg:w-1/12" />
             </colgroup>
-            <thead class="border-b border-white/10 text-sm leading-6 text-white">
+            <thead class="border border-white/10 bg-gray-900/40 text-sm leading-6 text-white">
               <tr>
                 <th scope="col" class="py-2 pl-4 pr-8 font-semibold sm:pl-6 lg:pl-8">Profile</th>
                 <th scope="col" class="hidden py-2 pl-0 pr-8 font-semibold sm:table-cell">Record</th>
@@ -90,8 +90,10 @@
             </tbody>
           </table>
         </div>
+
         <Pagination />
-	</section>
+
+      </section>
       </div>
     </main>
   </div>
