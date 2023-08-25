@@ -23,7 +23,7 @@
                   <span class="font-bold text-white">mma-api</span>
                 </h1>
               </div>
-              <p class="mt-2 text-xs leading-6 text-gray-400">Hosted on Railway.app via GitHub main branch</p>
+              <p class="mt-2 text-xs leading-6 text-gray-400">Hosted on Railway.app via GitHub main rank</p>
             </div>
             <div class="order-first flex-none rounded-full bg-green-400/10 px-4 py-2 text-sm font-medium text-green-400 ring-1 ring-inset ring-gray-400/30 sm:order-none">Production</div>
           </div>
@@ -70,7 +70,7 @@
                 <td class="hidden py-4 pl-0 pr-4 sm:table-cell sm:pr-8">
                   <div class="flex gap-x-3">
                     <div class="font-mono text-md leading-6 text-gray-400">{{ item.commit }}</div>
-                    <span class="inline-flex items-center rounded-md bg-gray-400/10 px-2 py-1 text-sm font-medium text-gray-400 ring-1 ring-inset ring-gray-400/20">{{ item.branch }}</span>
+                    <span class="inline-flex items-center rounded-md bg-gray-400/10 px-2 py-1 text-sm font-medium text-gray-400 ring-1 ring-inset ring-gray-400/20">{{ item.rank }}</span>
                   </div>
                 </td>
                 <td class="py-4 pl-0 pr-4 text-sm leading-6 sm:pr-8 lg:pr-20">
@@ -130,9 +130,8 @@
 			imageUrl: '/avatars/crop-3949584.png',
 			},
 			commit: '25-2-0',
-			branch: 'main',
+			rank: 'C',
 			status: 'Featherweight, Lightweight',
-			date: '45 minutes ago',
 			dateTime: '2023-01-23T11:00',
 		},
     {
@@ -141,9 +140,8 @@
 			imageUrl: '/avatars/crop-2560746.png',
 			},
 			commit: '25-2-0',
-			branch: 'main',
+			rank: 'C',
 			status: 'Flyweight',
-			date: '45 minutes ago',
 			dateTime: '2023-01-23T11:00',
 		},
     {
@@ -152,9 +150,8 @@
 			imageUrl: '/avatars/crop-4705658.png',
 			},
 			commit: '8-2-0',
-			branch: 'main',
+			rank: '3',
 			status: 'Middleweight, Light Heavyweight',
-			date: '45 minutes ago',
 			dateTime: '2023-01-23T11:00',
 		},
 		// More items...
