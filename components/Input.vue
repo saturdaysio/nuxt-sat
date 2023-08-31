@@ -12,6 +12,8 @@
           :placeholder="placeholder"
           v-model="inputComputed"
           :value="value"
+          @input="onType"
+          @keyup.enter="onEnter"
 
       />
 
@@ -29,10 +31,10 @@
 
 
 const emit = defineEmits(['update:input'])
-const props = defineProps(['input', 'placeholder', 'inputType', 'max', 'autoFocus', 'error', 'inputName', 'id', 'label', 'value', 'span', 'options', 'selected', 'checkboxLabelSub'])
+const props = defineProps(['input', 'placeholder', 'inputType', 'max', 'autoFocus', 'error', 'inputName', 'id', 'label', 'value', 'span', 'options', 'selected', 'checkboxLabelSub', 'onType', 'onEnter'])
 
 
-const {input, placeholder, inputType, max, autoFocus, error, inputName, id, label, value, span, options, selected, checkboxLabelSub} = toRefs(props)
+const {input, placeholder, inputType, max, autoFocus, error, inputName, id, label, value, span, options, selected, checkboxLabelSub, onType, onEnter} = toRefs(props)
 
 const inputComputed = computed({
   get: () => input.value || value.value,

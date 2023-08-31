@@ -1,43 +1,46 @@
 <template>
 	<div class="min-h-full">
-    
+
     <Nav2 />
 
     <main class="pt-24">
       <div class="mx-auto max-w-full px-4 pb-12 sm:px-6 lg:px-8 bg-black">
         <!-- Your content -->
+
 		<section>
         <header>
+
+          <SearchInput label="Search Fighter" placeholder="Sergio" :on-type="setQuery" :on-enter="setResults" limit="50" clear-input/>
           <!-- Secondary navigation -->
 
           <!-- Heading -->
-          <div class="flex flex-col items-start justify-between gap-x-8 gap-y-4 bg-gray-800/10 border border-white/20 px-4 py-8 sm:flex-row sm:items-center sm:px-6 lg:px-8">
-            <div>
-              <div class="flex items-center gap-x-2">
-                <div class="flex-none rounded-full bg-green-400 p-1 text-green-400">
-                  <div class="h-2 w-2 rounded-full bg-current" />
-                </div>
-                <h1 class="flex gap-x-2 text-base leading-4">
-                  <span class="font-bold text-white">nestjs</span>
-                  <span class="text-gray-600">/</span>
-                  <span class="font-bold text-white">mma-api</span>
-                </h1>
-              </div>
-              <p class="mt-2 text-xs leading-6 text-gray-400">Hosted on Railway.app via GitHub main branch</p>
-            </div>
-            <div class="order-first flex-none rounded-full bg-green-400/10 px-4 py-2 text-sm font-medium text-green-400 ring-1 ring-inset ring-gray-400/30 sm:order-none">Production</div>
-          </div>
+<!--          <div class="flex flex-col items-start justify-between gap-x-8 gap-y-4 bg-gray-800/10 border border-white/20 px-4 py-8 sm:flex-row sm:items-center sm:px-6 lg:px-8">-->
+<!--            <div>-->
+<!--              <div class="flex items-center gap-x-2">-->
+<!--                <div class="flex-none rounded-full bg-green-400 p-1 text-green-400">-->
+<!--                  <div class="h-2 w-2 rounded-full bg-current" />-->
+<!--                </div>-->
+<!--                <h1 class="flex gap-x-2 text-base leading-4">-->
+<!--                  <span class="font-bold text-white">nestjs</span>-->
+<!--                  <span class="text-gray-600">/</span>-->
+<!--                  <span class="font-bold text-white">mma-api</span>-->
+<!--                </h1>-->
+<!--              </div>-->
+<!--              <p class="mt-2 text-xs leading-6 text-gray-400">Hosted on Railway.app via GitHub main branch</p>-->
+<!--            </div>-->
+<!--            <div class="order-first flex-none rounded-full bg-green-400/10 px-4 py-2 text-sm font-medium text-green-400 ring-1 ring-inset ring-gray-400/30 sm:order-none">Production</div>-->
+<!--          </div>-->
 
-          <!-- Stats -->
-          <div class="grid grid-cols-1 bg-gray-700/10 sm:grid-cols-2 lg:grid-cols-4">
-            <div v-for="(stat, statIdx) in stats" :key="stat.name" :class="[statIdx % 2 === 1 ? 'sm:border-l' : statIdx === 2 ? 'lg:border-l' : '', 'border border-white/20 py-6 px-4 sm:px-6 lg:px-8']">
-              <p class="text-sm font-medium leading-6 uppercase text-gray-400">{{ stat.name }}</p>
-              <p class="mt-2 flex items-baseline gap-x-2">
-                <span class="text-4xl font-semibold tracking-tight text-white">{{ stat.value }}</span>
-                <span v-if="stat.unit" class="text-sm text-gray-400">{{ stat.unit }}</span>
-              </p>
-            </div>
-          </div>
+<!--          &lt;!&ndash; Stats &ndash;&gt;-->
+<!--          <div class="grid grid-cols-1 bg-gray-700/10 sm:grid-cols-2 lg:grid-cols-4">-->
+<!--            <div v-for="(stat, statIdx) in stats" :key="stat.name" :class="[statIdx % 2 === 1 ? 'sm:border-l' : statIdx === 2 ? 'lg:border-l' : '', 'border border-white/20 py-6 px-4 sm:px-6 lg:px-8']">-->
+<!--              <p class="text-sm font-medium leading-6 uppercase text-gray-400">{{ stat.name }}</p>-->
+<!--              <p class="mt-2 flex items-baseline gap-x-2">-->
+<!--                <span class="text-4xl font-semibold tracking-tight text-white">{{ stat.value }}</span>-->
+<!--                <span v-if="stat.unit" class="text-sm text-gray-400">{{ stat.unit }}</span>-->
+<!--              </p>-->
+<!--            </div>-->
+<!--          </div>-->
         </header>
 
         <!-- Activity list -->
@@ -46,9 +49,8 @@
           <table class="mt-6 w-full whitespace-nowrap text-left">
             <colgroup>
               <col class="w-full sm:w-4/12" />
-              <col class="lg:w-4/12" />
-              <col class="lg:w-2/12" />
               <col class="lg:w-1/12" />
+              <col class="lg:w-2/12" />
               <col class="lg:w-1/12" />
             </colgroup>
             <thead class="border border-white/20 bg-gray-900/40 text-sm leading-6 text-white">
@@ -63,14 +65,14 @@
               <tr v-for="item in activityItems" :key="item.commit">
                 <td class="py-4 pl-4 pr-8 sm:pl-4 lg:pl-4">
                   <div class="flex items-center gap-x-4">
-                    <img :src="item.user.imageUrl" alt="" class="h-12 w-12 rounded-full bg-gray-800" />
-                    <div class="truncate text-base font-bold leading-6 text-white">{{ item.user.name }}</div>
+                    <img :src="item.imageUrl || '/avatars/crop-3949584.png'" alt="" class="h-12 w-12 rounded-full bg-gray-800" />
+                    <div class="truncate text-base font-bold leading-6 text-white">{{ item.name }}</div>
                   </div>
                 </td>
                 <td class="hidden py-4 pl-0 pr-4 sm:table-cell sm:pr-8">
                   <div class="flex gap-x-3">
                     <div class="font-mono text-md leading-6 text-gray-400">{{ item.commit }}</div>
-                    <span class="inline-flex items-center rounded-md bg-gray-400/10 px-2 py-1 text-sm font-medium text-gray-400 ring-1 ring-inset ring-gray-400/20">{{ item.rank }}</span>
+                    <span class="inline-flex items-center rounded-md bg-gray-400/10 px-2 py-1 text-sm font-medium text-gray-400 ring-1 ring-inset ring-gray-400/20">{{ item.rank || '? - ?' }}</span>
                   </div>
                 </td>
                 <td class="py-4 pl-0 pr-4 text-sm leading-6 sm:pr-8 lg:pr-20">
@@ -79,19 +81,18 @@
                     <div :class="[[item.status], 'flex-none rounded-full p-1']">
                       <div class="h-1.5 w-1.5 rounded-full bg-current" />
                     </div>
-                    <div class="hidden text-md text-gray-400 sm:block">{{ item.status }}</div>
+                    <div class="hidden text-md text-gray-400 sm:block">{{ item.weightclass !== 'undefined' ? item.weightclass : 'Unknown' }}</div>
                   </div>
                 </td>
-                <td class="hidden py-4 pl-0 pr-8 text-md leading-6 text-gray-400 md:table-cell lg:pr-20">{{ item.duration }}</td>
                 <td class="hidden py-4 pl-0 pr-4 text-right text-md leading-6 text-gray-400 sm:table-cell sm:pr-6 lg:pr-8">
-                  <time :datetime="item.dateTime">{{ item.dateTime }}</time>
+                  <time :datetime="item.dateTime">{{ format(new Date(item.updated_at), 'MMM d, yyyy') }}</time>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <Pagination />
+        <Pagination :pages="results.nbPages" :total="results.nbHits" :per-page="results.hitsPerPage" :current-page="results.page + 1" :from="results.page * results.hitsPerPage" :to="results.page+1 != results.nbPages ? (results.page + 1) * results.hitsPerPage : results.nbHits" :on-page-change="nextPage" />
 
       </section>
       </div>
@@ -102,7 +103,11 @@
 
 <script setup lang="ts">
 
-	const userProfile = {
+	import {format} from "date-fns";
+  import {IAthlete} from "~/utils/interfaces/Athlete";
+  import {IAlgoliaSearchResult} from "~/utils/searchUtil";
+
+  const userProfile = {
 		name: 'Hello Saturday',
 		email: 'hello@saturdays.io',
 		imageUrl: '/avatars/monica_hall.png',
@@ -123,39 +128,40 @@
   }
 
 
-	const activityItems = [
-		{
-			user: {
-			name: 'Alexander Volkanovski',
-			imageUrl: '/avatars/crop-3949584.png',
-			},
-			commit: '25-2-0',
-			rank: 'C',
-			status: 'Featherweight, Lightweight',
-			dateTime: '2023-01-23T11:00',
-		},
-    {
-			user: {
-			name: 'Alexandre Pantoja',
-			imageUrl: '/avatars/crop-2560746.png',
-			},
-			commit: '25-2-0',
-			rank: 'C',
-			status: 'Flyweight',
-			dateTime: '2023-01-23T11:00',
-		},
-    {
-			user: {
-			name: 'Alex Pereira',
-			imageUrl: '/avatars/crop-4705658.png',
-			},
-			commit: '8-2-0',
-			rank: '3',
-			status: 'Middleweight, Light Heavyweight',
-			dateTime: '2023-01-23T11:00',
-		},
-		// More items...
-	]
+  const activityItems = ref<IAthlete[]>([]);
+	// const activityItems = [
+	// 	{
+	// 		user: {
+	// 		name: 'Alexander Volkanovski',
+	// 		imageUrl: '/avatars/crop-3949584.png',
+	// 		},
+	// 		commit: '25-2-0',
+	// 		rank: 'C',
+	// 		status: 'Featherweight, Lightweight',
+	// 		dateTime: '2023-01-23T11:00',
+	// 	},
+  //   {
+	// 		user: {
+	// 		name: 'Alexandre Pantoja',
+	// 		imageUrl: '/avatars/crop-2560746.png',
+	// 		},
+	// 		commit: '25-2-0',
+	// 		rank: 'C',
+	// 		status: 'Flyweight',
+	// 		dateTime: '2023-01-23T11:00',
+	// 	},
+  //   {
+	// 		user: {
+	// 		name: 'Alex Pereira',
+	// 		imageUrl: '/avatars/crop-4705658.png',
+	// 		},
+	// 		commit: '8-2-0',
+	// 		rank: '3',
+	// 		status: 'Middleweight, Light Heavyweight',
+	// 		dateTime: '2023-01-23T11:00',
+	// 	},
+	// 	// More items...
+	// ]
 
 
 	definePageMeta({
@@ -180,6 +186,37 @@
 		navigateTo('/signin');
 	}
 
+
+  const results = ref<IAlgoliaSearchResult<IAthlete>>({
+    hits: [],
+    nbHits: 0,
+    page: 0,
+    nbPages: 0,
+    hitsPerPage: 0,
+    exhaustiveNbHits: false,
+    query: '',
+    params: '',
+    processingTimeMS: 0,
+  })
+  const setResults = (data: IAlgoliaSearchResult<IAthlete>) => {
+    activityItems.value = data.hits
+    results.value = data
+  }
+  const searchClient = new AlgoliaSearch<IAthlete>('athlete', {
+    limit: 50,
+  })
+
+  const query = ref<string>()
+  function setQuery(passedQuery: string) {
+    query.value = passedQuery
+  }
+
+
+  function nextPage(page: number) {
+    searchClient.search(query.value!, page).then((res) => {
+      setResults(res)
+    })
+  }
 </script>
 
 
