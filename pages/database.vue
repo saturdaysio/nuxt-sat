@@ -14,33 +14,6 @@
           <!-- Secondary navigation -->
 
           <!-- Heading -->
-<!--          <div class="flex flex-col items-start justify-between gap-x-8 gap-y-4 bg-gray-800/10 border border-white/20 px-4 py-8 sm:flex-row sm:items-center sm:px-6 lg:px-8">-->
-<!--            <div>-->
-<!--              <div class="flex items-center gap-x-2">-->
-<!--                <div class="flex-none rounded-full bg-green-400 p-1 text-green-400">-->
-<!--                  <div class="h-2 w-2 rounded-full bg-current" />-->
-<!--                </div>-->
-<!--                <h1 class="flex gap-x-2 text-base leading-4">-->
-<!--                  <span class="font-bold text-white">nestjs</span>-->
-<!--                  <span class="text-gray-600">/</span>-->
-<!--                  <span class="font-bold text-white">mma-api</span>-->
-<!--                </h1>-->
-<!--              </div>-->
-<!--              <p class="mt-2 text-xs leading-6 text-gray-400">Hosted on Railway.app via GitHub main branch</p>-->
-<!--            </div>-->
-<!--            <div class="order-first flex-none rounded-full bg-green-400/10 px-4 py-2 text-sm font-medium text-green-400 ring-1 ring-inset ring-gray-400/30 sm:order-none">Production</div>-->
-<!--          </div>-->
-
-<!--          &lt;!&ndash; Stats &ndash;&gt;-->
-<!--          <div class="grid grid-cols-1 bg-gray-700/10 sm:grid-cols-2 lg:grid-cols-4">-->
-<!--            <div v-for="(stat, statIdx) in stats" :key="stat.name" :class="[statIdx % 2 === 1 ? 'sm:border-l' : statIdx === 2 ? 'lg:border-l' : '', 'border border-white/20 py-6 px-4 sm:px-6 lg:px-8']">-->
-<!--              <p class="text-sm font-medium leading-6 uppercase text-gray-400">{{ stat.name }}</p>-->
-<!--              <p class="mt-2 flex items-baseline gap-x-2">-->
-<!--                <span class="text-4xl font-semibold tracking-tight text-white">{{ stat.value }}</span>-->
-<!--                <span v-if="stat.unit" class="text-sm text-gray-400">{{ stat.unit }}</span>-->
-<!--              </p>-->
-<!--            </div>-->
-<!--          </div>-->
         </header>
 
         <!-- Activity list -->
@@ -52,6 +25,7 @@
               <col class="lg:w-1/12" />
               <col class="lg:w-2/12" />
               <col class="lg:w-1/12" />
+              <col class="lg:w-1/12" />
             </colgroup>
             <thead class="border border-white/20 bg-gray-900/40 text-sm leading-6 text-white">
               <tr>
@@ -59,6 +33,7 @@
                 <th scope="col" class="hidden py-2 pl-0 pr-8 font-bold sm:table-cell">Record</th>
                 <th scope="col" class="py-2 pl-6 pr-4 text-right font-bold sm:pr-8 sm:text-left lg:pr-20">Division</th>
                 <th scope="col" class="hidden py-2 pl-0 pr-4 text-right font-bold sm:table-cell sm:pr-6 lg:pr-8">Last updated on</th>
+                <td class="hidden py-2 pl-0 pr-4 text-right font-bold sm:table-cell sm:pr-6 lg:pr-8"></td>
               </tr>
             </thead>
             <tbody class="divide-y divide-white/10">
@@ -87,6 +62,10 @@
                 <td class="hidden py-4 pl-0 pr-4 text-right text-md leading-6 text-gray-400 sm:table-cell sm:pr-6 lg:pr-8">
                   <time :datetime="item.dateTime">{{ format(new Date(item.updated_at), 'MMM d, yyyy') }}</time>
                 </td>
+                <td class="py-4 pl-0 pr-4 text-right text-md leading-6 text-gray-400 sm:table-cell sm:pr-6 lg:pr-8">
+                  <!-- chevron-right -->
+                  <ChevronRightIcon class="h-6 w-6" aria-hidden="true"/>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -106,6 +85,7 @@
 	import {format} from "date-fns";
   import {IAthlete} from "~/utils/interfaces/Athlete";
   import {IAlgoliaSearchResult} from "~/utils/searchUtil";
+  import {ChevronRightIcon} from "@heroicons/vue/20/solid";
 
   const userProfile = {
 		name: 'Hello Saturday',
