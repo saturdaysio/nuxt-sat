@@ -10,7 +10,7 @@
 		<section>
         <header>
 
-          <SearchInput label="Search Fighter" placeholder="Sergio" :on-type="setQuery" :on-enter="setResults" limit="50" clear-input/>
+          <SearchInput label="Search Fighter" placeholder="Sergio" :on-type="setQuery" :on-enter="setResults" :limit="50" clear-input/>
           <!-- Secondary navigation -->
 
           <!-- Heading -->

@@ -59,7 +59,7 @@
           <!--          <a href="#"-->
           <!--             class="relative inline-flex items-center px-4 py-2 text-sm font-semibold  ring-1 ring-inset ring-gray-900 hover:bg-gray-900 focus:z-20 focus:outline-offset-0">10</a>-->
           <a href="#"
-              @click.prevent="onPageChange(currentPage)"
+             @click.prevent="onPageChange(currentPage)"
              class="relative inline-flex items-center rounded-r-md px-2 py-2 text-white ring-1 ring-inset ring-gray-900 hover:bg-gray-900 focus:z-20 focus:outline-offset-0">
             <span class="sr-only">Next</span>
             <ChevronRightIcon class="h-6 w-6" aria-hidden="true"/>
@@ -78,21 +78,17 @@ interface IPagenationProps {
   total: number
   perPage: number
   currentPage: number
-  lastPage: number
   from: number
   pages: number
   to: number
-  hasMorePages: boolean
-  hasPages: boolean
   onPageChange: (page: number) => void
 }
 
 const props = defineProps<IPagenationProps>()
 
-const {total, pages, perPage, currentPage, lastPage, from, to, hasMorePages, hasPages} = toRefs(props)
+const {total, pages, currentPage, from, to} = toRefs(props)
 
 const computedLinks = computed(() => {
-  console.log("PAGES", pages, currentPage.value)
   const pageLinks = new Array(pages.value).fill(0).map((_, i) => {
     const page = i + 1
     return {
