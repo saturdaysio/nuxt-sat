@@ -16,6 +16,7 @@
 <script setup lang="ts">
 import {ref} from 'vue';
 import {IAthlete} from "~/utils/interfaces/Athlete";
+import {AlgoliaSearch} from "~/utils/searchUtil";
 
 interface SearchInputProps {
   label: string;
@@ -24,10 +25,11 @@ interface SearchInputProps {
   clearInput: boolean;
   limit?: number,
   onType: (query: string) => void;
+  searchInstance?: AlgoliaSearch<any>;
 }
 
 const props = defineProps<SearchInputProps>();
-const {label, placeholder, onEnter, clearInput, limit, onType} = toRefs(props);
+const {label, placeholder, onEnter, clearInput, limit, onType, searchInstance} = toRefs(props);
 
 function onTypeHandler(event: any) {
   setQuery(event.target?.value);
@@ -41,15 +43,17 @@ function setQuery(data: string) {
   query.value = data;
 }
 
-const searchClient = new AlgoliaSearch<IAthlete>('athlete', {
-  limit: limit?.value || 50,
-})
+
 
 function getResults() {
+  const searchClient = searchInstance.value || new AlgoliaSearch<IAthlete>('athlete', {
+    limit: limit?.value || 50,
+  })
   if (!query.value.length) {
     onEnter.value({hits:[]});
     return;
   }
+  console.log(searchClient)
   searchClient.search(query.value, 0).then((res) => {
     if (clearInput.value) {
       query.value = '';

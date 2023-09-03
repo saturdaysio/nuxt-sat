@@ -69,7 +69,7 @@ export class AlgoliaSearch<T> {
     return res.results[0] as IAlgoliaSearchResult<T>
   }
 
-  searchDebounced = debounce(this.search, 500, false);
+  searchDebounced = debounce(this.search, 120, false);
 
 
 }
