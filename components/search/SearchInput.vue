@@ -8,7 +8,7 @@
       :value="query"
       :on-type="onTypeHandler"
       :on-enter="getResults"
-
+      :clear-button="true"
   />
 
 </template>
@@ -26,10 +26,11 @@ interface SearchInputProps {
   limit?: number,
   onType: (query: string) => void;
   searchInstance?: AlgoliaSearch<any>;
+  value?: string;
 }
 
 const props = defineProps<SearchInputProps>();
-const {label, placeholder, onEnter, clearInput, limit, onType, searchInstance} = toRefs(props);
+const {label, placeholder, onEnter, clearInput, limit, onType, searchInstance, value} = toRefs(props);
 
 function onTypeHandler(event: any) {
   setQuery(event.target?.value);
@@ -37,7 +38,7 @@ function onTypeHandler(event: any) {
 }
 
 // ref for search query
-const query: any = ref('');
+const query: any = ref(value);
 
 function setQuery(data: string) {
   query.value = data;
@@ -46,7 +47,7 @@ function setQuery(data: string) {
 
 
 function getResults() {
-  const searchClient = searchInstance.value || new AlgoliaSearch<IAthlete>('athlete', {
+  const searchClient = searchInstance?.value || new AlgoliaSearch<IAthlete>('athlete', {
     limit: limit?.value || 50,
   })
   if (!query.value.length) {

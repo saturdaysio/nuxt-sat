@@ -22,28 +22,26 @@ const client = useSupabaseClient()
 
 const loading = ref(false)
 
-const results = useAthleteStore()
+const athleteStore = useAthleteStore()
 
 const setResults = (data: IAlgoliaSearchResult<IAthlete>) => {
-  results.setResults(data)
+  athleteStore.setResults(data)
 }
 
 const searchClient = new AlgoliaSearch<IAthlete>('athlete', {
   limit: 50,
 })
 
-const query = ref<string>()
 
 function setQuery(passedQuery: string) {
-  query.value = passedQuery
+  athleteStore.setQuery(passedQuery)
 }
 
 function nextPage(page: number) {
-  searchClient.search(query.value!, page).then((res) => {
+  searchClient.search(athleteStore.getQuery!, page).then((res) => {
     setResults(res)
   })
 }
-
 </script>
 
 <template>
@@ -51,6 +49,7 @@ function nextPage(page: number) {
   <div>
     <header>
       <SearchInput label="Search Fighter"
+                   :value="athleteStore.getQuery"
                    :search-instance="searchClient"
                    placeholder="Fighter Name" :on-type="setQuery"
                    :on-enter="setResults" :limit="50"/>
@@ -81,7 +80,7 @@ function nextPage(page: number) {
         </tr>
         </thead>
         <tbody class="divide-y divide-white/10">
-        <tr v-for="item in results.getResults?.hits" :key="item.commit">
+        <tr v-for="item in athleteStore.getResults?.hits" :key="item.commit">
           <td class="py-4 pl-4 pr-8 sm:pl-4 lg:pl-4">
             <div class="flex items-center gap-x-4">
               <img :src="item.imageUrl || '/avatars/crop-3949584.png'" alt=""
@@ -122,11 +121,11 @@ function nextPage(page: number) {
 
 
     </div>
-    <Pagination :pages="results.getResults?.nbPages" :total="results.getResults?.nbHits"
-                :per-page="results.getResults?.hitsPerPage"
-                :current-page="results.getResults?.page + 1"
-                :from="results.getResults?.page * results.getResults?.hitsPerPage"
-                :to="results.getResults?.page+1 != results.getResults?.nbPages ? (results.getResults?.page + 1) * results.getResults?.hitsPerPage : results.getResults?.nbHits"
+    <Pagination :pages="athleteStore.getResults?.nbPages" :total="athleteStore.getResults?.nbHits"
+                :per-page="athleteStore.getResults?.hitsPerPage"
+                :current-page="athleteStore.getResults?.page + 1"
+                :from="athleteStore.getResults?.page * athleteStore.getResults?.hitsPerPage"
+                :to="athleteStore.getResults?.page+1 != athleteStore.getResults?.nbPages ? (athleteStore.getResults?.page + 1) * athleteStore.getResults?.hitsPerPage : athleteStore.getResults?.nbHits"
                 :on-page-change="nextPage"/>
 
   </div>

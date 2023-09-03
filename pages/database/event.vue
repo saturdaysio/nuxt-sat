@@ -24,23 +24,23 @@ const client = useSupabaseClient()
 
 const loading = ref(false)
 
-const results = useEventStore()
+const eventStore = useEventStore()
 const setResults = (data: IAlgoliaSearchResult<IEvent>) => {
-  results.setResults(data)
+  eventStore.setResults(data)
 }
 
 const searchClient = new AlgoliaSearch<IEvent>('event', {
   limit: 50,
 })
 
-const query = ref<string>()
+
 
 function setQuery(passedQuery: string) {
-  query.value = passedQuery
+  eventStore.setQuery(passedQuery)
 }
 
 function nextPage(page: number) {
-  searchClient.search(query.value!, page).then((res) => {
+  searchClient.search(eventStore.getQuery!, page).then((res) => {
     setResults(res)
   })
 }
@@ -50,6 +50,7 @@ function nextPage(page: number) {
   <div>
         <header>
           <SearchInput label="Search Events"
+                        :value="eventStore.getQuery"
                        :search-instance="searchClient"
                        placeholder="Event Name" :on-type="setQuery"
                        :on-enter="setResults" :limit="50"/>
@@ -76,7 +77,7 @@ function nextPage(page: number) {
             </tr>
             </thead>
             <tbody class="divide-y divide-white/10">
-            <tr v-for="item in results.getResults?.hits" :key="item.objectID">
+            <tr v-for="item in eventStore.getResults?.hits" :key="item.objectID">
               <td class="py-4 pl-4 pr-8 sm:pl-4 lg:pl-4">
                 <div class="flex items-center gap-x-4">
                   <div class="truncate text-base font-bold leading-6 text-white">{{ item.event_name }}</div>
@@ -100,9 +101,9 @@ function nextPage(page: number) {
             </tbody>
           </table>
         </div>
-        <Pagination :pages="results.getResults?.nbPages" :total="results.getResults?.nbHits" :per-page="results.getResults?.hitsPerPage"
-                    :current-page="results.getResults?.page + 1" :from="results.getResults?.page * results.getResults?.hitsPerPage"
-                    :to="results.getResults?.page+1 != results.getResults?.nbPages ? (results.getResults?.page + 1) * results.getResults?.hitsPerPage : results.getResults?.nbHits"
+        <Pagination :pages="eventStore.getResults?.nbPages" :total="eventStore.getResults?.nbHits" :per-page="eventStore.getResults?.hitsPerPage"
+                    :current-page="eventStore.getResults?.page + 1" :from="eventStore.getResults?.page * eventStore.getResults?.hitsPerPage"
+                    :to="eventStore.getResults?.page+1 != eventStore.getResults?.nbPages ? (eventStore.getResults?.page + 1) * eventStore.getResults?.hitsPerPage : eventStore.getResults?.nbHits"
                     :on-page-change="nextPage"/>
 </div>
 </template>

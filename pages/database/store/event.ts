@@ -3,13 +3,15 @@ import {IAlgoliaSearchResult} from "~/utils/searchUtil";
 import {IEvent} from "~/utils/interfaces/Event";
 
 interface State {
-  data: IAlgoliaSearchResult<IEvent>
+  data: IAlgoliaSearchResult<IEvent>,
+  query: string,
 }
 
 export const useEventStore = defineStore({
   id: 'event',
   state: (): State => {
     return {
+      query: '',
       data: {
         hits: [],
         nbHits: 0,
@@ -24,11 +26,15 @@ export const useEventStore = defineStore({
     }
   },
   getters: {
-    getResults: (state: State): IAlgoliaSearchResult<IEvent> => state.data
+    getResults: (state: State): IAlgoliaSearchResult<IEvent> => state.data,
+    getQuery: (state: State): string => state.query
   },
   actions: {
     setResults(results: IAlgoliaSearchResult<IEvent>) {
       this.data = results
+    },
+    setQuery(query: string) {
+      this.query = query
     }
   }
 })

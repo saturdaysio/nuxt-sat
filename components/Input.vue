@@ -1,7 +1,8 @@
 <template>
   <div>
-    <label v-if="textInputs.includes(inputType) && label" :for="label" class="block text-md font-semibold leading-4 uppercase text-white">{{ label }}</label>
-    <div class="mt-2">
+    <label v-if="textInputs.includes(inputType) && label" :for="label"
+           class="block text-md font-semibold leading-4 uppercase text-white">{{ label }}</label>
+    <div class="mt-2 relative">
 
       <input
           v-if="textInputs.includes(inputType)"
@@ -14,11 +15,19 @@
           :value="value"
           @input="onType"
           @keyup.enter="onEnter"
-
       />
+      <Button v-if="clearButton && inputComputed"
+              @click="clearInput"
+              class="absolute right-0 top-0 bottom-0 my-auto h-full w-12 flex items-center justify-center text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500"
+              aria-label="Clear"
+      >
+        <XMarkIcon class="h-5 w-5" aria-hidden="true"/>
+      </Button>
+
 
       <SelectInput v-if="inputType=='select'" :options="options" :input-name="inputName" :option-selected="value"/>
-      <CheckboxInput v-if="inputType=='checkbox'" :value="value" :checkboxLabelSub="checkboxLabelSub" :input-name="inputName" :label="label"/>
+      <CheckboxInput v-if="inputType=='checkbox'" :value="value" :checkboxLabelSub="checkboxLabelSub"
+                     :input-name="inputName" :label="label"/>
       <span v-if="error">
       {{ error }}
     </span>
@@ -29,19 +38,44 @@
 
 <script setup lang="ts">
 
+import {XMarkIcon} from '@heroicons/vue/20/solid'
 
 const emit = defineEmits(['update:input'])
-const props = defineProps(['input', 'placeholder', 'inputType', 'max', 'autoFocus', 'error', 'inputName', 'id', 'label', 'value', 'span', 'options', 'selected', 'checkboxLabelSub', 'onType', 'onEnter'])
+const props = defineProps(['input', 'placeholder', 'inputType', 'max', 'autoFocus', 'error', 'inputName', 'id', 'label', 'value', 'span', 'options', 'selected', 'checkboxLabelSub', 'onType', 'onEnter', 'clearButton'])
 
 
-const {input, placeholder, inputType, max, autoFocus, error, inputName, id, label, value, span, options, selected, checkboxLabelSub, onType, onEnter} = toRefs(props)
+const {
+  input,
+  placeholder,
+  inputType,
+  max,
+  autoFocus,
+  error,
+  inputName,
+  id,
+  label,
+  value,
+  span,
+  options,
+  selected,
+  checkboxLabelSub,
+  onType,
+  onEnter,
+  clearButton
+} = toRefs(props)
 
 const inputComputed = computed({
-  get: () => input.value || value.value,
-  set: (val) => emit('update:input', val)
+  get: () => input?.value || value?.value,
+  set: (val) => {
+    emit('update:input', val)
+  }
 })
 
 const textInputs = ['text', 'email', 'password', 'number', 'tel', 'url', 'search', 'date', 'time', 'datetime-local', 'month', 'week', 'color']
+const clearInput = () => {
+  onType?.value('')
+  onEnter?.value('')
+}
 </script>
 
 <style scoped>
