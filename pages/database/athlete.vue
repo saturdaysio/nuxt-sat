@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import {format} from "date-fns";
+import {format, isDate, toDate, parse, parseISO} from "date-fns";
 import {IAthlete} from "~/utils/interfaces/Athlete";
 import {IAlgoliaSearchResult} from "~/utils/searchUtil";
 import {ChevronRightIcon} from "@heroicons/vue/20/solid";
@@ -109,7 +109,11 @@ function nextPage(page: number) {
             </div>
           </td>
           <td class="hidden py-4 pl-0 pr-4 text-right text-md leading-6 text-gray-400 sm:table-cell sm:pr-6 lg:pr-8">
-            <time :datetime="item.dateTime">{{ format(new Date(item.updated_at), 'MMM d, yyyy') }}</time>
+            <time :datetime="item.dateTime">{{
+                format(parse(item.updated_at, 'yyyy-MM-dd hh:mm:ss.SSSSSS xxx', new Date()), 'MMM d, yyyy')
+
+              }}
+            </time>
           </td>
           <td class="py-4 pl-0 pr-4 text-right text-md leading-6 text-gray-400 sm:table-cell sm:pr-6 lg:pr-8">
             <!-- chevron-right -->

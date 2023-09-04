@@ -2,7 +2,7 @@ import algoliasearch from 'algoliasearch/lite';
 import {MultipleQueriesResponse, SearchResponse} from "@algolia/client-search";
 
 function debounce(func: any, wait: number, immediate: boolean): (this: any, ...args: any[]) => void {
-  let timeout: NodeJS.Timeout | null;
+  let timeout: any;
   return function executedFunction() {
     // @ts-ignore
     const context = this;
