@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import {format, isDate, toDate, parse, parseISO} from "date-fns";
+import {format, parse} from "date-fns";
 import {IAthlete} from "~/utils/interfaces/Athlete";
 import {IAlgoliaSearchResult} from "~/utils/searchUtil";
 import {ChevronRightIcon} from "@heroicons/vue/20/solid";

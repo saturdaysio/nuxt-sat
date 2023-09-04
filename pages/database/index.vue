@@ -49,8 +49,8 @@
 
 <script setup lang="ts">
 import {TabGroup, TabList, Tab, TabPanels, TabPanel} from '@headlessui/vue'
-import Athlete from "./Athlete.vue";
-import Event from "./Event.vue";
+import Athlete from "./athlete.vue";
+import Event from "./event.vue";
 
 
 </script>
