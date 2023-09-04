@@ -22,7 +22,7 @@ interface SearchInputProps {
   label: string;
   placeholder: string;
   onEnter: (results: any) => void;
-  clearInput: boolean;
+  clearInput?: boolean;
   limit?: number,
   onType: (query: string) => void;
   searchInstance?: AlgoliaSearch<any>;
