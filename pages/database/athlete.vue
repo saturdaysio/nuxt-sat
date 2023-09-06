@@ -2,9 +2,10 @@
 
 import {format, parse} from "date-fns";
 import {IAthlete} from "~/utils/interfaces/Athlete";
-import {IAlgoliaSearchResult} from "~/utils/searchUtil";
+import {IAlgoliaSearchResult} from "~/utils/search/searchUtil";
 import {ChevronRightIcon} from "@heroicons/vue/20/solid";
 import {useAthleteStore} from "~/pages/database/store/athlete";
+import {IAlgoliaHitExtended} from "~/utils/autocomplete";
 
 definePageMeta({
   middleware: ['auth']
@@ -28,7 +29,7 @@ const setResults = (data: IAlgoliaSearchResult<IAthlete>) => {
   athleteStore.setResults(data)
 }
 
-const searchClient = new AlgoliaSearch<IAthlete>('athlete', {
+const searchClient = new AlgoliaAutocomplete<IAthlete>('athlete', {
   limit: 50,
 })
 
@@ -42,17 +43,64 @@ function nextPage(page: number) {
     setResults(res)
   })
 }
+
+const autoCompleteSearchInstance = new AlgoliaAutocomplete<IAlgoliaHitExtended & IAthlete >('athlete', {
+  limit: 15,
+})
+
+const searchFunction = (query: any): Promise<any> => {
+  if (query.name) {
+    return new Promise((resolve, _) => {
+      autoCompleteSearchInstance.searchDebounced(query.name, (data: IAlgoliaSearchResult<any>) => {
+        resolve(data)
+      })
+    })
+  }
+  return new Promise((resolve, _) => {
+    autoCompleteSearchInstance.searchDebounced(query, (data: IAlgoliaSearchResult<any>) => {
+      resolve(data)
+    })
+  })
+
+
+}
+
+const queryAutocomplete = (inputValue: IAthlete) => {
+  setQuery(inputValue.name)
+  searchClient.search(inputValue.name, 0).then((res) => {
+    setResults(res)
+  })
+}
+const parseSearchResult = (result: IAlgoliaHitExtended & IAthlete) => {
+  console.log(result)
+  return result ? result.name : null
+}
+const customQuery = (query: string) => {
+  return{ id: null, name: query }
+}
 </script>
 
 <template>
 
   <div>
     <header>
-      <SearchInput label="Search Fighter"
-                   :value="athleteStore.getQuery"
-                   :search-instance="searchClient"
-                   placeholder="Fighter Name" :on-type="setQuery"
-                   :on-enter="setResults" :limit="50"/>
+      <SearchAutoComplete label="Search Fighter"
+                          :value="athleteStore.getQuery"
+                          :search-function="searchFunction"
+                          :parse-search-result="parseSearchResult"
+                          placeholder="Fighter Name" :on-type="setQuery"
+                          :custom-query="customQuery"
+                          :on-enter="queryAutocomplete" :limit="50">
+        <template #default="{item, selected, active}">
+          <span class="block">
+            <span class="flex items-center">
+              <span class="ml-3 block truncate">
+                <span class="text-md font-medium text-white" v-html="item._highlightResult.name.value"></span>
+              </span>
+            </span>
+          </span>
+        </template>
+      </SearchAutoComplete>
     </header>
     <!-- Activity list -->
     <div class="border-t border-white/10 pt-16">
@@ -125,12 +173,12 @@ function nextPage(page: number) {
 
 
     </div>
-    <Pagination :pages="athleteStore.getResults?.nbPages" :total="athleteStore.getResults?.nbHits"
-                :per-page="athleteStore.getResults?.hitsPerPage"
-                :current-page="athleteStore.getResults?.page + 1"
-                :from="athleteStore.getResults?.page * athleteStore.getResults?.hitsPerPage"
-                :to="athleteStore.getResults?.page+1 != athleteStore.getResults?.nbPages ? (athleteStore.getResults?.page + 1) * athleteStore.getResults?.hitsPerPage : athleteStore.getResults?.nbHits"
-                :on-page-change="nextPage"/>
+        <Pagination :pages="athleteStore.getResults?.nbPages" :total="athleteStore.getResults?.nbHits"
+                    :per-page="athleteStore.getResults?.hitsPerPage"
+                    :current-page="athleteStore.getResults?.page + 1"
+                    :from="athleteStore.getResults?.page * athleteStore.getResults?.hitsPerPage"
+                    :to="athleteStore.getResults?.page+1 != athleteStore.getResults?.nbPages ? (athleteStore.getResults?.page + 1) * athleteStore.getResults?.hitsPerPage : athleteStore.getResults?.nbHits"
+                    :on-page-change="nextPage"/>
 
   </div>
 
