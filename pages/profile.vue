@@ -34,7 +34,7 @@
                       <div id="avatar" class="block h-16 w-16" aria-hidden="true">
                         <img src="/avatars/monica_hall.png"/>
                       </div>
-                      <Button butttonType="button" button-label="Change" button-class="rounded-md bg-white/10 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-white/20"/>
+                      <Button buttton-type="button" button-label="Change" button-class="rounded-md bg-white/10 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-white/20"/>
                     </div>
                   </div>
 
@@ -192,7 +192,7 @@
               </div>
 
               <hr class="" />
-              
+
               <div class="max-w-4xl mx-auto px-4 border-b border-white/10 pb-12">
                 <h2 class="text-2xl font-bold leading-8 text-white">Permissions</h2>
                 <p class="mt-1 text-base leading-6 text-gray-400">We'll always let you know about important changes, but
@@ -234,9 +234,9 @@
             </div>
 
             <div class="max-w-4xl mx-auto mt-6 px-4 md:px-0 pb-10 flex items-center justify-end gap-x-6">
-              <Button butttonType="submit" button-label="Sign out" button-class="secondary" @click="logout" />
-              <Button butttonType="button" button-label="Cancel" button-class="cta" />
-              <Button butttonType="submit" button-label="Save" button-class="primary" />
+              <Button buttton-type="submit" button-label="Sign out" button-class="secondary" @click="logout" />
+              <Button buttton-type="button" button-label="Cancel" button-class="cta" />
+              <Button buttton-type="submit" button-label="Save" button-class="primary" />
             </div>
           </form>
         </section>

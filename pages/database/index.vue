@@ -10,7 +10,7 @@
           <TabGroup>
             <TabList class="flex flex-0 w-48 space-x-1 rounded-md border-2 border-gray-700">
               <Tab
-                  v-for="category in ['Athelte', 'Event']"
+                  v-for="category in ['Athlete', 'Event']"
                   as="template"
                   :key="category"
                   v-slot="{ selected }"

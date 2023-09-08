@@ -1,11 +1,12 @@
 <script setup lang="ts">
 
-import {format, parse} from "date-fns";
+import {format, parse, parseISO} from "date-fns";
 import {IAthlete} from "~/utils/interfaces/Athlete";
 import {IAlgoliaSearchResult} from "~/utils/search/searchUtil";
 import {ChevronRightIcon} from "@heroicons/vue/20/solid";
 import {useAthleteStore} from "~/pages/database/store/athlete";
 import {IAlgoliaHitExtended} from "~/utils/autocomplete";
+import Button from "~/components/Button.vue";
 
 definePageMeta({
   middleware: ['auth']
@@ -44,7 +45,7 @@ function nextPage(page: number) {
   })
 }
 
-const autoCompleteSearchInstance = new AlgoliaAutocomplete<IAlgoliaHitExtended & IAthlete >('athlete', {
+const autoCompleteSearchInstance = new AlgoliaAutocomplete<IAlgoliaHitExtended & IAthlete>('athlete', {
   limit: 15,
 })
 
@@ -72,11 +73,10 @@ const queryAutocomplete = (inputValue: IAthlete) => {
   })
 }
 const parseSearchResult = (result: IAlgoliaHitExtended & IAthlete) => {
-  console.log(result)
-  return result ? result.name : null
+  return result ? result.name : ''
 }
 const customQuery = (query: string) => {
-  return{ id: null, name: query }
+  return {id: null, name: query}
 }
 </script>
 
@@ -158,14 +158,20 @@ const customQuery = (query: string) => {
           </td>
           <td class="hidden py-4 pl-0 pr-4 text-right text-md leading-6 text-gray-400 sm:table-cell sm:pr-6 lg:pr-8">
             <time :datetime="item.dateTime">{{
-                format(parse(item.updated_at, 'yyyy-MM-dd hh:mm:ss.SSSSSS xxx', new Date()), 'MMM d, yyyy')
+                format(parseISO(item.updated_at), 'MMM d, yyyy')
 
               }}
             </time>
           </td>
           <td class="py-4 pl-0 pr-4 text-right text-md leading-6 text-gray-400 sm:table-cell sm:pr-6 lg:pr-8">
-            <!-- chevron-right -->
-            <ChevronRightIcon class="h-6 w-6" aria-hidden="true"/>
+            <Button
+                button-label="View Fighter"
+                button-type="button"
+                button-class="text-gray-400 hover:text-gray-300"
+                :to="`/athlete/${item.id}`"
+            >
+              <ChevronRightIcon class="h-6 w-6" aria-hidden="true"/>
+            </Button>
           </td>
         </tr>
         </tbody>
@@ -173,12 +179,12 @@ const customQuery = (query: string) => {
 
 
     </div>
-        <Pagination :pages="athleteStore.getResults?.nbPages" :total="athleteStore.getResults?.nbHits"
-                    :per-page="athleteStore.getResults?.hitsPerPage"
-                    :current-page="athleteStore.getResults?.page + 1"
-                    :from="athleteStore.getResults?.page * athleteStore.getResults?.hitsPerPage"
-                    :to="athleteStore.getResults?.page+1 != athleteStore.getResults?.nbPages ? (athleteStore.getResults?.page + 1) * athleteStore.getResults?.hitsPerPage : athleteStore.getResults?.nbHits"
-                    :on-page-change="nextPage"/>
+    <Pagination :pages="athleteStore.getResults?.nbPages" :total="athleteStore.getResults?.nbHits"
+                :per-page="athleteStore.getResults?.hitsPerPage"
+                :current-page="athleteStore.getResults?.page + 1"
+                :from="athleteStore.getResults?.page * athleteStore.getResults?.hitsPerPage"
+                :to="athleteStore.getResults?.page+1 != athleteStore.getResults?.nbPages ? (athleteStore.getResults?.page + 1) * athleteStore.getResults?.hitsPerPage : athleteStore.getResults?.nbHits"
+                :on-page-change="nextPage"/>
 
   </div>
 

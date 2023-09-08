@@ -9,12 +9,13 @@
           :type="inputType"
           :name="inputName"
           :id="label"
-          class="block w-full h-12 rounded-md border-0 bg-gray-800/40 pl-4 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-1 focus:ring-inset focus:ring-green-400 sm:text-sm sm:leading-6"
+          class="block w-full h-12 rounded-md border-0 bg-gray-800/40 pl-4 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-1 focus:ring-inset focus:ring-green-400 sm:text-sm sm:leading-6 disabled:bg-gray-900/40"
           :placeholder="placeholder"
           v-model="inputComputed"
           :value="value"
           @input="onType"
           @keyup.enter="onEnter"
+          :disabled="disabled"
       />
       <Button v-if="clearButton && inputComputed"
               @click="clearInput"
@@ -25,9 +26,9 @@
       </Button>
 
 
-      <SelectInput v-if="inputType=='select'" :options="options" :input-name="inputName" :option-selected="value"/>
+      <SelectInput v-if="inputType=='select'" :options="options" :input-name="inputName" :option-selected="value" :disabled="disabled"/>
       <CheckboxInput v-if="inputType=='checkbox'" :value="value" :checkboxLabelSub="checkboxLabelSub"
-                     :input-name="inputName" :label="label"/>
+                     :input-name="inputName" :label="label" :disabled="disabled"/>
       <span v-if="error">
       {{ error }}
     </span>
@@ -39,9 +40,31 @@
 <script setup lang="ts">
 
 import {XMarkIcon} from '@heroicons/vue/20/solid'
+import DateInput from "~/components/DateInput.vue";
+import {Ref} from "vue";
+
+interface InputProps {
+  input?: Ref<any>
+  placeholder?: string
+  inputType?: string
+  max?: number
+  autoFocus?: boolean
+  error?: string
+  inputName?: string
+  id?: string
+  label?: string
+  value?: string | number
+  span?: string
+  options?: string[]
+  selected?: string
+  checkboxLabelSub?: string
+  onType?: () => void
+  onEnter?: () => void
+  clearButton?: boolean
+  disabled?: boolean
+}
 
 const emit = defineEmits(['update:input'])
-const props = defineProps(['input', 'placeholder', 'inputType', 'max', 'autoFocus', 'error', 'inputName', 'id', 'label', 'value', 'span', 'options', 'selected', 'checkboxLabelSub', 'onType', 'onEnter', 'clearButton'])
 
 
 const {
@@ -61,11 +84,12 @@ const {
   checkboxLabelSub,
   onType,
   onEnter,
-  clearButton
-} = toRefs(props)
+  clearButton,
+  disabled
+} = defineProps<InputProps>()
 
 const inputComputed = computed({
-  get: () => input?.value || value?.value,
+  get: () => input?.value || value || '',
   set: (val) => {
     emit('update:input', val)
   }
