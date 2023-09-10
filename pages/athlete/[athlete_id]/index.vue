@@ -18,7 +18,6 @@ const {data: athlete, pending, error, refresh}: {
 })
 
 
-
 </script>
 
 <template>

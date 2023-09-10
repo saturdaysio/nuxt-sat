@@ -1,8 +1,12 @@
 import axios from "axios";
+import {IAthlete} from "~/utils/interfaces/Athlete";
 
 const unauthenticatedAPI = (baseURL: string ) => axios.create({
   baseURL,
-  timeout: 1000,
+  // 5 second timeout
+  timeout: 5000,
+  withCredentials: true,
+
 })
 
 // api sigleton
@@ -26,5 +30,9 @@ export class API {
 
   public getAthlete(id: string) {
     return this.unauthenticatedAPI.get(`/athlete/${id}`);
+  }
+
+  public patchAthlete(athlete: IAthlete) {
+    return this.unauthenticatedAPI.patch(`/athlete/${athlete.id}`, athlete);
   }
 }

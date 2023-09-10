@@ -130,11 +130,15 @@ const customQuery = (query: string) => {
         <tbody class="divide-y divide-white/10">
         <tr v-for="item in athleteStore.getResults?.hits" :key="item.commit">
           <td class="py-4 pl-4 pr-8 sm:pl-4 lg:pl-4">
-            <div class="flex items-center gap-x-4">
-              <img :src="item.imageUrl || '/avatars/crop-3949584.png'" alt=""
-                   class="h-12 w-12 rounded-full bg-gray-800"/>
-              <div class="truncate text-base font-bold leading-6 text-white">{{ item.name }}</div>
-            </div>
+            <Button button-label="Athlete"
+                    :to="`/athlete/${item.id}`"
+            >
+              <div class="flex items-center gap-x-4">
+                <img :src="item.imageUrl || '/avatars/crop-3949584.png'" alt=""
+                     class="h-12 w-12 rounded-full bg-gray-800"/>
+                <div class="truncate text-base font-bold leading-6 text-white">{{ item.name }}</div>
+              </div>
+            </Button>
           </td>
           <td class="hidden py-4 pl-0 pr-4 sm:table-cell sm:pr-8">
             <div class="flex gap-x-3">
