@@ -38,6 +38,18 @@ function SubmitAthleteData(event: FormDataEvent) {
 
 }
 
+function parseDate(date: Date | undefined, formatString: string): string {
+  try {
+    if (date) {
+      return format(new Date(date), formatString)
+    }
+    return ''
+  } catch (e) {
+    console.log(e)
+    return ''
+  }
+}
+
 </script>
 
 <template>
@@ -109,7 +121,7 @@ function SubmitAthleteData(event: FormDataEvent) {
                 label="DOB"
                 input-name="birthdate"
                 placeholder="Enter Fighter Date of Birth"
-                :value="isDate(parseISO(athlete.birthdate as string)) ? format(parseISO(athlete.birthdate as string), 'yyyy-MM-dd') : athlete.birthdate as string"
+                :value="parseDate(athlete.birthdate, 'yyyy-MM-dd')"
                 input-type="date"
                 class="mt-4"
             />
