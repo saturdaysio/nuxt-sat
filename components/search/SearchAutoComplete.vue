@@ -3,13 +3,13 @@ import {ref, computed} from 'vue'
 import {
   Combobox,
   ComboboxInput,
-  ComboboxButton,
   ComboboxOptions,
   ComboboxOption,
   TransitionRoot,
 } from '@headlessui/vue'
 import {IAlgoliaSearchResult} from "~/utils/search/searchUtil";
 import {IAlgoliaHitExtended} from "~/utils/autocomplete";
+import {XMarkIcon} from "@heroicons/vue/20/solid";
 
 interface SearchInputProps {
   label: string;
@@ -84,8 +84,13 @@ watchEffect(() => {
                 @change="onTypeHandler"
                 :display-value="parseSearchResult"
                 className="block w-full h-12 rounded-md border-0 bg-gray-800/40 pl-4 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-1 focus:ring-inset focus:ring-green-400 sm:text-sm sm:leading-6"
-
             />
+            <Button v-if="queryComputed" @click="() => setQuery('')"
+                    class="absolute right-0 top-0 bottom-0 my-auto h-full w-12 flex items-center justify-center text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500"
+                    aria-label="Clear"
+            >
+              <XMarkIcon class="h-5 w-5" aria-hidden="true"/>
+            </Button>
           </div>
           <TransitionRoot
               leave="transition ease-in duration-100"

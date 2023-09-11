@@ -25,8 +25,9 @@
         <XMarkIcon class="h-5 w-5" aria-hidden="true"/>
       </Button>
 
-
-      <SelectInput v-if="inputType=='select'" :options="options" :input-name="inputName" :option-selected="value" :disabled="disabled"/>
+      <!--  if options are passed, render a select input -->
+      <SelectInput v-if="inputType=='select'" :options="options as ItemOption[]"
+ :input-name="inputName as string" :option-selected="value as string" :disabled="disabled"/>
       <CheckboxInput v-if="inputType=='checkbox'" :value="value" :checkboxLabelSub="checkboxLabelSub"
                      :input-name="inputName" :label="label" :disabled="disabled"/>
       <span v-if="error">
@@ -40,13 +41,13 @@
 <script setup lang="ts">
 
 import {XMarkIcon} from '@heroicons/vue/20/solid'
-import DateInput from "~/components/DateInput.vue";
 import {Ref} from "vue";
+import {ItemOption} from "~/components/SelectInput.vue";
 
 interface InputProps {
   input?: Ref<any>
   placeholder?: string
-  inputType?: string
+  inputType: string
   max?: number
   autoFocus?: boolean
   error?: string
@@ -85,7 +86,7 @@ const {
   onType,
   onEnter,
   clearButton,
-  disabled
+  disabled,
 } = defineProps<InputProps>()
 
 const inputComputed = computed({
@@ -97,8 +98,8 @@ const inputComputed = computed({
 
 const textInputs = ['text', 'email', 'password', 'number', 'tel', 'url', 'search', 'date', 'time', 'datetime-local', 'month', 'week', 'color']
 const clearInput = () => {
-  onType?.value('')
-  onEnter?.value('')
+  (onType as unknown as Ref<any | undefined>)?.value('')
+  (onEnter as unknown as Ref<any | undefined>)?.value('')
 }
 </script>
 

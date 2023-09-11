@@ -71,7 +71,7 @@ import {
 } from '@headlessui/vue'
 import {CheckIcon, ChevronUpDownIcon} from '@heroicons/vue/20/solid'
 
-interface ItemOption {
+export interface ItemOption {
   name: string
   value: string
 }
