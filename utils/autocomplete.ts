@@ -49,6 +49,7 @@ export class AlgoliaAutocomplete<T> {
   }
 
   searchDebounced(query: string, setFunc: (res: IAlgoliaSearchResult<T>) => void) {
+
     this.debouceSearch(query, setFunc)
   }
 

@@ -128,7 +128,7 @@ const customQuery = (query: string) => {
         </tr>
         </thead>
         <tbody class="divide-y divide-white/10">
-        <tr v-for="item in athleteStore.getResults?.hits" :key="item.commit">
+        <tr v-for="item in athleteStore.getResults?.hits" :key="item.objectID">
           <td class="py-4 pl-4 pr-8 sm:pl-4 lg:pl-4">
             <Button button-label="Athlete"
                     :to="`/athlete/${item.id}`"
