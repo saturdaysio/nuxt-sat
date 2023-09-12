@@ -99,7 +99,7 @@ watchEffect(() => {
               @after-leave="() => setQuery('')"
           >
             <ComboboxOptions
-                className="absolute mt-1 rounded-md max-h-60 w-full overflow-auto bg-gray-900 py-1 text-base ring-opacity-5 focus:outline-none sm:text-sm ">
+                className="absolute mt-1 rounded-md max-h-60 w-full overflow-auto bg-gray-900 py-1 text-base ring-opacity-5 focus:outline-none sm:text-sm z-20">
               <ComboboxOption v-if="queryComputed" :value="queryComputed" v-slot="{selectedItem, active}"
                               class="outline-none ui-active:text-white ui-not-active:text-black cursor-pointer select-none relative py-2 pl-3 pr-9 hover:bg-gray-700">
                 <slot :item="{_highlightResult: {name: {value: `search for ${query}`}}}" :selected="selectedItem"
