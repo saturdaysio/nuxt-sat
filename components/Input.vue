@@ -54,7 +54,7 @@ interface InputProps {
   inputName?: string
   id?: string
   label?: string
-  value?: string | number
+  value?: string | number | boolean
   span?: string
   options?: string[]
   selected?: string
