@@ -109,7 +109,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
           <div class="sm:col-span-3">
             <Input
                 label="Country"
-                input-name="country"
+                input-name="hometown"
                 placeholder="Enter Fighter Country"
                 :value="athlete.hometown === 'undefined' ? '' : athlete.hometown"
                 input-type="text"
