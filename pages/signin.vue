@@ -86,6 +86,7 @@ const login = async () => {
     }
     successLogin.value = true
     failedLogin.value = false
+    navigateTo('/dashboard', {replace: false})
   } catch (error) {
     console.log('error', error)
     successLogin.value = false

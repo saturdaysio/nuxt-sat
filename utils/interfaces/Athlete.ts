@@ -11,6 +11,7 @@ export interface IAthlete {
   deceased: Date
   age: number
   weightclass: string
+  height: number
   hometown: string
   location: string
   status: string

@@ -108,10 +108,10 @@ function parseDate(date: Date | undefined, formatString: string): string {
         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
           <div class="sm:col-span-3">
             <Input
-                label="Height"
-                input-name="height"
-                placeholder="Enter Fighter Height"
-                :value="athlete.height === 'undefined' ? '' : athlete.height"
+                label="Country"
+                input-name="country"
+                placeholder="Enter Fighter Country"
+                :value="athlete.hometown === 'undefined' ? '' : athlete.hometown"
                 input-type="text"
                 class="mt-4"
             />
