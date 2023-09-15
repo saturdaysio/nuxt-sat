@@ -131,7 +131,7 @@ const customQuery = (query: string) => {
         <tr v-for="item in athleteStore.getResults?.hits" :key="item.objectID">
           <td class="py-4 pl-4 pr-8 sm:pl-4 lg:pl-4">
             <Button button-label="Athlete"
-                    :to="`/athlete/${item.id}`"
+                    :to="`/athlete/${item.id}/bio`"
             >
               <div class="flex items-center gap-x-4">
                 <img :src="item.imageUrl || '/avatars/crop-3949584.png'" alt=""
