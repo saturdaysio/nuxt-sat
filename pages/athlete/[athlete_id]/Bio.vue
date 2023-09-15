@@ -147,76 +147,78 @@ function parseDate(date: Date | undefined, formatString: string): string {
       <h1 class="text-2xl font-bold text-white">Fighter Stats</h1>
       <!--    sub title -->
       <h2 class="text-lg text-white">Description flavour text on your user profile information</h2>
-      <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-        <div class="sm:col-span-3">
-          <Input
-              label="Team"
-              input-name="team"
-              placeholder="Enter Fighter Team"
-              :value="athlete.team === 'undefined' ? '' : athlete.team"
-              input-type="text"
-              class="mt-4"
-          />
+      <form @submit="SubmitAthleteData">
+        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+          <div class="sm:col-span-3">
+            <Input
+                label="Team"
+                input-name="team"
+                placeholder="Enter Fighter Team"
+                :value="athlete.team === 'undefined' ? '' : athlete.team"
+                input-type="text"
+                class="mt-4"
+            />
+          </div>
+          <div class="sm:col-span-3">
+            <Input
+                label="Stance"
+                input-name="stance"
+                placeholder="Enter Fighter Stance"
+                :value="athlete.stance === 'undefined' ? '' : athlete.stance"
+                input-type="text"
+                class="mt-4"
+            />
+          </div>
         </div>
-        <div class="sm:col-span-3">
-          <Input
-              label="Stance"
-              input-name="stance"
-              placeholder="Enter Fighter Stance"
-              :value="athlete.stance === 'undefined' ? '' : athlete.stance"
-              input-type="text"
-              class="mt-4"
-          />
+        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+          <div class="sm:col-span-3">
+            <Input
+                label="Style"
+                input-name="style"
+                placeholder="Enter Fighter Style"
+                :value="athlete.style === 'undefined' ? '' : athlete.style"
+                input-type="text"
+                class="mt-4"
+            />
+          </div>
         </div>
-      </div>
-      <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-        <div class="sm:col-span-3">
-          <Input
-              label="Style"
-              input-name="style"
-              placeholder="Enter Fighter Style"
-              :value="athlete.style === 'undefined' ? '' : athlete.style"
-              input-type="text"
-              class="mt-4"
-          />
+        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+          <div class="sm:col-span-3">
+            <Input
+                label="Height"
+                input-name="height"
+                placeholder="Enter Fighter Height"
+                :value="athlete.height === 'undefined' ? '' : athlete.height"
+                input-type="text"
+                class="mt-4"
+            />
+          </div>
+          <div class="sm:col-span-3">
+            <Input
+                label="Weight"
+                input-name="weight"
+                placeholder="Enter Fighter Weight"
+                :value="athlete.weight === 'undefined' ? '' : athlete.weight"
+                input-type="text"
+                class="mt-4"
+            />
+          </div>
         </div>
-      </div>
-      <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-        <div class="sm:col-span-3">
-          <Input
-              label="Height"
-              input-name="height"
-              placeholder="Enter Fighter Height"
-              :value="athlete.height === 'undefined' ? '' : athlete.height"
-              input-type="text"
-              class="mt-4"
-          />
-        </div>
-        <div class="sm:col-span-3">
-          <Input
-              label="Weight"
-              input-name="weight"
-              placeholder="Enter Fighter Weight"
-              :value="athlete.weight === 'undefined' ? '' : athlete.weight"
-              input-type="text"
-              class="mt-4"
-          />
-        </div>
-      </div>
 
-      <!-- button group horizontal -->
-      <div class="mt-10 flex justify-start space-x-4">
-        <Button
-            button-type="submit"
-            button-label="Save"
-            button-class="primary"
-        />
-        <Button
-            button-type="button"
-            button-label="Cancel"
-            button-class="cta"
-        />
-      </div>
+        <!-- button group horizontal -->
+        <div class="mt-10 flex justify-start space-x-4">
+          <Button
+              button-type="submit"
+              button-label="Save"
+              button-class="primary"
+          />
+          <Button
+              button-type="button"
+              button-label="Cancel"
+              button-class="cta"
+          />
+        </div>
+      </form>
 
     </section>
   </div>
