@@ -15,6 +15,9 @@
           :value="value"
           @input="onType"
           @keyup.enter="onEnter"
+          :step="step"
+          :min="min"
+          :max="max"
           :disabled="disabled"
       />
       <Button v-if="clearButton && inputComputed"
@@ -25,9 +28,8 @@
         <XMarkIcon class="h-5 w-5" aria-hidden="true"/>
       </Button>
 
-      <!--  if options are passed, render a select input -->
       <SelectInput v-if="inputType=='select'" :options="options as ItemOption[]"
- :input-name="inputName as string" :option-selected="value as string" :disabled="disabled"/>
+                   :input-name="inputName as string" :option-selected="value as string" :disabled="disabled"/>
       <CheckboxInput v-if="inputType=='checkbox'" :value="value" :checkboxLabelSub="checkboxLabelSub"
                      :input-name="inputName" :label="label" :disabled="disabled"/>
       <span v-if="error">
@@ -48,7 +50,6 @@ interface InputProps {
   input?: Ref<any>
   placeholder?: string
   inputType: string
-  max?: number
   autoFocus?: boolean
   error?: string
   inputName?: string
@@ -63,7 +64,11 @@ interface InputProps {
   onEnter?: () => void
   clearButton?: boolean
   disabled?: boolean
+  step?: string
+  min?: string
+  max?: string
 }
+
 
 const emit = defineEmits(['update:input'])
 
@@ -87,6 +92,8 @@ const {
   onEnter,
   clearButton,
   disabled,
+  step,
+  min
 } = defineProps<InputProps>()
 
 const inputComputed = computed({

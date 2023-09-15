@@ -15,7 +15,7 @@
 
                 <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                   <div class="sm:col-span-4">
-                    <Input
+                    <CustomInput
                         inputType="text"
                         inputName="username"
                         label="Username"
@@ -65,7 +65,7 @@
 
                 <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                   <div class="sm:col-span-3">
-                    <Input
+                    <CustomInput
                         inputType="text"
                         inputName="first_name"
                         label="First name"
@@ -76,7 +76,7 @@
                     />
                   </div>
                   <div class="sm:col-span-3">
-                    <Input
+                    <CustomInput
                         inputType="text"
                         inputName="last_name"
                         label="Last name"
@@ -89,7 +89,7 @@
 
 
                   <div class="sm:col-span-3">
-                    <Input
+                    <CustomInput
                         inputType="text"
                         inputName="email"
                         label="Email Address"
@@ -102,7 +102,7 @@
                   </div>
 
                   <div class="sm:col-span-3">
-                    <Input
+                    <CustomInput
                         inputType="text"
                         inputName="phone"
                         label="Phone"
@@ -115,7 +115,7 @@
 
 
                   <div class="sm:col-span-3">
-                    <Input
+                    <CustomInput
                         inputType="select"
                         inputName="country"
                         label="Country/region"
@@ -127,7 +127,7 @@
                   </div>
 
                   <div class="col-span-full">
-                    <Input
+                    <CustomInput
                         inputType="text"
                         inputName="address_1"
                         label="Street Address"
@@ -140,7 +140,7 @@
                   </div>
 
                   <div class="col-span-full">
-                    <Input
+                    <CustomInput
                         inputType="text"
                         inputName="address_2"
                         label="Apartment, suite etc. (optional)"
@@ -152,7 +152,7 @@
                   </div>
 
                   <div class="sm:col-span-2 sm:col-start-1">
-                    <Input
+                    <CustomInput
                         inputType="text"
                         inputName="city"
                         label="City"
@@ -165,7 +165,7 @@
                   </div>
 
                   <div class="sm:col-span-2">
-                    <Input
+                    <CustomInput
                         inputType="text"
                         inputName="province"
                         label="Province"
@@ -178,7 +178,7 @@
                   </div>
 
                   <div class="sm:col-span-2">
-                    <Input
+                    <CustomInput
                         inputType="text"
                         inputName="postal_code"
                         label="Postal Code"
@@ -202,7 +202,7 @@
                   <fieldset>
                     <legend class="text-base font-bold leading-6 text-white">By Email</legend>
                     <div class="mt-6 space-y-6">
-                      <Input
+                      <CustomInput
                           inputType="checkbox"
                           inputName="comments"
                           label="Comments"
@@ -210,7 +210,7 @@
                           checkboxLabelSub="Get notified when someones posts a comment on a posting."
                           :value="user.profile_permissions?.includes('comments')"
                       />
-                      <Input
+                      <CustomInput
                           inputType="checkbox"
                           inputName="candidates"
                           label="Candidates"
@@ -218,7 +218,7 @@
                           checkboxLabelSub="Get notified when a candidate applies for a job."
                           :value="user.profile_permissions?.includes('candidates')"
                       />
-                      <Input
+                      <CustomInput
                           inputType="checkbox"
                           inputName="offers"
                           label="Offers"

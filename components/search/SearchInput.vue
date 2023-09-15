@@ -1,5 +1,5 @@
 <template>
-  <Input
+  <CustomInput
       inputType="text"
       inputName="search"
       :label="label"

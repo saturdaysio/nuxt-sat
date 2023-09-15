@@ -1,5 +1,6 @@
 import axios from "axios";
 import {IAthlete} from "~/utils/interfaces/Athlete";
+import {IStats} from "~/utils/interfaces/Stats";
 
 const unauthenticatedAPI = (baseURL: string ) => axios.create({
   baseURL,
@@ -34,5 +35,12 @@ export class API {
 
   public patchAthlete(athlete: IAthlete) {
     return this.unauthenticatedAPI.patch(`/athlete/${athlete.id}`, athlete);
+  }
+
+  public patchStats(stats: IStats) {
+    return this.unauthenticatedAPI.patch(`/stats/${stats.id}`, stats);
+  }
+  public postStats(stats: IStats) {
+    return this.unauthenticatedAPI.post(`/stats`, stats);
   }
 }

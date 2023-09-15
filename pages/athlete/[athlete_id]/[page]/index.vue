@@ -3,7 +3,9 @@ import {API} from "~/composable/api";
 import {IAthlete} from "~/utils/interfaces/Athlete";
 import {Tab, TabGroup, TabList, TabPanel, TabPanels} from "@headlessui/vue";
 import Bio from "./Bio.vue";
+import Stats from "./Stats.vue";
 
+const types = ['bio', 'stats', 'fight_record', 'media']
 const route = useRoute()
 
 const api = API.getInstance()
@@ -16,7 +18,21 @@ const {data: athlete, pending, error, refresh}: {
   const result = await api.getAthlete(route.params.athlete_id as string)
   return result.data
 })
+const activeTab = computed(() => {
+  return types.indexOf((route.params.page as string).toLowerCase().replace(/\s/g, '_'))
+})
 
+const router = useRouter()
+function changeTab(index: number) {
+  const tab = types[index]
+  router.push({
+    path: `/athlete/${route.params.athlete_id as string}/${tab}`,
+    params: {
+      athlete_id: route.params.athlete_id,
+      page: tab
+    }
+  })
+}
 
 </script>
 
@@ -31,7 +47,7 @@ const {data: athlete, pending, error, refresh}: {
         <div class="flex items-center justify-between py-2">
           <h1 v-if="athlete" class="text-4xl font-bold text-white">{{ `${athlete.firstName} ${athlete.lastName}` }}</h1>
         </div>
-        <TabGroup>
+        <TabGroup :selectedIndex="activeTab" @change="changeTab">
           <TabList class="flex flex-0 w-full space-x-8 border-b border-gray-700 ">
             <Tab
                 v-for="category in ['Bio', 'Stats', 'Fight Record', 'Media']"
@@ -58,7 +74,7 @@ const {data: athlete, pending, error, refresh}: {
               <Bio v-if="athlete" :athlete="athlete as IAthlete"/>
             </TabPanel>
             <TabPanel>
-              <h1>Comming soon!</h1>
+              <Stats v-if="athlete" :athlete="athlete as IAthlete"/>
             </TabPanel>
             <TabPanel>
               <h1>Comming soon!</h1>

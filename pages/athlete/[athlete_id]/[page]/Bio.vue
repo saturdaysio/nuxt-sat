@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {IAthlete} from "~/utils/interfaces/Athlete";
 import Button from "~/components/Button.vue";
-import Input from "~/components/Input.vue";
+import CustomInput from "~/components/CustomInput.vue";
 import {format, isDate, parseISO} from "date-fns";
 import {API} from "~/composable/api";
 
@@ -62,7 +62,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
 
           <div class="sm:col-span-3">
-            <Input
+            <CustomInput
                 label="First Name"
                 input-name="firstName"
                 placeholder="Enter Fighter name"
@@ -72,7 +72,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
             />
           </div>
           <div class="sm:col-span-3">
-            <Input
+            <CustomInput
                 label="Last Name"
                 input-name="lastName"
                 placeholder="Enter Fighter name"
@@ -84,7 +84,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
         </div>
         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
           <div class="sm:col-span-3">
-            <Input
+            <CustomInput
                 label="Nickname"
                 input-name="nickname"
                 placeholder="Enter Fighter name"
@@ -94,7 +94,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
             />
           </div>
           <div class="sm:col-span-3">
-            <Input
+            <CustomInput
                 label="UID"
                 input-name="uid"
                 placeholder="Enter Fighter ID"
@@ -107,7 +107,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
         </div>
         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
           <div class="sm:col-span-3">
-            <Input
+            <CustomInput
                 label="Country"
                 input-name="hometown"
                 placeholder="Enter Fighter Country"
@@ -117,7 +117,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
             />
           </div>
           <div class="sm:col-span-3">
-            <Input
+            <CustomInput
                 label="DOB"
                 input-name="birthdate"
                 placeholder="Enter Fighter Date of Birth"
@@ -150,7 +150,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
       <form @submit="SubmitAthleteData">
         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
           <div class="sm:col-span-3">
-            <Input
+            <CustomInput
                 label="Team"
                 input-name="team"
                 placeholder="Enter Fighter Team"
@@ -160,7 +160,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
             />
           </div>
           <div class="sm:col-span-3">
-            <Input
+            <CustomInput
                 label="Stance"
                 input-name="stance"
                 placeholder="Enter Fighter Stance"
@@ -172,7 +172,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
         </div>
         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
           <div class="sm:col-span-3">
-            <Input
+            <CustomInput
                 label="Style"
                 input-name="style"
                 placeholder="Enter Fighter Style"
@@ -184,7 +184,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
         </div>
         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
           <div class="sm:col-span-3">
-            <Input
+            <CustomInput
                 label="Height"
                 input-name="height"
                 placeholder="Enter Fighter Height"
@@ -194,7 +194,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
             />
           </div>
           <div class="sm:col-span-3">
-            <Input
+            <CustomInput
                 label="Weight"
                 input-name="weight"
                 placeholder="Enter Fighter Weight"
