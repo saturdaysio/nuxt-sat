@@ -70,6 +70,11 @@ watchEffect(() => {
   }
 })
 
+const clearButtonAction = () => {
+  setQuery('');
+  selectedItem.value = null;
+}
+
 </script>
 
 <template>
@@ -85,7 +90,7 @@ watchEffect(() => {
                 :display-value="parseSearchResult"
                 className="block w-full h-12 rounded-md border-0 bg-gray-800/40 pl-4 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-1 focus:ring-inset focus:ring-green-400 sm:text-sm sm:leading-6"
             />
-            <Button v-if="queryComputed" @click="() => setQuery('')"
+            <Button v-if="queryComputed || selectedItem" @click="clearButtonAction"
                     button-label="Clear"
                     class="absolute right-0 top-0 bottom-0 my-auto h-full w-12 flex items-center justify-center text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500"
                     aria-label="Clear"
@@ -97,7 +102,7 @@ watchEffect(() => {
               leave="transition ease-in duration-100"
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
-              @after-leave="() => setQuery('')"
+
           >
             <ComboboxOptions
                 className="absolute mt-1 rounded-md max-h-60 w-full overflow-auto bg-gray-900 py-1 text-base ring-opacity-5 focus:outline-none sm:text-sm z-20">
