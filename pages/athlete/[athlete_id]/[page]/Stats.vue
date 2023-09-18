@@ -24,7 +24,7 @@ function SubmitStats(event: FormDataEvent) {
   // generate json object from form data
   const object: Partial<IStats> = {};
   formData.forEach((value, key) => {
-    if (key === 'avg_fight_time') {
+    if (key === 'averageFightTime') {
       object[key] = value as string
       return
     }
@@ -65,9 +65,9 @@ function SubmitStats(event: FormDataEvent) {
           <div class="sm:col-span-3">
             <CustomInput
                 label="Striking Accuracy %"
-                input-name="striking_accuracy"
+                input-name="strikingAccuracyPercentage"
                 placeholder="Enter Accuracy %"
-                :value="athlete.stats.striking_accuracy || 'unknown'"
+                :value="athlete.stats.strikingAccuracyPercentage || 'unknown'"
                 input-type="number"
                 class="mt-4"
             />
@@ -75,9 +75,9 @@ function SubmitStats(event: FormDataEvent) {
           <div class="sm:col-span-3">
             <CustomInput
                 label="Striking Defense %"
-                input-name="sig_strike_defense"
+                input-name="significantStrikesDefensePercentage"
                 placeholder="Enter Defense %"
-                :value="athlete.stats.sig_strike_defense || 'unknown'"
+                :value="athlete.stats.significantStrikesDefensePercentage || 'unknown'"
                 input-type="number"
                 class="mt-4"
             />
@@ -87,19 +87,19 @@ function SubmitStats(event: FormDataEvent) {
           <div class="sm:col-span-3">
             <CustomInput
                 label="Significant Strikes Landed"
-                input-name="sig_strike_landed"
+                input-name="significantStrikesLanded"
                 placeholder="Enter Strikes Landed"
-                :value="athlete.stats.sig_strike_landed || 'unknown'"
+                :value="athlete.stats.significantStrikesLanded || 'unknown'"
                 input-type="number"
                 class="mt-4"
             />
           </div>
           <div class="sm:col-span-3">
             <CustomInput
-                label="Significant Strikes Absorbed (per 15min)"
-                input-name="sig_strike_absorbed"
+                label="Significant Strikes Absorbed (per min)"
+                input-name="significantStrikesAbsorbedPerMin"
                 placeholder="Enter Strikes Absorbed"
-                :value="athlete.stats.sig_strike_absorbed || 'unknown'"
+                :value="athlete.stats.significantStrikesAbsorbedPerMin || 'unknown'"
                 input-type="number"
                 min="0"
                 max="100"
@@ -112,9 +112,9 @@ function SubmitStats(event: FormDataEvent) {
           <div class="sm:col-span-3">
             <CustomInput
                 label="Significant Strikes Attempted"
-                input-name="sig_strike_attempt"
+                input-name="significantStrikesAttempted"
                 placeholder="Enter Strikes Attempted"
-                :value="athlete.stats.sig_strike_attempt || 'unknown'"
+                :value="athlete.stats.significantStrikesAttempted || 'unknown'"
                 input-type="number"
                 class="mt-4"
             />
@@ -122,9 +122,9 @@ function SubmitStats(event: FormDataEvent) {
           <div class="sm:col-span-3">
             <CustomInput
                 label="Knockdown Ratio"
-                input-name="knock_down_ratio"
+                input-name="knockdownAverage"
                 placeholder="Enter Knockdown Ratio"
-                :value="athlete.stats.knock_down_ratio || 'unknown'"
+                :value="athlete.stats.knockdownAverage || 'unknown'"
                 input-type="number"
                 min="0"
                 max="100"
@@ -137,9 +137,9 @@ function SubmitStats(event: FormDataEvent) {
           <div class="sm:col-span-3">
             <CustomInput
                 label="Significant Strikes Landed (per 15min)"
-                input-name="sig_strike_landed"
+                input-name="significantStrikesAbsorbedPerMin"
                 placeholder="Enter Strikes Landed"
-                :value="athlete.stats.sig_strike_landed || 'unknown'"
+                :value="athlete.stats.significantStrikesAbsorbedPerMin || 'unknown'"
                 input-type="number"
                 class="mt-4"
             />
@@ -147,9 +147,9 @@ function SubmitStats(event: FormDataEvent) {
           <div class="sm:col-span-3">
             <CustomInput
                 label="Average Fight Time"
-                input-name="avg_fight_time"
+                input-name="averageFightTime"
                 placeholder="Enter Average Fight Time"
-                :value="athlete.stats.avg_fight_time || 'unknown'"
+                :value="athlete.stats.averageFightTime || 'unknown'"
                 input-type="string"
                 class="mt-4"
             />
@@ -180,9 +180,9 @@ function SubmitStats(event: FormDataEvent) {
           <div class="sm:col-span-3">
             <CustomInput
                 label="Grappling Accuracy %"
-                input-name="grappling_accuracy"
+                input-name="grapplingAccuracyPercentage"
                 placeholder="Enter Accuracy %"
-                :value="athlete.stats.grappling_accuracy || 'unknown'"
+                :value="athlete.stats.grapplingAccuracyPercentage || 'unknown'"
                 input-type="number"
                 class="mt-4"
             />
@@ -190,9 +190,9 @@ function SubmitStats(event: FormDataEvent) {
           <div class="sm:col-span-3">
             <CustomInput
                 label="Takedown Defense %"
-                input-name="td_defence"
+                input-name="takedownDefensePercentage"
                 placeholder="Enter Defense %"
-                :value="athlete.stats.td_defence || 'unknown'"
+                :value="athlete.stats.takedownDefensePercentage || 'unknown'"
                 input-type="number"
                 class="mt-4"
             />
@@ -202,9 +202,9 @@ function SubmitStats(event: FormDataEvent) {
           <div class="sm:col-span-3">
             <CustomInput
                 label="Takedowns Landed"
-                input-name="td_landed"
+                input-name="takedownsLanded"
                 placeholder="Enter Takedowns Landed"
-                :value="athlete.stats.td_landed || 'unknown'"
+                :value="athlete.stats.takedownsLanded || 'unknown'"
                 input-type="number"
                 class="mt-4"
             />
@@ -212,9 +212,9 @@ function SubmitStats(event: FormDataEvent) {
           <div class="sm:col-span-3">
             <CustomInput
                 label="Takedowns Average (per 15min)"
-                input-name="td_avg"
+                input-name="takedownAveragePer15Min"
                 placeholder="Enter Takedowns Average"
-                :value="athlete.stats.td_avg || 'unknown'"
+                :value="athlete.stats.takedownAveragePer15Min || 'unknown'"
                 input-type="number"
                 min="0"
                 max="100"
@@ -227,9 +227,9 @@ function SubmitStats(event: FormDataEvent) {
           <div class="sm:col-span-3">
             <CustomInput
                 label="Takedowns Attempted"
-                input-name="td_attempted"
+                input-name="takedownsAttempted"
                 placeholder="Enter Takedowns Attempted"
-                :value="athlete.stats.td_attempted || 'unknown'"
+                :value="athlete.stats.takedownsAttempted || 'unknown'"
                 input-type="number"
                 class="mt-4"
             />
@@ -237,9 +237,9 @@ function SubmitStats(event: FormDataEvent) {
           <div class="sm:col-span-3">
             <CustomInput
                 label="Submission Ratio"
-                input-name="sub_avg_decimal"
+                input-name="submissionAverage"
                 placeholder="Enter Submission Ratio"
-                :value="athlete.stats.sub_avg_decimal || 'unknown'"
+                :value="athlete.stats.submissionAverage || 'unknown'"
                 input-type="number"
                 min="0"
                 max="100"

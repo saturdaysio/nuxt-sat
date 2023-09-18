@@ -102,7 +102,6 @@ const clearButtonAction = () => {
               leave="transition ease-in duration-100"
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
-
           >
             <ComboboxOptions
                 className="absolute mt-1 rounded-md max-h-60 w-full overflow-auto bg-gray-900 py-1 text-base ring-opacity-5 focus:outline-none sm:text-sm z-20">

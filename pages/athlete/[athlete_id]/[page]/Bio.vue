@@ -33,7 +33,13 @@ function SubmitAthleteData(event: FormDataEvent) {
   // }
   // merge with athlete object
   object.id = athlete.id
-
+  object.name = athlete.name
+  if (!object.firstName) {
+    object.firstName = athlete.firstName.replace(/^\s/, '')
+    object.lastName = athlete.lastName
+  } else {
+    object.firstName = object.firstName.replace(/^\s/, '')
+  }
   API.getInstance().patchAthlete(object)
 
 }

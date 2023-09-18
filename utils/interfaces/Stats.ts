@@ -3,27 +3,27 @@ import {IAthlete} from "~/utils/interfaces/Athlete";
 export interface IStats {
   id: number
   athlete: IAthlete
-  weight_kg: number
-  height_cm: number
-  reach_cm: number
+  weightKG: number
+  heightCM: number
+  reachCM: number
   style: string
   credential: string
-  team_id: string
+  teamId: string
   stance: string
-  striking_accuracy: number
-  sig_strike_landed: number
-  sig_strike_attempt: number
-  sig_strike_defense: number
-  sig_strike_landed_rate: number
-  sig_strike_absorbed: number
-  knock_down_ratio: number
-  grappling_accuracy: number
-  td_landed: number
-  td_attempted: number
-  td_avg: number
-  td_defence: number
-  sub_avg_decimal: number
-  avg_fight_time: string
+  strikingAccuracyPercentage: number
+  significantStrikesLanded: number
+  significantStrikesAttempted: number
+  significantStrikesDefensePercentage: number
+  significantStrikesLandedPerMin: number
+  significantStrikesAbsorbedPerMin: number
+  knockdownAverage: number
+  grapplingAccuracyPercentage: number
+  takedownsLanded: number
+  takedownsAttempted: number
+  takedownAveragePer15Min: number
+  takedownDefensePercentage: number
+  submissionAverage: number
+  averageFightTime: string
   created_at: Date
   updated_at: Date
   deleted_at: Date
