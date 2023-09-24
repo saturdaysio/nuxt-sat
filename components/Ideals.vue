@@ -54,7 +54,7 @@
 		{
 			video: "/meme/awkwafina.mp4",
 			title: "No rockstars",
-			desc: "You won't find any 10x, unicorns, or rockstars here and we're proud of that. We don't tolerate toxicity, narcissistics, or bad actors because nobody has time for that.",
+			desc: "You won't find any 10x, unicorns, or rockstars here and we're proud of that. We don't tolerate toxicity or narcissistics because nobody has time for that.",
 			type: "video/mp4"
 		},
 		{
