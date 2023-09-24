@@ -1,8 +1,11 @@
+import {ILocation} from "~/utils/interfaces/Location";
+
 export interface IEvent {
   id: number
-  event_name: string
-  event_date: Date
-  // location: ILocation
+  name: string
+  date: Date
+  location: ILocation
+  venue: string
   created_at: Date
   updated_at: Date
   deleted_at: Date

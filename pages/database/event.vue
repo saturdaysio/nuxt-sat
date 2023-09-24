@@ -8,6 +8,7 @@ import {ChevronRightIcon} from "@heroicons/vue/20/solid";
 import {IEvent} from "~/utils/interfaces/Event";
 import {useEventStore} from "~/pages/database/store/event";
 import {IAlgoliaHitExtended, AlgoliaAutocomplete} from "~/utils/autocomplete";
+import Button from "~/components/Button.vue";
 
 
 definePageMeta({
@@ -52,9 +53,9 @@ const autoCompleteSearchInstance = new AlgoliaAutocomplete<IAlgoliaHitExtended &
 
 const searchFunction = (query: any): Promise<any> => {
   console.log("THE QUERY", query)
-  if (query.event_name) {
+  if (query.name) {
     return new Promise((resolve, _) => {
-      autoCompleteSearchInstance.searchDebounced(query.event_name, (data: IAlgoliaSearchResult<any>) => {
+      autoCompleteSearchInstance.searchDebounced(query.name, (data: IAlgoliaSearchResult<any>) => {
         resolve(data)
       })
     })
@@ -67,17 +68,17 @@ const searchFunction = (query: any): Promise<any> => {
 }
 
 const queryAutocomplete = (inputValue: IEvent) => {
-  setQuery(inputValue.event_name)
-  searchClient.search(inputValue.event_name, 0).then((res) => {
+  setQuery(inputValue.name)
+  searchClient.search(inputValue.name, 0).then((res) => {
     setResults(res)
   })
 }
 const parseSearchResult = (result: IAlgoliaHitExtended & IEvent) => {
-  return result ? result.event_name : null
+  return result ? result.name : null
 }
 
 const customQuery = (query: string) => {
-  return{ id: null, event_name: query }
+  return{ id: null, name: query }
 }
 </script>
 
@@ -96,7 +97,7 @@ const customQuery = (query: string) => {
             <span class="flex items-center">
               <span class="ml-3 block truncate">
                 <span v-if="item._highlightResult.name" class="text-md font-medium text-white" v-html="item._highlightResult.name.value"></span>
-                <span v-if="item._highlightResult.event_name" class="text-md font-medium text-white" v-html="item._highlightResult.event_name.value"></span>
+                <span v-if="item._highlightResult.name" class="text-md font-medium text-white" v-html="item._highlightResult.name.value"></span>
               </span>
             </span>
           </span>
@@ -127,14 +128,18 @@ const customQuery = (query: string) => {
         <tbody class="divide-y divide-white/10">
         <tr v-for="item in eventStore.getResults?.hits" :key="item.objectID">
           <td class="py-4 pl-4 pr-8 sm:pl-4 lg:pl-4">
+            <Button button-label="Athlete"
+                    :to="`/event/${item.id}/overview`"
+            >
             <div class="flex items-center gap-x-4">
-              <div class="truncate text-base font-bold leading-6 text-white">{{ item.event_name }}</div>
+              <div class="truncate text-base font-bold leading-6 text-white">{{ item.name }}</div>
             </div>
+            </Button>
           </td>
           <td class="hidden py-4 pl-0 pr-4 sm:table-cell sm:pr-8">
             <div class="flex gap-x-3">
               <div class="font-mono text-md leading-6 text-gray-400">
-                {{ format(new Date(item.event_date), 'MMM d, yyyy') }}
+                {{ format(new Date(item.date), 'MMM d, yyyy') }}
               </div>
             </div>
           </td>

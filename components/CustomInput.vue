@@ -103,7 +103,7 @@ const inputComputed = computed({
   }
 })
 
-const textInputs = ['text', 'email', 'password', 'number', 'tel', 'url', 'search', 'date', 'time', 'datetime-local', 'month', 'week', 'color']
+const textInputs = ['text', 'email', 'password', 'number', 'tel', 'url', 'search', 'date', 'datetime-local', 'time', 'datetime-local', 'month', 'week', 'color']
 const clearInput = () => {
   (onType as unknown as Ref<any | undefined>)?.value('')
   (onEnter as unknown as Ref<any | undefined>)?.value('')
