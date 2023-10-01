@@ -2,7 +2,7 @@
 import {API} from "~/composable/api";
 import {Tab, TabGroup, TabList, TabPanel, TabPanels} from "@headlessui/vue";
 import Overview from "./Overview.vue";
-
+import Matches from "./Matches.vue";
 import {IEvent} from "~/utils/interfaces/Event";
 
 const types = ['overview', 'matches', 'media']
@@ -14,7 +14,7 @@ const {data: event, pending, error, refresh}: {
   pending: Ref<boolean>,
   error: any,
   refresh: () => void
-} = await useAsyncData<IEvent>('event', async () => {
+} = await useAsyncData<IEvent>(`event_${route.params.event_id}`, async () => {
   const result = await api.getEvent(route.params.event_id as string)
   return result.data
 })
@@ -75,7 +75,7 @@ function changeTab(index: number) {
             </TabPanel>
             <TabPanel>
 <!--              <Stats v-if="event" :event="event as IEvent"/>-->
-              <h1>Comming soon!</h1>
+              <Matches v-if="event" :event="event as IEvent"/>
             </TabPanel>
             <TabPanel>
               <h1>Comming soon!</h1>
