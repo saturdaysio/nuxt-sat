@@ -37,7 +37,7 @@ async function SubmitEventData(formEvent: FormDataEvent) {
     object.date = new Date(format(new Date(object.date), 'yyyy-MM-dd\'T\'HH:mm:ss.SSSxxx'))
   }
 
-  if ((object as any).city && (object as any).country && (object as any).state) {
+  if ((object as any).city || (object as any).country || (object as any).state) {
     // we need to update the location elsewhere
 
 
