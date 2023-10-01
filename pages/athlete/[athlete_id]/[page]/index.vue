@@ -14,7 +14,7 @@ const {data: athlete, pending, error, refresh}: {
   pending: Ref<boolean>,
   error: any,
   refresh: () => void
-} = await useAsyncData<IAthlete>('athlete', async () => {
+} = await useAsyncData<IAthlete>(`athlete_${route.params.athlete_id}`, async () => {
   const result = await api.getAthlete(route.params.athlete_id as string)
   return result.data
 })

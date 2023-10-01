@@ -50,6 +50,10 @@ export class API {
     return this.unauthenticatedAPI.get(`/event/${id}`);
   }
 
+  public getEventMatches(id: string) {
+    return this.unauthenticatedAPI.get(`/match/event/${id}`);
+  }
+
   public patchEvent(event: Partial<IEvent>) {
     return this.unauthenticatedAPI.patch(`/event/${event.id}`, event);
   }
