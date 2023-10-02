@@ -22,8 +22,20 @@ const { data: eventMatches, pending, error, refresh }: {
   refresh: () => void
 } = await useAsyncData<any>(`eventMatches_${event.id}`, async () => {
   const result = await api.getEventMatches(event.id.toString())
-  const types = ['main', 'prelims', 'early']
-  console.log("DATA", result.data)
+  const types = ['main', 'prelims', 'early', 'unkown']
+  if (result.data.length === 0) {
+    return {
+
+    }
+  }
+  if (result.data[0].type === null) {
+    return {
+      'unkown': result.data.map((match: IMatch) => {
+        match.type = 'unknown'
+        return match
+      })
+    }
+  }
   // order based on type and reverse order number
   const sorted: any = {}
   for (const type of types) {
@@ -37,8 +49,6 @@ const { data: eventMatches, pending, error, refresh }: {
       }
     })
   }
-  // converted sorted object to array
-
 
   return sorted
 })
@@ -90,7 +100,7 @@ const { data: eventMatches, pending, error, refresh }: {
 
                     <div class="flex items-center gap-x-4">
                       <div class="truncate text-base font-bold leading-6 text-white">{{ match.winner.name }}</div>
-                      <span>vs</span>
+                      <span>def.</span>
                       <div class="truncate text-base font-bold leading-6 text-white">{{ match.loser.name }}</div>
                     </div>
 
