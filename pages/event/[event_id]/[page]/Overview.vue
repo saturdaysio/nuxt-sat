@@ -75,6 +75,7 @@ async function SubmitEventData(formEvent: FormDataEvent) {
 
     object.id = event.id
     object.name = event.name
+    object.date = format(object.date, 'yyyy-MM-dd\'T\'HH:mm')
     return API.getInstance().patchEvent(object)
   }
   // merge with athlete object
@@ -125,7 +126,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
                 label="Date"
                 input-name="date"
                 placeholder="Enter Event Date"
-                :value="parseDate(event.date, 'yyyy-MM-dd kk:mm')"
+                :value="parseDate(new Date(new Date(event.date).toISOString().slice(0, -1)), 'yyyy-MM-dd\'T\'HH:mm')"
                 input-type="datetime-local"
                 class="mt-4"
             />
