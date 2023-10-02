@@ -22,7 +22,7 @@ const { data: eventMatches, pending, error, refresh }: {
   refresh: () => void
 } = await useAsyncData<any>(`eventMatches_${event.id}`, async () => {
   const result = await api.getEventMatches(event.id.toString())
-  const types = ['main', 'prelims', 'early', 'unkown']
+  const types = ['main', 'prelims', 'early']
   if (result.data.length === 0) {
     return {
 
@@ -39,6 +39,9 @@ const { data: eventMatches, pending, error, refresh }: {
   // order based on type and reverse order number
   const sorted: any = {}
   for (const type of types) {
+    if (!result.data.find((match: IMatch) => match.type?.toLowerCase().substring(0, type.length) === type)) {
+      continue
+    }
     sorted[type] = result.data.filter((match: IMatch) => match.type?.toLowerCase().substring(0, type.length) === type).sort((a: IMatch, b: IMatch) => {
       if (a.order < b.order) {
         return -1
@@ -73,8 +76,7 @@ const { data: eventMatches, pending, error, refresh }: {
         </div>
         <div v-else>
 
-          <div v-for="matches in eventMatches" :key="matches[0].type" class="border-t border-white/10 pt-16">
-            <h2 class="px-4 text-base font-semibold leading-7 text-white sm:px-6 lg:px-8">Last updated:</h2>
+          <div :v-if="matches.length" v-for="matches in eventMatches" :key="matches ? matches[0]?.type : 'invalid'" class="border-t border-white/10 pt-16">
             <table class="mt-6 w-full whitespace-nowrap text-left">
               <colgroup>
                 <col class="w-full sm:w-4/12" />
@@ -86,7 +88,7 @@ const { data: eventMatches, pending, error, refresh }: {
               </colgroup>
               <thead class="border border-white/20 bg-gray-900/40 text-sm leading-6 text-white">
                 <tr>
-                  <th scope="col" class="py-2 pl-4 pr-8 font-bold sm:pl-6 lg:pl-20">{{ matches[0].type }}</th>
+                  <th scope="col" class="py-2 pl-4 pr-8 font-bold sm:pl-6 lg:pl-20">{{ matches ? matches[0]?.type : 'invalid' }}</th>
                   <th scope="col" class="hidden py-2 pl-0 pr-8 font-bold sm:table-cell">Weightclass</th>
                   <th scope="col" class="hidden py-2 pl-0 pr-8 font-bold sm:table-cell">Method</th>
                   <th scope="col" class="hidden py-2 pl-0 pr-8 font-bold sm:table-cell">Round</th>
