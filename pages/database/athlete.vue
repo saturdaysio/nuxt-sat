@@ -134,8 +134,8 @@ const customQuery = (query: string) => {
                     :to="`/athlete/${item.id}/bio`"
             >
               <div class="flex items-center gap-x-4">
-                <img :src="item.imageUrl || '/avatars/crop-3949584.png'" alt=""
-                     class="h-12 w-12 rounded-full bg-gray-800"/>
+                <img :src="item.imageUrl || '/avatars/no-profile-image.png'" alt="" 
+                     class="h-12 w-12 object-cover rounded-full bg-gray-800"/>
                 <div class="truncate text-base font-bold leading-6 text-white">{{ item.name }}</div>
               </div>
             </Button>
