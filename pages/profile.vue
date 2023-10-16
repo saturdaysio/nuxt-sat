@@ -268,7 +268,7 @@
   const userProfile = {
     name: 'Hello Saturday',
     email: 'hello@saturdays.io',
-    imageUrl: '/avatars/monica_hall.png',
+    imageUrl: '/avatars/sv/monica_hall.png',
   }
 
 
