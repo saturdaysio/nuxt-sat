@@ -32,7 +32,7 @@
                       Picture</label>
                     <div class="mt-2 flex items-center gap-x-3">
                       <div id="avatar" class="block h-16 w-16" aria-hidden="true">
-                        <img src="/avatars/monica_hall.png"/>
+                        <img src="/avatars/sv/monica_hall.png"/>
                       </div>
                       <Button buttton-type="button" button-label="Change" button-class="rounded-md bg-white/10 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-white/20"/>
                     </div>
