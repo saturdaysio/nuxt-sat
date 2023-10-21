@@ -4,7 +4,7 @@
     <Nav2/>
 
     <main class="pt-24">
-      <div class="mx-auto max-w-full px-4 pb-12 sm:px-6 lg:px-8 bg-black">
+      <div class="mx-auto max-w-full px-4 pb-12 bg-black">
         <!-- Your content -->
         <section>
           <TabGroup>

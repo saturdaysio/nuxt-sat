@@ -104,7 +104,7 @@ const customQuery = (query: string) => {
     </header>
     <!-- Activity list -->
     <div class="border-t border-white/10 pt-16">
-      <h2 class="px-4 text-base font-semibold leading-7 text-white sm:px-6 lg:px-8">Last updated:</h2>
+      <h2 class="px-4 text-base font-semibold leading-7 text-white">Last updated:</h2>
       <table class="mt-6 w-full whitespace-nowrap text-left">
         <colgroup>
           <col class="w-full sm:w-4/12"/>
@@ -115,41 +115,41 @@ const customQuery = (query: string) => {
         </colgroup>
         <thead class="border border-white/20 bg-gray-900/40 text-sm leading-6 text-white">
         <tr>
-          <th scope="col" class="py-2 pl-4 pr-8 font-bold sm:pl-6 lg:pl-20">Name</th>
+          <th scope="col" class="py-2 pl-4 pr-8 font-bold">Name</th>
           <th scope="col" class="hidden py-2 pl-0 pr-8 font-bold sm:table-cell">Record</th>
-          <th scope="col" class="py-2 pl-6 pr-4 text-right font-bold sm:pr-8 sm:text-left lg:pr-20">
+          <th scope="col" class="py-2 pl-6 pr-4 text-right font-bold sm:text-left">
             Division
           </th>
           <th scope="col"
-              class="hidden py-2 pl-0 pr-4 text-right font-bold sm:table-cell sm:pr-6 lg:pr-8">Last
+              class="hidden py-2 pl-0 pr-4 text-right font-bold sm:table-cell">Last
             updated on
           </th>
-          <td class="hidden py-2 pl-0 pr-4 text-right font-bold sm:table-cell sm:pr-6 lg:pr-8"></td>
+          <td class="hidden py-2 pl-0 pr-4 text-right font-bold sm:table-cell"></td>
         </tr>
         </thead>
         <tbody class="divide-y divide-white/10">
         <tr v-for="item in athleteStore.getResults?.hits" :key="item.objectID">
-          <td class="py-4 pl-4 pr-8 sm:pl-4 lg:pl-4">
+          <td class="py-4 pl-4 pr-8">
             <Button button-label="Athlete"
                     :to="`/athlete/${item.id}/bio`"
             >
               <div class="flex items-center gap-x-4">
-                <img :src="item.imageUrl || '/avatars/no-profile-image.png'" alt="" 
+                <img :src="item.imageUrl || '/avatars/no-profile-image.png'" alt="fighter profile picture" 
                      class="h-12 w-12 object-cover rounded-full bg-gray-800"/>
                 <div class="truncate text-base font-bold leading-6 text-white">{{ item.name }}</div>
               </div>
             </Button>
           </td>
-          <td class="hidden py-4 pl-0 pr-4 sm:table-cell sm:pr-8">
+          <td class="hidden py-4 pl-0 pr-4 sm:table-cell">
             <div class="flex gap-x-3">
               <div class="font-mono text-md leading-6 text-gray-400">{{ item.commit }}</div>
               <span
-                  class="inline-flex items-center rounded-md bg-gray-400/10 px-2 py-1 text-sm font-medium text-gray-400 ring-1 ring-inset ring-gray-400/20">{{
+                  class="inline-flex items-center rounded-md bg-gray-400/10 px-2 py-2 text-sm font-medium text-gray-400 ring-1 ring-inset ring-gray-400/20">{{
                   item.rank || '? - ?'
                 }}</span>
             </div>
           </td>
-          <td class="py-4 pl-0 pr-4 text-sm leading-6 sm:pr-8 lg:pr-20">
+          <td class="py-4 pl-0 pr-4 text-sm leading-4">
             <div class="flex items-center justify-end gap-x-2 sm:justify-start">
               <time class="text-gray-400 sm:hidden" :datetime="item.dateTime">{{ item.date }}</time>
               <div :class="[[item.status], 'flex-none rounded-full p-1']">
@@ -160,21 +160,21 @@ const customQuery = (query: string) => {
               </div>
             </div>
           </td>
-          <td class="hidden py-4 pl-0 pr-4 text-right text-md leading-6 text-gray-400 sm:table-cell sm:pr-6 lg:pr-8">
+          <td class="hidden py-4 pl-0 pr-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
             <time :datetime="item.dateTime">{{
                 format(parseISO(item.updated_at), 'MMM d, yyyy')
 
               }}
             </time>
           </td>
-          <td class="py-4 pl-0 pr-4 text-right text-md leading-6 text-gray-400 sm:table-cell sm:pr-6 lg:pr-8">
+          <td class="py-2 pr-4 sm:table-cell">
             <Button
                 button-label="View Fighter"
                 button-type="button"
-                button-class="text-gray-400 hover:text-gray-300"
+                button-class="text-blue-400 hover:text-green-400"
                 :to="`/athlete/${item.id}`"
             >
-              <ChevronRightIcon class="h-6 w-6" aria-hidden="true"/>
+              <ChevronRightIcon class="h-8 w-8" aria-hidden="true"/>
             </Button>
           </td>
         </tr>
