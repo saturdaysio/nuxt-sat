@@ -117,7 +117,7 @@ const customQuery = (query: string) => {
         <tr>
           <th scope="col" class="py-2 pl-4 pr-8 font-bold">Name</th>
           <th scope="col" class="hidden py-2 pl-0 pr-8 font-bold sm:table-cell">Record</th>
-          <th scope="col" class="py-2 pl-6 pr-4 text-right font-bold sm:text-left">
+          <th scope="col" class="hidden py-2 pl-6 pr-4 text-right font-bold sm:text-left">
             Division
           </th>
           <th scope="col"
