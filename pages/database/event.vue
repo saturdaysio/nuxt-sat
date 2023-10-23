@@ -123,12 +123,13 @@ const customQuery = (query: string) => {
         <tbody class="divide-y divide-white/10">
         <tr v-for="item in eventStore.getResults?.hits" :key="item.objectID">
           <td class="py-4 pl-4 pr-8 sm:pl-4 lg:pl-4">
-            <Button button-label="Athlete"
-                    :to="`/event/${item.id}/overview`"
+            <Button
+              button-label="Event page link"
+              :to="`/event/${item.id}/overview`"
             >
-            <div class="flex items-center gap-x-4">
-              <div class="truncate text-base font-bold leading-6 text-white hover:text-green-400">{{ item.name }}</div>
-            </div>
+              <div class="flex items-center gap-x-4">
+                <div class="truncate text-base font-bold leading-6 text-white hover:text-green-400">{{ item.name }}</div>
+              </div>
             </Button>
           </td>
           <td class="py-4 pl-0 pr-4 sm:table-cell sm:pr-8">
@@ -143,9 +144,10 @@ const customQuery = (query: string) => {
           </td>
           <td class="py-2 pr-4 text-right sm:table-cell">
             <Button
-                button-label="Athlete link"
-                button-type="button"
-                button-class="text-white hover:text-green-400"
+              button-label="Event page link"
+              button-type="button"
+              button-class="text-white hover:text-green-400"
+              :to="`/event/${item.id}/overview`"
             >
               <ChevronRightIcon class="h-6 w-6" aria-hidden="true"/>
             </Button>

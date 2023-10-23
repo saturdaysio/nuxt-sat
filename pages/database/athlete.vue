@@ -124,12 +124,13 @@ const customQuery = (query: string) => {
         <tbody class="divide-y divide-white/10">
         <tr v-for="item in athleteStore.getResults?.hits" :key="item.objectID">
           <td class="py-4 pl-4 pr-8">
-            <Button button-label="Athlete"
-                    :to="`/athlete/${item.id}/bio`"
+            <Button
+              button-label="Athlete page link"
+              :to="`/athlete/${item.id}/bio`"
             >
               <div class="flex items-center gap-x-4">
                 <img :src="item.imageUrl || '/avatars/no-profile-image.png'" alt="fighter profile picture" 
-                     class="h-12 w-12 object-cover rounded-full bg-gray-800"/>
+                     class="h-8 w-8 object-cover rounded-full bg-gray-800"/>
                 <div class="truncate text-base font-bold leading-6 text-white hover:text-green-400">{{ item.name }}</div>
               </div>
             </Button>
@@ -163,10 +164,10 @@ const customQuery = (query: string) => {
           </td>
           <td class="py-2 pr-4 text-right sm:table-cell">
             <Button
-                button-label="Athlete link"
+                button-label="Athlete page link"
                 button-type="button"
                 button-class="text-white hover:text-green-400"
-                :to="`/athlete/${item.id}`"
+                :to="`/athlete/${item.id}/bio`"
             >
               <ChevronRightIcon class="h-6 w-6" aria-hidden="true"/>
             </Button>
