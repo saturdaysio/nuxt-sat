@@ -79,9 +79,9 @@ const { data: eventMatches, pending, error, refresh }: {
           <div :v-if="matches.length" v-for="matches in eventMatches" :key="matches ? matches[0]?.type : 'invalid'" class="py-8">
             <table class="w-full whitespace-nowrap text-left">
               <colgroup>
-                <col class="w-full sm:w-4/12" />
-                <col class="lg:w-1/12" />
-                <col class="lg:w-1/12" />
+                <col class="w-full sm:w-5/12" />
+                <col class="lg:w-2/12" />
+                <col class="lg:w-2/12" />
                 <col class="lg:w-1/12" />
                 <col class="lg:w-1/12" />
                 <col class="lg:w-1/12" />
