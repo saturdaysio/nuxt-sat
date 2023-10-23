@@ -99,7 +99,6 @@ const { data: eventMatches, pending, error, refresh }: {
               <tbody class="divide-y divide-white/10">
                 <tr v-for="match in matches" :key="match.id">
                   <td class="py-4 px-4">
-
                     <div class="flex items-center gap-x-4">
                       <div class="truncate text-base font-bold leading-6 text-white hover:text-green-400">{{ match.winner.name }}</div>
                       <span>def.</span>
@@ -114,24 +113,21 @@ const { data: eventMatches, pending, error, refresh }: {
                       </div>
                     </div>
                   </td>
-                  <td
-                    class="hidden py-4 px-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
+                  <td class="hidden py-4 px-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
                     <div class="flex gap-x-3">
                       <div class="font-mono text-md leading-6 text-gray-400">
                         {{ match.method }}
                       </div>
                     </div>
                   </td>
-                  <td
-                    class="hidden py-4 px-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
+                  <td class="hidden py-4 px-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
                     <div class="flex gap-x-3">
                       <div class="font-mono text-md leading-6 text-gray-400">
                         {{ match.round }}
                       </div>
                     </div>
                   </td>
-                  <td
-                    class="hidden py-4 px-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
+                  <td class="hidden py-4 px-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
                     <div class="flex gap-x-3">
                       <div class="font-mono text-md leading-6 text-gray-400">
                         {{ match.time }}
@@ -139,18 +135,14 @@ const { data: eventMatches, pending, error, refresh }: {
                     </div>
                   </td>
                   <td class="py-2 px-4 text-right sm:table-cell">
-                    <!--
                     <Button
-                      button-label="Event page link"
+                      button-label="Match page link"
                       button-type="button"
                       button-class="text-white hover:text-green-400"
-                      :to="`/event/${item.id}/overview`"
+                      :to="`/match/${match.id}/overview`"
                     >
-                    -->
                       <ChevronRightIcon class="h-6 w-6" aria-hidden="true"/>
-                    <!--
                     </Button>
-                    -->
                   </td>
                 </tr>
               </tbody>
