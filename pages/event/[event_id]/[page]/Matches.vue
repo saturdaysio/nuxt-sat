@@ -139,7 +139,7 @@ const { data: eventMatches, pending, error, refresh }: {
                       button-label="Match page link"
                       button-type="button"
                       button-class="text-white hover:text-green-400"
-                      :to="`/match/${match.id}/overview`"
+                      :to="`/match/${match.id}/stats`"
                     >
                       <ChevronRightIcon class="h-6 w-6" aria-hidden="true"/>
                     </Button>
