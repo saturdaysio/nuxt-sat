@@ -82,16 +82,19 @@ const customQuery = (query: string) => {
 }
 </script>
 
+
 <template>
   <div>
     <header>
-      <SearchAutoComplete label="Search Fighter"
-                          :value="eventStore.getQuery"
-                          :search-function="searchFunction"
-                          :parse-search-result="parseSearchResult"
-                          placeholder="Event Name" :on-type="setQuery"
-                          :custom-query="customQuery"
-                          :on-enter="queryAutocomplete" :limit="50">
+      <SearchAutoComplete
+        label="Search Fighter"
+        :value="eventStore.getQuery"
+        :search-function="searchFunction"
+        :parse-search-result="parseSearchResult"
+        placeholder="Event Name" :on-type="setQuery"
+        :custom-query="customQuery"
+        :on-enter="queryAutocomplete" :limit="50"
+      >
         <template #default="{item, selected, active}">
           <span class="block">
             <span class="flex items-center">
@@ -110,15 +113,16 @@ const customQuery = (query: string) => {
         <colgroup>
           <col class="w-full sm:w-4/12"/>
           <col class="lg:w-1/12"/>
-          <col class="lg:w-2/12"/>
+          <col class="lg:w-1/12"/>
           <col class="lg:w-1/12"/>
         </colgroup>
-        <thead class="border border-white/20 bg-gray-900/40 text-sm leading-6 text-white">
-        <tr>
-          <th scope="col" class="py-2 pl-4 pr-8 font-bold">Name</th>
-          <th scope="col" class="py-2 pl-0 pr-8 font-bold sm:table-cell">Event Date</th>
-          <th scope="col" class="py-2 pl-0 pr-4 text-right font-bold sm:table-cell">Last updated on</th>
-        </tr>
+        <thead class="bg-gray-900/80 text-sm leading-6 text-gray-600">
+          <tr>
+            <th scope="col" class="py-2 pl-4 pr-8 font-bold uppercase">Name</th>
+            <th scope="col" class="py-2 pl-0 pr-8 font-bold uppercase sm:table-cell">Event Date</th>
+            <th scope="col" class="py-2 pl-0 pr-4 text-right font-bold uppercase sm:table-cell">Last updated on</th>
+            <th scope="col" class="py-2 pl-0 sm:table-cell"></th>
+          </tr>
         </thead>
         <tbody class="divide-y divide-white/10">
         <tr v-for="item in eventStore.getResults?.hits" :key="item.objectID">
@@ -156,15 +160,17 @@ const customQuery = (query: string) => {
         </tbody>
       </table>
     </div>
-    <Pagination :pages="eventStore.getResults?.nbPages" :total="eventStore.getResults?.nbHits"
-                :per-page="eventStore.getResults?.hitsPerPage"
-                :current-page="eventStore.getResults?.page + 1"
-                :from="eventStore.getResults?.page * eventStore.getResults?.hitsPerPage"
-                :to="eventStore.getResults?.page+1 != eventStore.getResults?.nbPages ? (eventStore.getResults?.page + 1) * eventStore.getResults?.hitsPerPage : eventStore.getResults?.nbHits"
-                :on-page-change="nextPage"/>
+    <Pagination
+      :pages="eventStore.getResults?.nbPages" :total="eventStore.getResults?.nbHits"
+      :per-page="eventStore.getResults?.hitsPerPage"
+      :current-page="eventStore.getResults?.page + 1"
+      :from="eventStore.getResults?.page * eventStore.getResults?.hitsPerPage"
+      :to="eventStore.getResults?.page+1 != eventStore.getResults?.nbPages ? (eventStore.getResults?.page + 1) * eventStore.getResults?.hitsPerPage : eventStore.getResults?.nbHits"
+      :on-page-change="nextPage"
+    />
   </div>
 </template>
 
-<style scoped lang="scss">
 
+<style scoped lang="scss">
 </style>

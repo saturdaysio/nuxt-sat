@@ -112,36 +112,36 @@ const customQuery = (query: string) => {
           <col class="lg:w-1/12"/>
           <col class="lg:w-1/12"/>
         </colgroup>
-        <thead class="border border-white/20 bg-gray-900/40 text-sm leading-6 text-white">
-        <tr>
-          <th scope="col" class="py-2 pl-4 pr-8 font-bold">Name</th>
-          <th scope="col" class="py-2 pl-0 pr-8 font-bold sm:table-cell">Record</th>
-          <th scope="col" class="py-2 pl-6 pr-4 text-right font-bold sm:text-left">Division</th>
-          <th scope="col" class="py-2 pl-0 pr-4 text-right font-bold sm:table-cell">Last updated on</th>
-
-        </tr>
+        <thead class="bg-gray-900/80 text-sm leading-6 text-gray-600">
+          <tr>
+            <th scope="col" class="py-2 pl-4 font-bold uppercase ">Name</th>
+            <th scope="col" class="py-2 pl-0 font-bold uppercase sm:table-cell">Record</th>
+            <th scope="col" class="py-2 pl-6 pr-4 text-right font-bold uppercase sm:text-left">Division</th>
+            <th scope="col" class="py-2 pl-0 pr-4 text-right font-bold uppercase sm:table-cell">Last updated on</th>
+            <th scope="col" class="py-2 pl-0 sm:table-cell"></th>
+          </tr>
         </thead>
         <tbody class="divide-y divide-white/10">
         <tr v-for="item in athleteStore.getResults?.hits" :key="item.objectID">
-          <td class="py-4 pl-4 pr-8">
+          <td class="py-2 pl-4 pr-8">
             <Button
               button-label="Athlete page link"
               :to="`/athlete/${item.id}/bio`"
             >
               <div class="flex items-center gap-x-4">
                 <img :src="item.imageUrl || '/avatars/no-profile-image.png'" alt="fighter profile picture" 
-                     class="h-8 w-8 object-cover rounded-full bg-gray-800"/>
-                <div class="truncate text-base font-bold leading-6 text-white hover:text-green-400">{{ item.name }}</div>
+                     class="h-12 w-12 object-cover rounded-full bg-gray-600"/>
+                <div class="truncate text-base font-bold leading-6 text-white hover:text-green-400">
+                  {{ item.name }}
+                </div>
               </div>
             </Button>
           </td>
           <td class="hidden py-4 pl-0 pr-4 sm:table-cell">
             <div class="flex gap-x-3">
               <div class="font-mono text-md leading-6 text-gray-400">{{ item.commit }}</div>
-              <span
-                  class="inline-flex items-center rounded-md bg-gray-400/10 px-2 py-2 text-sm font-medium text-gray-400 ring-1 ring-inset ring-gray-400/20">{{
-                  item.rank || '? - ?'
-                }}</span>
+              <span class="inline-flex items-center rounded-md bg-gray-400/10 px-2 py-2 text-sm font-medium text-gray-400 ring-1 ring-inset ring-gray-400/20">
+                {{ item.rank || '? - ?' }}</span>
             </div>
           </td>
           <td class="py-4 pl-0 pr-4 text-sm leading-4">
