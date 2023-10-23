@@ -8,7 +8,7 @@
         <section class="mx-auto rounded-sm border border-white/20">
           <form class=" bg-gray-800/20" @submit.prevent="updateProfile">
             <div class="space-y-12">
-              <div class="max-w-4xl mx-auto pt-16 px-4 border-b border-green-400/40 pb-12">
+              <div class="max-w-4xl mx-auto pt-16 px-4 border-b border-green-400/40 py-12">
                 <h2 class="text-4xl font-bold leading-10 text-white">User Account</h2>
                 <p class="mt-1 text-base leading-6 text-gray-400">Flavor text about user info that will be displayed publicly so be
                   careful what you share.</p>
@@ -25,36 +25,6 @@
                         placeholder="janesmith"
                         :value="user.username"
                     />
-                  </div>
-
-                  <div class="col-span-full">
-                    <label for="photo" class="block text-md font-bold leading-6 uppercase text-white">Profile
-                      Picture</label>
-                    <div class="mt-2 flex items-center gap-x-3">
-                      <div id="avatar" class="block h-16 w-16" aria-hidden="true">
-                        <img src="/avatars/sv/monica_hall.png"/>
-                      </div>
-                      <Button buttton-type="button" button-label="Change" button-class="rounded-md bg-white/10 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-white/20"/>
-                    </div>
-                  </div>
-
-                  <div class="col-span-full">
-                    <label for="cover-photo" class="block text-md font-bold leading-6 uppercase text-white">Upload
-                      Picture</label>
-                    <div class="mt-2 flex justify-center rounded-lg border border-dashed border-white/25 px-6 py-10">
-                      <div class="text-center">
-                        <PhotoIcon class="mx-auto h-12 w-12 text-gray-500" aria-hidden="true"/>
-                        <div class="my-2 flex items-center text-sm text-gray-400">
-                          <label for="file-upload"
-                                 class="relative cursor-pointer rounded-md bg-green-800 font-bold text-black text-base px-4 py-2 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 focus-within:ring-offset-gray-900 hover:text-indigo-500">
-                            <span class="">Upload a photo</span>
-                            <input id="file-upload" name="file-upload" type="file" class="sr-only"/>
-                          </label>
-                          <p class="my-2 pl-2 text-base">or drag and drop</p>
-                        </div>
-                        <p class="text-base leading-6 text-gray-400">WEBP, PNG, JPG, up to 2MB</p>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -190,47 +160,7 @@
                   </div>
                 </div>
               </div>
-
-              <hr class="" />
-
-              <div class="max-w-4xl mx-auto px-4 border-b border-white/10 pb-12">
-                <h2 class="text-2xl font-bold leading-8 text-white">Permissions</h2>
-                <p class="mt-1 text-base leading-6 text-gray-400">We'll always let you know about important changes, but
-                  you pick what else you want to hear about.</p>
-
-                <div class="mt-10 space-y-10">
-                  <fieldset>
-                    <legend class="text-base font-bold leading-6 text-white">By Email</legend>
-                    <div class="mt-6 space-y-6">
-                      <CustomInput
-                          inputType="checkbox"
-                          inputName="comments"
-                          label="Comments"
-                          id="comments"
-                          checkboxLabelSub="Get notified when someones posts a comment on a posting."
-                          :value="user.profile_permissions?.includes('comments')"
-                      />
-                      <CustomInput
-                          inputType="checkbox"
-                          inputName="candidates"
-                          label="Candidates"
-                          id="candidates"
-                          checkboxLabelSub="Get notified when a candidate applies for a job."
-                          :value="user.profile_permissions?.includes('candidates')"
-                      />
-                      <CustomInput
-                          inputType="checkbox"
-                          inputName="offers"
-                          label="Offers"
-                          id="offers"
-                          checkboxLabelSub="Get notified when a candidate accepts or rejects an offer."
-                          :value="user.profile_permissions?.includes('offers')"
-                      />
-                    </div>
-                  </fieldset>
-
-                </div>
-              </div>
+              
             </div>
 
             <div class="max-w-4xl mx-auto mt-6 px-4 md:px-0 pb-10 flex items-center justify-end gap-x-6">
@@ -249,8 +179,6 @@
 
 <script setup lang="ts">
 
-
-  import { PhotoIcon } from '@heroicons/vue/24/outline'
   import { ProfilePermissions, useProfileStore } from "~/store/profile";
 
 
