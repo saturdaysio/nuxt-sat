@@ -138,9 +138,19 @@ const { data: eventMatches, pending, error, refresh }: {
                       </div>
                     </div>
                   </td>
-                  <td class="py-4 px-4 text-right text-md leading-6 text-white hover:text-green-400 sm:table-cell">
-                    <!-- chevron-right -->
-                    <ChevronRightIcon class="h-6 w-6" aria-hidden="true" />
+                  <td class="py-2 px-4 text-right sm:table-cell">
+                    <!--
+                    <Button
+                      button-label="Event page link"
+                      button-type="button"
+                      button-class="text-white hover:text-green-400"
+                      :to="`/event/${item.id}/overview`"
+                    >
+                    -->
+                      <ChevronRightIcon class="h-6 w-6" aria-hidden="true"/>
+                    <!--
+                    </Button>
+                    -->
                   </td>
                 </tr>
               </tbody>
