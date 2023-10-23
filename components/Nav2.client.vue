@@ -64,22 +64,11 @@
 
     const navigation = [
 		{ name: 'Dashboard', to: '/dashboard', current: false },
-        { name: 'Database', to: '/database', current: false },
-		{ name: 'Profile', to: '/profile', current: false },
-		{ name: 'Settings', to: '/settings', current: false },
+        { name: 'Search', to: '/database', current: false },
+        { name: 'Settings', to: '/settings', current: false },
+		{ name: 'Profile', to: '/settings/profile', current: false },
 	]
 
-    const userProfile = {
-		name: 'Hello Saturday',
-		email: 'hello@saturdays.io',
-		imageUrl: '/avatars/monica_hall.png',
-	}
-
-	const userNavigation = [
-		{ name: 'Your Profile', to: '/profile' },
-		{ name: 'Settings', to: '/settings' },
-		{ name: 'Sign out', to: '/signin' },
-	]
 
     
     // Hack to echo Popover v-slot state change
