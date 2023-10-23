@@ -148,7 +148,7 @@ const customQuery = (query: string) => {
           </td>
           <td class="py-2 px-4 text-right sm:table-cell">
             <Button
-              button-label="Event page link"
+              button-label="Match stats page link"
               button-type="button"
               button-class="text-white hover:text-green-400"
               :to="`/event/${item.id}/overview`"
