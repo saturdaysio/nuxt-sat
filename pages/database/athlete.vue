@@ -104,8 +104,7 @@ const customQuery = (query: string) => {
     </header>
     <!-- Activity list -->
     <div class="border-t border-white/10 pt-16">
-      <h2 class="px-4 text-base font-semibold leading-7 text-white">Last updated:</h2>
-      <table class="mt-6 w-full whitespace-nowrap text-left">
+      <table class="w-full whitespace-nowrap text-left">
         <colgroup>
           <col class="w-full sm:w-4/12"/>
           <col class="lg:w-1/12"/>
@@ -136,7 +135,7 @@ const customQuery = (query: string) => {
               <div class="flex items-center gap-x-4">
                 <img :src="item.imageUrl || '/avatars/no-profile-image.png'" alt="fighter profile picture" 
                      class="h-12 w-12 object-cover rounded-full bg-gray-800"/>
-                <div class="truncate text-base font-bold leading-6 text-white">{{ item.name }}</div>
+                <div class="truncate text-base font-bold leading-6 text-white hover:text-green-400">{{ item.name }}</div>
               </div>
             </Button>
           </td>
@@ -169,12 +168,12 @@ const customQuery = (query: string) => {
           </td>
           <td class="py-2 pr-4 sm:table-cell">
             <Button
-                button-label="View Fighter"
+                button-label="Athlete link"
                 button-type="button"
-                button-class="text-blue-400 hover:text-green-400"
+                button-class="text-white hover:text-green-400"
                 :to="`/athlete/${item.id}`"
             >
-              <ChevronRightIcon class="h-8 w-8" aria-hidden="true"/>
+              <ChevronRightIcon class="h-6 w-6" aria-hidden="true"/>
             </Button>
           </td>
         </tr>

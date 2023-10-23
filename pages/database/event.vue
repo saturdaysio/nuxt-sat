@@ -106,8 +106,7 @@ const customQuery = (query: string) => {
     </header>
     <!-- Activity list -->
     <div class="border-t border-white/10 pt-16">
-      <h2 class="px-4 text-base font-semibold leading-7 text-white">Last updated:</h2>
-      <table class="mt-6 w-full whitespace-nowrap text-left">
+      <table class="w-full whitespace-nowrap text-left">
         <colgroup>
           <col class="w-full sm:w-4/12"/>
           <col class="lg:w-1/12"/>
@@ -132,7 +131,7 @@ const customQuery = (query: string) => {
                     :to="`/event/${item.id}/overview`"
             >
             <div class="flex items-center gap-x-4">
-              <div class="truncate text-base font-bold leading-6 text-white">{{ item.name }}</div>
+              <div class="truncate text-base font-bold leading-6 text-white hover:text-green-400">{{ item.name }}</div>
             </div>
             </Button>
           </td>
@@ -146,7 +145,7 @@ const customQuery = (query: string) => {
           <td class="hidden py-4 pl-0 pr-4 text-right text-md leading-6 text-gray-400 sm:table-cell sm:pr-6 lg:pr-8">
             <time :datetime="item.dateTime">{{ format(new Date(item.updated_at), 'MMM d, yyyy') }}</time>
           </td>
-          <td class="py-4 pr-4 leading-6 text-gray-400 sm:table-cell">
+          <td class="py-4 pr-4 text-gray-400 hover:text-green-400 sm:table-cell">
             <!-- chevron-right -->
             <ChevronRightIcon class="h-6 w-6" aria-hidden="true"/>
           </td>
