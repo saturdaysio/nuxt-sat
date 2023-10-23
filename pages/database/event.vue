@@ -111,22 +111,22 @@ const customQuery = (query: string) => {
     <div class="border-t border-white/10 pt-16">
       <table class="w-full whitespace-nowrap text-left">
         <colgroup>
-          <col class="w-full sm:w-4/12"/>
+          <col class="w-full sm:w-2/12"/>
           <col class="lg:w-1/12"/>
           <col class="lg:w-1/12"/>
-          <col class="lg:w-1/12"/>
+          <col class="lg:w-3/12"/>
         </colgroup>
         <thead class="bg-gray-900/80 text-sm leading-6 text-gray-600">
           <tr>
-            <th scope="col" class="py-2 pl-4 pr-8 font-bold uppercase">Name</th>
-            <th scope="col" class="py-2 pl-0 pr-8 font-bold uppercase sm:table-cell">Event Date</th>
-            <th scope="col" class="py-2 pl-0 pr-4 text-right font-bold uppercase sm:table-cell">Last updated on</th>
-            <th scope="col" class="py-2 pl-0 sm:table-cell"></th>
+            <th scope="col" class="py-2 px-4 font-bold uppercase">Name</th>
+            <th scope="col" class="py-2 px-4 font-bold uppercase sm:table-cell">Event Date</th>
+            <th scope="col" class="py-2 px-4 text-right font-bold uppercase sm:table-cell">Last updated on</th>
+            <th scope="col" class="py-2 px-4 sm:table-cell"></th>
           </tr>
         </thead>
         <tbody class="divide-y divide-white/10">
         <tr v-for="item in eventStore.getResults?.hits" :key="item.objectID">
-          <td class="py-4 pl-4 pr-8 sm:pl-4 lg:pl-4">
+          <td class="py-2 px-4">
             <Button
               button-label="Event page link"
               :to="`/event/${item.id}/overview`"
@@ -136,17 +136,17 @@ const customQuery = (query: string) => {
               </div>
             </Button>
           </td>
-          <td class="py-4 pl-0 pr-4 sm:table-cell sm:pr-8">
+          <td class="py-2 px-4 sm:table-cell">
             <div class="flex gap-x-3">
               <div class="font-mono text-md leading-6 text-gray-400">
                 {{ format(new Date(item.date), 'MMM d, yyyy') }}
               </div>
             </div>
           </td>
-          <td class="py-4 pl-0 pr-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
+          <td class="py-2 px-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
             <time :datetime="item.dateTime">{{ format(new Date(item.updated_at), 'MMM d, yyyy') }}</time>
           </td>
-          <td class="py-2 pr-4 text-right sm:table-cell">
+          <td class="py-2 px-4 text-right sm:table-cell">
             <Button
               button-label="Event page link"
               button-type="button"

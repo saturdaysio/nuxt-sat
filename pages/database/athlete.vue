@@ -106,7 +106,7 @@ const customQuery = (query: string) => {
     <div class="border-t border-white/10 pt-16">
       <table class="w-full whitespace-nowrap text-left">
         <colgroup>
-          <col class="w-full sm:w-4/12"/>
+          <col class="w-full sm:w-2/12"/>
           <col class="lg:w-1/12"/>
           <col class="lg:w-2/12"/>
           <col class="lg:w-1/12"/>
@@ -114,16 +114,16 @@ const customQuery = (query: string) => {
         </colgroup>
         <thead class="bg-gray-900/80 text-sm leading-6 text-gray-600">
           <tr>
-            <th scope="col" class="py-2 pl-4 font-bold uppercase ">Name</th>
-            <th scope="col" class="py-2 pl-0 font-bold uppercase sm:table-cell">Record</th>
-            <th scope="col" class="py-2 pl-6 pr-4 text-right font-bold uppercase sm:text-left">Division</th>
-            <th scope="col" class="py-2 pl-0 pr-4 text-right font-bold uppercase sm:table-cell">Last updated on</th>
-            <th scope="col" class="py-2 pl-0 sm:table-cell"></th>
+            <th scope="col" class="py-2 px-4 font-bold uppercase ">Name</th>
+            <th scope="col" class="py-2 px-4 font-bold uppercase sm:table-cell">Record</th>
+            <th scope="col" class="py-2 px-4 text-right font-bold uppercase sm:text-left">Division</th>
+            <th scope="col" class="py-2 px-4 text-right font-bold uppercase sm:table-cell">Last updated on</th>
+            <th scope="col" class="py-2 px-4 sm:table-cell"></th>
           </tr>
         </thead>
         <tbody class="divide-y divide-white/10">
         <tr v-for="item in athleteStore.getResults?.hits" :key="item.objectID">
-          <td class="py-2 pl-4 pr-8">
+          <td class="py-2 px-4">
             <Button
               button-label="Athlete page link"
               :to="`/athlete/${item.id}/bio`"
@@ -137,32 +137,30 @@ const customQuery = (query: string) => {
               </div>
             </Button>
           </td>
-          <td class="hidden py-4 pl-0 pr-4 sm:table-cell">
-            <div class="flex gap-x-3">
-              <div class="font-mono text-md leading-6 text-gray-400">{{ item.commit }}</div>
-              <span class="inline-flex items-center rounded-md bg-gray-400/10 px-2 py-2 text-sm font-medium text-gray-400 ring-1 ring-inset ring-gray-400/20">
-                {{ item.rank || '? - ?' }}</span>
+          <td class="hidden py-2 px-4 sm:table-cell">
+            <div class="flex gap-x-2">
+              <span class="inline-flex items-center rounded-md bg-gray-400/20 px-3 py-2 text-sm font-medium text-gray-400 ring-1 ring-inset ring-gray-400/20">
+                {{ item.rank || '? - ?' }}
+              </span>
             </div>
           </td>
-          <td class="py-4 pl-0 pr-4 text-sm leading-4">
+          <td class="py-2 px-4 text-sm leading-4">
             <div class="flex items-center justify-end gap-x-2 sm:justify-start">
               <time class="text-gray-400 sm:hidden" :datetime="item.dateTime">{{ item.date }}</time>
-              <div :class="[[item.status], 'flex-none rounded-full p-1']">
-                <div class="h-1.5 w-1.5 rounded-full bg-current"/>
-              </div>
+
               <div class="text-md text-gray-400 sm:block">
                 {{ item.weightclass !== 'undefined' ? item.weightclass : 'Unknown' }}
               </div>
             </div>
           </td>
-          <td class="py-4 pl-0 pr-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
+          <td class="py-2 px-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
             <time :datetime="item.dateTime">{{
                 format(parseISO(item.updated_at), 'MMM d, yyyy')
 
               }}
             </time>
           </td>
-          <td class="py-2 pr-4 text-right sm:table-cell">
+          <td class="py-2 px-4 text-right sm:table-cell">
             <Button
                 button-label="Athlete page link"
                 button-type="button"
