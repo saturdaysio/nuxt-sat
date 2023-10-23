@@ -116,12 +116,8 @@ const customQuery = (query: string) => {
         <thead class="border border-white/20 bg-gray-900/40 text-sm leading-6 text-white">
         <tr>
           <th scope="col" class="py-2 pl-4 pr-8 font-bold">Name</th>
-          <th scope="col" class="hidden py-2 pl-0 pr-8 font-bold sm:table-cell">Event Date</th>
-          <th scope="col" class="hidden py-2 pl-0 pr-4 text-right font-bold sm:table-cell sm:pr-6 lg:pr-8">
-            Last
-            updated on
-          </th>
-          <td class="hidden py-2 pl-0 pr-4 text-right font-bold sm:table-cell sm:pr-6 lg:pr-8"></td>
+          <th scope="col" class="py-2 pl-0 pr-8 font-bold sm:table-cell">Event Date</th>
+          <th scope="col" class="py-2 pl-0 pr-4 text-right font-bold sm:table-cell">Last updated on</th>
         </tr>
         </thead>
         <tbody class="divide-y divide-white/10">
@@ -135,19 +131,25 @@ const customQuery = (query: string) => {
             </div>
             </Button>
           </td>
-          <td class="hidden py-4 pl-0 pr-4 sm:table-cell sm:pr-8">
+          <td class="py-4 pl-0 pr-4 sm:table-cell sm:pr-8">
             <div class="flex gap-x-3">
               <div class="font-mono text-md leading-6 text-gray-400">
                 {{ format(new Date(item.date), 'MMM d, yyyy') }}
               </div>
             </div>
           </td>
-          <td class="hidden py-4 pl-0 pr-4 text-right text-md leading-6 text-gray-400 sm:table-cell sm:pr-6 lg:pr-8">
+          <td class="py-4 pl-0 pr-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
             <time :datetime="item.dateTime">{{ format(new Date(item.updated_at), 'MMM d, yyyy') }}</time>
           </td>
-          <td class="py-4 pr-4 text-gray-400 hover:text-green-400 sm:table-cell">
-            <!-- chevron-right -->
-            <ChevronRightIcon class="h-6 w-6" aria-hidden="true"/>
+          <td class="py-2 pr-4 text-right sm:table-cell">
+            <Button
+                button-label="Athlete link"
+                button-type="button"
+                button-class="text-white hover:text-green-400"
+                :to=""
+            >
+              <ChevronRightIcon class="h-6 w-6" aria-hidden="true"/>
+            </Button>
           </td>
         </tr>
         </tbody>
