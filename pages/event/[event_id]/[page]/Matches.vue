@@ -82,19 +82,19 @@ const { data: eventMatches, pending, error, refresh }: {
               <colgroup>
                 <col class="w-full sm:w-4/12" />
                 <col class="lg:w-1/12" />
-                <col class="lg:w-2/12" />
+                <col class="lg:w-1/12" />
                 <col class="lg:w-1/12" />
                 <col class="lg:w-1/12" />
                 <col class="lg:w-1/12" />
               </colgroup>
-              <thead class="border border-white/20 bg-gray-900/40 text-sm leading-6 text-white">
+              <thead class="bg-gray-900/80 text-sm leading-6 text-gray-600">
                 <tr>
-                  <th scope="col" class="py-2 pl-2 font-bold">{{ matches ? matches[0]?.type : 'invalid' }}</th>
-                  <th scope="col" class="hidden py-2 pl-0 pr-8 font-bold sm:table-cell">Weightclass</th>
-                  <th scope="col" class="hidden py-2 pl-0 pr-8 font-bold sm:table-cell">Method</th>
-                  <th scope="col" class="hidden py-2 pl-0 pr-8 font-bold sm:table-cell">Round</th>
-                  <th scope="col" class="hidden py-2 pl-0 pr-8 font-bold sm:table-cell">Time</th>
-                  <td class="hidden py-2 pl-0 pr-4 text-right font-bold sm:table-cell"></td>
+                  <th scope="col" class="py-2 px-4 font-bold uppercase">{{ matches ? matches[0]?.type : 'invalid' }}</th>
+                  <th scope="col" class="hidden py-2 px-4 font-bold uppercase sm:table-cell">Weightclass</th>
+                  <th scope="col" class="hidden py-2 px-4 font-bold uppercase sm:table-cell">Method</th>
+                  <th scope="col" class="hidden py-2 px-4 font-bold uppercase sm:table-cell">Round</th>
+                  <th scope="col" class="hidden py-2 px-4 font-bold uppercase sm:table-cell">Time</th>
+                  <td class="hidden py-2 px-4 sm:table-cell"></td>
                 </tr>
               </thead>
               <tbody class="divide-y divide-white/10">
