@@ -93,7 +93,7 @@ const { data: eventMatches, pending, error, refresh }: {
                   <th scope="col" class="hidden py-2 px-4 font-bold uppercase sm:table-cell">Method</th>
                   <th scope="col" class="hidden py-2 px-4 font-bold uppercase sm:table-cell">Round</th>
                   <th scope="col" class="hidden py-2 px-4 font-bold uppercase sm:table-cell">Time</th>
-                  <td class="hidden py-2 px-4 sm:table-cell"></td>
+                  <td scope="col" class="hidden py-2 px-4 sm:table-cell"></td>
                 </tr>
               </thead>
               <tbody class="divide-y divide-white/10">
@@ -101,9 +101,9 @@ const { data: eventMatches, pending, error, refresh }: {
                   <td class="py-4 px-4">
 
                     <div class="flex items-center gap-x-4">
-                      <div class="truncate text-base font-bold leading-6 text-white">{{ match.winner.name }}</div>
+                      <div class="truncate text-base font-bold leading-6 text-white hover:text-green-400">{{ match.winner.name }}</div>
                       <span>def.</span>
-                      <div class="truncate text-base font-bold leading-6 text-white">{{ match.loser.name }}</div>
+                      <div class="truncate text-base font-bold leading-6 text-white hover:text-green-400">{{ match.loser.name }}</div>
                     </div>
 
                   </td>
@@ -138,7 +138,7 @@ const { data: eventMatches, pending, error, refresh }: {
                       </div>
                     </div>
                   </td>
-                  <td class="py-4 px-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
+                  <td class="py-4 px-4 text-right text-md leading-6 text-white hover:text-green-400 sm:table-cell">
                     <!-- chevron-right -->
                     <ChevronRightIcon class="h-6 w-6" aria-hidden="true" />
                   </td>
