@@ -61,7 +61,7 @@ const { data: eventMatches, pending, error, refresh }: {
 
 <template>
   <div class="space-y-14">
-    <section class="mx-auto rounded-sm border border-white/40 bg-black p-4">
+    <section class="mx-auto rounded-sm border border-white/20 bg-gray-900/10 p-4">
       <h1 class="text-2xl font-bold text-white">Matches</h1>
       <!--    sub title -->
       <div v-if="pending" class="flex justify-center">
