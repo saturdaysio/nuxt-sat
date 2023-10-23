@@ -3,15 +3,15 @@
     
     <Nav2 />
 
-    <main class="pt-24">
-      <div class="mx-auto max-w-full px-4 pb-12 sm:px-6 lg:px-8 bg-black">
+    <main class="py-24">
+      <div class="mx-auto max-w-full px-4">
         <!-- Your content -->
 		<section>
         <header>
           <!-- Secondary navigation -->
 
           <!-- Heading -->
-          <div class="flex flex-col items-start justify-between gap-x-8 gap-y-4 bg-gray-800/10 border border-white/20 px-4 py-8 sm:flex-row sm:items-center sm:px-6 lg:px-8 ">
+          <div class="flex flex-col items-start justify-between gap-x-8 gap-y-4 bg-gray-800/10 border border-white/20 px-4 py-8 sm:flex-row sm:items-center  lg:px-8 ">
             <div>
               <div class="flex items-center gap-x-2">
                 <div class="flex-none rounded-full bg-green-400 p-1 text-green-400">
@@ -51,13 +51,6 @@
 
 <script setup lang="ts">
 
-	const userProfile = {
-		name: 'Hello Saturday',
-		email: 'hello@saturdays.io',
-		imageUrl: '/avatars/monica_hall.png',
-	}
-
-
 	const secondaryNavigation = [
 		{ name: 'Overview', to: '#', current: true },
 		{ name: 'Activity', to: '#', current: false },
@@ -76,9 +69,9 @@
 
 
 	const statuses = {
-    Completed: 'text-green-400 bg-green-400',
-    Error: 'text-rose-400 bg-rose-400'
-  }
+		Completed: 'text-green-400 bg-green-400',
+		Error: 'text-rose-400 bg-rose-400'
+  	}
 
 
 	const activityItems = [

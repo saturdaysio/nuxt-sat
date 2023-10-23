@@ -115,15 +115,10 @@ const customQuery = (query: string) => {
         <thead class="border border-white/20 bg-gray-900/40 text-sm leading-6 text-white">
         <tr>
           <th scope="col" class="py-2 pl-4 pr-8 font-bold">Name</th>
-          <th scope="col" class="hidden py-2 pl-0 pr-8 font-bold sm:table-cell">Record</th>
-          <th scope="col" class="hidden py-2 pl-6 pr-4 text-right font-bold sm:text-left">
-            Division
-          </th>
-          <th scope="col"
-              class="hidden py-2 pl-0 pr-4 text-right font-bold sm:table-cell">Last
-            updated on
-          </th>
-          <td class="hidden py-2 pl-0 pr-4 text-right font-bold sm:table-cell"></td>
+          <th scope="col" class="py-2 pl-0 pr-8 font-bold sm:table-cell">Record</th>
+          <th scope="col" class="py-2 pl-6 pr-4 text-right font-bold sm:text-left">Division</th>
+          <th scope="col" class="py-2 pl-0 pr-4 text-right font-bold sm:table-cell">Last updated on</th>
+
         </tr>
         </thead>
         <tbody class="divide-y divide-white/10">
@@ -154,19 +149,19 @@ const customQuery = (query: string) => {
               <div :class="[[item.status], 'flex-none rounded-full p-1']">
                 <div class="h-1.5 w-1.5 rounded-full bg-current"/>
               </div>
-              <div class="hidden text-md text-gray-400 sm:block">
+              <div class="text-md text-gray-400 sm:block">
                 {{ item.weightclass !== 'undefined' ? item.weightclass : 'Unknown' }}
               </div>
             </div>
           </td>
-          <td class="hidden py-4 pl-0 pr-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
+          <td class="py-4 pl-0 pr-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
             <time :datetime="item.dateTime">{{
                 format(parseISO(item.updated_at), 'MMM d, yyyy')
 
               }}
             </time>
           </td>
-          <td class="py-2 pr-4 sm:table-cell">
+          <td class="py-2 pr-4 text-right sm:table-cell">
             <Button
                 button-label="Athlete link"
                 button-type="button"
