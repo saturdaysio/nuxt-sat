@@ -111,10 +111,10 @@ const customQuery = (query: string) => {
     <div class="border-t border-white/10 pt-16">
       <table class="w-full whitespace-nowrap text-left">
         <colgroup>
-          <col class="w-full sm:w-2/12"/>
+          <col class="w-full sm:w-3/12"/>
           <col class="lg:w-1/12"/>
           <col class="lg:w-1/12"/>
-          <col class="lg:w-3/12"/>
+          <col class="lg:w-1/12"/>
         </colgroup>
         <thead class="bg-gray-900/80 text-sm leading-6 text-gray-600">
           <tr>
@@ -126,7 +126,7 @@ const customQuery = (query: string) => {
         </thead>
         <tbody class="divide-y divide-white/10">
         <tr v-for="item in eventStore.getResults?.hits" :key="item.objectID">
-          <td class="py-2 px-4">
+          <td class="py-5 px-4">
             <Button
               button-label="Event page link"
               :to="`/event/${item.id}/overview`"
