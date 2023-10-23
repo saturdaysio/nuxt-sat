@@ -99,7 +99,7 @@ const { data: eventMatches, pending, error, refresh }: {
               </thead>
               <tbody class="divide-y divide-white/10">
                 <tr v-for="match in matches" :key="match.id">
-                  <td class="py-4 pl-4 pr-8">
+                  <td class="py-4 px-4">
 
                     <div class="flex items-center gap-x-4">
                       <div class="truncate text-base font-bold leading-6 text-white">{{ match.winner.name }}</div>
@@ -108,17 +108,15 @@ const { data: eventMatches, pending, error, refresh }: {
                     </div>
 
                   </td>
-                  <td class="hidden py-4 pl-0 pr-4 sm:table-cell sm:pr-8">
+                  <td class="hidden py-4 px-4 sm:table-cell sm:pr-8">
                     <div class="flex gap-x-3">
                       <div class="font-mono text-md leading-6 text-gray-400">
-                        <NuxtLink :to="`/athlete/${item.id}/bio`">
                         {{ match.weightclass || match.winner.weightclass }}
-                        </NuxtLink>
                       </div>
                     </div>
                   </td>
                   <td
-                    class="hidden py-4 pl-0 pr-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
+                    class="hidden py-4 px-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
                     <div class="flex gap-x-3">
                       <div class="font-mono text-md leading-6 text-gray-400">
                         {{ match.method }}
@@ -126,7 +124,7 @@ const { data: eventMatches, pending, error, refresh }: {
                     </div>
                   </td>
                   <td
-                    class="hidden py-4 pl-0 pr-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
+                    class="hidden py-4 px-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
                     <div class="flex gap-x-3">
                       <div class="font-mono text-md leading-6 text-gray-400">
                         {{ match.round }}
@@ -134,14 +132,14 @@ const { data: eventMatches, pending, error, refresh }: {
                     </div>
                   </td>
                   <td
-                    class="hidden py-4 pl-0 pr-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
+                    class="hidden py-4 px-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
                     <div class="flex gap-x-3">
                       <div class="font-mono text-md leading-6 text-gray-400">
                         {{ match.time }}
                       </div>
                     </div>
                   </td>
-                  <td class="py-4 pl-0 pr-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
+                  <td class="py-4 px-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
                     <!-- chevron-right -->
                     <ChevronRightIcon class="h-6 w-6" aria-hidden="true" />
                   </td>
