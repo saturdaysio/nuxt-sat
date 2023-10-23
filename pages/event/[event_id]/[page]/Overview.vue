@@ -104,10 +104,10 @@ function parseDate(date: Date | undefined, formatString: string): string {
 
 <template>
   <div class="space-y-14">
-    <section class="mx-auto rounded-sm border border-white/20 bg-gray-900 p-4">
+    <section class="mx-auto rounded-sm border border-white/20 bg-gray-900/10 p-4">
       <h1 class="text-2xl font-bold text-white">Event Info</h1>
       <!--    sub title -->
-      <h2 class="text-lg text-white">Description flavour text on your user profile information</h2>
+      <h2 class="text-lg text-white">Description flavour text</h2>
       <form @submit="SubmitEventData">
         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
 
@@ -149,33 +149,30 @@ function parseDate(date: Date | undefined, formatString: string): string {
             <CombinedInput
                 label="Location"
                 :fields="[
-{
-  label: 'City',
-  name: 'city',
-  placeholder: 'Enter City',
-  value: event.location?.city
-},
-{
-  label: 'State',
-  name: 'state',
-  placeholder: 'Enter State',
-  value: event.location?.state
-},
-{
-  label: 'Country',
-  name: 'country',
-  placeholder: 'Enter Country',
-  value: event.location?.country
-}
-] as CombinedInputField[]"
-                :on-type="() => {console.log('typing')}"
-                class="mt-4"
+                          {
+                            label: 'City',
+                            name: 'city',
+                            placeholder: 'Enter City',
+                            value: event.location?.city
+                          },
+                          {
+                            label: 'State',
+                            name: 'state',
+                            placeholder: 'Enter State',
+                            value: event.location?.state
+                          },
+                          {
+                            label: 'Country',
+                            name: 'country',
+                            placeholder: 'Enter Country',
+                            value: event.location?.country
+                          }
+                        ] as CombinedInputField[]"
+                      :on-type="() => {console.log('typing')}"
+                      class="mt-4"
             />
           </div>
         </div>
-
-
-
 
         <!-- button group horizontal -->
         <div class="mt-10 flex justify-start space-x-4">
@@ -196,6 +193,6 @@ function parseDate(date: Date | undefined, formatString: string): string {
   </div>
 </template>
 
-<style scoped lang="scss">
 
+<style scoped lang="scss">
 </style>

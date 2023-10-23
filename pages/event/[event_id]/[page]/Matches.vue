@@ -61,10 +61,9 @@ const { data: eventMatches, pending, error, refresh }: {
 
 <template>
   <div class="space-y-14">
-    <section class="mx-auto rounded-sm border border-white/20 bg-gray-900 p-4">
+    <section class="mx-auto rounded-sm border border-white/40 bg-black p-4">
       <h1 class="text-2xl font-bold text-white">Matches</h1>
       <!--    sub title -->
-      <h2 class="text-lg text-white">Description flavour text on your user profile information</h2>
       <div v-if="pending" class="flex justify-center">
         <Loader />
       </div>
@@ -77,8 +76,8 @@ const { data: eventMatches, pending, error, refresh }: {
         </div>
         <div v-else>
 
-          <div :v-if="matches.length" v-for="matches in eventMatches" :key="matches ? matches[0]?.type : 'invalid'" class="border-t border-white/10 pt-16">
-            <table class="mt-6 w-full whitespace-nowrap text-left">
+          <div :v-if="matches.length" v-for="matches in eventMatches" :key="matches ? matches[0]?.type : 'invalid'" class="py-8">
+            <table class="w-full whitespace-nowrap text-left">
               <colgroup>
                 <col class="w-full sm:w-4/12" />
                 <col class="lg:w-1/12" />
@@ -108,7 +107,7 @@ const { data: eventMatches, pending, error, refresh }: {
                     </div>
 
                   </td>
-                  <td class="hidden py-4 px-4 sm:table-cell sm:pr-8">
+                  <td class="hidden py-4 px-4 sm:table-cell">
                     <div class="flex gap-x-3">
                       <div class="font-mono text-md leading-6 text-gray-400">
                         {{ match.weightclass || match.winner.weightclass }}
