@@ -146,7 +146,6 @@ const customQuery = (query: string) => {
                 button-label="Athlete link"
                 button-type="button"
                 button-class="text-white hover:text-green-400"
-                :to=""
             >
               <ChevronRightIcon class="h-6 w-6" aria-hidden="true"/>
             </Button>
