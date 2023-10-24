@@ -52,7 +52,7 @@
 
                   <td class="hidden py-4 px-4 sm:table-cell">
                     <div class="flex gap-x-3">
-                      <div class=" text-md leading-6 text-white">
+                      <div class="text-md leading-6 text-white">
                         {{ match.weightclass || match.winner.weightclass }}
                       </div>
                     </div>
@@ -60,7 +60,7 @@
 
                   <td class="hidden py-4 px-4 text-right sm:table-cell">
                     <div class="flex gap-x-3">
-                      <div class=" text-md leading-6 text-green-500">
+                      <div class="text-md leading-6 text-white">
                         {{ match.method }}
                       </div>
                     </div>
@@ -68,7 +68,7 @@
 
                   <td class="hidden py-4 px-4 text-right sm:table-cell">
                     <div class="flex gap-x-3">
-                      <div class=" text-md leading-6 text-blue-400">
+                      <div class="text-md leading-6 text-white">
                         {{ match.round }}
                       </div>
                     </div>
@@ -76,7 +76,7 @@
 
                   <td class="hidden py-4 px-4 text-right sm:table-cell">
                     <div class="flex gap-x-3">
-                      <div class=" text-md leading-6 text-purple-400">
+                      <div class="text-md leading-6 text-white">
                         {{ match.time }}
                       </div>
                     </div>
