@@ -1,64 +1,3 @@
-<script setup lang="ts">
-import { IAthlete } from "~/utils/interfaces/Athlete";
-import Button from "~/components/Button.vue";
-import CustomInput from "~/components/CustomInput.vue";
-import { format, isDate, parseISO } from "date-fns";
-import { API } from "~/composable/api";
-import { IEvent } from "~/utils/interfaces/Event";
-import { IMatch } from "~/utils/interfaces/Match";
-import { ChevronRightIcon } from "@heroicons/vue/20/solid";
-
-interface BioProps {
-  event: IEvent
-}
-
-
-const { event } = defineProps<BioProps>()
-const api = API.getInstance()
-
-const { data: eventMatches, pending, error, refresh }: {
-  data: Ref<any | null>,
-  pending: Ref<boolean>,
-  error: any,
-  refresh: () => void
-} = await useAsyncData<any>(`eventMatches_${event.id}`, async () => {
-  const result = await api.getEventMatches(event.id.toString())
-  const types = ['main', 'prelims', 'early']
-  if (result.data.length === 0) {
-    return {
-
-    }
-  }
-  if (result.data[0].type === null) {
-    return {
-      'unkown': result.data.map((match: IMatch) => {
-        match.type = 'unknown'
-        return match
-      })
-    }
-  }
-  // order based on type and reverse order number
-  const sorted: any = {}
-  for (const type of types) {
-    if (!result.data.find((match: IMatch) => match.type?.toLowerCase().substring(0, type.length) === type)) {
-      continue
-    }
-    sorted[type] = result.data.filter((match: IMatch) => match.type?.toLowerCase().substring(0, type.length) === type).sort((a: IMatch, b: IMatch) => {
-      if (a.order < b.order) {
-        return -1
-      } else if (a.order > b.order) {
-        return 1
-      } else {
-        return 0
-      }
-    })
-  }
-
-  return sorted
-})
-
-</script>
-
 <template>
   <div class="space-y-14">
     <section class="mx-auto rounded-sm border border-white/20 bg-gray-900/10 p-4">
@@ -96,44 +35,53 @@ const { data: eventMatches, pending, error, refresh }: {
                   <td scope="col" class="hidden py-2 px-4 sm:table-cell"></td>
                 </tr>
               </thead>
+
               <tbody class="divide-y divide-white/10">
                 <tr v-for="match in matches" :key="match.id">
                   <td class="py-4 px-4">
                     <div class="flex items-center gap-x-4">
-                      <div class="truncate text-base font-bold leading-6 text-white hover:text-green-400">{{ match.winner.name }}</div>
+                      <div class="truncate text-base font-bold leading-6 text-white hover:text-green-400">
+                        {{ match.winner.name }}
+                      </div>
                       <span>def.</span>
-                      <div class="truncate text-base font-bold leading-6 text-white hover:text-green-400">{{ match.loser.name }}</div>
+                      <div class="truncate text-base font-bold leading-6 text-white hover:text-green-400">
+                        {{ match.loser.name }}
+                      </div>
                     </div>
-
                   </td>
+
                   <td class="hidden py-4 px-4 sm:table-cell">
                     <div class="flex gap-x-3">
-                      <div class="font-mono text-md leading-6 text-gray-400">
+                      <div class=" text-md leading-6 text-white">
                         {{ match.weightclass || match.winner.weightclass }}
                       </div>
                     </div>
                   </td>
-                  <td class="hidden py-4 px-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
+
+                  <td class="hidden py-4 px-4 text-right sm:table-cell">
                     <div class="flex gap-x-3">
-                      <div class="font-mono text-md leading-6 text-gray-400">
+                      <div class=" text-md leading-6 text-green-500">
                         {{ match.method }}
                       </div>
                     </div>
                   </td>
-                  <td class="hidden py-4 px-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
+
+                  <td class="hidden py-4 px-4 text-right sm:table-cell">
                     <div class="flex gap-x-3">
-                      <div class="font-mono text-md leading-6 text-gray-400">
+                      <div class=" text-md leading-6 text-blue-400">
                         {{ match.round }}
                       </div>
                     </div>
                   </td>
-                  <td class="hidden py-4 px-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
+
+                  <td class="hidden py-4 px-4 text-right sm:table-cell">
                     <div class="flex gap-x-3">
-                      <div class="font-mono text-md leading-6 text-gray-400">
+                      <div class=" text-md leading-6 text-purple-400">
                         {{ match.time }}
                       </div>
                     </div>
                   </td>
+
                   <td class="py-2 px-4 text-right sm:table-cell">
                     <Button
                       button-label="Match page link"
@@ -141,7 +89,7 @@ const { data: eventMatches, pending, error, refresh }: {
                       button-class="text-white hover:text-green-400"
                       :to="`/match/${match.id}/stats`"
                     >
-                      <ChevronRightIcon class="h-6 w-6" aria-hidden="true"/>
+                      <ChevronRightIcon class="h-6 w-6" aria-hidden="true" />
                     </Button>
                   </td>
                 </tr>
@@ -152,9 +100,72 @@ const { data: eventMatches, pending, error, refresh }: {
       </div>
 
     </section>
-
   </div>
 </template>
+
+
+<script setup lang="ts">
+
+
+  import Button from "~/components/Button.vue";
+  import CustomInput from "~/components/CustomInput.vue";
+  import { format, isDate, parseISO } from "date-fns";
+  import { API } from "~/composable/api";
+  import { IEvent } from "~/utils/interfaces/Event";
+  import { IMatch } from "~/utils/interfaces/Match";
+  import { ChevronRightIcon } from "@heroicons/vue/20/solid";
+
+  interface BioProps {
+    event: IEvent
+  }
+
+
+  const { event } = defineProps<BioProps>()
+  const api = API.getInstance()
+
+  const { data: eventMatches, pending, error, refresh }: {
+    data: Ref<any | null>,
+    pending: Ref<boolean>,
+    error: any,
+    refresh: () => void
+  } = await useAsyncData<any>(`eventMatches_${event.id}`, async () => {
+    const result = await api.getEventMatches(event.id.toString())
+    const types = ['main', 'prelims', 'early']
+    if (result.data.length === 0) {
+      return {
+
+      }
+    }
+    if (result.data[0].type === null) {
+      return {
+        'unkown': result.data.map((match: IMatch) => {
+          match.type = 'unknown'
+          return match
+        })
+      }
+    }
+    // order based on type and reverse order number
+    const sorted: any = {}
+    for (const type of types) {
+      if (!result.data.find((match: IMatch) => match.type?.toLowerCase().substring(0, type.length) === type)) {
+        continue
+      }
+      sorted[type] = result.data.filter((match: IMatch) => match.type?.toLowerCase().substring(0, type.length) === type).sort((a: IMatch, b: IMatch) => {
+        if (a.order < b.order) {
+          return -1
+        } else if (a.order > b.order) {
+          return 1
+        } else {
+          return 0
+        }
+      })
+    }
+
+    return sorted
+  })
+
+</script>
+
 
 <style scoped lang="scss">
 </style>
