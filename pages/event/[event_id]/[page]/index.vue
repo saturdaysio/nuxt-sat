@@ -45,7 +45,7 @@ function changeTab(index: number) {
         <!-- Your content -->
 
         <div class="flex items-center justify-between py-2">
-          <h1 v-if="event" class="text-4xl font-bold text-white">{{ event.name }}</h1>
+          <h1 v-if="event" class="text-xl md:text-2xl lg:text-4xl font-bold text-white">{{ event.name }}</h1>
         </div>
         <TabGroup :selectedIndex="activeTab" @change="changeTab">
           <TabList class="flex flex-0 w-full space-x-8 border-b border-gray-700 ">
@@ -78,10 +78,10 @@ function changeTab(index: number) {
               <Matches v-if="event" :event="event as IEvent"/>
             </TabPanel>
             <TabPanel>
-              <h1>Comming soon!</h1>
+              <h1>Coming soon!</h1>
             </TabPanel>
             <TabPanel>
-              <h1>Comming soon!</h1>
+              <h1>Coming soon!</h1>
             </TabPanel>
           </TabPanels>
         </TabGroup>
