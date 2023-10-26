@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import {API} from "~/composable/api";
+import {API} from "~/composables/api";
 import {IAthlete} from "~/utils/interfaces/Athlete";
 import {Tab, TabGroup, TabList, TabPanel, TabPanels} from "@headlessui/vue";
 import Bio from "./Bio.vue";
 import Stats from "./Stats.vue";
+import Record from "./record.vue";
 
 const types = ['bio', 'stats', 'fight_record', 'media']
 const route = useRoute()
@@ -77,7 +78,7 @@ function changeTab(index: number) {
               <Stats v-if="athlete" :athlete="athlete as IAthlete"/>
             </TabPanel>
             <TabPanel>
-              <h1>Coming soon!</h1>
+              <Record v-if="athlete" :athlete="athlete as IAthlete"/>
             </TabPanel>
             <TabPanel>
               <h1>Coming soon!</h1>
@@ -90,5 +91,4 @@ function changeTab(index: number) {
 </template>
 
 <style scoped lang="scss">
-
 </style>
