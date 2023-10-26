@@ -60,8 +60,8 @@ const record = [
 
 
 <template>
-    <div class="py-4 space-y-14">
-      <section class="mx-auto w-full rounded-md border border-white/20 bg-gray-900 p-4">
+    <div class="space-y-14">
+      <section class="mx-auto w-full rounded-sm border border-white/20 bg-gray-900 p-4">
         <h1 class="text-2xl font-bold text-white">Fight Record</h1>
 
         <div id="fight_table" class="max-w-full mx-auto pt-4">
