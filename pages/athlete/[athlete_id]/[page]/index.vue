@@ -45,7 +45,7 @@ function changeTab(index: number) {
         <!-- Your content -->
 
         <div class="flex items-center justify-between py-2">
-          <h1 v-if="athlete" class="text-xl md:text-2xl lg:text-4xl font-bold text-white">{{ `${athlete.firstName} ${athlete.lastName}` }}</h1>
+          <h1 v-if="athlete" class="text-2xl md:text-3xl lg:text-4xl font-bold text-white">{{ `${athlete.firstName} ${athlete.lastName}` }}</h1>
         </div>
         <TabGroup :selectedIndex="activeTab" @change="changeTab">
           <TabList class="flex flex-0 w-full space-x-8 border-b border-gray-700 ">

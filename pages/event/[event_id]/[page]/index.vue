@@ -45,23 +45,14 @@ function changeTab(index: number) {
         <!-- Your content -->
 
         <div class="flex items-center justify-between py-2">
-          <h1 v-if="event" class="text-xl md:text-2xl lg:text-4xl font-bold text-white">{{ event.name }}</h1>
+          <h1 v-if="event" class="text-2xl md:text-3xl lg:text-4xl font-bold text-white">{{ event.name }}</h1>
         </div>
         <TabGroup :selectedIndex="activeTab" @change="changeTab">
           <TabList class="flex flex-0 w-full space-x-8 border-b border-gray-700 ">
-            <Tab
-                v-for="category in ['Overview', 'Matches', 'Media']"
-                as="template"
-                :key="category"
-                v-slot="{ selected }"
-            >
+            <Tab v-for="category in ['Overview', 'Matches', 'Media']" as="template" :key="category" v-slot="{ selected }">
               <button
-                  :class="[
-                      ' py-2.5 text-lg font-medium leading-5 text-grey-700 outline-none',
-                       'focus:outline-none focus:text-white whitespace-nowrap',
-                       selected
-                ? 'text-white shadow'
-                : 'text-gray-400 hover:text-white',
+                  :class="[' py-2.5 text-lg font-medium leading-5 text-grey-700 outline-none', 'focus:outline-none focus:text-white whitespace-nowrap',
+                       selected ? 'text-white shadow' : 'text-gray-400 hover:text-white',
                   ]"
               >
                 {{ category }}
@@ -73,13 +64,11 @@ function changeTab(index: number) {
             <TabPanel>
               <Overview v-if="event" :event="event as IEvent"/>
             </TabPanel>
-            <TabPanel>
-<!--              <Stats v-if="event" :event="event as IEvent"/>-->
-              <Matches v-if="event" :event="event as IEvent"/>
-            </TabPanel>
+
             <TabPanel>
               <h1>Coming soon!</h1>
             </TabPanel>
+
             <TabPanel>
               <h1>Coming soon!</h1>
             </TabPanel>
