@@ -61,7 +61,7 @@ const record = [
 
 <template>
     <div class="py-4 space-y-14">
-      <section class="mx-auto w-full max-w-screen-2xl rounded-md border border-green-400 bg-gray-900/10 px-4 py-8">
+      <section class="mx-auto w-full rounded-md border border-green-400 bg-gray-900/10 px-4 py-8">
 
         <h1 class="text-2xl md:text-2xl lg:text-3xl font-bold text-white">Fight Record</h1>
 
