@@ -41,6 +41,20 @@
         </header>
 
         <!-- Activity list -->
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-2 gap-y-4 pt-4">
+			<div v-for="item in quickLinks" :key="item.id" class="">
+				<div class="card rounded-lg border border-green-400">
+					<div class="image-thumb bg-gray-800/40">
+						<img :src="item.imageUrl" :alt="item.alt" class="object-fit" loading="lazy" :width="item.width" :height="item.height" />
+					</div>
+					<div class="data-bot bg-black p-4">
+						<div class="text-base sm:text-lg md:text-xl font-bold text-white">
+							{{ item.name }}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 	</section>
       </div>
@@ -51,65 +65,58 @@
 
 <script setup lang="ts">
 
-	const secondaryNavigation = [
-		{ name: 'Overview', to: '#', current: true },
-		{ name: 'Activity', to: '#', current: false },
-		{ name: 'Settings', to: '#', current: false },
-		{ name: 'Collaborators', to: '#', current: false },
-		{ name: 'Notifications', to: '#', current: false },
-	]
-
-
 	const stats = [
-		{ name: 'Number of deploys', value: '401' },
-		{ name: 'Average deploy time', value: '1.25', unit: 'mins' },
-		{ name: 'Number of servers', value: '32' },
+		{ name: 'Number of deploys', value: '4000' },
+		{ name: 'Average deploy time', value: '32', unit: 'seconds' },
+		{ name: 'Number of servers', value: '2' },
 		{ name: 'Status', value: 'Online' },
 	]
-
 
 	const statuses = {
 		Completed: 'text-green-400 bg-green-400',
 		Error: 'text-rose-400 bg-rose-400'
   	}
 
-
-	const activityItems = [
+	const quickLinks = [
 		{
-			user: {
-			name: 'Richard Hendricks',
-			imageUrl: '/avatars/richard_hendricks.png',
-			},
-			commit: '2d89f0c8',
-			branch: 'main',
-			status: 'Completed',
-			duration: '25s',
-			date: '45 minutes ago',
-			dateTime: '2023-01-23T11:00',
+			id: '0',
+			name: 'Alex Volkanovski',
+			imageUrl: '/avatars/3949584.png',
+			alt: '2023-01-23T11:00',
+			width: '',
+			height: '',
+			to: '',
+			lastUpdate: '',
 		},
-    {
-			user: {
-			name: 'Monica Hall',
-			imageUrl: '/avatars/monica_hall.png',
-			},
-			commit: '2d89f0c8',
-			branch: 'main',
-			status: 'Completed',
-			duration: '25s',
-			date: '45 minutes ago',
-			dateTime: '2023-01-23T11:00',
+    	{
+			id: '1',
+			name: 'Holly Holm',
+			imageUrl: '/avatars/3028404.png',
+			alt: '2023-01-23T11:00',
+			width: '',
+			height: '',
+			to: '',
+			lastUpdate: '',
 		},
-    {
-			user: {
-			name: 'Hello Saturdays',
-			imageUrl: '/avatars/monica_hall.png',
-			},
-			commit: '2d89f0c8',
-			branch: 'main',
-			status: 'Completed',
-			duration: '25s',
-			date: '45 minutes ago',
-			dateTime: '2023-01-23T11:00',
+    	{
+			id: '2',
+			name: 'Jessica Rose-Clark',
+			imageUrl: '/avatars/3902226.png',
+			alt: '2023-01-23T11:00',
+			width: '',
+			height: '',
+			to: '',
+			lastUpdate: '',
+		},
+		{
+			id: '3',
+			name: 'Jon Jones',
+			imageUrl: '/avatars/2335639.png',
+			alt: '2023-01-23T11:00',
+			width: '',
+			height: '',
+			to: '',
+			lastUpdate: '',
 		},
 		// More items...
 	]
