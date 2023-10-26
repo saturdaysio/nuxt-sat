@@ -60,10 +60,6 @@ const record = [
 
 
 <template>
-  <div class="min-h-full">
-
-    <Nav2 />
-
     <div class="w-full pt-24 px-4 space-y-14">
       <section class="mx-auto w-full max-w-screen-2xl rounded-md border border-green-400 bg-gray-900/10 px-4 py-8">
 
@@ -134,8 +130,6 @@ const record = [
         </div>
       </section>
     </div>
-
-  </div>
 </template>
 
 
