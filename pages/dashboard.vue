@@ -41,15 +41,17 @@
         </header>
 
         <!-- Activity list -->
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-2 gap-y-4 pt-4">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-2 gap-y-2 pt-4">
 			<div v-for="item in quickLinks" :key="item.id" class="">
-				<div class="card rounded-lg border border-green-400">
+				<div class="card rounded-sm border border-gray-200 hover:border-green-400">
 					<div class="image-thumb bg-gray-800/40">
 						<img :src="item.imageUrl" :alt="item.alt" class="object-fit" loading="lazy" :width="item.width" :height="item.height" />
 					</div>
 					<div class="data-bot bg-black p-4">
-						<div class="text-base sm:text-lg md:text-xl font-bold text-white">
-							{{ item.name }}
+						<div class="text-base sm:text-lg md:text-xl font-bold text-white hover:text-green-400">
+							<NuxtLink :to="item.to">
+								{{ item.name }}
+							</NuxtLink>
 						</div>
 					</div>
 				</div>
@@ -83,9 +85,9 @@
 			name: 'Alex Volkanovski',
 			imageUrl: '/avatars/3949584.png',
 			alt: '2023-01-23T11:00',
-			width: '',
-			height: '',
-			to: '',
+			width: '600',
+			height: '436',
+			to: 'https://saturdays.io/athlete/86488/bio',
 			lastUpdate: '',
 		},
     	{
@@ -93,19 +95,19 @@
 			name: 'Holly Holm',
 			imageUrl: '/avatars/3028404.png',
 			alt: '2023-01-23T11:00',
-			width: '',
-			height: '',
-			to: '',
+			width: '600',
+			height: '436',
+			to: 'https://saturdays.io/athlete/68396/bio',
 			lastUpdate: '',
 		},
     	{
 			id: '2',
-			name: 'Jessica Rose-Clark',
+			name: 'UFC 293',
 			imageUrl: '/avatars/3902226.png',
 			alt: '2023-01-23T11:00',
-			width: '',
-			height: '',
-			to: '',
+			width: '600',
+			height: '436',
+			to: 'https://saturdays.io/event/2685/overview',
 			lastUpdate: '',
 		},
 		{
@@ -113,9 +115,9 @@
 			name: 'Jon Jones',
 			imageUrl: '/avatars/2335639.png',
 			alt: '2023-01-23T11:00',
-			width: '',
-			height: '',
-			to: '',
+			width: '600',
+			height: '436',
+			to: 'https://saturdays.io/athlete/69643/bio',
 			lastUpdate: '',
 		},
 		// More items...
