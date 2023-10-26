@@ -95,7 +95,7 @@ const record = [
               </thead>
 
               <tbody>
-                <tr v-for="item in record" :key="item.id" class="bg-white/5 border border-white/20 text-white">
+                <tr v-for="item in record" :key="item.id" class="bg-gray-900 border border-white/20 text-white">
                   <th scope="row" class="px-2 py-4 font-bold text-center text-gray-400">
                     {{ item.result }}
                   </th>
