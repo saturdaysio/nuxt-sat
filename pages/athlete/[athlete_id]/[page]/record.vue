@@ -61,9 +61,8 @@ const record = [
 
 <template>
     <div class="py-4 space-y-14">
-      <section class="mx-auto w-full rounded-md border border-green-400 bg-gray-900/10 px-4 py-8">
-
-        <h1 class="text-2xl md:text-2xl lg:text-3xl font-bold text-white">Fight Record</h1>
+      <section class="mx-auto w-full rounded-md border border-white/20 bg-gray-900 p-4">
+        <h1 class="text-2xl font-bold text-white">Fight Record</h1>
 
         <div id="fight_table" class="max-w-full mx-auto pt-4">
 
@@ -96,7 +95,7 @@ const record = [
               </thead>
 
               <tbody>
-                <tr v-for="item in record" :key="item.id" class="bg-white/5 border border-green-300/40 text-white">
+                <tr v-for="item in record" :key="item.id" class="bg-white/5 border border-white/20 text-white">
                   <th scope="row" class="px-2 py-4 font-bold text-center text-gray-400">
                     {{ item.result }}
                   </th>
