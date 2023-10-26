@@ -66,7 +66,7 @@ function changeTab(index: number) {
             </TabPanel>
 
             <TabPanel>
-              <h1>Coming soon!</h1>
+              <Matches v-if="event" :event="event as IEvent"/>
             </TabPanel>
 
             <TabPanel>
