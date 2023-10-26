@@ -41,19 +41,19 @@
         </header>
 
         <!-- Activity list -->
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-2 gap-y-2 pt-4">
+		<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-2 gap-y-2 pt-4">
 			<div v-for="item in quickLinks" :key="item.id" class="">
-				<div class="card rounded-sm border border-gray-200 hover:border-green-400">
-					<div class="image-thumb bg-gray-800/40">
-						<img :src="item.imageUrl" :alt="item.alt" class="object-fit" loading="lazy" :width="item.width" :height="item.height" />
-					</div>
-					<div class="data-bot bg-black p-4">
-						<div class="text-base sm:text-lg md:text-xl font-bold text-white hover:text-green-400">
-							<NuxtLink :to="item.to">
-								{{ item.name }}
-							</NuxtLink>
+				<div class="card rounded-sm border border-gray-200 hover:border-green-400 text-white hover:text-blue-400">
+					<NuxtLink :to="item.to">
+						<div class="image-thumb bg-gray-800/40">
+							<img :src="item.imageUrl" :alt="item.alt" class="object-fit" loading="lazy" :width="item.width" :height="item.height" />
 						</div>
-					</div>
+						<div class="data-bot bg-black p-4">
+							<div class="text-base sm:text-lg md:text-xl font-bold">
+								{{ item.name }}
+							</div>
+						</div>
+					</NuxtLink>
 				</div>
 			</div>
 		</div>
@@ -82,43 +82,83 @@
 	const quickLinks = [
 		{
 			id: '0',
-			name: 'Alex Volkanovski',
+			name: 'Alexander Volkanovski',
 			imageUrl: '/avatars/3949584.png',
-			alt: '2023-01-23T11:00',
+			alt: 'Alexander Volkanovski',
 			width: '600',
 			height: '436',
-			to: 'https://saturdays.io/athlete/86488/bio',
-			lastUpdate: '',
+			to: '/athlete/86488/bio',
+			lastUpdate: '2023-01-23T11:00',
 		},
     	{
 			id: '1',
 			name: 'Holly Holm',
 			imageUrl: '/avatars/3028404.png',
-			alt: '2023-01-23T11:00',
+			alt: 'Holly Holm',
 			width: '600',
 			height: '436',
-			to: 'https://saturdays.io/athlete/68396/bio',
-			lastUpdate: '',
+			to: '/athlete/68396/bio',
+			lastUpdate: '2023-01-23T11:00',
 		},
     	{
 			id: '2',
-			name: 'UFC 293',
+			name: 'Jessica Rose-Clarke',
 			imageUrl: '/avatars/3902226.png',
-			alt: '2023-01-23T11:00',
+			alt: 'Jessica Rose-Clarke',
 			width: '600',
 			height: '436',
-			to: 'https://saturdays.io/event/2685/overview',
-			lastUpdate: '',
+			to: '/event/2685/overview',
+			lastUpdate: '2023-01-23T11:00',
 		},
 		{
 			id: '3',
 			name: 'Jon Jones',
 			imageUrl: '/avatars/2335639.png',
-			alt: '2023-01-23T11:00',
+			alt: 'Jon Jones',
 			width: '600',
 			height: '436',
-			to: 'https://saturdays.io/athlete/69643/bio',
-			lastUpdate: '',
+			to: '/athlete/69643/bio',
+			lastUpdate: '2023-01-23T11:00',
+		},
+		{
+			id: '4',
+			name: 'Anthony Smith',
+			imageUrl: '/avatars/2512976.png',
+			alt: 'Anthony Smith',
+			width: '600',
+			height: '436',
+			to: '/athlete/83221/bio',
+			lastUpdate: '2023-01-23T11:00',
+		},
+		{
+			id: '5',
+			name: 'UFC 273',
+			imageUrl: '/avatars/ufc-273-Header_1024x.webp',
+			alt: 'ufc 273',
+			width: '600',
+			height: '436',
+			to: '/event/5765/overview',
+			lastUpdate: '2023-01-23T11:00',
+		},
+		{
+			id: '6',
+			name: 'UFC 283',
+			imageUrl: '/avatars/ufc-283-Header_1024x.webp',
+			alt: 'ufc 283',
+			width: '1024',
+			height: '495',
+			to: '/event/1090/overview',
+			lastUpdate: '2023-01-23T11:00',
+		},
+		{
+			id: '7',
+			name: 'UFC 293',
+			imageUrl: '/avatars/ufc-293-Header_1024x.webp',
+			alt: 'ufc 293',
+			width: '1024',
+			height: '495',
+			to: '/event/2685/overview',
+			lastUpdate: '2023-01-23T11:00',
 		},
 		// More items...
 	]
