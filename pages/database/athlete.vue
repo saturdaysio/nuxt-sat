@@ -129,7 +129,7 @@
                 <div class="flex items-center gap-x-4">
                   <img :src="item.imageUrl || '/avatars/no-profile-image.png'" alt="fighter profile picture" class="h-10 w-10 object-cover rounded-full bg-gray-600" />
 
-                  <div class="text-base font-bold leading-6 text-white hover:text-green-400">
+                  <div class="truncate text-base font-bold leading-6 text-white hover:text-green-400">
                     {{ item.name }}
                   </div>
                 </div>
