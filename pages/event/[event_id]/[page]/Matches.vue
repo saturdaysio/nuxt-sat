@@ -16,73 +16,65 @@
         <div v-else>
 
           <div :v-if="matches.length" v-for="matches in eventMatches" :key="matches ? matches[0]?.type : 'invalid'" class="py-8">
-            <table class="w-full whitespace-nowrap text-left">
-              <colgroup>
-                <col class="w-full sm:w-5/12" />
-                <col class="lg:w-2/12" />
-                <col class="lg:w-2/12" />
-                <col class="lg:w-1/12" />
-                <col class="lg:w-1/12" />
-                <col class="lg:w-1/12" />
-              </colgroup>
-              <thead class="bg-gray-900/80 text-sm leading-6 text-gray-600">
+            <table class="w-full  md:text-base text-left whitespace-nowrap">
+              <thead class="bg-gray-900/80 text-sm  text-gray-600">
                 <tr>
-                  <th scope="col" class="py-2 px-4 font-bold uppercase">{{ matches ? matches[0]?.type : 'invalid' }}</th>
-                  <th scope="col" class="hidden py-2 px-4 font-bold uppercase sm:table-cell">Weightclass</th>
-                  <th scope="col" class="hidden py-2 px-4 font-bold uppercase sm:table-cell">Method</th>
-                  <th scope="col" class="hidden py-2 px-4 font-bold uppercase sm:table-cell">Round</th>
-                  <th scope="col" class="hidden py-2 px-4 font-bold uppercase sm:table-cell">Time</th>
-                  <td scope="col" class="hidden py-2 px-4 sm:table-cell"></td>
+                  <th scope="col" class="py-2 px-2 font-bold uppercase">{{ matches ? matches[0]?.type : 'invalid' }}</th>
+                  <th scope="col" class="hidden py-2 px-2 font-bold uppercase sm:table-cell">Weightclass</th>
+                  <th scope="col" class="hidden py-2 px-2 font-bold uppercase sm:table-cell">Method</th>
+                  <th scope="col" class="hidden py-2 px-2 font-bold uppercase sm:table-cell">Round</th>
+                  <th scope="col" class="hidden py-2 px-2 font-bold uppercase sm:table-cell">Time</th>
+                  <td scope="col" class="hidden py-2 px-2 sm:table-cell"></td>
                 </tr>
               </thead>
 
               <tbody class="divide-y divide-white/10">
-                <tr v-for="match in matches" :key="match.id">
-                  <td class="py-4 px-4">
+                <tr v-for="match in matches" :key="match.id" class="bg-gray-900 border border-white/20 text-white">
+                  <td class="py-2 px-2">
                     <div class="flex items-center gap-x-4">
-                      <div class="truncate text-base font-bold leading-6 text-white hover:text-green-400">
+                      <div class="truncate text-base font-bold  hover:text-green-400">
                         {{ match.winner.name }}
                       </div>
                       <span>def.</span>
-                      <div class="truncate text-base font-bold leading-6 text-white hover:text-green-400">
+                      <div class="truncate text-base font-bold  hover:text-green-400">
                         {{ match.loser.name }}
                       </div>
                     </div>
                   </td>
 
-                  <td class="hidden py-4 px-4 sm:table-cell">
+                  <td class="hidden py-2 px-2 sm:table-cell">
                     <div class="flex gap-x-3">
-                      <div class="text-md leading-6 text-white">
+                      <div class="">
                         {{ match.weightclass || match.winner.weightclass }}
                       </div>
                     </div>
                   </td>
 
-                  <td class="hidden py-4 px-4 text-right sm:table-cell">
+                  <td class="hidden py-2 px-2 text-right sm:table-cell">
                     <div class="flex gap-x-3">
-                      <div class="text-md leading-6 text-white">
+                      <div class="">
                         {{ match.method }}
                       </div>
                     </div>
                   </td>
 
-                  <td class="hidden py-4 px-4 text-right sm:table-cell">
+                  <td class="hidden py-2 px-2 text-right sm:table-cell">
                     <div class="flex gap-x-3">
-                      <div class="text-md leading-6 text-white">
+                      <div class="">
                         {{ match.round }}
                       </div>
                     </div>
                   </td>
 
-                  <td class="hidden py-4 px-4 text-right sm:table-cell">
+                  <td class="hidden py-2 px-2 text-right sm:table-cell">
                     <div class="flex gap-x-3">
-                      <div class="text-md leading-6 text-white">
+                      <div class="">
                         {{ match.time }}
                       </div>
                     </div>
                   </td>
 
-                  <td class="py-2 px-4 text-right sm:table-cell">
+                  <td class="py-2 px-2 text-right sm:table-cell">
                     <Button
                       button-label="Match page link"
                       button-type="button"
@@ -110,7 +102,7 @@
   import Button from "~/components/Button.vue";
   import CustomInput from "~/components/CustomInput.vue";
   import { format, isDate, parseISO } from "date-fns";
-  import { API } from "~/composable/api";
+  import { API } from "~/composables/api";
   import { IEvent } from "~/utils/interfaces/Event";
   import { IMatch } from "~/utils/interfaces/Match";
   import { ChevronRightIcon } from "@heroicons/vue/20/solid";
