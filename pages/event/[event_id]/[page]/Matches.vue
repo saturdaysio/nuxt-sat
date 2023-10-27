@@ -1,7 +1,6 @@
 <template>
   <div class="space-y-14">
     <section class="mx-auto rounded-sm border border-white/20 bg-gray-900/10 p-4">
-      <h1 class="text-2xl font-bold text-white">Matches</h1>
       <!--    sub title -->
       <div v-if="pending" class="flex justify-center">
         <Loader />
@@ -13,11 +12,11 @@
         <div v-if="eventMatches.length === 0" class="flex justify-center">
           <p class="text-white">No matches found</p>
         </div>
-        <div v-else>
 
+        <div v-else>
           <div :v-if="matches.length" v-for="matches in eventMatches" :key="matches ? matches[0]?.type : 'invalid'" class="relative overflow-x-auto pt-6">
             <table class="w-full text-md md:text-base text-left whitespace-nowrap">
-              <caption class="p-2 text-lg font-bold text-left text-blue-400 bg-gray-800">
+              <caption class="p-2 text-xl font-light text-left text-white">
                 <h2 class="">
                 {{ matches ? matches[0]?.type : 'invalid' }}
               </h2>
