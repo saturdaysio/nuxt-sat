@@ -110,15 +110,15 @@
 
     <!-- Search result table -->
     <div class="overflow-x-auto border-t border-white/10 pt-16">
-      <table class="w-full text-left whitespace-nowrap">
+      <table class="w-full table-fixed text-left whitespace-nowrap">
 
         <thead class="bg-gray-900/80 text-sm font-bold uppercase leading-6 text-gray-600">
           <tr>
-            <th scope="col" class="py-2 px-4">Name</th>
-            <th scope="col" class="hidden py-2 px-4 sm:table-cell">Record</th>
-            <th scope="col" class="hidden py-2 px-4 sm:table-cell">Division</th>
-            <th scope="col" class="hidden py-2 px-4 text-right sm:table-cell">Last updated on</th>
-            <th scope="col" class="py-2 px-4 sm:table-cell"></th>
+            <th scope="col" class="w-1/2 py-2 px-4">Name</th>
+            <th scope="col" class="hidden py-2 px-4 md:table-cell">Record</th>
+            <th scope="col" class="hidden py-2 px-4 md:table-cell">Division</th>
+            <th scope="col" class="hidden py-2 px-4 text-right md:table-cell">Last updated on</th>
+            <th scope="col" class="py-2 px-4 md:table-cell"></th>
           </tr>
         </thead>
 
@@ -136,23 +136,23 @@
               </Button>
             </td>
 
-            <td class="hidden py-2 px-4 sm:table-cell">
+            <td class="hidden py-2 px-4 md:table-cell">
               <span class="inline-flex items-center rounded-md px-3 py-2 bg-gray-400/20 text-sm text-gray-400 ring-1 ring-inset ring-gray-400/20">
                 {{ item.rank || '? - ?' }}
               </span>
             </td>
 
-            <td class="hidden py-2 px-4 text-md text-gray-400 sm:table-cell">
+            <td class="hidden py-2 px-4 text-md text-gray-400 md:table-cell">
               {{ item.weightclass !== 'undefined' ? item.weightclass : 'Unknown' }}
             </td>
 
-            <td class="hidden py-2 px-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
+            <td class="hidden py-2 px-4 text-right text-md leading-6 text-gray-400 md:table-cell">
               <time :datetime="item.dateTime">
                 {{ format(parseISO(item.updated_at), 'MMM d, yyyy') }}
               </time>
             </td>
 
-            <td class="py-2 px-4 text-right sm:table-cell">
+            <td class="py-2 px-2 text-right md:table-cell">
               <Button
                 button-label="Athlete page link"
                 button-type="button"
