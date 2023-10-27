@@ -122,7 +122,7 @@ const customQuery = (query: string) => {
         </thead>
 
         <tbody class="divide-y divide-white/10">
-          <tr v-for="item in eventStore.getResults?.hits" :key="item.objectID">
+          <tr v-for="item in eventStore.getResults?.hits" :key="item.objectID" class="h-16">
             <td class="py-2 px-4">
               <Button button-label="Event page link" :to="`/event/${item.id}/overview`">
                 <div class="text-base font-bold leading-6 text-white hover:text-green-400">

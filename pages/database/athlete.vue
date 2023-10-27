@@ -123,7 +123,7 @@
         </thead>
 
         <tbody class="divide-y divide-white/10">
-          <tr v-for="item in athleteStore.getResults?.hits" :key="item.objectID">
+          <tr v-for="item in athleteStore.getResults?.hits" :key="item.objectID" class="h-16">
             <td class="py-2 px-4">
               <Button button-label="Athlete page link" :to="`/athlete/${item.id}/bio`">
                 <div class="flex items-center gap-x-4">
