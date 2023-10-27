@@ -21,7 +21,7 @@ const {value} = defineProps<DateInputProps>()
         :value="value"
     />
     <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-      <CalendarIcon class="h-5 w-5 text-white hover:text-green-400" aria-hidden="true"/>
+      <CalendarIcon class="h-5 w-5 stroke-white hover:stroke-green-400" aria-hidden="true"/>
     </div>
   </div>
 </template>
