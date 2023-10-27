@@ -109,22 +109,15 @@
     </header>
 
     <!-- Activity list -->
-    <div class="border-t border-white/10 pt-16">
-      <table class="w-full whitespace-nowrap text-left">
-        <colgroup>
-          <col class="w-full sm:w-2/12" />
-          <col class="lg:w-1/12" />
-          <col class="lg:w-1/12" />
-          <col class="lg:w-1/12" />
-          <col class="lg:w-1/12" />
-        </colgroup>
+    <div class="overflow-x-auto border-t border-white/10 pt-16">
+      <table class="w-full text-left whitespace-nowrap">
 
-        <thead class="bg-gray-900/80 text-sm leading-6 text-gray-600">
+        <thead class="bg-gray-900/80 text-sm font-bold uppercase leading-6 text-gray-600">
           <tr>
-            <th scope="col" class="py-2 px-4 font-bold uppercase ">Name</th>
-            <th scope="col" class="py-2 px-4 font-bold uppercase sm:table-cell">Record</th>
-            <th scope="col" class="py-2 px-4 text-right font-bold uppercase sm:text-left">Division</th>
-            <th scope="col" class="py-2 px-4 text-right font-bold uppercase sm:table-cell">Last updated on</th>
+            <th scope="col" class="py-2 px-4">Name</th>
+            <th scope="col" class="hidden py-2 px-4 sm:table-cell">Record</th>
+            <th scope="col" class="hidden py-2 px-4 sm:table-cell">Division</th>
+            <th scope="col" class="hidden py-2 px-4 text-right sm:table-cell">Last updated on</th>
             <th scope="col" class="py-2 px-4 sm:table-cell"></th>
           </tr>
         </thead>
@@ -134,9 +127,9 @@
             <td class="py-2 px-4">
               <Button button-label="Athlete page link" :to="`/athlete/${item.id}/bio`">
                 <div class="flex items-center gap-x-4">
-                  <img :src="item.imageUrl || '/avatars/no-profile-image.png'" alt="fighter profile picture"
-                    class="h-10 w-10 object-cover rounded-full bg-gray-600" />
-                  <div class="truncate text-base font-bold leading-6 text-white hover:text-green-400">
+                  <img :src="item.imageUrl || '/avatars/no-profile-image.png'" alt="fighter profile picture" class="h-10 w-10 object-cover rounded-full bg-gray-600" />
+
+                  <div class="text-base font-bold leading-6 text-white hover:text-green-400">
                     {{ item.name }}
                   </div>
                 </div>
@@ -144,29 +137,18 @@
             </td>
 
             <td class="hidden py-2 px-4 sm:table-cell">
-              <div class="flex gap-x-2">
-                <span
-                  class="inline-flex items-center rounded-md bg-gray-400/20 px-3 py-2 text-sm font-medium text-gray-400 ring-1 ring-inset ring-gray-400/20">
-                  {{ item.rank || '? - ?' }}
-                </span>
-              </div>
+              <span class="inline-flex items-center rounded-md px-3 py-2 bg-gray-400/20 text-sm text-gray-400 ring-1 ring-inset ring-gray-400/20">
+                {{ item.rank || '? - ?' }}
+              </span>
             </td>
 
-            <td class="py-2 px-4 text-sm leading-4">
-              <div class="flex items-center justify-end gap-x-2 sm:justify-start">
-                <time class="text-gray-400 sm:hidden" :datetime="item.dateTime">{{ item.date }}</time>
-
-                <div class="text-md text-gray-400 sm:block">
-                  {{ item.weightclass !== 'undefined' ? item.weightclass : 'Unknown' }}
-                </div>
-              </div>
+            <td class="hidden py-2 px-4 text-md text-gray-400 sm:table-cell">
+              {{ item.weightclass !== 'undefined' ? item.weightclass : 'Unknown' }}
             </td>
 
-            <td class="py-2 px-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
-              <time :datetime="item.dateTime">{{
-                format(parseISO(item.updated_at), 'MMM d, yyyy')
-
-              }}
+            <td class="hidden py-2 px-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
+              <time :datetime="item.dateTime">
+                {{ format(parseISO(item.updated_at), 'MMM d, yyyy') }}
               </time>
             </td>
 
