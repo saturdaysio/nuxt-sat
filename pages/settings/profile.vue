@@ -10,11 +10,11 @@
           <form class=" bg-gray-800/20" @submit.prevent="updateProfile">
             <div class="space-y-12">
 
-              <div v-if="user" class="max-w-7xl mx-auto px-4 md:px-6 border-b border-green-400/40 py-12">
+              <div v-if="user" class="max-w-7xl mx-auto px-4 py-8">
                 <h2 class="text-3xl font-bold leading-8 text-white">Profile Info</h2>
                 <p class="mt-2 text-base leading-6 text-gray-400">Flavour text description lorem ipsum for personal info.</p>
 
-                <div class="mt-10 py-6 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8">
+                <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8">
                   <div class="col-span-1">
                     <CustomInput
                         inputType="text"
@@ -68,7 +68,7 @@
                 </div>
 
 
-                <div class="mt-20 py-6 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8">
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8">
 
                   <div class="col-span-1">
                     <CustomInput
@@ -151,7 +151,7 @@
 
             </div>
 
-            <div class="max-w-7xl mx-auto px-4 md:px-6 py-12 flex items-center justify-start gap-x-6">
+            <div class="max-w-7xl mx-auto px-4 py-8 flex items-center justify-start gap-x-6">
               <Button buttton-type="submit" button-label="Save" button-class="primary" />
               <Button buttton-type="button" button-label="Cancel" button-class="cta" />
             </div>
