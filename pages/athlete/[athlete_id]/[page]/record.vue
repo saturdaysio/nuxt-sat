@@ -80,7 +80,7 @@
             </thead>
 
             <tbody class="divide-y divide-white/10 bg-black border border-white/20">
-              <tr v-for="item in record" :key="item.id" class="text-grey-400">
+              <tr v-for="item in record" :key="item.id" class="leading-6 text-gray-400">
                 <th scope="row" class="px-2 py-2 font-bold text-center text-white">
                   {{ item.result }}
                 </th>
