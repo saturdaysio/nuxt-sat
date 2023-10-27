@@ -17,18 +17,21 @@
 
           <div :v-if="matches.length" v-for="matches in eventMatches" :key="matches ? matches[0]?.type : 'invalid'" class="relative overflow-x-auto pt-6">
             <table class="w-full text-md md:text-base text-left whitespace-nowrap">
-              <h2 class="font-bold text-blue-400 py-2">
+              <caption class="p-2 text-lg font-bold text-left text-blue-400 bg-gray-800">
+                <h2 class="">
                 {{ matches ? matches[0]?.type : 'invalid' }}
               </h2>
+              </caption>
+
               <thead class="text-sm font-bold uppercase text-gray-400 bg-gray-800/40">
                 <tr>
-                  <th scope="col" class="hidden py-2 px-2 sm:table-cell">Won</th>
-                  <th scope="col" class="hidden py-2 px-2 sm:table-cell">Lost</th>
+                  <th scope="col" class="py-2 px-2 sm:table-cell">Won</th>
+                  <th scope="col" class="py-2 px-2 sm:table-cell">Lost</th>
                   <th scope="col" class="hidden py-2 px-2 sm:table-cell">Weightclass</th>
-                  <th scope="col" class="hidden py-2 px-2 sm:table-cell">Method</th>
-                  <th scope="col" class="hidden py-2 px-2 sm:table-cell">Round</th>
-                  <th scope="col" class="hidden py-2 px-2 sm:table-cell">Time</th>
-                  <td scope="col" class="hidden py-2 px-2 sm:table-cell"></td>
+                  <th scope="col" class="py-2 px-2 sm:table-cell">Method</th>
+                  <th scope="col" class="py-2 px-2 sm:table-cell">Round</th>
+                  <th scope="col" class="py-2 px-2 sm:table-cell">Time</th>
+                  <td scope="col" class="py-2 px-2 sm:table-cell"></td>
                 </tr>
               </thead>
 
