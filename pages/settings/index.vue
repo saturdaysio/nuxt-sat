@@ -10,8 +10,8 @@
         	<form class="" @submit.prevent="updateProfile">
         		<div class="space-y-4 md:space-y-6 lg:space-y-8">
 
-					<div class="max-w-7xl mx-auto px-4 md:px-6 py-12 bg-blue-400/20 rounded-md">
-						<h2 class="text-3xl font-bold leading-8 text-white">Change Password</h2>
+					<div class="max-w-7xl mx-auto px-4 md:px-6 py-8 bg-gray-800/40 rounded-md">
+						<h2 class="text-2xl font-bold leading-8 text-white">Change Password</h2>
 						<p class="mt-2 text-base leading-6 text-gray-400">Enter your existing password and your new password to change it.</p>
 
 						<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8">
@@ -46,8 +46,8 @@
 						</div>
 					</div>
 
-					<div class="max-w-7xl mx-auto px-4 md:px-6 py-12 bg-green-400/20 rounded-md">
-						<h2 class="text-3xl font-bold leading-8 text-white">Delete Account</h2>
+					<div class="max-w-7xl mx-auto px-4 md:px-6 py-8 bg-gray-800/40 rounded-md">
+						<h2 class="text-2xl font-bold leading-8 text-white">Delete Account</h2>
 						<p class="mt-2 text-base leading-6 text-gray-400">Enter your existing password and your new password to change it.</p>
 
 						<div class="mt-6">
@@ -55,8 +55,8 @@
 						</div>
 					</div>
 
-					<div v-if="user" class="max-w-7xl mx-auto px-4 py-6 bg-purple-400/20 rounded-md">
-						<h2 class="text-3xl font-bold leading-8 text-white">Sign out</h2>
+					<div v-if="user" class="max-w-7xl mx-auto px-4 py-8 bg-gray-800/40 rounded-md">
+						<h2 class="text-2xl font-bold leading-8 text-white">Sign out</h2>
 		                <p class="mt-2 text-base leading-6 text-gray-400">Flavour text for logging out.</p>
 
 						<div class="mt-8 flex items-center justify-start">
