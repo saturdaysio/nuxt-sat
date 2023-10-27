@@ -35,26 +35,22 @@
               </thead>
 
               <tbody class="divide-y divide-white/10 bg-black border border-white/20">
-                <tr v-for="match in matches" :key="match.id" class="text-white">
+                <tr v-for="match in matches" :key="match.id" class="leading-6 text-gray-400">
 
                   <td class="py-2 px-2">
-                    <div class="text-base font-bold hover:text-green-400">
+                    <div class="font-bold hover:text-green-400">
                         {{ match.winner.name }}
                       </div>
                   </td>
 
                   <td class="py-2 px-2">
-                    <div class="text-base font-bold hover:text-green-400">
+                    <div class="font-bold hover:text-green-400">
                         {{ match.loser.name }}
                       </div>
                   </td>
 
                   <td class="hidden py-2 px-2 md:table-cell">
-                    <div class="flex gap-x-2">
-                      <div class="">
-                        {{ match.weightclass || match.winner.weightclass }}
-                      </div>
-                    </div>
+                    {{ match.weightclass }}
                   </td>
 
                   <td class="py-2 px-2 md:table-cell">
