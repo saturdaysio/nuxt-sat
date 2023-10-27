@@ -110,14 +110,14 @@ const customQuery = (query: string) => {
 
     <!-- Search result table -->
     <div class="overflow-x-auto border-t border-white/10 pt-16">
-      <table class="w-full table-fixed text-left whitespace-nowrap">
+      <table class="w-full table-fixed sm:table-auto text-left whitespace-nowrap">
 
         <thead class="bg-gray-900/80 text-sm font-bold uppercase leading-6 text-gray-600">
           <tr>
-            <th scope="col" class="w-full md:w-1/2 py-2 px-4">Name</th>
+            <th scope="col" class="w-full sm:w-1/2 py-2 px-4">Name</th>
             <th scope="col" class="hidden py-2 px-4 sm:table-cell">Event Date</th>
             <th scope="col" class="hidden py-2 px-4 text-right sm:table-cell">Last updated on</th>
-            <th scope="col" class="py-2 px-4 sm:table-cell"></th>
+            <th scope="col" class="w-16 py-2 px-4 sm:table-cell"></th>
           </tr>
         </thead>
 
