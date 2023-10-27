@@ -16,10 +16,12 @@
         <div v-else>
 
           <div :v-if="matches.length" v-for="matches in eventMatches" :key="matches ? matches[0]?.type : 'invalid'" class="relative overflow-x-auto pt-6">
-            <table class="w-full text-base text-left whitespace-nowrap">
-              <thead class="bg-gray-900/80 text-sm font-bold uppercase text-gray-600">
+            <table class="w-full text-md md:text-base text-left whitespace-nowrap">
+              <thead class="text-sm font-bold uppercase text-gray-400 bg-gray-800/40">
                 <tr>
                   <th scope="col" class="py-2 px-2">{{ matches ? matches[0]?.type : 'invalid' }}</th>
+                  <th scope="col" class="hidden py-2 px-2 sm:table-cell">Won</th>
+                  <th scope="col" class="hidden py-2 px-2 sm:table-cell">Lost</th>
                   <th scope="col" class="hidden py-2 px-2 sm:table-cell">Weightclass</th>
                   <th scope="col" class="hidden py-2 px-2 sm:table-cell">Method</th>
                   <th scope="col" class="hidden py-2 px-2 sm:table-cell">Round</th>
@@ -28,53 +30,41 @@
                 </tr>
               </thead>
 
-              <tbody class="divide-y divide-white/10">
-                <tr v-for="match in matches" :key="match.id" class="bg-black border border-white/20 text-white">
+              <tbody class="divide-y divide-white/10 bg-black border border-white/20">
+                <tr v-for="match in matches" :key="match.id" class="text-white">
                   <td class="py-2 px-2">
-                    <div class="flex items-center gap-x-4">
-                      <div class="truncate text-base font-bold  hover:text-green-400">
+                    <div class="text-base font-bold hover:text-green-400">
                         {{ match.winner.name }}
                       </div>
-                      <span>def.</span>
-                      <div class="truncate text-base font-bold  hover:text-green-400">
+                  </td>
+
+                  <td class="py-2 px-2">
+                    <div class="text-base font-bold hover:text-green-400">
                         {{ match.loser.name }}
                       </div>
-                    </div>
                   </td>
 
                   <td class="hidden py-2 px-2 sm:table-cell">
-                    <div class="flex gap-x-3">
+                    <div class="flex gap-x-2">
                       <div class="">
                         {{ match.weightclass || match.winner.weightclass }}
                       </div>
                     </div>
                   </td>
 
-                  <td class="hidden py-2 px-2 text-right sm:table-cell">
-                    <div class="flex gap-x-3">
-                      <div class="">
-                        {{ match.method }}
-                      </div>
-                    </div>
+                  <td class="hidden py-2 px-2 sm:table-cell">
+                    {{ match.method }}
+                  </td>
+
+                  <td class="hidden py-2 px-2 sm:table-cell">
+                    {{ match.round }}
+                  </td>
+
+                  <td class="hidden py-2 px-2 sm:table-cell">
+                    {{ match.time }}
                   </td>
 
                   <td class="hidden py-2 px-2 text-right sm:table-cell">
-                    <div class="flex gap-x-3">
-                      <div class="">
-                        {{ match.round }}
-                      </div>
-                    </div>
-                  </td>
-
-                  <td class="hidden py-2 px-2 text-right sm:table-cell">
-                    <div class="flex gap-x-3">
-                      <div class="">
-                        {{ match.time }}
-                      </div>
-                    </div>
-                  </td>
-
-                  <td class="py-2 px-2 text-right sm:table-cell">
                     <Button
                       button-label="Match page link"
                       button-type="button"
