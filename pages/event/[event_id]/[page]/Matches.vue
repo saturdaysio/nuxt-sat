@@ -17,13 +17,13 @@
 
           <div :v-if="matches.length" v-for="matches in eventMatches" :key="matches ? matches[0]?.type : 'invalid'" class="py-8">
             <table class="w-full  md:text-base text-left whitespace-nowrap">
-              <thead class="bg-gray-900/80 text-sm  text-gray-600">
+              <thead class="bg-gray-900/80 text-sm font-bold uppercase text-gray-600">
                 <tr>
                   <th scope="col" class="py-2 px-2 font-bold uppercase">{{ matches ? matches[0]?.type : 'invalid' }}</th>
-                  <th scope="col" class="hidden py-2 px-2 font-bold uppercase sm:table-cell">Weightclass</th>
-                  <th scope="col" class="hidden py-2 px-2 font-bold uppercase sm:table-cell">Method</th>
-                  <th scope="col" class="hidden py-2 px-2 font-bold uppercase sm:table-cell">Round</th>
-                  <th scope="col" class="hidden py-2 px-2 font-bold uppercase sm:table-cell">Time</th>
+                  <th scope="col" class="hidden py-2 px-2 sm:table-cell">Weightclass</th>
+                  <th scope="col" class="hidden py-2 px-2 sm:table-cell">Method</th>
+                  <th scope="col" class="hidden py-2 px-2 sm:table-cell">Round</th>
+                  <th scope="col" class="hidden py-2 px-2 sm:table-cell">Time</th>
                   <td scope="col" class="hidden py-2 px-2 sm:table-cell"></td>
                 </tr>
               </thead>
