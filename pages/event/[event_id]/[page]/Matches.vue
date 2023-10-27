@@ -24,13 +24,13 @@
 
               <thead class="text-sm font-bold uppercase text-gray-400 bg-gray-800/40">
                 <tr>
-                  <th scope="col" class="py-2 px-2 sm:table-cell">Won</th>
-                  <th scope="col" class="py-2 px-2 sm:table-cell">Lost</th>
-                  <th scope="col" class="hidden py-2 px-2 sm:table-cell">Weightclass</th>
-                  <th scope="col" class="py-2 px-2 sm:table-cell">Method</th>
-                  <th scope="col" class="py-2 px-2 sm:table-cell">Round</th>
-                  <th scope="col" class="py-2 px-2 sm:table-cell">Time</th>
-                  <td scope="col" class="py-2 px-2 sm:table-cell"></td>
+                  <th scope="col" class="py-2 px-2 md:table-cell">Won</th>
+                  <th scope="col" class="py-2 px-2 md:table-cell">Lost</th>
+                  <th scope="col" class="hidden py-2 px-2 md:table-cell">Weightclass</th>
+                  <th scope="col" class="py-2 px-2 md:table-cell">Method</th>
+                  <th scope="col" class="py-2 px-2 md:table-cell">Round</th>
+                  <th scope="col" class="py-2 px-2 md:table-cell">Time</th>
+                  <td scope="col" class="py-2 px-2 md:table-cell"></td>
                 </tr>
               </thead>
 
@@ -49,7 +49,7 @@
                       </div>
                   </td>
 
-                  <td class="hidden py-2 px-2 sm:table-cell">
+                  <td class="hidden py-2 px-2 md:table-cell">
                     <div class="flex gap-x-2">
                       <div class="">
                         {{ match.weightclass || match.winner.weightclass }}
@@ -57,19 +57,19 @@
                     </div>
                   </td>
 
-                  <td class="hidden py-2 px-2 sm:table-cell">
+                  <td class="py-2 px-2 md:table-cell">
                     {{ match.method }}
                   </td>
 
-                  <td class="hidden py-2 px-2 sm:table-cell">
+                  <td class="py-2 px-2 md:table-cell">
                     {{ match.round }}
                   </td>
 
-                  <td class="hidden py-2 px-2 sm:table-cell">
+                  <td class="py-2 px-2 md:table-cell">
                     {{ match.time }}
                   </td>
 
-                  <td class="hidden py-2 px-2 text-right sm:table-cell">
+                  <td class="py-2 px-2 text-right md:table-cell">
                     <Button
                       button-label="Match page link"
                       button-type="button"
