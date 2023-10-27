@@ -14,7 +14,7 @@
         </div>
 
         <div v-else>
-          <div :v-if="matches.length" v-for="matches in eventMatches" :key="matches ? matches[0]?.type : 'invalid'" class="relative overflow-x-auto pt-6">
+          <div :v-if="matches.length" v-for="matches in eventMatches" :key="matches ? matches[0]?.type : 'invalid'" class="relative overflow-x-auto">
             <table class="w-full text-md md:text-base text-left whitespace-nowrap">
               <caption class="p-2 text-xl font-light text-left text-white">
                 <h2 class="">
