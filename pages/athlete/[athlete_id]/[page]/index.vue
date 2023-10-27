@@ -41,7 +41,7 @@ function changeTab(index: number) {
   <div class="min-h-full">
     <Nav2/>
 
-    <main class="py-24">
+    <main class="pt-24">
       <div class="mx-auto max-w-screen-2xl px-2 sm:px-4 text-white">
         <!-- Your content -->
 
