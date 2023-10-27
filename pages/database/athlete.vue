@@ -125,7 +125,7 @@
         <tbody class="divide-y divide-white/10">
           <tr v-for="item in athleteStore.getResults?.hits" :key="item.objectID" class="h-16">
             <td class="py-2 px-4">
-              <Button button-label="Athlete page link" :to="`/athlete/${item.id}/bio`">
+              <NuxtLink :to="`/athlete/${item.id}/bio`">
                 <div class="flex items-center gap-x-4">
                   <img :src="item.imageUrl || '/avatars/no-profile-image.png'" alt="fighter profile picture" class="h-10 w-10 object-cover rounded-full bg-gray-600" />
 
@@ -133,7 +133,7 @@
                     {{ item.name }}
                   </div>
                 </div>
-              </Button>
+              </NuxtLink>
             </td>
 
             <td class="hidden py-2 px-4 sm:table-cell">

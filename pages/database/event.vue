@@ -114,7 +114,7 @@ const customQuery = (query: string) => {
 
         <thead class="bg-gray-900/80 text-sm font-bold uppercase leading-6 text-gray-600">
           <tr>
-            <th scope="col" class="w-full sm:w-1/2 py-2 px-4">Name</th>
+            <th scope="col" class="w-full sm:w-3/4 py-2 px-4">Name</th>
             <th scope="col" class="hidden py-2 px-4 sm:table-cell">Event Date</th>
             <th scope="col" class="hidden py-2 px-4 text-right sm:table-cell">Last updated on</th>
             <th scope="col" class="w-16 py-2 px-4 sm:table-cell"></th>
@@ -124,11 +124,11 @@ const customQuery = (query: string) => {
         <tbody class="divide-y divide-white/10">
           <tr v-for="item in eventStore.getResults?.hits" :key="item.objectID" class="h-16">
             <td class="py-2 px-4">
-              <Button button-label="Event page link" :to="`/event/${item.id}/overview`">
+              <NuxtLink :to="`/event/${item.id}/overview`">
                 <div class="truncate text-base font-bold leading-6 text-white hover:text-green-400">
                   {{ item.name }}
                 </div>
-              </Button>
+              </NuxtLink>
             </td>
 
             <td class="hidden py-2 px-4 sm:table-cell">
