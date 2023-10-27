@@ -67,7 +67,7 @@
       <div id="fight_table" class="pt-4">
         <div class="relative overflow-x-auto">
           <table class="w-full text-md md:text-base text-left">
-            <thead class="text-sm uppercase bg-gray-800/40 text-gray-400">
+            <thead class="text-sm font-bold uppercase text-gray-400 bg-gray-800/40">
               <tr>
                 <th scope="col" class="px-2 py-2 text-center">Res</th>
                 <th scope="col" class="px-2 py-2">Opponent</th>
@@ -111,7 +111,7 @@
           </table>
         </div>
       </div>
-      
+
     </section>
   </div>
 </template>
