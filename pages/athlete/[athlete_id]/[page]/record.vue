@@ -79,9 +79,9 @@
               </tr>
             </thead>
 
-            <tbody>
-              <tr v-for="item in record" :key="item.id" class="bg-gray-900 border border-white/20 text-white">
-                <th scope="row" class="px-2 py-2 font-bold text-center text-gray-400">
+            <tbody class="divide-y divide-white/10 bg-black border border-white/20">
+              <tr v-for="item in record" :key="item.id" class="text-grey-400">
+                <th scope="row" class="px-2 py-2 font-bold text-center text-white>
                   {{ item.result }}
                 </th>
                 <td class="px-2 py-2 font-bold whitespace-nowrap">
