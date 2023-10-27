@@ -14,7 +14,7 @@
                 <h2 class="text-3xl font-bold leading-8 text-white">Profile Info</h2>
                 <p class="mt-2 text-base leading-6 text-gray-400">Flavour text description lorem ipsum for personal info.</p>
 
-                <div class="mt-10 py-6 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8 border border-green-400/80">
+                <div class="mt-10 py-6 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8">
                   <div class="col-span-1">
                     <CustomInput
                         inputType="text"
@@ -68,7 +68,7 @@
                 </div>
 
 
-                <div class="mt-20 py-6 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8 border border-green-400/80">
+                <div class="mt-20 py-6 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8">
 
                   <div class="col-span-1">
                     <CustomInput
@@ -177,7 +177,7 @@
   useHead({
     title: 'Saturdays.io - User Profile',
     meta: [
-      {name: 'description', content: 'Saturdays.io admin dashboard'},
+      {name: 'description', content: 'Saturdays.io admin user profile page'},
     ]
   })
 
@@ -217,20 +217,6 @@
     loading.value = true
     if (!user || !user.user) return
 
-    // remove fields not in interface
-    delete data["file-upload"]
-
-    // convert to array of permissions
-    const permissions = Object.keys({
-      comments: data.comments === 'on',
-      candidates: data.candidates === 'on',
-      offers: data.offers === 'on',
-    }).filter(key => data[key])
-
-    delete data.comments
-    delete data.candidates
-    delete data.offers
-
     const {error} = await supabase.from('users').upsert({
       // @ts-ignore
       id: user.user.id,
@@ -239,12 +225,6 @@
       profile_permissions: permissions
     }).select()
     loading.value = false
-  }
-
-  // Signout function
-  const logout = async () => {
-    let {error} = await supabase.auth.signOut();
-    navigateTo('/signin');
   }
 
 </script>
