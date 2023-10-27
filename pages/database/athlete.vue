@@ -108,7 +108,7 @@
       </SearchAutoComplete>
     </header>
 
-    <!-- Activity list -->
+    <!-- Search result table -->
     <div class="overflow-x-auto border-t border-white/10 pt-16">
       <table class="w-full text-left whitespace-nowrap">
 
