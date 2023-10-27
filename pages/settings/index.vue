@@ -6,7 +6,7 @@
     <main class="pt-24">
       <div class="mx-auto max-w-7xl px-2 md:px-4">
         <!-- Your content -->
-		<section class="mx-auto rounded-sm border border-white/10">
+		<section class="mx-auto rounded-sm">
         	<form class="" @submit.prevent="updateProfile">
         		<div class="space-y-4 md:space-y-6 lg:space-y-8">
 
