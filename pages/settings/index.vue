@@ -3,7 +3,7 @@
 
     <Nav2 />
 
-    <main class="py-24">
+    <main class="pt-24">
       <div class="mx-auto max-w-7xl px-2 md:px-4">
         <!-- Your content -->
 		<section class="mx-auto border border-white/5">
