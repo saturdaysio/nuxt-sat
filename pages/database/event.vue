@@ -117,7 +117,7 @@ const customQuery = (query: string) => {
             <th scope="col" class="py-2 px-4">Name</th>
             <th scope="col" class="hidden py-2 px-4 sm:table-cell">Event Date</th>
             <th scope="col" class="hidden py-2 px-4 text-right sm:table-cell">Last updated on</th>
-            <th scope="col" class="hidden py-2 px-4 sm:table-cell"></th>
+            <th scope="col" class="py-2 px-4 sm:table-cell"></th>
           </tr>
         </thead>
 
