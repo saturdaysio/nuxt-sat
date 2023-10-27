@@ -15,11 +15,11 @@
         </div>
         <div v-else>
 
-          <div :v-if="matches.length" v-for="matches in eventMatches" :key="matches ? matches[0]?.type : 'invalid'" class="py-8">
-            <table class="w-full  md:text-base text-left whitespace-nowrap">
+          <div :v-if="matches.length" v-for="matches in eventMatches" :key="matches ? matches[0]?.type : 'invalid'" class="relative overflow-x-auto pt-6">
+            <table class="w-full text-base text-left whitespace-nowrap">
               <thead class="bg-gray-900/80 text-sm font-bold uppercase text-gray-600">
                 <tr>
-                  <th scope="col" class="py-2 px-2 font-bold uppercase">{{ matches ? matches[0]?.type : 'invalid' }}</th>
+                  <th scope="col" class="py-2 px-2">{{ matches ? matches[0]?.type : 'invalid' }}</th>
                   <th scope="col" class="hidden py-2 px-2 sm:table-cell">Weightclass</th>
                   <th scope="col" class="hidden py-2 px-2 sm:table-cell">Method</th>
                   <th scope="col" class="hidden py-2 px-2 sm:table-cell">Round</th>
@@ -29,7 +29,7 @@
               </thead>
 
               <tbody class="divide-y divide-white/10">
-                <tr v-for="match in matches" :key="match.id" class="bg-gray-900 border border-white/20 text-white">
+                <tr v-for="match in matches" :key="match.id" class="bg-black border border-white/20 text-white">
                   <td class="py-2 px-2">
                     <div class="flex items-center gap-x-4">
                       <div class="truncate text-base font-bold  hover:text-green-400">
