@@ -107,58 +107,54 @@ const customQuery = (query: string) => {
         </template>
       </SearchAutoComplete>
     </header>
-    <!-- Activity list -->
-    <div class="border-t border-white/10 pt-16">
-      <table class="w-full whitespace-nowrap text-left">
-        <colgroup>
-          <col class="w-full sm:w-3/12"/>
-          <col class="lg:w-1/12"/>
-          <col class="lg:w-1/12"/>
-          <col class="lg:w-1/12"/>
-        </colgroup>
-        <thead class="bg-gray-900/80 text-sm leading-6 text-gray-600">
+
+    <!-- Search result table -->
+    <div class="overflow-x-auto border-t border-white/10 pt-16">
+      <table class="w-full text-left whitespace-nowrap">
+
+        <thead class="bg-gray-900/80 text-sm font-bold uppercase leading-6 text-gray-600">
           <tr>
-            <th scope="col" class="py-2 px-4 font-bold uppercase">Name</th>
-            <th scope="col" class="py-2 px-4 font-bold uppercase sm:table-cell">Event Date</th>
-            <th scope="col" class="py-2 px-4 text-right font-bold uppercase sm:table-cell">Last updated on</th>
-            <th scope="col" class="py-2 px-4 sm:table-cell"></th>
+            <th scope="col" class="py-2 px-4">Name</th>
+            <th scope="col" class="hidden py-2 px-4 sm:table-cell">Event Date</th>
+            <th scope="col" class="hidden py-2 px-4 text-right sm:table-cell">Last updated on</th>
+            <th scope="col" class="hidden py-2 px-4 sm:table-cell"></th>
           </tr>
         </thead>
+
         <tbody class="divide-y divide-white/10">
-        <tr v-for="item in eventStore.getResults?.hits" :key="item.objectID">
-          <td class="py-5 px-4">
-            <Button
-              button-label="Event page link"
-              :to="`/event/${item.id}/overview`"
-            >
-              <div class="flex items-center gap-x-4">
-                <div class="truncate text-base font-bold leading-6 text-white hover:text-green-400">{{ item.name }}</div>
+          <tr v-for="item in eventStore.getResults?.hits" :key="item.objectID">
+            <td class="py-2 px-4">
+              <Button button-label="Event page link" :to="`/event/${item.id}/overview`">
+                <div class="text-base font-bold leading-6 text-white hover:text-green-400">
+                  {{ item.name }}
+                </div>
+              </Button>
+            </td>
+
+            <td class="hidden py-2 px-4 sm:table-cell">
+              <div class="text-md leading-6 text-gray-400">
+                  {{ format(new Date(item.date), 'MMM d, yyyy') }}
               </div>
-            </Button>
-          </td>
-          <td class="py-2 px-4 sm:table-cell">
-            <div class="flex gap-x-3">
-              <div class="font-mono text-md leading-6 text-gray-400">
-                {{ format(new Date(item.date), 'MMM d, yyyy') }}
-              </div>
-            </div>
-          </td>
-          <td class="py-2 px-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
-            <time :datetime="item.dateTime">{{ format(new Date(item.updated_at), 'MMM d, yyyy') }}</time>
-          </td>
-          <td class="py-2 px-4 text-right sm:table-cell">
-            <Button
-              button-label="Match stats page link"
-              button-type="button"
-              button-class="text-white hover:text-green-400"
-              :to="`/event/${item.id}/overview`"
-            >
-              <ChevronRightIcon class="h-6 w-6" aria-hidden="true"/>
-            </Button>
-          </td>
-        </tr>
+            </td>
+
+            <td class="hidden py-2 px-4 text-right sm:table-cell">
+              <time :datetime="item.dateTime">{{ format(new Date(item.updated_at), 'MMM d, yyyy') }}</time>
+            </td>
+
+            <td class="py-2 px-4 text-right sm:table-cell">
+              <Button
+                button-label="Match stats page link"
+                button-type="button"
+                button-class="text-white hover:text-green-400"
+                :to="`/event/${item.id}/overview`"
+              >
+                <ChevronRightIcon class="h-6 w-6" aria-hidden="true"/>
+              </Button>
+            </td>
+          </tr>
         </tbody>
       </table>
+
     </div>
     <Pagination
       :pages="eventStore.getResults?.nbPages" :total="eventStore.getResults?.nbHits"
