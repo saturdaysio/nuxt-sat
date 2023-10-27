@@ -115,9 +115,9 @@ const customQuery = (query: string) => {
         <thead class="bg-gray-900/80 text-sm font-bold uppercase leading-6 text-gray-600">
           <tr>
             <th scope="col" class="w-1/2 py-2 px-4">Name</th>
-            <th scope="col" class="hidden py-2 px-4 md:table-cell">Event Date</th>
-            <th scope="col" class="hidden py-2 px-4 text-right md:table-cell">Last updated on</th>
-            <th scope="col" class="py-2 px-4 md:table-cell"></th>
+            <th scope="col" class="hidden py-2 px-4 sm:table-cell">Event Date</th>
+            <th scope="col" class="hidden py-2 px-4 text-right sm:table-cell">Last updated on</th>
+            <th scope="col" class="py-2 px-4 sm:table-cell"></th>
           </tr>
         </thead>
 
@@ -131,19 +131,19 @@ const customQuery = (query: string) => {
               </Button>
             </td>
 
-            <td class="hidden py-2 px-4 md:table-cell">
+            <td class="hidden py-2 px-4 sm:table-cell">
               <div class="text-md leading-6 text-gray-400">
                   {{ format(new Date(item.date), 'MMM d, yyyy') }}
               </div>
             </td>
 
-            <td class="hidden py-2 px-4 text-right md:table-cell">
+            <td class="hidden py-2 px-4 text-right sm:table-cell">
               <div class="text-md leading-6 text-gray-400">
                 <time :datetime="item.dateTime">{{ format(new Date(item.updated_at), 'MMM d, yyyy') }}</time>
               </div>
             </td>
 
-            <td class="py-2 px-2 text-right md:table-cell">
+            <td class="py-2 px-2 text-right sm:table-cell">
               <Button
                 button-label="Match stats page link"
                 button-type="button"
