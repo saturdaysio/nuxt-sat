@@ -114,7 +114,7 @@
 
         <thead class="bg-gray-900/80 text-sm font-bold uppercase leading-6 text-gray-600">
           <tr>
-            <th scope="col" class="w-1/2 py-2 px-4">Name</th>
+            <th scope="col" class="w-full md:w-1/2 py-2 px-4">Name</th>
             <th scope="col" class="hidden py-2 px-4 sm:table-cell">Record</th>
             <th scope="col" class="hidden py-2 px-4 sm:table-cell">Division</th>
             <th scope="col" class="hidden py-2 px-4 text-right sm:table-cell">Last updated on</th>
