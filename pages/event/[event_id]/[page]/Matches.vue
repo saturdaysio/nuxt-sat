@@ -17,9 +17,11 @@
 
           <div :v-if="matches.length" v-for="matches in eventMatches" :key="matches ? matches[0]?.type : 'invalid'" class="relative overflow-x-auto pt-6">
             <table class="w-full text-md md:text-base text-left whitespace-nowrap">
+              <h2 class="font-bold text-blue-400 py-2">
+                {{ matches ? matches[0]?.type : 'invalid' }}
+              </h2>
               <thead class="text-sm font-bold uppercase text-gray-400 bg-gray-800/40">
                 <tr>
-                  <th scope="col" class="py-2 px-2">{{ matches ? matches[0]?.type : 'invalid' }}</th>
                   <th scope="col" class="hidden py-2 px-2 sm:table-cell">Won</th>
                   <th scope="col" class="hidden py-2 px-2 sm:table-cell">Lost</th>
                   <th scope="col" class="hidden py-2 px-2 sm:table-cell">Weightclass</th>
@@ -32,6 +34,7 @@
 
               <tbody class="divide-y divide-white/10 bg-black border border-white/20">
                 <tr v-for="match in matches" :key="match.id" class="text-white">
+
                   <td class="py-2 px-2">
                     <div class="text-base font-bold hover:text-green-400">
                         {{ match.winner.name }}
