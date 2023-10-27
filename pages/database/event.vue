@@ -138,7 +138,9 @@ const customQuery = (query: string) => {
             </td>
 
             <td class="hidden py-2 px-4 text-right sm:table-cell">
-              <time :datetime="item.dateTime">{{ format(new Date(item.updated_at), 'MMM d, yyyy') }}</time>
+              <div class="text-md leading-6 text-gray-400">
+                <time :datetime="item.dateTime">{{ format(new Date(item.updated_at), 'MMM d, yyyy') }}</time>
+              </div>
             </td>
 
             <td class="py-2 px-4 text-right sm:table-cell">
