@@ -22,7 +22,7 @@ const {value} = defineProps<DateInputProps>()
     />
     <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
       <Button button-label="DatePicker"
-              class="absolute right-0 top-0 bottom-0 my-auto h-full w-12 flex items-center justify-center text-white hover:text-green-400 focus:outline-none focus:text-red-400"
+              class="absolute right-0 my-auto h-full w-12 flex items-center justify-center text-white hover:text-green-400 focus:outline-none focus:text-red-400"
               aria-label="DatePicker"
       >
         <CalendarIcon class="h-5 w-5" aria-hidden="true"/>
