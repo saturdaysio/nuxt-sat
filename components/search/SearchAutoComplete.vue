@@ -82,9 +82,7 @@ const clearButtonAction = () => {
     <Combobox v-model="selectedItem">
       <div class="relative mt-1">
         <div class="relative mt-1">
-          <div
-
-          >
+          <div>
             <ComboboxInput
                 @change="onTypeHandler"
                 :display-value="parseSearchResult"
@@ -92,7 +90,7 @@ const clearButtonAction = () => {
             />
             <Button v-if="queryComputed || selectedItem" @click="clearButtonAction"
                     button-label="Clear"
-                    class="absolute right-0 top-0 bottom-0 my-auto h-full w-12 flex items-center justify-center text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500"
+                    class="absolute right-0 top-0 bottom-0 my-auto h-full w-12 flex items-center justify-center text-gray-400 hover:text-white focus:outline-none focus:text-white"
                     aria-label="Clear"
             >
               <XMarkIcon class="h-5 w-5" aria-hidden="true"/>
