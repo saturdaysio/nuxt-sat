@@ -16,7 +16,7 @@ definePageMeta({
 })
 
 useHead({
-  title: 'Saturdays.io - MMA Database',
+  title: 'Saturdays.io - Event Search',
   meta: [
     {name: 'description', content: 'Saturdays.io admin dashboard'},
   ]

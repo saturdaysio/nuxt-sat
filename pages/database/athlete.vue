@@ -13,7 +13,7 @@
   })
 
   useHead({
-    title: 'Saturdays.io - MMA Database',
+    title: 'Saturdays.io - Athlete Search',
     meta: [
       { name: 'description', content: 'Saturdays.io admin dashboard' },
     ]
