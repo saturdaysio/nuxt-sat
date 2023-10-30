@@ -69,7 +69,6 @@ export default defineNuxtConfig({
   routeRules: {
     // Homepage pre-rendered at build time
     '/': {prerender: true},
-    '/work': {prerender: true},
     '/about': {prerender: true},
     '/terms-of-service': {prerender: true},
     '/privacy-policy': {prerender: true},
