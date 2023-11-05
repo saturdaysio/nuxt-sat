@@ -3,15 +3,15 @@
     
     <Nav2 />
 
-    <main class="pt-24">
-      <div class="mx-auto max-w-full px-4 pb-12 sm:px-6 lg:px-8 bg-black">
+    <main class="py-24">
+      <div class="mx-auto max-w-full px-4">
         <!-- Your content -->
 		<section>
         <header>
           <!-- Secondary navigation -->
 
           <!-- Heading -->
-          <div class="flex flex-col items-start justify-between gap-x-8 gap-y-4 bg-gray-800/10 border border-white/20 px-4 py-8 sm:flex-row sm:items-center sm:px-6 lg:px-8 ">
+          <div class="flex flex-col items-start justify-between gap-x-8 gap-y-4 bg-gray-800/10 border border-white/20 px-4 py-8 sm:flex-row sm:items-center  lg:px-8 ">
             <div>
               <div class="flex items-center gap-x-2">
                 <div class="flex-none rounded-full bg-green-400 p-1 text-green-400">
@@ -41,6 +41,22 @@
         </header>
 
         <!-- Activity list -->
+		<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-2 gap-y-2 pt-4">
+			<div v-for="item in quickLinks" :key="item.id" class="">
+				<div class="card rounded-sm border border-gray-200 hover:border-green-400 text-white hover:text-blue-400">
+					<NuxtLink :to="item.to">
+						<div class="image-thumb bg-gray-800/40">
+							<img :src="item.imageUrl" :alt="item.alt" class="object-fit" loading="lazy" :width="item.width" :height="item.height" />
+						</div>
+						<div class="data-bot bg-black p-4">
+							<div class="text-base sm:text-lg md:text-xl font-bold">
+								{{ item.name }}
+							</div>
+						</div>
+					</NuxtLink>
+				</div>
+			</div>
+		</div>
 
 	</section>
       </div>
@@ -51,72 +67,98 @@
 
 <script setup lang="ts">
 
-	const userProfile = {
-		name: 'Hello Saturday',
-		email: 'hello@saturdays.io',
-		imageUrl: '/avatars/monica_hall.png',
-	}
-
-
-	const secondaryNavigation = [
-		{ name: 'Overview', to: '#', current: true },
-		{ name: 'Activity', to: '#', current: false },
-		{ name: 'Settings', to: '#', current: false },
-		{ name: 'Collaborators', to: '#', current: false },
-		{ name: 'Notifications', to: '#', current: false },
-	]
-
-
 	const stats = [
-		{ name: 'Number of deploys', value: '401' },
-		{ name: 'Average deploy time', value: '1.25', unit: 'mins' },
-		{ name: 'Number of servers', value: '32' },
+		{ name: 'Number of deploys', value: '4000' },
+		{ name: 'Average deploy time', value: '32', unit: 'seconds' },
+		{ name: 'Number of servers', value: '2' },
 		{ name: 'Status', value: 'Online' },
 	]
 
-
 	const statuses = {
-    Completed: 'text-green-400 bg-green-400',
-    Error: 'text-rose-400 bg-rose-400'
-  }
+		Completed: 'text-green-400 bg-green-400',
+		Error: 'text-rose-400 bg-rose-400'
+  	}
 
-
-	const activityItems = [
+	const quickLinks = [
 		{
-			user: {
-			name: 'Richard Hendricks',
-			imageUrl: '/avatars/richard_hendricks.png',
-			},
-			commit: '2d89f0c8',
-			branch: 'main',
-			status: 'Completed',
-			duration: '25s',
-			date: '45 minutes ago',
-			dateTime: '2023-01-23T11:00',
+			id: '0',
+			name: 'Alexander Volkanovski',
+			imageUrl: '/avatars/3949584.png',
+			alt: 'Alexander Volkanovski',
+			width: '600',
+			height: '436',
+			to: '/athlete/86488/bio',
+			lastUpdate: '2023-01-23T11:00',
 		},
-    {
-			user: {
-			name: 'Monica Hall',
-			imageUrl: '/avatars/monica_hall.png',
-			},
-			commit: '2d89f0c8',
-			branch: 'main',
-			status: 'Completed',
-			duration: '25s',
-			date: '45 minutes ago',
-			dateTime: '2023-01-23T11:00',
+    	{
+			id: '1',
+			name: 'Holly Holm',
+			imageUrl: '/avatars/3028404.png',
+			alt: 'Holly Holm',
+			width: '600',
+			height: '436',
+			to: '/athlete/68396/bio',
+			lastUpdate: '2023-01-23T11:00',
 		},
-    {
-			user: {
-			name: 'Hello Saturdays',
-			imageUrl: '/avatars/monica_hall.png',
-			},
-			commit: '2d89f0c8',
-			branch: 'main',
-			status: 'Completed',
-			duration: '25s',
-			date: '45 minutes ago',
-			dateTime: '2023-01-23T11:00',
+    	{
+			id: '2',
+			name: 'Jessica Rose-Clarke',
+			imageUrl: '/avatars/3902226.png',
+			alt: 'Jessica Rose-Clarke',
+			width: '600',
+			height: '436',
+			to: '/athlete/61072/bio',
+			lastUpdate: '2023-01-23T11:00',
+		},
+		{
+			id: '3',
+			name: 'Jon Jones',
+			imageUrl: '/avatars/2335639.png',
+			alt: 'Jon Jones',
+			width: '600',
+			height: '436',
+			to: '/athlete/69643/bio',
+			lastUpdate: '2023-01-23T11:00',
+		},
+		{
+			id: '4',
+			name: 'Anthony Smith',
+			imageUrl: '/avatars/2512976.png',
+			alt: 'Anthony Smith',
+			width: '600',
+			height: '436',
+			to: '/athlete/83221/bio',
+			lastUpdate: '2023-01-23T11:00',
+		},
+		{
+			id: '5',
+			name: 'UFC 273',
+			imageUrl: '/avatars/ufc-273-Header_1024x.webp',
+			alt: 'ufc 273',
+			width: '600',
+			height: '436',
+			to: '/event/5765/overview',
+			lastUpdate: '2023-01-23T11:00',
+		},
+		{
+			id: '6',
+			name: 'UFC 283',
+			imageUrl: '/avatars/ufc-283-Header_1024x.webp',
+			alt: 'ufc 283',
+			width: '1024',
+			height: '495',
+			to: '/event/1090/overview',
+			lastUpdate: '2023-01-23T11:00',
+		},
+		{
+			id: '7',
+			name: 'UFC 293',
+			imageUrl: '/avatars/ufc-293-Header_1024x.webp',
+			alt: 'ufc 293',
+			width: '1024',
+			height: '495',
+			to: '/event/2685/overview',
+			lastUpdate: '2023-01-23T11:00',
 		},
 		// More items...
 	]

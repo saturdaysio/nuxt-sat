@@ -31,7 +31,7 @@
 
             <div id="submit" class="">
               <!-- make a proper component for button and states -->
-              <Button butttonType="submit" button-label="Sign in" button-class="primary block w-full"
+              <Button buttton-type="submit" button-label="Sign in" button-class="primary block w-full"
                       :error="failedLogin" error-classes="!bg-red-800"/>
             </div>
           </form>
@@ -86,6 +86,7 @@ const login = async () => {
     }
     successLogin.value = true
     failedLogin.value = false
+    navigateTo('/dashboard', {replace: false})
   } catch (error) {
     console.log('error', error)
     successLogin.value = false

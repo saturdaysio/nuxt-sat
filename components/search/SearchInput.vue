@@ -1,5 +1,5 @@
 <template>
-  <Input
+  <CustomInput
       inputType="text"
       inputName="search"
       :label="label"
@@ -16,7 +16,7 @@
 <script setup lang="ts">
 import {ref} from 'vue';
 import {IAthlete} from "~/utils/interfaces/Athlete";
-import {AlgoliaSearch} from "~/utils/searchUtil";
+import {AlgoliaSearch} from "~/utils/search/searchUtil";
 
 interface SearchInputProps {
   label: string;

@@ -1,7 +1,7 @@
-import algoliasearch from 'algoliasearch/lite';
-import {MultipleQueriesResponse, SearchResponse} from "@algolia/client-search";
+import {MultipleQueriesResponse} from "@algolia/client-search";
+import {searchClient} from "~/utils/search/algolia";
 
-function debounce(func: any, wait: number, immediate: boolean): (this: any, ...args: any[]) => void {
+export function debounce(func: any, wait: number, immediate: boolean): (this: any, ...args: any[]) => void {
   let timeout: any;
   return function executedFunction() {
     // @ts-ignore
@@ -16,14 +16,10 @@ function debounce(func: any, wait: number, immediate: boolean): (this: any, ...a
     timeout = setTimeout(later, wait);
     if (callNow) func.apply(context, args);
   };
-};
+}
 
-const searchClient = algoliasearch(
-  'UDIF9SOA8Z',
-  '98a89ab6c4ba9f3dcc69651527f481f8'
-);
 
-interface IAlgoliaOptions {
+export interface IAlgoliaOptions {
   limit?: number;
   offset?: number;
 }

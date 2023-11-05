@@ -1,3 +1,5 @@
+import {IStats} from "~/utils/interfaces/Stats";
+
 export interface IAthlete {
   id: number
   name: string
@@ -9,10 +11,14 @@ export interface IAthlete {
   deceased: Date
   age: number
   weightclass: string
+  height: number
   hometown: string
   location: string
   status: string
-  // stats: IStats
+  team: string
+  stance: string
+  style: string
+  stats: IStats
   // matches: IMatch[]
   // record: IRecord
   weight: number
