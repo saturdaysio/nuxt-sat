@@ -69,7 +69,7 @@
     const mobileNav = [
         { name: 'Home', to: '/' },
 		{ name: 'About', to: '/about' },
-        { name: 'Client login', to: '/signin' },
+        { name: 'Sign in', to: '/signin' },
 	]
 
     const legal = [
