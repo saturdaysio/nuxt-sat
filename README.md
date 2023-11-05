@@ -1,15 +1,9 @@
 Copyright (c) 2016 - 2023 Saturdays.io Inc. All rights reserved.
 
-## Saturdays 2023 microsite
+## 
 
 
 ### Getting Started
-
-Nuxt 3
-Pinia
-Tailwindcss
-Postcss
-Purgecss
 
 
 #### Prerequisites

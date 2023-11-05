@@ -3,8 +3,8 @@
         <Snitcher :open="open"  @change="({ open }) => isPopoverOpen = open" />
         <nav class="relative z-50">
             <div class="fixed w-full">
-                <header class="inset-x-0 backdrop-blur bg-black/90 border-b border-white/10">
-                    <div class="flex justify-between max-w-7xl mx-auto px-4 py-4" aria-label="global">
+                <header class="inset-x-0 backdrop-blur bg-black/90 border-b border-white/20">
+                    <div class="flex justify-between max-w-full mx-auto pl-4 pr-6 py-4" aria-label="global">
 
                         <div class="flex lg:flex-1">
                             <!-- Logo -->
@@ -43,7 +43,7 @@
                             <!-- Navigation links -->
                             <div class="flex flex-col justify-center h-4/5">
                                 <div class="flex flex-col space-y-2">
-                                    <NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="mx-2 block py-4 text-2xl sm:text-3xl md:text-4xl font-base text-white hover:opacity-60 hover:underline hover:underline-offset-4 hover:decoration-2" active-class="active text-blue-300 underline underline-offset-4 decoration-2">{{ item.name }}</NuxtLink>
+                                    <NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="mx-2 block py-4 text-2xl sm:text-3xl md:text-4xl font-base uppercase text-white hover:opacity-60 hover:underline hover:underline-offset-4 hover:decoration-2" active-class="active text-blue-300 underline underline-offset-4 decoration-2">{{ item.name }}</NuxtLink>
                                 </div>
                             </div>
                         </div>
@@ -64,22 +64,11 @@
 
     const navigation = [
 		{ name: 'Dashboard', to: '/dashboard', current: false },
-		{ name: 'Profile', to: '/profile', current: false },
-		{ name: 'Reports', to: '/reports', current: false },
-		{ name: 'Settings', to: '/settings', current: false },
+        { name: 'Search', to: '/database', current: false },
+        { name: 'Settings', to: '/settings', current: false },
+		{ name: 'Profile', to: '/settings/profile', current: false },
 	]
 
-    const userProfile = {
-		name: 'Hello Saturday',
-		email: 'hello@saturdays.io',
-		imageUrl: '/avatars/monica_hall.png',
-	}
-
-	const userNavigation = [
-		{ name: 'Your Profile', to: '/profile' },
-		{ name: 'Settings', to: '/settings' },
-		{ name: 'Sign out', to: '/signin' },
-	]
 
     
     // Hack to echo Popover v-slot state change
