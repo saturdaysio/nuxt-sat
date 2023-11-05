@@ -62,7 +62,7 @@
 	import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 
 	const navigation = [
-		{ name: 'About', to: '/' },
+		{ name: 'About', to: '/about' },
 		{ name: 'Sign in', to: '/signin' },
 	]
 
