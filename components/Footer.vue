@@ -2,9 +2,10 @@
 	<footer class="px-4 py-12 border-t border-gray-800 sm:px-6 sm:py-16">
 		<nav class="mx-auto max-w-screen-xl" aria-label="Footer">
 			<div class="md:flex md:justify-between">
-				<div id="logo" class="mb-6 md:mb-0">
-					<NuxtLink to="/" class="flex items-center">
-						<span class="self-center text-2xl font-bold whitespace-nowrap text-white hover:text-green-500">Saturdays.io</span>
+				<div id="logo" class="mb-6 md:mb-0">					
+					<NuxtLink to="/" class="flex items-center space-x-3">
+						<img class="h-8 w-8" src="@/assets/img/logo.svg" alt="Saturdays.io logo" width="32px" height="32px" />
+						<span class="self-center text-2xl font-bold whitespace-nowrap text-white hover:text-green-400">Hello Saturday</span>
 					</NuxtLink>
 				</div>
 
@@ -14,7 +15,7 @@
 						<ul v-for="item in navigation.main" :key="item.name">
 							<li class="mb-4">
 								<suspense suspensible>
-									<NuxtLink :to="item.to" class="text-md sm:text-base leading-6 no-underline text-white hover:text-green-500 hover:underline" active-class="active">
+									<NuxtLink :to="item.to" class="text-md sm:text-base leading-6 no-underline text-white hover:text-green-400 hover:underline" active-class="active">
 										{{ item.name }}
 									</NuxtLink>
 								</suspense>
@@ -27,7 +28,7 @@
 						<ul v-for="item in navigation.social" :key="item.name">
 							<li class="mb-4">
 								<suspense suspensible>
-									<NuxtLink :to="item.to" class="text-md sm:text-base leading-6 no-underline text-white hover:text-green-500 hover:underline" active-class="active">
+									<NuxtLink :to="item.to" class="text-md sm:text-base leading-6 no-underline text-white hover:text-green-400 hover:underline" active-class="active">
 										{{ item.name }}
 									</NuxtLink>
 								</suspense>
@@ -40,7 +41,7 @@
 						<ul v-for="item in navigation.legal" :key="item.name">
 							<li class="mb-4">
 								<suspense suspensible>
-									<NuxtLink :to="item.to" class="text-md sm:text-base  leading-6 no-underline text-white hover:text-green-500 hover:underline" active-class="active">
+									<NuxtLink :to="item.to" class="text-md sm:text-base  leading-6 no-underline text-white hover:text-green-400 hover:underline" active-class="active">
 										{{ item.name }}
 									</NuxtLink>
 								</suspense>
@@ -77,14 +78,13 @@
 
 	const navigation = {
 		main: [
-			{ name: 'Work', to: '/' },
+			{ name: 'Home', to: '/' },
 			{ name: 'About', to: '/about' },
-			{ name: 'Login', to: '/signin' },
+			{ name: 'Sign in', to: '/signin' },
 		],
 
 		social: [
 			{ name: 'LinkedIn', to: 'https://www.linkedin.com/company/saturdaysdotio/' },
-			{ name: 'Reddit', to: 'https://reddit.com/' },
 		],
 
 		legal: [
