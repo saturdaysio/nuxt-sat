@@ -53,6 +53,10 @@
   import Athlete from "./athlete.vue";
   import Event from "./event.vue";
 
+  definePageMeta({
+    middleware: ['auth']
+  })
+
 </script>
 
 

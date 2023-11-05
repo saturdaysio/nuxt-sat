@@ -107,7 +107,7 @@
 			alt: 'Jessica Rose-Clarke',
 			width: '600',
 			height: '436',
-			to: '/event/2685/overview',
+			to: '/athlete/61072/bio',
 			lastUpdate: '2023-01-23T11:00',
 		},
 		{
