@@ -2,6 +2,7 @@
   <Listbox v-model="selectedOption">
     <div class="relative mt-2">
 
+
       <ListboxButton class="block w-full h-12 rounded-md border-0 bg-gray-800/40 pl-4 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-1 focus:ring-inset focus:ring-green-400 sm:text-sm sm:leading-6 disabled:bg-gray-900/40 disabled:text-gray-500">
         <span class="block text-left truncate">{{ selectedOption.value }}</span>
         <span class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
@@ -31,20 +32,25 @@
 
 <script setup lang="ts">
 
-  import { ref } from 'vue'
-  import { Listbox, ListboxButton, ListboxOptions, ListboxOption, } from '@headlessui/vue'
-  import { CheckIcon, ChevronUpDownIcon } from '@heroicons/vue/20/solid'
+import {ref} from 'vue'
+import {
+  Listbox,
+  ListboxButton,
+  ListboxOptions,
+  ListboxOption,
+} from '@headlessui/vue'
+import {CheckIcon, ChevronUpDownIcon} from '@heroicons/vue/20/solid'
 
   export interface ItemOption {
     name: string
     value: string
   }
 
-  const props = defineProps< {
-    options: ItemOption[],
-    optionSelected: string,
-    inputName: string,
-  }>()
+const props = defineProps< {
+  options: ItemOption[],
+  optionSelected: String,
+  inputName: String,
+}>()
 
   const { options, optionSelected, inputName } = toRefs(props)
 

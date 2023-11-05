@@ -1,7 +1,6 @@
 <template>
   <div>
     <label v-if="fieldsWithLabels.includes(inputType) && label" :for="label" class="block text-md font-semibold leading-4 uppercase text-white">{{ label }}</label>
-
     <div class="mt-2 relative">
       <input
           v-if="textInputs.includes(inputType)"
@@ -25,13 +24,11 @@
       >
         <XMarkIcon class="h-5 w-5" aria-hidden="true"/>
       </Button>
-
-      <SelectInput v-if="inputType=='select'" :options="options as ItemOption[]" :input-name="inputName as string" :option-selected="value as string" :disabled="disabled"/>
+      <SelectInput v-if="inputType=='select'" :options="options as ItemOption[]" :input-name="inputName as string" :option-selected="value as string" :disabled="disabled" />
       <CheckboxInput v-if="inputType=='checkbox'" :value="value" :checkboxLabelSub="checkboxLabelSub" :input-name="inputName" :label="label" :disabled="disabled"/>
       <span v-if="error">
       {{ error }}
     </span>
-
     </div>
   </div>
 </template>
@@ -103,7 +100,8 @@
 
   const fieldsWithLabels = [...textInputs, 'select']
 
-  const clearInput = () => {
+  const fieldsWithLabels = [...textInputs, 'select']
+const clearInput = () => {
     (onType as unknown as Ref<any | undefined>)?.value('')
     (onEnter as unknown as Ref<any | undefined>)?.value('')
   }
