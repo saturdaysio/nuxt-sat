@@ -39,14 +39,18 @@
 
                   <td class="py-2 px-2">
                     <div class="font-bold hover:text-green-400">
+                      <NuxtLink :to="`/athlete/${match.winner.id}/bio`">
                         {{ match.winner.name }}
-                      </div>
+                      </NuxtLink>
+                    </div>
                   </td>
 
                   <td class="py-2 px-2">
                     <div class="font-bold hover:text-green-400">
+                      <NuxtLink :to="`/athlete/${match.loser.id}/bio`">
                         {{ match.loser.name }}
-                      </div>
+                      </NuxtLink>
+                    </div>
                   </td>
 
                   <td class="hidden py-2 px-2 md:table-cell">
