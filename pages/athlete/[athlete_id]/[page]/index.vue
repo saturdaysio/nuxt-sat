@@ -6,7 +6,7 @@ import Bio from "./Bio.vue";
 import Stats from "./Stats.vue";
 import Record from "./record.vue";
 
-const types = ['bio', 'stats', 'fight_record', 'media']
+const types = ['bio', 'stats', 'record', 'media']
 const route = useRoute()
 
 const api = API.getInstance()
@@ -51,7 +51,7 @@ function changeTab(index: number) {
         <TabGroup :selectedIndex="activeTab" @change="changeTab">
           <TabList class="flex flex-0 w-full space-x-8 border-b border-gray-700 ">
             <Tab
-                v-for="category in ['Bio', 'Stats', 'Fight Record', 'Media']"
+                v-for="category in ['Bio', 'Stats', 'Record', 'Media']"
                 as="template"
                 :key="category"
                 v-slot="{ selected }"
