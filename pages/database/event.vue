@@ -122,7 +122,7 @@ const customQuery = (query: string) => {
         </thead>
 
         <tbody class="divide-y divide-white/10">
-          <tr v-for="item in eventStore.getResults?.hits" :key="item.objectID" class="h-16">
+          <tr v-for="item in eventStore.getResults?.hits" :key="item.objectID" class="h-16 hover:bg-gray-800/40">
             <td class="py-2 px-4">
               <NuxtLink :to="`/event/${item.id}/overview`">
                 <div class="truncate text-base font-bold leading-6 text-white hover:text-green-400">
