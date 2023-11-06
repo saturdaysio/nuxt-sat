@@ -1,6 +1,6 @@
 <template>
   <div>
-    <label v-if="textInputs.includes(inputType) && label" :for="label"
+    <label v-if="fieldsWithLabels.includes(inputType) && label" :for="label"
            class="block text-md font-semibold leading-4 uppercase text-white">{{ label }}</label>
     <div class="mt-2 relative">
 
@@ -42,72 +42,74 @@
 
 <script setup lang="ts">
 
-import {XMarkIcon} from '@heroicons/vue/20/solid'
-import {Ref} from "vue";
-import {ItemOption} from "~/components/SelectInput.vue";
+  import {XMarkIcon} from '@heroicons/vue/20/solid'
+  import {Ref} from "vue";
+  import {ItemOption} from "~/components/SelectInput.vue";
 
-interface InputProps {
-  input?: Ref<any>
-  placeholder?: string
-  inputType: string
-  autoFocus?: boolean
-  error?: string
-  inputName?: string
-  id?: string
-  label?: string
-  value?: string | number | boolean
-  span?: string
-  options?: string[]
-  selected?: string
-  checkboxLabelSub?: string
-  onType?: () => void
-  onEnter?: () => void
-  clearButton?: boolean
-  disabled?: boolean
-  step?: string
-  min?: string
-  max?: string
-}
-
-
-const emit = defineEmits(['update:input'])
-
-
-const {
-  input,
-  placeholder,
-  inputType,
-  max,
-  autoFocus,
-  error,
-  inputName,
-  id,
-  label,
-  value,
-  span,
-  options,
-  selected,
-  checkboxLabelSub,
-  onType,
-  onEnter,
-  clearButton,
-  disabled,
-  step,
-  min
-} = defineProps<InputProps>()
-
-const inputComputed = computed({
-  get: () => input?.value || value || '',
-  set: (val) => {
-    emit('update:input', val)
+  interface InputProps {
+    input?: Ref<any>
+    placeholder?: string
+    inputType: string
+    autoFocus?: boolean
+    error?: string
+    inputName?: string
+    id?: string
+    label?: string
+    value?: string | number | boolean
+    span?: string
+    options?: string[]
+    selected?: string
+    checkboxLabelSub?: string
+    onType?: () => void
+    onEnter?: () => void
+    clearButton?: boolean
+    disabled?: boolean
+    step?: string
+    min?: string
+    max?: string
   }
-})
 
-const textInputs = ['text', 'email', 'password', 'number', 'tel', 'url', 'search', 'date', 'datetime-local', 'time', 'datetime-local', 'month', 'week', 'color']
-const clearInput = () => {
-  (onType as unknown as Ref<any | undefined>)?.value('')
-  (onEnter as unknown as Ref<any | undefined>)?.value('')
-}
+
+  const emit = defineEmits(['update:input'])
+
+  const {
+    input,
+    placeholder,
+    inputType,
+    max,
+    autoFocus,
+    error,
+    inputName,
+    id,
+    label,
+    value,
+    span,
+    options,
+    selected,
+    checkboxLabelSub,
+    onType,
+    onEnter,
+    clearButton,
+    disabled,
+    step,
+    min
+  } = defineProps<InputProps>()
+
+  const inputComputed = computed({
+    get: () => input?.value || value || '',
+    set: (val) => {
+      emit('update:input', val)
+    }
+  })
+
+  const textInputs = ['text', 'email', 'password', 'number', 'tel', 'url', 'search', 'date', 'datetime-local', 'time', 'datetime-local', 'month', 'week', 'color']
+
+  const fieldsWithLabels = [...textInputs, 'select']
+
+  const clearInput = () => {
+    (onType as unknown as Ref<any | undefined>)?.value('')
+    (onEnter as unknown as Ref<any | undefined>)?.value('')
+  }
 </script>
 
 <style scoped>
