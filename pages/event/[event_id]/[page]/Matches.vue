@@ -35,7 +35,7 @@
               </thead>
 
               <tbody class="divide-y divide-white/10 bg-black border border-white/20">
-                <tr v-for="match in matches" :key="match.id" class="leading-6 text-gray-400">
+                <tr v-for="match in matches" :key="match.id" class="leading-6 text-gray-400 hover:bg-gray-800/40">
 
                   <td class="py-2 px-2">
                     <div class="font-bold hover:text-green-400">
