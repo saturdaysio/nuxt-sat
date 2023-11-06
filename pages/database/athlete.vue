@@ -123,7 +123,7 @@
         </thead>
 
         <tbody class="divide-y divide-white/10">
-          <tr v-for="item in athleteStore.getResults?.hits" :key="item.objectID" class="h-16">
+          <tr v-for="item in athleteStore.getResults?.hits" :key="item.objectID" class="h-16 hover:bg-gray-800/40">
             <td class="py-2 px-4">
               <NuxtLink :to="`/athlete/${item.id}/bio`">
                 <div class="flex items-center gap-x-4">
