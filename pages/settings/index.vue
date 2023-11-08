@@ -60,7 +60,7 @@
 		                <p class="mt-2 text-base leading-6 text-gray-400">Flavour text for logging out.</p>
 
 						<div class="mt-8 flex items-center justify-start">
-							<Button buttton-type="submit" button-label="Sign out" button-class="secondary" @click="logout" />
+							<Button buttton-type="submit" button-label="Signout" button-class="secondary" @click="signOut" />
 						</div>
 					</div>
 					
@@ -77,7 +77,7 @@
 
 <script setup lang="ts">
 
-	import { ProfilePermissions, useProfileStore } from "~/store/profile";
+	import { useProfileStore } from "~/store/profile";
 
 	definePageMeta({
 		middleware: ['auth']
@@ -86,7 +86,7 @@
 	useHead({
 		title: 'Saturdays.io - Account Settings',
 		meta: [
-			{ name: 'description', content: 'Saturdays.io admin dashboard' },
+			{ name: 'description', content: 'Saturdays.io admin account settings' },
 		]
 	})
 
@@ -110,19 +110,6 @@
     loading.value = true
     if (!user || !user.user) return
 
-    // remove fields not in interface
-    delete data["file-upload"]
-
-    // convert to array of permissions
-    const permissions = Object.keys({
-      comments: data.comments === 'on',
-      candidates: data.candidates === 'on',
-      offers: data.offers === 'on',
-    }).filter(key => data[key])
-
-    delete data.comments
-    delete data.candidates
-    delete data.offers
 
     const {error} = await supabase.from('users').upsert({
       // @ts-ignore
@@ -135,11 +122,11 @@
   }
 
   // Signout function
-  const logout = async () => {
-    let {error} = await supabase.auth.signOut();
+  const signOut = async () => {
+    let { error } = await supabase.auth.signOut()
+	if (error) console.log(error)
     navigateTo('/');
   }
-
 
 </script>
 
