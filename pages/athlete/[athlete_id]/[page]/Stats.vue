@@ -56,9 +56,9 @@ function SubmitStats(event: FormDataEvent) {
 <template>
   <div class="space-y-14">
     <section class="mx-auto rounded-sm border border-white/20 bg-gray-900 p-4">
-      <h1 class="text-2xl font-bold text-white">Striking Staistics</h1>
+      <h1 class="text-2xl font-bold text-white">Striking Statistics</h1>
       <!--    sub title -->
-      <h2 class="text-lg text-white">Description flavour text on your user profile information</h2>
+      <h2 class="text-lg text-white">Flavour text description about this data.</h2>
       <form @submit="SubmitStats">
         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
 
@@ -172,9 +172,9 @@ function SubmitStats(event: FormDataEvent) {
       </form>
     </section>
     <section class="mx-auto rounded-sm border border-white/20 bg-gray-900 p-4">
-      <h1 class="text-2xl font-bold text-white">Grappling Staistics</h1>
+      <h1 class="text-2xl font-bold text-white">Grappling Statistics</h1>
       <!--    sub title -->
-      <h2 class="text-lg text-white">Description flavour text on your user profile information</h2>
+      <h2 class="text-lg text-white">Flavour text description about this data.</h2>
       <form @submit="SubmitStats">
         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
           <div class="sm:col-span-3">
