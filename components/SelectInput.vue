@@ -42,11 +42,11 @@
 
   const props = defineProps< {
     options: ItemOption[],
-    optionSelected: String,
-    inputName: String,
+    optionSelected: string,
+    inputName: string,
   }>()
 
-  const {options, optionSelected, inputName} = toRefs(props)
+  const { options, optionSelected, inputName } = toRefs(props)
 
   const selectedOption = ref(options.value.find(option => {
     console.log(option.value, optionSelected.value)
