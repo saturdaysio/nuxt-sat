@@ -21,11 +21,11 @@
 	},{ immediate: true })
 
 
-	watchEffect(() => {
-		if (user.value) {
-			navigateTo('/dashboard', { replace: true })
-		}
-	})
+	//watchEffect(() => {
+	//	if (user.value) {
+	//		navigateTo('/dashboard', { replace: true })
+	//	}
+	// })
 
 </script>
 
