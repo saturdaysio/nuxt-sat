@@ -31,7 +31,7 @@
 							<Button buttton-type="submit" button-label="Sign up" button-class="primary block w-full"/>
 						</div>
 						<div id="home-route" class="text-center">
-							<p class="text-base text-white">Already have an account? <NuxtLink :to="'/signin'" class="text-base leading-6 text-green-400 focus:underline focus:underline-offset-4">Sign in</NuxtLink></p>
+							<p class="text-base text-white">Already have an account? <NuxtLink :to="'/login'" class="text-base leading-6 text-green-400 focus:underline focus:underline-offset-4">Sign in</NuxtLink></p>
 						</div>
 					</form>
 				</div>
