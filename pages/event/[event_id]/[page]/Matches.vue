@@ -15,9 +15,9 @@
 
         <div v-else>
           <div :v-if="matches.length" v-for="matches in eventMatches" :key="matches ? matches[0]?.type : 'invalid'" class="relative overflow-x-auto">
-            <table class="w-full text-md md:text-base text-left whitespace-nowrap">
-              <caption class="py-2 text-xl font-bold text-left text-white">
-                <h2 class="">
+            <table class="w-full text-md md:text-base text-left whitespace-nowrap mb-8 md:mb-12">
+              <caption class="py-2 text-left">
+                <h2 class="text-xl font-base uppercase text-white">
                 {{ matches ? matches[0]?.type : 'invalid' }}
               </h2>
               </caption>
@@ -93,10 +93,7 @@
 
 <script setup lang="ts">
 
-
   import Button from "~/components/Button.vue";
-  import CustomInput from "~/components/CustomInput.vue";
-  import { format, isDate, parseISO } from "date-fns";
   import { API } from "~/composables/api";
   import { IEvent } from "~/utils/interfaces/Event";
   import { IMatch } from "~/utils/interfaces/Match";
@@ -105,7 +102,6 @@
   interface BioProps {
     event: IEvent
   }
-
 
   const { event } = defineProps<BioProps>()
   const api = API.getInstance()
