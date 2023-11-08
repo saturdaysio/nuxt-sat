@@ -80,7 +80,7 @@
 		main: [
 			{ name: 'Home', to: '/' },
 			{ name: 'About', to: '/about' },
-			{ name: 'Sign in', to: '/signin' },
+			{ name: 'Login', to: '/login' },
 		],
 
 		social: [

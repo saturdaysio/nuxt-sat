@@ -63,13 +63,13 @@
 
 	const navigation = [
 		{ name: 'About', to: '/about' },
-		{ name: 'Sign in', to: '/signin' },
+		{ name: 'Login', to: '/login' },
 	]
 
     const mobileNav = [
         { name: 'Home', to: '/' },
 		{ name: 'About', to: '/about' },
-        { name: 'Sign in', to: '/signin' },
+        { name: 'Login', to: '/login' },
 	]
 
     const legal = [
