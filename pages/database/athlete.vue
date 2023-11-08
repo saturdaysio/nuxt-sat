@@ -154,12 +154,13 @@
 
             <td class="py-2 px-2 text-right sm:table-cell">
               <Button
+                class="grid center-center h-8"
                 button-label="Athlete page link"
                 button-type="button"
-                button-class="text-white hover:text-green-400"
+                button-class="h-full text-white hover:text-green-400"
                 :to="`/athlete/${item.id}/bio`"
               >
-                <ChevronRightIcon class="h-6 w-6" aria-hidden="true" />
+                <ChevronRightIcon class="h-6 w-6 align-middle" aria-hidden="true" />
               </Button>
             </td>
           </tr>
