@@ -135,6 +135,9 @@ export default defineNuxtConfig({
     public: {
       MMA_API_URL: process.env.NUXT_PUBLIC_MMA_API_URL,
     }
+  },
+
+  supabase: {
   }
 
 })
