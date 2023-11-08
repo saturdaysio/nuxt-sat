@@ -54,54 +54,56 @@
 
 <script setup lang="ts">
 
-definePageMeta({
-  // This is an example of inline middleware
-  middleware: ['redirect-signin']
-})
-useHead({
-  title: 'Saturdays.io - Login',
-  meta: [
-    {name: 'description', content: 'Saturdays.io login page'}
-  ]
-})
+  definePageMeta({
+    // This is an example of inline middleware
+    middleware: ['redirect-signin']
+  })
+  useHead({
+    title: 'Saturdays.io - Login',
+    meta: [
+      {name: 'description', content: 'Saturdays.io login page'}
+    ]
+  })
 
-const user = useSupabaseUser()
-const client = useSupabaseClient()
-const supabase = useSupabaseClient()
-const successLogin = ref(false)
-const failedLogin = ref(false)
+  const user = useSupabaseUser()
+  const supabase = useSupabaseClient()
+  const successLogin = ref(false)
+  const failedLogin = ref(false)
 
-const loading = ref(false)
-const email = ref('')
-const password = ref('')
+  const loading = ref(false)
+  const email = ref('')
+  const password = ref('')
 
 
-const login = async () => {
-  console.log('trying...')
-  try {
-    loading.value = true
-    const {error} = await supabase.auth.signInWithPassword({email: email.value, password: password.value})
-    if (error) {
-      throw error
+  const login = async () => {
+    console.log('trying...')
+    try {
+      loading.value = true
+      const {error} = await supabase.auth.signInWithPassword({
+        email: email.value,
+        password: password.value
+      })
+      if (error) {
+        throw error
+      }
+      successLogin.value = true
+      failedLogin.value = false
+      navigateTo('/dashboard', {replace: false})
+    } catch (error) {
+      console.log('error', error)
+      successLogin.value = false
+      failedLogin.value = true
+    } finally {
+      loading.value = false
     }
-    successLogin.value = true
-    failedLogin.value = false
-    navigateTo('/dashboard', {replace: false})
-  } catch (error) {
-    console.log('error', error)
-    successLogin.value = false
-    failedLogin.value = true
-  } finally {
-    loading.value = false
   }
-}
 
 
-watchEffect(() => {
-  if (user.value) {
-    navigateTo('/dashboard', {replace: false})
-  }
-})
+  watchEffect(() => {
+    if (user.value) {
+      navigateTo('/dashboard', {replace: false})
+    }
+  })
 
 </script>
 
