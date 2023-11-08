@@ -199,12 +199,11 @@
 
   const profileStore = useProfileStore()
   const client = useSupabaseClient()
+  const supabase = useSupabaseClient()
   await profileStore.fetchProfile(client)
   const user = profileStore.getProfile
 
   const loading = ref(false)
-
-  const supabase = useSupabaseClient()
 
   const updateProfile = async (event: Event) => {
     event.preventDefault()
@@ -221,7 +220,7 @@
       id: user.user.id,
       ...data,
       // @ts-ignore
-      profile_permissions: permissions
+     // profile_permissions: permissions
     }).select()
     loading.value = false
   }
