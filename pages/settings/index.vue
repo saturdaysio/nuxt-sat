@@ -98,7 +98,7 @@
 
   const loading = ref(false)
 
-  const supabase = useSupabaseAuthClient()
+  const supabase = useSupabaseClient()
 
   const updateProfile = async (event: Event) => {
     event.preventDefault()
@@ -129,7 +129,7 @@
       id: user.user.id,
       ...data,
       // @ts-ignore
-      profile_permissions: permissions
+     // profile_permissions: permissions
     }).select()
     loading.value = false
   }

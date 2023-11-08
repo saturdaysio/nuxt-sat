@@ -46,7 +46,7 @@
 </template>
 
 
-<script setup>
+<script setup lang="ts">
 
 	useHead({
 		title: 'Saturdays.io - Sign in',
@@ -58,7 +58,7 @@
 
 	const user = useSupabaseUser()
 	const client = useSupabaseClient()
-	const supabase = useSupabaseAuthClient()
+	const supabase = useSupabaseClient()
 
 	const loading = ref(false)
 	const email = ref('')

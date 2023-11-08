@@ -166,8 +166,7 @@
 
 <script setup lang="ts">
 
-
-  import { ProfilePermissions, useProfileStore } from "~/store/profile";
+  import { useProfileStore } from "~/store/profile";
 
 
   definePageMeta({
@@ -205,7 +204,7 @@
 
   const loading = ref(false)
 
-  const supabase = useSupabaseAuthClient()
+  const supabase = useSupabaseClient()
 
   const updateProfile = async (event: Event) => {
     event.preventDefault()
