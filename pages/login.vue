@@ -67,7 +67,7 @@ useHead({
 
 const user = useSupabaseUser()
 const client = useSupabaseClient()
-const supabase = useSupabaseAuthClient()
+const supabase = useSupabaseClient()
 const successLogin = ref(false)
 const failedLogin = ref(false)
 
