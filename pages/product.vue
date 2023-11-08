@@ -684,19 +684,8 @@ useHead({
   ]
 })
 
-const user = useSupabaseUser()
-const client = useSupabaseClient()
-const supabase = useSupabaseAuthClient()
-
-const loading = ref(false)
-
-
-const logout = async () => {
-  let { error } = await supabase.auth.signOut();
-  navigateTo('/signin');
-}
-
 </script>
 
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>
