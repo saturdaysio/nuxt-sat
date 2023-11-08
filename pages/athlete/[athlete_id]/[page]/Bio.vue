@@ -63,7 +63,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
     <section class="mx-auto rounded-sm border border-white/20 bg-gray-900 p-4">
       <h1 class="text-2xl font-bold text-white">Fighter Bio</h1>
       <!--    sub title -->
-      <h2 class="text-lg text-white">Description flavour text on your user profile information</h2>
+      <h2 class="text-lg text-white">Flavour text description for Athlete data.</h2>
       <form @submit="SubmitAthleteData">
         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
 
@@ -71,7 +71,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
             <CustomInput
                 label="First Name"
                 input-name="firstName"
-                placeholder="Enter Fighter name"
+                placeholder="First name"
                 :value="athlete.firstName === 'undefined' ? '' : athlete.firstName"
                 input-type="text"
                 class="mt-4"
@@ -81,7 +81,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
             <CustomInput
                 label="Last Name"
                 input-name="lastName"
-                placeholder="Enter Fighter name"
+                placeholder="Last name"
                 :value="athlete.lastName === 'undefined' ? '' : athlete.lastName"
                 input-type="text"
                 class="mt-4"
@@ -93,7 +93,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
             <CustomInput
                 label="Nickname"
                 input-name="nickname"
-                placeholder="Enter Fighter name"
+                placeholder="Nickname"
                 :value="athlete.nickname === 'undefined' ? '' : athlete.nickname"
                 input-type="text"
                 class="mt-4"
@@ -103,7 +103,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
             <CustomInput
                 label="UID"
                 input-name="uid"
-                placeholder="Enter Fighter ID"
+                placeholder="Enter Fighter UID"
                 :value="athlete.id"
                 input-type="text"
                 disabled
@@ -116,7 +116,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
             <CustomInput
                 label="Country"
                 input-name="hometown"
-                placeholder="Enter Fighter Country"
+                placeholder="Birth country"
                 :value="athlete.hometown === 'undefined' ? '' : athlete.hometown"
                 input-type="text"
                 class="mt-4"
@@ -126,7 +126,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
             <CustomInput
                 label="DOB"
                 input-name="birthdate"
-                placeholder="Enter Fighter Date of Birth"
+                placeholder="Date of Birth"
                 :value="parseDate(athlete.birthdate, 'yyyy-MM-dd')"
                 input-type="date"
                 class="mt-4"
@@ -152,14 +152,14 @@ function parseDate(date: Date | undefined, formatString: string): string {
     <section class="mx-auto rounded-sm border border-white/20 bg-gray-900 p-4">
       <h1 class="text-2xl font-bold text-white">Fighter Stats</h1>
       <!--    sub title -->
-      <h2 class="text-lg text-white">Description flavour text on your user profile information</h2>
+      <h2 class="text-lg text-white">Flavour text description for Athlete data.</h2>
       <form @submit="SubmitAthleteData">
         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
           <div class="sm:col-span-3">
             <CustomInput
                 label="Team"
                 input-name="team"
-                placeholder="Enter Fighter Team"
+                placeholder="Ex: American Top Team"
                 :value="athlete.team === 'undefined' ? '' : athlete.team"
                 input-type="text"
                 class="mt-4"
@@ -169,7 +169,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
             <CustomInput
                 label="Stance"
                 input-name="stance"
-                placeholder="Enter Fighter Stance"
+                placeholder="Ex: Orthodox"
                 :value="athlete.stance === 'undefined' ? '' : athlete.stance"
                 input-type="text"
                 class="mt-4"
@@ -181,7 +181,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
             <CustomInput
                 label="Style"
                 input-name="style"
-                placeholder="Enter Fighter Style"
+                placeholder="Ex: Thug-jitsu"
                 :value="athlete.style === 'undefined' ? '' : athlete.style"
                 input-type="text"
                 class="mt-4"
@@ -193,7 +193,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
             <CustomInput
                 label="Height"
                 input-name="height"
-                placeholder="Enter Fighter Height"
+                placeholder="Height (cm)"
                 :value="athlete.height === 'undefined' ? '' : athlete.height"
                 input-type="text"
                 class="mt-4"
@@ -203,7 +203,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
             <CustomInput
                 label="Weight"
                 input-name="weight"
-                placeholder="Enter Fighter Weight"
+                placeholder="Weight (lbs)"
                 :value="athlete.weight === 'undefined' ? '' : athlete.weight"
                 input-type="text"
                 class="mt-4"
