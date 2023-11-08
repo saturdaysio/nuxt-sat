@@ -52,16 +52,16 @@
 </template>
 
 
-<script setup lang="tsx">
+<script setup lang="ts">
 
 definePageMeta({
   // This is an example of inline middleware
   middleware: ['redirect-signin']
 })
 useHead({
-  title: 'Saturdays.io - Sign in',
+  title: 'Saturdays.io - Login',
   meta: [
-    {name: 'description', content: 'Saturdays.io Sign in page'}
+    {name: 'description', content: 'Saturdays.io login page'}
   ]
 })
 
