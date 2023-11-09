@@ -151,7 +151,7 @@
 
             </div>
 
-            <div class="max-w-7xl mx-auto px-4 py-8 flex items-center justify-start gap-x-6">
+            <div class="max-w-7xl mx-auto px-4 pb-8 flex items-center justify-start gap-x-6">
               <Button buttton-type="submit" button-label="Save" button-class="primary" />
               <Button buttton-type="button" button-label="Cancel" button-class="cta" />
             </div>
