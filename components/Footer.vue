@@ -11,7 +11,7 @@
 
 				<div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
 					<div id="main">
-						<h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">Resources</h2>
+						<h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">Company</h2>
 						<ul v-for="item in navigation.main" :key="item.name">
 							<li class="mb-4">
 								<suspense suspensible>
