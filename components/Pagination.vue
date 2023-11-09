@@ -28,7 +28,7 @@
         <nav class="isolate inline-flex -space-x-px rounded-md text-white shadow-sm" aria-label="Pagination">
           <a href="#"
              @click.prevent="onPageChange(currentPage - 2)"
-             class="relative inline-flex items-center rounded-l-md px-2 py-2 text-white ring-1 ring-inset ring-gray-900 hover:bg-gray-900 focus:z-20 focus:outline-offset-0">
+             class="relative inline-flex items-center rounded-l-md px-2 py-2 text-white ring-1 ring-inset ring-gray-900 hover:bg-green-900 hover:text-black focus:z-20 focus:outline-offset-0">
             <span class="sr-only">Previous</span>
             <ChevronLeftIcon class="h-6 w-6" aria-hidden="true"/>
           </a>
@@ -39,7 +39,7 @@
              href="#"
              @click.prevent="onPageChange(link.page - 1)"
              class="relative inline-flex items-center px-4 py-2 text-sm font-semibold ring-1 ring-inset ring-gray-900 hover:bg-gray-900 focus:z-20 focus:outline-offset-0"
-             :class="{'bg-white text-black hover:bg-white': link.isActive, '': !link.isActive}">
+             :class="{'bg-black text-white hover:bg-green-400 hover:text-black': link.isActive, '': !link.isActive}">
             {{ link.page }}
           </a>
 
@@ -60,9 +60,10 @@
           <!--             class="relative inline-flex items-center px-4 py-2 text-sm font-semibold  ring-1 ring-inset ring-gray-900 hover:bg-gray-900 focus:z-20 focus:outline-offset-0">9</a>-->
           <!--          <a href="#"-->
           <!--             class="relative inline-flex items-center px-4 py-2 text-sm font-semibold  ring-1 ring-inset ring-gray-900 hover:bg-gray-900 focus:z-20 focus:outline-offset-0">10</a>-->
+          <!-- change a link to NuxtLink - Nov 9, 2023 -->
           <a href="#"
              @click.prevent="onPageChange(currentPage)"
-             class="relative inline-flex items-center rounded-r-md px-2 py-2 text-white ring-1 ring-inset ring-gray-900 hover:bg-gray-900 focus:z-20 focus:outline-offset-0">
+             class="relative inline-flex items-center rounded-r-md px-2 py-2 text-white ring-1 ring-inset ring-gray-900 hover:bg-green-900 hover:text-black focus:z-20 focus:outline-offset-0">
             <span class="sr-only">Next</span>
             <ChevronRightIcon class="h-6 w-6" aria-hidden="true"/>
           </a>
@@ -73,33 +74,34 @@
 </template>
 
 <script setup lang="ts">
-import {computed} from 'vue';
-import {ChevronLeftIcon, ChevronRightIcon} from '@heroicons/vue/20/solid'
 
-interface IPagenationProps {
-  total: number
-  perPage: number
-  currentPage: number
-  from: number
-  pages: number
-  to: number
-  onPageChange: (page: number) => void
-}
+  import { computed } from 'vue';
+  import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/vue/20/solid'
 
-const props = defineProps<IPagenationProps>()
+  interface IPagenationProps {
+    total: number
+    perPage: number
+    currentPage: number
+    from: number
+    pages: number
+    to: number
+    onPageChange: (page: number) => void
+  }
 
-const {total, pages, currentPage, from, to} = toRefs(props)
+  const props = defineProps<IPagenationProps>()
 
-const computedLinks = computed(() => {
-  const pageLinks = new Array(pages.value).fill(0).map((_, i) => {
-    const page = i + 1
-    return {
-      page: page,
-      url: `?page=${page}`,
-      isActive: page === currentPage.value,
-    }
+  const {total, pages, currentPage, from, to} = toRefs(props)
+
+  const computedLinks = computed(() => {
+    const pageLinks = new Array(pages.value).fill(0).map((_, i) => {
+      const page = i + 1
+      return {
+        page: page,
+        url: `?page=${page}`,
+        isActive: page === currentPage.value,
+      }
+    })
+    return pageLinks
   })
-  return pageLinks
-})
 
 </script>
