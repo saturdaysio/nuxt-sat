@@ -1,85 +1,84 @@
 <script setup lang="ts">
 
-
-import {format} from "date-fns";
-
-import {AlgoliaSearch, IAlgoliaSearchResult} from "~/utils/search/searchUtil";
-import {ChevronRightIcon} from "@heroicons/vue/20/solid";
-import {IEvent} from "~/utils/interfaces/Event";
-import {useEventStore} from "~/pages/database/store/event";
-import {IAlgoliaHitExtended, AlgoliaAutocomplete} from "~/utils/autocomplete";
-import Button from "~/components/Button.vue";
+  import { format } from "date-fns";
+  import { AlgoliaSearch, IAlgoliaSearchResult } from "~/utils/search/searchUtil";
+  import { IAlgoliaHitExtended, AlgoliaAutocomplete } from "~/utils/autocomplete";
+  import { IEvent } from "~/utils/interfaces/Event";
+  import { useEventStore } from "~/pages/database/store/event";
+  import Button from "~/components/Button.vue";
+  import { ChevronRightIcon } from "@heroicons/vue/20/solid";
 
 
-definePageMeta({
-  middleware: ['auth']
-})
-
-useHead({
-  title: 'Saturdays.io - Event Search',
-  meta: [
-    {name: 'description', content: 'Saturdays.io admin dashboard'},
-  ]
-})
-
-const user = useSupabaseUser()
-const client = useSupabaseClient()
-
-const loading = ref(false)
-
-const eventStore = useEventStore()
-const setResults = (data: IAlgoliaSearchResult<IEvent>) => {
-  eventStore.setResults(data)
-}
-
-const searchClient = new AlgoliaSearch<IEvent>('event', {
-  limit: 50,
-})
-
-
-function setQuery(passedQuery: string) {
-  eventStore.setQuery(passedQuery)
-}
-
-function nextPage(page: number) {
-  searchClient.search(eventStore.getQuery!, page).then((res) => {
-    setResults(res)
+  definePageMeta({
+    middleware: ['auth']
   })
-}
 
-const autoCompleteSearchInstance = new AlgoliaAutocomplete<IAlgoliaHitExtended & IEvent>('event', {
-  limit: 15,
-})
+  useHead({
+    title: 'Saturdays.io - MMA Event Search',
+    meta: [
+      {name: 'description', content: 'MMA Event search'},
+    ]
+  })
 
-const searchFunction = (query: any): Promise<any> => {
-  console.log("THE QUERY", query)
-  if (query.name) {
+  const user = useSupabaseUser()
+  const client = useSupabaseClient()
+
+  const loading = ref(false)
+
+  const eventStore = useEventStore()
+  const setResults = (data: IAlgoliaSearchResult<IEvent>) => {
+    eventStore.setResults(data)
+  }
+
+  const searchClient = new AlgoliaSearch<IEvent>('event', {
+    limit: 50,
+  })
+
+
+  function setQuery(passedQuery: string) {
+    eventStore.setQuery(passedQuery)
+  }
+
+  function nextPage(page: number) {
+    searchClient.search(eventStore.getQuery!, page).then((res) => {
+      setResults(res)
+    })
+  }
+
+  const autoCompleteSearchInstance = new AlgoliaAutocomplete<IAlgoliaHitExtended & IEvent>('event', {
+    limit: 15,
+  })
+
+  const searchFunction = (query: any): Promise<any> => {
+    console.log("THE QUERY", query)
+    if (query.name) {
+      return new Promise((resolve, _) => {
+        autoCompleteSearchInstance.searchDebounced(query.name, (data: IAlgoliaSearchResult<any>) => {
+          resolve(data)
+        })
+      })
+    }
     return new Promise((resolve, _) => {
-      autoCompleteSearchInstance.searchDebounced(query.name, (data: IAlgoliaSearchResult<any>) => {
+      autoCompleteSearchInstance.searchDebounced(query, (data: IAlgoliaSearchResult<any>) => {
         resolve(data)
       })
     })
   }
-  return new Promise((resolve, _) => {
-    autoCompleteSearchInstance.searchDebounced(query, (data: IAlgoliaSearchResult<any>) => {
-      resolve(data)
+
+  const queryAutocomplete = (inputValue: IEvent) => {
+    setQuery(inputValue.name)
+    searchClient.search(inputValue.name, 0).then((res) => {
+      setResults(res)
     })
-  })
-}
+  }
+  const parseSearchResult = (result: IAlgoliaHitExtended & IEvent) => {
+    return result ? result.name : null
+  }
 
-const queryAutocomplete = (inputValue: IEvent) => {
-  setQuery(inputValue.name)
-  searchClient.search(inputValue.name, 0).then((res) => {
-    setResults(res)
-  })
-}
-const parseSearchResult = (result: IAlgoliaHitExtended & IEvent) => {
-  return result ? result.name : null
-}
+  const customQuery = (query: string) => {
+    return{ id: null, name: query }
+  }
 
-const customQuery = (query: string) => {
-  return{ id: null, name: query }
-}
 </script>
 
 

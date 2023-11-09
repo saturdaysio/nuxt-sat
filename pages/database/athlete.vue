@@ -1,21 +1,22 @@
 <script setup lang="ts">
 
-  import { format, parse, parseISO } from "date-fns";
-  import { IAthlete } from "~/utils/interfaces/Athlete";
-  import { IAlgoliaSearchResult } from "~/utils/search/searchUtil";
-  import { ChevronRightIcon } from "@heroicons/vue/20/solid";
-  import { useAthleteStore } from "~/pages/database/store/athlete";
+  import { format, parseISO } from "date-fns";
   import { IAlgoliaHitExtended } from "~/utils/autocomplete";
+  import { IAlgoliaSearchResult } from "~/utils/search/searchUtil";
+  import { IAthlete } from "~/utils/interfaces/Athlete";
+  import { useAthleteStore } from "~/pages/database/store/athlete";
   import Button from "~/components/Button.vue";
+  import { ChevronRightIcon } from "@heroicons/vue/20/solid";
+
 
   definePageMeta({
     middleware: ['auth']
   })
 
   useHead({
-    title: 'Saturdays.io - Athlete Search',
+    title: 'Saturdays.io - MMA Athlete Search',
     meta: [
-      { name: 'description', content: 'Saturdays.io admin dashboard' },
+      { name: 'description', content: 'MMA Athlete search' },
     ]
   })
 
