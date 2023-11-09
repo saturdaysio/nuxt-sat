@@ -100,7 +100,6 @@ const customQuery = (query: string) => {
             <span class="flex items-center">
               <span class="ml-3 block truncate">
                 <span v-if="item._highlightResult.name" class="text-md font-medium text-white" v-html="item._highlightResult.name.value"></span>
-                <span v-if="item._highlightResult.name" class="text-md font-medium text-white" v-html="item._highlightResult.name.value"></span>
               </span>
             </span>
           </span>
