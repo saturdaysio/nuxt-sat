@@ -88,10 +88,10 @@
     <header>
       <SearchAutoComplete
         label="Search Fighter"
+        placeholder="Search for an athlete"
         :value="athleteStore.getQuery"
         :search-function="searchFunction"
         :parse-search-result="parseSearchResult"
-        placeholder="Fighter Name"
         :on-type="setQuery"
         :custom-query="customQuery"
         :on-enter="queryAutocomplete"

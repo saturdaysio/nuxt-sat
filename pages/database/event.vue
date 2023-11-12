@@ -90,7 +90,8 @@
         :value="eventStore.getQuery"
         :search-function="searchFunction"
         :parse-search-result="parseSearchResult"
-        placeholder="Event Name" :on-type="setQuery"
+        placeholder="Search for an event"
+        :on-type="setQuery"
         :custom-query="customQuery"
         :on-enter="queryAutocomplete" :limit="50"
       >

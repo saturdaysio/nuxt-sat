@@ -19,11 +19,12 @@ interface SearchInputProps {
   parseSearchResult: (result: any) => string
   value?: string;
   customQuery?: (query: string) => any
+  onType?: (query: string) => void;
 }
 
 const props = defineProps<SearchInputProps>();
 
-const {label, placeholder, onEnter, value, searchFunction, parseSearchResult, customQuery} = toRefs(props);
+const {label, placeholder, onEnter, value, searchFunction, parseSearchResult, customQuery, onType} = toRefs(props);
 
 const query = ref<string>('');
 
@@ -39,6 +40,9 @@ const results = ref<IAlgoliaSearchResult<IAlgoliaHitExtended & any>>({
   processingTimeMS: 0,
 });
 const setQuery = (passedQuery: string) => {
+  if (onType?.value) {
+    onType.value(passedQuery);
+  }
   query.value = passedQuery;
 }
 
@@ -54,7 +58,7 @@ watchEffect(() => {
   }
 })
 
-const selectedItem = ref(null)
+const selectedItem = ref(value?.value ? {name: value?.value} : null);
 
 const queryComputed = computed(() => {
   if (!customQuery) {
@@ -86,6 +90,7 @@ const clearButtonAction = () => {
             <ComboboxInput
                 @change="onTypeHandler"
                 :display-value="parseSearchResult"
+                :placeholder="placeholder"
                 className="block w-full h-12 rounded-md border-0 bg-gray-800/40 pl-4 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-1 focus:ring-inset focus:ring-green-400 sm:text-sm sm:leading-6"
             />
             <Button v-if="queryComputed || selectedItem" @click="clearButtonAction"
