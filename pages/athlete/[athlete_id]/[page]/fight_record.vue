@@ -101,7 +101,7 @@
                   {{ match.nowin == "true" ? "D" : (match.nowin == "false" && match.winner?.id.toString() === route.params.athlete_id ? 'W' : 'L') }}
                 </th>
                 <td class="px-2 py-2 font-bold whitespace-nowrap">
-                  <NuxtLink>
+                  <NuxtLink :to="`/athlete/${match.opponent.id}/bio`">
                     {{ match.opponent?.name }}
                   </NuxtLink>
                 </td>
