@@ -100,7 +100,6 @@
 
   const fieldsWithLabels = [...textInputs, 'select']
 
-  const fieldsWithLabels = [...textInputs, 'select']
 const clearInput = () => {
     (onType as unknown as Ref<any | undefined>)?.value('')
     (onEnter as unknown as Ref<any | undefined>)?.value('')
