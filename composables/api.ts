@@ -66,4 +66,8 @@ export class API {
     console.log("cannot update location at this time")
     return this.unauthenticatedAPI.patch(`/location/${location.id}`, location);
   }
+
+  public getAthleteMatches(id: string) {
+    return this.unauthenticatedAPI.get(`/athlete/${id}/matches`);
+  }
 }

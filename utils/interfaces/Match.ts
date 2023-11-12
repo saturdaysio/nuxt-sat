@@ -9,8 +9,8 @@ export interface IMatch {
   event: IEvent
   location: ILocation
   nowin: string
-  athlete_winner: IAthlete
-  athlete_loser: IAthlete
+  winner: IAthlete
+  loser: IAthlete
   round: number
   time: string
   method: string
@@ -20,4 +20,6 @@ export interface IMatch {
   created_at: Date
   updated_at: Date
   deleted_at: Date
+  date: Date
+  opponent: IAthlete
 }
