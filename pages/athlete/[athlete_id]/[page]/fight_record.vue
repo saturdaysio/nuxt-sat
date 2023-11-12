@@ -2,6 +2,22 @@
 
   import { API } from "~/composables/api";
   import { ChevronRightIcon } from "@heroicons/vue/20/solid";
+  import {IAthlete} from "~/utils/interfaces/Athlete";
+  import {IMatch} from "~/utils/interfaces/Match";
+  import {format} from "date-fns";
+  const route = useRoute()
+
+  const api = API.getInstance()
+  const {data: matches, pending, error, refresh}: {
+    data: Ref<IMatch[] | null>,
+    pending: Ref<boolean>,
+    error: any,
+    refresh: () => void
+  } = await useAsyncData<IMatch[]>(`${route.params.athlete_id}`, async () => {
+    const result = await api.getAthleteMatches(route.params.athlete_id as string)
+    return result.data
+  })
+
 
   const record = [
     {
@@ -80,30 +96,30 @@
             </thead>
 
             <tbody class="divide-y divide-white/10 bg-black border border-white/20">
-              <tr v-for="item in record" :key="item.id" class="leading-6 text-gray-400">
+              <tr v-for="match in (matches as IMatch[])" :key="match.id" class="leading-6 text-gray-400">
                 <th scope="row" class="px-2 py-2 font-bold text-center text-white">
-                  {{ item.result }}
+                  {{ match.nowin == "true" ? "D" : (match.nowin == "false" && match.winner?.id.toString() === route.params.athlete_id ? 'W' : 'L') }}
                 </th>
                 <td class="px-2 py-2 font-bold whitespace-nowrap">
                   <NuxtLink>
-                    {{ item.opponent }}
+                    {{ match.opponent?.name }}
                   </NuxtLink>
                 </td>
                 <td class="px-2 py-2 whitespace-nowrap">
-                  {{ item.method }}
+                  {{ match.method }}
                 </td>
                 <td class="px-2 py-2">
-                  {{ item.round }}
+                  {{ match.round }}
                 </td>
                 <td class="px-2 py-2">
-                  {{ item.time }}
+                  {{ match.time }}
                 </td>
                 <td class="px-2 py-2 whitespace-nowrap">
-                  {{ item.date }}
+                  {{ format(new Date(match.date), 'MMM d, yyyy') }}
                 </td>
                 <td class="px-2 py-2 font-bold whitespace-nowrap">
-                  <NuxtLink>
-                    {{ item.event }}
+                  <NuxtLink :to="`/event/${match.event.id}/overview`">
+                    {{ match.event.name }}
                   </NuxtLink>
                 </td>
               </tr>

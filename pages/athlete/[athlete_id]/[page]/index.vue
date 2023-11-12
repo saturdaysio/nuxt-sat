@@ -4,7 +4,7 @@ import {IAthlete} from "~/utils/interfaces/Athlete";
 import {Tab, TabGroup, TabList, TabPanel, TabPanels} from "@headlessui/vue";
 import Bio from "./Bio.vue";
 import Stats from "./Stats.vue";
-import Record from "./record.vue";
+import FightRecord from "./fight_record.vue";
 
 const types = ['bio', 'stats', 'record', 'media']
 const route = useRoute()
@@ -78,7 +78,7 @@ function changeTab(index: number) {
               <Stats v-if="athlete" :athlete="athlete as IAthlete"/>
             </TabPanel>
             <TabPanel>
-              <Record v-if="athlete" :athlete="athlete as IAthlete"/>
+              <FightRecord v-if="athlete" :athlete="athlete as IAthlete"/>
             </TabPanel>
             <TabPanel>
               <h1>Coming soon!</h1>
