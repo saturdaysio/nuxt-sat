@@ -60,12 +60,12 @@ function parseDate(date: Date | undefined, formatString: string): string {
 
 <template>
   <div class="space-y-14">
-    <section class="mx-auto rounded-sm border border-white/20 bg-gray-900 p-4">
+    <section class="mx-auto rounded-sm border border-white/20 bg-gray-900 px-4 py-8">
       <h1 class="text-2xl font-bold text-white">Fighter Bio</h1>
       <!--    sub title -->
-      <h2 class="text-lg text-white">Flavour text description for Athlete data.</h2>
+      <h2 class="text-lg text-gray-400">Flavour text description for Athlete data.</h2>
       <form @submit="SubmitAthleteData">
-        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+        <div class="mt-8 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
 
           <div class="sm:col-span-3">
             <CustomInput
@@ -88,7 +88,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
             />
           </div>
         </div>
-        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+        <div class="mt-8 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
           <div class="sm:col-span-3">
             <CustomInput
                 label="Nickname"
@@ -111,7 +111,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
             />
           </div>
         </div>
-        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+        <div class="mt-8 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
           <div class="sm:col-span-3">
             <CustomInput
                 label="Country"
@@ -135,26 +135,18 @@ function parseDate(date: Date | undefined, formatString: string): string {
         </div>
 
         <!-- button group horizontal -->
-        <div class="mt-10 flex justify-start space-x-4">
-          <Button
-              button-type="submit"
-              button-label="Save"
-              button-class="primary"
-          />
-          <Button
-              button-type="button"
-              button-label="Cancel"
-              button-class="cta"
-          />
+        <div class="mt-8 flex justify-start space-x-4">
+          <Button button-type="submit" button-label="Save" button-class="primary" />
+          <Button button-type="button" button-label="Cancel" button-class="cta" />
         </div>
       </form>
     </section>
-    <section class="mx-auto rounded-sm border border-white/20 bg-gray-900 p-4">
+    <section class="mx-auto rounded-sm border border-white/20 bg-gray-900 px-4 py-8">
       <h1 class="text-2xl font-bold text-white">Fighter Stats</h1>
       <!--    sub title -->
-      <h2 class="text-lg text-white">Flavour text description for Athlete data.</h2>
+      <h2 class="text-lg text-gray-400">Flavour text description for Athlete data.</h2>
       <form @submit="SubmitAthleteData">
-        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+        <div class="mt-8 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
           <div class="sm:col-span-3">
             <CustomInput
                 label="Team"
@@ -176,7 +168,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
             />
           </div>
         </div>
-        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+        <div class="mt-8 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
           <div class="sm:col-span-3">
             <CustomInput
                 label="Style"
@@ -187,18 +179,18 @@ function parseDate(date: Date | undefined, formatString: string): string {
                 class="mt-4"
             />
           </div>
-        </div>
-        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
           <div class="sm:col-span-3">
             <CustomInput
-                label="Height"
-                input-name="height"
-                placeholder="Height (cm)"
-                :value="athlete.height === 'undefined' ? '' : athlete.height"
+                label="Division"
+                input-name="division"
+                placeholder="Heavyweight"
+                :value="athlete.weightclass === 'undefined' ? '' : athlete.weightclass"
                 input-type="text"
                 class="mt-4"
             />
           </div>
+        </div>
+        <div class="mt-8 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
           <div class="sm:col-span-3">
             <CustomInput
                 label="Weight"
@@ -209,20 +201,22 @@ function parseDate(date: Date | undefined, formatString: string): string {
                 class="mt-4"
             />
           </div>
+          <div class="sm:col-span-3">
+            <CustomInput
+                label="Height"
+                input-name="height"
+                placeholder="Height (cm)"
+                :value="athlete.height === 'undefined' ? '' : athlete.height"
+                input-type="text"
+                class="mt-4"
+            />
+          </div>
         </div>
 
         <!-- button group horizontal -->
-        <div class="mt-10 flex justify-start space-x-4">
-          <Button
-              button-type="submit"
-              button-label="Save"
-              button-class="primary"
-          />
-          <Button
-              button-type="button"
-              button-label="Cancel"
-              button-class="cta"
-          />
+        <div class="mt-8 flex justify-start space-x-4">
+          <Button button-type="submit" button-label="Save" button-class="primary" />
+          <Button button-type="button" button-label="Cancel" button-class="cta" />
         </div>
       </form>
 
