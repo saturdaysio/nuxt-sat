@@ -51,7 +51,7 @@
 						<p class="mt-2 text-base leading-6 text-gray-400">Enter your existing password and your new password to change it.</p>
 
 						<div class="mt-8">
-							<Button buttton-type="submit" button-label="Delete account" button-class="secondary" />
+							<Button buttton-type="submit" button-label="Delete account" button-class="danger" />
 						</div>
 					</div>
 
