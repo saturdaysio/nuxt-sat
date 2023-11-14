@@ -149,43 +149,34 @@
             <CombinedInput
                 label="Location"
                 :fields="[
-                          {
-                            label: 'City',
-                            name: 'city',
-                            placeholder: 'Enter City',
-                            value: event.location?.city
-                          },
-                          {
-                            label: 'State',
-                            name: 'state',
-                            placeholder: 'Enter State',
-                            value: event.location?.state
-                          },
-                          {
-                            label: 'Country',
-                            name: 'country',
-                            placeholder: 'Enter Country',
-                            value: event.location?.country
-                          }
-                        ] as CombinedInputField[]"
-                      :on-type="() => {console.log('typing')}"
-                      class="mt-4"
+                  {
+                    label: 'City',
+                    name: 'city',
+                    placeholder: 'Enter City',
+                    value: event.location?.city
+                  },
+                  {
+                    label: 'State/Province',
+                    name: 'state',
+                    placeholder: 'Enter State',
+                    value: event.location?.state
+                  },
+                  {
+                    label: 'Country',
+                    name: 'country',
+                    placeholder: 'Country',
+                    value: event.location?.country
+                  }
+                ] as CombinedInputField[]"
+              :on-type="() => {console.log('typing')}"
+              class="mt-4"
             />
           </div>
         </div>
 
-        <!-- button group horizontal -->
-        <div class="mt-10 flex justify-start space-x-4">
-          <Button
-              button-type="submit"
-              button-label="Save"
-              button-class="primary"
-          />
-          <Button
-              button-type="button"
-              button-label="Cancel"
-              button-class="cta"
-          />
+        <div class="mt-8 flex flex-col sm:flex-row justify-start gap-6">
+          <Button button-type="submit" button-label="Save" button-class="primary" />
+          <Button button-type="button" button-label="Cancel" button-class="cta" />
         </div>
       </form>
     </section>

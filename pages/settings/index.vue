@@ -40,7 +40,7 @@
 								/>
 							</div>
 
-							<div class="">
+							<div class="mt-6">
 								<Button buttton-type="submit" button-label="Change password" button-class="primary" />
 							</div>
 						</div>
@@ -51,7 +51,7 @@
 						<p class="mt-2 text-base leading-6 text-gray-400">Enter your existing password and your new password to change it.</p>
 
 						<div class="mt-6">
-							<Button buttton-type="submit" button-label="Delete account" button-class="primary" />
+							<Button buttton-type="submit" button-label="Delete account" button-class="secondary" />
 						</div>
 					</div>
 
@@ -60,7 +60,7 @@
 		                <p class="mt-2 text-base leading-6 text-gray-400">Flavour text for logging out.</p>
 
 						<div class="mt-8 flex items-center justify-start">
-							<Button buttton-type="submit" button-label="Signout" button-class="secondary" @click="signOut" />
+							<Button buttton-type="submit" button-label="Signout" button-class="cta" @click="signOut" />
 						</div>
 					</div>
 					
@@ -91,42 +91,42 @@
 	})
 
 
-  const profileStore = useProfileStore()
-  const client = useSupabaseClient()
-  await profileStore.fetchProfile(client)
-  const user = profileStore.getProfile
+	const profileStore = useProfileStore()
+	const client = useSupabaseClient()
+	await profileStore.fetchProfile(client)
+	const user = profileStore.getProfile
 
-  const loading = ref(false)
+	const loading = ref(false)
 
-  const supabase = useSupabaseClient()
+	const supabase = useSupabaseClient()
 
-  const updateProfile = async (event: Event) => {
-    event.preventDefault()
+	const updateProfile = async (event: Event) => {
+	event.preventDefault()
 
-    const form = event.target as HTMLFormElement
-    const formData = new FormData(form)
-    const data = Object.fromEntries(formData.entries())
+	const form = event.target as HTMLFormElement
+	const formData = new FormData(form)
+	const data = Object.fromEntries(formData.entries())
 
-    loading.value = true
-    if (!user || !user.user) return
+	loading.value = true
+	if (!user || !user.user) return
 
 
-    const {error} = await supabase.from('users').upsert({
-      // @ts-ignore
-      id: user.user.id,
-      ...data,
-      // @ts-ignore
-     // profile_permissions: permissions
-    }).select()
-    loading.value = false
-  }
+	const {error} = await supabase.from('users').upsert({
+		// @ts-ignore
+		id: user.user.id,
+		...data,
+		// @ts-ignore
+		// profile_permissions: permissions
+	}).select()
+	loading.value = false
+	}
 
-  // Signout function
-  const signOut = async () => {
-    let { error } = await supabase.auth.signOut()
+	// Signout function
+	const signOut = async () => {
+	let { error } = await supabase.auth.signOut()
 	if (error) console.log(error)
-    navigateTo('/');
-  }
+	navigateTo('/');
+	}
 
 </script>
 
