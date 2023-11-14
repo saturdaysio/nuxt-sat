@@ -23,7 +23,7 @@ export interface IStats {
   takedownAveragePer15Min: number
   takedownDefensePercentage: number
   submissionAverage: number
-  averageFightTime: number
+  averageFightTime: string
   created_at: Date
   updated_at: Date
   deleted_at: Date
