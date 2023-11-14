@@ -9,7 +9,7 @@ interface BioProps {
   athlete: IAthlete
 }
 
-const {athlete} = defineProps<BioProps>()
+const { athlete } = defineProps<BioProps>()
 
 function SubmitAthleteData(event: FormDataEvent) {
   event.preventDefault()
@@ -181,8 +181,8 @@ function parseDate(date: Date | undefined, formatString: string): string {
           </div>
           <div class="sm:col-span-3">
             <CustomInput
-                label="Division"
-                input-name="division"
+                label="Weightclass"
+                input-name="weightclass"
                 placeholder="Heavyweight"
                 :value="athlete.weightclass === 'undefined' ? '' : athlete.weightclass"
                 input-type="text"
@@ -224,6 +224,6 @@ function parseDate(date: Date | undefined, formatString: string): string {
   </div>
 </template>
 
-<style scoped lang="scss">
 
+<style scoped lang="scss">
 </style>
