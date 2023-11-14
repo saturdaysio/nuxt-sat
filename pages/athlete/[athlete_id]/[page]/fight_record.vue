@@ -1,6 +1,5 @@
 <script setup lang="ts">
 
-  import { API } from "~/composables/api";
   import { ChevronRightIcon } from "@heroicons/vue/20/solid";
   import {IAthlete} from "~/utils/interfaces/Athlete";
   import {IMatch} from "~/utils/interfaces/Match";

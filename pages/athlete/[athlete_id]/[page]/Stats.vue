@@ -4,7 +4,6 @@
   import Button from "~/components/Button.vue";
   import CustomInput from "~/components/CustomInput.vue";
   import {format, isDate, parseISO} from "date-fns";
-  import {API} from "~/composable/api";
   import {IStats} from "~/utils/interfaces/Stats";
 
   interface BioProps {
