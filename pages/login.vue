@@ -58,6 +58,7 @@
     // This is an example of inline middleware
     middleware: ['redirect-signin']
   })
+
   useHead({
     title: 'Saturdays.io - Login',
     meta: [
