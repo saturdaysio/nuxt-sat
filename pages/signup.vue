@@ -55,7 +55,6 @@
 		]
 	})
 
-
 	const user = useSupabaseUser()
 	const client = useSupabaseClient()
 	const supabase = useSupabaseClient()
@@ -84,6 +83,7 @@
 		}
 	}
 
+	
 	watchEffect(() => {
 		if (user.value) {
 			navigateTo('/dashboard', { replace: true })
