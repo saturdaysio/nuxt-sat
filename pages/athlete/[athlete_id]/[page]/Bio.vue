@@ -135,7 +135,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
         </div>
 
         <!-- button group horizontal -->
-        <div class="mt-8 flex justify-start space-x-4">
+        <div class="mt-8 flex flex-col sm:flex-row justify-start gap-6">
           <Button button-type="submit" button-label="Save" button-class="primary" />
           <Button button-type="button" button-label="Cancel" button-class="cta" />
         </div>
@@ -214,7 +214,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
         </div>
 
         <!-- button group horizontal -->
-        <div class="mt-8 flex justify-start space-x-4">
+        <div class="mt-8 flex flex-col sm:flex-row justify-start gap-6">
           <Button button-type="submit" button-label="Save" button-class="primary" />
           <Button button-type="button" button-label="Cancel" button-class="cta" />
         </div>
