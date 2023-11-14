@@ -1,38 +1,38 @@
 <script setup lang="ts">
-import {API} from "~/composable/api";
-import {Tab, TabGroup, TabList, TabPanel, TabPanels} from "@headlessui/vue";
-import Overview from "./Overview.vue";
-import Matches from "./Matches.vue";
-import {IEvent} from "~/utils/interfaces/Event";
 
-const types = ['overview', 'matches', 'media']
-const route = useRoute()
+  import {Tab, TabGroup, TabList, TabPanel, TabPanels} from "@headlessui/vue";
+  import Overview from "./Overview.vue";
+  import Matches from "./Matches.vue";
+  import {IEvent} from "~/utils/interfaces/Event";
 
-const api = API.getInstance()
-const {data: event, pending, error, refresh}: {
-  data: Ref<IEvent | null>,
-  pending: Ref<boolean>,
-  error: any,
-  refresh: () => void
-} = await useAsyncData<IEvent>(`event_${route.params.event_id}`, async () => {
-  const result = await api.getEvent(route.params.event_id as string)
-  return result.data
-})
-const activeTab = computed(() => {
-  return types.indexOf((route.params.page as string).toLowerCase().replace(/\s/g, '_'))
-})
+  const types = ['overview', 'matches', 'media']
+  const route = useRoute()
 
-const router = useRouter()
-function changeTab(index: number) {
-  const tab = types[index]
-  router.push({
-    path: `/event/${route.params.event_id as string}/${tab}`,
-    params: {
-      event_id: route.params.event_id,
-      page: tab
-    }
+  const api = API.getInstance()
+  const {data: event, pending, error, refresh}: {
+    data: Ref<IEvent | null>,
+    pending: Ref<boolean>,
+    error: any,
+    refresh: () => void
+  } = await useAsyncData<IEvent>(`event_${route.params.event_id}`, async () => {
+    const result = await api.getEvent(route.params.event_id as string)
+    return result.data
   })
-}
+  const activeTab = computed(() => {
+    return types.indexOf((route.params.page as string).toLowerCase().replace(/\s/g, '_'))
+  })
+
+  const router = useRouter()
+  function changeTab(index: number) {
+    const tab = types[index]
+    router.push({
+      path: `/event/${route.params.event_id as string}/${tab}`,
+      params: {
+        event_id: route.params.event_id,
+        page: tab
+      }
+    })
+  }
 
 </script>
 

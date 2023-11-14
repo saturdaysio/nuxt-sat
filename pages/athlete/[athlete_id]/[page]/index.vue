@@ -1,39 +1,39 @@
 <script setup lang="ts">
-import {API} from "~/composables/api";
-import {IAthlete} from "~/utils/interfaces/Athlete";
-import {Tab, TabGroup, TabList, TabPanel, TabPanels} from "@headlessui/vue";
-import Bio from "./Bio.vue";
-import Stats from "./Stats.vue";
-import FightRecord from "./fight_record.vue";
 
-const types = ['bio', 'stats', 'record', 'media']
-const route = useRoute()
+  import {IAthlete} from "~/utils/interfaces/Athlete";
+  import {Tab, TabGroup, TabList, TabPanel, TabPanels} from "@headlessui/vue";
+  import Bio from "./Bio.vue";
+  import Stats from "./Stats.vue";
+  import FightRecord from "./fight_record.vue";
 
-const api = API.getInstance()
-const {data: athlete, pending, error, refresh}: {
-  data: Ref<IAthlete | null>,
-  pending: Ref<boolean>,
-  error: any,
-  refresh: () => void
-} = await useAsyncData<IAthlete>(`athlete_${route.params.athlete_id}`, async () => {
-  const result = await api.getAthlete(route.params.athlete_id as string)
-  return result.data
-})
-const activeTab = computed(() => {
-  return types.indexOf((route.params.page as string).toLowerCase().replace(/\s/g, '_'))
-})
+  const types = ['bio', 'stats', 'record', 'media']
+  const route = useRoute()
 
-const router = useRouter()
-function changeTab(index: number) {
-  const tab = types[index]
-  router.push({
-    path: `/athlete/${route.params.athlete_id as string}/${tab}`,
-    params: {
-      athlete_id: route.params.athlete_id,
-      page: tab
-    }
+  const api = API.getInstance()
+  const {data: athlete, pending, error, refresh}: {
+    data: Ref<IAthlete | null>,
+    pending: Ref<boolean>,
+    error: any,
+    refresh: () => void
+  } = await useAsyncData<IAthlete>(`athlete_${route.params.athlete_id}`, async () => {
+    const result = await api.getAthlete(route.params.athlete_id as string)
+    return result.data
   })
-}
+  const activeTab = computed(() => {
+    return types.indexOf((route.params.page as string).toLowerCase().replace(/\s/g, '_'))
+  })
+
+  const router = useRouter()
+  function changeTab(index: number) {
+    const tab = types[index]
+    router.push({
+      path: `/athlete/${route.params.athlete_id as string}/${tab}`,
+      params: {
+        athlete_id: route.params.athlete_id,
+        page: tab
+      }
+    })
+  }
 
 </script>
 
