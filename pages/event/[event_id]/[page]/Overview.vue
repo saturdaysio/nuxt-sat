@@ -1,104 +1,104 @@
 <script setup lang="ts">
-import {IEvent} from "~/utils/interfaces/Event";
-import Button from "~/components/Button.vue";
-import CustomInput from "~/components/CustomInput.vue";
-import {format, isDate, parseISO} from "date-fns";
-import {API} from "~/composable/api";
-import {CombinedInputField} from "~/components/CombinedInput.vue";
-import CombinedInput from "~/components/CombinedInput.vue";
-import {ILocation} from "~/utils/interfaces/Location";
-import {AxiosResponse} from "axios";
 
-interface BioProps {
-  event: IEvent
-}
+  import {IEvent} from "~/utils/interfaces/Event";
+  import Button from "~/components/Button.vue";
+  import CustomInput from "~/components/CustomInput.vue";
+  import {format, isDate, parseISO} from "date-fns";
+  import {CombinedInputField} from "~/components/CombinedInput.vue";
+  import CombinedInput from "~/components/CombinedInput.vue";
+  import {ILocation} from "~/utils/interfaces/Location";
+  import {AxiosResponse} from "axios";
 
-const {event} = defineProps<BioProps>()
-
-async function SubmitEventData(formEvent: FormDataEvent) {
-  formEvent.preventDefault()
-  console.log('submit')
-  const formData = new FormData(formEvent.target as HTMLFormElement)
-  // log formdata
-  for (const [key, value] of formData.entries()) {
-    console.log(key, value);
+  interface BioProps {
+    event: IEvent
   }
 
-  // generate json object from form data
-  const object: any = {};
-  for (const [key, value] of formData.entries()) {
+  const {event} = defineProps<BioProps>()
 
-    object[key] = value;
-  }
-  console.log("THE OBJECT", object)
-
-  // convert object.date to utc with date-fns with time
-  if (object.date) {
-    object.date = new Date(format(new Date(object.date), 'yyyy-MM-dd\'T\'HH:mm:ss.SSSxxx'))
-  }
-
-  if ((object as any).city || (object as any).country || (object as any).state) {
-    // we need to update the location elsewhere
-
-
-    let locationId = event.location?.id
-    if (!event.location || !event.location?.id) {
-      console.log(object)
-      const {data: res}: AxiosResponse<ILocation> = await API.getInstance().createLocation({
-        city: (object as any).city,
-        state: (object as any).state,
-        country: (object as any).country,
-        full_location: (object as any).city + ', ' + (object as any).country
-      })
-      locationId = res.id
-    } else {
-      const {data: res}: AxiosResponse<ILocation> = await API.getInstance().patchLocation({
-        id: event.location.id,
-        city: (object as any).city,
-        state: (object as any).state,
-        country: (object as any).country,
-        full_location: (object as any).city + ', ' + (object as any).country
-      })
-      locationId = res.id
+  async function SubmitEventData(formEvent: FormDataEvent) {
+    formEvent.preventDefault()
+    console.log('submit')
+    const formData = new FormData(formEvent.target as HTMLFormElement)
+    // log formdata
+    for (const [key, value] of formData.entries()) {
+      console.log(key, value);
     }
-    delete (object as any).city
-    delete (object as any).country
-    delete (object as any).state
-    if (object.location) {
-     object.location.id = locationId
-    } else {
-      object.location = {
-        id: locationId
+
+    // generate json object from form data
+    const object: any = {};
+    for (const [key, value] of formData.entries()) {
+
+      object[key] = value;
+    }
+    console.log("THE OBJECT", object)
+
+    // convert object.date to utc with date-fns with time
+    if (object.date) {
+      object.date = new Date(format(new Date(object.date), 'yyyy-MM-dd\'T\'HH:mm:ss.SSSxxx'))
+    }
+
+    if ((object as any).city || (object as any).country || (object as any).state) {
+      // we need to update the location elsewhere
+
+
+      let locationId = event.location?.id
+      if (!event.location || !event.location?.id) {
+        console.log(object)
+        const {data: res}: AxiosResponse<ILocation> = await API.getInstance().createLocation({
+          city: (object as any).city,
+          state: (object as any).state,
+          country: (object as any).country,
+          full_location: (object as any).city + ', ' + (object as any).country
+        })
+        locationId = res.id
+      } else {
+        const {data: res}: AxiosResponse<ILocation> = await API.getInstance().patchLocation({
+          id: event.location.id,
+          city: (object as any).city,
+          state: (object as any).state,
+          country: (object as any).country,
+          full_location: (object as any).city + ', ' + (object as any).country
+        })
+        locationId = res.id
       }
+      delete (object as any).city
+      delete (object as any).country
+      delete (object as any).state
+      if (object.location) {
+      object.location.id = locationId
+      } else {
+        object.location = {
+          id: locationId
+        }
+      }
+
+
+      object.id = event.id
+      object.name = event.name
+      object.date = format(object.date, 'yyyy-MM-dd\'T\'HH:mm')
+      return API.getInstance().patchEvent(object)
     }
-
-
+    // merge with athlete object
     object.id = event.id
     object.name = event.name
-    object.date = format(object.date, 'yyyy-MM-dd\'T\'HH:mm')
-    return API.getInstance().patchEvent(object)
+
+    API.getInstance().patchEvent(object)
+
+
+
   }
-  // merge with athlete object
-  object.id = event.id
-  object.name = event.name
 
-  API.getInstance().patchEvent(object)
-
-
-
-}
-
-function parseDate(date: Date | undefined, formatString: string): string {
-  try {
-    if (date) {
-      return format(new Date(date), formatString)
+  function parseDate(date: Date | undefined, formatString: string): string {
+    try {
+      if (date) {
+        return format(new Date(date), formatString)
+      }
+      return ''
+    } catch (e) {
+      console.log(e)
+      return ''
     }
-    return ''
-  } catch (e) {
-    console.log(e)
-    return ''
   }
-}
 
 </script>
 
