@@ -67,6 +67,30 @@
 
 <script setup lang="ts">
 
+	definePageMeta({
+		middleware: ['auth']
+	})
+
+	useHead({
+		title: 'Saturdays.io - Dashboard',
+		meta: [
+			{ name: 'description', content: 'Saturdays.io admin dashboard' },
+		]
+	})
+
+	const user = useSupabaseUser()
+	const client = useSupabaseClient()
+
+	const loading = ref(false)
+
+
+	const logout = async () => {
+		let { error } = await client.auth.signOut();
+		navigateTo('/signin');
+	}
+
+
+	// Dummy data
 	const stats = [
 		{ name: 'Number of deploys', value: '4000' },
 		{ name: 'Average deploy time', value: '32', unit: 'seconds' },
@@ -162,29 +186,6 @@
 		},
 		// More items...
 	]
-
-
-	definePageMeta({
-		middleware: ['auth']
-	})
-
-	useHead({
-		title: 'Saturdays.io - Dashboard',
-		meta: [
-			{ name: 'description', content: 'Saturdays.io admin dashboard' },
-		]
-	})
-
-	const user = useSupabaseUser()
-	const client = useSupabaseClient()
-
-	const loading = ref(false)
-
-
-	const logout = async () => {
-		let { error } = await client.auth.signOut();
-		navigateTo('/signin');
-	}
 
 </script>
 
