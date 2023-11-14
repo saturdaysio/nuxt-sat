@@ -1,8 +1,8 @@
 import axios from "axios";
-import {IAthlete} from "~/utils/interfaces/Athlete";
-import {IStats} from "~/utils/interfaces/Stats";
-import {IEvent} from "~/utils/interfaces/Event";
-import {ILocation} from "~/utils/interfaces/Location";
+import { IAthlete } from "~/utils/interfaces/Athlete";
+import { IStats } from "~/utils/interfaces/Stats";
+import { IEvent } from "~/utils/interfaces/Event";
+import { ILocation } from "~/utils/interfaces/Location";
 
 const unauthenticatedAPI = (baseURL: string ) => axios.create({
   baseURL,
@@ -12,7 +12,7 @@ const unauthenticatedAPI = (baseURL: string ) => axios.create({
 
 })
 
-// api sigleton
+// api singleton
 export class API {
   private static instance: API;
   private unauthenticatedAPI: any;
