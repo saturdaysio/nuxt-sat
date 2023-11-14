@@ -1,4 +1,4 @@
-import {IAthlete} from "~/utils/interfaces/Athlete";
+import { IAthlete } from "~/utils/interfaces/Athlete";
 
 export interface IStats {
   id: number
@@ -23,7 +23,7 @@ export interface IStats {
   takedownAveragePer15Min: number
   takedownDefensePercentage: number
   submissionAverage: number
-  averageFightTime: string
+  averageFightTime: number
   created_at: Date
   updated_at: Date
   deleted_at: Date
