@@ -40,7 +40,7 @@
 								/>
 							</div>
 
-							<div class="mt-6">
+							<div class="mt-8">
 								<Button buttton-type="submit" button-label="Change password" button-class="primary" />
 							</div>
 						</div>
@@ -50,7 +50,7 @@
 						<h2 class="text-2xl font-bold leading-8 text-white">Delete Account</h2>
 						<p class="mt-2 text-base leading-6 text-gray-400">Enter your existing password and your new password to change it.</p>
 
-						<div class="mt-6">
+						<div class="mt-8">
 							<Button buttton-type="submit" button-label="Delete account" button-class="secondary" />
 						</div>
 					</div>
@@ -59,7 +59,7 @@
 						<h2 class="text-2xl font-bold leading-8 text-white">Sign out</h2>
 		                <p class="mt-2 text-base leading-6 text-gray-400">Flavour text for logging out.</p>
 
-						<div class="mt-8 flex items-center justify-start">
+						<div class="mt-8">
 							<Button buttton-type="submit" button-label="Signout" button-class="cta" @click="signOut" />
 						</div>
 					</div>
