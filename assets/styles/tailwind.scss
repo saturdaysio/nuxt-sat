@@ -68,13 +68,13 @@
 /* Button styles */
 
   .primary {
-    @apply text-center font-bold text-black bg-green-400 py-4 px-8 rounded-md hover:bg-blue-200 transition duration-500
+    @apply h-12 w-full py-3 px-6 text-center font-bold text-black bg-green-400 rounded-md hover:bg-blue-200 transition duration-500
   }
 
   .secondary {
-    @apply text-center font-bold text-white bg-blue-400 py-4 px-8 rounded-md hover:bg-blue-800 transition duration-500
+    @apply h-12 w-full py-3 px-6 text-center font-bold text-white bg-blue-400 rounded-md hover:bg-blue-800 transition duration-500
   }
 
   .cta {
-    @apply text-center font-bold text-white bg-none py-3 px-7 rounded-md border-4 border-solid border-white hover:border-green-400 hover:text-green-400 transition duration-200
+    @apply h-12 w-full py-3 px-6 bg-none rounded-md text-center font-bold text-white border border-white hover:border-green-400 hover:text-green-400 transition duration-200
   }

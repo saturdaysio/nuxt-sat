@@ -1,13 +1,15 @@
 <template>
   <div>
-    <label v-if="fieldsWithLabels.includes(inputType) && label" :for="label" class="block text-md font-semibold leading-4 uppercase text-white">{{ label }}</label>
+    <label v-if="fieldsWithLabels.includes(inputType) && label" :for="label" class="block text-md font-semibold leading-4 uppercase text-white">
+      {{ label }}
+    </label>
     <div class="mt-2 relative">
       <input
           v-if="textInputs.includes(inputType)"
           :type="inputType"
           :name="inputName"
           :id="label"
-          class="block w-full h-12 rounded-md border-0 bg-gray-800/40 pl-4 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-1 focus:ring-inset focus:ring-green-400 sm:text-sm sm:leading-6 disabled:bg-gray-900/40 disabled:text-gray-500"
+          class="block w-full h-12 rounded-sm border-0 bg-gray-800/50 pl-4 py-2 text-base leading-5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-1 focus:ring-inset focus:ring-green-400 disabled:bg-gray-900/40 disabled:text-white"
           :placeholder="placeholder"
           v-model="inputComputed"
           :value="value"
@@ -18,17 +20,14 @@
           :max="max"
           :disabled="disabled"
       />
-      <Button v-if="clearButton && inputComputed" @click="clearInput"
-              class="absolute right-0 top-0 bottom-0 my-auto h-full w-12 flex items-center justify-center text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500"
-              aria-label="Clear"
-      >
+      <Button v-if="clearButton && inputComputed" @click="clearInput" class="absolute right-0 top-0 bottom-0 my-auto h-full w-12 flex items-center justify-center text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500" aria-label="Clear">
         <XMarkIcon class="h-5 w-5" aria-hidden="true"/>
       </Button>
       <SelectInput v-if="inputType=='select'" :options="options as ItemOption[]" :input-name="inputName as string" :option-selected="value as string" :disabled="disabled" />
       <CheckboxInput v-if="inputType=='checkbox'" :value="value" :checkboxLabelSub="checkboxLabelSub" :input-name="inputName" :label="label" :disabled="disabled"/>
       <span v-if="error">
-      {{ error }}
-    </span>
+        {{ error }}
+      </span>
     </div>
   </div>
 </template>

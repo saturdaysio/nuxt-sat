@@ -18,6 +18,7 @@
   </div>
 </template>
 
+
 <script setup lang="ts">
 
   import { defineProps } from 'vue'
@@ -28,6 +29,6 @@
 
 </script>
 
-<style scoped>
 
+<style scoped>
 </style>
