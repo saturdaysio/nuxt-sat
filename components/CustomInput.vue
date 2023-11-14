@@ -1,6 +1,8 @@
 <template>
   <div>
-    <label v-if="fieldsWithLabels.includes(inputType) && label" :for="label" class="block text-md font-semibold leading-4 uppercase text-white">{{ label }}</label>
+    <label v-if="fieldsWithLabels.includes(inputType) && label" :for="label" class="block text-md font-semibold leading-4 uppercase text-white">
+      {{ label }}
+    </label>
     <div class="mt-2 relative">
       <input
           v-if="textInputs.includes(inputType)"
@@ -18,17 +20,14 @@
           :max="max"
           :disabled="disabled"
       />
-      <Button v-if="clearButton && inputComputed" @click="clearInput"
-              class="absolute right-0 top-0 bottom-0 my-auto h-full w-12 flex items-center justify-center text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500"
-              aria-label="Clear"
-      >
+      <Button v-if="clearButton && inputComputed" @click="clearInput" class="absolute right-0 top-0 bottom-0 my-auto h-full w-12 flex items-center justify-center text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500" aria-label="Clear">
         <XMarkIcon class="h-5 w-5" aria-hidden="true"/>
       </Button>
       <SelectInput v-if="inputType=='select'" :options="options as ItemOption[]" :input-name="inputName as string" :option-selected="value as string" :disabled="disabled" />
       <CheckboxInput v-if="inputType=='checkbox'" :value="value" :checkboxLabelSub="checkboxLabelSub" :input-name="inputName" :label="label" :disabled="disabled"/>
       <span v-if="error">
-      {{ error }}
-    </span>
+        {{ error }}
+      </span>
     </div>
   </div>
 </template>
