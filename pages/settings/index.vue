@@ -6,11 +6,11 @@
     <main class="pt-24">
       <div class="mx-auto max-w-7xl px-2 md:px-4">
         <!-- Your content -->
-		<section class="mx-auto rounded-sm">
+		<section class="mx-auto">
         	<form class="" @submit.prevent="updateProfile">
         		<div class="space-y-4 md:space-y-6 lg:space-y-8">
 
-					<div class="max-w-7xl mx-auto px-4 py-8 bg-gray-800/40 rounded-md">
+					<div class="max-w-7xl mx-auto px-4 py-8 bg-gray-800/40 rounded-md border border-white/10">
 						<h2 class="text-2xl font-bold leading-8 text-white">Change Password</h2>
 						<p class="mt-2 text-base leading-6 text-gray-400">Enter your existing password and your new password to change it.</p>
 
@@ -46,7 +46,7 @@
 						</div>
 					</div>
 
-					<div class="max-w-7xl mx-auto px-4 py-8 bg-gray-800/40 rounded-md">
+					<div class="max-w-7xl mx-auto px-4 py-8 bg-gray-800/40 rounded-md border border-white/10">
 						<h2 class="text-2xl font-bold leading-8 text-white">Delete Account</h2>
 						<p class="mt-2 text-base leading-6 text-gray-400">Enter your existing password and your new password to change it.</p>
 
@@ -55,7 +55,7 @@
 						</div>
 					</div>
 
-					<div v-if="user" class="max-w-7xl mx-auto px-4 py-8 bg-gray-800/40 rounded-md">
+					<div v-if="user" class="max-w-7xl mx-auto px-4 py-8 bg-gray-800/40 rounded-md border border-white/10">
 						<h2 class="text-2xl font-bold leading-8 text-white">Sign out</h2>
 		                <p class="mt-2 text-base leading-6 text-gray-400">Flavour text for logging out.</p>
 
