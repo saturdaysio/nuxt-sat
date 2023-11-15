@@ -50,11 +50,9 @@
         <TabGroup :selectedIndex="activeTab" @change="changeTab">
           <TabList class="flex flex-0 w-full space-x-8 border-b border-gray-700 ">
             <Tab v-for="category in ['Overview', 'Matches', 'Media']" as="template" :key="category" v-slot="{ selected }">
-              <button
-                  :class="[' py-2.5 text-lg font-medium leading-5 text-grey-700 outline-none', 'focus:outline-none focus:text-white whitespace-nowrap',
-                       selected ? 'text-white shadow' : 'text-gray-400 hover:text-white',
-                  ]"
-              >
+              
+              <button :class="[' py-2.5 text-lg font-medium leading-5 text-grey-700 outline-none', 'focus:outline-none focus:text-white whitespace-nowrap',
+                selected ? 'text-blue-400 hover:text-blue-200 underline underline-offset-8 shadow' : 'text-gray-400 hover:text-white',]">
                 {{ category }}
               </button>
             </Tab>
