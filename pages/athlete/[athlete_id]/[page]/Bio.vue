@@ -59,7 +59,7 @@ function parseDate(date: Date | undefined, formatString: string): string {
 </script>
 
 <template>
-  <div class="space-y-14">
+  <div class="space-y-4 md:space-y-6 lg:space-y-8">
     <section class="mx-auto rounded-sm border border-white/20 bg-gray-900 px-4 py-8">
       <h1 class="text-2xl font-bold text-white">Fighter Bio</h1>
       <!--    sub title -->
