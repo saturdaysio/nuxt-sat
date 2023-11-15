@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss/types').Config} */
 
-
+const plugin = require('tailwindcss/plugin')
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
 const primary = colors.blue;
@@ -145,6 +145,12 @@ module.exports = {
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/forms"),
     require("@tailwindcss/typography"),
-    require('@headlessui/tailwindcss')({ prefix: 'ui' })
+    require('@headlessui/tailwindcss')({ prefix: 'ui' }),
+
+    plugin(function({ addVariant }) {
+      addVariant('optional', '&optional')
+      addVariant('not-last', '&:not(:last-child)')
+      addVariant('hocus', ['&:hover', '&focus'])
+    })
   ],
 };
