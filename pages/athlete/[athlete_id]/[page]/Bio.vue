@@ -62,7 +62,6 @@ function parseDate(date: Date | undefined, formatString: string): string {
   <div class="space-y-4 md:space-y-6 lg:space-y-8">
     <section class="mx-auto rounded-sm border border-white/20 bg-gray-900 px-4 py-8">
       <h1 class="text-2xl font-bold text-white">Fighter Bio</h1>
-      <!--    sub title -->
       <h2 class="text-lg text-gray-400">Flavour text description for Athlete data.</h2>
       <form @submit="SubmitAthleteData">
         <div class="mt-8 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
@@ -141,9 +140,9 @@ function parseDate(date: Date | undefined, formatString: string): string {
         </div>
       </form>
     </section>
+
     <section class="mx-auto rounded-sm border border-white/20 bg-gray-900 px-4 py-8">
       <h1 class="text-2xl font-bold text-white">Fighter Stats</h1>
-      <!--    sub title -->
       <h2 class="text-lg text-gray-400">Flavour text description for Athlete data.</h2>
       <form @submit="SubmitAthleteData">
         <div class="mt-8 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
