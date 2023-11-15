@@ -104,10 +104,10 @@
 
 <template>
   <div class="space-y-14">
-    <section class="mx-auto rounded-sm border border-white/20 bg-gray-900/10 p-4">
+    <section class="mx-auto rounded-sm bg-gray-800/40 border border-white/20 px-4 py-8">
       <h1 class="text-2xl font-bold text-white">Event Info</h1>
       <!--    sub title -->
-      <h2 class="text-lg text-white">Description flavour text</h2>
+      <h2 class="text-lg text-gray-400">Description flavour text</h2>
       <form @submit="SubmitEventData">
         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
 
