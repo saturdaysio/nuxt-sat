@@ -115,7 +115,7 @@
             <CustomInput
                 label="Event name"
                 input-name="name"
-                placeholder="Enter Event name"
+                placeholder="Event name"
                 :value="event.name === 'undefined' ? '' : event.name"
                 input-type="text"
                 class="mt-4"
@@ -125,7 +125,7 @@
             <CustomInput
                 label="Date"
                 input-name="date"
-                placeholder="Enter Event Date"
+                placeholder="Event date"
                 :value="parseDate(new Date(new Date(event.date).toISOString().slice(0, -1)), 'yyyy-MM-dd\'T\'HH:mm')"
                 input-type="datetime-local"
                 class="mt-4"
@@ -139,39 +139,46 @@
             <CustomInput
                 label="Venue"
                 input-name="venue"
-                placeholder="Enter Event venue"
+                placeholder="Ex: Skydome"
                 :value="event.venue ? event.venue : 'Unknown'"
                 input-type="text"
                 class="mt-4"
             />
           </div>
+
           <div class="sm:col-span-3">
-            <CombinedInput
-                label="Location"
-                :fields="[
-                  {
-                    label: 'City',
-                    name: 'city',
-                    placeholder: 'Enter City',
-                    value: event.location?.city
-                  },
-                  {
-                    label: 'State/Province',
-                    name: 'state',
-                    placeholder: 'Enter State',
-                    value: event.location?.state
-                  },
-                  {
-                    label: 'Country',
-                    name: 'country',
-                    placeholder: 'Country',
-                    value: event.location?.country
-                  }
-                ] as CombinedInputField[]"
-              :on-type="() => {console.log('typing')}"
-              class="mt-4"
+            <CustomInput
+                label="City"
+                input-name="city"
+                placeholder="Ex: Toronto"
+                :value="event.location?.city"
+                input-type="text"
+                class="mt-4"
             />
           </div>
+
+          <div class="sm:col-span-3">
+            <CustomInput
+                label="State/Province"
+                input-name="state"
+                placeholder="Ex: Ontario"
+                :value="event.location?.state"
+                input-type="text"
+                class="mt-4"
+            />
+          </div>
+
+          <div class="sm:col-span-3">
+            <CustomInput
+                label="Country"
+                input-name="country"
+                placeholder="Ex: Canada"
+                :value="event.location?.country"
+                input-type="text"
+                class="mt-4"
+            />
+          </div>
+
         </div>
 
         <div class="mt-8 flex flex-col sm:flex-row justify-start gap-6">
