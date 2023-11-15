@@ -56,15 +56,8 @@
                 :key="category"
                 v-slot="{ selected }"
             >
-              <button
-                  :class="[
-                      ' py-2.5 text-lg font-medium leading-5 text-grey-700 outline-none',
-                       'focus:outline-none focus:text-white whitespace-nowrap',
-                       selected
-                ? 'text-white shadow'
-                : 'text-gray-400 hover:text-white',
-                  ]"
-              >
+              <button :class="['block w-auto h-12 text-base leading-5 font-base focus:outline-none', 'focus:outline-none focus:text-white whitespace-nowrap',
+                selected ? 'font-bold text-blue-400 border-b border-blue-400' : 'text-gray-400 hover:text-white',]">
                 {{ category }}
               </button>
             </Tab>
