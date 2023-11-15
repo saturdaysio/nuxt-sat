@@ -11,7 +11,7 @@
             <div class="space-y-12">
 
               <div v-if="user" class="max-w-7xl mx-auto px-4 py-8 bg-gray-800/40 rounded-md border border-white/10">
-                <h2 class="text-3xl font-bold leading-8 text-white">Profile Info</h2>
+                <h2 class="text-2xl font-bold leading-8 text-white">Profile Info</h2>
                 <p class="mt-2 text-base leading-6 text-gray-400">Flavour text description lorem ipsum for personal info.</p>
 
                 <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8">
