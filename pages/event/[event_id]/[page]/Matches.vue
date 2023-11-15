@@ -1,6 +1,6 @@
 <template>
   <div class="space-y-14">
-    <section class="mx-auto rounded-sm border border-white/20 bg-gray-900/10 p-4">
+    <section class="mx-auto rounded-sm border border-white/20 bg-gray-800/40 px-4 py-8">
       <div v-if="pending" class="flex justify-center">
         <span class="text-white">loading..</span>
       </div>
@@ -15,8 +15,8 @@
         <div v-else>
           <div :v-if="matches.length" v-for="matches in eventMatches" :key="matches ? matches[0]?.type : 'invalid'" class="relative overflow-x-auto">
             <table class="w-full text-md md:text-base text-left whitespace-nowrap mb-8 md:mb-12">
-              <caption class="py-2 text-left">
-                <h2 class="text-xl font-base uppercase text-white">
+              <caption class="text-left pb-4">
+                <h2 class="text-2xl font-bold text-white">
                 {{ matches ? matches[0]?.type : 'invalid' }}
               </h2>
               </caption>
@@ -34,7 +34,7 @@
               </thead>
 
               <tbody class="divide-y divide-white/10 bg-black border border-white/20">
-                <tr v-for="match in matches" :key="match.id" class="leading-6 text-gray-400 hover:bg-gray-800/40">
+                <tr v-for="match in matches" :key="match.id" class="h-12 leading-6 text-gray-400 hover:bg-gray-800/40">
 
                   <td class="py-2 px-2">
                     <div class="font-bold hover:text-green-400">
