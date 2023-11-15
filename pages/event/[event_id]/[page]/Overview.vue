@@ -159,7 +159,7 @@
 
           <div class="sm:col-span-3">
             <CustomInput
-                label="State/Province"
+                label="State / Province"
                 input-name="state"
                 placeholder="Ex: Ontario"
                 :value="event.location?.state"
