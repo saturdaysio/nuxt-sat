@@ -39,10 +39,9 @@
 									:value="user.password"
 								/>
 							</div>
-
-							<div class="mt-8">
-								<Button buttton-type="submit" button-label="Change password" button-class="primary" />
-							</div>
+						</div>
+						<div class="mt-8">
+							<Button buttton-type="submit" button-label="Change password" button-class="primary" />
 						</div>
 					</div>
 
