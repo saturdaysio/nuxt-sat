@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
-  import {IAthlete} from "~/utils/interfaces/Athlete";
-  import {Tab, TabGroup, TabList, TabPanel, TabPanels} from "@headlessui/vue";
+  import { IAthlete } from "~/utils/interfaces/Athlete";
+  import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/vue";
   import Bio from "./Bio.vue";
   import Stats from "./Stats.vue";
   import FightRecord from "./fight_record.vue";

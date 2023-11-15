@@ -103,7 +103,7 @@
 </script>
 
 <template>
-  <div class="space-y-14">
+  <div class="space-y-4 md:space-y-6 lg:space-y-8">
     <section class="mx-auto rounded-sm bg-gray-800/40 border border-white/20 px-4 py-8">
       <h1 class="text-2xl font-bold text-white">Event Info</h1>
       <!--    sub title -->

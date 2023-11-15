@@ -1,9 +1,9 @@
 <script setup lang="ts">
 
-  import {Tab, TabGroup, TabList, TabPanel, TabPanels} from "@headlessui/vue";
+  import { IEvent } from "~/utils/interfaces/Event";
+  import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/vue";
   import Overview from "./Overview.vue";
   import Matches from "./Matches.vue";
-  import {IEvent} from "~/utils/interfaces/Event";
 
   const types = ['overview', 'matches', 'media']
   const route = useRoute()
