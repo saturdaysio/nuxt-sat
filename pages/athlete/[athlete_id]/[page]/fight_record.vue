@@ -40,7 +40,7 @@
             </thead>
 
             <tbody class="divide-y divide-white/10 bg-black border border-white/20">
-              <tr v-for="match in (matches as IMatch[])" :key="match.id" class="leading-6 text-gray-400">
+              <tr v-for="match in (matches as IMatch[])" :key="match.id" class="h-12 leading-6 text-gray-400">
                 <th scope="row" class="px-2 py-2 font-bold text-center text-white">
                   {{ match.nowin == "true" ? "D" : (match.nowin == "false" && match.winner?.id.toString() === route.params.athlete_id ? 'W' : 'L') }}
                 </th>
