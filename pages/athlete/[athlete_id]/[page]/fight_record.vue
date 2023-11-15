@@ -21,7 +21,7 @@
 
 <template>
   <div class="space-y-14">
-    <section class="mx-auto w-full rounded-sm border border-white/20 bg-gray-900/10 p-4">
+    <section class="mx-auto w-full rounded-sm border border-white/20 bg-gray-900/10 px-4 py-8">
       <h1 class="text-2xl font-bold text-white">Fight Record</h1>
 
       <div id="fight_table" class="pt-4">
