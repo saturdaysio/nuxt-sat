@@ -1,9 +1,8 @@
 <script setup lang="ts">
 
-  import { ChevronRightIcon } from "@heroicons/vue/20/solid";
-  import {IAthlete} from "~/utils/interfaces/Athlete";
-  import {IMatch} from "~/utils/interfaces/Match";
-  import {format} from "date-fns";
+  import { IAthlete } from "~/utils/interfaces/Athlete";
+  import { IMatch } from "~/utils/interfaces/Match";
+  import { format } from "date-fns";
   const route = useRoute()
 
   const api = API.getInstance()
@@ -16,60 +15,6 @@
     const result = await api.getAthleteMatches(route.params.athlete_id as string)
     return result.data
   })
-
-
-  const record = [
-    {
-      id: '0',
-      result: "L",
-      opponent: "Islam Makhachev",
-      date: "Oct 23, 2023",
-      event: "UFC 294: Makhachev vs Volkanovski 2",
-      method: "KO/TKO",
-      round: "3",
-      time: "3:06",
-    },
-    {
-      id: '1',
-      result: "W",
-      opponent: "Yair Rodriguez",
-      date: "Jul 8, 2023",
-      event: "UFC 290: Volkanovski vs. Rodriguez",
-      method: "KO/TKO",
-      round: "3",
-      time: "4:19",
-    },
-    {
-      id: '2',
-      result: "L",
-      opponent: "Islam Makhachev",
-      date: "Feb 11, 2023",
-      event: "UFC 284: Makhachev vs. Volkanovski",
-      method: "Decision - Unanimous",
-      round: "5",
-      time: "5:00",
-    },
-    {
-      id: '3',
-      result: "W",
-      opponent: "Max Holloway",
-      date: "Jul 2, 2022",
-      event: "UFC 276: Adesanya vs. Cannonier",
-      method: "Decision - Unanimous",
-      round: "5",
-      time: "5:00",
-    },
-    {
-      id: '4',
-      result: "W",
-      opponent: "Chan Sung Jung",
-      date: "Apr 9, 2022",
-      event: "UFC 273: Volkanovski vs. The Korean Zombie",
-      method: "KO/TKO",
-      round: "4",
-      time: "0:45",
-    },
-  ]
 
 </script>
 
