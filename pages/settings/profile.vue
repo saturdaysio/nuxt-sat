@@ -6,11 +6,11 @@
     <main class="pt-24">
       <div class="mx-auto max-w-7xl px-2 md:px-4">
         <!-- Your content -->
-        <section class="mx-auto rounded-sm border border-white/10">
-          <form class=" bg-gray-800/20" @submit.prevent="updateProfile">
+        <section class="mx-auto">
+          <form class="" @submit.prevent="updateProfile">
             <div class="space-y-12">
 
-              <div v-if="user" class="max-w-7xl mx-auto px-4 py-8">
+              <div v-if="user" class="max-w-7xl mx-auto px-4 py-8 bg-gray-800/40 rounded-md border border-white/10">
                 <h2 class="text-3xl font-bold leading-8 text-white">Profile Info</h2>
                 <p class="mt-2 text-base leading-6 text-gray-400">Flavour text description lorem ipsum for personal info.</p>
 
@@ -147,13 +147,13 @@
 
                 </div>
 
+                <div class="max-w-7xl mx-auto mt-8 flex flex-col sm:flex-row justify-start gap-6">
+                  <Button buttton-type="submit" button-label="Save" button-class="primary" />
+                  <Button buttton-type="button" button-label="Cancel" button-class="cta" />
+                </div>
+
               </div>
 
-            </div>
-
-            <div class="max-w-7xl mx-auto px-4 pb-8 flex flex-col sm:flex-row justify-start gap-6">
-              <Button buttton-type="submit" button-label="Save" button-class="primary" />
-              <Button buttton-type="button" button-label="Cancel" button-class="cta" />
             </div>
           </form>
         </section>
