@@ -1,9 +1,8 @@
 <template>
   <div class="space-y-14">
     <section class="mx-auto rounded-sm border border-white/20 bg-gray-900/10 p-4">
-      <!--    sub title -->
       <div v-if="pending" class="flex justify-center">
-        <Loader />
+        <span class="text-white">loading..</span>
       </div>
       <div v-else-if="error" class="flex justify-center">
         <p class="text-red-500">{{ error }}</p>
@@ -70,12 +69,7 @@
                   </td>
 
                   <td class="py-2 px-2 text-right md:table-cell">
-                    <Button
-                      button-label="Match page link"
-                      button-type="button"
-                      button-class="text-white hover:text-green-400"
-                      :to="`/match/${match.id}/stats`"
-                    >
+                    <Button button-label="Match page link" button-type="button" button-class="text-white hover:text-green-400">
                       <ChevronRightIcon class="h-6 w-6" aria-hidden="true" />
                     </Button>
                   </td>
