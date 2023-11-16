@@ -18,11 +18,11 @@
         type="date"
         name="date"
         id="date"
-        class="block w-full pl-4 pr-4 rounded-md text-base"
+        class="block w-full my-auto pl-4 pr-4 rounded-md text-base"
         placeholder="mm/dd/yyyy"
         :value="value"
     />
-    <div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
+    <div class="absolute inset-y-0 right-0 pr-4 pointer-events-none">
       <Button button-label="DatePicker"
               class="absolute right-0 my-auto h-full w-12 flex items-center justify-center"
               aria-label="DatePicker"
