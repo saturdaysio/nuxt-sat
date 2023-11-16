@@ -13,12 +13,12 @@
 
 <template>
   <!-- date input following mm/dd/yyyy -->
-  <div class="mt-1 relative rounded-md shadow-sm">
+  <div class="mt-1 relative">
     <input
         type="date"
         name="date"
         id="date"
-        class="block w-full my-auto pl-4 pr-4 rounded-md text-base"
+        class="block w-full h-12 my-auto pl-4 pr-4 py-2"
         placeholder="mm/dd/yyyy"
         :value="value"
     />
