@@ -1,3 +1,12 @@
+<script setup lang="ts">
+
+  const props = defineProps(['inputName', 'label', 'checkboxLabelSub', 'value'])
+
+  const { inputName, label, checkboxLabelSub, value } = toRefs(props)
+
+</script>
+
+
 <template>
   <div class="relative flex gap-x-3">
     <div class="flex h-6 items-center">
@@ -17,17 +26,6 @@
     </div>
   </div>
 </template>
-
-
-<script setup lang="ts">
-
-  import { defineProps } from 'vue'
-
-  const props = defineProps(['inputName', 'label', 'checkboxLabelSub', 'value'])
-
-  const { inputName, label, checkboxLabelSub, value } = toRefs(props)
-
-</script>
 
 
 <style scoped>

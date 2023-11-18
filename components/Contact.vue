@@ -1,3 +1,7 @@
+<script setup lang="ts">
+</script>
+
+
 <template>
 	<section class="px-4 md:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
 
@@ -14,10 +18,6 @@
 
 	</section>
 </template>
-
-
-<script setup lang="ts">
-</script>
 
 
 <style lang="scss" scoped>

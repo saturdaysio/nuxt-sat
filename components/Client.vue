@@ -1,23 +1,3 @@
-<template>
-	<section class="px-4 py-16 md:py-20 lg:py-24">
-	  <div class="max-w-6xl mx-auto">
-		<div class="px-4 pb-8">
-			<h1 class="text-3xl md:text-4xl lg:text-5xl text-center font-bold lime-to-aqua">We partner with brands that care about meaningful digital experiences</h1>
-		</div>
-
-		<div id="grid" class=" grid grid-cols-2 gap-4 overflow-hidden sm:mx-0 md:grid-cols-3 lg:grid-cols-4">
-		  <div class="logo" v-for="item in logos" :key="item.id">
-			<figure>
-				<img class="w-36 h-36" :src="item.src" :alt="item.alt" loading="lazy" :width="item.width" :height="item.height">
-			</figure>
-		  </div>
-
-		</div>
-	  </div>
-	</section>
-  </template>
-
-
 <script setup lang="ts">
 
 	const logos = [
@@ -137,6 +117,27 @@
 
 </script>
 
+
+<template>
+	<section class="px-4 py-16 md:py-20 lg:py-24">
+	  <div class="max-w-6xl mx-auto">
+		<div class="px-4 pb-8">
+			<h1 class="text-3xl md:text-4xl lg:text-5xl text-center font-bold lime-to-aqua">We partner with brands that care about meaningful digital experiences</h1>
+		</div>
+
+		<div id="grid" class=" grid grid-cols-2 gap-4 overflow-hidden sm:mx-0 md:grid-cols-3 lg:grid-cols-4">
+		  <div class="logo" v-for="item in logos" :key="item.id">
+			<figure>
+				<img class="w-36 h-36" :src="item.src" :alt="item.alt" loading="lazy" :width="item.width" :height="item.height">
+			</figure>
+		  </div>
+
+		</div>
+	  </div>
+	</section>
+</template>
+
+
 <style lang="scss" scoped>
 	.logo {
 		display: flex;
@@ -156,4 +157,5 @@
 			padding: 0 1rem;
 		}
 	}
+
 </style>
