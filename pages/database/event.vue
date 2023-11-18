@@ -10,7 +10,9 @@
 
 
   definePageMeta({
-    middleware: ['auth']
+    middleware: ['auth'],
+    pageTransition: false,
+    layoutTransition: false
   })
 
   useHead({

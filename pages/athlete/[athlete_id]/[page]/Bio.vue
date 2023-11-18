@@ -1,60 +1,66 @@
 <script setup lang="ts">
 
-import {IAthlete} from "~/utils/interfaces/Athlete";
-import Button from "~/components/Button.vue";
-import CustomInput from "~/components/CustomInput.vue";
-import {format, isDate, parseISO} from "date-fns";
+  import { IAthlete } from "~/utils/interfaces/Athlete";
+  import Button from "~/components/Button.vue";
+  import CustomInput from "~/components/CustomInput.vue";
+  import { format, isDate, parseISO } from "date-fns";
 
-interface BioProps {
-  athlete: IAthlete
-}
-
-const { athlete } = defineProps<BioProps>()
-
-function SubmitAthleteData(event: FormDataEvent) {
-  event.preventDefault()
-  console.log('submit')
-  const formData = new FormData(event.target as HTMLFormElement)
-  // log formdata
-  for (const [key, value] of formData.entries()) {
-    console.log(key, value);
+  interface BioProps {
+    athlete: IAthlete
   }
 
-  // generate json object from form data
-  const object: Partial<IAthlete> = {};
-  formData.forEach((value, key) => {
-    object[key] = value;
-  });
-  if (object.birthdate) {
-    console.log(object["birthdate"])
-  }
-  // if (object.birthdate) {
-  //   object.birthdate = format(new Date(object.birthdate), 'yyyy-MM-dd')
-  // }
-  // merge with athlete object
-  object.id = athlete.id
-  object.name = athlete.name
-  if (!object.firstName) {
-    object.firstName = athlete.firstName.replace(/^\s/, '')
-    object.lastName = athlete.lastName
-  } else {
-    object.firstName = object.firstName.replace(/^\s/, '')
-  }
-  API.getInstance().patchAthlete(object)
+  const { athlete } = defineProps<BioProps>()
 
-}
-
-function parseDate(date: Date | undefined, formatString: string): string {
-  try {
-    if (date) {
-      return format(new Date(date), formatString)
+  function SubmitAthleteData(event: FormDataEvent) {
+    event.preventDefault()
+    console.log('submit')
+    const formData = new FormData(event.target as HTMLFormElement)
+    // log formdata
+    for (const [key, value] of formData.entries()) {
+      console.log(key, value);
     }
-    return ''
-  } catch (e) {
-    console.log(e)
-    return ''
+
+    // generate json object from form data
+    const object: Partial<IAthlete> = {};
+    formData.forEach((value, key) => {
+      object[key] = value;
+    });
+    if (object.birthdate) {
+      console.log(object["birthdate"])
+    }
+    // if (object.birthdate) {
+    //   object.birthdate = format(new Date(object.birthdate), 'yyyy-MM-dd')
+    // }
+    // merge with athlete object
+    object.id = athlete.id
+    object.name = athlete.name
+    if (!object.firstName) {
+      object.firstName = athlete.firstName.replace(/^\s/, '')
+      object.lastName = athlete.lastName
+    } else {
+      object.firstName = object.firstName.replace(/^\s/, '')
+    }
+    API.getInstance().patchAthlete(object)
+
   }
-}
+
+  function parseDate(date: Date | undefined, formatString: string): string {
+    try {
+      if (date) {
+        return format(new Date(date), formatString)
+      }
+      return ''
+    } catch (e) {
+      console.log(e)
+      return ''
+    }
+  }
+
+  definePageMeta({
+    middleware: ['auth'],
+    pageTransition: false,
+    layoutTransition: false
+  })
 
 </script>
 

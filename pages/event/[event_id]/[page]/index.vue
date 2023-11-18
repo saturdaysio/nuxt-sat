@@ -34,7 +34,14 @@
     })
   }
 
+  definePageMeta({
+    middleware: ['auth'],
+    pageTransition: false,
+    layoutTransition: false
+  })
+
 </script>
+
 
 <template>
   <div class="min-h-full">
@@ -76,6 +83,6 @@
   </div>
 </template>
 
-<style scoped lang="scss">
 
+<style scoped lang="scss">
 </style>

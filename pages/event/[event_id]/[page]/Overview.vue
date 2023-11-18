@@ -4,8 +4,6 @@
   import Button from "~/components/Button.vue";
   import CustomInput from "~/components/CustomInput.vue";
   import {format, isDate, parseISO} from "date-fns";
-  import {CombinedInputField} from "~/components/CombinedInput.vue";
-  import CombinedInput from "~/components/CombinedInput.vue";
   import {ILocation} from "~/utils/interfaces/Location";
   import {AxiosResponse} from "axios";
 
@@ -100,7 +98,14 @@
     }
   }
 
+  definePageMeta({
+    middleware: ['auth'],
+    pageTransition: false,
+    layoutTransition: false
+  })
+
 </script>
+
 
 <template>
   <div class="space-y-4 md:space-y-6 lg:space-y-8">

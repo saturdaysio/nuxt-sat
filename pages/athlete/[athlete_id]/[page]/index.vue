@@ -35,6 +35,12 @@
     })
   }
 
+  definePageMeta({
+    middleware: ['auth'],
+    pageTransition: false,
+    layoutTransition: false
+  })
+
 </script>
 
 <template>
