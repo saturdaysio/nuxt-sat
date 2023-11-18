@@ -1,3 +1,49 @@
+<script setup lang="ts">
+
+	import { defineComponent, ref, watchEffect } from 'vue'
+	import { Popover, PopoverButton, PopoverPanel, } from '@headlessui/vue'
+	import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
+
+
+    const navigation = [
+		{ name: 'Dashboard', to: '/dashboard', current: false },
+        { name: 'Search', to: '/database', current: false },
+        { name: 'Settings', to: '/settings', current: false },
+		{ name: 'Profile', to: '/settings/profile', current: false },
+	]
+
+
+    // Hack to echo Popover v-slot state change
+    // https://github.com/tailwindlabs/headlessui/issues/2436
+    // https://stackoverflow.com/questions/67807076/get-v-slots-value
+    let isPopoverOpen = ref(false)
+    const emit = defineEmits(["opened", "closed"])
+
+    // Invisible component to emit Popover 'open' state
+    const Snitcher = defineComponent({
+        setup: (_, { attrs, emit }) => {
+            watchEffect(() => emit('change', attrs))
+
+            return () => null
+        }
+    })
+
+
+    // Watch isPopoverOpen state to apply overflow class
+    // Need to add additional functionality to check browser width, if wider than 1024px, close menu
+    watch(isPopoverOpen, async () => {
+        // if isPopoverOpen = true, apply body class="overflow-hidden" to lock background scrolling
+        if (isPopoverOpen.value) {
+            document.body.classList.add("overflow-hidden");
+        } else {
+            document.body.classList.remove("overflow-hidden");
+        }},
+        { immediate: true } // Forces watcher callback to be executed immediately https://vuejs.org/guide/essentials/watchers.html#eager-watchers
+    )
+
+</script>
+
+
 <template>
     <Popover v-slot="{ open }">
         <Snitcher :open="open"  @change="({ open }) => isPopoverOpen = open" />
@@ -53,53 +99,6 @@
 	    </nav>
     </Popover>
 </template>
-
-
-<script setup lang="ts">
-
-	import { defineComponent, ref, watchEffect } from 'vue'
-	import { Popover, PopoverButton, PopoverPanel, } from '@headlessui/vue'
-	import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
-
-
-    const navigation = [
-		{ name: 'Dashboard', to: '/dashboard', current: false },
-        { name: 'Search', to: '/database', current: false },
-        { name: 'Settings', to: '/settings', current: false },
-		{ name: 'Profile', to: '/settings/profile', current: false },
-	]
-
-
-    
-    // Hack to echo Popover v-slot state change
-    // https://github.com/tailwindlabs/headlessui/issues/2436
-    // https://stackoverflow.com/questions/67807076/get-v-slots-value
-    let isPopoverOpen = ref(false)
-    const emit = defineEmits(["opened", "closed"])
-
-    // Invisible component to emit Popover 'open' state
-    const Snitcher = defineComponent({
-        setup: (_, { attrs, emit }) => {
-            watchEffect(() => emit('change', attrs))
-
-            return () => null
-        }
-    })
-
-
-    // Watch isPopoverOpen state to apply overflow class
-    // Need to add additional functionality to check browser width, if wider than 1024px, close menu
-    watch(isPopoverOpen, async () => {
-        // if isPopoverOpen = true, apply body class="overflow-hidden" to lock background scrolling
-        if (isPopoverOpen.value) {
-            document.body.classList.add("overflow-hidden");
-        } else {
-            document.body.classList.remove("overflow-hidden");
-        }},
-        { immediate: true } // Forces watcher callback to be executed immediately https://vuejs.org/guide/essentials/watchers.html#eager-watchers
-    )
-
-</script>
 
 
 <style lang="scss" scoped>
