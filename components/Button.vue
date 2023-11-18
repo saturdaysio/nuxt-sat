@@ -1,21 +1,3 @@
-<template>
-  <div>
-    <NuxtLink v-if="to" :to="to" :target="target || ''"
-              :rel="rel || (noRel ? '' : 'noopener noreferrer')">
-      <button :class="classObject">
-        {{ !hasSlots ? buttonLabel : '' }}
-        <slot/>
-      </button>
-    </NuxtLink>
-
-    <button :type="buttonType" v-else @click="onClick" :class="classObject">
-      {{ !hasSlots ? buttonLabel : '' }}
-      <slot/>
-    </button>
-  </div>
-</template>
-
-
 <script setup lang="ts">
 
   interface ButtonProps {
@@ -50,5 +32,39 @@
 </script>
 
 
+<template>
+  <div>
+    <NuxtLink v-if="to" :to="to" :target="target || ''"
+              :rel="rel || (noRel ? '' : 'noopener noreferrer')">
+      <button :class="classObject">
+        {{ !hasSlots ? buttonLabel : '' }}
+        <slot/>
+      </button>
+    </NuxtLink>
+
+    <button :type="buttonType" v-else @click="onClick" :class="classObject">
+      {{ !hasSlots ? buttonLabel : '' }}
+      <slot/>
+    </button>
+  </div>
+</template>
+
+
 <style lang="scss" scoped>
+  .primary {
+    @apply h-12 w-full sm:w-auto py-3 px-6 rounded-md bg-green-400 hover:bg-blue-400 text-base leading-6 font-bold text-black hover:text-white text-center transition duration-500
+  }
+
+  .secondary {
+    @apply h-12 w-full sm:w-auto py-3 px-6 rounded-md bg-blue-400 hover:bg-blue-800 text-base leading-6 font-bold text-white text-center transition duration-500
+  }
+
+  .cta {
+    @apply h-12 w-full sm:w-auto py-3 px-6 rounded-md bg-none border border-white text-base leading-6 font-bold text-white text-center hover:border-green-400 hover:text-green-400 transition duration-500
+  }
+
+  .danger {
+    @apply h-12 w-full sm:w-auto py-3 px-6 rounded-md bg-red-600 text-base leading-6 font-bold text-white hover:bg-red-900 transition duration-500
+  }
+  
 </style>
