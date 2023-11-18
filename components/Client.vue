@@ -148,10 +148,6 @@
 	}
 
 
-	@media only screen and (max-width: 800px) {
-
-	}
-
 	@media only screen and (max-width: 640px) {
 		.logo {
 			padding: 0 1rem;
