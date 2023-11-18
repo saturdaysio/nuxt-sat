@@ -18,7 +18,7 @@
         type="date"
         name="date"
         id="date"
-        class="block h-12 w-full my-auto pl-4 pr-4 py-2 text-base leading-5 text-white"
+        class="block h-12 w-full my-auto pl-4 pr-4 py-2 align-middle text-base leading-5 text-white"
         placeholder="mm/dd/yyyy"
         :value="value"
     />
