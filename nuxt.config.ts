@@ -78,14 +78,11 @@ export default defineNuxtConfig({
     // Generated on-demand, revalidates in background
     '/profile/**': {swr: true},
 
-    // Page generated on-demand, revalidates in background
-    '/temp/**': {swr: true},
-    // Generated on-demand once until next deploy
-    '/blog/**': {isr: true},
-    // Renders only on client-side
-    '/admin/**': {ssr: false},
     // Add CORS headers on API routes
-    '/api/**': {cors: true},
+    '/database/**': {cors: true},
+    '/athlete/**': {cors: true},
+    '/event/**': {cors: true},
+    '/settings/**': {cors: true},
     // Redirects legacy urls
     '/old-page': {redirect: '/'},
   },
