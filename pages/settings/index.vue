@@ -1,3 +1,61 @@
+<script setup lang="ts">
+
+	import { useProfileStore } from "~/store/profile";
+
+	definePageMeta({
+		middleware: ['auth'],
+		pageTransition: false,
+		layoutTransition: false
+	})
+
+	useHead({
+		title: 'Saturdays.io - Account Settings',
+		meta: [
+			{ name: 'description', content: 'Saturdays.io admin account settings' },
+		]
+	})
+
+
+	const profileStore = useProfileStore()
+	const client = useSupabaseClient()
+	await profileStore.fetchProfile(client)
+	const user = profileStore.getProfile
+
+	const loading = ref(false)
+
+	const supabase = useSupabaseClient()
+
+	const updateProfile = async (event: Event) => {
+	event.preventDefault()
+
+	const form = event.target as HTMLFormElement
+	const formData = new FormData(form)
+	const data = Object.fromEntries(formData.entries())
+
+	loading.value = true
+	if (!user || !user.user) return
+
+
+	const {error} = await supabase.from('users').upsert({
+		// @ts-ignore
+		id: user.user.id,
+		...data,
+		// @ts-ignore
+		// profile_permissions: permissions
+	}).select()
+	loading.value = false
+	}
+
+	// Signout function
+	const signOut = async () => {
+	let { error } = await supabase.auth.signOut()
+	if (error) console.log(error)
+	navigateTo('/');
+	}
+
+</script>
+
+
 <template>
 	<div class="min-h-full">
 
@@ -72,62 +130,6 @@
     </main>
   </div>
 </template>
-
-
-<script setup lang="ts">
-
-	import { useProfileStore } from "~/store/profile";
-
-	definePageMeta({
-		middleware: ['auth']
-	})
-
-	useHead({
-		title: 'Saturdays.io - Account Settings',
-		meta: [
-			{ name: 'description', content: 'Saturdays.io admin account settings' },
-		]
-	})
-
-
-	const profileStore = useProfileStore()
-	const client = useSupabaseClient()
-	await profileStore.fetchProfile(client)
-	const user = profileStore.getProfile
-
-	const loading = ref(false)
-
-	const supabase = useSupabaseClient()
-
-	const updateProfile = async (event: Event) => {
-	event.preventDefault()
-
-	const form = event.target as HTMLFormElement
-	const formData = new FormData(form)
-	const data = Object.fromEntries(formData.entries())
-
-	loading.value = true
-	if (!user || !user.user) return
-
-
-	const {error} = await supabase.from('users').upsert({
-		// @ts-ignore
-		id: user.user.id,
-		...data,
-		// @ts-ignore
-		// profile_permissions: permissions
-	}).select()
-	loading.value = false
-	}
-
-	// Signout function
-	const signOut = async () => {
-	let { error } = await supabase.auth.signOut()
-	if (error) console.log(error)
-	navigateTo('/');
-	}
-
-</script>
 
 
 <style lang="scss">
