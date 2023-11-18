@@ -1,3 +1,18 @@
+<script setup lang="ts">
+
+  import {TabGroup, TabList, Tab, TabPanels, TabPanel} from '@headlessui/vue'
+  import Athlete from "./athlete.vue";
+  import Event from "./event.vue";
+
+  definePageMeta({
+    middleware: ['auth'],
+    pageTransition: false,
+    layoutTransition: false
+  })
+
+</script>
+
+
 <template>
   <div class="min-h-full">
 
@@ -45,19 +60,6 @@
     </main>
   </div>
 </template>
-
-
-<script setup lang="ts">
-
-  import {TabGroup, TabList, Tab, TabPanels, TabPanel} from '@headlessui/vue'
-  import Athlete from "./athlete.vue";
-  import Event from "./event.vue";
-
-  definePageMeta({
-    middleware: ['auth']
-  })
-
-</script>
 
 
 <style lang="scss">
