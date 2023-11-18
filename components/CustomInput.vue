@@ -83,7 +83,7 @@
           :type="inputType"
           :name="inputName"
           :id="label"
-          class="block h-12 w-full pl-4 py-2 text-base leading-5 text-white rounded-md border-0 bg-gray-800/50 shadow-sm ring-1 ring-inset ring-white/10 focus:ring-1 focus:ring-inset focus:ring-green-400 disabled:bg-gray-900 disabled:text-white"
+          class="flex items-center h-12 w-full pl-4 py-2 text-base leading-5 text-white rounded-md border-0 bg-gray-800/50 shadow-sm ring-1 ring-inset ring-white/10 focus:ring-1 focus:ring-inset focus:ring-green-400 disabled:bg-gray-900 disabled:text-white"
           :placeholder="placeholder"
           v-model="inputComputed"
           :value="value"
