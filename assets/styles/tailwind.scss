@@ -66,19 +66,4 @@
 
 
 /* Button styles */
-
-  .primary {
-    @apply h-12 w-full sm:w-auto py-3 px-6 rounded-md text-center font-bold text-black bg-green-400 hover:bg-blue-400 transition duration-500
-  }
-
-  .secondary {
-    @apply h-12 w-full sm:w-auto py-3 px-6 rounded-md text-center font-bold text-white bg-blue-400 hover:bg-blue-800 transition duration-500
-  }
-
-  .cta {
-    @apply h-12 w-full sm:w-auto py-3 px-6 rounded-md text-center font-bold text-white bg-none border border-white hover:text-green-400 hover:border-green-400 transition duration-500
-  }
-
-  .danger {
-    @apply h-12 w-full sm:w-auto py-3 px-6 rounded-md text-center font-bold text-white bg-red-600 hover:text-white hover:bg-red-900 transition duration-500
-  }
+/* Need to add nested error and success states */
