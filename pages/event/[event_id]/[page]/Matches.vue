@@ -80,12 +80,12 @@
           <div :v-if="matches.length" v-for="matches in eventMatches" :key="matches ? matches[0]?.type : 'invalid'" class="relative overflow-x-auto">
             <table class="w-full text-md md:text-base text-left whitespace-nowrap mb-8 md:mb-12">
               <caption class="text-left pb-4">
-                <h2 class="text-2xl font-bold text-white">
+                <h1 class="text-2xl font-bold leading-8 text-white">
                 {{ matches ? matches[0]?.type : 'invalid' }}
-              </h2>
+              </h1>
               </caption>
 
-              <thead class="text-sm font-bold uppercase text-gray-400 bg-gray-800/40">
+              <thead class="text-sm font-bold uppercase text-gray-400 border border-white/25">
                 <tr>
                   <th scope="col" class="py-2 px-2 md:table-cell">Won</th>
                   <th scope="col" class="py-2 px-2 md:table-cell">Lost</th>
@@ -132,7 +132,7 @@
                     {{ match.time }}
                   </td>
 
-                  <td class="py-2 px-2 text-right md:table-cell">
+                  <td class="py-2 px-2 text-right align-middle md:table-cell">
                     <Button button-label="Match page link" button-type="button" button-class="text-white hover:text-green-400">
                       <ChevronRightIcon class="h-6 w-6" aria-hidden="true" />
                     </Button>

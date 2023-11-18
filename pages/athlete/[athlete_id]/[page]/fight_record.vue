@@ -28,12 +28,12 @@
 <template>
   <div class="space-y-4 md:space-y-6 lg:space-y-8">
     <section class="mx-auto w-full rounded-sm border border-white/20 bg-gray-800/40 px-4 py-8">
-      <h1 class="text-2xl font-bold text-white">Fight Record</h1>
+      <h1 class="text-2xl font-bold leading-8 text-white">Fight Record</h1>
 
-      <div id="fight_table" class="pt-4">
+      <div id="fight_table" class="mt-8">
         <div class="relative overflow-x-auto">
           <table class="w-full text-md md:text-base text-left">
-            <thead class="text-sm font-bold uppercase text-gray-400 bg-gray-800/40">
+            <thead class="text-sm font-bold uppercase text-gray-400 border border-white/25">
               <tr>
                 <th scope="col" class="px-2 py-2 text-center">Res</th>
                 <th scope="col" class="px-2 py-2">Opponent</th>

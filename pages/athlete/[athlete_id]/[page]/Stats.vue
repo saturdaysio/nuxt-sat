@@ -62,9 +62,9 @@
 <template>
   <div class="space-y-4 md:space-y-6 lg:space-y-8">
     <section class="mx-auto rounded-sm border border-white/20 bg-gray-900 px-4 py-8">
-      <h1 class="text-2xl font-bold text-white">Striking Statistics</h1>
-      <!--    sub title -->
-      <h2 class="text-lg text-gray-400">Flavour text description about this data.</h2>
+      <h1 class="text-2xl font-bold leading-8 text-white">Striking Statistics</h1>
+      <span class="text-lg text-gray-400">Flavour text description about this data.</span>
+
       <form @submit="SubmitStats">
         <div class="mt-8 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
 
@@ -170,9 +170,9 @@
       </form>
     </section>
     <section class="mx-auto rounded-sm border border-white/20 bg-gray-900 px-4 py-8">
-      <h1 class="text-2xl font-bold text-white">Grappling Statistics</h1>
-      <!--    sub title -->
-      <h2 class="text-lg text-gray-400">Flavour text description about this data.</h2>
+      <h1 class="text-2xl font-bold leading-8 text-white">Grappling Statistics</h1>
+      <span class="text-lg leading-6 text-gray-400">Flavour text description about this data.</span>
+
       <form @submit="SubmitStats">
         <div class="mt-8 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
           <div class="sm:col-span-3">
