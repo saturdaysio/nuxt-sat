@@ -1,3 +1,29 @@
+<script setup lang="ts" scoped>
+
+	const navigation = {
+		main: [
+			{ name: 'Home', to: '/' },
+			{ name: 'About', to: '/about' },
+			{ name: 'Login', to: '/login' },
+		],
+
+		social: [
+			{ name: 'LinkedIn', to: 'https://www.linkedin.com/company/saturdaysdotio/' },
+		],
+
+		legal: [
+			{ name: 'Terms of Service', to: '/terms-of-service' },
+			{ name: 'Privacy Policy', to: '/privacy-policy' },
+		],
+	}
+
+	const currentYear = new Date().getFullYear()
+
+	const copyright = "Saturdays.io Inc. All rights reserved."
+
+</script>
+
+
 <template>
 	<footer class="px-4 py-12 border-t border-gray-800 sm:px-6 sm:py-16">
 		<nav class="mx-auto max-w-screen-xl" aria-label="Footer">
@@ -73,31 +99,6 @@
 	</footer>
 
 </template>
-  
-<script setup lang="ts" scoped>
-
-	const navigation = {
-		main: [
-			{ name: 'Home', to: '/' },
-			{ name: 'About', to: '/about' },
-			{ name: 'Login', to: '/login' },
-		],
-
-		social: [
-			{ name: 'LinkedIn', to: 'https://www.linkedin.com/company/saturdaysdotio/' },
-		],
-
-		legal: [
-			{ name: 'Terms of Service', to: '/terms-of-service' },
-			{ name: 'Privacy Policy', to: '/privacy-policy' },
-		],
-	}
-
-	const currentYear = new Date().getFullYear()
-
-	const copyright = "Saturdays.io Inc. All rights reserved."
-
-</script>
 
 
 <style lang="scss" scoped>

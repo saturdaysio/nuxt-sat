@@ -1,3 +1,12 @@
+<script setup lang="ts">
+
+	const props = defineProps({
+		intro: String,
+	})
+
+</script>
+
+
 <template>
 	<section class="relative isolate pt-16 -z-10">		
 		<div class="max-w-6xl mx-auto px-8 py-32 sm:py-48 lg:py-56">
@@ -8,15 +17,6 @@
 
 	</section>
 </template>
-
-  
-<script setup lang="ts">
-
-	const props = defineProps({
-		intro: String,
-	})
-
-</script>
 
 
 <style lang="scss" scoped>

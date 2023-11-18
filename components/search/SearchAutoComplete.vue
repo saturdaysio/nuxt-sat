@@ -1,85 +1,81 @@
 <script setup lang="ts">
-import {ref, computed} from 'vue'
-import {
-  Combobox,
-  ComboboxInput,
-  ComboboxOptions,
-  ComboboxOption,
-  TransitionRoot,
-} from '@headlessui/vue'
-import {IAlgoliaSearchResult} from "~/utils/search/searchUtil";
-import {IAlgoliaHitExtended} from "~/utils/autocomplete";
-import {XMarkIcon} from "@heroicons/vue/20/solid";
 
-interface SearchInputProps {
-  label: string;
-  placeholder: string;
-  onEnter: (results: any) => void;
-  searchFunction: (query: string) => Promise<any>
-  parseSearchResult: (result: any) => string
-  value?: string;
-  customQuery?: (query: string) => any
-  onType?: (query: string) => void;
-}
+  import { ref, computed } from 'vue'
+  import { Combobox, ComboboxInput, ComboboxOptions, ComboboxOption, TransitionRoot } from '@headlessui/vue'
+  import { IAlgoliaSearchResult } from "~/utils/search/searchUtil";
+  import { IAlgoliaHitExtended } from "~/utils/autocomplete";
+  import { XMarkIcon } from "@heroicons/vue/20/solid";
 
-const props = defineProps<SearchInputProps>();
-
-const {label, placeholder, onEnter, value, searchFunction, parseSearchResult, customQuery, onType} = toRefs(props);
-
-const query = ref<string>('');
-
-const results = ref<IAlgoliaSearchResult<IAlgoliaHitExtended & any>>({
-  hits: [],
-  nbHits: 0,
-  page: 0,
-  nbPages: 0,
-  hitsPerPage: 0,
-  exhaustiveNbHits: false,
-  query: '',
-  params: '',
-  processingTimeMS: 0,
-});
-const setQuery = (passedQuery: string) => {
-  if (onType?.value) {
-    onType.value(passedQuery);
+  interface SearchInputProps {
+    label: string;
+    placeholder: string;
+    onEnter: (results: any) => void;
+    searchFunction: (query: string) => Promise<any>
+    parseSearchResult: (result: any) => string
+    value?: string;
+    customQuery?: (query: string) => any
+    onType?: (query: string) => void;
   }
-  query.value = passedQuery;
-}
 
-function onTypeHandler(event: any) {
-  setQuery(event.target?.value);
-}
+  const props = defineProps<SearchInputProps>();
 
-watchEffect(() => {
-  if (query.value.length > 0) {
-    searchFunction?.value(query.value).then((res) => {
-      results.value = res;
-    });
+  const {label, placeholder, onEnter, value, searchFunction, parseSearchResult, customQuery, onType} = toRefs(props);
+
+  const query = ref<string>('');
+
+  const results = ref<IAlgoliaSearchResult<IAlgoliaHitExtended & any>>({
+    hits: [],
+    nbHits: 0,
+    page: 0,
+    nbPages: 0,
+    hitsPerPage: 0,
+    exhaustiveNbHits: false,
+    query: '',
+    params: '',
+    processingTimeMS: 0,
+  });
+  const setQuery = (passedQuery: string) => {
+    if (onType?.value) {
+      onType.value(passedQuery);
+    }
+    query.value = passedQuery;
   }
-})
 
-const selectedItem = ref(value?.value ? {name: value?.value} : null);
-
-const queryComputed = computed(() => {
-  if (!customQuery) {
-    return null;
+  function onTypeHandler(event: any) {
+    setQuery(event.target?.value);
   }
-  return query.value === '' ? null : customQuery.value!(query.value)
-})
 
-// trigger onEnter when user selects an item
-watchEffect(() => {
-  if (selectedItem.value) {
-    onEnter.value(selectedItem.value);
+  watchEffect(() => {
+    if (query.value.length > 0) {
+      searchFunction?.value(query.value).then((res) => {
+        results.value = res;
+      });
+    }
+  })
+
+  const selectedItem = ref(value?.value ? {name: value?.value} : null);
+
+  const queryComputed = computed(() => {
+    if (!customQuery) {
+      return null;
+    }
+    return query.value === '' ? null : customQuery.value!(query.value)
+  })
+
+  // trigger onEnter when user selects an item
+  watchEffect(() => {
+    if (selectedItem.value) {
+      onEnter.value(selectedItem.value);
+    }
+  })
+
+  const clearButtonAction = () => {
+    setQuery('');
+    selectedItem.value = null;
   }
-})
-
-const clearButtonAction = () => {
-  setQuery('');
-  selectedItem.value = null;
-}
 
 </script>
+
 
 <template>
   <div>
@@ -131,6 +127,6 @@ const clearButtonAction = () => {
 
 </template>
 
-<style scoped lang="scss">
 
+<style scoped lang="scss">
 </style>

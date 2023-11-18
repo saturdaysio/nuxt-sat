@@ -1,3 +1,12 @@
+<script setup lang="ts">
+
+	const props = defineProps({
+		text: String,
+	})
+
+</script>
+
+
 <template>
 	<section class="w-full mx-auto px-4 py-16 bg-black">
 		<div class="container lg:max-w-6xl my-24 mx-auto">
@@ -8,15 +17,6 @@
 		</div>
 	</section>
 </template>
-
-
-<script setup lang="ts">
-
-	const props = defineProps({
-		text: String,
-	})
-
-</script>
 
 
 <style lang="scss">

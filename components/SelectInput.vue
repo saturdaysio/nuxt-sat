@@ -1,7 +1,33 @@
+<script setup lang="ts">
+
+  import { ref } from 'vue'
+  import { Listbox, ListboxButton, ListboxOptions, ListboxOption } from '@headlessui/vue'
+  import { CheckIcon, ChevronUpDownIcon } from '@heroicons/vue/20/solid'
+
+    export interface ItemOption {
+      name: string
+      value: string
+    }
+
+  const props = defineProps< {
+    options: ItemOption[],
+    optionSelected: String,
+    inputName: String,
+  }>()
+
+  const { options, optionSelected, inputName } = toRefs(props)
+
+  const selectedOption = ref(options.value.find(option => {
+    console.log(option.value, optionSelected.value)
+    return option.value === optionSelected.value
+  }) || options.value[0] )
+
+</script>
+
+
 <template>
   <Listbox v-model="selectedOption">
     <div class="relative mt-2">
-
 
       <ListboxButton class="block w-full h-12 rounded-md border-0 bg-gray-800/40 pl-4 py-2 text-base leading-6 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-1 focus:ring-inset focus:ring-green-400 disabled:bg-gray-900/40 disabled:text-gray-400">
         <span class="block text-left truncate">{{ selectedOption.value }}</span>
@@ -28,38 +54,6 @@
     <input type="hidden" :name="inputName" :value="selectedOption.value"/>
   </Listbox>
 </template>
-
-
-<script setup lang="ts">
-
-  import {ref} from 'vue'
-  import {
-    Listbox,
-    ListboxButton,
-    ListboxOptions,
-    ListboxOption,
-  } from '@headlessui/vue'
-  import {CheckIcon, ChevronUpDownIcon} from '@heroicons/vue/20/solid'
-
-    export interface ItemOption {
-      name: string
-      value: string
-    }
-
-  const props = defineProps< {
-    options: ItemOption[],
-    optionSelected: String,
-    inputName: String,
-  }>()
-
-  const { options, optionSelected, inputName } = toRefs(props)
-
-  const selectedOption = ref(options.value.find(option => {
-    console.log(option.value, optionSelected.value)
-    return option.value === optionSelected.value
-  }) || options.value[0] )
-
-</script>
 
 
 <style scoped>

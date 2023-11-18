@@ -1,3 +1,37 @@
+<script setup lang="ts">
+
+  import { computed } from 'vue';
+  import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/vue/20/solid'
+
+  interface IPagenationProps {
+    total: number
+    perPage: number
+    currentPage: number
+    from: number
+    pages: number
+    to: number
+    onPageChange: (page: number) => void
+  }
+
+  const props = defineProps<IPagenationProps>()
+
+  const {total, pages, currentPage, from, to} = toRefs(props)
+
+  const computedLinks = computed(() => {
+    const pageLinks = new Array(pages.value).fill(0).map((_, i) => {
+      const page = i + 1
+      return {
+        page: page,
+        url: `?page=${page}`,
+        isActive: page === currentPage.value,
+      }
+    })
+    return pageLinks
+  })
+
+</script>
+
+
 <template>
   <div class="flex items-center justify-between border border-white/20 bg-gray-800/20 px-4 py-3 sm:px-4">
     <div class="flex flex-1 justify-between sm:hidden">
@@ -73,35 +107,6 @@
   </div>
 </template>
 
-<script setup lang="ts">
 
-  import { computed } from 'vue';
-  import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/vue/20/solid'
-
-  interface IPagenationProps {
-    total: number
-    perPage: number
-    currentPage: number
-    from: number
-    pages: number
-    to: number
-    onPageChange: (page: number) => void
-  }
-
-  const props = defineProps<IPagenationProps>()
-
-  const {total, pages, currentPage, from, to} = toRefs(props)
-
-  const computedLinks = computed(() => {
-    const pageLinks = new Array(pages.value).fill(0).map((_, i) => {
-      const page = i + 1
-      return {
-        page: page,
-        url: `?page=${page}`,
-        isActive: page === currentPage.value,
-      }
-    })
-    return pageLinks
-  })
-
-</script>
+<style>
+</style>
