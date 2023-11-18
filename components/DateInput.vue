@@ -6,19 +6,19 @@
     value: string
   }
 
-  const {value} = defineProps<DateInputProps>()
+  const { value } = defineProps<DateInputProps>()
 
 </script>
 
 
 <template>
   <!-- date input following mm/dd/yyyy -->
-  <div class="mt-1 relative">
+  <div class="mt-2 relative">
     <input
         type="date"
         name="date"
         id="date"
-        class="block w-full h-12 my-auto pl-4 pr-4 py-2"
+        class="block h-12 w-full my-auto pl-4 pr-4 py-2 text-base leading-5 text-white"
         placeholder="mm/dd/yyyy"
         :value="value"
     />
