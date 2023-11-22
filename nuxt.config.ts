@@ -76,7 +76,7 @@ export default defineNuxtConfig({
     // Renders only on client-side
     '/signin/**': {ssr: false},
     // Generated on-demand, revalidates in background
-    '/profile/**': {swr: true},
+    '/settings/profile/**': {swr: true},
 
     // Add CORS headers on API routes
     '/database/**': {cors: true},
@@ -113,7 +113,6 @@ export default defineNuxtConfig({
     },
   },
 
-
   vue: {
     compilerOptions: {
       sourceMap: false,
@@ -128,6 +127,7 @@ export default defineNuxtConfig({
   build: {
     transpile: ['vue-instantsearch', 'instantsearch.js/es'],
   },
+
   runtimeConfig:{
     public: {
       MMA_API_URL: process.env.NUXT_PUBLIC_MMA_API_URL,
