@@ -94,7 +94,7 @@
           :max="max"
           :disabled="disabled"
       />
-      <Button v-if="clearButton && inputComputed" @click="clearInput" class="absolute my-auto right-0 h-full w-12 flex items-center justify-center text-gray-400 hover:text-white focus:outline-none focus:text-green-400" aria-label="Clear">
+      <Button v-if="clearButton && inputComputed" @click="clearInput" class="absolute my-auto right-0 h-full w-12 flex items-center justify-center text-gray-400 hover:text-white focus:outline-none focus:text-green-400" aria-label="Clear" button-label="Clear">
         <XMarkIcon class="h-5 w-5" aria-hidden="true"/>
       </Button>
       <SelectInput v-if="inputType=='select'" :options="options as ItemOption[]" :input-name="inputName as string" :option-selected="value as string" :disabled="disabled" />
