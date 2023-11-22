@@ -1,5 +1,5 @@
-import {defineStore} from 'pinia';
-import {User} from "@supabase/gotrue-js";
+import { defineStore } from 'pinia';
+import { User } from "@supabase/gotrue-js";
 
 export enum ProfilePermissions {
   COMMENTS = 'comments',
