@@ -20,8 +20,9 @@ export interface IAthlete {
   style: string
   stats: IStats
   // matches: IMatch[]
-  // record: IRecord
+  record: number
   weight: number
+  imageUrl: string
   created_at: Date
   updated_at: Date
   deleted_at: Date
