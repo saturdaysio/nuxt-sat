@@ -5,6 +5,7 @@
 
 <script setup lang="ts">
 
+	import { useQuery } from '@tanstack/vue-query'
 	import { AppSetup } from './utils/app'
 	AppSetup()
 
