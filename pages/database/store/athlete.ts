@@ -1,4 +1,4 @@
-import {defineStore} from 'pinia'
+
 import {IAlgoliaSearchResult} from "~/utils/search/searchUtil";
 import {IAthlete} from "~/utils/interfaces/Athlete";
 
