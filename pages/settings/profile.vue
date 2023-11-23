@@ -56,7 +56,8 @@
       .upsert({
         id: user.user.id,
         ...data,
-      }).select()
+      })
+      .select()
     loading.value = false
   }
 
