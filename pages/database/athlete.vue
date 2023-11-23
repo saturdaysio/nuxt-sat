@@ -4,7 +4,7 @@
   import { IAlgoliaHitExtended } from "~/utils/autocomplete";
   import { IAlgoliaSearchResult } from "~/utils/search/searchUtil";
   import { IAthlete } from "~/utils/interfaces/Athlete";
-  import { useAthleteStore } from "~/pages/database/store/athlete";
+  import { useAthleteStore } from "~/store/athlete";
   import Button from "~/components/Button.vue";
   import { ChevronRightIcon } from "@heroicons/vue/20/solid";
 
@@ -22,9 +22,7 @@
     ]
   })
 
-  const user = useSupabaseUser()
-  const client = useSupabaseClient()
-
+ 
   const loading = ref(false)
 
   const athleteStore = useAthleteStore()
@@ -82,6 +80,7 @@
     return { id: null, name: query }
   }
 
+
 </script>
 
 
@@ -126,7 +125,7 @@
         </thead>
 
         <tbody class="divide-y divide-white/10">
-          <tr v-for="item in athleteStore.getResults?.hits" :key="item.objectID" class="h-16 hover:bg-gray-800/40">
+          <tr v-for="item in athleteStore.getResults?.hits" :key="item.id" class="h-16 hover:bg-gray-800/40">
             <td class="py-2 px-4">
               <NuxtLink :to="`/athlete/${item.id}/bio`">
                 <div class="flex items-center gap-x-4">
@@ -141,7 +140,7 @@
 
             <td class="hidden py-2 px-4 sm:table-cell">
               <span class="inline-flex items-center rounded-md px-3 py-2 bg-gray-400/20 text-sm text-gray-400 ring-1 ring-inset ring-gray-400/20">
-                {{ item.rank || '? - ?' }}
+                {{ item.record || '? - ?' }}
               </span>
             </td>
 
@@ -150,9 +149,7 @@
             </td>
 
             <td class="hidden py-2 px-4 text-right text-md leading-6 text-gray-400 sm:table-cell">
-              <time :datetime="item.dateTime">
-                {{ format(parseISO(item.updated_at), 'MMM d, yyyy') }}
-              </time>
+              {{ format(new Date(item.updated_at), 'MMM dd, yyyy') }}
             </td>
 
             <td class="py-2 px-2 text-right sm:table-cell">
