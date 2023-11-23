@@ -204,7 +204,7 @@
                 label="Weight"
                 input-name="weight"
                 placeholder="Weight (lbs)"
-                :value="athlete.weight === 'undefined' ? '' : athlete.weight"
+                :value="athlete.weight === undefined ? '' : athlete.weight"
                 input-type="text"
                 class="mt-4"
             />
@@ -214,7 +214,7 @@
                 label="Height"
                 input-name="height"
                 placeholder="Height (cm)"
-                :value="athlete.height === 'undefined' ? '' : athlete.height"
+                :value="athlete.height === undefined ? '' : athlete.height"
                 input-type="text"
                 class="mt-4"
             />
