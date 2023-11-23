@@ -1,6 +1,5 @@
-
-import {IAlgoliaSearchResult} from "~/utils/search/searchUtil";
-import {IAthlete} from "~/utils/interfaces/Athlete";
+import { IAlgoliaSearchResult } from "~/utils/search/searchUtil";
+import { IAthlete } from "~/utils/interfaces/Athlete";
 
 interface State {
   data: IAlgoliaSearchResult<IAthlete>
