@@ -17,40 +17,23 @@
 
 
 	const profileStore = useProfileStore()
-	const client = useSupabaseClient()
-	await profileStore.fetchProfile(client)
+	const supabase = useSupabaseClient()
+	await profileStore.fetchProfile(supabase)
 	const user = profileStore.getProfile
 
 	const loading = ref(false)
 
-	const supabase = useSupabaseClient()
 
-	const updateProfile = async (event: Event) => {
-	event.preventDefault()
-
-	const form = event.target as HTMLFormElement
-	const formData = new FormData(form)
-	const data = Object.fromEntries(formData.entries())
-
-	loading.value = true
-	if (!user || !user.user) return
-
-
-	const {error} = await supabase.from('users').upsert({
-		// @ts-ignore
-		id: user.user.id,
-		...data,
-		// @ts-ignore
-		// profile_permissions: permissions
-	}).select()
-	loading.value = false
+	// Update password function
+	const updatePassword = async (event: Event) => {
 	}
 
-	// Signout function
+
+	// Signout user function
 	const signOut = async () => {
-	let { error } = await supabase.auth.signOut()
-	if (error) console.log(error)
-	navigateTo('/');
+		let { error } = await supabase.auth.signOut()
+		if (error) console.log(error)
+		navigateTo('/');
 	}
 
 </script>
@@ -65,7 +48,7 @@
       <div class="mx-auto max-w-7xl px-2 md:px-4">
         <!-- Your content -->
 		<section class="mx-auto">
-        	<form class="" @submit.prevent="updateProfile">
+        	<form class="" @submit.prevent="updatePassword">
         		<div class="space-y-4 md:space-y-6 lg:space-y-8">
 
 					<div class="max-w-7xl mx-auto px-4 py-8 bg-gray-800/40 rounded-md border border-white/10">
@@ -94,7 +77,7 @@
 									span="3"
 									autocomplete="password"
 									placeholder="new password"
-									:value="user.password"
+									:value="user.new_password"
 								/>
 							</div>
 						</div>
