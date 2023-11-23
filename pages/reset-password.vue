@@ -50,11 +50,8 @@
 	})
 
 
-	const client = useSupabaseClient()
 	const user = useSupabaseUser()
-
 	const password = ref(null);
-
 	async function submitPassword() {
 	}
 

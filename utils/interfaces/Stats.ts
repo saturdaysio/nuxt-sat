@@ -1,6 +1,7 @@
 import { IAthlete } from "~/utils/interfaces/Athlete";
 
 export interface IStats {
+  [key: string]: any
   id: number
   athlete: IAthlete
   weightKG: number

@@ -3,7 +3,6 @@
   import {IAthlete} from "~/utils/interfaces/Athlete";
   import Button from "~/components/Button.vue";
   import CustomInput from "~/components/CustomInput.vue";
-  import {format, isDate, parseISO} from "date-fns";
   import {IStats} from "~/utils/interfaces/Stats";
 
   interface BioProps {
@@ -12,7 +11,8 @@
 
   const {athlete} = defineProps<BioProps>()
 
-  function SubmitStats(event: FormDataEvent) {
+  function SubmitStats(payload: Event) {
+    const event = payload as FormDataEvent
     event.preventDefault()
     console.log('submit')
     const formData = new FormData(event.target as HTMLFormElement)

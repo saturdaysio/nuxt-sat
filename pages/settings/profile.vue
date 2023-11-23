@@ -51,13 +51,13 @@
     loading.value = true
     if (!user || !user.user) return
 
-    const {error} = await supabase.from('users').upsert({
-      // @ts-ignore
-      id: user.user.id,
-      ...data,
-      // @ts-ignore
-     // profile_permissions: permissions
-    }).select()
+    const { error } = await supabase
+      .from('users')
+      .upsert({
+        id: user.user.id,
+        ...data,
+      })
+      .select()
     loading.value = false
   }
 

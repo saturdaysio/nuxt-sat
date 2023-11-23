@@ -56,7 +56,6 @@
 	})
 
 	const user = useSupabaseUser()
-	const client = useSupabaseClient()
 	const supabase = useSupabaseClient()
 
 	const loading = ref(false)

@@ -1,10 +1,10 @@
 <script setup lang="ts">
 
-  import { format } from "date-fns";
+  import { format, parseISO } from "date-fns";
   import { AlgoliaSearch, IAlgoliaSearchResult } from "~/utils/search/searchUtil";
   import { IAlgoliaHitExtended, AlgoliaAutocomplete } from "~/utils/autocomplete";
   import { IEvent } from "~/utils/interfaces/Event";
-  import { useEventStore } from "~/pages/database/store/event";
+  import { useEventStore } from "~/store/event";
   import Button from "~/components/Button.vue";
   import { ChevronRightIcon } from "@heroicons/vue/20/solid";
 
@@ -22,8 +22,6 @@
     ]
   })
 
-  const user = useSupabaseUser()
-  const client = useSupabaseClient()
 
   const loading = ref(false)
 
@@ -123,7 +121,7 @@
         </thead>
 
         <tbody class="divide-y divide-white/10">
-          <tr v-for="item in eventStore.getResults?.hits" :key="item.objectID" class="h-16 hover:bg-gray-800/40">
+          <tr v-for="item in eventStore.getResults?.hits" :key="item.id" class="h-16 hover:bg-gray-800/40">
             <td class="py-2 px-4">
               <NuxtLink :to="`/event/${item.id}/overview`">
                 <div class="truncate text-base font-bold leading-6 text-white hover:text-green-400">
@@ -134,13 +132,13 @@
 
             <td class="hidden py-2 px-4 sm:table-cell">
               <div class="text-md leading-6 text-gray-400">
-                  {{ format(new Date(item.date), 'MMM d, yyyy') }}
+                  {{ format(new Date(item.date), 'MMM dd, yyyy') }}
               </div>
             </td>
 
             <td class="hidden py-2 px-4 text-right sm:table-cell">
               <div class="text-md leading-6 text-gray-400">
-                <time :datetime="item.dateTime">{{ format(new Date(item.updated_at), 'MMM d, yyyy') }}</time>
+                {{ format(new Date(item.updated_at), 'MMM dd, yyyy') }}
               </div>
             </td>
 

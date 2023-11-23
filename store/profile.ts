@@ -1,5 +1,4 @@
-import {defineStore} from 'pinia';
-import {User} from "@supabase/gotrue-js";
+import { User } from "@supabase/gotrue-js";
 
 export enum ProfilePermissions {
   COMMENTS = 'comments',
@@ -10,6 +9,8 @@ export enum ProfilePermissions {
 export interface Profile {
   user: User | null
   username: string
+  password: string
+  new_password: string
   email: string
   first_name: string
   last_name: string
@@ -45,7 +46,7 @@ export const useProfileStore = defineStore({
     setProfile(profile: { profile: Profile }) {
       this.profile = {...this.profile, ...profile}
     },
-    async fetchProfile(client): Promise<void> {
+    async fetchProfile(client : any): Promise<void> {
       const user = await useSupabaseUser()
 
       const profile = await client.from('users').select('*').eq('id', user.value?.id).single()

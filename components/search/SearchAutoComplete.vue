@@ -7,14 +7,14 @@
   import { XMarkIcon } from "@heroicons/vue/20/solid";
 
   interface SearchInputProps {
-    label: string;
-    placeholder: string;
-    onEnter: (results: any) => void;
+    label: string
+    placeholder: string
+    onEnter: (results: any) => void
     searchFunction: (query: string) => Promise<any>
-    parseSearchResult: (result: any) => string
-    value?: string;
+    parseSearchResult: (item: any) => string | any
+    value?: string
     customQuery?: (query: string) => any
-    onType?: (query: string) => void;
+    onType?: (query: string) => void
   }
 
   const props = defineProps<SearchInputProps>();
@@ -85,7 +85,7 @@
           <div>
             <ComboboxInput
                 @change="onTypeHandler"
-                :display-value="parseSearchResult"
+                :displayValue="parseSearchResult"
                 :placeholder="placeholder"
                 className="block w-full h-12 rounded-md border-0 bg-gray-800/40 pl-4 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-1 focus:ring-inset focus:ring-green-400 sm:text-sm sm:leading-6"
             />

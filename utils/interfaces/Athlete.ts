@@ -1,6 +1,7 @@
 import {IStats} from "~/utils/interfaces/Stats";
 
 export interface IAthlete {
+  [key: string]: any
   id: number
   name: string
   firstName: string
@@ -20,8 +21,9 @@ export interface IAthlete {
   style: string
   stats: IStats
   // matches: IMatch[]
-  // record: IRecord
+  record: number
   weight: number
+  imageUrl: string
   created_at: Date
   updated_at: Date
   deleted_at: Date

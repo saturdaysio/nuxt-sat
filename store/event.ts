@@ -1,6 +1,6 @@
-import {defineStore} from 'pinia'
-import {IAlgoliaSearchResult} from "~/utils/search/searchUtil";
-import {IEvent} from "~/utils/interfaces/Event";
+
+import { IAlgoliaSearchResult } from "~/utils/search/searchUtil";
+import { IEvent } from "~/utils/interfaces/Event";
 
 interface State {
   data: IAlgoliaSearchResult<IEvent>,
