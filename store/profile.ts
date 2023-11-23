@@ -9,6 +9,8 @@ export enum ProfilePermissions {
 export interface Profile {
   user: User | null
   username: string
+  password: string
+  new_password: string
   email: string
   first_name: string
   last_name: string
