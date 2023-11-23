@@ -11,7 +11,8 @@
 
   const { athlete } = defineProps<BioProps>()
 
-  function SubmitAthleteData(event: FormDataEvent) {
+  function SubmitAthleteData(payload: Event) {
+    const event = payload as FormDataEvent;
     event.preventDefault()
     console.log('submit')
     const formData = new FormData(event.target as HTMLFormElement)
