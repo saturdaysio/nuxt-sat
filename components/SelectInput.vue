@@ -11,8 +11,8 @@
 
   const props = defineProps< {
     options: ItemOption[],
-    optionSelected: String,
-    inputName: String,
+    optionSelected: string,
+    inputName: string,
   }>()
 
   const { options, optionSelected, inputName } = toRefs(props)
