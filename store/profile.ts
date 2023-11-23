@@ -1,10 +1,10 @@
 import { User } from "@supabase/gotrue-js";
 
-export enum ProfilePermissions {
-  COMMENTS = 'comments',
-  CANDIDATES = 'candidates',
-  OFFERS = 'offers',
-}
+//  export enum ProfilePermissions {
+//  COMMENTS = 'comments',
+//  CANDIDATES = 'candidates',
+//  OFFERS = 'offers',
+//  }
 
 export interface Profile {
   user: User | null
@@ -21,7 +21,7 @@ export interface Profile {
   city: string
   province: string
   postal_code: string
-  profile_permissions: ProfilePermissions[]
+  // ProfilePermissions: string[]
 }
 
 export interface State {
@@ -51,7 +51,7 @@ export const useProfileStore = defineStore({
 
       const profile = await client.from('users').select('*').eq('id', user.value?.id).single()
 
-      this.setProfile({...this.profile, user: user.value, ...profile.data, profile_permissions: profile.data?.profile_permissions || []})
+      this.setProfile({...this.profile, user: user.value, ...profile.data, })
 
       return
     }
