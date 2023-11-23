@@ -7,14 +7,14 @@
   import { XMarkIcon } from "@heroicons/vue/20/solid";
 
   interface SearchInputProps {
-    label: string;
-    placeholder: string;
-    onEnter: (results: any) => void;
+    label: string
+    placeholder: string
+    onEnter: (results: any) => void
     searchFunction: (query: string) => Promise<any>
-    parseSearchResult: (result: any) => string
-    value?: string;
+    parseSearchResult: (result: any) => string | null
+    value?: string
     customQuery?: (query: string) => any
-    onType?: (query: string) => void;
+    onType?: (query: string) => void
   }
 
   const props = defineProps<SearchInputProps>();
