@@ -15,7 +15,7 @@
     label?: string
     value?: string | number | boolean
     span?: string
-    options?: string[]
+    options?: string[] | ItemOption[] | undefined
     selected?: string
     checkboxLabelSub?: string
     onType?: () => void
@@ -97,7 +97,7 @@
       <Button v-if="clearButton && inputComputed" @click="clearInput" class="absolute my-auto right-0 h-full w-12 flex items-center justify-center text-gray-400 hover:text-white focus:outline-none focus:text-green-400" aria-label="Clear" button-label="Clear">
         <XMarkIcon class="h-5 w-5" aria-hidden="true"/>
       </Button>
-      <SelectInput v-if="inputType=='select'" :options="options as ItemOption[]" :input-name="inputName as string" :option-selected="value as string" :disabled="disabled" />
+      <SelectInput v-if="inputType=='select'" :options="options as unknown as ItemOption[]" :input-name="inputName as string" :option-selected="value as string" :disabled="disabled" />
       <CheckboxInput v-if="inputType=='checkbox'" :value="value" :checkboxLabelSub="checkboxLabelSub" :input-name="inputName" :label="label" :disabled="disabled"/>
       <span v-if="error">
         {{ error }}
