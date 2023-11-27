@@ -58,7 +58,7 @@
 			alt: 'Loopy Godinez',
 			width: '600',
 			height: '436',
-			to: '/athlete/83221/bio',
+			to: '/athlete/97262/bio',
 			lastUpdate: '2023-01-23T11:00',
 		},
 		{
