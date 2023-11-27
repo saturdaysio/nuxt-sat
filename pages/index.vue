@@ -21,8 +21,16 @@
 						What we're making
 					</h1>
 				</div>
-				<div class="max-w-7xl mx-auto">
-					<nuxt-img src="/mobile.webp" width="1600" height="1000"  sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw" alt="mobile app designs" loading="lazy" />
+				<div class="w-full">
+					<NuxtImg src="/mosaic.png"
+						alt="Saturdays.io poster"
+						format="png"
+						width="1600"
+						height="1200"
+						fit="cover"
+						sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw"
+						loading="lazy"
+						class="mx-auto" />
 				</div>
 			</div>
 		</section>
