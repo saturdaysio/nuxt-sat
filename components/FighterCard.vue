@@ -74,7 +74,7 @@
 		{
 			id: '7',
 			name: 'Valentina Shevchenko',
-			imageUrl: '/avatars/3156612.png',
+			imageUrl: '/avatars/2554705.png',
 			alt: 'Valentina Shevchenko',
 			width: '600',
 			height: '436',
