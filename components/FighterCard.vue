@@ -73,12 +73,12 @@
 		},
 		{
 			id: '7',
-			name: 'Jiří Procházka 2',
+			name: 'Valentina Shevchenko',
 			imageUrl: '/avatars/3156612.png',
-			alt: 'Jiří Procházka',
+			alt: 'Valentina Shevchenko',
 			width: '600',
 			height: '436',
-			to: '/athlete/88868/bio',
+			to: '/athlete/82824/bio',
 			lastUpdate: '2023-01-23T11:00',
 		}
 	]
