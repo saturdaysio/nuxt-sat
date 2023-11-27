@@ -34,8 +34,7 @@
 
 <template>
   <div>
-    <NuxtLink v-if="to" :to="to" :target="target || ''"
-              :rel="rel || (noRel ? '' : 'noopener noreferrer')">
+    <NuxtLink v-if="to" :to="to" :target="target || ''" :rel="rel || (noRel ? '' : 'noopener noreferrer')">
       <button :class="classObject">
         {{ !hasSlots ? buttonLabel : '' }}
         <slot/>
