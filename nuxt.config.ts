@@ -40,6 +40,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
     '@vueuse/nuxt',
+    '@vueuse/motion/nuxt',
     'nuxt-purgecss',
   ],
 

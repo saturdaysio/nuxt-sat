@@ -21,6 +21,27 @@
 
 	const copyright = "Saturdays.io Inc. All rights reserved."
 
+	const initial = ref({
+		y: 0,
+		opacity: 1,
+	})
+
+	const enter = ref({
+		y: 12,
+		opacity: 1,
+		transition: {
+			duration: 1000,
+			type: 'keyframes',
+			ease: 'easeInOut',
+			repeat: Infinity,
+			repeatType: 'mirror',
+			delay: 500,
+			stiffness: 100,
+			damping: 25,
+			mass: 0.5,
+		}
+	})
+
 </script>
 
 
@@ -28,10 +49,13 @@
 	<footer class="px-4 py-12 border-t border-gray-800 sm:px-6 sm:py-16">
 		<nav class="mx-auto max-w-screen-xl" aria-label="Footer">
 			<div class="md:flex md:justify-between">
-				<div id="logo" class="mb-6 md:mb-0">					
+				<div id="logo"
+					v-motion
+					:initial="initial"
+					:enter="enter"
+					class="mb-16 md:mb-0">					
 					<NuxtLink to="/" class="flex items-center space-x-3">
 						<img class="h-8 w-8" src="@/assets/img/logo.svg" alt="Saturdays.io logo" width="32px" height="32px" />
-						<span class="self-center text-2xl font-bold whitespace-nowrap text-white hover:text-green-400">Hello Saturday</span>
 					</NuxtLink>
 				</div>
 
