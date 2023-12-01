@@ -13,27 +13,30 @@
 			</div>
 		</section>
 
-		
-		<section id="peek" class="px-4 md:px-8 py-16 md:py-20 lg:py-24">
+
+
+		<section id="peek" class="py-16 md:py-20 lg:py-24">
 			<div class="">
-				<div class="mt-8 pb-8">
-					<h1 class="text-4xl md:text-5xl lg:text-6xl text-center font-bold lime-to-aqua">
-						What we're making
+				<div class="mt-8 pb-8 px-4 md:px-8">
+					<h1 class="text-3xl md:text-4xl lg:text-5xl text-center font-bold lime-to-aqua">
+						What we've been making
 					</h1>
 				</div>
-				<div class="w-full">
-					<NuxtImg src="/mosaic.png"
+				<div class="w-full mx-auto">
+					<NuxtImg src="/mosaic.webp"
 						alt="Saturdays.io poster"
 						format="png"
-						width="1600"
-						height="1200"
+						width="2032"
+						height="1256"
 						fit="cover"
 						sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw"
 						loading="lazy"
-						class="mx-auto" />
+						class="mx-auto"
+					/>
 				</div>
 			</div>
 		</section>
+		
 
 		
 		<Stats />
