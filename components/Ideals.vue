@@ -2,32 +2,32 @@
 
 	const ideal = [
 		{
-			video: "/meme/leon-belt.mp4",
+			video: "/video/leon-belt.mp4",
 			title: "Be world-class",
 			desc: "Being happy is the goal, but greatness is our mission. We aren't just talking about our skills and achievements, it's how we conduct ourselves too.",
 			type: "video/mp4"
 		},
 		{
-			video: "/meme/uncle-ben.mp4",
+			video: "/video/uncle-ben.mp4",
 			title: "Be accountable",
 			titleClass: "lime-to-aqua",
 			desc: "We don't make excuses, and we're allergic to bullshitters because talk is cheap and actions speak louder than words.",
 			type: "video/mp4"
 		},
 		{
-			video: "/meme/beyonce-dance1.mp4",
+			video: "/video/beyonce-dance1.mp4",
 			title: "Be supportive",
 			desc: "It isn't brilliant individual performances that make great teams, it's when talented individuals put their egos aside and work toward a common goal. Good teams become great ones when they trust each other.",
 			type: "video/mp4"
 		},
 		{
-			video: "/meme/awkwafina.mp4",
+			video: "/video/awkwafina.mp4",
 			title: "No rockstars",
 			desc: "You won't find any 10x, unicorns, or rockstars here and we're proud of that. We don't tolerate toxicity or narcissistics because nobody has time for that.",
 			type: "video/mp4"
 		},
 		{
-			video: "/meme/hawaii.mp4",
+			video: "/video/hawaii.mp4",
 			title: "Enjoy downtime",
 			desc: "We like to travel and touch grass once in a while because there's more to life than working.",
 			type: "video/mp4"
