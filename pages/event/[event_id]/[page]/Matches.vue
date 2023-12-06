@@ -96,7 +96,7 @@
                 </tr>
               </thead>
 
-              <tbody class="divide-y divide-white/10 bg-black border border-white/20">
+              <tbody class=" divide-y divide-white/10 bg-black border border-white/20">
                 <tr v-for="match in matches" :key="match.id" class="h-12 leading-6 text-gray-400 hover:bg-gray-800/40">
 
                   <td class="w-1/5 min-w-[16rem] py-2 px-2">
@@ -131,8 +131,8 @@
                     {{ match.time }}
                   </td>
 
-                  <td class="w-12 py-2 px-2 text-center">
-                    <NuxtLink :to="`/athlete/${match.loser.id}/bio`" class="align-middle text-center text-white hover:text-green-400">
+                  <td class="w-12 h-12 py-2 px-2">
+                    <NuxtLink :to="`/athlete/${match.loser.id}/bio`" class="w-full self-center text-white hover:text-green-400">
                       <ChevronRightIcon class="h-6 w-6" aria-hidden="true" />
                     </NuxtLink>
                   </td>
