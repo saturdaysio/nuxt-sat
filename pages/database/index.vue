@@ -23,21 +23,15 @@
         <!-- Your content -->
         <section>
           <TabGroup>
-            <TabList class="flex flex-0 w-48 space-x-1 rounded-md border-2 border-gray-700">
-              <Tab
-                  v-for="category in ['Athlete', 'Event']"
-                  as="template"
-                  :key="category"
-                  v-slot="{ selected }"
-              >
+            <TabList class="flex flex-0 w-48 rounded-lg">
+              <Tab v-for="category in ['Athlete', 'Event']" as="template" :key="category" v-slot="{ selected }">
                 <button
-                    :class="[
-                      'w-full py-2.5 text-sm font-medium leading-5 text-grey-700 outline-none',
-                       'focus:outline-none focus:text-white',
+                    :class="['w-full py-2.5 text-sm font-bold leading-5 text-black outline-none',
+                       'focus:outline-none',
                        selected
-                ? 'text-white shadow'
-                : 'text-gray-400 hover:text-white',
-                  ]"
+                      ? 'bg-green-400 outline-none'
+                      : 'text-white hover:text-white bg-gray-800 hover:bg-blue-500 outline-none',
+                    ]"
                 >
                   {{ category }}
                 </button>
