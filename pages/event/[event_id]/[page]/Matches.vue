@@ -76,7 +76,7 @@
         </div>
 
         <div v-else class="flex flex-col gap-y-8 md:gap-y-12">
-          <div :v-if="matches.length" v-for="matches in eventMatches" :key="matches ? matches[0]?.type : 'invalid'" class="relative overflow-x-scroll">
+          <div :v-if="matches.length" v-for="matches in eventMatches" :key="matches ? matches[0]?.type : 'invalid'" class="relative overflow-x-auto">
             <table class="table-auto w-full text-md md:text-base text-left whitespace-nowrap">
               <caption class="text-left pb-4">
                 <h1 class="text-2xl font-bold leading-8 text-white">
