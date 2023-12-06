@@ -5,7 +5,6 @@
   import { IAlgoliaHitExtended, AlgoliaAutocomplete } from "~/utils/autocomplete";
   import { IEvent } from "~/utils/interfaces/Event";
   import { useEventStore } from "~/store/event";
-  import Button from "~/components/Button.vue";
   import { ChevronRightIcon } from "@heroicons/vue/20/solid";
 
 

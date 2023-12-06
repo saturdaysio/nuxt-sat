@@ -1,8 +1,6 @@
 <script setup lang="ts">
 
   import {IAthlete} from "~/utils/interfaces/Athlete";
-  import Button from "~/components/Button.vue";
-  import CustomInput from "~/components/CustomInput.vue";
   import {IStats} from "~/utils/interfaces/Stats";
 
   interface BioProps {
