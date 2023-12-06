@@ -132,7 +132,7 @@
                   </td>
 
                   <td class="w-12 h-12 py-2 px-2">
-                    <NuxtLink :to="`/athlete/${match.loser.id}/bio`" class="w-full self-center text-white hover:text-green-400">
+                    <NuxtLink :to="`/athlete/${match.loser.id}/bio`" class="grid place-items-center text-white hover:text-green-400">
                       <ChevronRightIcon class="h-6 w-6" aria-hidden="true" />
                     </NuxtLink>
                   </td>
