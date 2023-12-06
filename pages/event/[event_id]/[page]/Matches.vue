@@ -131,10 +131,10 @@
                     {{ match.time }}
                   </td>
 
-                  <td class="w-12 py-2 px-2  text-center">
-                    <Button button-label="Match page link" button-type="button" button-class="h-full align-middle text-white hover:text-green-400">
+                  <td class="w-12 py-2 px-2 text-center">
+                    <NuxtLink :to="`/athlete/${match.loser.id}/bio`" class="align-middle text-center text-white hover:text-green-400">
                       <ChevronRightIcon class="h-6 w-6" aria-hidden="true" />
-                    </Button>
+                    </NuxtLink>
                   </td>
                 </tr>
               </tbody>
