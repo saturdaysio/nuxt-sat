@@ -5,7 +5,6 @@
   import { IAlgoliaSearchResult } from "~/utils/search/searchUtil";
   import { IAthlete } from "~/utils/interfaces/Athlete";
   import { useAthleteStore } from "~/store/athlete";
-  import Button from "~/components/Button.vue";
   import { ChevronRightIcon } from "@heroicons/vue/20/solid";
 
 

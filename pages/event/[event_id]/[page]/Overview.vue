@@ -1,8 +1,6 @@
 <script setup lang="ts">
 
   import {IEvent} from "~/utils/interfaces/Event";
-  import Button from "~/components/Button.vue";
-  import CustomInput from "~/components/CustomInput.vue";
   import {format, isDate, parseISO} from "date-fns";
   import {ILocation} from "~/utils/interfaces/Location";
   import {AxiosResponse} from "axios";

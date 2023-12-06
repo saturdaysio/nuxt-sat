@@ -1,6 +1,5 @@
 <script setup lang="ts">
 
-  import Button from "~/components/Button.vue";
   import { IEvent } from "~/utils/interfaces/Event";
   import { IMatch } from "~/utils/interfaces/Match";
   import { ChevronRightIcon } from "@heroicons/vue/20/solid";
