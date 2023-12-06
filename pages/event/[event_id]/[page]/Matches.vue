@@ -77,7 +77,7 @@
 
         <div v-else class="flex flex-col gap-y-8 md:gap-y-12">
           <div :v-if="matches.length" v-for="matches in eventMatches" :key="matches ? matches[0]?.type : 'invalid'" class="relative overflow-x-auto">
-            <table class="w-full text-md md:text-base text-left whitespace-nowrap">
+            <table class="table-auto w-full text-md md:text-base text-left whitespace-nowrap">
               <caption class="text-left pb-4">
                 <h1 class="text-2xl font-bold leading-8 text-white">
                 {{ matches ? matches[0]?.type : 'invalid' }}
@@ -86,20 +86,20 @@
 
               <thead class="text-sm font-bold uppercase text-gray-400 border border-white/25">
                 <tr>
-                  <th scope="col" class="py-2 px-2 md:table-cell">Won</th>
-                  <th scope="col" class="py-2 px-2 md:table-cell">Lost</th>
-                  <th scope="col" class="hidden py-2 px-2 md:table-cell">Weightclass</th>
-                  <th scope="col" class="py-2 px-2 md:table-cell">Method</th>
-                  <th scope="col" class="py-2 px-2 md:table-cell">Round</th>
-                  <th scope="col" class="py-2 px-2 md:table-cell">Time</th>
-                  <td scope="col" class="py-2 px-2 md:table-cell"></td>
+                  <th scope="col" class="py-2 px-2 ">Won</th>
+                  <th scope="col" class="py-2 px-2 ">Lost</th>
+                  <th scope="col" class="py-2 px-2 ">Weightclass</th>
+                  <th scope="col" class="py-2 px-2 ">Method</th>
+                  <th scope="col" class="py-2 px-2 ">Round</th>
+                  <th scope="col" class="py-2 px-2 ">Time</th>
+                  <td scope="col" class="py-2 px-2 "></td>
                 </tr>
               </thead>
 
               <tbody class="divide-y divide-white/10 bg-black border border-white/20">
-                <tr v-for="match in matches" :key="match.id" class="h-12 leading-6 text-gray-400 hover:bg-gray-800/40">
+                <tr v-for="match in matches" :key="match.id" class="w-full h-16 leading-6 text-gray-400 hover:bg-gray-800/40">
 
-                  <td class="py-2 px-2">
+                  <td class="w-1/5 min-w-[16rem] py-2 px-2">
                     <div class="font-bold hover:text-green-400">
                       <NuxtLink :to="`/athlete/${match.winner.id}/bio`">
                         {{ match.winner.name }}
@@ -107,7 +107,7 @@
                     </div>
                   </td>
 
-                  <td class="py-2 px-2">
+                  <td class="w-1/5 min-w-[16rem] py-2 px-2">
                     <div class="font-bold hover:text-green-400">
                       <NuxtLink :to="`/athlete/${match.loser.id}/bio`">
                         {{ match.loser.name }}
@@ -115,24 +115,24 @@
                     </div>
                   </td>
 
-                  <td class="hidden py-2 px-2 md:table-cell">
+                  <td class="w-1/5 min-w-[16rem] py-2 px-2">
                     {{ match.weightclass }}
                   </td>
 
-                  <td class="py-2 px-2 md:table-cell">
+                  <td class="w-1/5 min-w-[16rem] py-2 px-2">
                     {{ match.method }}
                   </td>
 
-                  <td class="py-2 px-2 md:table-cell">
+                  <td class="py-2 px-2">
                     {{ match.round }}
                   </td>
 
-                  <td class="py-2 px-2 md:table-cell">
+                  <td class="py-2 px-2">
                     {{ match.time }}
                   </td>
 
-                  <td class="py-2 px-2 text-right align-middle md:table-cell">
-                    <Button button-label="Match page link" button-type="button" button-class="text-white hover:text-green-400">
+                  <td class="w-12 py-2 px-2">
+                    <Button button-label="Match page link" button-type="button" button-class="align-middle text-white hover:text-green-400">
                       <ChevronRightIcon class="h-6 w-6" aria-hidden="true" />
                     </Button>
                   </td>
