@@ -3,7 +3,7 @@
 
 
 <template>
-	<section class="px-4 md:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
+	<section class="px-4 md:px-6 lg:px-8 py-16 md:py-24 lg:py-32 border-y border-gray-400/20">
 
 		<div class="mx-auto max-w-7xl">
 			<div class="relative isolate overflow-hidden bg-gray-900/40 px-6 py-24 text-center shadow-2xl sm:rounded-3xl sm:px-16">

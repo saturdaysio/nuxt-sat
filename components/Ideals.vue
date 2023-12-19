@@ -4,7 +4,7 @@
 		{
 			video: "/video/leon-belt.mp4",
 			title: "Be world-class",
-			desc: "Being happy is the goal, but greatness is our mission. We aren't just talking about our skills and achievements, it's how we conduct ourselves too.",
+			desc: "We aren't just talking about our skills and achievements, it's how we conduct ourselves too.",
 			type: "video/mp4"
 		},
 		{
@@ -17,13 +17,13 @@
 		{
 			video: "/video/beyonce-dance1.mp4",
 			title: "Be supportive",
-			desc: "It isn't brilliant individual performances that make great teams, it's when talented individuals put their egos aside and work toward a common goal. Good teams become great ones when they trust each other.",
+			desc: "It isn't brilliant individual performances that make great teams, it's when talented individuals put their egos aside and work toward a common goal.",
 			type: "video/mp4"
 		},
 		{
 			video: "/video/awkwafina.mp4",
 			title: "No rockstars",
-			desc: "You won't find any 10x, unicorns, or rockstars here and we're proud of that. We don't tolerate toxicity or narcissistics because nobody has time for that.",
+			desc: "You won't find any 10x, unicorns, or rockstars here and we're proud of that. We don't tolerate toxicity or narcissistic behaviour because nobody has time for that.",
 			type: "video/mp4"
 		},
 		{
@@ -38,7 +38,7 @@
 
 
 <template>
-	<section id="values" class="w-full px-4 sm:px-8 md:px-12 py-16 md:py-20 lg:py-24">
+	<section id="values" class="w-full px-4 sm:px-8 md:px-12 py-16 md:py-20 lg:py-24 border-y border-gray-400/20">
 		<div class="container lg:max-w-7xl mx-auto my-8">
 			<div class="max-w-5xl mx-auto pb-4">
 				<div class="text-center">
