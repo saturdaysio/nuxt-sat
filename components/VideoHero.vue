@@ -20,7 +20,7 @@
             </div>
 
             <video id="hero-video" autoplay muted loop playsinline class=" h-full w-full" controlslist="nodownload noremoteplayback disablepictureinpicture disableremoteplayback">
-                <source src="@/assets/video/cormier1.mp4" type="video/mp4">
+                <source src="@/assets/video/hero-video.mp4" type="video/mp4">
             </video>
 
         </div>
