@@ -12,7 +12,7 @@
     const mobileNav = [
         { name: 'Home', to: '/' },
 		{ name: 'About', to: '/about' },
-        { name: 'Login', to: '/login' },
+        { name: 'Client Login', to: '/login' },
 	]
 
     const legal = [
@@ -57,7 +57,7 @@
         <Snitcher :open="open"  @change="({ open }) => isPopoverOpen = open" />
         <nav class="relative z-50">
             <div class="fixed w-full">
-                <header class="inset-x-0 backdrop-blur bg-black/90 border-b border-white/10">
+                <header class="inset-x-0 backdrop-blur bg-black/90 border-b border-gray-400/20">
                     <div class="flex justify-between max-w-7xl mx-auto px-4 py-4" aria-label="global">
 
                         <div class="flex lg:flex-1">
@@ -78,7 +78,13 @@
 
                         <!-- Navigation links -->
                         <div class="hidden lg:flex lg:flex-1 lg:gap-x-8 lg:justify-end items-center">
-                            <NuxtLink v-for="item in navigation" :key="item.name" :to="item.to" class="nav-item text-md text-white hover:text-green-400 no-underline hover:underline" active-class="active">{{ item.name }}</NuxtLink>
+                            <NuxtLink v-for="item in navigation"
+                                :key="item.name"
+                                :to="item.to"
+                                class="nav-item text-md text-white hover:text-green-400 no-underline hover:underline"
+                                active-class="active">
+                                {{ item.name }}
+                            </NuxtLink>
                         </div>
 
                     </div>
@@ -89,15 +95,21 @@
                     enter-to-class="opacity-100"
                     leave-active-class="transition duration-500 ease-in-out"
                     leave-from-class="opacity-100"
-                    leave-to-class=" opacity-0"
-                >
+                    leave-to-class=" opacity-0">
+
                     <!-- Mobile menu -->
                     <PopoverPanel class="inset-y-0 w-full h-screen lg:hidden">
                         <div class="w-full h-full overflow-y-auto px-4 py-4 bg-black">
                             <!-- Navigation links -->
                             <div class="flex flex-col justify-center h-4/5">
                                 <div class="flex flex-col space-y-2">
-                                    <NuxtLink v-for="item in mobileNav" :key="item.name" :to="item.to" class="mx-2 block py-4 text-2xl sm:text-3xl md:text-4xl font-base text-white hover:text-green-400 no-underline hover:underline hover:underline-offset-4 hover:decoration-2" active-class="active text-blue-300 underline underline-offset-4 decoration-2">{{ item.name }}</NuxtLink>
+                                    <NuxtLink v-for="item in mobileNav"
+                                        :key="item.name"
+                                        :to="item.to"
+                                        class="block mx-2 py-4 text-2xl sm:text-3xl md:text-4xl font-base text-white no-underline hover:text-green-400 hover:underline hover:underline-offset-4 hover:decoration-2"
+                                        active-class="active text-green-400 underline underline-offset-4 decoration-2">
+                                        {{ item.name }}
+                                    </NuxtLink>
                                 </div>
                             </div>
                         </div>
