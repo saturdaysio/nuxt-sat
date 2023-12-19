@@ -42,7 +42,7 @@
 
 
 <template>
-	<footer class="px-4 py-12 border-t border-gray-800 sm:px-6 sm:py-16">
+	<footer class="px-4 py-12 sm:px-6 sm:py-16 border-t border-gray-400/20">
 		<nav class="mx-auto max-w-screen-xl" aria-label="Footer">
 			<div class="md:flex md:justify-between">
 				<div id="logo"
@@ -119,7 +119,7 @@
 				</div>
 			</div>
 
-			<hr class="my-6 border-gray-800 sm:mx-auto lg:my-8" />
+			<hr class="mx-auto my-6 lg:my-8 border-gray-400/20" />
 
 			<div class="sm:flex sm:items-center sm:justify-between">
 				<span class="text-md sm:text-base sm:text-center leading-5 text-light text-white">
