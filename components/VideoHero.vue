@@ -12,7 +12,7 @@
     <section id="video-hero" class="w-full h-200 mx-auto overflow-hidden z-0">
         <div class="relative w-full h-full mx-auto">
             <div id="hero-text-overlay" class="absolute w-full h-full mx-auto z-30 flex">
-                <div class="inline-flex self-center mx-auto">
+                <div class="inline-flex self-center mx-auto px-2">
                     <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight text-center text-white">
                         {{ intro }}
                     </h1>
