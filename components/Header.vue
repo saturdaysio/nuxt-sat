@@ -8,7 +8,7 @@
 
 
 <template>
-	<section class="relative isolate pt-16 -z-10 border-y border-purple-400/20 bg-purple-200/10">		
+	<section class="relative isolate pt-16 -z-10 border-y border-purple-400/20">		
 		<div class="max-w-7xl mx-auto px-8 py-32 sm:py-48 lg:py-56">
 			<div class="text-center z-30">
 				<h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-center text-white">{{ intro }}</h1>
