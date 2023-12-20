@@ -9,7 +9,7 @@
 
 <template>
 
-    <section id="video-hero" class="w-full h-200 mx-auto overflow-hidden z-0">
+    <section id="video-hero" class="w-full h-auto lg:h-208 mx-auto overflow-hidden z-0">
         <div class="relative w-full h-full mx-auto">
             <div id="hero-text-overlay" class="absolute w-full h-full mx-auto z-30 flex">
                 <div class="max-w-7xl mx-auto inline-flex self-center px-2">
