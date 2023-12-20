@@ -3,9 +3,6 @@
 
 		<Nav />
 
-		<div class="h-16">
-        </div>
-
 		<VideoHero intro="Saturdays is a Canadian digital studio based in Toronto" />
 
 		<section class="px-4 sm:px-8 md:px-12 py-16 md:py-20 lg:py-24">
