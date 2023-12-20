@@ -23,7 +23,7 @@
 		{
 			video: "/video/awkwafina.mp4",
 			title: "No rockstars",
-			desc: "You won't find any 10x, unicorns, or rockstars here and we're proud of that. We don't tolerate toxicity or narcissistic behaviour because nobody has time for that.",
+			desc: "You won't find any 10x, unicorns, or rockstars here and we're proud of that. We don't tolerate toxicity or narcissistic behaviour because nobody has time for that bs.",
 			type: "video/mp4"
 		},
 		{
