@@ -13,7 +13,7 @@
         <div class="relative w-full h-full mx-auto">
             <div id="hero-text-overlay" class="absolute w-full h-full mx-auto z-30 flex">
                 <div class="max-w-7xl mx-auto inline-flex self-center px-2">
-                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight text-center text-white">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-center text-white">
                         {{ intro }}
                     </h1>
                 </div>
