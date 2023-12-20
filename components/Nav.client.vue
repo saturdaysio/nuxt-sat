@@ -99,7 +99,7 @@
 
                     <!-- Mobile menu -->
                     <PopoverPanel class="inset-y-0 w-full h-screen lg:hidden">
-                        <div class="w-full h-full overflow-y-auto px-4 py-4 bg-black">
+                        <div class="w-full h-full overflow-y-auto px-4 py-4 bg-black/90">
                             <!-- Navigation links -->
                             <div class="flex flex-col justify-center h-4/5">
                                 <div class="flex flex-col space-y-2">
