@@ -38,7 +38,7 @@
 
 
 <template>
-	<section id="values" class="w-full px-4 sm:px-8 md:px-12 py-16 md:py-20 lg:py-24 border-y border-gray-400/20">
+	<section id="values" class="w-full px-4 sm:px-8 md:px-12 py-16 md:py-20 lg:py-24">
 		<div class="container lg:max-w-7xl mx-auto my-8">
 			<div class="max-w-5xl mx-auto pb-4">
 				<div class="text-center">

@@ -5,7 +5,7 @@
 
 		<Header intro="We bridge the gap between design and technology" />
 
-		<section id="ethics" class="px-4 sm:px-8 md:px-12 py-16 md:py-20 lg:py-24 border-y border-gray-400/20">
+		<section id="ethics" class="px-4 sm:px-8 md:px-12 py-16 md:py-20 lg:py-24">
 			<div class="max-w-5xl mx-auto">
 				<div class="pb-4">
 					<h1 class="text-4xl md:text-5xl lg:text-6xl text-center font-bold lime-to-aqua pb-8">Keeping it 100</h1>
