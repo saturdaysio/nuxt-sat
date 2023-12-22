@@ -15,7 +15,6 @@
           <form @submit.prevent="login" class="space-y-6">
             <div id="email" class="">
               <label for="input-email" class="block text-md font-bold leading-5 text-white">Email</label>
-              <!-- use @apply to create default, selected, error states and toggle -->
               <input id="input-email" v-model="email" name="email" type="email" autocomplete="email"
                      aria-labelledby="email" placeholder="Enter your email address" required
                      class="block w-full rounded-md mt-2 px-4 py-4 border-0 bg-gray-800/70 font-light text-white shadow-sm focus:ring-4 focus:ring-inset focus:ring-green-500 sm:text-xl sm:leading-6"/>
@@ -23,26 +22,19 @@
 
             <div id="password" class="">
               <label for="input-pass" class="block text-md font-bold leading-5 text-white">Password</label>
-              <!-- make a proper component for password inputs -->
               <input id="input-pass" v-model="password" name="password" type="password" autocomplete="current-password"
                      aria-labelledby="password" placeholder="Enter your password" required
                      class="block w-full rounded-md mt-2 px-4 py-4 border-0 bg-gray-800/70 font-light text-white shadow-sm focus:ring-4 focus:ring-inset focus:ring-green-500 sm:text-xl sm:leading-6"/>
             </div>
 
-            <div id="submit" class="">
-              <!-- make a proper component for button and states -->
-              <Button buttton-type="submit" button-label="Login" button-class="primary block w-full"
-                      :error="failedLogin" error-classes="!bg-red-800"/>
+            <div id="submit" class="w-full">
+              <Button buttton-type="submit" button-label="Login" button-class="primary w-full" :error="failedLogin" error-classes="!bg-red-800"/>
             </div>
           </form>
         </div>
 
         <div id="disclaimer" class="mt-16">
-          <p class="text-md leading-6 text-center font-gray-300">By continuing, you agree to Saturdays.io's
-            <NuxtLink to="/terms-of-service">Terms of Service</NuxtLink>
-            and
-            <NuxtLink to="/privacy-policy">Privacy Policy</NuxtLink>
-            .
+          <p class="text-md leading-6 text-center font-gray-300">By continuing, you agree to Saturdays.io's <NuxtLink to="/terms-of-service">Terms of Service</NuxtLink> and <NuxtLink to="/privacy-policy">Privacy Policy</NuxtLink>.
           </p>
         </div>
       </div>
