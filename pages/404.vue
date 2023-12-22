@@ -1,3 +1,19 @@
+<script setup lang="ts">
+
+	defineProps(['error'])
+
+	const handleClearError = () => clearError({ redirect: '/' })
+
+	useHead({
+		title: 'Saturdays.io - 404 Page not found',
+		meta: [
+			{ name: 'description', content: '404 page not found' }
+		]
+	})
+
+</script>
+
+
 <template>
 	<div class="flex flex-col justify-between">
 
@@ -33,22 +49,6 @@
 
 	</div>
 </template>
-
-
-<script setup lang="ts">
-
-	defineProps(['error'])
-
-	const handleClearError = () => clearError({ redirect: '/' })
-
-	useHead({
-		title: 'Saturdays.io - 404 Page not found',
-		meta: [
-			{ name: 'description', content: '404 page not found' }
-		]
-	})
-
-</script>
 
 
 <style lang="scss">
