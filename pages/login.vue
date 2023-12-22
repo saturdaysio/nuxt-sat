@@ -5,7 +5,7 @@
 
     <div class="flex min-h-full flex-1 flex-col justify-center pt-16">
 
-      <div id="block" class="w-full max-w-xl mx-auto mt-32 px-6 py-6 md:px-8 md:py-8 rounded-md bg-gray-900/10">
+      <div id="block" class="w-full max-w-xl mx-auto mt-32 px-6 py-6 md:px-8 md:py-8 rounded-md">
         <div class="mx-auto w-full mb-12">
           <h1 class="text-3xl md:text-4xl font-bold leading-9 tracking-tight text-center lime-to-aqua">Log in to your
             account</h1>
