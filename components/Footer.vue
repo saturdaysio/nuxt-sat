@@ -4,6 +4,10 @@
 		main: [
 			{ name: 'Home', to: '/' },
 			{ name: 'About', to: '/about' },
+			{ name: 'Jobs', to: '/login' },
+		],
+
+		auth: [
 			{ name: 'Login', to: '/login' },
 		],
 
@@ -76,10 +80,23 @@
 					</NuxtLink>
 				</div>
 
-				<div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-					<div id="main">
+				<div class="grid grid-cols-4 gap-8 sm:gap-6 sm:grid-cols-4">
+					<div id="comp">
 						<h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">Company</h2>
 						<ul v-for="item in navigation.main" :key="item.name">
+							<li class="mb-4">
+								<suspense suspensible>
+									<NuxtLink :to="item.to" class="text-md sm:text-base leading-6 no-underline text-white hover:text-green-400 hover:underline" active-class="active">
+										{{ item.name }}
+									</NuxtLink>
+								</suspense>
+							</li>
+						</ul>
+					</div>
+
+					<div id="auth">
+						<h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">Auth</h2>
+						<ul v-for="item in navigation.auth" :key="item.name">
 							<li class="mb-4">
 								<suspense suspensible>
 									<NuxtLink :to="item.to" class="text-md sm:text-base leading-6 no-underline text-white hover:text-green-400 hover:underline" active-class="active">
