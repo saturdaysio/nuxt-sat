@@ -51,7 +51,7 @@
 
 <style lang="scss" scoped>
   .primary {
-    @apply h-12 w-full sm:w-auto py-3 px-6 rounded-md bg-green-400 hover:bg-blue-400 text-base leading-6 font-bold text-black hover:text-white text-center transition duration-300 ease-in-out
+    @apply h-12 w-full sm:w-auto py-3 px-6 rounded-md bg-green-400 hover:bg-green-400 text-base leading-6 font-bold text-black text-center transition duration-300 ease-in-out
   }
 
   .secondary {
@@ -66,4 +66,7 @@
     @apply h-12 w-full sm:w-auto py-3 px-6 rounded-md bg-red-600 text-base leading-6 font-bold text-white hover:bg-red-900 transition duration-300 ease-in-out
   }
 
+  .auth {
+    @apply h-auto w-full py-4 px-6 rounded-md bg-green-400 hover:bg-green-400 text-base sm:text-xl leading-6 font-bold text-black text-center hover:opacity-80 transition duration-300 ease-in-out
+  }
 </style>
