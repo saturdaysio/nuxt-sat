@@ -33,7 +33,7 @@
 						</div>
 
 						<div class="inline-flex justify-center mt-4">
-							<Button :buttonLabel="'Go Home'" class="button primary" @click="handleClearError" />
+							<Button buttton-type="submit" button-label="Go Home" button-class="primary block w-full" @click="handleClearError" />
 						</div>
 					</div>
 				</div>
