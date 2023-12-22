@@ -11,7 +11,7 @@
             account</h1>
         </div>
 
-        <div class="mx-auto w-full">
+        <div class="w-full mx-auto">
           <form @submit.prevent="login" class="space-y-6">
             <div id="email" class="">
               <label for="input-email" class="block text-md font-bold leading-5 text-white">Email</label>
@@ -27,8 +27,8 @@
                      class="block w-full rounded-md mt-2 px-4 py-4 border-0 bg-gray-800/70 font-light text-white shadow-sm focus:ring-4 focus:ring-inset focus:ring-green-500 sm:text-xl sm:leading-6"/>
             </div>
 
-            <div id="submit" class="w-full">
-              <Button buttton-type="submit" button-label="Login" button-class="primary w-full" :error="failedLogin" error-classes="!bg-red-800"/>
+            <div id="submit" class="w-full mx-auto">
+              <Button buttton-type="submit" button-label="LOGIN" button-class="auth w-full" :error="failedLogin" error-classes="!bg-red-800"/>
             </div>
           </form>
         </div>
