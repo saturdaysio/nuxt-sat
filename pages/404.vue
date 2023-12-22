@@ -1,25 +1,33 @@
 <template>
-	<div class="flex flex-col h-screen justify-between">
+	<div class="flex flex-col justify-between">
 
 		<Nav />
 
-		<section class="container lg:max-w-5xl mx-auto px-8">
-			<div class="flex flex-col justify-center">
-				<div class="mb-8">
-					<div class="text-center pb-2">
-						<h1 class="text-4xl sm:text-5xl md:text-6xl font-bold lime-to-aqua">Page not found</h1>
-					</div>
-					<div class="text-center">
-						<p class="text-xl text-white">The page you are looking for does not exist.</p>
+		<section id="video-hero" class="w-full h-auto mx-auto overflow-hidden z-0">
+			<div class="relative w-full h-full mx-auto">
+				<div id="hero-text-overlay" class="absolute w-full h-full mx-auto z-30 flex">
+					<div class="max-w-7xl mx-auto inline-flex self-center flex-col px-2">
+						<div class="">
+							<h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-center lime-to-aqua">
+							Page not found
+							</h1>
+							<p class="text-2xl font-bold text-white">
+								The page you are looking for does not exist.
+							</p>
+						</div>
+
+						<div class="inline-flex justify-center mt-4">
+							<Button :buttonLabel="'Go Home'" class="button primary" @click="handleClearError" />
+						</div>
 					</div>
 				</div>
 
-				<div class="flex justify-center">
-					<Button :buttonLabel="'Go Home'" class="button primary" @click="handleClearError" />
-				</div>
+				<video id="hero-video" autoplay muted loop playsinline class="w-full h-screen object-cover" controlslist="nodownload noremoteplayback disablepictureinpicture disableremoteplayback">
+					<source src="@/assets/video/conor-404.mp4" type="video/mp4">
+				</video>
+
 			</div>
-		</section>
-
+	    </section>
 		
 		<Footer />
 
