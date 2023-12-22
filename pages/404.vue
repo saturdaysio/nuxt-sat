@@ -27,7 +27,7 @@
 							<h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-center lime-to-aqua">
 							Page not found
 							</h1>
-							<p class="text-2xl font-bold text-white">
+							<p class="text-2xl font-base text-white">
 								The page you are looking for does not exist.
 							</p>
 						</div>

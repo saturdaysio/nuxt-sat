@@ -25,9 +25,9 @@
 					<div class="max-w-7xl mx-auto inline-flex self-center flex-col px-2">
 						<div class="">
 							<h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-center lime-to-aqua">
-								Error {{ error.statusCode }}
+								ERROR {{ error.statusCode }}
 							</h1>
-							<p class="text-2xl font-bold text-white">
+							<p class="text-2xl font-base text-white">
 								{{ error.message }}
 							</p>
 						</div>
