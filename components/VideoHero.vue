@@ -22,7 +22,6 @@
             <video id="hero-video" autoplay muted loop playsinline class="w-full h-screen object-cover" controlslist="nodownload noremoteplayback disablepictureinpicture disableremoteplayback">
                 <source src="@/assets/video/hero-video.mp4" type="video/mp4">
             </video>
-
         </div>
     </section>
 
