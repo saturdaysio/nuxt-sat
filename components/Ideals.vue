@@ -8,10 +8,16 @@
 			type: "video/mp4"
 		},
 		{
+			video: "/video/awkwafina.mp4",
+			title: "No rockstars",
+			desc: "You won't find any 10x developers, unicorns, or rockstars here and we're proud of that. We don't tolerate toxicity or narcissistic behaviour, period.",
+			type: "video/mp4"
+		},
+		{
 			video: "/video/uncle-ben.mp4",
 			title: "Be accountable",
 			titleClass: "lime-to-aqua",
-			desc: "We don't make excuses, and we're allergic to bullshitters because talk is cheap and actions speak louder than words.",
+			desc: "We don't make excuses, and we're allergic to bullshitters because talk is cheap and actions speak louder than words. We get results every time because we actually know what we're doing.",
 			type: "video/mp4"
 		},
 		{
@@ -21,15 +27,9 @@
 			type: "video/mp4"
 		},
 		{
-			video: "/video/awkwafina.mp4",
-			title: "No rockstars",
-			desc: "You won't find any 10x, unicorns, or rockstars here and we're proud of that. We don't tolerate toxicity or narcissistic behaviour because nobody has time for that bs.",
-			type: "video/mp4"
-		},
-		{
 			video: "/video/hawaii.mp4",
 			title: "Enjoy downtime",
-			desc: "We like to travel and touch grass once in a while because there's more to life than working.",
+			desc: "We like to travel and touch grass once in a while because there's more to life than working. We're not robots, and we don't expect you to be either.",
 			type: "video/mp4"
 		},
 	]
