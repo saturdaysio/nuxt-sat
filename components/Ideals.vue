@@ -21,7 +21,7 @@
 			type: "video/mp4"
 		},
 		{
-			video: "/video/beyonce-dance1.mp4",
+			video: "/video/drake-apple.mp4",
 			title: "Be supportive",
 			desc: "It isn't brilliant individual performances that make great teams, it's when talented individuals put their egos aside and work toward a common goal.",
 			type: "video/mp4"
