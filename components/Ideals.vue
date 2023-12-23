@@ -17,7 +17,7 @@
 			video: "/video/uncle-ben.mp4",
 			title: "Be accountable",
 			titleClass: "lime-to-aqua",
-			desc: "We don't make excuses, and we're allergic to bullshitters because talk is cheap and actions speak louder than words. We get results every time because we actually know what we're doing.",
+			desc: "We don't make excuses, and we're allergic to bullshitters because talk is cheap and actions speak louder than words. We get results every time because we actually know what we're doing and have successfully done it before.",
 			type: "video/mp4"
 		},
 		{
