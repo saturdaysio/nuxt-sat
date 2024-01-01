@@ -4,11 +4,12 @@
 		main: [
 			{ name: 'Home', to: '/' },
 			{ name: 'About', to: '/about' },
-			{ name: 'Jobs', to: '/login' },
+			{ name: 'Projects', to: '/login' },
 		],
 
 		auth: [
 			{ name: 'Login', to: '/login' },
+			{ name: 'Developers', to: '/login' },
 		],
 
 		social: [
@@ -80,7 +81,7 @@
 					</NuxtLink>
 				</div>
 
-				<div class="grid grid-cols-4 gap-8 sm:gap-6 sm:grid-cols-4">
+				<div class="grid grid-cols-2 gap-8 md:gap-6 md:grid-cols-4">
 					<div id="comp">
 						<h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">Company</h2>
 						<ul v-for="item in navigation.main" :key="item.name">
